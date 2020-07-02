@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765445"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Se invoca el código administrado en el servidor al llamar a un procedimiento o función, al llamar a un método en un tipo definido por el usuario de Common Language Runtime (CLR) o cuando su acción activa un desencadenador definido en cualquiera de los lenguajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Dado que la ejecución de este código se solicita como parte de una conexión de usuario, se requiere el acceso al contexto del autor de la llamada desde el código que se ejecuta en el servidor. Además, ciertas operaciones de acceso a datos solo pueden ser válidas si se ejecutan bajo el contexto del autor de la llamada. Por ejemplo, el acceso a pseudo tablas insertadas y eliminadas utilizadas en operaciones del desencadenador solo es válido bajo el contexto del autor de la llamada.  
   
  El contexto del llamador se abstrae en un objeto **SqlContext** . Para obtener más información sobre los métodos y las propiedades de **SqlTriggerContext** , consulte la documentación de referencia de la clase **Microsoft. SqlServer. Server. SqlTriggerContext** en el [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -42,7 +42,7 @@ ms.locfileid: "81487544"
  Consulte la clase **SqlContext** para ver si el código actualmente en ejecución se ejecuta en proceso. Para ello, Compruebe la propiedad **isavailable** del objeto **SqlContext** . La propiedad **isavailable** es de solo lectura y devuelve **true** si el código de llamada se ejecuta dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de y si se puede tener acceso a otros miembros de **SqlContext** . Si la propiedad **isavailable** devuelve **false**, todos los demás miembros de **SqlContext** producen una **excepción InvalidOperationException**, si se usa. Si **isavailable** devuelve **false**, se produce un error en cualquier intento de abrir un objeto de conexión que tenga "context Connection = true" en la cadena de conexión.  
   
 ## <a name="retrieving-windows-identity"></a>Recuperar la identidad de Windows  
- El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar ciertas acciones mediante la identidad del usuario que realiza la llamada, en lugar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la identidad del proceso, se debe obtener un token de suplantación a través de la propiedad **WindowsIdentity** del objeto **SqlContext** . La propiedad **WindowsIdentity** devuelve una instancia de **WindowsIdentity** que [!INCLUDE[msCoName](../../includes/msconame-md.md)] representa la identidad de Windows del autor de la llamada, o null si el cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se autenticó utilizando la autenticación de. Solo los ensamblados marcados con permisos de **external_access** o **no seguros** pueden tener acceso a esta propiedad.  
+ El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar ciertas acciones mediante la identidad del usuario que realiza la llamada, en lugar de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidad del proceso, se debe obtener un token de suplantación a través de la propiedad **WindowsIdentity** del objeto **SqlContext** . La propiedad **WindowsIdentity** devuelve una instancia de **WindowsIdentity** que representa la [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidad de Windows del autor de la llamada, o null si el cliente se autenticó utilizando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de. Solo los ensamblados marcados con permisos de **external_access** o **no seguros** pueden tener acceso a esta propiedad.  
   
  Después de obtener el objeto **WindowsIdentity** , los autores de llamadas pueden suplantar la cuenta de cliente y realizar acciones en su nombre.  
   

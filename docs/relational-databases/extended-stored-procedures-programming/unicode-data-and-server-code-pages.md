@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767760"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR.  
@@ -34,13 +34,13 @@ ms.locfileid: "68064272"
  Si la aplicación de API Procedimiento almacenado extendido está habilitada para Unicode, debe convertir los nombres de columna de metadatos de Unicode, mensajes de error, etc., a datos multibyte antes de pasar estos datos a la API Procedimiento almacenado extendido.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Observe lo siguiente:  
+ El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Ten en cuenta lo siguiente:  
   
 -   Los datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como SRVNVARCHAR.  
   
 -   Los metadatos de nombre de columna se pasan a **srv_describe** como datos multibyte.  
   
-     El procedimiento almacenado extendido llama a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]multibyte de.  
+     El procedimiento almacenado extendido llama a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Los mensajes de error se pasan a **srv_sendmsg** como datos multibyte.  
   

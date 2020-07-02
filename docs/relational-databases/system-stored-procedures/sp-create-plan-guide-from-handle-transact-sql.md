@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771186"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea una o varias guías de plan a partir de un plan de consulta en la memoria caché del plan. Puede utilizar este procedimiento almacenado para asegurarse de que el optimizador de consultas siempre utiliza un plan de consulta concreto para la consulta especificada. Para obtener más información acerca de las guías de plan, vea [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
@@ -53,7 +53,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Si se especifica NULL o no se especifica un desplazamiento de instrucción, se crea una guía de plan para cada instrucción del lote utilizando el plan de consulta para el identificador de plan especificado. Las guías de plan resultantes son equivalentes a las guías de plan que utilizan la sugerencia de consulta USE PLAN para forzar el uso de un plan concreto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  No se puede crear una guía de plan para todos los tipos de instrucción. Si no puede crearse una guía de plan para una instrucción del lote, el procedimiento almacenado omite la instrucción y continúa en la instrucción siguiente del lote. Si una instrucción aparece varias veces en el mismo lote, se habilita el plan para la última aparición y se deshabilitan los planes anteriores para la instrucción. Si no se puede utilizar ninguna instrucción del lote en una guía de plan, se producirá el error 10532 y la instrucción producirá un error. Se recomienda obtener siempre el identificador de plan a partir de la vista de administración dinámica sys.dm_exec_query_stats para evitar en lo posible la aparición de este error.  
   
 > [!IMPORTANT]  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771481"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia las propiedades de una publicación de combinación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -78,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para los [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores de *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
 |**conflict_retention**||Un valor **int** que especifica el período de retención, en días, durante el que se conservan los conflictos. Establecer *conflict_retention* en **0** significa que no se necesita ninguna limpieza de conflictos.|  
-|**denominación**||Descripción de la publicación.|  
+|**description**||Descripción de la publicación.|  
 |**dynamic_filters**|**true**|La publicación se filtra según una cláusula dinámica.|  
 ||**false**|La publicación no se filtra dinámicamente.|  
 |**enabled_for_internet**|**true**|La publicación para Internet está habilitada. El protocolo de transferencia de archivos (FTP) se puede utilizar para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización de la publicación se colocan en el directorio C:\Archivos de Programa\microsoft SQL Server\MSSQL\Repldata\ftp|  
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|Está disponible la instantánea para la publicación.|  
 ||**false**|No está disponible la instantánea para la publicación.|  
 |**status**|**active**|La publicación está en estado activo.|  
-||**inactiva**|La publicación está en estado inactivo.|  
+||**inactive**|La publicación está en estado inactivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
 ||**óptico**<br /><br /> o **carácter BCP**|La salida del programa de copia masiva de todas las tablas en modo de carácter se utiliza para la instantánea inicial, que se necesita para todos los suscriptores que no lo son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: después de usar partition_groups, si revierte a usar **setupbelongs**y establece **use_partition_groups = false** en **changemergearticle**, es posible que no se refleje correctamente después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución a este escenario es establecer el estado en inactivo, modificar el **use_partition_groups**y, a continuación, establecer el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  

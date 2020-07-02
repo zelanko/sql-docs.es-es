@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771431"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia las propiedades de una publicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -72,7 +72,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Para actualizar los suscriptores; si se produce un conflicto, la suscripción debe renicializarse. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas. No es compatible con publicadores de Oracle.|  
 ||**sub wins**|Directiva de resolución de conflictos para actualizar suscriptores en los que el suscriptor gana el conflicto. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas. No es compatible con publicadores de Oracle.|  
 |**conflict_retention**||**int** que especifica el período de retención de conflictos, en días. El período de retención predeterminado es de 14 días. **0** significa que no se necesita ninguna limpieza de conflictos. No es compatible con publicadores de Oracle.|  
-|**denominación**||Entrada opcional en la que se describe la publicación.|  
+|**description**||Entrada opcional en la que se describe la publicación.|  
 |**enabled_for_het_sub**|**true**|Habilita la publicación para que admita suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. no se puede cambiar **enabled_for_het_sub** cuando hay suscripciones a la publicación. Es posible que tenga que ejecutar [procedimientos almacenados de replicación (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) para cumplir los siguientes requisitos antes de establecer **enabled_for_het_sub** en true:<br /> - **allow_queued_tran** debe ser **false**.<br /> - **allow_sync_tran** debe ser **false**.<br /> Cambiar **enabled_for_het_sub** a **true** puede cambiar la configuración de publicación existente. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|La publicación no admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|Se habilita la publicación para Internet y se puede utilizar el protocolo de transferencia de archivos (FTP) para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización de la publicación se colocan en el directorio C:\Archivos de programa\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* no puede ser null. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -105,7 +105,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**snapshot_in_defaultfolder**|**true**|Los archivos de instantánea se almacenan en la carpeta de instantáneas predeterminada. Si también se especifica *alt_snapshot_folder*, los archivos de instantáneas se almacenan en las ubicaciones predeterminada y alternativa.|  
 ||**false**|Los archivos de instantáneas se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*.|  
 |**status**|**active**|Los datos de la publicación están disponibles inmediatamente para los suscriptores cuando se crea la publicación. No es compatible con publicadores de Oracle.|  
-||**inactiva**|Los datos de la publicación no están disponibles para los suscriptores cuando se crea la publicación. No es compatible con publicadores de Oracle.|  
+||**inactive**|Los datos de la publicación no están disponibles para los suscriptores cuando se crea la publicación. No es compatible con publicadores de Oracle.|  
 |**sync_method**|**native**|Utiliza la salida de todas las tablas mediante copia masiva en modo nativo al sincronizar las suscripciones.|  
 ||**óptico**|Utiliza la salida de todas las tablas mediante copia masiva en modo de carácter al sincronizar las suscripciones.|  
 ||**simultáneas**|Utiliza un programa de copia masiva en modo nativo de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  

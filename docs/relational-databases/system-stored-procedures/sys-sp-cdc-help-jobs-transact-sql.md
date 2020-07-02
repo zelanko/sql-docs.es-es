@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: beca05cca35d0c410f7e9671d011d913c5ac2f22
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77595c353522dc2db3452b51f3a0395346c85619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768630"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea informe que incluyen información sobre todos los trabajos de captura o de limpieza de captura de datos de cambio en la base de datos actual.  
   
@@ -54,7 +54,7 @@ sys.sp_cdc_help_jobs
 |**continua**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, vea [Sys. sp_cdc_add_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continuous** solo es válido para los trabajos de captura.|  
 |**PollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **PollingInterval** solo es válido para los trabajos de captura.|  
 |**políticas**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> la **retención** solo es válida para los trabajos de limpieza.|  
-|**mínimo**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
+|**threshold**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos **db_owner** .  

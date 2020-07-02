@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772274"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega un archivo de registro a un grupo de archivos cuando la recuperación no puede completarse en una base de datos debido a un error de espacio de registro insuficiente (9002). Una vez agregado el archivo, **sp_add_log_file_recover_suspect_db** desactiva el valor sospechoso y completa la recuperación de la base de datos. Los parámetros son los mismos que los de ALTER DATABASE *database_name* Agregar archivo de registro.  
   
@@ -46,7 +46,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @dbName = ] 'database'`Es el nombre de la base de datos. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @name = ] 'logical_file_name'`Es el nombre que se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cuando se hace referencia al archivo. El nombre debe ser único en el servidor. *logical_file_name* es de tipo **nvarchar (260)** y no tiene ningún valor predeterminado.  
+`[ @name = ] 'logical_file_name'`Es el nombre que se usa en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. El nombre debe ser único en el servidor. *logical_file_name* es de tipo **nvarchar (260)** y no tiene ningún valor predeterminado.  
   
 `[ @filename = ] 'os_file_name'`Es la ruta de acceso y el nombre de archivo que usa el sistema operativo para el archivo. El archivo debe residir en el servidor donde esté instalado el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* es de tipo **nvarchar (260)** y no tiene ningún valor predeterminado.  
   

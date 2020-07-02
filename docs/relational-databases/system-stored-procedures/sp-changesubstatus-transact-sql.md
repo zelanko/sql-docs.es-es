@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771353"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia el estado de un suscriptor existente. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**active**|El suscriptor está sincronizado y recibe datos.|  
-|**inactiva**|Existe una entrada de suscriptor sin que haya una suscripción.|  
+|**inactive**|Existe una entrada de suscriptor sin que haya una suscripción.|  
 |**subscribed**|El suscriptor solicita datos, pero aún no está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'`Es el estado anterior de la suscripción. *previous_status* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro permite cambiar cualquier suscripción que tenga actualmente ese estado, lo que permite a las funciones de grupo en un conjunto específico de suscripciones (por ejemplo, al establecer de nuevo todas las suscripciones activas en **suscrito**).  
@@ -90,11 +90,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
-|**2**|Segundo|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
-|**dieciséi**|Último|  
+|**16**|Último|  
 |NULL (predeterminado)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
@@ -104,7 +104,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hora|  
 |NULL (predeterminado)||  

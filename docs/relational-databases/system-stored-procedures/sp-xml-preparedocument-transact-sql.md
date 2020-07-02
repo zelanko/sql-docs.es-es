@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767486"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Lee el texto de XML proporcionado como entrada, analiza el texto con el analizador MSXML (Msxmlsql.dll) y proporciona el documento analizado en un estado apto para su uso. Este documento analizado es una representación en árbol de varios nodos en el documento XML: elementos, atributos, texto, comentarios, etc.  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Especifica las declaraciones de espacio de nombres que se utilizan en las expresiones XPath de fila y columna de OPENXML. *xpath_namespaces* es un parámetro de texto **: char**, **nchar**, **VARCHAR**, **nvarchar**, **Text**, **ntext** o **XML**.  
   
- El valor predeterminado es ** \< raíz xmlns: MP = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* proporciona los URI de espacio de nombres para los prefijos utilizados en las expresiones XPath de OPENXML mediante un documento XML con formato correcto. *xpath_namespaces* declara el prefijo que se debe usar para hacer referencia al espacio de nombres **urn: schemas-microsoft-com: XML-metaprop**; Esto proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El **módulo de administración** de prefijo sigue siendo válido para **urn: schemas-microsoft-com: XML-metaprop** , incluso si *xpath_namespaces* no contiene tal declaración.  
+ El valor predeterminado es **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** . *xpath_namespaces* proporciona los URI de espacio de nombres para los prefijos utilizados en las expresiones XPath de OPENXML mediante un documento XML con formato correcto. *xpath_namespaces* declara el prefijo que se debe usar para hacer referencia al espacio de nombres **urn: schemas-microsoft-com: XML-metaprop**; Esto proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El **módulo de administración** de prefijo sigue siendo válido para **urn: schemas-microsoft-com: XML-metaprop** , incluso si *xpath_namespaces* no contiene tal declaración.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o >0 (error)  

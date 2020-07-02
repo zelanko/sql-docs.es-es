@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771080"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea y quita un catálogo de texto completo, e inicia y detiene la acción de indización de un catálogo. Se pueden crear varios catálogos de texto completo en cada base de datos.  
   
@@ -54,7 +54,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Crear**|Crea un nuevo catálogo de texto completo vacío en el sistema de archivos y agrega una fila asociada en **sysfulltextcatalogs** con los valores *fulltext_catalog_name* y *root_directory*, si existen,. *fulltext_catalog_name* debe ser único en la base de datos.|  
+|**Creación**|Crea un nuevo catálogo de texto completo vacío en el sistema de archivos y agrega una fila asociada en **sysfulltextcatalogs** con los valores *fulltext_catalog_name* y *root_directory*, si existen,. *fulltext_catalog_name* debe ser único en la base de datos.|  
 |**Omisiones**|Quita *fulltext_catalog_name* quitando del sistema de archivos y eliminando la fila asociada en **sysfulltextcatalogs**. Esta acción genera un error si el catálogo contiene índices de una o más tablas. **sp_fulltext_table** se debe ejecutar '*TABLE_NAME*', ' Drop ' para quitar las tablas del catálogo.<br /><br /> Se muestra un error si el catálogo no existe.|  
 |**start_incremental**|Inicia un rellenado incremental para *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. Si ya hay un rellenado de índices de texto completo activo, se muestra una advertencia y no se produce el rellenado. Con el rellenado incremental solo se recuperan las filas cambiadas para la indización de texto completo, siempre que haya una columna de **marca** de tiempo presente en la tabla que está indizada de texto completo.|  
 |**start_full**|Inicia un rellenado completo de *fulltext_catalog_name*. Se recupera cada una de las filas de todas las tablas asociadas con este catálogo de texto para realizar la indización de texto, aunque ya se hayan indizado.|  

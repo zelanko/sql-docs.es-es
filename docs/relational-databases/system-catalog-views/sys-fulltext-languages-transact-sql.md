@@ -21,27 +21,27 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764708"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Esta vista de catálogo contiene una fila por cada idioma cuyos separadores de palabras estén registrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada fila muestra el LCID y el nombre del idioma. Cuando se registran separadores de palabras para un idioma, los demás recursos lingüísticos (lematizadores, palabras irrelevantes (palabras irrelevantes) y archivos de Diccionario de sinónimos) están disponibles para las operaciones de indización y consulta de texto completo. El valor de **Name** o **LCID** se puede especificar en las instrucciones de texto completo y en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] índice de texto completo.  
+  Esta vista de catálogo contiene una fila por cada idioma cuyos separadores de palabras estén registrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada fila muestra el LCID y el nombre del idioma. Cuando se registran separadores de palabras para un idioma, los demás recursos lingüísticos (lematizadores, palabras irrelevantes (palabras irrelevantes) y archivos de Diccionario de sinónimos) están disponibles para las operaciones de indización y consulta de texto completo. El valor de **Name** o **LCID** se puede especificar en las instrucciones de texto completo y en las instrucciones de índice de texto completo [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|Identificador de configuración regional (LCID) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
-|**name**|**sysname**|Es el valor del alias en [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID** o la representación de cadena del LCID numérico.|  
+|**name**|**sysname**|Es el valor del alias en [sys.sysidiomas](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondientes al valor de **LCID** o la representación de cadena del LCID numérico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valores devueltos para los idiomas predeterminados  
  En la tabla siguiente se muestran los valores para los idiomas cuyos separadores de palabras están registrados de forma predeterminada.  
   
-|Idioma|LCID|  
+|Lenguaje|LCID|  
 |--------------|----------|  
 |Árabe|1025|  
 |Bengali (India)|1093|  
@@ -97,7 +97,7 @@ ms.locfileid: "73981776"
 |Urdu|1056|  
 |Vietnamita|1066|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para actualizar la lista de idiomas registrados en la búsqueda de texto completo, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Permisos  

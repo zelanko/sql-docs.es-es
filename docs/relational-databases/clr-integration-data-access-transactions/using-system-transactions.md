@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765367"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
   
  Se recomienda emplear un bloque **using** para asegurarse de que se llama al método **Dispose** en el objeto **TransactionScope** cuando se sale del bloque **using** . El hecho de no confirmar o revertir las transacciones pendientes puede reducir significativamente el rendimiento, porque el tiempo de espera predeterminado para **TransactionScope** es un minuto. Si no utiliza una instrucción **using** , debe realizar todo el trabajo de un bloque **Try** y llamar explícitamente al método **Dispose** del bloque **Finally** .  

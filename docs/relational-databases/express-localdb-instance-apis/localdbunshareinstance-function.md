@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9eacc8a0dc5801ad2642dc7ffec0b31c3de040f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76693483dd8dd2f7e063f31d3e5739cbec9e2b1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765150"
 ---
 # <a name="localdbunshareinstance-function"></a>Función LocalDBUnshareInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Detiene el uso compartido de la instancia de SQL Server Express LocalDB especificada.  
   
  **Archivo de encabezado:** sqlncli.h  
@@ -44,7 +44,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [Entrada] Reservado para uso futuro. En estos momentos, se debe establecer en 0.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -66,7 +66,7 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte también  

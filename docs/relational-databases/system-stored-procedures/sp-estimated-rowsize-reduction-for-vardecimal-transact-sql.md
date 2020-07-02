@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772146"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Calcula la reducción del tamaño medio de las filas si se habilita el formato de almacenamiento vardecimal en una tabla. Utilice este número para calcular la reducción general del tamaño de la tabla. Puesto que el muestreo estadístico se usa para calcular la reducción media del tamaño de fila, se debe considerar como una mera aproximación. Es posible que, en contadas ocasiones, el tamaño de fila aumente después de habilitar el formato de almacenamiento vardecimal.  
   
@@ -60,7 +60,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Representa el tamaño de fila medio cuando se utiliza el formato de almacenamiento vardecimal.|  
 |**row_count**|**int**|Número de filas de la tabla.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use **sp_estimated_rowsize_reduction_for_vardecimal** para calcular el ahorro resultante si habilita una tabla para el formato de almacenamiento vardecimal. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño de la tabla en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que dependerá del factor de relleno y del tamaño de la fila. Por ejemplo, si una fila tiene 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, solo podrá seguir incluyendo una fila en una página de datos, con lo que no obtendrá ningún ahorro.  
   
  Si los resultados de **sp_estimated_rowsize_reduction_for_vardecimal** indican que la tabla va a crecer, esto significa que muchas filas de la tabla utilizan prácticamente toda la precisión de los tipos de datos decimales, y la adición de la pequeña sobrecarga necesaria para el formato de almacenamiento vardecimal es mayor que el ahorro del formato de almacenamiento vardecimal. En este caso excepcional, no habilite el formato de almacenamiento vardecimal.  

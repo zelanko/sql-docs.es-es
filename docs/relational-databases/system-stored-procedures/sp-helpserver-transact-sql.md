@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772129"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Presenta información acerca de un servidor remoto o de replicación concreto, o acerca de todos los servidores de los dos tipos. Proporciona la siguiente información sobre el servidor: nombre, nombre de red, estado de replicación, número de identificación y nombre de intercalación. Asimismo proporciona valores de tiempo de espera para conectarse a servidores vinculados o para realizar consultas en los mismos.  
   
@@ -41,7 +41,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'`Es el servidor sobre el que se envía información. Cuando no se especifica el *servidor* , informa de todos los servidores en **Master. sys. Servers**. *Server* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @server = ] 'server'`Es el servidor sobre el que se envía información. Cuando no se especifica el *servidor* , informa de todos los servidores de **master.sys. Servers**. *Server* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @optname = ] 'option'`Es la opción que describe el servidor. *Option* es de tipo **VARCHAR (** 35 **)**, su valor predeterminado es NULL y debe ser uno de estos valores.  
   

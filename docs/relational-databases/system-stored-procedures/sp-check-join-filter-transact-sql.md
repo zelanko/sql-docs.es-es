@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c15b8e79dc683c299a1a3f0407b401b2565faffb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771327"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Se utiliza para comprobar un filtro de combinación entre dos tablas a fin de determinar si la cláusula del filtro de combinación es válida. Este procedimiento almacenado también devuelve información sobre el filtro de combinación proporcionado, incluso si se puede utilizar con particiones precalculadas para la tabla dada. Este procedimiento almacenado se ejecuta en el publicador de la publicación. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   

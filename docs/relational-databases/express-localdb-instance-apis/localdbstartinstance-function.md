@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765226"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Inicia la instancia de SQL Server Express LocalDB especificada.  
   
  **Archivo de encabezado:** sqlncli.h  
@@ -52,7 +52,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Entrada/Salida] En la entrada contiene el tamaño de búfer de *wszSqlConnection* en caracteres, incluidos los valores NULL finales. En la salida, si el tamaño de búfer proporcionado es demasiado pequeño, contiene el tamaño de búfer necesario en caracteres, lo cual incluye los valores NULL finales.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   

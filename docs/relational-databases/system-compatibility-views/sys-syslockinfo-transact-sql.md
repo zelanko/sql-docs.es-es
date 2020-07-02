@@ -1,5 +1,5 @@
 ---
-title: Sys. syslockinfo (Transact-SQL) | Microsoft Docs
+title: sys.sysLockInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764383"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre todas las solicitudes de bloqueo concedidas, convertidas y en espera.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053341"
 |**req_refcnt**|**smallint**|Recuento de referencia de bloqueos. Cada vez que una transacción solicita el bloqueo de un recurso determinado, se incrementa un recuento de referencia. El bloqueo no se puede liberar hasta que el recuento de referencia sea cero.|  
 |**req_cryrefcnt**|**smallint**|Reservado para uso futuro. Siempre se establece en 0.|  
 |**req_lifetime**|**int**|Mapa de bits de la duración del bloqueo. En algunas estrategias de procesamiento de consultas, es necesario mantener los bloqueos sobre los recursos hasta que el procesador de consultas haya completado una fase determinada de la consulta. El procesador de consultas y el administrador de transacciones utilizan el mapa de bits de la duración del bloqueo para indicar los grupos de bloqueos que se pueden liberar cuando se ha completado la ejecución de una fase determinada de una consulta. Ciertos bits del mapa se utilizan para indicar los bloqueos que se deben mantener hasta el final de la transacción, incluso cuando su recuento de referencia sea cero.|  
-|**req_spid**|**int**|Identificador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de proceso interno de la sesión que solicita el bloqueo.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Identificador de proceso interno de la sesión que solicita el bloqueo.|  
 |**req_ecid**|**int**|Id. del contexto de ejecución (ECID). Se utiliza para indicar qué subproceso de una operación en paralelo es el propietario de un bloqueo determinado.|  
 |**req_ownertype**|**smallint**|Tipo del objeto asociado al bloqueo:<br /><br /> 1 = Transacción<br /><br /> 2 = Cursor<br /><br /> 3 = Sesión<br /><br /> 4 = ExSession<br /><br /> Observe que el 3 y el 4 representan una versión especial de bloqueos de sesión, que realizan un seguimiento de los bloqueos de bases de datos y de grupos de archivos respectivamente.|  
 |**req_transactionID**|**bigint**|IDENTIFICADOR de transacción único utilizado en **syslockinfo** y en el evento del generador de perfiles|  

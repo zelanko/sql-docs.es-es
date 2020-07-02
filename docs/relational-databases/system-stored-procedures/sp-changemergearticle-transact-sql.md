@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771509"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia las propiedades de un artículo de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -68,7 +68,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**delete_tracking**|**true**|Las instrucciones DELETE se replican; éste es el comportamiento predeterminado.|  
 ||**false**|Las instrucciones DELETE no se replican.<br /><br /> Una configuración ** \* \* \* importante \* ** **delete_tracking** a **false** da como resultado una no convergencia y las filas eliminadas deben quitarse manualmente.|  
-|**denominación**||Entrada descriptiva del artículo.|  
+|**description**||Entrada descriptiva del artículo.|  
 |**destination_owner**||Nombre del propietario del objeto en la base de datos de suscripciones, si no es **DBO**.|  
 |**identity_range**||**BIGINT** que especifica el tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad si el artículo tiene **identityrangemanagementoption** establecido en **auto** o **auto_identity_range** establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manual**|Deshabilita la administración automática de intervalos de identidad. Marca las columnas de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad. Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Se permiten cambios en un suscriptor con una suscripción de cliente, pero no se cargan en el publicador.|  
 ||**2**|No se permiten cambios en un suscriptor con una suscripción de cliente.|  
 |**subset_filterclause**||Cláusula WHERE que especifica el filtrado horizontal. Solo se aplica a un artículo de tabla.<br /><br /> Importante por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Si utiliza [host_name](../../t-sql/functions/host-name-transact-sql.md) en una cláusula de filtro y reemplaza el valor host_name, es posible que tenga que convertir los tipos de datos mediante [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre los procedimientos recomendados para este caso, vea la sección "invalidar el valor HOST_NAME ()" en [filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**mínimo**||Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Se utiliza cuando el valor de **identityrangemanagementoption** está establecido en **auto** o **auto_identity_range** está establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Se utiliza cuando el valor de **identityrangemanagementoption** está establecido en **auto** o **auto_identity_range** está establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|La firma digital en un solucionador personalizado se comprueba para determinar si proviene de una fuente confiable.|  
 ||**0**|La firma digital en un solucionador personalizado no se comprueba para determinar si proviene de una fuente confiable.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  

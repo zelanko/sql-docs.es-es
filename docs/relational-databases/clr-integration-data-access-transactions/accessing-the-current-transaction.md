@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765402"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Si una transacción se encuentra activa en el momento en que se escribe el código de Common Language Runtime (CLR) que se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la transacción se expone a través de la clase **System.Transactions.Transaction** . La propiedad **Transaction.Current** permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba **Transaction.Current** de forma automática cuando se llama al método **Connection.Open** y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave **Enlist** esté establecida en False en la cadena de conexión).  
   
  Es posible que desee usar directamente el objeto **Transaction** en los escenarios siguientes:  

@@ -19,15 +19,15 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764684"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila sobre la base de datos de estadísticas semánticas de lenguaje instalada en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68133791"
   
 ||||  
 |-|-|-|  
-|**Nombre de la columna**|**Tipo**|**Descripción**|  
+|**Nombre de la columna**|**Type**|**Descripción**|  
 |**database_id**|**int**|Id. de la base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Fecha en que la base de datos se registró para el procesamiento semántico.|  
 |**registered_by**|**int**|Identificador de la entidad de seguridad de servidor que registró la base de datos para el procesamiento semántico.|  
@@ -54,7 +54,7 @@ ms.locfileid: "68133791"
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo consultar **Sys. fulltext_semantic_language_statistics_database** para obtener información sobre la base de datos de estadísticas semánticas de lenguaje [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registrada en la instancia actual de.  
+ En el ejemplo siguiente se muestra cómo consultar **Sys. fulltext_semantic_language_statistics_database** para obtener información sobre la base de datos de estadísticas semánticas de lenguaje registrada en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

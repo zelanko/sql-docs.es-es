@@ -19,17 +19,17 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772983"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Sys. server_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Devuelve los datos de uso de CPU, e/s y almacenamiento de una Instancia administrada de Azure SQL. Los datos se recopilan y se agregan en intervalos de cinco minutos. Hay una fila por cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, el tamaño de almacenamiento, el uso de e/s y la SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
+Devuelve los datos de uso de CPU, e/s y almacenamiento de una Instancia administrada de Azure SQL. Los datos se recopilan y se agregan en intervalos de cinco minutos. Hay una fila por cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, el tamaño de almacenamiento, el uso de E/S y la SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
 
 La vista **Sys. server_resource_stats** tiene definiciones diferentes en función de la versión de la instancia administrada de Azure SQL con la que está asociada la base de datos. Tenga en cuenta estas diferencias y cualquier modificación que requiera la aplicación al actualizar a una nueva versión de servidor.
  
@@ -59,7 +59,7 @@ La vista **Sys. server_resource_stats** tiene definiciones diferentes en funció
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **Sys. server_resource_stats** se expresan como el total que se usa en bytes o megabytes (expresado en nombres de columna) distintos de avg_cpu, que se expresa como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.  
  
 ## <a name="examples"></a>Ejemplos  

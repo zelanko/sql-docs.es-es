@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767480"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Vuelve a sincronizar una suscripción de combinación en el estado de validación conocido que especifique. Esto le permite exigir convergencia o sincronizar la base de datos de suscripciones en un punto específico del tiempo, como la última vez que hubo una validación correcta o en una fecha específica. La instantánea no se vuelve a aplicar cuando se sincroniza de nuevo una suscripción utilizando este método. Este procedimiento almacenado no se utiliza para suscripciones de replicación de instantáneas ni replicación transaccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones.  
   

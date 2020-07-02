@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765422"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es muy común escribir un procedimiento almacenado (o un procedimiento almacenado extendido) que envía resultados o parámetros de salida al cliente que realiza la llamada.  
   
  En un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , cualquier instrucción **SELECT** que devuelve cero o más filas envía los resultados a la "canalización" del autor de la llamada conectado.  
@@ -31,7 +31,7 @@ ms.locfileid: "81487540"
  En los objetos de base de datos de Common Language Runtime (CLR) que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede enviar los resultados a la canalización conectada mediante los métodos **Send** del objeto **SqlPipe** . Para obtener el objeto **Pipe** , debe obtener acceso a la propiedad **SqlContext** del objeto **SqlPipe** . La clase **SqlPipe** es conceptualmente similar a la clase **Response** incluida en ASP.NET. Para obtener más información, vea la documentación de referencia de la clase SqlPipe en el kit de desarrollo de software de .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
- **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Son estos:  
+ **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Son las siguientes:  
   
 -   `void Send(string message)`  
   

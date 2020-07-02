@@ -1,5 +1,5 @@
 ---
-title: Sys. syslogins (Transact-SQL) | Microsoft Docs
+title: Inicios de sesión de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c0a8eaf44c5a893cb9d8dfbd8395a2e0b8b5504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764373"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada cuenta de inicio de sesión.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Junction**|**varbinary(85)**|Identificador de seguridad.|  
+|**sid**|**varbinary(85)**|Identificador de seguridad.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CreateDate**|**datetime**|Fecha en que se agregó el inicio de sesión.|  
 |**updatedate**|**datetime**|Fecha en que se actualizó el inicio de sesión.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68020009"
 |**name**|**sysname**|Nombre de inicio de sesión del usuario.|  
 |**nombrebd**|**sysname**|Nombre de la base de datos predeterminada del usuario al establecer una conexión.|  
 |**password**|**nvarchar(128)**|Devuelve NULL.|  
-|**módulo**|**sysname**|Idioma predeterminado del usuario.|  
+|**language**|**sysname**|Idioma predeterminado del usuario.|  
 |**denylogin**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows al que se le ha denegado el acceso.|  
 |**hasaccess**|**int**|1 = El inicio de sesión tiene acceso al servidor.|  
 |**isntname**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de Windows.<br /><br /> 0 = Es un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771464"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia las propiedades de la suscripción de extracción de mezcla. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
@@ -54,7 +54,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinta de la ubicación predeterminada o además de ella.|  
-|**denominación**||Descripción de esta suscripción de extracción de mezcla.|  
+|**description**||Descripción de esta suscripción de extracción de mezcla.|  
 |**distribuidor**||Nombre del distribuidor.|  
 |**distributor_login**||Id. de inicio de sesión utilizado en el distribuidor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Contraseña (cifrada) utilizada en el distribuidor para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -94,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changemergepullsubscription** se utiliza en la replicación de mezcla.  
   
  Se considera que el servidor y la base de datos actuales son el suscriptor y la base de datos del suscriptor.  

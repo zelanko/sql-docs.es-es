@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771585"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la lista de los dispositivos de cinta y el estado de las solicitudes de montaje para copias de seguridad.   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830549"
 |**mount_expiration_time**|**datetime**|Hora a la que expirará la solicitud de montaje (tiempo de espera). Es NULL si no hay ningún montaje pendiente (**status! = 2**). Acepta valores NULL.|  
 |**database_name**|**nvarchar(256)**|Base de datos para la que se va a realizar una copia de seguridad en este dispositivo. Acepta valores NULL.|  
 |**identificador**|**int**|Id. de sesión. Identifica el usuario de la cinta. Acepta valores NULL.|  
-|**Command**|**int**|Comando que realiza la copia de seguridad. Acepta valores NULL.|  
+|**command**|**int**|Comando que realiza la copia de seguridad. Acepta valores NULL.|  
 |**command_desc**|**nvarchar(120)**|Descripción del comando. Acepta valores NULL.|  
 |**media_family_id**|**int**|Índice de la familia de medios (1...* n*), *n* es el número de familias de medios del conjunto de medios. Acepta valores NULL.|  
 |**media_set_name**|**nvarchar(256)**|Nombre del conjunto de medios (si existe), tal como se especifica en la opción MEDIANAME al crear el conjunto de medios. Acepta valores NULL.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 547b524a35970f18cb1e3d1d4dbd3679267695a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771441"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia las propiedades del Agente de instantáneas para la publicación especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -67,7 +67,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**2**|A petición|  
 |**4**|Diario|  
 |**8**|Cada semana|  
-|**dieciséi**|Mensual|  
+|**16**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -94,7 +94,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hora|  
 |NULL (predeterminado)||  

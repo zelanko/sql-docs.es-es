@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b37d78138a3bea5abdffc9acdd8ea9b1ba392262
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765202"
 ---
 # <a name="localdbstopinstance-function"></a>Función LocalDBStopInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Detiene la ejecución de la instancia de SQL Server Express LocalDB especificada.  
   
  **Archivo de encabezado:** sqlncli.h  
@@ -58,7 +58,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [Entrada] Tiempo en segundos que transcurrirá para que se complete esta operación. Si este valor es 0, esta función devolverá resultados inmediatamente sin esperar a que se detenga la instancia de LocalDB.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -101,7 +101,7 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte también  

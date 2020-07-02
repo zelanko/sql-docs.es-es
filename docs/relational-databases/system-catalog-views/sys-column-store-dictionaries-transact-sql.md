@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d69a2355f18a162f3e7a6b76b07bbb7cd6a597a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764772"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila para cada diccionario que se utilice en los índices de almacén de columnas optimizados en memoria xVelocity. Los diccionarios se usan para codificar algunos tipos de datos (no todos), por tanto no todas las columnas en un índice de almacén de columnas tienen diccionarios. Un diccionario puede ser un diccionario primario, para todos los segmentos, y posiblemente para otros diccionarios que se usan para un subconjunto de los segmentos de la columna.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75656622"
 |**partition_id**|**bigint**|Indica el identificador de partición. Es único en una base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
-Debe tener un permiso de `VIEW DEFINITION` sobre la tabla. Las columnas siguientes devuelven null a menos que `SELECT` el usuario también tenga permiso: last_id, entry_count data_ptr.  
+Debe tener un permiso de `VIEW DEFINITION` sobre la tabla. Las columnas siguientes devuelven null a menos que el usuario también tenga `SELECT` permiso: last_id, entry_count data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

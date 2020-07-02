@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771146"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los permisos de un rol fijo de base de datos. **sp_dbfixedrolepermission** devuelve la información correcta en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . El resultado no refleja los cambios en la jerarquía de permisos que se implementaron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obtener más información, vea [roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que muestra una lista de roles fijos de base de datos y sus permisos correspondientes.  
   
@@ -54,7 +54,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Nombre del rol fijo de base de datos|  
 |**Permiso**|**nvarchar (70)**|Permisos asociados a **DbFixedRole**|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para mostrar una lista de los roles fijos de base de datos, ejecute **sp_helpdbfixedrole**. En la tabla siguiente se muestran los roles fijos de base de datos.  
   
 |Rol fijo de base de datos|Descripción|  

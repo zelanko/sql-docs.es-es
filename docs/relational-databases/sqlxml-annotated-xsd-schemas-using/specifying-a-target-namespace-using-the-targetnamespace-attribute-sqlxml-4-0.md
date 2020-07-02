@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764898"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Al escribir esquemas XSD, puede usar el atributo **targetNamespace** de XSD para especificar un espacio de nombres de destino. En este tema se describe cómo funcionan los atributos XSD **targetNamespace**, **elementFormDefault**y **attributeFormDefault** , cómo afectan a la instancia XML que se genera y cómo se especifican las consultas XPath con espacios de nombres.  
   
  Puede usar el atributo **xsd: targetNamespace** para colocar elementos y atributos del espacio de nombres predeterminado en un espacio de nombres diferente. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar los atributos **elementFormDefault** y **attributeFormDefault** en el **\<xsd:schema>** elemento para especificar globalmente la calificación de elementos y atributos locales, o puede usar el atributo **Form** para especificar elementos y atributos individuales por separado.  

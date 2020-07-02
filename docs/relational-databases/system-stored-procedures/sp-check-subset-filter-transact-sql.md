@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371caa4c77e719491216fb685265c907bd8bfddd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771305"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Se utiliza para comprobar una cláusula de filtro en una tabla para determinar si es válida para esa tabla. Este procedimiento almacenado devuelve información sobre el filtro suministrado, incluso si el filtro es apto para su uso con particiones precalculadas. Este procedimiento almacenado se ejecuta en el publicador de la base de datos que contiene la publicación.  
   

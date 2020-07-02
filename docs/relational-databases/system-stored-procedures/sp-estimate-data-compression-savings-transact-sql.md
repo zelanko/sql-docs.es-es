@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04201e9127f5de173767f7b2071088f2bd4f2828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772180"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el tamaño actual del objeto solicitado y calcula el tamaño del objeto para el estado de compresión solicitado. La compresión se puede evaluar para tablas enteras o partes de tablas. Esto incluye montones, índices clúster, índices no clúster, índices de almacén de columnas, vistas indizadas y particiones de tablas e índices. Los objetos se pueden comprimir mediante la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Si la tabla, índice o partición ya están comprimidos, puede utilizar este procedimiento para calcular el tamaño de la tabla, del índice o de la partición en caso de que se volviera a comprimir.  
   
@@ -89,7 +89,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use `sp_estimate_data_compression_savings` para calcular el ahorro que se puede producir al habilitar una tabla o partición para la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si tiene una fila de 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, puede ajustar solo una fila en una página de datos. No se obtiene ningún ahorro.  
   
  Si los resultados de ejecutar `sp_estimate_data_compression_savings` indican que la tabla crecerá, eso quiere decir que muchas filas de la tabla utilizan prácticamente toda la precisión en los tipos de datos y la adición de la mínima sobrecarga necesaria para el formato comprimido es mayor que el ahorro obtenido por la compresión. En este caso excepcional, no habilite la compresión.  

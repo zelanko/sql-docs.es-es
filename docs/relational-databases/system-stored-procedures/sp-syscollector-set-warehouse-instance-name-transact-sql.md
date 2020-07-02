@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9a2e99719fc4409d0aa83aae5e625370ff9abff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 60208e714595338e68f0d1946cc2e767df45e409
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769690"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Especifica el nombre de la instancia para la cadena de conexión que se usa para conectar al almacén de administración de datos.  
   
@@ -48,7 +48,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe deshabilitar el recopilador de datos antes de cambiar esta configuración para todo el recopilador de datos. Se produce un error en este procedimiento si se habilita el recopilador de datos.  
   
  Para ver el nombre de instancia actual, consulte la vista del sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  

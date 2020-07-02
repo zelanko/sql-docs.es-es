@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f9947372ca0c92d7daaef19fafb2f7e3ee4a84f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769639"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita la captura de datos modificados en la base de datos actual. Este procedimiento se debe ejecutar para una base de datos antes de que se puedan habilitar las tablas para la captura de datos modificados de esa base de datos. La captura de datos modificados registra las operaciones de inserción, actualización y eliminación aplicadas a las tablas habilitadas, proporcionando los detalles de los cambios en un formato relacional de uso sencillo. Para las filas modificadas, se captura la información de columna que duplica la estructura de las columnas de una tabla de origen sometida a seguimiento, junto con los metadatos necesarios para aplicar los cambios a un entorno de destino.  
   

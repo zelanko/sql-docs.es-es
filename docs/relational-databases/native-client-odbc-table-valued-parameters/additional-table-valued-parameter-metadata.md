@@ -14,17 +14,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773481"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadatos de parámetros con valores de tabla adicionales
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Para recuperar los metadatos de un parámetro con valores de tabla, una aplicación llama a SQLProcedureColumns. Para un parámetro con valores de tabla, SQLProcedureColumns devuelve una sola fila. Se han [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]agregado dos columnas específicas adicionales, SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME, para proporcionar información de esquema y de catálogo para los tipos de tabla asociados a los parámetros con valores de tabla. De acuerdo con la especificación ODBC, SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME aparecen antes de todas las columnas específicas del controlador agregadas en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de todas las columnas asignadas por el propio ODBC.  
+  Para recuperar los metadatos de un parámetro con valores de tabla, una aplicación llama a SQLProcedureColumns. Para un parámetro con valores de tabla, SQLProcedureColumns devuelve una sola fila. Se han [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agregado dos columnas específicas adicionales, SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME, para proporcionar información de esquema y de catálogo para los tipos de tabla asociados a los parámetros con valores de tabla. De acuerdo con la especificación ODBC, SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME aparecen antes de todas las columnas específicas del controlador agregadas en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de todas las columnas asignadas por el propio ODBC.  
   
  En la tabla siguiente se enumeran las columnas que son significativas para los parámetros con valores de tabla.  
   
@@ -32,8 +32,8 @@ ms.locfileid: "81304545"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint no NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar (128) no NULL|El nombre del tipo del parámetro con valores de tabla.|  
-|COLUMN_SIZE|Entero|NULL|  
-|BUFFER_LENGTH|Entero|0|  
+|COLUMN_SIZE|Integer|NULL|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint no NULL|SQL_NULLABLE|  
@@ -41,7 +41,7 @@ ms.locfileid: "81304545"
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint no NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Entero|NULL|  
+|CHAR_OCTET_LENGTH|Integer|NULL|  
 |ORDINAL_POSITION|Integer no NULL|La posición ordinal del parámetro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar (128) no NULL|El catálogo que contiene la definición del tipo de tabla del parámetro con valores de tabla.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773876"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de la programación de los trabajos que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utiliza para realizar actividades automatizadas.  
  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Hora del día en que se inicia la programación.|  
 |**active_end_time**|**int**|Hora del día en que termina la programación.|  
 |**date_created**|**datetime**|Fecha en que se creó la programación.|  
-|**schedule_description**|**nvarchar(4000)**|Una descripción en Inglés de la programación que se deriva de los valores de **msdb. DBO. sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se solicitó la descripción.|  
+|**schedule_description**|**nvarchar(4000)**|Una descripción en Inglés de la programación que se deriva de los valores de las **programaciones demsdb.dbo.sys**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se solicitó la descripción.|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota: sp_help_jobschedule** devuelve valores de las tablas del sistema **dbo. sysjobschedules** y **dbo. sysschedules** en **msdb**. **sysjobschedules** se actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota: sp_help_jobschedule** devuelve valores del **dbo.sysjobschedules** y **dbo.sysprograma** las tablas del sistema en **msdb**. **sysjobschedules** se actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de **sp_help_jobschedule** solo se pueden utilizar en determinadas combinaciones. Si se especifica *schedule_id* , no se puede especificar ni *job_id* ni *job_name* . De lo contrario, los parámetros *job_id* o *job_name* se pueden usar con *schedule_name*.  

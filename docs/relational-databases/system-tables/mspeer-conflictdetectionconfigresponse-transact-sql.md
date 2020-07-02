@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511728cf8203407d964988486ea012d06dfbcc56
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d57963f288f5f1805d74c95058ecc92df17ff209
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773718"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Se utiliza en la replicación punto a punto para almacenar la respuesta de cada nodo a una solicitud de configuración de toda la topología. Esta tabla se almacena en la base de datos de publicación.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82812684"
 |originator_id|**varbinary(16)**|Identifica cada nodo de la topología para detectar conflictos. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Período de tiempo, en días, durante el cual los metadatos se almacenan en tablas conflictivas.|  
 |peer_subscriptions|**XML**|Información sobre el nodo que respondió a la solicitud.|  
-|progress_phase|**nvarchar(32)**|Identifica la fase actual de procesamiento, utilizando uno de los valores siguientes:<br /><br /> Iniciado<br /><br /> Versión del mismo nivel recopilada<br /><br /> Estado recopilado|  
+|progress_phase|**nvarchar(32)**|Identifica la fase actual de procesamiento, utilizando uno de los valores siguientes:<br /><br /> Comenzado<br /><br /> Versión del mismo nivel recopilada<br /><br /> Estado recopilado|  
 |modified_date|**datetime**|Fecha y hora en que se completó una fase.|  
   
 ## <a name="see-also"></a>Consulte también  

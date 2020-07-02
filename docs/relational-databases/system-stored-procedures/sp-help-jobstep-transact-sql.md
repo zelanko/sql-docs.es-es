@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773831"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información para los pasos de un trabajo que el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza para realizar actividades automatizadas.  
   
@@ -65,7 +65,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Identificador único del paso.|  
 |**step_name**|**sysname**|Nombre del paso del trabajo.|  
 |**subsistema**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
-|**Command**|**nvarchar(max)**|Comando que se ejecuta en el paso.|  
+|**command**|**nvarchar(max)**|Comando que se ejecuta en el paso.|  
 |**flags**|**int**|Máscara de bits que controla el comportamiento del paso.|  
 |**cmdexec_success_code**|**int**|En el caso de un paso **CmdExec** , es el código de salida del proceso de un comando correcto.|  
 |**on_success_action**|**tinyint**|Acción que se realiza si el paso termina correctamente:<br /><br /> **1** = salir del trabajo que informa de los trabajos correctos.<br /><br /> **2** = salir del trabajo que informa de un error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  

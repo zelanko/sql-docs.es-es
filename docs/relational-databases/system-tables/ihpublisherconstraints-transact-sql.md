@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8b7409a15c9e8f3df4991b2b7d20737f5cd82c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa87169a0988336e8a00537a76126120fb95d196
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773776"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHpublisherconstraints** contiene una fila por cada restricción replicada desde publicadores que no son de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -34,8 +34,8 @@ ms.locfileid: "82813346"
 |**publisherconstraint_id**|**int**|Identifica una restricción publicada.|  
 |**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a la que pertenece la restricción.|  
 |**publisher_id**|**smallint**|Identifica el publicador que no es de SQL Server desde el que se publica la columna.|  
-|**Nombre**|**Predeterminado**|Nombre de la restricción publicada.|  
-|**Tipo**|**nvarchar(255)**|Un tipo de restricción compatible de la tabla del sistema [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) .|  
+|**Name**|**Predeterminado**|Nombre de la restricción publicada.|  
+|**Type**|**nvarchar(255)**|Un tipo de restricción compatible de la tabla del sistema [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) .|  
   
 ## <a name="see-also"></a>Consulte también  
  [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

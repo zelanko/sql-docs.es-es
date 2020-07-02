@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677580"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Devuelve información acerca de todas las esperas encontradas por los subprocesos ejecutados durante la operación. Puede utilizar esta vista agregada para diagnosticar problemas de rendimiento con [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y también con lotes y consultas específicos.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82830859"
 |max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 -   Esta vista de administración dinámica solo muestra datos para la base de datos actual.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "82830859"
 |FSAGENT|Tiene lugar cuando una operación de E/S del archivo de FILESTREAM espera un recurso del agente de FILESTREAM que está utilizando otra operación de E/S de archivo.|  
 |FSTR_CONFIG_MUTEX|Tiene lugar cuando se produce una espera hasta que se complete la configuración de otra característica de FILESTREAM.|  
 |FSTR_CONFIG_RWLOCK|Tiene lugar cuando se produce una espera para serializar el acceso a los parámetros de configuración de FILESTREAM.|  
-|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
 |FT_RESTART_CRAWL|Tiene lugar cuando un rastreo de texto completo debe reiniciarse desde el último punto correcto conocido para recuperarse de un error transitorio. La espera permite que completen o abandonen el paso actual las tareas del trabajador que se están ejecutando en dicho rellenado.|  
 |FULLTEXT GATHERER|Tiene lugar durante la sincronización de operaciones de texto completo.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -256,8 +256,8 @@ ms.locfileid: "82830859"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Se utiliza para esperar mientras los procesos del usuario finalizan en una base de datos que se ha pasado utilizando la cláusula de terminación ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produce cuando una tarea en segundo plano está esperando a que se termine la tarea en segundo plano que recibe (a través de sondeo) las notificaciones de Clústeres de conmutación por error de Windows Server.  Solo para uso interno.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Una operación de anexar, reemplazar o quitar está esperando para obtener un bloqueo de escritura en una lista interna de Always On (como una lista de redes, direcciones de red o agentes de escucha del grupo de disponibilidad).  Solo para uso interno.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produce cuando una tarea en segundo plano está esperando a que se termine la tarea en segundo plano que recibe (a través de sondeo) las notificaciones de Clústeres de conmutación por error de Windows Server.  Exclusivamente para uso interno.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Una operación de anexar, reemplazar o quitar está esperando para obtener un bloqueo de escritura en una lista interna de Always On (como una lista de redes, direcciones de red o agentes de escucha del grupo de disponibilidad).  Exclusivamente para uso interno.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Un Always On operación de eliminación de grupo de disponibilidad está esperando a que el grupo de disponibilidad de destino quede sin conexión antes de destruir los objetos de clústeres de conmutación por error de Windows Server.|  
 |PWAIT_HADR_ONLINE_COMPLETED|Un Always On operación de creación o conmutación por error del grupo de disponibilidad está esperando a que el grupo de disponibilidad de destino se ponga en línea.|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Una operación de Always On Drop Availability Group está esperando la finalización de cualquier tarea en segundo plano programada como parte de un comando anterior. Por ejemplo, el puede haber una tarea en segundo plano que esté pasando las bases de datos de disponibilidad al rol principal. La DDL DROP AVAILABILITY GROUP siempre debe esperar a que esta tarea en segundo plano termine para evitar las condiciones de carrera.|  
@@ -379,11 +379,11 @@ ms.locfileid: "82830859"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
 |TDPFT_IFTS_SCHEDULER_IDLE_WAIT|Tipo de espera de la suspensión del programador de texto completo. El programador está inactivo.|  
-|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
   
   

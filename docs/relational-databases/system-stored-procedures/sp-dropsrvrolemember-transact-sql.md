@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662462"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Quita un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows de un rol fijo de servidor.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Argumentos
 
-**[ @loginame = ]** '_login_'  
+**[ @loginame =]** '_Inicio de sesión_'  
 Es el nombre del inicio de sesión que se va a quitar del rol fijo de servidor. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. debe existir un *Inicio de sesión* .  
 
-**[ @rolename = ]** '_role_'  
+**[ @rolename =]** '_rol_'  
 Es el nombre de un rol de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* debe ser uno de los siguientes valores:  
 
 -   sysadmin  

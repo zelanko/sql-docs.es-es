@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8710aa297b01634d5307dbd3c057b9d51fe8f6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693254"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina filas de una tabla de conflictos o de la [MSmerge_conflicts_info &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Este procedimiento almacenado se ejecuta en el equipo donde está almacenada la tabla de conflictos, en cualquier base de datos.  
   
@@ -54,7 +54,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_deletemergeconflictrow** se utiliza en la replicación de mezcla.  
   
  [MSmerge_conflicts_info &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) es una tabla del sistema y no se elimina de la base de datos, aunque esté vacía.  

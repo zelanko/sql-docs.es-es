@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679053"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de datos (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -34,7 +34,7 @@ ms.locfileid: "68064216"
 |SRVBIGCHAR|**char**|Tipo de datos **character**, longitud de 0 a 8000 bytes.|  
 |SRVBIGVARBINARY|**varbinary**|Tipo de datos **binary** de longitud variable, longitud de 0 a 8000 bytes.|  
 |SRVBIGVARCHAR|**varchar**|Tipo de datos **character** de longitud variable, longitud de 0 a 8000 bytes.|  
-|SRVBINARY|**binary**|Tipo de datos **binary**.|  
+|SRVBINARY|**binary**|tipo de datos **binario** .|  
 |SRVBIT|**Poco**|tipo de datos **bit** .|  
 |SRVBITN|**bit null**|Tipo de datos **bit**, permite valores NULL.|  
 |SRVCHAR|**char**|Tipo de datos **character**.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68064216"
 |SRVFLT4|**real**|Tipo de datos **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de datos **float** de 8 bytes.|  
 |SRVFLTN|**real** &#124; **float null**|Tipo de datos **real** o **float**, permite valores NULL.|  
-|SRVIMAGE|**image**|Tipo de datos **image**.|  
+|SRVIMAGE|**imagen**|Tipo de datos **image**.|  
 |SRVINT1|**tinyint**|Tipo de datos **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de datos **smallint** de 2 bytes.|  
 |SRVINT4|**int**|Tipo de datos **int** de 4 bytes.|  

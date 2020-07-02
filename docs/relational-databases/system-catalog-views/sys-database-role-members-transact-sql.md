@@ -20,17 +20,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665361"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, los roles de aplicación y otros roles de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la instrucción [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) con la `ADD MEMBER` opción. Se combina con [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de `principal_id` los valores.
+  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, los roles de aplicación y otros roles de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la instrucción [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) con la `ADD MEMBER` opción. Se combina con [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de los `principal_id` valores.
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68079473"
 |**member_principal_id**|**int**|IDENTIFICADOR de la entidad de seguridad de base de datos del miembro.|  
   
 ## <a name="permissions"></a>Permisos  
- Cualquier usuario puede ver su propia pertenencia a roles. Para ver otras pertenencias a roles, `db_securityadmin` es necesario pertenecer `VIEW DEFINITION` al rol fijo de base de datos o a la base de datos.  
+ Cualquier usuario puede ver su propia pertenencia a roles. Para ver otras pertenencias a roles, es necesario pertenecer al `db_securityadmin` rol fijo de base de datos o `VIEW DEFINITION` a la base de datos.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

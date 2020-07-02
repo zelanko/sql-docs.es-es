@@ -18,15 +18,15 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4537cdca0d9d0b64d7c7b75f57d0c4eb39836097
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651919"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hace que se vuelvan a compilar los procedimientos almacenados, los desencadenadores y las funciones definidas por el usuario la próxima vez que se ejecuten. Para ello, quita el plan existente de la memoria cache de procedimientos que fuerza la creación de un nuevo plan la próxima vez que se ejecuten el procedimiento o el desencadenador. En una colección de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se registra el evento SP:CacheInsert en lugar del evento SP:Recompile.  
   

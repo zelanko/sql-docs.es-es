@@ -17,15 +17,15 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8cd9e57f2ca7b9da3f13ef0438b7aa8ffc01b3a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666163"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para ejecutar los ejemplos de SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La sección de [programación SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) proporciona numerosos ejemplos. En este tema se enumeran los requisitos para crear ejemplos funcionales a partir de estos ejemplos.  
   
  Para crear ejemplos funcionales mediante los ejemplos de SQLXML 4.0, necesita tener instalado lo siguiente.  

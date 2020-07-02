@@ -1,5 +1,5 @@
 ---
-title: Sys. system_views (Transact-SQL) | Microsoft Docs
+title: sys.system_views (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbfca799f3c3dc4b3930f487fb45413c7711af48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d53f54e18c464a61d0a4b5b6cfb4cdb0cc866642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664113"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada vista del sistema incluida en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todas las vistas del sistema están contenidas en los esquemas denominados **Sys** o **INFORMATION_SCHEMA**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|\<columnas heredadas>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_replicated**|**bit**|1 = La vista está replicada.|  
 |**has_replication_filter**|**bit**|1 = La vista tiene un filtro de replicación.|  
 |**has_opaque_metadata**|**bit**|1 = Se ha especificado la opción VIEW_METADATA para la vista. Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).|  

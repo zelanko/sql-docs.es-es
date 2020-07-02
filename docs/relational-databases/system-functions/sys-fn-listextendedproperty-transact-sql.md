@@ -26,15 +26,15 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652188"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve valores de propiedad extendidos de objetos de bases de datos.  
  
@@ -96,7 +96,7 @@ fn_listextendedproperty (
   
  Si la tabla devuelta está vacía, el objeto no tiene propiedades extendidas o el usuario no tiene permisos para mostrar las propiedades extendidas del objeto. Cuando se devuelven propiedades extendidas de la propia base de datos, el valor de las columnas objtype y objname será NULL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el valor de *property_name* es null o default, fn_listextendedproperty devuelve todas las propiedades del objeto especificado.  
   
  Cuando se especifica el tipo de objeto y el valor del nombre de objeto correspondiente es NULL o el valor predeterminado, fn_listextendedproperty devuelve todas las propiedades extendidas de todos los objetos del tipo especificado.  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Mostrar las propiedades extendidas de todas las tablas de un esquema  
- En el ejemplo siguiente se enumeran las propiedades extendidas de `Sales` todas las tablas contenidas en el esquema.  
+ En el ejemplo siguiente se enumeran las propiedades extendidas de todas las tablas contenidas en el `Sales` esquema.  
   
 ```  
 USE AdventureWorks2012;  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662884"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API de OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos del BLOB mediante el uso de las API de Win32. PathName es de solo lectura.  
   
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
  *\@desea*  
- [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la opción puede ser uno de los valores siguientes. * \@* El valor predeterminado es 0.  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la * \@ opción* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|Devuelve el nombre del servidor convertido al formato BIOS, por ejemplo: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Devuelve el nombre del servidor sin la conversión, por ejemplo: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Cuando la base de datos pertenece a un grupo de disponibilidad de Always On, el valor de *use_replica_computer_name* tiene el efecto siguiente en la salida de la función **PathName** :  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificada.|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |0|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valor devuelto  
  El valor devuelto es la ruta de acceso de NETBIOS o la ruta de acceso lógica completa del BLOB. PathName no devuelve una dirección IP. Se devuelve NULL cuando no se ha creado el BLOB FILESTREAM.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La columna ROWGUID debe estar visible en cualquier consulta que llame a PathName.  
   
  Un BLOB FILESTREAM solo se puede crear utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)].  

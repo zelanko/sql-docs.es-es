@@ -1,5 +1,5 @@
 ---
-title: Sys. sysservers (Transact-SQL) | Microsoft Docs
+title: Servidores de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5406f97a14d92aed63e60e946da9f16bd183d611
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652236"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada servidor al que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso como origen de datos OLE DB.  
   
@@ -54,18 +54,18 @@ ms.locfileid: "68941099"
 |**QueryTimeout**|**int**|Configuración del tiempo de espera para consultas sobre un servidor.|  
 |**srvnetname**|**Char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = El servidor es un servidor remoto.<br /><br /> 0 = El servidor es un servidor vinculado.|  
-|**RPC**|**bit**|1 = **sp_serveroption\@RPC** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@RPC** establecido en **false** u **OFF**.|  
-|**Pub**|**bit**|1 = **sp_serveroption\@pub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@pub** establecida en **false** u **OFF**.|  
-|**sub**|**bit**|1 = **sp_serveroption\@sub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sub** establecido en **false** u **OFF**.|  
-|**dist**|**bit**|1 = **sp_serveroption\@Dist** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@Dist** establecido en **false** u **OFF**.|  
-|**dpub**|**bit**|1 = **sp_serveroption\@DPUB** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@DPUB** establecido en **false** u **OFF**.|  
-|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@RPC out** establecido en **false** u **OFF**.|  
-|**DataAccess**|**bit**|1 = **sp_serveroption\@el acceso a datos** se establece en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@el acceso a datos** se establece en **false** u **OFF**.|  
-|**collationcompatible**|**bit**|1 = **sp_serveroption\@compatible con la intercalación** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@compatible con la intercalación** establecida en **false** u **OFF**.|  
-|**sistema**|**bit**|1 = **sp_serveroption\@sistema** está establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sistema** está establecido en **false** u **OFF**.|  
-|**useremotecollation**|**bit**|1 = **sp_serveroption\@intercalación remota** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@intercalación remota** establecida en **false** u **OFF**.|  
-|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@validación diferida de esquema** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@la validación diferida de esquemas** establecida en **false** u **OFF**.|  
-|**intercalación**|**sysname**|Intercalación de servidor establecida **por\@sp_serveroption nombre de intercalación**.|  
+|**RPC**|**bit**|1 = **sp_serveroption \@ RPC** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ RPC** establecido en **false** u **OFF**.|  
+|**Pub**|**bit**|1 = **sp_serveroption \@ pub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ pub** establecida en **false** u **OFF**.|  
+|**sub**|**bit**|1 = **sp_serveroption \@ Sub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ Sub** establecido en **false** u **OFF**.|  
+|**dist**|**bit**|1 = **sp_serveroption \@ Dist** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ Dist** establecido en **false** u **OFF**.|  
+|**dpub**|**bit**|1 = **sp_serveroption \@ DPUB** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ DPUB** establecido en **false** u **OFF**.|  
+|**rpcout**|**bit**|1 = **sp_serveroption \@ RPC out** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ RPC out** establecido en **false** u **OFF**.|  
+|**DataAccess**|**bit**|1 = **sp_serveroption el \@ acceso a datos** se establece en **true** u **on**.<br /><br /> 0 = **sp_serveroption el \@ acceso a datos** se establece en **false** u **OFF**.|  
+|**collationcompatible**|**bit**|1 = **sp_serveroption \@ compatible con la intercalación** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ compatible con la intercalación** establecida en **false** u **OFF**.|  
+|**sistema**|**bit**|1 = **sp_serveroption \@ sistema** está establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ sistema** está establecido en **false** u **OFF**.|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption \@ Intercalación remota** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption \@ Intercalación remota** establecida en **false** u **OFF**.|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption \@ validación diferida de esquema** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption la \@ validación diferida de esquemas** establecida en **false** u **OFF**.|  
+|**intercalación**|**sysname**|Intercalación de servidor establecida por **sp_serveroption \@ nombre de intercalación**.|  
 |**nonsqlsub**|bit|0 = el servidor es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = el servidor no es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Consulte también  

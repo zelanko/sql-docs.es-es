@@ -1,5 +1,5 @@
 ---
-title: Sys. sysconstraints (Transact-SQL) | Microsoft Docs
+title: Restricciones de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3ee1ce24876eab6689da7432329a2788ce70c34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663360"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene correspondencias entre restricciones y los objetos que las poseen en la base de datos.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "68089194"
 |**constid**|**int**|Número de restricción.|  
 |**id**|**int**|Id. de la tabla que posee la restricción.|  
 |**colid**|**smallint**|Id. de la columna en la que se define la restricción.<br /><br /> 0 = Restricción de tabla|  
-|**spare1**|**tinyint**|Reserved|  
+|**spare1**|**tinyint**|Reservada|  
 |**status**|**int**|Pseudomáscara de bits que indica el estado. Entre los valores posibles figuran los siguientes:<br /><br /> 1 = Restricción PRIMARY KEY<br /><br /> 2 = Restricción UNIQUE KEY<br /><br /> 3 = Restricción FOREIGN KEY<br /><br /> 4 = Restricción CHECK<br /><br /> 5 = Restricción DEFAULT<br /><br /> 16 = Restricción de nivel de columna<br /><br /> 32 = Restricción de nivel de tabla|  
-|**actions**|**int**|Reserved|  
-|**error**|**int**|Reserved|  
+|**actions**|**int**|Reservada|  
+|**error**|**int**|Reservada|  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

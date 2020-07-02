@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692661"
 ---
 # <a name="replication-views-transact-sql"></a>Vistas de replicación (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Estas vistas contienen información que utiliza la replicación en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las vistas permiten un acceso más sencillo a los datos de [las tablas del sistema de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md). Las vistas se crean en una base de datos de usuario cuando ésta está habilitada como una base de datos de publicaciones o suscripciones.  Todos los objetos de replicación se quitan de las bases de datos de usuario cuando se quita la base de datos de una topología de replicación. El método preferido para obtener acceso a los metadatos de replicación es mediante [procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   

@@ -20,15 +20,15 @@ ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5266b758c965574e7b810804fbbbfd3bb4958ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd5636a3b3cf700dccc855e26bb64f85f0c1207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652364"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada clave asimétrica.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82829171"
 |**algoritmo**|**char(2)**|Algoritmo usado con la clave.<br /><br /> 1R = RSA de 512 bits<br /><br /> 2R = RSA de 1024 bits<br /><br /> 3R = RSA de 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo usado con la clave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Longitud en bits de la clave|  
-|**Junction**|**varbinary(85)**|SID del inicio de sesión de esta clave Para las claves de Administración extensible de claves, este valor será NULL.|  
+|**sid**|**varbinary(85)**|SID del inicio de sesión de esta clave Para las claves de Administración extensible de claves, este valor será NULL.|  
 |**string_sid**|**nvarchar(128)**|Representación de cadena del SID de inicio de sesión de la clave Para las claves de Administración extensible de claves, este valor será NULL.|  
 |**public_key**|**varbinary(max)**|Public_key|  
 |**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  

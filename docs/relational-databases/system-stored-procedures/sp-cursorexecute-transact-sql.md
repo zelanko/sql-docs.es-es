@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3152e180ceb1681f259f0b1cfcfbccce224a68c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646265"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea y rellena un cursor basado en el plan de ejecución creado por sp_cursorprepare. Este procedimiento, junto con sp_cursorprepare, tiene la misma función que sp_cursoropen, pero se divide en dos fases. sp_cursorexecute se invoca especificando el identificador 4 en un paquete de flujo TDS.  
   
@@ -84,7 +84,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Número de filas desconocido.|  
 |-n|Un rellenado asincrónico está en vigor.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parámetros ccopt y scrollopt  
  *scrollopt* y *ccopt* son útiles cuando se retienen los planes almacenados en caché para la caché del servidor, lo que significa que se debe volver a compilar el identificador preparado que identifica la instrucción. Los valores de los parámetros *scrollopt* y *ccopt* deben coincidir con los valores enviados en la solicitud original a sp_cursorprepare.  

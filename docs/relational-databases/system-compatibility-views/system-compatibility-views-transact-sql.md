@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652203"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Vistas de compatibilidad del sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muchas de las tablas del sistema de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se implementan ahora como un conjunto de vistas. Se conocen como vistas de compatibilidad y solo se proporcionan por compatibilidad con versiones anteriores. Las vistas de compatibilidad exponen los mismos metadatos que estaban disponibles en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. No obstante, las vistas de compatibilidad no exponen ninguno de los metadatos relacionados con las características incluidas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Por tanto, cuando utilice estas nuevas características, como [!INCLUDE[ssSB](../../includes/sssb-md.md)] o las particiones, deberá cambiar a la utilización de las vistas de catálogo.  
   
@@ -39,26 +39,26 @@ ms.locfileid: "68018035"
   
  Para evitar estos problemas, se recomienda utilizar las nuevas vistas de catálogo, que pueden procesar ese mayor número de identificadores de usuario y de tipo. La tabla siguiente indica las columnas que pueden presentar este desbordamiento.  
   
-|Nombre de la columna|Vista de compatibilidad|Vista de SQL Server 2005|  
+|Nombre de columna|Vista de compatibilidad|Vista de SQL Server 2005|  
 |-----------------|------------------------|--------------------------|  
 |**xusertype**|**syscolumns**|**sys.columns**|  
 |**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**UID**|**sysobjects**|**sys.objects**|  
-|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**uid**|**sysobjects**|**sys.objects**|  
+|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**otorgante**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**UID**|**systypes**|**sys.types**|  
-|**UID**|**sysusers**|**sys.database_principals**|  
+|**uid**|**systypes**|**sys.types**|  
+|**uid**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Cuando se hace referencia en una base de datos de usuario, las tablas del sistema que se anunciaron como desusadas en SQL Server 2000 (por ejemplo, **syslanguages** o **syscacheobjects**), ahora se enlazan a la vista de compatibilidad con versiones preliminares en el esquema **Sys** . Dado que las tablas del sistema de SQL Server 2000 están en desuso en múltiples versiones, no se considera que este cambio sea una novedad.  
   
- Ejemplo: Si un usuario crea una tabla de usuario denominada **syslanguages** en una base de datos de usuario, en SQL Server 2008, `SELECT * from dbo.syslanguages;` la instrucción de esa base de datos devolvería los valores de la tabla de usuario. A partir de SQL Server 2012, esta práctica devolverá datos de la vista del sistema **Sys. syslanguages**.  
+ Ejemplo: Si un usuario crea una tabla de usuario denominada **syslanguages** en una base de datos de usuario, en SQL Server 2008, la instrucción `SELECT * from dbo.syslanguages;` de esa base de datos devolvería los valores de la tabla de usuario. A partir de SQL Server 2012, esta práctica devolverá datos de la vista del sistema **sys.syslos idiomas**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663978"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra las expresiones de condiciones que se ejecutaron, los destinos de las expresiones, el resultado de cada ejecución y detalles sobre los errores, si se produjo alguno. En la tabla siguiente se describen las columnas de la vista syspolicy_execution_history_details.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68094831"
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando solucione problemas de la administración basada en directivas, consulte la vista  syspolicy_policy_execution_history_details para determinar en qué combinaciones de expresión de condición y destino se produjo un error y cuándo, y revise los errores relacionados.  
   
  La consulta siguiente combina la vista `syspolicy_policy_execution_history_details` con las vistas `syspolicy_policy_execution_history_details` y `syspolicy_policies` para mostrar el nombre de la directiva, el nombre de la condición y detalles sobre los errores.  

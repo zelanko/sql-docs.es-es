@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 807ed6a6f0d59444cd38f7fdf902a7c3fc1b47d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97ef8c7dfc617cb6cd56dbcc6d83e0540051d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695360"
 ---
 # <a name="assemblies---implementing"></a>Ensamblados: implementación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se proporciona información acerca de las áreas siguientes para ayudarle a implementar ensamblados y trabajar con ellos en la base de datos:  
   
 -   Crear ensamblados  
@@ -32,7 +32,7 @@ ms.locfileid: "81488054"
 -   Administrar versiones de ensamblado  
   
 ## <a name="creating-assemblies"></a>Crear ensamblados  
- Los ensamblados se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], o bien en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el editor asistido de ensamblados. Además, al implementar un proyecto de SQL Server [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] en, se registra un ensamblado en la base de datos que se especificó para el proyecto. Para más información, consulte [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+ Los ensamblados se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], o bien en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el editor asistido de ensamblados. Además, al implementar un proyecto de SQL Server en, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se registra un ensamblado en la base de datos que se especificó para el proyecto. Para más información, consulte [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
  **Para crear un ensamblado mediante Transact-SQL**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "81488054"
   
 -   [Eliminar objetos](../../ssms/object/delete-objects.md)  
   
- De forma predeterminada, ningún ensamblado creado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar. Puede usar la opción **clr enabled** del **sp_configure** procedimiento almacenado del sistema para deshabilitar o habilitar la ejecución de todos los ensamblados que se cargan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en. Al deshabilitar la ejecución de ensamblados se impide la ejecución de funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario CLR (Common Language Runtime), y se detienen los que se están ejecutando. El hecho de deshabilitar la ejecución no deshabilita la capacidad de crear, alterar o quitar ensamblados. Para obtener más información, vea [clr enabled (opción de configuración del servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)).  
+ De forma predeterminada, ningún ensamblado creado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar. Puede usar la opción **clr enabled** del **sp_configure** procedimiento almacenado del sistema para deshabilitar o habilitar la ejecución de todos los ensamblados que se cargan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al deshabilitar la ejecución de ensamblados se impide la ejecución de funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario CLR (Common Language Runtime), y se detienen los que se están ejecutando. El hecho de deshabilitar la ejecución no deshabilita la capacidad de crear, alterar o quitar ensamblados. Para obtener más información, vea [clr enabled (opción de configuración del servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)).  
   
  **Para deshabilitar y habilitar la ejecución de ensamblados**  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. syscacheobjects (Transact-SQL) | Microsoft Docs
+title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663434"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre cómo se utiliza la caché.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "68010779"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|Identificador de depósito. El valor indica un intervalo de 0 a (tamaño de directorio -1). El tamaño de directorio es el de la tabla hash.|  
 |**cacheobjtype**|**nvarchar (17)**|Tipo de objeto en caché:<br /><br /> Plan compilado<br /><br /> Plan ejecutable<br /><br /> Árbol de análisis<br /><br /> Cursor<br /><br /> Procedimiento almacenado extendido|  
-|**objtype**|**nvarchar (8)**|Tipo de objeto:<br /><br /> Procedimiento almacenado<br /><br /> Instrucción preparada<br /><br /> Consulta ad hoc ([!INCLUDE[tsql](../../includes/tsql-md.md)] enviada como eventos de lenguaje desde las utilidades **sqlcmd** o **osql** , en lugar de llamadas a procedimiento remoto)<br /><br /> ReplProc (procedimiento de replicación) <br /><br /> Desencadenador<br /><br /> Ver<br /><br /> Valor predeterminado<br /><br /> Tabla de usuario<br /><br /> Tabla del sistema<br /><br /> de Azure Functions<br /><br /> Regla|  
+|**objtype**|**nvarchar (8)**|Tipo de objeto:<br /><br /> Procedimiento almacenado<br /><br /> Instrucción preparada<br /><br /> Consulta ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] enviada como eventos de lenguaje desde las utilidades **sqlcmd** o **osql** , en lugar de llamadas a procedimiento remoto)<br /><br /> ReplProc (procedimiento de replicación) <br /><br /> Desencadenador<br /><br /> Ver<br /><br /> Predeterminado<br /><br /> Tabla de usuario<br /><br /> Tabla del sistema<br /><br /> de Azure Functions<br /><br /> Regla|  
 |**objid**|**int**|Una de las claves principales utilizadas para buscar un objeto en la caché. Este es el identificador de objeto almacenado en **sysobjects** para los objetos de base de datos (procedimientos, vistas, desencadenadores, etc.). En el caso de los objetos de caché como ad hoc o preparados SQL, **objid** es un valor generado internamente.|  
 |**DBID**|**smallint**|Id. de la base de datos donde se ha compilado el objeto de caché.|  
 |**dbidexec**|**smallint**|Id. de la base de datos desde la que se ejecuta la consulta.<br /><br /> Para la mayoría de los objetos, **dbidexec** tiene el mismo valor que **DBID**.<br /><br /> En el caso de las vistas del sistema, **dbidexec** es el identificador de base de datos desde el que se ejecuta la consulta.<br /><br /> En el caso de las consultas ad hoc, **dbidexec** es 0. Esto significa que **dbidexec** tiene el mismo valor que **DBID**.|  
-|**UID**|**smallint**|Indica el creador del plan para los planes de consulta ad hoc y los planes preparados.<br /><br /> -2 = El lote enviado no depende de la resolución implícita de nombre y puede compartirse entre usuarios distintos. Este es el método preferido. Cualquier otro valor representa el Id. del usuario que envía la consulta en la base de datos.<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
+|**uid**|**smallint**|Indica el creador del plan para los planes de consulta ad hoc y los planes preparados.<br /><br /> -2 = El lote enviado no depende de la resolución implícita de nombre y puede compartirse entre usuarios distintos. Este es el método preferido. Cualquier otro valor representa el Id. del usuario que envía la consulta en la base de datos.<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**refcounts**|**int**|Número de otros objetos de caché que hacen referencia a este objeto de caché. La cuenta comienza en 1.|  
 |**usecounts**|**int**|Número de veces que se ha usado este objeto de caché desde el comienzo.|  
 |**pagesused**|**int**|Número de páginas consumidas por el objeto de caché.|  

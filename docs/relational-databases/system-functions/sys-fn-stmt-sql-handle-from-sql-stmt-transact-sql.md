@@ -13,15 +13,15 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652017"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>Sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Obtiene el **stmt_sql_handle** para una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en el tipo de parametrización dado (simple o forzada). Esto le permite hacer referencia a las consultas almacenadas en el Almacén de consultas mediante su **stmt_sql_handle** cuando Conozca su texto.  
   
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Columnas devueltas  
  En la tabla siguiente se enumeran las columnas que sys. fn_stmt_sql_handle_from_sql_stmt devuelve.  
   
-|Nombre de la columna|Tipo|Descripción|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary (64)**|Identificador de SQL.|  
 |**query_sql_text**|**nvarchar(max)**|Texto de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.|  
@@ -72,7 +72,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  Requiere el permiso **Execute** en la base de datos y el permiso **Delete** en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se ejecuta una instrucción y, a `sys.fn_stmt_sql_handle_from_sql_stmt` continuación, se usa para devolver el identificador SQL de la instrucción.  
+ En el ejemplo siguiente se ejecuta una instrucción y, a continuación, `sys.fn_stmt_sql_handle_from_sql_stmt` se usa para devolver el identificador SQL de la instrucción.  
   
 ```  
 SELECT * FROM sys.databases;   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755513"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Llama a la utilidad **SQLMAINT** con una cadena que contiene los modificadores **SQLMAINT**. La utilidad **SQLMAINT** realiza un conjunto de operaciones de mantenimiento en una o varias bases de datos.  
   
@@ -50,7 +50,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Ninguno. Devuelve un error si se produce un error en la utilidad **SQLMAINT** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si un usuario que ha iniciado sesión con SQL Server autenticación llama a este procedimiento, los modificadores **-U "***login_id***"** y **-P "***contraseña***"** se anteponen a *switch_string* antes de la ejecución. Si el usuario ha iniciado sesión con la autenticación de Windows, *switch_string* se pasa sin cambiar a **SQLMAINT**.  
   
 ## <a name="permissions"></a>Permisos  

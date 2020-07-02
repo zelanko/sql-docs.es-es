@@ -1,5 +1,5 @@
 ---
-title: Sys. xml_schema_collections (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_collections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 931eec7ff81ee34f5d686ff432a9f88c69874e96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754368"
 ---
 # <a name="sysxml_schema_collections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada colección de esquemas XML. Una colección de esquemas XML es un conjunto con nombre de definiciones XSD. La colección de esquemas XML está incluida en un esquema relacional y se identifica por medio de un nombre [!INCLUDE[tsql](../../includes/tsql-md.md)] con ámbito de esquema. Las tuplas siguientes son únicas: xml_collection_id, schema_id y name.  
   

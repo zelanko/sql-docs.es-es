@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 329ba87fea8229d8ab5849fcdb728495e1bc1c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68131540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755854"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -72,10 +72,10 @@ count
  *count*  
  Es un campo de 4 bytes que se usa para indicar un recuento para el conjunto de resultados actual. Si la marca SRV_DONE_COUNT se establece en el campo *status* , *count* contiene un recuento válido.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Una solicitud de cliente puede ocasionar que el servidor ejecute varios comandos y que devuelva varios conjuntos de resultados. Para cada conjunto de resultados, **srv_senddone** debe devolver un mensaje de finalización del resultado al cliente.  
   
  El campo *count* indica el número de filas afectadas por un comando. Si el campo *count* contiene un recuento, la marca SRV_DONE_COUNT se debería establecer en el campo *status* . Este valor permite al cliente distinguir entre un valor *count* de 0 y un campo *count* no usado.  

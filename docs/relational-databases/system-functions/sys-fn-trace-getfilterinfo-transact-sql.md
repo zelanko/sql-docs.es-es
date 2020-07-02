@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 306357f87ffa30dbdd6fca302089cf0d8967242f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754025"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los filtros que se aplicaron a un seguimiento determinado.  
   
@@ -59,7 +59,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|Especifica el tipo de comparación realizado:<br /><br /> 0 = Igual<br /><br /> 1 = No igual a<br /><br /> 2 = Mayor que<br /><br /> 3 = Menor que<br /><br /> 4 = Mayor o igual que<br /><br /> 5 = Menor o igual que<br /><br /> 6 = Como<br /><br /> 7 = No es como|  
 |**value**|**sql_variant**|Especifica el valor sobre el que se aplica el filtro.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El usuario establece *trace_id* valor para identificar, modificar y controlar el seguimiento. Cuando se pasa el identificador de un seguimiento específico, **fn_trace_getfilterinfo** devuelve información sobre cualquier filtro de ese seguimiento. Si el seguimiento especificado no tiene un filtro, esta función devuelve un conjunto de filas vacío. Si se pasa un Id. no válido, esta función devuelve un conjunto de filas vacío. Para obtener información similar acerca de los seguimientos, vea [Sys. fn_trace_getinfo &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  

@@ -17,15 +17,15 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8a9ecfe978614b7f2b9121fcf285944bf92638
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: d2060bf646e8f9aff44ee4e8e5ccc474fa9df5e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754517"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Administrar tamaños de lote de copia masiva
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   El propósito principal de un lote en las operaciones de copia masiva consiste en definir el ámbito de una transacción. Si no se establece un tamaño de lote, las funciones de copia masiva consideran una copia masiva completa como una transacción. Si se establece un tamaño de lote, cada lote constituye una transacción que confirma cuando finaliza el lote.  
   

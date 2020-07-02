@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0209cfb01c0fa76fdf66dfe806f9d528489cfb79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755831"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -47,10 +47,10 @@ srvproc
  *srvproc*  
  Es un puntero a la estructura SRV_PROC, que es el identificador de una conexión de cliente determinada (en este caso, el identificador que recibió la solicitud de idioma). La estructura contiene información que la biblioteca de API Procedimiento almacenado extendido utiliza para administrar la comunicación y los datos entre la aplicación y el cliente.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se llama a la función **srv_sendrow** una vez por cada fila enviada al cliente. Todas las filas se deben enviar al cliente antes de se envíe cualquier mensaje, valor de estado o estado de finalización con **srv_sendmsg**, **srv_status**o **srv_senddone**.  
   
  El envío de una fila en la que no se han definido todas sus columnas con **srv_describe** hace que la aplicación API Procedimiento almacenado extendido provoque un mensaje de error informativo y devuelva FAIL al cliente. En este caso, la fila no se envía.  

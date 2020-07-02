@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5fcc3527880383e6a42a4c5530e2e1aeacc055b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f83ff6b805692867760cc1e692abd292f88aea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755496"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tablas de aplicación de capa de datos: sysdac_instances_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra una fila para cada instancia de aplicación de capa de datos (DAC) implementada en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Esta tabla se almacena en el esquema DBO de la base de datos msdb.  
   
@@ -48,6 +48,6 @@ ms.locfileid: "82807239"
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [DBO. sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

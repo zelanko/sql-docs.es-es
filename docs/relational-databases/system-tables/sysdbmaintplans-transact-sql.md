@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b787b62f1f4f68c279449aa9bf4bc905898ec66d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 831c4d0970244aa0f41db1b3a97b5a1bc2c88bec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753823"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta tabla se incluye en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conservar la información existente de las instancias actualizadas de una versión anterior de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no cambia el contenido de esta tabla. Esta tabla se almacena en la base de datos **msdb** .  
   

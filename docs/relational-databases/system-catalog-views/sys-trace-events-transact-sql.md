@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bf6d23db1a6807b95e9c33f4e3bfd5f38d63982
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ad4f0c6087d40253334011c1ffe7f7bc514be68b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754422"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista de catálogo **Sys. trace_events** contiene una lista de todos los eventos de seguimiento de SQL. Estos eventos de seguimiento no cambian para una versión concreta de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82820923"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Sys. Traces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [Sys. trace_categories &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

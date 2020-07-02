@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74f0ebf2f268177fe3ca77586ed3f3a6edfb9432
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753924"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSdistribution_agents** contiene una fila por cada agente de distribución que se ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "82833088"
 |**dts_package_name**|**sysname**|Nombre del paquete DTS. Por ejemplo, para un paquete denominado **DTSPub_Package**, especifique `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**|**nvarchar (524)**|Contraseña del paquete.|  
 |**dts_package_location**|**int**|La ubicación del paquete. La ubicación del paquete puede ser **Distributor** o **Subscriber**.|  
-|**Junction**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
+|**sid**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticación de<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  

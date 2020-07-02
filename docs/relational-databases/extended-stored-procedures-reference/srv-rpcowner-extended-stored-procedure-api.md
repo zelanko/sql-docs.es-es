@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755877"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -54,10 +54,10 @@ len
  *terminado*  
  Es un puntero a una variable entera que recibe la longitud del nombre del propietario. El parámetro *len* puede ser NULL, en cuyo caso no se devuelve la longitud del componente de propietario.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  Un puntero DBCHAR al componente de propietario terminado en NULL para el procedimiento almacenado remoto actual. Si no hay ningún procedimiento almacenado remoto actual, se devuelve NULL y *len* se establece en -1.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función únicamente devuelve el componente de propietario del procedimiento almacenado remoto. No incluye los especificadores opcionales para el nombre, nombre de procedimiento almacenado remoto, y número de procedimiento almacenado remoto.  
   
 > [!IMPORTANT]  

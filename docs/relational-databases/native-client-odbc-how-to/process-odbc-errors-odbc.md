@@ -13,15 +13,15 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52c744a096ea55a98aa00a1471f816a93f59c6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23d2a9c63416eee53e7f873b36ea9bd284af9b80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755661"
 ---
 # <a name="process-odbc-errors-odbc"></a>Procesar errores de ODBC (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Se pueden usar dos llamadas a la función de ODBC para recuperar los mensajes de ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obtener la información principal relacionada con ODBC de los campos de diagnóstico **SQLState**, **pfNative** y **ErrorMessage**, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) hasta que devuelva SQL_NO_DATA. Para cada registro de diagnóstico, se puede llamar a [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para recuperar los campos individuales. Todos los campos específicos del controlador se deben recuperar usando **SQLGetDiagField**.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "81300415"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para crear el procedimiento almacenado que se usa en este ejemplo.  
+ Ejecute la primera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para crear el procedimiento almacenado que se usa en este ejemplo.  
   
  Compile el segundo fragmento de código (C++) con odbc32.lib. A continuación, ejecute el programa.  
   
- Ejecute la tercera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para eliminar el procedimiento almacenado que se usa en este ejemplo.  
+ Ejecute la tercera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para eliminar el procedimiento almacenado que se usa en este ejemplo.  
   
 ### <a name="code"></a>Código  
   

@@ -13,15 +13,15 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 957a46b2a93013305e8642d4b311c22c9ec16d6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df8b2579ea846663a36cec4290d67fa407468282
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755678"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Administrar columnas de texto e imagen: utilizar parámetros de datos en ejecución
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>Para usar parámetros de datos en ejecución de tipo text, ntext o image  
@@ -49,11 +49,11 @@ ms.locfileid: "81298855"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para crear la tabla utilizada por el ejemplo.  
+ Ejecute la primera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para crear la tabla utilizada por el ejemplo.  
   
  Compile el segundo fragmento de código (C++) con odbc32.lib. A continuación, ejecute el programa.  
   
- Ejecute la tercera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para eliminar la tabla utilizada por el ejemplo.  
+ Ejecute la tercera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para eliminar la tabla utilizada por el ejemplo.  
   
 ```  
 use AdventureWorks  

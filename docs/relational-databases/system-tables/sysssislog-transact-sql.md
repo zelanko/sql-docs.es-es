@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad08260b1db8e361e02963330b2de75d67c02d1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755433"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una fila por cada entrada de registro generada por los paquetes o sus tareas y contenedores en tiempo de ejecución. Esta tabla se crea en la base de datos msdb al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]instalar. Si configura el registro para registrar en otra base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crea una tabla sysssislog con este formato en la base de datos especificada.  
+  Contiene una fila por cada entrada de registro generada por los paquetes o sus tareas y contenedores en tiempo de ejecución. Esta tabla se crea en la base de datos msdb al instalar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si configura el registro para registrar en otra base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crea una tabla sysssislog con este formato en la base de datos especificada.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]escribe entradas de registro en esta tabla **solo** cuando los paquetes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan el proveedor de registro.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]escribe entradas de registro en esta tabla **solo** cuando los paquetes usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro.  
   
   
 |Nombre de la columna|Tipo de datos|Descripción|  
@@ -45,7 +45,7 @@ ms.locfileid: "68029610"
 |starttime|**datetime**|La hora a la que comenzó la ejecución del paquete.|  
 |endtime|**datetime**|Hora en que se completó el paquete.<br /><br /> Esta característica no está implementada. El valor de la columna endtime siempre es igual que el de la columna starttime.|  
 |datacode|**int**|Valor entero opcional que normalmente indica el resultado de ejecutar el contenedor o la tarea.|  
-|databytes|**image**|Matriz de bytes opcional que contiene información adicional.|  
+|databytes|**imagen**|Matriz de bytes opcional que contiene información adicional.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="see-also"></a>Consulte también  

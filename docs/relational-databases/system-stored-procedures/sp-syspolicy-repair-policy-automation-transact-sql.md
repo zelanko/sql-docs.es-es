@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fc72f98883762c873c214fab9330100c78941d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0b92dbc4840db8f264606a020ea247a9b11d9cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753993"
 ---
 # <a name="sp_syspolicy_repair_policy_automation-transact-sql"></a>sp_syspolicy_repair_policy_automation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Repara la automatización de directivas en la administración basada en directivas. Por ejemplo, puede utilizar este procedimiento almacenado para reparar los desencadenadores y trabajos que están asociados a las directivas configuradas para utilizar los modos de evaluación "Al programar" o "Al cambiar".  
   
@@ -44,7 +44,7 @@ sp_syspolicy_repair_policy_automation
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_repair_policy_automation en el contexto de la base de datos del sistema msdb.  
   
 ## <a name="permissions"></a>Permisos  

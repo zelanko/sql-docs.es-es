@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 219245a9e040df74e35714ee2846cc7c2c74d8d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6ec15e83ee3def969522963d757feeacfd2d5353
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754190"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información sobre los grupos de distribuidores de la sesión. Los grupos de distribuidores son grupos de subprocesos utilizados por componentes del sistema para realizar el procesamiento en segundo plano.  
   

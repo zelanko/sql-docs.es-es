@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75831765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755521"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Da formato y almacena una serie de caracteres y valores en la cadena del parámetro de salida. Cada argumento de formato se sustituye por el argumento correspondiente.  
   

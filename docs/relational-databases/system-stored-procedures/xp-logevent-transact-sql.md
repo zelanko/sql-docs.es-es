@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19aa23d0009900045d5298c095f6c5a4347d633
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755562"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Registra un mensaje definido por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el archivo de registro y en el visor de eventos de Windows. xp_logevent se puede utilizar para enviar una alerta sin enviar un mensaje al cliente.  
+  Registra un mensaje definido por el usuario en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro y en el visor de eventos de Windows. xp_logevent se puede utilizar para enviar una alerta sin enviar un mensaje al cliente.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,8 +56,8 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Observaciones  
- Al enviar mensajes desde [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos, desencadenadores, lotes, etc., utilice la instrucción RAISERROR en lugar de xp_logevent. xp_logevent no llama a un controlador de mensajes de un cliente ni establece@ERROR@. Para escribir mensajes en el Visor de eventos de Windows y en el archivo del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute la instrucción RAISERROR.  
+## <a name="remarks"></a>Comentarios  
+ Al enviar mensajes desde [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos, desencadenadores, lotes, etc., utilice la instrucción RAISERROR en lugar de xp_logevent. xp_logevent no llama a un controlador de mensajes de un cliente ni establece @ @ERROR . Para escribir mensajes en el Visor de eventos de Windows y en el archivo del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute la instrucción RAISERROR.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor db_owner o al rol fijo de base de datos maestra o al rol fijo de servidor sysadmin.  

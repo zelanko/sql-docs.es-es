@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754235"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información detallada sobre los índices que faltan, excluidos los índices espaciales.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82829446"
 |**equality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de igualdad de la forma:<br /><br /> *tabla. columna*  = *constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de desigualdad; por ejemplo, a predicados de la forma:<br /><br /> *tabla. columna*  >  *constant_value*<br /><br /> Cualquier operador de comparación distinto de "=" expresa desigualdad.|  
 |**included_columns**|**nvarchar(4000)**|Lista de columnas de cobertura separadas por comas requeridas por la consulta. Para obtener más información sobre cómo abarcar o incluir columnas, vea [crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> En el caso de los índices optimizados para memoria (hash y optimizado para memoria no agrupado), omita **included_columns**. Todas las columnas de la tabla se incluyen en cada índice optimizado para memoria.|  
-|**statement**|**nvarchar(4000)**|Nombre de la tabla en la que falta el índice.|  
+|**instrucción**|**nvarchar(4000)**|Nombre de la tabla en la que falta el índice.|  
   
 ## <a name="remarks"></a>Comentarios  
  La información devuelta por **sys.dm_db_missing_index_details** se actualiza cuando se optimiza una consulta mediante el optimizador de consultas y no se guarda. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  

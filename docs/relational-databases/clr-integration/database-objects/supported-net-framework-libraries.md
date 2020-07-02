@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756354"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliotecas de .NET Framework admitidas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Con Common Language Runtime (CLR) hospedado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Con la funcionalidad de las bibliotecas de clases de.NET Framework, tiene acceso a clases pregeneradas que proporcionan funcionalidad para la manipulación de cadenas, operaciones matemáticas avanzadas, acceso a archivos, criptografía, etc. Se puede tener acceso a estas clases desde cualquier procedimiento almacenado administrado, tipo definido por el usuario, desencadenador, función definida por el usuario o agregado definido por el usuario.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Bibliotecas no compatibles  
  También se puede llamar a bibliotecas no compatibles desde los procedimientos almacenados administrados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario. La biblioteca no admitida debe registrarse primero en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos, mediante la instrucción **Create Assembly** , antes de que se pueda usar en el código. Las bibliotecas no compatibles que se registren y se ejecuten en el servidor se deben revisar y probar para garantizar la seguridad y la confiabilidad.  
   
- Por ejemplo, no se admite el espacio de nombres **System. DirectoryServices** . Debe registrar el ensamblado System. DirectoryServices. dll con permisos **no seguros** antes de poder llamarlo desde el código. El permiso **Unsafe** es necesario porque las clases del espacio de nombres **System. DirectoryServices** no cumplen los requisitos de **Safe** o **external_access**. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) y [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Por ejemplo, no se admite el espacio de nombres **System. DirectoryServices** . Debe registrar el ensamblado de System.DirectoryServices.dll con permisos **no seguros** antes de poder llamarlo desde el código. El permiso **Unsafe** es necesario porque las clases del espacio de nombres **System. DirectoryServices** no cumplen los requisitos de **Safe** o **external_access**. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) y [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

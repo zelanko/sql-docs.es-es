@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753840"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por página en la que se produjo un error pequeño 823 o un error 824. Se hace una lista de páginas en esta tabla porque se sospecha que estén dañadas, pero es posible que, en realidad, sean correctas. Cuando se repara una página sospechosa, su estado se actualiza en el **event_type** columna.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 979b738b046bb53168bbbbbef4d3d64563f2add0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad9dd930762788af8914b14d86875c26d7123eb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753750"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>Propiedad ServerName (clase SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada por el alias de conexión de servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,5 +42,5 @@ object.ServerName [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que hace referencia el alias de conexión del servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 907f264e49def46982535ba41c51f9900884a4d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6abc173c19abbf2a9a34fc1173c299b51e2ea69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755364"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>Propiedad PropertyStrVal (clase ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el valor de cadena de la propiedad a la que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.PropertyStrVal [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el valor de la propiedad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f717d5cf35349dcb99ec2022c5c0c92df5ea4286
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4332e97db70dbbb7254f9cee0863d746f638988e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753897"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSdynamicsnapshotjobs** realiza un seguimiento de la información de filtro de fila con parámetros aplicada para generar una instantánea de datos filtrados. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   

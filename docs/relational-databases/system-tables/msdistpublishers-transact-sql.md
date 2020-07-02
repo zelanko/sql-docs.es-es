@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c70ea03659fe65b594555dd6bbbba7a650558e88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26b26690d1120ce66dd116ed7908a68fe594e077
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753935"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   La tabla **MSdistpublishers** contiene una fila por cada publicador remoto que admite el distribuidor local. Esta tabla se almacena en la base de datos **msdb** .  
   
 |Nombre de la columna|Tipo de datos|Descripción|  

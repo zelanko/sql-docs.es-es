@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a766dc473c1bef47a8104ae76c0e70bd8b31b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7af58a109a658a4af60ca49ad6eea401284782ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756314"
 ---
 # <a name="debugging-clr-database-objects"></a>Depurar objetos de bases de datos CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona compatibilidad con la depuración de objetos de [!INCLUDE[tsql](../../includes/tsql-md.md)] y Common Language Runtime (CLR) en la base de datos. Los aspectos clave de la depuración en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son la facilidad de configuración y uso, y la integración del depurador de SQL Server con el depurador de Microsoft Visual Studio. Además, la depuración se produce en todos los lenguajes. Los usuarios pueden pasar sin problemas a objetos de CLR desde [!INCLUDE[tsql](../../includes/tsql-md.md)] y viceversa. El depurador de Transact-SQL en SQL Server Management Studio no se puede utilizar para depurar objetos de base de datos administrados, pero se pueden depurar los objetos utilizando los depuradores de Visual Studio. La depuración de objetos de base de datos administrados en Visual Studio admite todas las funciones habituales de depuración, como las instrucciones "ir a" y "paso a paso por procedimientos" dentro de rutinas que se ejecutan en el servidor. Los depuradores pueden establecer puntos de interrupción, inspeccionar la pila de llamadas, inspeccionar variables y modificar valores de variables durante la depuración. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o depurar la integración CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
   
  Para obtener más información sobre cómo depurar código administrado con Visual Studio, vea el tema "[depurar código administrado](https://go.microsoft.com/fwlink/?LinkId=120377)" en la documentación de Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Permisos y restricciones de depuración  
- La depuración es una operación con privilegios elevados y, por **sysadmin** lo tanto, solo los miembros del rol fijo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]servidor sysadmin pueden hacerlo en.  
+ La depuración es una operación con privilegios elevados y, por lo tanto, solo los miembros del rol fijo de servidor **sysadmin** pueden hacerlo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Las restricciones siguientes se aplican durante la depuración:  
   

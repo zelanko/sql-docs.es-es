@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755553"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Informa de la configuración de seguridad de inicio de sesión de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  Es el valor de configuración que se va a mostrar. Si no se especifica *config_name* , se registran todos los valores de configuración. *config_name* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**login mode**|Modo de seguridad de inicio de sesión. Los valores posibles son **mixto** y **autenticación de Windows**.<br /><br /> Se reemplaza por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Nombre del Id. de inicio de sesión predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuarios autorizados de conexiones de confianza (para usuarios sin nombre de inicio de sesión). El inicio de sesión predeterminado es **invitado**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
@@ -66,7 +66,7 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Valor de configuración|  
 |**config value**|**sysname**|Ajuste de valor de configuración|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  no se puede usar **xp_loginconfig** para establecer valores de configuración.  
   
  Para establecer el modo de inicio de sesión y el nivel de auditoría, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

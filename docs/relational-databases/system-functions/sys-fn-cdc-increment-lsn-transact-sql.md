@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 770954f8479a97c5dcf96714a44ac025ccc55e04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755600"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número de secuencia de registro (LSN) siguiente de la secuencia basándose en el LSN especificado.  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **binary(10)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor LSN devuelto por la función siempre es mayor que el valor especificado y no existe ningún valor LSN entre los dos valores.  
   
  Para consultar sistemáticamente un flujo de datos de cambio durante un periodo de tiempo, puede repetir periódicamente la llamada de función de la consulta, especificando cada vez un nuevo intervalo de la consulta para limitar los cambios devueltos en la misma. Para ayudar a asegurarse de que no se pierden datos, el límite superior de la consulta anterior se utiliza a menudo para generar el límite inferior de la consulta subsiguiente. Dado que el intervalo de la consulta es cerrado, el nuevo límite inferior debe ser mayor que el límite superior anterior, pero lo suficientemente pequeño para asegurarse de que ningún cambio contiene valores LSN comprendidos entre este valor y el límite superior anterior. La función sys.fn_cdc_increment_lsn se utiliza para obtener este valor.  

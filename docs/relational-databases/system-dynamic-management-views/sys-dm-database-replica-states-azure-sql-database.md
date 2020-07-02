@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a9bf27341663de266b0b45f003fd5fdb4a1a79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc81d2f5754052ae9fec57d7bd9d64b5337fdaba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754277"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Devuelve una fila para la base de datos, exponiendo el estado de la réplica local.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "82824634"
 |**last_commit_time**|**datetime**|Hora correspondiente al último registro de confirmación.<br /><br /> En la base de datos secundaria, esta hora es igual la misma que para la base de datos principal.<br /><br /> En la réplica principal, cada fila de la base de datos secundaria muestra la hora que la réplica secundaria que hospeda dicha base de datos secundaria ha notificado a la réplica principal. La diferencia en el tiempo entre la fila de base de datos principal y una fila de base de datos secundaria determinada representa aproximadamente el objetivo de punto de recuperación (RPO), suponiendo que el proceso de puesta al día se ha detenido y que la réplica secundaria ha devuelto el progreso a la réplica principal.|  
 |**low_water_mark_for_ghosts**|**bigint**|Un número que aumenta regularmente para la base de datos que indica una marca de límite inferior utilizada por la limpieza de registros fantasma en la base de datos principal. Si este número no aumenta con el tiempo, implica que no puede producirse la limpieza de registros fantasma. Para decidir qué filas fantasma se han de limpiar, la réplica principal utiliza el valor mínimo de esta columna para esta base de datos en todas las réplicas de disponibilidad (incluida la réplica principal).|  
 |**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.|  
-|**quorum_commit_lsn**|**numeric(25,0)**|Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
-|**quorum_commit_time**|**datetime**|Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
+|**quorum_commit_time**|**datetime**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
 
 
 ## <a name="permissions"></a>Permisos

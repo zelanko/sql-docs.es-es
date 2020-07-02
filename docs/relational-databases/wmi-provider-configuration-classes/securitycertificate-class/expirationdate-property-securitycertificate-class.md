@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 97d3de804e5edce5d25e1af3b832ebc4103a3815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 757de27d6d697a27011cba529c730e26a8fb1a4d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755392"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propiedad ExpirationDate (clase SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la fecha en la que certificado de seguridad deja de estar en vigor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.ExpirationDate [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **UInt32** que especifica la fecha de expiración del certificado de seguridad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

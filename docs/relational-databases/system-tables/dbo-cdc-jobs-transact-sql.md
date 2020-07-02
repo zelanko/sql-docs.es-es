@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69c38cca8ab26691a155d11ad3afc88bdc2852d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a88683f29875047d412d7ae858dc9db47659a36f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755481"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Almacena los parámetros de configuración de captura de datos del cambio para trabajos de captura y limpieza. Esta tabla se almacena en **msdb**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82827328"
 |**continua**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, vea [Sys. sp_cdc_add_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continuous** solo es válido para los trabajos de captura.|  
 |**PollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **PollingInterval** solo es válido para los trabajos de captura.|  
 |**políticas**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> la **retención** solo es válida para los trabajos de limpieza.|  
-|**mínimo**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
+|**threshold**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753598"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funciones usadas en valores booleanos: función not 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve TRUE si el valor booleano efectivo de *$arg* es false y devuelve false si el valor booleano efectivo de *$arg* es true.  
   

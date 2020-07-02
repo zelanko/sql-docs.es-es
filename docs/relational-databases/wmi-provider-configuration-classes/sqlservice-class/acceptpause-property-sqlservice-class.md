@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02415dbcb9fb4d1b2ccbc4c93d505e292b813fd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753733"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propiedad AcceptPause (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el valor de propiedad booleano que especifica si se puede poner en pausa el servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ object.AcceptPause [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica si se puede poner en pausa el servicio. **true** si se puede poner en pausa el servicio; en caso contrario, **false** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c39074a8d1caf59d47990524a6030242ac33f95c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d828ad55c93f5341370e9daa98ead6ece0997f02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755897"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -47,10 +47,10 @@ srvproc
  *srvproc*  
  Es un puntero a la estructura SRV_PROC, que es el identificador de una conexión de cliente determinada (en este caso, el identificador que recibió el procedimiento almacenado remoto). La estructura contiene información que la biblioteca de API Procedimiento almacenado extendido utiliza para administrar la comunicación y los datos entre la aplicación y el cliente.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El componente de número para el procedimiento almacenado remoto actual. Si el cliente no usa un componente de número al ejecutar el procedimiento almacenado remoto o si no hay ningún procedimiento almacenado remoto actual, devuelve - 1.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función únicamente devuelve el componente de número del procedimiento almacenado remoto. No incluye los especificadores opcionales propietario, nombre del procedimiento almacenado remoto y nombre de la base de datos.  
   
 > [!IMPORTANT]  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fce5e207ef1ca7f28c0d2088e9f23e701d860b7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754018"
 ---
 # <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de un seguimiento especificado o de todas los seguimientos existentes.  
   
@@ -52,10 +52,10 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|IDENTIFICADOR del seguimiento.|  
-|propiedad|**int**|Propiedad del seguimiento:<br /><br /> 1= Opciones de seguimiento. Para obtener más información, @options vea en [sp_trace_create &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nombre de archivo<br /><br /> 3 = Tamaño máximo<br /><br /> 4 = Hora de detención<br /><br /> 5 = Estado actual del seguimiento. 0 = detenido. 1 = en ejecución.|  
+|propiedad|**int**|Propiedad del seguimiento:<br /><br /> 1= Opciones de seguimiento. Para obtener más información, vea @options en [sp_trace_create &#40;&#41;de TRANSACT-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nombre de archivo<br /><br /> 3 = Tamaño máximo<br /><br /> 4 = Hora de detención<br /><br /> 5 = Estado actual del seguimiento. 0 = detenido. 1 = en ejecución.|  
 |value|**sql_variant**|Información acerca de la propiedad de seguimiento especificado.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se ha pasado el identificador de un seguimiento específico, fn_trace_getinfo devuelve información acerca del seguimiento. Si se pasa un Id. no válido, esta función devuelve un conjunto de filas vacío.  
   
  fn_trace_getinfo anexa una extensión .trc al nombre de un archivo de seguimiento incluido en su conjunto de resultados. Para obtener información acerca de cómo definir un seguimiento, vea [sp_trace_create &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Para obtener información similar acerca de los filtros de seguimiento, vea [Sys. fn_trace_getfilterinfo &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  

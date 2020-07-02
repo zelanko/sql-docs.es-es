@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753571"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funciones usadas en secuencias: distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Quita los valores duplicados de la secuencia especificada por *$arg*. Si *$arg* es una secuencia vacía, la función devuelve la secuencia vacía.  
   
@@ -39,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Secuencia de valores atómicos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los tipos de valores atomizados que se pasan a **DISTINCT-Values ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tipos que admiten la operación **EQ** . Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores de tipo xdt:untypedAtomic se convierten en xs:string. Si hay un mezcla de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
   
  El resultado de **DISTINCT-Values ()** recibe el tipo base de los tipos pasados, como XS: String en el caso de XDT: untypedAtomic, con la cardinalidad original. Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  

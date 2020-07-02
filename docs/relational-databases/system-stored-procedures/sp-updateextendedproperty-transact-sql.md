@@ -18,15 +18,15 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 28341d5b79cf58d5b432d007cc7abe134da0d190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755574"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Actualiza el valor de una propiedad extendida existente.  
   
@@ -82,7 +82,7 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles (0, 1, 2) con el fin de especificar las propiedades extendidas. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben estar calificadas con los nombres de los objetos del nivel superior que son sus propietarios o que los contienen.  
   
  Dado una *property_name* y un *valor*válidos, si todos los tipos y nombres de objetos son NULL, la propiedad actualizada pertenece a la base de datos actual.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753554"
 ---
 # <a name="functions-on-sequences---id"></a>Funciones usadas en secuencias: id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la secuencia de nodos de elemento con valores XS: ID que coinciden con los valores de uno o varios de los valores XS: IDREF proporcionados en *$arg*.  
   
@@ -39,18 +39,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o varios valores xs:IDREF.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El resultado de la función es una secuencia de elementos de la instancia XML, en el orden del documento, que tiene un valor xs:ID equivalente a uno o varios de los valores xs:IDREF de la lista de posibles valores xs:IDREF.  
   
  Si el valor xs:IDREF no coincide con ningún elemento, la función devolverá la secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **xml** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperar elementos en función del valor del atributo IDREF  
- En el ejemplo siguiente se usa FN: ID para recuperar `employee` el <> elementos, en función del atributo de administrador idref. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
+ En el ejemplo siguiente se usa FN: ID para recuperar el <`employee`> elementos, en función del atributo de administrador idref. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
   
- Para un valor de atributo de administrador específico, la función **ID ()** busca `employee` el elemento <> cuyo valor de atributo de tipo ID coincide con el valor idref de entrada. En otras palabras, para un empleado concreto, la función **ID ()** devuelve Employee Manager.  
+ Para un valor de atributo de administrador específico, la función **ID ()** busca el `employee` elemento <> cuyo valor de atributo de tipo ID coincide con el valor idref de entrada. En otras palabras, para un empleado concreto, la función **ID ()** devuelve Employee Manager.  
   
  A continuación se expone lo que ocurre en el ejemplo:  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Una variable **XML** con tipo se crea mediante la colección de esquemas XML.  
   
--   La consulta recupera el elemento que tiene un valor de atributo ID al que hace referencia el atributo idref **Manager** del elemento `employee` <>.  
+-   La consulta recupera el elemento que tiene un valor de atributo ID al que hace referencia el atributo idref **Manager** del `employee` elemento <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -99,9 +99,9 @@ Go
  La consulta devuelve "Dave" como valor. Esto indica que Dave es el superior (manager) de Joe.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperar elementos en función del valor del atributo IDREFS OrderList  
- En el ejemplo siguiente, el atributo OrderList del elemento> `Customer` <es un atributo de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Para cada ID. de pedido, hay un `Order` <elemento secundario> en el `Customer` <> proporcionar el valor de orden.  
+ En el ejemplo siguiente, el atributo OrderList del `Customer` elemento> <es un atributo de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Para cada ID. de pedido, hay un <`Order` elemento secundario> en el <`Customer`> proporcionar el valor de orden.  
   
- La expresión de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera el primer valor de la lista IDRES para el primer cliente. A continuación, este valor se pasa a la función **ID ()** . A continuación, la función busca `Order` el elemento> de <cuyo valor de atributo OrderID coincide con la entrada a la función **ID ()** .  
+ La expresión de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera el primer valor de la lista IDRES para el primer cliente. A continuación, este valor se pasa a la función **ID ()** . A continuación, la función busca el `Order` elemento> de <cuyo valor de atributo OrderID coincide con la entrada a la función **ID ()** .  
   
 ```  
 drop xml schema collection SC  

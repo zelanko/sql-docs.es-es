@@ -1,5 +1,5 @@
 ---
-title: Sys. xml_schema_attributes (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4af723da42b93b3a5a656c2f00f65d94ca1fb184
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a8a1f8ccd6458937de3266ec8c7bce58b73a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754358"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por componente de esquema XML que es un atributo **symbol_space** , symbol_space **de.**  
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas>**|--|Hereda de [Sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**|--|Hereda de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = el valor predeterminado es un valor fijo. Este valor no se puede anular en una instancia de XML.<br /><br /> 0 = El valor predeterminado no es un valor fijo para el atributo (predeterminado).|  
 |**must_be_qualified**|**bit**|1 = El atributo debe estar cualificado explícitamente por el espacio de nombres.<br /><br /> 0 = El atributo debe estar cualificado implícitamente por el espacio de nombres (predeterminado).|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|Valor predeterminado del atributo. Si no se ofrece otro valor predeterminado, es NULL.|  

@@ -13,15 +13,15 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35d30dfa78ab43f8efe8d3a1cb6bbb9ad30188a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9430c5c42f9b871457fdaae1386e198a176a0bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754241"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>Sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Devuelve la actividad actual de e/s de nivel de fila, el bloqueo y el método de acceso para filas comprimidos en un índice de almacén de columnas. Use **Sys. dm_db_column_store_row_group_operational_stats** para realizar un seguimiento de la cantidad de tiempo que una consulta de usuario debe esperar para leer o escribir en un filas o una partición de un índice de almacén de columnas comprimidos e identificar filass que están con una actividad de e/s significativa o zonas activas.  
   

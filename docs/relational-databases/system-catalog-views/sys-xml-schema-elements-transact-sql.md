@@ -1,5 +1,5 @@
 ---
-title: Sys. xml_schema_elements (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_elements (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1be210ca687ff19c5e1dfaf56923a55c731807c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e37c8e6c65f11abb03f68c3ac8c106d7d78857
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754328"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por componente de esquema XML que es un tipo **symbol_space** de **E**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas>**|**--**|Hereda columnas de [Sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**|**--**|Hereda columnas de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = El valor predeterminado es un valor fijo. Este valor no se puede reemplazar en la instancia de XML.<br /><br /> 0 = El valor predeterminado no es un valor fijo para el elemento. (valor predeterminado).|  
 |**is_abstract**|**bit**|1 = El elemento es abstracto y no se puede usar en un documento de instancia. En el documento de instancia debe aparecer un miembro del grupo de sustitución del elemento.<br /><br /> 0 = El elemento no es abstracto. (valor predeterminado).|  
 |**is_nillable**|**bit**|1 = El elemento tiene el atributo nillable.<br /><br /> 0 = El elemento no tiene el atributo nillable. (predeterminado).|  

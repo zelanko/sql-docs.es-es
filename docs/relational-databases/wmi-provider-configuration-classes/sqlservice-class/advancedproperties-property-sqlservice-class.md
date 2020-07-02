@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a0ce08d388bf79fa26172742bacb7fe05b32f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0a2a3bb9e44bf669ddb41cabd20c0181a71447b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753689"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Propiedad AdvancedProperties (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene una matriz de referencias de objeto que contienen las propiedades avanzadas del objeto **SqlService** .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ object.AdvancedProperties [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Matriz de objetos de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que contienen las propiedades avanzadas del objeto **SqlService** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

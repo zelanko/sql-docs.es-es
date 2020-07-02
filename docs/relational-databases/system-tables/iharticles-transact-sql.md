@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753968"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHarticles** contiene una fila por cada artículo que se está replicando desde un publicador que no es de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829909"
 |**tablespace_name**|**nvarchar(255)**|Identifica el espacio de tablas utilizado por la tabla de registro del artículo.|  
 |**objid**|**int**|Esta columna no se utiliza y solo se incluye para que la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la tabla **IHarticles** sea compatible con la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilizada para los artículos de SQL Server ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Esta columna no se utiliza y solo se incluye para que la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la tabla **IHarticles** sea compatible con la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilizada para los artículos de SQL Server ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**denominación**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
 |**publisher_status**|**int**|Se utiliza para indicar si la vista que define el artículo publicado se ha definido mediante una llamada a [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0**  =  se ha llamado a [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) .<br /><br /> **1**  =  no se ha llamado a [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) .|  
 |**article_view_owner**|**nvarchar(255)**|El propietario del objeto de sincronización del publicador utilizado por el Agente de registro del LOG.|  
 |**article_view**|**nvarchar(255)**|El objeto de sincronización del publicador utilizado por el Agente de registro del LOG.|  

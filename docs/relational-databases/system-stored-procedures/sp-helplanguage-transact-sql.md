@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733198"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de un idioma alternativo concreto o de todos los idiomas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @language = ] 'language'`Es el nombre del idioma alternativo para el que se va a mostrar información. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *Language* , se devuelve información sobre el idioma especificado. Si no se especifica Language, se devuelve información acerca de todos los lenguajes de la vista de compatibilidad **Sys. syslanguages** .  
+`[ @language = ] 'language'`Es el nombre del idioma alternativo para el que se va a mostrar información. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *Language* , se devuelve información sobre el idioma especificado. Si no se especifica Language, se devuelve información acerca de todos los lenguajes de la vista de compatibilidad de **lenguajessys.sys** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

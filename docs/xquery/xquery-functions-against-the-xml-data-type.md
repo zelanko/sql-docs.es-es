@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730981"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funciones de XQuery con el tipo de datos xml
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   En este tema y sus temas secundarios se describen las funciones que se pueden utilizar al especificar XQuery con el tipo de datos **XML** . Para conocer las especificaciones del W3C, vea [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84305746"
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[Función en minúsculas &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
-||[longitud de cadena](../xquery/functions-on-string-values-string-length.md)|  
+||[string-length](../xquery/functions-on-string-values-string-length.md)|  
 ||[Función en mayúsculas &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
 |Funciones en valores booleanos|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[Funciones en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[número](../xquery/functions-on-nodes-number.md)|  

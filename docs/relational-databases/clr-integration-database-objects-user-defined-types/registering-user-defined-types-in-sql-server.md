@@ -33,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4383e245048035d4c05f7be3bedb7d3d13f835d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8918b20e02eb0d7045ad7e6603ed1f6cf4db40b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727776"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Para poder usar un tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe registrarlo. El registro de un UDT implica el registro del ensamblado y la creación del tipo en la base de datos en la que desea usarlo. El ámbito de los UDT es una sola base de datos, por lo que no pueden usarse en varias bases de datos a menos que se registren un ensamblado y UDT idénticos en cada base de datos. Una vez que haya registrado el ensamblado UDT y que haya creado el tipo, podrá usar el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)] y en el código del cliente. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Para poder usar un tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe registrarlo. El registro de un UDT implica el registro del ensamblado y la creación del tipo en la base de datos en la que desea usarlo. El ámbito de los UDT es una sola base de datos, por lo que no pueden usarse en varias bases de datos a menos que se registren un ensamblado y UDT idénticos en cada base de datos. Una vez que haya registrado el ensamblado UDT y que haya creado el tipo, podrá usar el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)] y en el código del cliente. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Usar Visual Studio para implementar tipos UDT  
  La forma más fácil de implementar un UDT consiste en usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Sin embargo, en escenarios de implementación más complejos y para obtener la máxima flexibilidad, es preferible que use [!INCLUDE[tsql](../../includes/tsql-md.md)] tal y como se describe más adelante en este tema.  
@@ -70,7 +70,7 @@ ms.locfileid: "81486947"
  Al ejecutar CREATE ASSEMBLY con los conjuntos de permisos SAFE o EXTERNAL_ACCESS, se comprueba el ensamblado para garantizar que sea comprobable y presente seguridad de tipos. Si no se especifica ningún conjunto de permisos, se usa el conjunto de permisos SAFE. El código con el conjunto de permisos UNSAFE no se comprueba. Para obtener más información sobre los conjuntos de permisos de ensamblado, vea [Diseño de ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Ejemplo  
- La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente registra el ensamblado de punto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en en la base de datos **AdventureWorks** , con el conjunto de permisos Safe. Si se omite la cláusula PERMISSION_SET, el ensamblado se registra con el conjunto de permisos SAFE.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción siguiente registra el ensamblado de punto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **AdventureWorks** , con el conjunto de permisos Safe. Si se omite la cláusula PERMISSION_SET, el ensamblado se registra con el conjunto de permisos SAFE.  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +79,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente registra el ensamblado mediante *<assembly_bits argumento>* en la cláusula FROM. Este valor **varbinary** representa el archivo como un flujo de bytes.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción siguiente registra el ensamblado mediante *<assembly_bits argumento>* en la cláusula FROM. Este valor **varbinary** representa el archivo como un flujo de bytes.  
   
 ```  
 USE AdventureWorks;  
@@ -96,7 +96,7 @@ FROM 0xfeac4 ... 21ac78
  Para obtener más información, vea [Create TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Ejemplo  
- La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente crea el tipo de **punto** . El nombre externo se especifica mediante la sintaxis de nomenclatura de dos partes de *AssemblyName*. *Nombreudt*.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción siguiente crea el tipo de **punto** . El nombre externo se especifica mediante la sintaxis de nomenclatura de dos partes de *AssemblyName*. *Nombreudt*.  
   
 ```  
 CREATE TYPE dbo.Point   

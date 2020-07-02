@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 108698da668928d4412eb7ba42621b539850b26c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727642"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR) permite a los programadores de base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
   
   CLR incluye la memoria de recopilación de elementos no utilizados, el subprocesamiento preventivo, los servicios de metadatos (reflexión de tipos), la capacidad de comprobación de código y la seguridad de acceso del código. CLR usa metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
   
- CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como entornos de tiempo de ejecución, se diferencian en el modo en que administran la memoria, los subprocesos y la sincronización. En este artículo se describe la manera en que estos dos tiempos de ejecución se integran para que todos los recursos del sistema se administren de forma uniforme. En este artículo también se describe la manera en que la seguridad de acceso del código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (CAS) de CLR y la seguridad se integran para proporcionar un entorno de ejecución confiable y seguro para el código de usuario.  
+ CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como entornos de tiempo de ejecución, se diferencian en el modo en que administran la memoria, los subprocesos y la sincronización. En este artículo se describe la manera en que estos dos tiempos de ejecución se integran para que todos los recursos del sistema se administren de forma uniforme. En este artículo también se describe la manera en que la seguridad de acceso del código (CAS) de CLR y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguridad se integran para proporcionar un entorno de ejecución confiable y seguro para el código de usuario.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>Conceptos básicos de la arquitectura CLR  
  En .NET Framework, un programador escribe un lenguaje de alto nivel que implementa una clase que define su estructura (por ejemplo, los campos o las propiedades de la clase) y sus métodos. Algunos de estos métodos pueden ser funciones estáticas. La compilación del programa genera un archivo denominado ensamblado que contiene el código compilado en el lenguaje intermedio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSIL) y un manifiesto que contiene todas las referencias a ensamblados dependientes.  

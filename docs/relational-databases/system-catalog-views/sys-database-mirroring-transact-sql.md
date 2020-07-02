@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725793"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos no está conectada (ONLINE) o no se ha habilitado la creación de reflejo de la base de datos, los valores de todas las columnas, excepto database_id, serán NULL.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "82821763"
 |**mirroring_role_desc**|**nvarchar(60)**|Descripción del rol que desempeña la base de datos local en la creación de reflejo, una de las siguientes:<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|Número de veces que los asociados de creación de reflejo han cambiado entre los roles de principal y reflejo debido a una conmutación por error o a un servicio forzado.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_safety_level**|**tinyint**|Configuración de seguridad para las actualizaciones en la base de datos reflejada:<br /><br /> 0 = Estado desconocido<br /><br /> 1 = Desactivada [asincrónica]<br /><br /> 2 = Completa [sincrónica]<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|Configuración de seguridad de las transacciones para realizar actualizaciones en la base de datos reflejada, uno de los valores siguientes:<br /><br /> DESCONOCIDO<br /><br /> Apagado<br /><br /> FULL<br /><br /> NULL|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|Configuración de seguridad de las transacciones para realizar actualizaciones en la base de datos reflejada, uno de los valores siguientes:<br /><br /> UNKNOWN<br /><br /> Apagado<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**int**|Número de secuencia de actualización para los cambios de nivel de seguridad de transacciones.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_partner_name**|**nvarchar(128)**|Nombre de servidor del asociado de creación de reflejo de la base de datos.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_partner_instance**|**nvarchar(128)**|Nombre de instancia y nombre de equipo del otro asociado. Los clientes necesitan esta información para conectarse al asociado si se convierte en el servidor principal.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_witness_name**|**nvarchar(128)**|Nombre de servidor del testigo de creación de reflejo de la base de datos.<br /><br /> NULL = No existe ningún testigo.|  
 |mirroring_witness_state|**tinyint**|Estado del testigo en la sesión de creación de reflejo de la base de datos, uno de los siguientes:<br /><br /> 0 = Desconocido<br /><br /> 1 = Conectado<br /><br /> 2 = Desconectado<br /><br /> NULL = No existe ningún testigo, la base de datos no está en línea o la base de datos no está reflejada.|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|Descripción del estado, que puede ser uno de los siguientes:<br /><br /> DESCONOCIDO<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|Descripción del estado, que puede ser uno de los siguientes:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|Número de secuencia de registro (LSN) de la última entrada del registro de transacciones para la que se garantiza que será reforzada en el disco de ambos asociados. Después de una conmutación por error, los asociados usan el **mirroring_failover_lsn** como el punto de conciliación en el que el nuevo servidor reflejado comienza a sincronizar la nueva base de datos reflejada con la nueva base de datos principal.|  
 |**mirroring_connection_timeout**|**int**|Tiempo de espera de la conexión de creación de reflejo, en segundos. Es el número de segundos durante los cuales se espera una respuesta de un asociado o testigo antes de considerarlos no disponibles. El valor predeterminado del tiempo de espera es de 10 segundos.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_redo_queue**|**int**|Cantidad máxima de registro que debe rehacerse en el reflejo. Si mirroring_redo_queue_type se establece en UNLIMITED (valor predeterminado), esta columna es NULL. Si la base de datos no está en línea, esta columna también es NULL.<br /><br /> En caso contrario, esta columna contiene la cantidad máxima de registro, en megabytes. Cuando se alcanza el valor máximo, el registro se detiene temporalmente en el servidor principal mientras el servidor reflejado se pone al mismo nivel. Esta característica limita el tiempo de conmutación por error.<br /><br /> Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  

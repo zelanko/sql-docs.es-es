@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dd3ba726d4b23b5dc3b8aa58188b0c259a7c3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4740338e5049862d31e4cd0cf5b25b90356a84c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727762"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Trabajar con tipos definidos por el usuario en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Puede tener acceso a la funcionalidad de tipo definido por el usuario [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (UDT [!INCLUDE[tsql](../../includes/tsql-md.md)] ) en desde el lenguaje mediante la sintaxis de consulta normal. Los UDT se pueden utilizar en la definición de objetos de base de datos, como variables en lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], en funciones y procedimientos almacenados, y como argumentos en funciones y procedimientos almacenados.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Puede tener acceso a la funcionalidad de tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el lenguaje mediante la [!INCLUDE[tsql](../../includes/tsql-md.md)] Sintaxis de consulta normal. Los UDT se pueden utilizar en la definición de objetos de base de datos, como variables en lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], en funciones y procedimientos almacenados, y como argumentos en funciones y procedimientos almacenados.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Definir tablas y columnas de UDT](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

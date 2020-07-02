@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2a78a6d30b9e79364178401f4d9d2ef52aceace
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728238"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el valor de start_lsn columna de la instancia de captura especificada de la tabla del sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Este valor representa el extremo inferior del intervalo de validez para la instancia de captura.  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **binary(10)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Devuelve 0x00000000000000000000 cuando la instancia de captura no existe o cuando la persona que llama no está autorizada para tener acceso a los datos del cambio asociados con la instancia de captura.  
   
  Esta función se utiliza normalmente para identificar el extremo inferior de la escala de tiempo de captura de los datos del cambio asociada con una instancia de captura. También puede utilizar esta función para validar que los extremos de un intervalo de consultas se encuentran dentro de la escala de tiempo de la instancia de captura antes de solicitar los datos del cambio. Es importante realizar tales comprobaciones porque el extremo inferior de una instancia de captura cambia cuando el proceso de limpieza se realiza en las tablas de cambio. Si el tiempo transcurrido entre las solicitudes para los datos del cambio es significativo, incluso un extremo inferior que está establecido en el extremo alto de la solicitud de datos del cambio anterior podría quedar fuera de la escala de tiempo actual.  

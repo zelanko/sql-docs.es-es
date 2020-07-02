@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727690"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de protección del host y programación de la integración CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El Common Language Runtime (CLR) proporciona un mecanismo para anotar interfaces de programación de aplicaciones (API) administradas que forman parte del .NET Framework con ciertos atributos que pueden ser de interés para un host del CLR, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se inició con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Los ejemplos de estos atributos de protección del host (HPA) incluyen:  
   
 -   **SharedState**, que indica si la API expone la capacidad de crear o administrar el estado compartido (por ejemplo, campos de clase estáticos).  
@@ -34,7 +34,7 @@ ms.locfileid: "81488064"
   
 -   **ExternalProcessMgmt**, que indica si la API expone una manera de controlar el proceso de host.  
   
- Al proporcionar estos atributos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica una lista de los HPA que no se permiten en el entorno hospedado a través de la seguridad de acceso del código (CAS). Los requisitos de CAS se especifican mediante uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los tres conjuntos de permisos: **Safe**, **external_access**o **Unsafe**. Uno de estos tres niveles de seguridad se especifica cuando el ensamblado se registra en el servidor mediante la instrucción **Create Assembly** . El código que se ejecuta dentro de los conjuntos de permisos **Safe** o **external_access** debe evitar ciertos tipos o miembros que tienen aplicado el atributo **System. Security. Permissions. HostProtectionAttribute** . Para obtener más información, vea [crear un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) y restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Al proporcionar estos atributos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica una lista de los HPA que no se permiten en el entorno hospedado a través de la seguridad de acceso del código (CAS). Los requisitos de CAS se especifican mediante uno de los tres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de permisos: **SAFE**, **external_access**o **Unsafe**. Uno de estos tres niveles de seguridad se especifica cuando el ensamblado se registra en el servidor mediante la instrucción **Create Assembly** . El código que se ejecuta dentro de los conjuntos de permisos **Safe** o **external_access** debe evitar ciertos tipos o miembros que tienen aplicado el atributo **System. Security. Permissions. HostProtectionAttribute** . Para obtener más información, vea [crear un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) y restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  **HostProtectionAttribute** no es un permiso de seguridad, ya que se trata de una manera de mejorar la confiabilidad, ya que identifica construcciones de código específicas, ya sean tipos o métodos, que el host puede impedir. El uso de **HostProtectionAttribute** aplica un modelo de programación que ayuda a proteger la estabilidad del host.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81488064"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no permite el uso de un tipo o miembro que tiene un **HostProtectionAttribute** que especifica una enumeración **System. Security. Permissions. HostProtectionResource** con un valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**o **UI**. De esta forma, se evita que los ensamblados llamen a miembros que habiliten el estado compartido, ejecuten la sincronización, puedan causar una pérdida de recursos al terminar o afecten la integridad de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Tipos y miembros no permitidos  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los temas siguientes se identifican los tipos y miembros cuyos valores de **HostProtectionResource** no se permiten.  
+ En los temas siguientes se identifican los tipos y miembros cuyos valores de **HostProtectionResource** no se permiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Las listas de estos temas se generaron a partir de los ensamblados admitidos.  Para obtener más información, consulte [supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727635"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitectura de integración CLR: rendimiento
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  En este tema se describen algunas de las opciones de diseño que mejoran [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] la integración con el Common Language Runtime de .NET Framework (CLR).  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  En este tema se describen algunas de las opciones de diseño que mejoran el rendimiento de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integración con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Common Language Runtime de .NET Framework (CLR).  
   
 ## <a name="the-compilation-process"></a>El proceso de compilación  
  Durante la compilación de expresiones SQL, cuando se encuentra una referencia a una rutina administrada, se genera un código auxiliar de lenguaje intermedio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSIL). Este código auxiliar incluye el código para calcular referencias de los parámetros de rutina de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a CLR, invocar la función y devolver el resultado. Este código de "unión" está basado en el tipo y la dirección del parámetro (entrada, salida o referencia).  
@@ -56,7 +56,7 @@ ms.locfileid: "81488168"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los datos de caracteres, como **VARCHAR**, pueden ser del tipo SqlString o SqlChars en funciones administradas. Las variables SqlString crean una instancia del valor completo en la memoria. Las variables SqlChars proporcionan una interfaz de transmisión por secuencias que se puede utilizar para lograr mejores rendimiento y escalabilidad sin crear una instancia del valor completo en la memoria. Esto se vuelve especialmente importante para los datos de objetos grandes (LOB). Además, se puede tener acceso a los datos XML del servidor a través de una interfaz de streaming devuelta por **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR frente a los procedimientos almacenados extendidos  
- Las interfaces de programación de aplicaciones (API) de Microsoft.SqlServer.Server que permiten a los procedimientos administrados devolver conjuntos de resultados al cliente funcionan mejor que las API de Servicios abiertos de datos (ODS) utilizadas por los procedimientos almacenados extendidos. Además, las API de System. Data. SqlServer admiten tipos de datos como **XML**, **VARCHAR (Max)**, **nvarchar (Max)** y **varbinary (Max)**, introducidos en, mientras que las API de ODS no se han ampliado para admitir los nuevos tipos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]datos.  
+ Las interfaces de programación de aplicaciones (API) de Microsoft.SqlServer.Server que permiten a los procedimientos administrados devolver conjuntos de resultados al cliente funcionan mejor que las API de Servicios abiertos de datos (ODS) utilizadas por los procedimientos almacenados extendidos. Además, las API de System. Data. SqlServer admiten tipos de datos como **XML**, **VARCHAR (Max)**, **nvarchar (Max)** y **varbinary (Max)**, introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , mientras que las API de ODS no se han ampliado para admitir los nuevos tipos de datos.  
   
  Con código administrado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra el uso de los recursos como la memoria, los subprocesos y la sincronización. Esto se debe a que las API administradas que exponen estos recursos se implementan sobre el administrador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cambio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene ninguna vista o control sobre el uso de recursos del procedimiento almacenado extendido. Por ejemplo, si un procedimiento almacenado extendido usa demasiados recursos de la CPU o de la memoria, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna manera de detectarlo o controlarlo. Sin embargo, con el código administrado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede detectar que un subproceso determinado no ha producido resultados durante un largo período de tiempo y, a continuación, puede obligar a la tarea a producir resultados para que se pueda programar otro trabajo. Por consiguiente, el uso de código administrado aporta una mayor escalabilidad y una mejor utilización de los recursos del sistema.  
   

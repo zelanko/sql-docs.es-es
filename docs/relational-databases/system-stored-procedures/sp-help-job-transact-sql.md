@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730040"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los trabajos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza para realizar actividades automatizadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendido.|  
 |**7**|Realizando acciones de finalización.|  
   
-`[ @date_comparator = ] 'date_comparison'`Operador de comparación que se va a usar en las comparaciones de *Date_Created* y *date_modified*. *date_comparison* es **Char (1)** y puede ser =, \< o >.  
+`[ @date_comparator = ] 'date_comparison'`Operador de comparación que se va a usar en las comparaciones de *Date_Created* y *date_modified*. *date_comparison* es **Char (1)** y puede ser =, \<, or > .  
   
 `[ @date_created = ] date_created`Fecha en que se creó el trabajo. *Date_Created*es de **tipo DateTime**y su valor predeterminado es NULL.  
   
@@ -111,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
 |**name**|**sysname**|Nombre del trabajo.|  
 |**activó**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**denominación**|**nvarchar(512)**|Descripción del trabajo.|  
+|**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**category**|**sysname**|Categoría del trabajo|  
 |**propietario**|**sysname**|Propietario del trabajo.|  
@@ -149,7 +149,7 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|Identificador único del paso (en este trabajo).|  
 |**step_name**|**sysname**|Nombre del paso.|  
 |**subsistema**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
-|**Command**|**nvarchar (3200)**|Comando que se ejecuta.|  
+|**command**|**nvarchar (3200)**|Comando que se ejecuta.|  
 |**flags**|**nvarchar(4000)**|**Máscara de máscara** de valores que controlan el comportamiento del paso.|  
 |**cmdexec_success_code**|**int**|En el caso de un paso **CmdExec** , es el código de salida del proceso de un comando correcto.|  
 |**on_success_action**|**nvarchar(4000)**|Qué hacer si el paso termina correctamente:<br /><br /> **1** = salir con éxito.<br /><br /> **2** = salir con error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  

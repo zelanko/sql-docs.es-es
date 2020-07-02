@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3329efc6ecb0ed19788138987a0f88210abeaaa3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bebc3fb183072976a35e4d4fc1cb06ce82fb3113
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728158"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra en una lista todos los servidores de destino del grupo especificado. Si no se especifica ningún grupo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información acerca de todos los grupos de servidores de destino.  
   

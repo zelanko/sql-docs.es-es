@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727888"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregado definido por el usuario de CLR: invocar funciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En las instrucciones SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede invocar agregados definidos por el usuario de Common Language Runtime (CLR), siguiendo todas las reglas que se aplican a las funciones de agregado del sistema.  
   
  Se aplican las siguientes reglas adicionales:  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg. dll**, puede registrar el agregado en de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la manera siguiente:  
+ Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manera siguiente:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

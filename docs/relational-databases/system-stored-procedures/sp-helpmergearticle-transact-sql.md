@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733126"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de un artículo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en el suscriptor de republicaciones de la base de datos de suscripciones.  
   
@@ -52,7 +52,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Nombre del objeto de origen desde el que se agrega el artículo.|  
 |**sync_object_owner**|**sysname**|Nombre del propietario de la vista que define el artículo publicado.|  
 |**sync_object**|**sysname**|Nombre del objeto personalizado que se utiliza para establecer los datos iniciales de la partición|  
-|**denominación**|**nvarchar(255)**|Descripción del artículo.|  
+|**description**|**nvarchar(255)**|Descripción del artículo.|  
 |**status**|**tinyint**|Estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = inactivo<br /><br /> **2** = activo<br /><br /> **5** = operación pendiente del lenguaje de definición de datos (DDL)<br /><br /> **6** = operación DDL con una instantánea recién generada<br /><br /> Nota: cuando se reinicializa un artículo, los valores **5** y **6** cambian a **2**.|  
 |**creation_script**|**nvarchar(255)**|Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**conflict_table**|**nvarchar (270)**|Nombre de la tabla que almacena los conflictos de inserción o actualización.|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Si está habilitado el control automático de intervalos de identidad; donde **1** está habilitado y **0** está deshabilitado.|  
 |**pub_identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**mínimo**|**int**|Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**int**|Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Es si se comprueba una firma digital antes de utilizar un solucionador en la replicación de mezcla; donde **0** significa que no se comprueba la firma y **1** significa que se comprueba la firma para ver si proviene de una fuente de confianza.|  
 |**destination_object**|**sysname**|Nombre del objeto de destino. Aplicable únicamente a procedimientos almacenados de mezcla, vistas y artículos de esquema UDF.|  
 |**allow_interactive_resolver**|**int**|Si se utiliza el solucionador interactivo en un artículo; donde **1** significa que se utiliza este solucionador y **0** significa que no se utiliza.|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpmergearticle** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

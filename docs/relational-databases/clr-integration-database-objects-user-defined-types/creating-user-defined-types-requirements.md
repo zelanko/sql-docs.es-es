@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727812"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Crear tipos definidos por el usuario: requisitos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Debe tomar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se va [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a instalar en. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Debe tomar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se va a instalar en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementar un UDT  
  El UDT, para poder ejecutarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe implementar los requisitos siguientes en la definición del UDT:  
   
  El UDT debe especificar **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute**. El uso de **System. SerializableAttribute** es opcional, pero se recomienda.  
   
--   El UDT debe implementar la interfaz **System. Data. SqlTypes. INullable** en la clase o estructura mediante la creación de un método [!INCLUDE[msCoName](../../includes/msconame-md.md)] **null** **estático** público (**compartido** en Visual Basic). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene en cuenta el valor NULL de forma predeterminada. Esto es necesario para que el código que se ejecuta en el UDT pueda reconocer un valor NULL.  
+-   El UDT debe implementar la interfaz **System. Data. SqlTypes. INullable** en la clase o estructura mediante la creación de un método null **estático** público (**compartido** en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic). **Null** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene en cuenta el valor NULL de forma predeterminada. Esto es necesario para que el código que se ejecuta en el UDT pueda reconocer un valor NULL.  
   
 -   El UDT debe contener un método de **análisis** **estático** (o **compartido**) público que admita el análisis de y un método **ToString** público para convertir en una representación de cadena del objeto.  
   
 -   Un UDT con un formato de serialización definido por el usuario debe implementar la interfaz **System. Data. IBinarySerialize** y proporcionar un método de **lectura** y **escritura** .  
   
--   El UDT debe implementar **System. Xml. Serialization. IXmlSerializable**, o todos los campos y propiedades públicos deben ser tipos que se pueden serializar o decorar con el atributo **XmlIgnore** si se requiere invalidar la serialización estándar.  
+-   El UDT debe implementar **System.Xml. Serialization. IXmlSerializable**, o todos los campos y propiedades públicos deben ser de tipos que se pueden serializar o decorar con el atributo **XmlIgnore** si se requiere invalidar la serialización estándar.  
   
 -   Solo debe haber una serialización de un objeto UDT. Se produce un error en la validación si las rutinas de serialización o deserialización reconocen más de una representación de un objeto determinado.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486984"
   
 -   El UDT debe exponer elementos de datos como procedimientos de propiedad o campos públicos.  
   
--   Los nombres públicos no pueden tener más de 128 caracteres y deben ajustarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a las reglas de nomenclatura para los identificadores tal y como se definen en los [identificadores de base de datos](../../relational-databases/databases/database-identifiers.md).  
+-   Los nombres públicos no pueden tener más de 128 caracteres y deben ajustarse a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reglas de nomenclatura para los identificadores tal y como se definen en los [identificadores de base de datos](../../relational-databases/databases/database-identifiers.md).  
   
 -   **sql_variant** columnas no pueden contener instancias de un UDT.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81486984"
   
  **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** tiene las siguientes propiedades.  
   
- **Aplique**  
+ **Format**  
  Especifica el formato de serialización, que puede ser **nativo** o **UserDefined**, en función de los tipos de datos del UDT.  
   
  **IsByteOrdered**  
@@ -152,7 +152,7 @@ ms.locfileid: "81486984"
  Para admitir la conversión de cadenas a y desde el UDT, debe proporcionar un método **Parse** y un método **ToString** en la clase. El método **Parse** permite convertir una cadena en un UDT. Debe declararse como **static** (o **compartirse** en Visual Basic) y tomar un parámetro de tipo **System. Data. SqlTypes. SqlString**. Para obtener más información y un ejemplo de cómo implementar los métodos **Parse** y **ToString** , vea [codificar tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serialización XML  
- Los UDT deben admitir la conversión a y desde el tipo de datos **XML** conforme al contrato para la serialización XML. El espacio de nombres **System. Xml. Serialization** contiene clases que se utilizan para serializar objetos en documentos o secuencias de formato XML. Puede optar por implementar la serialización **XML** mediante la interfaz **IXmlSerializable** , que proporciona un formato personalizado para la serialización y deserialización XML.  
+ Los UDT deben admitir la conversión a y desde el tipo de datos **XML** conforme al contrato para la serialización XML. **System.Xml. **El espacio de nombres de serialización contiene clases que se utilizan para serializar objetos en documentos o secuencias de formato XML. Puede optar por implementar la serialización **XML** mediante la interfaz **IXmlSerializable** , que proporciona un formato personalizado para la serialización y deserialización XML.  
   
  Además de realizar conversiones explícitas de UDT a **XML**, la serialización XML permite:  
   

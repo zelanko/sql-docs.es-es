@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731737"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Configura información principal, agrega vínculos al monitor local y remoto y crea trabajos de copia y restauración en el servidor secundario de la base de datos principal especificada.  
   
@@ -61,11 +61,11 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`Directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
-`[ @copy_job_name = ] 'copy_job_name'`Nombre que se va a utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el trabajo del agente que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es de **tipo sysname** y no puede ser null.  
+`[ @copy_job_name = ] 'copy_job_name'`Nombre que se va a utilizar para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @restore_job_name = ] 'restore_job_name'`Es el nombre del trabajo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del agente en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es de **tipo sysname** y no puede ser null.  
+`[ @restore_job_name = ] 'restore_job_name'`Es el nombre del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de @backup_destination_directory acceso especificada por el parámetro antes de ser eliminado. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
+`[ @file_retention_period = ] 'file_retention_period'`Período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el @backup_destination_directory parámetro antes de ser eliminado. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
 `[ @monitor_server = ] 'monitor_server'`Es el nombre del servidor de supervisión. *Monitor_server* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra el uso del **sp_add_log_shipping_secondary_primary** procedimiento almacenado para configurar la información de la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos principal en el servidor secundario.  
+ En este ejemplo se muestra el uso del **sp_add_log_shipping_secondary_primary** procedimiento almacenado para configurar la información de la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el servidor secundario.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   

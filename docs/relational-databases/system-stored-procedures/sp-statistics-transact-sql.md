@@ -18,15 +18,15 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ea5643c3299a7716b2e350d6bbc2e7bdb2f9c22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725659"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una lista de todos los índices y estadísticas de una vista indizada o tabla especificada.  
   
@@ -80,7 +80,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**INTERCALACIÓN**|**Char (1)**|Orden utilizado en la intercalación. Puede ser:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable|  
 |**CARDINALIDAD**|**int**|Número de filas de la tabla o valores únicos del índice.|  
 |**PÁGINAS**|**int**|Número de páginas para el almacenamiento del índice o tabla.|  
-|**FILTER_CONDITION**|**VARCHAR(128**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  

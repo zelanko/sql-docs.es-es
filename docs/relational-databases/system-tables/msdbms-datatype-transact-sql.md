@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 299272377d8bbc55781d671a94240d6c309877ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725473"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSdbms_datatype** contiene la lista completa de tipos de datos nativos en cada sistema de administración de bases de datos (DBMS) compatible que se usa como publicador o suscriptor en la replicación de bases de datos heterogéneas. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82832338"
 |**type**|**sysname**|Nombre del tipo de datos (nativos).|  
 |**CreateParams**|**int**|Mapa de bits que describe la combinación de longitud, precisión y escala aplicable a cada tipo de datos, que incluye:<br /><br /> **0x1** = precisión.<br /><br /> **0X2** = escala.<br /><br /> **0x4** = longitud.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta tabla contiene entradas para los tipos de datos de SQL Server, dado que una instancia de SQL Server puede suscribirse a una base de datos que no sea de SQL Server y publicarse en un suscriptor que no sea de SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  

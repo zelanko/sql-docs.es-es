@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356357df8d2c8a3202a5ff088ba2c277aa9fd73c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e3cb3c3a3d5b623bdac08f2cf97d203db632ebd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731705"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra una lista de los subsistemas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -49,7 +49,7 @@ sp_enum_sqlagent_subsystems
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsistema**|**nvarchar(40)**|Nombre del subsistema.|  
-|**denominación**|**nvarchar(512)**|Descripción del subsistema.|  
+|**description**|**nvarchar(512)**|Descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar (510)**|Módulo DLL que contiene el subsistema.|  
 |**agent_exe**|**nvarchar (510)**|Módulo ejecutable utilizado por el subsistema.|  
 |**start_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
@@ -58,7 +58,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|Número máximo de subprocesos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará para este subsistema.|  
 |**subsystem_id**|**int**|Identificador del subsistema.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este procedimiento enumera los subsistemas disponibles en la instancia.  
   
 ## <a name="permissions"></a>Permisos  

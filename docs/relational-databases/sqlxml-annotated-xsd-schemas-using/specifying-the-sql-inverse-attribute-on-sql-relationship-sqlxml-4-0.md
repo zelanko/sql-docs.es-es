@@ -22,18 +22,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe5409120a3d0c5df3cf05318b0b85fd22d07bdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725880"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Especificar el atributo sql:inverse en sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  El atributo **SQL: inverso** solo es útil cuando el esquema XSD se usa para la carga masiva o mediante un diagrama. El atributo **SQL: inverso** se puede especificar en el ** \<elemento SQL: Relationship>** . En diagramas de actualización, la lógica del diagrama de actualización interpreta el esquema para determinar las tablas y columnas actualizadas mediante la operación del diagrama de actualización. Las relaciones entre elementos primarios y secundarios que se especifican en el esquema determinan el orden en que se modifican (insertan o eliminan) los registros.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  El atributo **SQL: inverso** solo es útil cuando el esquema XSD se usa para la carga masiva o mediante un diagrama. El atributo **SQL: inverso** se puede especificar en el **\<sql:relationship>** elemento. En diagramas de actualización, la lógica del diagrama de actualización interpreta el esquema para determinar las tablas y columnas actualizadas mediante la operación del diagrama de actualización. Las relaciones entre elementos primarios y secundarios que se especifican en el esquema determinan el orden en que se modifican (insertan o eliminan) los registros.  
   
- Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, se especifica el atributo **SQL: inverso** (**SQL: inverso = "true"**) en el ** \<elemento SQL: Relationship>** , y la lógica diagrama inverso su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
+ Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, se especifica el atributo **SQL: inverso** (**SQL: inverso = "true"**) en el **\<sql:relationship>** elemento y la lógica diagrama inversa a su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
   
  El atributo **SQL: inverso** toma un valor booleano (0 = false, 1 = true). Los valores permitidos son 0, 1, true y false.  
   

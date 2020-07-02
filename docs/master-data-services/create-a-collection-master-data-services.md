@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 112adceba92c705cf545f6f4a67771c3d31292cd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812425"
 ---
 # <a name="create-a-collection-master-data-services"></a>Crear una colección (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una colección cuando desee crear listas planas de miembros hoja y consolidados. Las colecciones no tienen que incluir todos los miembros de la entidad.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -51,9 +51,9 @@ ms.locfileid: "73728524"
   
 8.  Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción de la colección.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Agregar miembros a una colección &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   

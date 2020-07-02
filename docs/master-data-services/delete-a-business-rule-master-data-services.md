@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812784"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Eliminar una regla de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una regla de negocios cuando ya no se necesite.  
   
 > [!NOTE]  
 >  Puede evitar que los datos se validen con una regla de negocios excluyéndola, en lugar de eliminándola. Para obtener más información, consulte [Excluir una regla de negocios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

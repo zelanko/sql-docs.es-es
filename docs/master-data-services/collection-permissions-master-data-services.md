@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811632"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Los permisos de colección se aplican a todas las colecciones de una entidad. No puede conceder permisos a una colección específica; los permisos se aplican a todas las colecciones.  
   
@@ -32,8 +32,8 @@ ms.locfileid: "73729640"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
-|**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
-|**Actualizar**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
+|**Creación**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
+|**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
 |**Eliminar**|El usuario puede eliminar miembros de colecciones.|  
 |**Deny**|Denegar todo el acceso a los miembros de las colecciones.|  
   

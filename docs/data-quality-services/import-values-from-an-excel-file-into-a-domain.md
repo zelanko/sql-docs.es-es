@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812100"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores desde un archivo de Excel a un dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo importar valores desde un archivo de Excel a un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El uso de un archivo de Excel para importar valores de dominio en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a quienes tienen una lista de valores de datos válidos en un archivo de Excel o en un archivo de texto importar dichos valores en un dominio. Desde un archivo de Excel es posible importar valores de dominio en uno o varios dominios de una base de conocimiento. (Consulte [importar dominios desde un archivo de Excel en la detección de conocimiento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obtener más información acerca de la importación de dominios en una base de conocimiento). No se admite la exportación a un archivo de Excel.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75254816"
   
 9. Seleccione **Usar la primera fila como encabezado** si la primera fila de la hoja de cálculo representa el nombre del dominio y las restantes filas representan valores de dominio válidos.  
   
-10. Haga clic en **OK**. Aparece una barra de progreso, indicando cuántos valores se han importado correctamente, cuántos no se han importado y cuál es el número total de valores. Haga clic en el botón **Cancelar** para cancelar el proceso.  
+10. Haga clic en **Aceptar**. Aparece una barra de progreso, indicando cuántos valores se han importado correctamente, cuántos no se han importado y cuál es el número total de valores. Haga clic en el botón **Cancelar** para cancelar el proceso.  
   
 11. Compruebe que aparece el mensaje "Importación completada" en el cuadro de diálogo **Importar valores del dominio**. En este cuadro de diálogo podrá comprobar los valores que se han importado correctamente y los que no. Indica el nombre y la ruta de acceso del archivo, el estado de conclusión de la operación, cuántos valores se han importado correctamente, cuántos no se han importado y el número total de valores procesados.  
   

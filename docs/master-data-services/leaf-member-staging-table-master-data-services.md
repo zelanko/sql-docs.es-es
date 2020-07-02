@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a23e37608597b1f746b53d15deca99ff49031bc
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 398d6e5a18236080acbb44d822bc14b18a5914bd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811960"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Tabla de ensayo de miembros hoja (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use la tabla de ensayo de miembros hoja (stg.name_Leaf) de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para crear, actualizar, desactivar y eliminar miembros hoja. También puede usarla para actualizar valores de atributos de miembros hoja.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "84796618"
 |**BatchTag**<br /><br /> Obligatorio, excepto para el servicio web|Nombre único para el lote, de hasta 50 caracteres.||  
 |**ErrorCode**|Muestra un código de error. Para todos los registros con un **ImportStatus_ID** de **2**, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
 |**Código**<br /><br /> Obligatorio, excepto cuando los códigos se generan de forma automática para **ImportType1** o **2**; consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) para obtener más información|Código único del miembro.||  
-|**Nombre**<br /><br /> Opcionales|Nombre del miembro.||  
+|**Name**<br /><br /> Opcionales|Nombre del miembro.||  
 |**NewCode**|Úselo solo si va a cambiar el código de miembro.||  
 |\<Attribute name>|Existe una columna para cada atributo de la entidad. Úsela con un **ImportType** de **0** o **2**. Para los atributos de forma libre, especifique el nuevo texto o valor de cadena para el atributo. Para los atributos basados en dominio, especifique el código del miembro que será el atributo. Para los atributos de vínculo, la dirección URL debe comenzar con **https://**.<br /><br /> Nota: No puede almacenar de forma provisional los atributos de archivo.||  
   

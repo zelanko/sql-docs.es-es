@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b42733965fc41662ba81514da59460a0d02d5ac8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812206"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo crear una regla entre dominios para un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla entre dominios comprueba la relación entre los valores de los dominios individuales incluidos en un dominio compuesto. Una regla entre dominios debe cumplirse en todo el dominio compuesto para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas entre dominios se utilizan para validar, corregir y normalizar valores de dominio.  
   

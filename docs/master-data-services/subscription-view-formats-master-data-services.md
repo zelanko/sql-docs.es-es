@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812325"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de vista de suscripciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Según la entidad o la jerarquía derivada que seleccione, están disponibles los formatos siguientes para la vista de suscripciones.  
   

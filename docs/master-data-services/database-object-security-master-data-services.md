@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811590"
 ---
 # <a name="database-object-security-master-data-services"></a>Seguridad de objetos de base de datos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , los datos están almacenados en varias tablas de base de datos y se ven en las vistas. La información que pueda haber protegido en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] está visible para los usuarios con acceso a la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811354"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75255677"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de calidad de datos de limpieza, esta regla entre dominios definitiva cambia los datos con una confianza del 100% y la columna **motivo** muestra el siguiente mensaje: corregido por la regla ' *\<Cross-Domain Rule Name>* '. Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  

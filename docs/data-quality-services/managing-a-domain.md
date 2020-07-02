@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79045109eab32818e6cddd43bc9acf7ae35dfe6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812202"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe el uso de los dominios en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una representación semántica de los datos de un campo determinado del origen de datos que se va a analizar. Un dominio forma parte de la base de conocimiento creada para un origen de datos, y todo el conocimiento obtenido mediante el análisis de un origen de datos de ejemplo o la importación de datos se agrega a los dominios definidos en ella. El conocimiento de dichos dominios se utiliza posteriormente para realizar las tareas de limpieza y de búsqueda de coincidencias en un proyecto de calidad de datos. Los dominios son el núcleo de todas las actividades de Data Quality Services.  
   

@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcc9a263a8bb6ebb015c715930ebd601747ea25f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812394"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine un grupo de atributos cuando ya no necesite que la pestaña se muestre en el área funcional del **explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 -   **Nota** Cuando existan grupos de atributos, los atributos que no pertenezcan a un grupo de atributos no se muestran en el **explorador**. Cuando no existe ningún grupo de atributos, se muestran todos.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

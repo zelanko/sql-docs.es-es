@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812931"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar una base de datos de MDS en una instancia administrada
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este artículo se explica cómo configurar una base de datos de Master Data Services (MDS) en una instancia administrada de.
   
@@ -110,9 +110,9 @@ Esta acción instala:
 
 1. Abra [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] y, a continuación, seleccione **configuración de base de datos** en el panel izquierdo.
 
-1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Next** (Siguiente).
+1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Siguiente**.
 
-1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Next** (Siguiente).
+1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Siguiente**.
 
    > [!NOTE]
    > - Una instancia de SQL Server tiene el siguiente aspecto `xxxxxxx.xxxxxxx.database.windows.net` .
@@ -123,7 +123,7 @@ Esta acción instala:
 
    ![MDS-SQLServer2019-config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
-1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Next** (Siguiente).
+1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Siguiente**.
 
    ![MDS-SQLServer2019-config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
@@ -228,7 +228,7 @@ Para corregir este problema, debe actualizar la versión de la base de datos:
 
 1. Seleccione **Finalizar** una vez completadas todas las tareas.
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)

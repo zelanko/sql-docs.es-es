@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811957"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Los permisos de entidad se aplican a:  
   
@@ -40,8 +40,8 @@ ms.locfileid: "73728182"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Creación**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Eliminar**|El usuario puede eliminar miembros.|  
 |**Deny**|Denegar todo acceso a la entidad.|  
   

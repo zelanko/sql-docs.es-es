@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc8e60b6cfe7d729aca36cc5e4a2203cf281129
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811717"
 ---
 # <a name="purge-version-members-master-data-services"></a>Purga de miembros de versión (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la eliminación de un miembro solo lo desactiva, es decir, lo elimina de forma temporal. Los datos aún residen en la base de datos. En este tema se describe cómo purgar (eliminar de forma permanente) todos los miembros eliminados temporalmente en una versión de modelo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento.  
   
 -   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones.  

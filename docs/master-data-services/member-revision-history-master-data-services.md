@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812720"
 ---
 # <a name="member-revision-history-master-data-services"></a>Historial de revisiones de miembro (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cada vez que un miembro cambia, si el tipo de registro de transacciones de la entidad es miembro, se registra un historial de revisiones de miembro.  
   

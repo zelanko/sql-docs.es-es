@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d09dfff2fd986e73edb01711b045490586aa59b5
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812106"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Abrir, desbloquear, cambiar el nombre y eliminar un proyecto de calidad de datos (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo administrar un proyecto de calidad de datos mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , realizando acciones tales como abrirlo, desbloquearlo, cambiarle el nombre y eliminarlo.  
   

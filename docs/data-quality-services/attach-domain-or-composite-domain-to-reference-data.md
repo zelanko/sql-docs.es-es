@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0287c29e66711724b725689d578a498f0537600a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812638"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia: Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia de Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
 
@@ -57,7 +57,7 @@ ms.locfileid: "75557920"
   
 4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Address line**, **City**, **State**y **Zip**.  
   
-5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **OK**.  
+5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
   
 6.  En el panel **Dominio** del lado izquierdo, seleccione el dominio compuesto haciendo clic en **Address Verification**y, a continuación, haga clic en la pestaña **Datos de referencia** situada en el lado derecho.  
   

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33d8ecce0aaba4826e20783bbe63aee44f63b4b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee819cb67267ed129724b82aa777d17b6ed1fbf9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811336"
 ---
 # <a name="dqs-security"></a>Seguridad de DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La infraestructura de seguridad de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) está basada en la infraestructura de seguridad de SQL Server. Un administrador de bases de datos concede al usuario un conjunto de permisos mediante la asociación de dicho usuario a un rol de DQS. De este modo, determina los recursos de DQS a los que el usuario tiene acceso y las actividades funcionales que este puede realizar.  
   

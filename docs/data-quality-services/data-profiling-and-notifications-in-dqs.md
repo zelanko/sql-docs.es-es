@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812574"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Generación de perfiles de datos y notificaciones de DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La generación de perfiles de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) es el proceso que consiste en analizar los datos de un origen de datos existente y mostrar estadísticas sobre ellos en actividades de DQS. Proporciona medidas automatizadas de la calidad de los datos. La generación de perfiles de DQS está integrada en los proyectos de calidad de datos y administración del conocimiento de DQS. es dinámica y ajustable. La generación de perfiles tiene dos objetivos importantes: en primer lugar, guiarle a través de los procesos de calidad de datos y ayudarle a tomar decisiones, y en segundo lugar, evaluar la eficacia de los procesos. El proceso de generación de perfiles de DQS tiene las siguientes ventajas:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607821"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Generación de perfiles de datos en la supervisión de actividades  
  La información de generación de perfiles para las actividades detección de conocimiento, Directiva de coincidencia, coincidencia y limpieza está disponible no solo en las páginas de actividades de Data Quality Client, sino que también está disponible en supervisión de actividades. La supervisión de la actividad le proporciona información general sobre las actividades actuales y las anteriores. Además de las propiedades y los procesos de cálculo relacionados con las actividades, también puede ver la información sobre la generación de perfiles generada para cada actividad en una ubicación. Seleccione una actividad en la tabla de actividades para mostrar los resultados de la generación de perfiles en una tabla que aparecerá debajo. También puede exportar los resultados de la generación de perfiles. Para obtener más información, consulte [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-##  <a name="notifications"></a><a name="Notifications"></a>Notificaciones  
+##  <a name="notifications"></a><a name="Notifications"></a> Notificaciones  
  Además de recopilar y mostrar estadísticas y métricas importantes mediante la generación de perfiles, DQS generará notificaciones (si están habilitadas) que le indicarán cuándo puede realizar una acción basándose en las estadísticas de generación de perfiles mostradas. DQS utiliza notificaciones para resaltar hechos importantes sobre el origen de datos y para mostrar la eficacia de la actividad actual en comparación con el propósito para el que se ejecutó. Las notificaciones proporcionan sugerencias y recomendaciones que indican una condición, y le sugieren cómo mejorar una actividad de detección de conocimiento, de limpieza de datos o de búsqueda de coincidencias de datos.  
   
  Las notificaciones de DQS se utilizan para plantear una cuestión que puede interesarle, o para solucionar un posible problema. El hecho de que se actúe sobre la notificación dependerá de si es relevante para sus propósitos. Por ejemplo, imagine que DQS envía una notificación cuando la limpieza de datos no genera ningún valor corregido ni sugerido, mientras la integridad y la precisión son del 100%. Esta notificación indicaría que es posible que no sea necesario ejecutar la actividad. No obstante, usted será el que decida si debe ejecutarse o no.  

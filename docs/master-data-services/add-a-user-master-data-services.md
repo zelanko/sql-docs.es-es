@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812845"
 ---
 # <a name="add-a-user-master-data-services"></a>Agregar un usuario (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Agregue un usuario a la lista **Usuarios** en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] a fin de comenzar el proceso para asignar el permiso a la aplicación web. Para que un usuario de la lista pueda tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe conceder el permiso de usuario a una o más áreas funcionales y objetos de modelo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84796605"
   
 4.  Si lo desea, haga clic en **Comprobar nombres**.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0dac91e4f43d244e133511e792f29770949da905
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811950"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>Relación de sincronización de entidades (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades Permite compartir datos de entidad entre diferentes modelos. Puede conservar un único origen de confianza en un modelo y volver a usar estos datos maestros en otros modelos. Por ejemplo, puede almacenar los datos de estado de Estados Unidos en la entidad de un modelo y volver a usar esos datos en otros modelos.  
   

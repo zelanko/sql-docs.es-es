@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812773"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Crear una vista de suscripciones para exportar datos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cree una vista de suscripciones para exportar datos de Master Data Services a sistemas de suscripción. Va a crear una vista de los datos en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "84796434"
 |Estado|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que la vista se está actualizando.<br /><br /> Si hay errores al crear o editar una vista, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
 |Nombre|El nombre de la vista de suscripciones.|  
 |Modelo|Nombre del modelo.|  
-|Versión|El nombre de la versión.|  
+|Version|El nombre de la versión.|  
 |Marca de versión|El nombre de la marca de la versión.|  
 |Jerarquía derivada|El nombre de la jerarquía derivada.|  
 |Entidad|El nombre de la entidad.|  

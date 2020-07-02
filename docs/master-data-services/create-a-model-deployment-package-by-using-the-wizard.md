@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811813"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Crear un paquete de implementación de modelo mediante el asistente
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
@@ -54,7 +54,7 @@ ms.locfileid: "73729594"
   
 8.  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Implementar un paquete de implementación de modelo mediante el asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

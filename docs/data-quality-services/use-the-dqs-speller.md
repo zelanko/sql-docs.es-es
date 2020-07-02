@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ce315c95f6906ba4c886d597b0df3d8957d4358a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812506"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   El corrector ortográfico de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) comprueba la sintaxis, la ortografía y la estructura de las frases de los valores de cadena de un dominio. El corrector ortográfico es una característica independiente, del lado cliente, que no se integra con los motores del servidor y no tiene ninguna implicación en los flujos o estados actuales. El corrector ortográfico identifica los valores de cadena que considera posibles errores, y los marca con un carácter de subrayado rojo en la misma ubicación en la que se realizan otros cambios manuales en los valores de dominio. Entre estas ubicaciones se incluyen:  
   

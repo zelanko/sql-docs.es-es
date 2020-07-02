@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 646ed23608fdeada57ae28e12ad674fc557ad856
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 16b5268f9ca4ac300bafe09b1188776985e5826d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811794"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilice la herramienta MDSModelDeploy para implementar un paquete que contiene:  
   
@@ -114,7 +114,7 @@ ms.locfileid: "84796371"
      Al actualizar un modelo, si el proceso sufre un error durante los tres primeros pasos, no continúa; sin embargo, los cambios ya realizados no se revierten. Si el proceso sufre un error en el paso 4, los miembros que se pueden actualizar se actualizan.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
+ Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, vea:  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

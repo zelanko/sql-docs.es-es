@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ae1d6732b3661ca70511f0de8b3be0730ed63b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812591"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo crear un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de uno o varios dominios individuales que se aplican a un único campo de datos. Para más información sobre los dominios compuestos, vea [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "79289873"
   
 6.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** .  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 ##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>Establecer propiedades de dominio compuesto  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79289873"
   
 2.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** . Esta lista contiene los dominios individuales disponibles para agregarlos al dominio compuesto que está creando. Solo están disponibles los dominios individuales que se han creado y que no se hayan agregado a un dominio compuesto existente. Un dominio individual no se puede agregar a más de un dominio compuesto de la knowledge base, y un dominio compuesto no se puede agregar a otro dominio compuesto.  
   
-3.  Haga clic en **Avanzada**.  
+3.  Haga clic en **Avanzado**.  
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   

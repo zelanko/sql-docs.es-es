@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c9bbcdca2cdbab0d3d92e90e5b343fda196a027
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812851"
 ---
 # <a name="add-a-group-master-data-services"></a>Agregar un grupo (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Agregue un grupo a la lista **Grupos** en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] a fin de comenzar el proceso para asignar el permiso a la aplicación web. Para que un usuario del grupo pueda tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe conceder el permiso de grupo a una o más áreas funcionales, y objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
@@ -43,12 +43,12 @@ ms.locfileid: "73728820"
   
 5.  Si lo desea, haga clic en **Comprobar nombres**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  Cuando el usuario obtiene acceso por primera vez a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], su nombre se agrega a la lista de usuarios de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Asignar permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

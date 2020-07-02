@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea4f99ef58da9c74e22eb9edce67a00c55bec60b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812768"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Crear un atributo de texto (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de texto cuando desee que los usuarios escriban una cadena de texto como un valor de atributo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -42,7 +42,7 @@ ms.locfileid: "73728456"
 |------------|-----------------|  
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
 |Nombre|El nombre del atributo.|  
-|Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|  
+|Nombre para mostrar|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
 |Tipo y propiedades|Tipo e información sobre el tipo de datos del atributo.|  

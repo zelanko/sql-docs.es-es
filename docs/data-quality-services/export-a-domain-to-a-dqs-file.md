@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 518b393b296425c1aaf54229a8a843576c6a628a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcaa3fd4a59793f8dfb086f7cd36d2564f939fd9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810879"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar un dominio a un archivo .dqs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo exportar un dominio a un archivo .dqs en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede exportar un dominio o una base de conocimiento completa a un archivo de datos. Para obtener información sobre cómo exportar una base de conocimiento, vea [Exportar una base de conocimiento a un archivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75251619"
   
 5.  En el cuadro de diálogo **Exportar a un archivo de datos**, desplácese a la carpeta en la que quiere guardar el archivo, asígnele un nombre o conserve el predeterminado, mantenga seleccionada la opción **Archivos de datos DQS (\*.dqs)** en la lista **Guardar como tipo** y, luego, haga clic en **Guardar**.  
   
-6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **OK**.  
+6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **Aceptar**.  
   
 ##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Seguimiento: después de exportar un dominio a un archivo. DQS  
  Una vez exportado un dominio a un archivo .dqs, puede importarlo en otra base de conocimiento.  

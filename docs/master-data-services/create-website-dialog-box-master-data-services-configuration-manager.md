@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea7da40c1c82b855f4290f104c0b2d4f8462a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812015"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear sitio web (Administrador de configuración de Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilice el cuadro de diálogo **Crear sitio web** para crear un sitio web nuevo en el equipo local. Cuando crea un sitio web en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], el sitio se agrega a Internet Information Services (IIS) en el equipo local con una aplicación raíz que se configura como la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . También se crea un nuevo grupo de aplicaciones y la aplicación web se coloca en ese grupo de aplicaciones.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "81728282"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Nombre del sitio Web**|Especifique un nombre para el sitio web o utilice el nombre predeterminado. Este nombre es descriptivo y se utiliza solamente para identificar al sitio en IIS. No se utiliza para tener acceso al sitio desde un explorador web.<br /><br /> El nombre debe ser único con respecto a todos los sitios en IIS del equipo local.|  
+|**Nombre del sitio web**|Especifique un nombre para el sitio web o utilice el nombre predeterminado. Este nombre es descriptivo y se utiliza solamente para identificar al sitio en IIS. No se utiliza para tener acceso al sitio desde un explorador web.<br /><br /> El nombre debe ser único con respecto a todos los sitios en IIS del equipo local.|  
 |**Protocolo**|Muestra **http**. Seleccione el protocolo de transferencia de hipertexto (HTTP) cuando no sea precisa la comunicación a través de un canal cifrado entre cliente y servidor.<br /><br /> **Nota**: No puede crear un sitio HTTPS en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS es el protocolo HTTP que usa seguridad de la capa de transporte (TLS), conocido anteriormente como Capa de sockets seguros (SSL), y es útil al intercambiar datos confidenciales o personales, o cuando se desea que los usuarios confirmen la identidad del servidor antes de transmitir información personal. Si necesita transferir información entre el servidor y un cliente a través de un canal cifrado, debe utilizar una herramienta de IIS, como Administrador de IIS, para configurar el sitio con un enlace HTTPS y asociar el enlace de sitio web a un certificado de servidor. Debe hacerlo para poder abrir correctamente el sitio web en un explorador web. Para obtener más información sobre los certificados de servidor, vea [Configurar certificados de servidor en IIS 7](https://go.microsoft.com/fwlink/?LinkId=163220) en [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
 |**Dirección IP**|Seleccione una dirección IP que puedan utilizar los usuarios para tener acceso al sitio. De forma predeterminada, se selecciona **Todas sin asignar** . A menos que tenga razones para utilizar una dirección IPv4 o IPv6, utilice el valor predeterminado.<br /><br /> Con **Todas sin asignar**, este sitio responde a las solicitudes para todas las direcciones IP en el puerto y nombre de host opcional que especifique. Si hay otro sitio en el servidor que tenga un enlace en el mismo puerto pero con una dirección IP concreta, ese sitio recibe las solicitudes HTTP a ese puerto y dirección IP específicos y el sitio con la dirección IP en **Todas sin asignar** recibe el resto de solicitudes HTTP en ese puerto y en las otras direcciones IP.|  
 |**Puerto**|Escriba el puerto para las solicitudes realizadas para este sitio web. Si selecciona el protocolo HTTP, el puerto predeterminado es 80. Si especifica un puerto distinto a los puertos predeterminados, los clientes deberán especificar el número de puerto para conectarse al sitio web.<br /><br /> **Nota**: El **sitio web predeterminado** en IIS está configurado para usar el protocolo HTTP en el puerto 80 con todas las direcciones IP sin asignar. Si intenta crear el sitio web en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] con la información de enlace predeterminado, recibirá un error que indica que existe un enlace duplicado. Debe cambiar la información de enlace para el sitio en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]o cambiar la información de enlace para el sitio web predeterminado con una herramienta IIS, como el Administrador IIS. Como alternativa, puede especificar un encabezado de host para que IIS pueda identificar el sitio web de forma inequívoca. Asegúrese de que configura su firewall para que acepte el tráfico a través del puerto que especifica.|  
@@ -39,7 +39,7 @@ ms.locfileid: "81728282"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Nombre**|Especifique un único nombre descriptivo para el nuevo grupo de aplicaciones o utilice el nombre predeterminado que se proporciona. La aplicación web raíz para este sitio web se ejecuta en este grupo de aplicaciones.<br /><br /> Los grupos de aplicaciones proporcionan límites que evitan que las aplicaciones en un grupo de aplicaciones afecten a las aplicaciones en otro grupo de aplicaciones.|  
+|**Name**|Especifique un único nombre descriptivo para el nuevo grupo de aplicaciones o utilice el nombre predeterminado que se proporciona. La aplicación web raíz para este sitio web se ejecuta en este grupo de aplicaciones.<br /><br /> Los grupos de aplicaciones proporcionan límites que evitan que las aplicaciones en un grupo de aplicaciones afecten a las aplicaciones en otro grupo de aplicaciones.|  
 |**Nombre de usuario**|Especifique un dominio y nombre de usuario en Active Directory. Esta cuenta es la identidad del grupo de aplicaciones donde se ejecuta la aplicación web.<br /><br /> Esta cuenta se agrega al rol de base de datos mds_exec de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para el acceso a la base de datos. Para obtener más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). También se agrega a un grupo de Windows de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, al que se le concede permiso al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |**Contraseña**|Escriba la contraseña de la cuenta de usuario especificada.|  
 |**Confirmar contraseña**|Vuelva a escribir la contraseña de la cuenta de usuario especificada. Los campos **Contraseña** y **Confirmar contraseña** deben contener la misma contraseña.|  

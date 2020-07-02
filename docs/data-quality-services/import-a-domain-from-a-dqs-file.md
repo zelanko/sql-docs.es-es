@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03f43c756ab01874042f38ea2e06c83bf7ac1e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812161"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo importar un dominio desde un archivo .dqs a una base de conocimiento existente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los archivos de datos .dqs se crean al exportar un dominio o una base de conocimiento desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . El archivo de datos .dqs está cifrado, por lo que no se puede ver.  
   

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 140342398d35dfb7ad38940d0e2a2e7726e8375b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811870"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar una transacción (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue una anotación a una transacción si desea proporcionar más información sobre la transacción con fines históricos.  
   
 > [!NOTE]  
 >  Las anotaciones no se pueden eliminar.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Para agregar transacciones que creó, debe contar con el permiso para obtener acceso al área funcional de **Explorador** y tener como mínimo el permiso **Actualizar** para el objeto del modelo al que desea agregar anotaciones.  
   

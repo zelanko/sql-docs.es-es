@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812370"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar y eliminar un índice (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Puede editar y eliminar un índice que haya creado en los atributos.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728215"
   
 8.  Edite la lista de atributos asignados; para ello, agregue y quite atributos de la lista.  
   
-9. Haga clic en **Guardar**.  
+9. Haga clic en **Save**(Guardar).  
   
  **Para eliminar un índice**  
   

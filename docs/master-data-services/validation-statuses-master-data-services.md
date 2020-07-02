@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ceaf7e42b8d25873cc595e3e64b6949e25d52e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812335"
 ---
 # <a name="validation-statuses-master-data-services"></a>Estados de validación (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el área funcional **Administración de versiones** , en la página **Validar versión** , se pueden dar los siguientes estados.  
   
-|Status|Descripción|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |Esperando la validación|Todos los miembros que se acaben de crear que esperen ser validados.|  
 |Esperando la revalidación|Miembros existentes que estén esperando ser validados.|  

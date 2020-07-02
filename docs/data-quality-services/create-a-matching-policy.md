@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811344"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  
   

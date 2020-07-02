@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811510"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permisos de carpetas y archivos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Al instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], las carpetas y archivos se instalan en el sistema de archivos en la ruta de instalación que especifica para las características compartidas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si usa la ruta de instalación predeterminada para las características compartidas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , la ruta de instalación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es *unidad*:\Archivos de programa\Microsoft SQL Server\130\Master Data Services. Aunque puede cambiar la ruta de instalación de las características compartidas, sea consciente de los permisos que se heredan de la carpeta primaria y de los que se establecen explícitamente para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812030"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar reglas de negocios para enviar notificaciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure reglas de negocios para enviar notificaciones cuando desee notificar a los usuarios los cambios de los valores de los atributos.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales de **Permisos de usuario y de grupo** y de **Administración del sistema** . Si no tiene permiso para el área funcional de **Permisos de usuario y grupo** , no puede ver la lista de usuarios y grupos a los que enviar las notificaciones.  
@@ -62,7 +62,7 @@ ms.locfileid: "73728567"
   
 10. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El valor de la columna **Estado de la regla de negocio** ha cambiado a **Activo** y en la columna **Notificación** se muestra el usuario o grupo seleccionado al que enviar la notificación.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

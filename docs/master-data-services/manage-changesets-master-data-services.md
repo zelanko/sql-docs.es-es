@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811730"
 ---
 # <a name="manage-changesets-master-data-services"></a>Administración de conjuntos de datos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] puede administrar todos los cambios por modelo y versión.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

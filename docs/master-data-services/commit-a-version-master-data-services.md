@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0fa359de1daa844fbcce073b0c67efdd5f721b37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5cb3ebca4ab30fdf17b40774d50f44942cba093
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812443"
 ---
 # <a name="commit-a-version-master-data-services"></a>Confirmar una versión (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], confirme una versión de un modelo para evitar cambios en los miembros del modelo y en sus atributos. Las versiones confirmadas no se pueden desbloquear.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
@@ -51,7 +51,7 @@ ms.locfileid: "73728595"
   
 5.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

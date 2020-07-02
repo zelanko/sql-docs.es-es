@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec76228a4f8307813a2bb098b648133e065c5cd5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f645bf481b193b78003808725d60b97b33d845
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812901"
 ---
 # <a name="notifications-master-data-services"></a>Notificaciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] se puede configurar para enviar una notificación por correo electrónico cuando se produce un error en la validación de la regla de negocios, cuando cambia el estado de una versión del modelo o cuando cambia el estado de un conjunto de cambios.  
   
 ## <a name="how-notifications-are-sent"></a>Cómo se envían las notificaciones  
- Las notificaciones se configuran en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Las notificaciones envían mensajes de correo electrónico mediante correo electrónico de base de datos en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instancia de que [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] hospeda la base de datos. Para obtener más información sobre el correo electrónico de base de datos, consulte [Objetos de configuración de Correo electrónico de base de datos](../relational-databases/database-mail/database-mail-configuration-objects.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Las notificaciones se configuran en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Las notificaciones envían mensajes de correo electrónico mediante Correo electrónico de base de datos en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] que hospeda la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos. Para obtener más información sobre el correo electrónico de base de datos, consulte [Objetos de configuración de Correo electrónico de base de datos](../relational-databases/database-mail/database-mail-configuration-objects.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="when-notifications-are-sent"></a>Cuándo se envían notificaciones  
  Una vez configuradas las notificaciones, se pueden enviar notificaciones por correo electrónico automatizadas en los casos siguientes.  
   
 |Instancia|Descripción|  
 |--------------|-----------------|  
-|Haya un error de los datos en la validación de la regla de negocios|Se deben configurar reglas de negocios individuales para enviar correo electrónico cuando un valor de atributo produce un error en la validación de la regla de negocios. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Entity<br /><br /> Código del miembro<br /><br /> Regla de negocios con error<br /><br /> Vínculo al miembro para el que el valor del atributo produce un error en la regla de negocios<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, consulte [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
+|Haya un error de los datos en la validación de la regla de negocios|Se deben configurar reglas de negocios individuales para enviar correo electrónico cuando un valor de atributo produce un error en la validación de la regla de negocios. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Entidad<br /><br /> Código del miembro<br /><br /> Regla de negocios con error<br /><br /> Vínculo al miembro para el que el valor del atributo produce un error en la regla de negocios<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, consulte [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
 |El estado de la versión del modelo cambia|Cada vez que el estado de una versión del modelo cambia, los usuarios que son administradores de modelo reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Estado anterior y nuevo estado de la versión.<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
 |Cambios de estado del conjunto de cambios|Cada vez que cambia el estado de un conjunto de cambios para una entidad que requiere aprobación, los administradores de entidades y/o los propietarios del conjunto de cambios reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Nombre del conjunto de cambios.<br /><br /> Estado anterior<br /><br /> Nuevo estado<br /><br /> Vínculo para aplicar el conjunto de cambios para ver y modificar los cambios pendientes.<br /><br /> Para obtener más información, consulte [Conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   

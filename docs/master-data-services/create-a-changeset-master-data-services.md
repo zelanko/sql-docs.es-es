@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812450"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Creación de un conjunto de cambios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Un conjunto de cambios es una colección de cambios pendientes en los datos maestros. Si la entidad requiere aprobación para cambios, los cambios pendientes deben guardarse en un conjunto de cambios y luego enviarse para su aprobación por parte del administrador.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Debe disponer de permiso de acceso al área funcional Explorador. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73729627"
   
 6.  Para utilizar un conjunto de cambios existente, haga clic en **Existente** y elija el conjunto de cambios en la lista. Solo están disponibles aquellos conjuntos de cambios que se encuentran en un estado de abierto o rechazado.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Aplicar y actualizar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  

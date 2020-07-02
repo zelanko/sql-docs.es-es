@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a83b51479aadc92941da073e5bf9f0da394691ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1f1833bd90afeebf9a655384510bd952a7b4ae1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811750"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Iniciar acciones según los cambios de valores de atributos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una regla de negocios para iniciar acciones según los cambios de los valores de atributos. Por ejemplo, cuando un valor de atributo concreto cambia, quizás desee cambiar un valor, enviar una notificación o iniciar un flujo de trabajo externo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -82,7 +82,7 @@ ms.locfileid: "73729166"
   
 21. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El estado de la regla cambia a **Activo**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

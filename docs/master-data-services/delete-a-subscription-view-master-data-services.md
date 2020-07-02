@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811574"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Eliminar una vista de suscripciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una vista de suscripción cuando ya no se necesite. Al eliminar una vista de suscripción en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , la vista se quita de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . También puede editar una vista de suscripción.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

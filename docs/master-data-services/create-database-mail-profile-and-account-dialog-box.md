@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 50f301dd0c64b75deb12706b6364b72744e22c34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812430"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilice el cuadro de diálogo **Crear un perfil y una cuenta de Correo electrónico de base de datos** para crear un perfil de Correo electrónico de base de datos y una cuenta de Correo electrónico de base de datos para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Este perfil se utilizará para notificar por correo electrónico a usuarios y grupos cuando se produzcan errores en la validación de una regla de negocios.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "81728448"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Dirección de correo electrónico**|Escriba el nombre de la dirección de correo electrónico de la cuenta. Esta es la dirección de correo electrónico desde la que se envía el correo electrónico y debe tener el formato *email_name*@*domain_name*. Un ejemplo de dirección de correo electrónico sería sales@contoso.com.|  
+|**Dirección de correo electrónico**|Escriba el nombre de la dirección de correo electrónico de la cuenta. Esta es la dirección de correo electrónico desde la que se envía el correo electrónico y debe tener el formato *email_name* @ *domain_name*. Un ejemplo de dirección de correo electrónico sería sales@contoso.com.|  
 |**Nombre para mostrar**|Valor opcional. Escriba el nombre para mostrar en los mensajes de correo electrónico enviados desde esta cuenta. Un ejemplo de nombre para mostrar es Grupo de ventas Contoso.|  
 |**Dirección de correo electrónico de respuesta**|Valor opcional. Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Un ejemplo de dirección de correo electrónico de respuesta sería admin@contoso.com.|  
 |**Servidor SMTP**|Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Un formato de servidor SMTP de ejemplo es **smtp.***<company_name>***.com**. Si necesita ayuda, consulte a su administrador de correo.|  
@@ -52,7 +52,7 @@ ms.locfileid: "81728448"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Autenticación de Windows con credenciales del servicio Motor de base de datos**|Especifique que correo electrónico de base de datos deben utilizar las credenciales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] la cuenta de servicio de Windows para la autenticación en el servidor SMTP.|  
+|**Autenticación de Windows con credenciales del servicio Motor de base de datos**|Especifique que Correo electrónico de base de datos deben utilizar las credenciales de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cuenta de servicio de Windows para la autenticación en el servidor SMTP.|  
 |**Autenticación básica**|Especifique que Correo electrónico de base de datos debería utilizar un nombre de usuario y contraseña concretos para la autenticación en el servidor SMTP. Esta información solo se utiliza para la autenticación con el servidor de correo electrónico y no es necesario que la cuenta se corresponda con un usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o con un usuario del equipo que ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Nombre de usuario**|Escriba el nombre de la cuenta de usuario que utiliza Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, es necesario un nombre de usuario.|  
 |**Contraseña**|Escriba la contraseña que utiliza el Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, es necesaria una contraseña.|  

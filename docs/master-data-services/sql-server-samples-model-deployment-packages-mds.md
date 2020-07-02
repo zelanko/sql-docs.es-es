@@ -13,18 +13,18 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811384"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Ejemplos de SQL Server: paquetes de implementación de modelos (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Los paquetes de modelo de ejemplo con datos se incluyen al instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. La ubicación predeterminada de estos archivos de paquete es \<unidad>\Archivos de programa\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
+  Los paquetes de modelo de ejemplo con datos se incluyen al instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. La ubicación predeterminada de estos archivos de paquete es \<drive> \Archivos de programa\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  Para obtener instrucciones sobre cómo implementar los paquetes de modelo de ejemplo, consulte [Implementar modelos y datos de ejemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Implemente los paquetes de modelo de ejemplo con la [herramienta MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

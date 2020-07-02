@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812210"
 ---
 # <a name="change-domain-values"></a>Cambiar valores de dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo cambiar y aumentar los metadatos de una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una vez que haya generado conocimiento mediante la detección de conocimiento, haya importado conocimiento en la base de conocimiento o en los dominios, o haya basado una base de conocimiento en otra, podrá cambiar los valores de los datos de forma interactiva. La generación de la base de conocimiento no solo aprovecha los procesos asistidos por PC, sino que además pone a su disposición los medios necesarios para que pueda usar su propio conocimiento para comprobar los valores de los datos y cambiarlos de las formas siguientes:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75242128"
   
 9. **Importar valores de dominio de Excel**: para agregar nuevos valores desde una hoja de cálculo de Excel, haga clic en la flecha abajo del icono **Importar valores** y, a continuación, seleccione **Importar valores de dominio de Excel**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Para obtener más información, consulte [Importar valores desde un archivo de Excel a un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Importar valores de proyecto**: para agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo del icono **Importar valores** y, a continuación, seleccione **Importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar**. Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
+10. **Importar valores de proyecto**: para agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo del icono **Importar valores** y, a continuación, seleccione **Importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar** Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
   
 11. **Eliminar los valores de dominio seleccionados**: para eliminar uno o varios valores existentes en el dominio, selecciónelos en la tabla Valor y, a continuación, haga clic en el icono **Eliminar los valores de dominio seleccionados** . Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
   

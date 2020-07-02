@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58b3fff5d03207301c0c955409d91c8812c206c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812502"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251678"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  El panel inferior, **Detalles de la base de datos** , muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar la ruta de acceso de un archivo, haga clic en el botón **examinar** (...).  
+5.  El panel inferior, **Detalles de la base de datos** , muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** ( ... ).  
   
 6.  Para adjuntar la base de datos DQS_MAIN, haga clic en **Aceptar** .  
   

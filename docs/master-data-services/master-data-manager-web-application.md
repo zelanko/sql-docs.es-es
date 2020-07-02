@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 99e82901a8d3dac593e60896fc663f03e8ec431a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812954"
 ---
 # <a name="master-data-manager-web-application"></a>Aplicación web Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] la usan principalmente los administradores para realizar tareas administrativas. Por ejemplo, solo los administradores pueden crear modelos, reglas de negocios o versiones de datos. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   

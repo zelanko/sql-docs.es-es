@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2d2acff8ff89202427a78de0aaee7e1f02c13a96
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811565"
 ---
 # <a name="deploying-models-master-data-services"></a>Implementar modelos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un paquete es un archivo XML que contiene una estructura del modelo implementable y, opcionalmente, los datos del modelo. Use los paquetes del modelo para mover las copias de modelos desde un entorno de MDS a otro, o para crear nuevos modelos en el entorno de MDS existente.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84796376"
   
  Todos los objetos del modelo se incluyen en un paquete. Estos objetos son:  
   
--   Entities  
+-   Entidades  
   
 -   Atributos  
   

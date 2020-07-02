@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786206"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega una suscripción de extracción a una publicación de instantáneas o transaccional. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos donde se va a crear la suscripción de extracción.  
   
@@ -61,7 +61,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`Es el tipo de actualización. *update_mode* es **nvarchar (30)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Read Only** (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se devuelven al publicador. Se debe utilizar cuando las actualizaciones no se realicen en el suscriptor.|  
 |**Synctran**|Habilita la compatibilidad con las suscripciones de actualización inmediata.|  
@@ -74,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addpullsubscription** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 > [!IMPORTANT]  

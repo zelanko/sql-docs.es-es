@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786250"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una publicación de combinación nueva. Este procedimiento almacenado se ejecuta en el publicador de la base de datos que se publica.  
   
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`Indica la compatibilidad con versiones anteriores de la publicación. *backward_comp_level* es **nvarchar (6)** y puede tener uno de estos valores:  
   
-|Valor|Versión|  
+|Valor|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Especifica las unidades para el período de retención establecido por *retención*. *retention_period_unit* es **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Valor|Versión|  
+|Valor|Version|  
 |-----------|-------------|  
 |**Day** (valor predeterminado)|El período de retención se especifica en días.|  
 |**week**|El período de retención se especifica en semanas.|  
@@ -226,7 +226,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addmergepublication** se utiliza en la replicación de mezcla.  
   
  Para enumerar los objetos de publicación en el Active Directory mediante el parámetro ** \@ add_to_active_directory** , el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto ya debe estar creado en el Active Directory.  

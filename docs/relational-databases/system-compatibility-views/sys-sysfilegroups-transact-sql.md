@@ -1,5 +1,5 @@
 ---
-title: Sys. sysfilegroups (Transact-SQL) | Microsoft Docs
+title: Grupos de archivos sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57fc9a180df47b13608cb3687e5b932139c50ab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786367"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada grupo de archivos de una base de datos. Esta tabla contiene al menos la entrada correspondiente al grupo de archivos principal.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68053485"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**GROUPID**|**smallint**|Número de identificación de grupo, único en cada base de datos.|  
-|**allocpolicy**|**smallint**|Reserved|  
+|**allocpolicy**|**smallint**|Reservada|  
 |**status**|**int**|0x8 = Solo lectura<br /><br /> 0x10 = Predeterminado|  
 |**GroupName**|**sysname**|Nombre del grupo de archivos.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys. sysprocesses (Transact-SQL) | Microsoft Docs
+title: Procesos de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787051"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre los procesos que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos procesos pueden ser procesos del cliente o procesos del sistema. Para obtener acceso a sysprocesses, debe estar en el contexto de la base de datos maestra o utilizar el nombre de tres partes master.dbo.sysprocesses.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866377"
 |last_batch|**datetime**|Hora a la que un proceso de cliente ejecutó por última vez una llamada a un procedimiento almacenado remoto o una instrucción EXECUTE.|  
 |ecid|**smallint**|Identificador de contexto de ejecución usado para identificar de forma única los subprocesos que operan en nombre de un único proceso.|  
 |open_tran|**smallint**|Número de transacciones abiertas para el proceso.|  
-|status|**NCHAR (30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la =  sesión.<br /><br /> en **ejecución** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **Rollback** = la sesión tiene una reversión de la transacción en curso.<br /><br /> **Pending** = la sesión está esperando a que un subproceso de trabajo esté disponible.<br /><br /> **Runnable** = la tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **SpinLoop** = la tarea de la sesión está esperando a que se libere una Spinlock.<br /><br /> **suspendido** = la sesión está esperando a que se complete un evento, como e/s.|  
+|status|**NCHAR (30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **Rollback** = la sesión tiene una reversión de la transacción en curso.<br /><br /> **Pending** = la sesión está esperando a que un subproceso de trabajo esté disponible.<br /><br /> **Runnable** = la tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **SpinLoop** = la tarea de la sesión está esperando a que se libere una Spinlock.<br /><br /> **suspendido** = la sesión está esperando a que se complete un evento, como e/s.|  
 |sid|**binario (86)**|Identificador único global (GUID) del usuario.|  
 |hostname|**nchar(128)**|Nombre de la estación de trabajo.|  
 |program_name|**nchar(128)**|Nombre del programa de aplicación.|  
@@ -71,7 +71,7 @@ ms.locfileid: "78866377"
 |request_id|**int**|IDENTIFICADOR de la solicitud. Se utiliza para identificar solicitudes que se ejecutan en una sesión específica.|
 |page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `waitresource` columna contiene una página. |  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si un usuario tiene el permiso VIEW SERVER STATE en el servidor, verá todas las sesiones en ejecución de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual.  
   
 ## <a name="see-also"></a>Consulte también  

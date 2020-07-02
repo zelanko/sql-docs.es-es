@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786969"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita una base de datos de distribución. Quita los archivos físicos que utiliza la base de datos si no son usados por ninguna otra base de datos. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -43,7 +43,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropdistributiondb** se utiliza en todos los tipos de replicación.  
   
  Este procedimiento almacenado debe ejecutarse antes de quitar el distribuidor mediante la ejecución de **sp_dropdistributor**.  

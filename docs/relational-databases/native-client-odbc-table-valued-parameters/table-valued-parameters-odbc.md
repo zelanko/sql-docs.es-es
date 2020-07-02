@@ -14,15 +14,15 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fae77e6f8490bf2b307ad60e062b596bac81c1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785579"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
   

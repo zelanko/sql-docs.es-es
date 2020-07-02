@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c9f33c4f50f77ed8ded47b6d7f69a2476f49227
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1dffb4ba6cdd82481777496033e56ca0571e37d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786946"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un trabajo de instantáneas de datos filtrados para una publicación con filtros de fila con parámetros. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. Cuando se elimina el trabajo, todos los datos relacionados se eliminan de la tabla del sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .  
   
@@ -54,7 +54,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropdynamicsnapshot** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

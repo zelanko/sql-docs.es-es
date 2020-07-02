@@ -1,5 +1,5 @@
 ---
-title: Sys. sysindexes (Transact-SQL) | Microsoft Docs
+title: Índices de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786331"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada índice y tabla de la base de datos actual. Los índices XML no se admiten en esta vista. Las tablas e índices con particiones no son totalmente compatibles con esta vista; Use la vista de catálogo [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) en su lugar.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "68053437"
 |**impid**|**smallint**|Marca de implementación de índice.<br /><br /> Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Se utiliza para restringir las granularidades de bloqueo que se tienen en cuenta para un índice. Por ejemplo, una tabla de búsqueda que es esencialmente de solo lectura se puede configurar de modo que solo imponga bloqueos en la tabla para minimizar el costo de bloqueo.|  
 |**pgmodctr**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**mykeys**|**varbinary (816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, utilice [Sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**mykeys**|**varbinary (816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Nombre del índice o estadística. Devuelve NULL cuando **indid** = 0. Modifique la aplicación para que busque un nombre de montón NULL.|  
-|**statblob**|**image**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
+|**statblob**|**imagen**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**las**|**int**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1, y el valor se repite para **indid** >1.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las columnas definidas como reservadas no deben utilizarse.  
   
  Las columnas **DPAGES**, **Reserved**y **Used** no devolverán resultados precisos si la tabla o el índice contienen datos en la unidad de asignación ROW_OVERFLOW. Además, se realiza el seguimiento para el total de páginas de cada índice por separado y no se agregan para la tabla base. Para ver los recuentos de páginas, use las vistas de catálogo [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) o [Sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) , o la vista de administración dinámica [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  

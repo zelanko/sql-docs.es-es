@@ -16,17 +16,17 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36d143c70c4d81577213a93deb942abb9d1b4c4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785361"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Devuelve un puntero a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructura SSERRORINFO del proveedor de OLE DB de Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client que contiene los detalles del error.  
+  Devuelve un puntero a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructura SSERRORINFO del proveedor de OLE DB de Native Client que contiene los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles del error.  
   
  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define la interfaz de errores **ISQLServerErrorInfo** . Esta interfaz devuelve los detalles de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso la gravedad y el estado.  
 
@@ -57,7 +57,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no pudo asignar memoria suficiente para completar la solicitud.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client asigna memoria para las cadenas SSERRORINFO y OLECHAR devueltas a través de los punteros pasados por el consumidor. El consumidor debe desasignar esta memoria mediante el método **IMalloc::Free** cuando ya no requiera tener acceso a los datos de error.  
   
  La estructura SSERRORINFO se define como sigue:  
@@ -76,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|El mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El mensaje se devuelve a través del método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ha producido el error.|  

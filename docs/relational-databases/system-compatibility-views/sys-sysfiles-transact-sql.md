@@ -1,5 +1,5 @@
 ---
-title: Sys. Sysfiles (Transact-SQL) | Microsoft Docs
+title: Archivos sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786385"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada archivo de una base de datos.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68053469"
 |**status**|**int**|Bits de estado para el valor de **crecimiento** en megabytes (MB) o kilobytes (KB).<br /><br /> 0x2 = Archivo de disco.<br /><br /> 0x40 = Archivo de registro.<br /><br /> 0x100000 = Crecimiento. Este valor es un porcentaje y no el número de páginas.|  
 |**rendimiento**|**int**|Reservado.|  
 |**name**|**sysname**|Nombre lógico del archivo.|  
-|**extensión**|**nvarchar(260)**|Nombre del dispositivo físico. Incluye la ruta de acceso completa al archivo.|  
+|**filename**|**nvarchar(260)**|Nombre del dispositivo físico. Incluye la ruta de acceso completa al archivo.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

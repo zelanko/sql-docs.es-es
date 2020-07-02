@@ -17,17 +17,17 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4ec6125d3c8fe2469f599b3f11c1888383de6e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8e95adee6e01e4eb667d81e4523e7002b1aa89c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785140"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Establecer una conexión con un origen de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Para tener acceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al proveedor de OLE DB de Native Client, el consumidor debe crear primero una instancia de un objeto de origen de datos llamando al método **CoCreateInstance** . Un identificador de clase único (CLSID) identifica cada proveedor OLE DB. Para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, el identificador de clase es CLSID_SQLNCLI10. También puede usar el símbolo SQLNCLI_CLSID que se resolverá en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client que se usa en SQLNCLI. h al que hace referencia.  
+  Para tener acceso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, el consumidor debe crear primero una instancia de un objeto de origen de datos llamando al método **CoCreateInstance** . Un identificador de clase único (CLSID) identifica cada proveedor OLE DB. Para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, el identificador de clase es CLSID_SQLNCLI10. También puede usar el símbolo SQLNCLI_CLSID que se resolverá en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client que se usa en SQLNCLI. h al que hace referencia.  
   
  El objeto de origen de datos expone la interfaz **IDBProperties**, que el consumidor usa para proporcionar información de autenticación básica como el nombre del servidor, el nombre de la base de datos, el identificador de usuario y la contraseña. Se llama al método **IDBProperties::SetProperties** para establecer estas propiedades.  
   

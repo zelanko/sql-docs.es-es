@@ -20,15 +20,15 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bdacbebf64e372e757de6f2ba268404773f9c96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ef035c70d44de379ca03ae510fe695cee94ce8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786335"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve recuentos de diferentes tipos de operaciones de índice y la hora en que se realizó por última vez cada uno de los tipos de operación.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82830878"
 |**last_system_update**|**datetime**|Hora en que el sistema realizó la última actualización.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada búsqueda, recorrido o actualización en el índice especificado realizado por una ejecución de la consulta se cuenta como un uso de ese índice e incrementa el contador correspondiente en esa vista. Se ofrece información tanto de las operaciones causadas por las consultas emitidas por el usuario, como de las consultas generadas internamente, tales como los recorridos realizados para recopilar estadísticas.  
   
  El contador de **user_updates** indica el nivel de mantenimiento en el índice causado por operaciones de inserción, actualización o eliminación en la vista o tabla subyacente. Puede utilizar esta vista para determinar los índices que las aplicaciones apenas utilizan. También puede utilizar esta vista para determinar los índices que producen una sobrecarga de mantenimiento. Puede considerar la opción de quitar los índices que produzcan esta sobrecarga, pero que no se utilicen para consultas o se usen con poca frecuencia.  

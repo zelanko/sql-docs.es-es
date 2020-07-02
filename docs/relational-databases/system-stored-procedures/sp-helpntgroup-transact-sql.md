@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76da15896b5947d0fb66c717fcaeadcab045326e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04a98460660903788d8208d5662e0b9a31518316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786167"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Presenta información acerca de grupos de Windows que tienen cuentas en la base de datos actual.  
   
@@ -53,7 +53,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**Junction**|**varbinary(85)**|Identificador de seguridad (SID) de **NTGroupName**.|  
 |**HasDbAccess**|**int**|1 = el grupo de Windows tiene permiso de acceso a la base de datos.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para ver una lista de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] roles en la base de datos actual, use **sp_helprole**.  
   
 ## <a name="permissions"></a>Permisos  

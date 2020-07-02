@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0af6f62a45dd519f8a63839ae1435815569b93be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786263"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una partición filtrada dinámicamente para una suscripción que se filtra por los valores de [host_name](../../t-sql/functions/host-name-transact-sql.md) o [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor. Este procedimiento almacenado se ejecuta en el publicador en la base de datos que se está publicando y se utiliza para generar particiones manualmente.  
   
@@ -48,7 +48,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addmergepartition** se utiliza en la replicación de mezcla.  
   
 ## <a name="example"></a>Ejemplo  

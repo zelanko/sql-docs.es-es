@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2da1f6d7c76880181996d2f41bce617c42e2f83
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 570027303636dce9c037e22f9f4857af03a62e92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786139"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia las propiedades de un trabajo Agente de mezcla que se ejecuta en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] distribuidor de o una versión posterior. Este procedimiento almacenado se utiliza para cambiar las propiedades cuando el publicador se ejecuta en una instancia de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -61,7 +61,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
 |Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**denominación**||Descripción breve de la suscripción.|  
+|**description**||Descripción breve de la suscripción.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**merge_job_password**||Contraseña de la cuenta de Windows en la que se ejecuta el trabajo del agente.|  
 |**publisher_login**||Inicio de sesión que se debe utilizar al conectarse a un publicador para sincronizar la suscripción.|  
@@ -79,7 +79,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_MSchange_merge_agent_properties** se utiliza en la replicación de mezcla.  
   
  Cuando el publicador se ejecuta en una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior, debe utilizar [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) para cambiar las propiedades de un trabajo de agente de mezcla que sincroniza una suscripción de extracción que se ejecuta en el distribuidor.  

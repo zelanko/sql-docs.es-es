@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78a0a77cc02512d031f7a6749871150026647acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787202"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema contiene una lista de las preguntas más frecuentes. Las respuestas a estas preguntas son consultas basadas en vistas de catálogos.  
   
@@ -870,7 +870,7 @@ GO
   
 ```  
   
- O bien  
+ Or  
   
 ```  
 USE <database_name>;  

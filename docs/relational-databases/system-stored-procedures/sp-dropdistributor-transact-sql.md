@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786940"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Desinstala el distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos, excepto la de distribución.  
   
@@ -53,7 +53,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropdistributor** se utiliza en todos los tipos de replicación.  
   
  Si existen otros objetos de publicador o de distribución en el servidor, **sp_dropdistributor** producirá un error a menos que ** \@ no_checks** se establezca en **1**.  

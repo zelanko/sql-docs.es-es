@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47100dfc6e63c0b3c47e8405b664362a1f1c2d0b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68d09a8149234651b4741caaeb8436f6b6cda6da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786121"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una cuenta del Correo electrónico de base de datos al perfil del Correo electrónico de base de datos. Ejecute **sysmail_add_profileaccount_sp** después de crear una cuenta de base de datos con [sysmail_add_account_sp &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)y se crea un perfil de base de datos con sysmail_add_profile_sp &#40;[de Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
   
@@ -54,7 +54,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El perfil y la cuenta ya deben existir. En caso contrario, el procedimiento almacenado devuelve un error.  
   
  Tenga en cuenta que este procedimiento almacenado no cambia el número de secuencia de una cuenta asociada al perfil especificado. Para obtener más información sobre cómo actualizar el número de secuencia de una cuenta, vea [sysmail_update_profileaccount_sp &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  

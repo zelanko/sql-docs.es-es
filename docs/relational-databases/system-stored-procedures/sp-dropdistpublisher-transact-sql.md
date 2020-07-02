@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 060b3b793adf53ab988cbba8b82ae683dac1e40a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfac0b293e4bf564ef334cd0dc1ef5c3d5395364
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786973"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita un publicador de distribución. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropdistpublisher** se utiliza en todos los tipos de replicación.  
   
  Al quitar un publicador de Oracle, si no puede quitar el publicador **sp_dropdistpublisher** devuelve un error y se quitan los objetos de distribuidor para el publicador.  

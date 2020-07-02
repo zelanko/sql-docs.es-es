@@ -1,5 +1,5 @@
 ---
-title: Sys. syscurconfigs (Transact-SQL) | Microsoft Docs
+title: sys.syscurconfigs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea035c3dc7ec911034fff20fda22b60ef0ad0108
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786411"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una entrada por cada opción de configuración actual. Además, esta vista contiene cuatro entradas que describen la estructura de configuración. **syscurconfigs** se genera dinámicamente cuando lo consulta un usuario. Para obtener más información, vea [Sys. bajo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md).  
+  Contiene una entrada por cada opción de configuración actual. Además, esta vista contiene cuatro entradas que describen la estructura de configuración. **syscurconfigs** se genera dinámicamente cuando lo consulta un usuario. Para obtener más información, vea [sys.sysconfigura &#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -38,8 +38,8 @@ ms.locfileid: "68089179"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|Valor de la variable, que el usuario puede modificar. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo utiliza solo si se ha ejecutado RECONFIGURE.|  
-|**configurar**|**smallint**|Número de la variable de configuración.|  
-|**Comentario**|**nvarchar(255)**|Explicación de la opción de configuración.|  
+|**config**|**smallint**|Número de la variable de configuración.|  
+|**comment**|**nvarchar(255)**|Explicación de la opción de configuración.|  
 |**status**|**smallint**|Mapa de bits que indica el estado de la opción. Entre los valores posibles figuran los siguientes:<br /><br /> 0 = Estático. La configuración surte efecto cuando se reinicia el servidor.<br /><br /> 1 = Dinámico. La variable surte efecto cuando se ejecuta la instrucción RECONFIGURE.<br /><br /> 2 = Avanzado. La variable solo se muestra cuando se establece la **opción Mostrar opciones avanzadas** .<br /><br /> 3 = Dinámico y avanzado.|  
   
 ## <a name="see-also"></a>Consulte también  

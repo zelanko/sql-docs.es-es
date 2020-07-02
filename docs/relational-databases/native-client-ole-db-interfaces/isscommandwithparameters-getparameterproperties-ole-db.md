@@ -16,15 +16,15 @@ ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26c95c64f0f2922ef11946841b160879f001e358
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26678d79897b4c60e71e39c8c502c38b50d2d965
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785322"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una matriz de estructuras de conjunto de propiedades SSPARAMPROPS, un conjunto de propiedades SSPARAMPROPS para cada parámetro XML o UDT.  
   
@@ -46,7 +46,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>Valores de código de retorno  
  El método **GetParameterProperties** devuelve los mismos códigos de error que el método principal OLE DB **ICommandProperties:: GetProperties** , salvo que no se pueden generar DB_S_ERRORSOCCURRED y DB_E_ERRORSOCCURED.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **ISSCommandWithParameters:: GetParameterProperties** se comporta de forma coherente con respecto a **GetParameterInfo**. Si no se ha llamado a [ISSCommandWithParameters:: SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) o **SetParameterInfo** o se ha llamado a cParams igual a cero, **GetParameterInfo** deriva la información de parámetros y devuelve this. Si se ha llamado a **ISSCommandWithParameters:: SetParameterProperties** o **SetParameterInfo** para al menos un parámetro, **ISSCommandWithParameters:: GetParameterProperties** devuelve propiedades solo para los parámetros para los que se ha llamado a **ISSCommandWithParameters:: SetParameterProperties** . Si se llama a **ISSCommandWithParameters:: SetParameterProperties** después de **ISSCommandWithParameters:: GetParameterProperties** o **GetParameterInfo**, las llamadas subsiguientes a **ISSCommandWithParameters:: GetParameterProperties** devuelven los valores invalidados para los parámetros para los que se ha llamado a **ISSCommandWithParameters:: SetParameterProperties** .  
   
  La estructura SSPARAMPROPS se define del siguiente modo:  
@@ -59,7 +59,7 @@ struct SSPARAMPROPS {
 };
 ```
 
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |*iOrdinal*|El ordinal del parámetro que se ha pasado.|  
 |*cPropertySets*|El número de estructuras DBPROPSET de *rgPropertySets*.|  

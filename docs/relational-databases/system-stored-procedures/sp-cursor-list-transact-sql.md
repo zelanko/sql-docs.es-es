@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786994"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Informa de los atributos de los cursores del servidor abiertos actualmente para la conexión.  
   
@@ -67,7 +67,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|El nombre del cursor desde una instrucción DECLARE CURSOR. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si el cursor se creó estableciendo una variable de cursor en un cursor, **cursor_name** devuelve el nombre de la variable de cursor.  En versiones anteriores, esta columna de salida devuelve un nombre generado por el sistema.|  
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Los mismos valores de los que informó la función del sistema CURSOR_STATUS:<br /><br /> 1 = El cursor al que hace referencia el nombre del cursor o ?la variable está abierto. Si se trata de un cursor que no distingue, estático o de conjunto de claves, el conjunto de resultados tiene una fila, como mínimo. Si el cursor es dinámico, el conjunto de resultados tiene cero o más filas.<br /><br /> 0 = El cursor al que hace referencia el nombre del cursor o la variable está abierto pero no tiene filas. Los cursores dinámicos nunca devuelven este valor.<br /><br /> -1 = El cursor al que hace referencia el nombre del cursor o la variable está cerrado.<br /><br /> -2 = Se aplica solo a variables de cursor. No hay ningún cursor asignado a la variable. Posiblemente, un parámetro OUTPUT asignó un cursor a la variable pero el procedimiento almacenado cerró el cursor antes de devolver resultados.<br /><br /> -3 = No existe un cursor o variable de cursor con el nombre especificado, o la variable del cursor no tiene todavía un cursor asignado.|  
-|model|**smallint**|1 = Sin distinción (o estático) <br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámica<br /><br /> 4 = Avance rápido|  
+|modelo|**smallint**|1 = Sin distinción (o estático) <br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámica<br /><br /> 4 = Avance rápido|  
 |simultaneidad|**smallint**|1 = solo lectura<br /><br /> 2 = Bloqueos de desplazamiento<br /><br /> 3 = Optimista|  
 |scrollable|**smallint**|0 = Solo avance<br /><br /> 1 = Desplazable|  
 |open_status|**smallint**|0 = Cerrado<br /><br /> 1 = Abierto|  
@@ -78,7 +78,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|La última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERCIÓN<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINAR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Un valor único que identifica el cursor dentro del ámbito del servidor.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_cursor_list presenta una lista de los actuales cursores de servidor abiertos por la conexión y describe los atributos globales de cada cursor, como por ejemplo, las posibilidades de desplazamiento y actualización del mismo. sp_cursor_list enumera los cursores siguientes:  
   
 -   Cursores de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786870"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve información sobre las asignaciones de tipos de datos definidos entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los sistemas de administración de bases de datos (DBMS) que no son de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -71,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifica una asignación de tipos de datos.|  
 |**source_dbms**|El nombre y el número de versión del DBMS de origen.|  

@@ -16,15 +16,15 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84debd3c8625922b658ce38ba3b62d21dee6f470
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785329"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve el estado de una operación de ejecución asincrónica.  
   
@@ -108,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  Se produjo un error específico del proveedor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **ISSAsynchStatus::GetStatus** se comporta exactamente igual que el método **IDBAsynchStatus::GetStatus**, excepto que, si se anula la inicialización de un objeto de origen de datos, se devuelve E_UNEXPECTED en lugar de DB_E_CANCELED (aunque [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual que sigue a una interrupción para que puedan intentarse otras operaciones de inicialización.  
   
  Si el conjunto de filas se inicializa o rellena de forma asincrónica, debe admitir este método.  

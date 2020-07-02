@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d9afddaf2fc4c937949244959cb346233cb51a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daa2f455f4b1b1bbb4f809797857f62b82137915
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786226"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega una suscripción de extracción a una publicación de combinación. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
@@ -63,7 +63,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addmergepullsubscription** se utiliza para la replicación de mezcla.  
   
  Si utiliza el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente para sincronizar la suscripción, el [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) procedimiento almacenado se debe ejecutar en el suscriptor para crear un agente y un trabajo para sincronizar con la publicación.  

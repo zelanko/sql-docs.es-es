@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787014"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de todas las páginas de datos que están actualmente en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La salida de esta vista se puede utilizar para determinar la distribución de páginas de la base de datos en el grupo de búferes según la base de datos, el objeto o el tipo. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esta vista de administración dinámica también devuelve información sobre las páginas de datos del archivo de la extensión del grupo de búferes. Para obtener más información, consulte la [extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
@@ -60,11 +60,11 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ## <a name="remarks"></a>Comentarios  
  Sys. dm_os_buffer_descriptors devuelve páginas que utiliza la base de datos de recursos. Sys. dm_os_buffer_descriptors no devuelve información acerca de las páginas gratuitas o robadas o de las páginas que tenían errores cuando se leyeron.  
   
-|De|En|Activado|Relación|  
+|De|A|Activado|Relación|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|varios a uno|  
-|sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|varios a uno|  
-|sys.dm_os_buffer_descriptors|\<UserDB>. sys. database_files|file_id|varios a uno|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. allocation_units|allocation_unit_id|varios a uno|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. database_files|file_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|varios a uno|  
   
 ## <a name="examples"></a>Ejemplos  

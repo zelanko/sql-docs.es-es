@@ -11,15 +11,15 @@ ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 910c4a6a8ebf40de23069ecbf3c96d8d67533efa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 818d2eb347539b6ea2452301bf153751184b433b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787103"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Devuelve una fila para cada columna personalizable que se estableció explícitamente en los eventos y destinos.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "82823548"
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  
 |-|-|-|  
-|De|En|Relación|  
+|De|A|Relación|  
 |Sys. database_event_session_actions. event_session_id|Sys. database_event_sessions. event_session_id|Varios a uno|  
 |Sys. database_event_session_actions. event_id<br /><br /> Sys. database_event_session_actions. object_id<br /><br /> Sys. database_event_session_actions. event_session_id|Sys. database_event_session_events. event_session_id<br /><br /> Sys. database_event_session_events. event_id|Varios a uno|  
 |Sys. database_event_session_actions. event_session_id<br /><br /> Sys. database_event_session_actions. object_id|Sys. database_event_session_targets. event_session_id<br /><br /> Sys. database_event_session_targets. target_id|Varios a uno|  

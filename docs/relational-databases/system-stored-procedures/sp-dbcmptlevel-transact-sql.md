@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8c1d563e64769768a4c317bc0411eb40fb82b8d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786192"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Configura varios comportamientos de la base de datos de manera que sean compatibles con la versión especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  Si se especifica *Name* sin la *versión*, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un mensaje que muestra el nivel de compatibilidad actual de la base de datos especificada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener una descripción de los niveles de compatibilidad, vea [nivel de compatibilidad de Alter database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Permisos  

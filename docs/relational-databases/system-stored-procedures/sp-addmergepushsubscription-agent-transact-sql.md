@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786255"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega un nuevo trabajo de agente que se utiliza para programar la sincronización de una suscripción de inserción con una publicación de combinación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -103,7 +103,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**2**|A petición|  
 |**4**|Diario|  
 |**8**|Cada semana|  
-|**dieciséi**|Mensual|  
+|**16**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -132,11 +132,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
-|**2**|Segundo|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
-|**dieciséi**|Último|  
+|**16**|Último|  
 |NULL (predeterminado)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
@@ -146,7 +146,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hora|  
 |NULL (predeterminado)||  

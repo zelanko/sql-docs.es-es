@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786952"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Quita un dispositivo de base de datos o un dispositivo de copia de seguridad de una instancia de [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , eliminando la entrada de **Master. DBO. sysdevices**.  
+  Quita un dispositivo de base de datos o un dispositivo de copia de seguridad de una instancia de [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , eliminando la entrada de **master.dbo.sysdispositivos**.  
    
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logicalname = ] 'device'`Es el nombre lógico del dispositivo de base de datos o del dispositivo de copia de seguridad, tal como se muestra en **Master.DBO.sysdevices.Name**. *Device* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @logicalname = ] 'device'`Es el nombre lógico del dispositivo de base de datos o del dispositivo de copia de seguridad como se indica en **master.dbo.sysDevices.Name**. *Device* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @delfile = ] 'delfile'`Especifica si se debe eliminar el archivo físico del dispositivo de copia de seguridad. *delfile* es **VARCHAR (7)**. Si se especifica como **DELFILE**, se elimina el archivo de disco físico del dispositivo de copia de seguridad.  
   
@@ -64,7 +64,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

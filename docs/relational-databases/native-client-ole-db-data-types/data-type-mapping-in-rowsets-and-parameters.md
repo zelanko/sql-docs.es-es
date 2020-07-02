@@ -22,17 +22,17 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41e5fceb2e69ab049bc7b82db5f67eb340d35ac9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 256d9fc562e67d44e16e4d489d806cfb2f02db5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785480"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  En conjuntos de filas y como valores de parámetro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el proveedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Native Client representa los datos utilizando los siguientes tipos de datos definidos por el OLE DB, que se muestran en las funciones **IColumnsInfo:: GetColumnInfo** y **ICommandWithParameters:: GetParameterInfo**.  
+  En conjuntos de filas y como valores de parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client representa los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos utilizando los siguientes tipos de datos definidos por el OLE DB, que se muestran en las funciones **IColumnsInfo:: GetColumnInfo** y **ICommandWithParameters:: GetParameterInfo**.  
   
 |Tipos de datos de SQL Server|Tipo de datos de OLE DB|  
 |--------------------------|----------------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "81297022"
 |**datetime2**|DBTYPE_DBTIME2|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**image**|DBTYPE_BYTES|  
+|**imagen**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
@@ -76,7 +76,7 @@ ms.locfileid: "81297022"
  Cuando los datos **sql_variant** se capturan como DBTYPE_VARIANT, se incluyen en una estructura VARIANT en el búfer. Pero es posible que los subtipos de la estructura VARIANT no se asignen a los subtipos definidos en el tipo de datos **sql_variant**. Los datos **sql_variant** se tienen que capturar en este caso como DBTYPE_SQLVARIANT para que todos los subtipos coincidan.  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>Tipo de datos DBTYPE_SQLVARIANT  
- Para admitir el tipo de datos **sql_variant** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando los datos **sql_variant** se capturan como DBTYPE_SQLVARIANT, se almacenan en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos del tipo de datos **sql_variant**.  
+ Para admitir el tipo de datos **sql_variant** , el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando los datos **sql_variant** se capturan como DBTYPE_SQLVARIANT, se almacenan en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos del tipo de datos **sql_variant**.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT de la sesión también debe estar establecida en TRUE.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81297022"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Escriba:  VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

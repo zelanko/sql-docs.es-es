@@ -1,5 +1,5 @@
 ---
-title: Sys. xml_schema_wildcards (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_wildcards (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7687acb160e872fbe85dc7789115a14e14e875f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c73cdf4cbc1c366f3266dd81883f428897ee928
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787057"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por componente de esquema XML que es un comodín de atributo (**tipo** de **V**) o comodín de elemento **(tipo** de **W**), ambos con **symbol_space** de **N**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas>**||Hereda columnas de [Sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**||Hereda columnas de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**Char (1)**|Indica cómo se procesa el contenido.<br /><br /> S = Validación estricta (debe validarse)<br /><br /> L = Validación flexible (validar si es posible)<br /><br /> P = Omitir validación|  
 |**process_content_desc**|**nvarchar(60)**|Descripción de cómo se procesa el contenido.<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = los espacios de nombres enumerados en [Sys. xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) son los únicos permitidos.<br /><br /> 1 = Los espacios de nombres son los únicos que no se permiten.|  
+|**disallow_namespaces**|**bit**|0 = los espacios de nombres enumerados en [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) son los únicos permitidos.<br /><br /> 1 = Los espacios de nombres son los únicos que no se permiten.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

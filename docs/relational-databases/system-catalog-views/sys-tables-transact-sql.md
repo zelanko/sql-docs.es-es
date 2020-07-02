@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787092"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una fila para cada tabla de usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|\<columnas heredadas>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Un valor diferente de cero es el identificador del espacio de datos (grupo de archivos o esquema de partición) que contiene los datos de objeto binario grande (LOB) para esta tabla. Entre los ejemplos de tipos de datos LOB se incluyen **varbinary (Max)**, **VARCHAR (Max)**, **Geography**o **XML**.<br /><br /> 0 = La tabla no contiene datos LOB.|  
 |filestream_data_space_id|**int**|Es el identificador del espacio de datos para un grupo de archivos FILESTREAM o un esquema de partición compuesto por grupos de archivos FILESTREAM.<br /><br /> Para notificar el nombre de un grupo de archivos FILESTREAM, ejecute la consulta `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables se puede combinar con las vistas siguientes en filestream_data_space_id = data_space_id.<br /><br /> -Sys. grupos de archivos<br /><br /> -Sys. partition_schemes<br /><br /> -Sys. Indexes<br /><br /> -Sys. allocation_units<br /><br /> -Sys. fulltext_catalogs<br /><br /> -Sys. data_spaces<br /><br /> -Sys. destination_data_spaces<br /><br /> -Sys. master_files<br /><br /> -Sys. database_files<br /><br /> -backupfilegroup (combinación en filegroup_id)|  
 |max_column_id_used|**int**|Identificador de columna máximo que se ha utilizado en esta tabla.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787003"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información acerca de las dependencias de los objetos de la base de datos, tales como las vistas y procedimientos que dependen de una tabla o de una vista, y las tablas y vistas de las que depende la vista o el procedimiento. Las referencias a objetos que no se encuentran en la base de datos actual no se notifican.  
   
@@ -63,7 +63,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_depends** muestra dos conjuntos de resultados.  
   
- En el siguiente conjunto de resultados se muestran los objetos de los que depende * \<>objeto* .  
+ En el siguiente conjunto de resultados se muestran los objetos de los que *\<object>* depende.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ sp_depends [ @objname = ] '<object>'
 |**seleccionadas**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
 |**column**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
   
- El siguiente conjunto de resultados muestra los objetos que dependen de * \<>de objetos *.  
+ En el siguiente conjunto de resultados se muestran los objetos de los que dependen *\<object>* .  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

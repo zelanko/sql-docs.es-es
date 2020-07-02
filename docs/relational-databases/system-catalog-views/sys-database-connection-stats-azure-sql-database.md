@@ -20,16 +20,16 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787136"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Contiene estadísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] los eventos de **Conectividad** de base de datos, que proporcionan información general sobre los errores y los éxitos de conexión de base de datos. Para obtener más información sobre los eventos de conectividad, vea tipos de eventos en [Sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82828529"
 |**terminated_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
 |**throttled_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 

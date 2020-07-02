@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809909"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir una base de conocimiento
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo abrir una base de conocimiento existente en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) y cómo prepararla para la administración de dominios, la detección de conocimiento o la adición de una directiva de coincidencia.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75246011"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de una base de conocimiento  
  El campo Estado indica en qué fase de una actividad se encuentra la base de conocimiento. Si abre la base de conocimiento, se abrirá en esa fase.  
   
--   >vacío: el campo Estado está vacío para una base de conocimiento si la base de conocimiento se ha publicado haciendo clic en **publicar** en la actividad administración de dominios y en **sí: publicar la base de conocimiento y salir**. ** \< **  
+-   **\<Empty>**: El campo Estado está vacío para una base de conocimiento si la base de conocimiento se ha publicado haciendo clic en **publicar** en la actividad administración de dominios y haciendo clic en **sí-publicar la base de conocimiento y salir**.  
   
 -   **En el trabajo**: el trabajo de la base de conocimiento se ha guardado haciendo clic en **publicar** en la actividad administración de dominios y haciendo clic en **no-guardar el trabajo en la base de conocimiento y salir**.  
   

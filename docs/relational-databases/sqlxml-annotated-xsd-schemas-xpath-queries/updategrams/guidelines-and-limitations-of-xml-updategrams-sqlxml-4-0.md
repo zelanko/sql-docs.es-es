@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94a0dc61b5b8278193ea84beea750383bf3bbc6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: fb774fd8dbb05b52e4f57fcf78d4ecd4c923ccb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790653"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Instrucciones y limitaciones de los diagramas de actualización XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Recuerde lo siguiente al utilizar los diagramas de actualización XML:  
   
 -   Si usa un diagrama para una operación de inserción con un solo par de **\<before>** **\<after>** bloques y, **\<before>** se puede omitir el bloque. Por el contrario, en el caso de una operación de eliminación, el **\<after>** bloque se puede omitir.  

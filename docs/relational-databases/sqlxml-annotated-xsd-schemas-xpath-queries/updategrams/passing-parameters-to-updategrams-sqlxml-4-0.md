@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790565"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Pasar parámetros a diagramas de actualización (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Los diagramas de actualización son plantillas; por consiguiente, se les pueden pasar parámetros. Para obtener más información sobre cómo pasar parámetros a plantillas, vea [consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Los diagramas de actualización le permiten pasar NULL como un valor del parámetro. Para pasar el valor de parámetro NULL, especifique el atributo **NullValue** . El valor que se asigna al atributo **NullValue** se proporciona como el valor del parámetro. Los diagramas de actualización tratan este valor como NULL.  

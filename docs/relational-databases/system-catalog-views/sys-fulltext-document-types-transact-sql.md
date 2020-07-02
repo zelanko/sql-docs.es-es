@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790541"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada tipo de documento disponible para operaciones de indización de texto completo. Cada fila representa la interfaz IFilter registrada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68133849"
 |**class_id**|**uniqueidentifier**|GUID de la clase de IFilter que admite la extensión de archivo.|  
 |**path**|**nvarchar(260)**|Ruta de acceso al archivo DLL de IFilter. La ruta de acceso solo es visible para los miembros del rol fijo de servidor **serveradmin** .|  
 |**version**|**sysname**|Versión del archivo DLL de IFilter.|  
-|**fabricante**|**sysname**|Nombre del fabricante de IFilter.<br /><br /> Nota: solo se admiten en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]los documentos con el fabricante como.|  
+|**le**|**sysname**|Nombre del fabricante de IFilter.<br /><br /> Nota: solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] se admiten en los documentos con el fabricante como [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

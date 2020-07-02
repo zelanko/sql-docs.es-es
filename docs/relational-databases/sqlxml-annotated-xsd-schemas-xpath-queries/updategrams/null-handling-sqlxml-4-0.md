@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7944369c409975eba2331fe12b55ec873dda61fd
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 57a0517bc698d2969d1ee1808cb52769fa8ef4ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790575"
 ---
 # <a name="null-handling-sqlxml-40"></a>Controlar valores NULL (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   La sintaxis XML indica NULL como una ausencia. (Por ejemplo, si un valor de atributo o elemento es NULL, ese atributo o elemento está ausente del documento XML). En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, el atributo **atributo updg: NullValue** permite especificar null para un valor de elemento o atributo.  
   
  Por ejemplo, el siguiente diagrama garantiza que el valor de **título** de un contacto con **ContactID** de 64 es NULL y, a continuación, actualiza el valor del **título** a "Mr". para este contacto.  

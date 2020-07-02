@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 80b468006ba3ec4c479514059b3b89f65e500b37
-ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
+ms.openlocfilehash: a6fa4a695dd8d15efa6ba2f3a6c7e1ef66d3dfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734622"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script externo.
   
@@ -79,7 +79,7 @@ external_script_request_id  |lenguaje  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 + [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

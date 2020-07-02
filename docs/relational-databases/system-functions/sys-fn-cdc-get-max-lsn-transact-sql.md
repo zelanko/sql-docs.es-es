@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e53bd1b53dded0515696daa4c422161b07c5027c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734365"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número de secuencia de registro máximo (LSN) de la start_lsn columna de la tabla del sistema [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Puede utilizar esta función para devolver el extremo alto de la escala de tiempo de captura de los datos del cambio para cualquier instancia de captura.  
   
@@ -44,7 +44,7 @@ sys.fn_cdc_get_max_lsn ()
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **binary(10)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función devuelve el LSN máximo en la start_lsn columna de la tabla [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Por tanto, es el último LSN procesado por el proceso de captura cuando los cambios se propagan a las tablas de cambios de base de datos. Actúa como extremo superior para todas las escalas de tiempo asociadas con las instancias de captura definidas para la base de datos.  
   
  La función se utiliza normalmente para obtener un extremo final superior adecuado para un intervalo de consulta.  

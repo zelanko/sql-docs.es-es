@@ -18,15 +18,15 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea4f2fbd33bf3eb1e9e6a2e2b079ef78796f6f61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738636"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila de información de estado sobre el rellenado del índice de similitud de documentos para cada índice de similitud en cada tabla que tiene un índice semántico asociado.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67900872"
     
 ||||  
 |-|-|-|  
-|**Nombre de la columna**|**Tipo**|**Descripción**|  
+|**Nombre de la columna**|**Type**|**Descripción**|  
 |**database_id**|**int**|Identificador de la base de datos que contiene el índice de texto completo que se está rellenando.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo que contiene este índice de texto completo.|  
 |**table_id**|**int**|Id. de la tabla para la que se está llenando el índice de texto completo.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a965be50e45300aeca3ba158251c665e8204a6f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736674"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **IHsyscolumns** expone información de columna para los artículos publicados desde un publicador que no es de SQL Server. Esta vista se almacena en basededatosdedistribución.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "68029627"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre de la columna o parámetro de procedimiento.|  
 |**id**|**int**|Id. de objeto de la tabla a la que pertenece esta columna o Id. del procedimiento almacenado al que está asociado este parámetro.|  
-|**xtype**|**tinyint**|El tipo de almacenamiento físico de [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**xtype**|**tinyint**|Tipo de almacenamiento físico de [sys.systipos &#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Id. del tipo de datos extendido definido por el usuario.|  
-|**length**|**bigint**|La longitud máxima de almacenamiento físico de [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|La longitud máxima de almacenamiento físico de los [tipos desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|Id. de la columna o parámetro.|  
@@ -51,10 +51,10 @@ ms.locfileid: "68029627"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Desplazamiento en la fila en la que aparece esta columna.|  
 |**collationid**|**int**|IDENTIFICADOR de la intercalación de la columna. Es NULL para las columnas no basadas en caracteres.|  
-|**módulo**|**int**|Identificador de idioma de la columna.|  
+|**language**|**int**|Identificador de idioma de la columna.|  
 |**status**|**int**|El mapa de bits que se usa para describir una propiedad de la columna o el parámetro:<br /><br /> **0x08** = columna permite valores NULL.<br /><br /> **0x10** = el relleno ANSI estaba activo cuando se agregaron columnas **VARCHAR** o **varbinary** . Se conservan los espacios en blanco finales para **VARCHAR** y los ceros a la derecha para las columnas **varbinary** .<br /><br /> **0x40** = el parámetro es un parámetro de salida.<br /><br /> **0x80** = la columna es una columna de identidad.|  
-|**type**|**int**|El tipo de almacenamiento físico de [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**usertype**|**tinyint**|IDENTIFICADOR del tipo de datos definido por el usuario de [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|Tipo de almacenamiento físico de [sys.systipos &#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**usertype**|**tinyint**|IDENTIFICADOR del tipo de datos definido por el usuario de [sys.systipos &#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Nivel de precisión de esta columna.|  
 |**scale**|**int**|Escala de esta columna.|  

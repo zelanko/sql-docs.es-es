@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733255"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilita la introducción de los parámetros del cuadro de límite y de la cuadrícula para un índice espacial.  
   
@@ -74,7 +74,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La pestaña Resultados espaciales de SSMS muestra una representación gráfica de los resultados. Puede consultar los resultados en la ventana espacial para obtener un número aproximado de elementos de resultados. Los objetos de la tabla pueden ocupar más de una celda. Por tanto, la suma de las celdas puede ser mayor que el número de objetos reales.  
   
  Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El valor de **CellID** de esta fila es 0 y la **celda** de esta fila contiene una **LineString** que representa el rectángulo de selección. Esta fila representa todo el espacio fuera del cuadro de límite.  

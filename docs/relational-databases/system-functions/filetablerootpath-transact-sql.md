@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734399"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la ruta de acceso UNC del nivel raíz de un objeto FileTable específico o de la base de datos actual.  
   
@@ -41,9 +41,9 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  Nombre del FileTable. *FileTable_name* es de tipo **nvarchar**. Se trata de un parámetro opcional. El valor predeterminado es la base de datos actual. Especificar *schema_name* también es opcional. Puede pasar NULL para que *FileTable_name* use el valor de parámetro predeterminado.  
   
  *\@desea*  
- Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la opción puede tener uno de los siguientes valores: * \@*  
+ Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la * \@ opción* puede tener uno de los siguientes valores:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Devuelve el nombre del servidor convertido a formato NetBIOS, por ejemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este es el valor predeterminado.|  
 |**1**|Devuelve el nombre del servidor sin la conversión, por ejemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -65,7 +65,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
@@ -105,6 +105,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

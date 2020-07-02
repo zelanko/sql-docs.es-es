@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734795"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada atributo del plan especificado por el identificador de plan. Puede usar esta función con valores de tabla para obtener detalles acerca de un plan determinado, como los valores de las claves de la caché o el número de ejecuciones simultáneas del plan.  
   
 > [!NOTE]  
->  Parte de la información que se devuelve a través de esta función se asigna a la vista de compatibilidad con versiones anteriores [Sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
+>  Parte de la información que se devuelve a través de esta función se asigna a la vista de compatibilidad con versiones anteriores de [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Sintaxis  
 ```  
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Atributo|**VARCHAR(128**|Nombre del atributo asociado a este plan. La tabla inmediatamente inferior a esta muestra los posibles atributos, sus tipos de datos y sus descripciones.|  
+|Atributo|**varchar(128)**|Nombre del atributo asociado a este plan. La tabla inmediatamente inferior a esta muestra los posibles atributos, sus tipos de datos y sus descripciones.|  
 |value|**sql_variant**|Valor del atributo asociado a este plan.|  
 |is_cache_key|**bit**|Indica si el atributo se utiliza como parte de la clave de búsqueda en caché para el plan.|  
 
@@ -59,7 +59,7 @@ En la tabla anterior, el **atributo** puede tener los valores siguientes:
 |dbid|**int**|Es el Id. de la base de datos que contiene la entidad a la que el plan hace referencia.<br /><br /> Con los planes "ad hoc" o preparados, es el Id. de la base de datos desde la que se ejecuta el lote.|  
 |dbid_execute|**int**|Para los objetos del sistema almacenados en la base de datos de **recursos** , el identificador de base de datos desde el que se ejecuta el plan almacenado en caché. En todos los demás casos es 0.|  
 |user_id|**int**|Un valor de -2 indica que el lote enviado no depende de la resolución implícita de nombres y puede compartirse entre distintos usuarios. Este es el método preferido. Cualquier otro valor representa el Id. del usuario que envía la consulta en la base de datos.| 
-|language_id|**smallint**|Es el Id. del idioma de la conexión que creó el objeto de caché. Para obtener más información, vea [Sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|Es el Id. del idioma de la conexión que creó el objeto de caché. Para obtener más información, vea [lenguajes desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Formato de fecha de la conexión que creó el objeto de caché. Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Valor de la fecha. Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bits de estado interno que son parte de la clave de búsqueda de caché.|  

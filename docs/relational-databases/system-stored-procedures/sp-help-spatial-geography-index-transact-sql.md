@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733265"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un índice espacial de **geografía** . El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
@@ -50,10 +50,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `sp_help_spatial_geography_index` se utiliza para investigar el índice espacial **Geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado ** \@en.** En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
+ En el ejemplo siguiente `sp_help_spatial_geography_index` se utiliza para investigar el índice espacial **geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para ** \@ **el ejemplo de consulta determinado en. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
   
 ```  
 declare @qs geography  

@@ -20,15 +20,15 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734657"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el texto del lote SQL que se identifica mediante el *sql_handle*especificado. Esta función con valores de tabla reemplaza a la función del sistema **fn_get_sql**.  
   
@@ -85,7 +85,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 En el caso de las consultas ad hoc, los identificadores SQL son valores hash basados en el texto SQL que se envía al servidor y pueden proceder de cualquier base de datos. 
 
 Para los objetos de base de datos, como procedimientos almacenados, desencadenadores o funciones, los identificadores SQL se derivan del identificador de base de datos, del identificador de objeto y del número de objeto. 
@@ -178,7 +178,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

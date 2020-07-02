@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734681"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada sesión autenticada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions es una vista de ámbito de servidor que muestra información acerca de todas las conexiones de usuario activas y las tareas internas. Esta información incluye la versión del cliente, el nombre del programa cliente, la hora de inicio de sesión del cliente, el usuario de inicio de sesión, la configuración de la sesión actual, etcétera. Use sys.dm_exec_sessions para ver, primero, la carga del sistema actual e identificar una sesión de interés y, después, obtener más información acerca de esa sesión con otras vistas o funciones de administración dinámica.  
   
- Las vistas de administración dinámica sys. dm_exec_connections, sys. dm_exec_sessions y sys. dm_exec_requests se asignan a la tabla del sistema [Sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Las vistas de administración dinámica sys. dm_exec_connections, sys. dm_exec_sessions y sys. dm_exec_requests se asignan a la tabla del sistema [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
 > **Nota:** Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_sessions**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "83151962"
 |logical_reads|**bigint**|Número de lecturas lógicas realizadas en la sesión. No admite valores NULL.|  
 |is_user_process|**bit**|0 si es una sesión de sistema; De lo contrario, es 1. No admite valores NULL.|  
 |text_size|**int**|Valor de TEXTSIZE para la sesión. No admite valores NULL.|  
-|language|**nvarchar(128)**|Valor de LANGUAGE para la sesión. Acepta valores NULL.|  
+|lenguaje|**nvarchar(128)**|Valor de LANGUAGE para la sesión. Acepta valores NULL.|  
 |date_format|**nvarchar (3)**|Valor de DATEFORMAT para la sesión. Acepta valores NULL.|  
 |date_first|**smallint**|Valor de DATEFIRST para la sesión. No admite valores NULL.|  
 |quoted_identifier|**bit**|Valor de QUOTED_IDENTIFIER para la sesión. No admite valores NULL.|  
@@ -97,7 +97,7 @@ Todos pueden ver su propia información de sesión.
 ** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE`no se puede conceder en la `master` base de datos. 
   
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando está habilitada la opción de configuración del servidor **Common Criteria Compliance Enabled** , las estadísticas de inicio de sesión se muestran en las siguientes columnas.  
   
 -   last_successful_logon  
@@ -114,7 +114,7 @@ Todos pueden ver su propia información de sesión.
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|En/aplicar|Relación|  
+|De|A|En/aplicar|Relación|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  

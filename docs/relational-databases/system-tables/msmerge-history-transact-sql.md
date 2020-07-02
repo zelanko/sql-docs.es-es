@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de9c51e35bab142bd54a81224057f1eda05c5fb1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ca908d080a77eb580f945856c3bc2a28a066f4a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736716"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSmerge_history** contiene filas de historial con descripciones detalladas de los resultados de las sesiones de trabajos de agente de mezcla anteriores. Esta tabla contiene una fila por cada línea de resultados del agente. Esta tabla se utiliza en la base de datos de distribución y en cada base de datos de suscripciones. En la base de datos de distribución, contiene el historial para todas las publicaciones de combinación y suscripciones que utilizan el Distribuidor. En cada base de datos de suscripciones, contiene el historial para las publicaciones a las que se suscribe el Suscriptor.  
   

@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734764"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de todas las consultas que han solicitado y están esperando una concesión de memoria o a los que se ha dado una concesión de memoria. Las consultas que no requieran una concesión de memoria no aparecerán en esta vista. Por ejemplo, las operaciones de ordenación y combinación hash tienen concesiones de memoria para la ejecución de la consulta, mientras que las consultas sin una cláusula **order by** no tendrán una concesión de memoria.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "83731896"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  
   
 -   Compruebe el estado de la memoria del sistema global con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) y diversos contadores de rendimiento.  

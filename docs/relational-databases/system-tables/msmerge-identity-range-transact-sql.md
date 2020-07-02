@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 672715bb7bfa83767975c399f75595af04f23d57
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc93ee74d92afadcf302a39ff066ba7e7218240f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736700"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSmerge_identity_range** se utiliza para realizar el seguimiento de los intervalos numéricos asignados a las columnas de identidad para la suscripción a publicaciones en las que la replicación administra automáticamente estas asignaciones de intervalos. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   

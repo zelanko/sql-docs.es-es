@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734554"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve todo el contenido relacionado con propiedades en el índice de texto completo de una tabla determinada. Esto incluye todos los datos que pertenecen a cualquier propiedad registrados por la lista de propiedades de búsqueda asociada a ese índice de texto completo.  
   
@@ -74,7 +74,7 @@ OBJECT_ID('table_name')
 |document_id|**int**|Identificador del documento o fila en que el término actual se indizó con texto completo. Este identificador corresponde al valor de clave de texto completo de ese documento o fila.|  
 |property_id|**int**|IDENTIFICADOR de propiedad interno de la propiedad de búsqueda en el índice de texto completo de la tabla que especificó en el parámetro OBJECT_ID ('*TABLE_NAME*').<br /><br /> Cuando una propiedad determinada se agrega a una lista de propiedades de búsqueda, el servicio Motor de búsqueda de texto completo registra la propiedad y le asigna un identificador de propiedad interno que es específico de esa lista de propiedades. El identificador de propiedad interno, que es un entero, es único para una lista de propiedades de búsqueda determinada. Si una propiedad determinada se registra para varias listas de propiedades de búsqueda, se puede asignar un identificador de propiedad interno diferente para cada lista de propiedades de búsqueda.<br /><br /> Nota: el identificador de propiedad interno es distinto del identificador entero de la propiedad que se especifica al agregar la propiedad a la lista de propiedades de búsqueda. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para ver la asociación entre property_id y el nombre de la propiedad:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta vista de administración dinámica puede responder preguntas como las siguientes:  
   
 -   ¿Qué contenido se almacena en una determinada propiedad de un DocID específico?  
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  Cuando la columna de clave de texto completo es un tipo de datos entero, como se recomienda, document_id se asigna directamente al valor de clave de texto completo de la tabla base.  
   
- Por el contrario, cuando la columna de clave de texto completo utiliza un tipo de datos que no es entero, document_id no representa la clave de texto completo en la tabla base. En este caso, para identificar la fila de la tabla base devuelta por dm_fts_index_keywords_by_property, debe combinar esta vista con los resultados devueltos por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Para poder combinarlos, debe almacenar la salida del procedimiento almacenado en una tabla temporal. A continuación, puede combinar el document_id columna de dm_fts_index_keywords_by_property con la columna DocId que devuelve este procedimiento almacenado. Tenga en cuenta que una columna de **marca** de tiempo no puede recibir valores en el momento de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]inserción, porque los genera automáticamente. Por lo tanto, la columna **timestamp** debe convertirse en columnas **varbinary (8)** . En el ejemplo siguiente se muestran estos pasos. En este ejemplo, *table_id* es el identificador de la tabla, *database_name* es el nombre de la base de datos y *TABLE_NAME* es el nombre de la tabla.  
+ Por el contrario, cuando la columna de clave de texto completo utiliza un tipo de datos que no es entero, document_id no representa la clave de texto completo en la tabla base. En este caso, para identificar la fila de la tabla base devuelta por dm_fts_index_keywords_by_property, debe combinar esta vista con los resultados devueltos por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Para poder combinarlos, debe almacenar la salida del procedimiento almacenado en una tabla temporal. A continuación, puede combinar el document_id columna de dm_fts_index_keywords_by_property con la columna DocId que devuelve este procedimiento almacenado. Tenga en cuenta que una columna de **marca** de tiempo no puede recibir valores en el momento de la inserción, porque los genera automáticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por lo tanto, la columna **timestamp** debe convertirse en columnas **varbinary (8)** . En el ejemplo siguiente se muestran estos pasos. En este ejemplo, *table_id* es el identificador de la tabla, *database_name* es el nombre de la base de datos y *TABLE_NAME* es el nombre de la tabla.  
   
 ```  
 USE database_name;  
@@ -109,7 +109,7 @@ GO
  Necesita el permiso SELECT en las columnas cubiertas por el índice de texto completo y permisos CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se devuelven las palabras clave de la propiedad `Author` en el índice de texto completo de la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks`. En el ejemplo se utiliza `KWBPOP` el alias para la tabla devuelta por **Sys. dm_fts_index_keywords_by_property**. En el ejemplo se usan combinaciones internas para combinar columnas de [Sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) y [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ En el siguiente ejemplo se devuelven las palabras clave de la propiedad `Author` en el índice de texto completo de la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks`. En el ejemplo se utiliza el alias `KWBPOP` para la tabla devuelta por **sys. dm_fts_index_keywords_by_property**. En el ejemplo se usan combinaciones internas para combinar columnas de [Sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) y [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  

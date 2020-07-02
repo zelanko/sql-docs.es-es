@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f00de77ef3435bf998f9019fc8b60458594fb0f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b023dcfbf413162c6118ec7f590c1e2326a7813
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738649"
 ---
 # <a name="sysdm_fts_population_ranges-transact-sql"></a>sys.dm_fts_population_ranges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de los intervalos específicos relacionados con un rellenado de índices de texto completo actualmente en progreso.  
    
@@ -43,7 +43,7 @@ ms.locfileid: "68265904"
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="physical-joins"></a>Combinaciones físicas  
@@ -51,7 +51,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|De|A|Relación|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|Varios a uno|  
   

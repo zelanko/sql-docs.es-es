@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734732"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el plan de presentación en formato XML para el lote especificado por el identificador del plan. Este plan especificado por el identificador del plan puede estar almacenado en caché o ejecutándose.  
   
@@ -87,7 +87,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 ## <a name="examples"></a>Ejemplos  
  En los siguientes ejemplos se muestra cómo usar la vista de administración dinámica **sys.dm_exec_query_plan**.  
   
- Para ver los planes de presentación XML, ejecute las siguientes consultas en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y, a continuación, haga clic en **ShowPlanXML** en la columna **query_plan** de la tabla devuelta por **sys.dm_exec_query_plan**. El plan de presentación XML se muestra en el panel de resumen de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para guardar el plan de presentación XML en un archivo, haga clic con el botón secundario en **ShowPlanXML** en la columna **query_plan** , haga clic en **Guardar resultados como**, asigne al archivo el formato \< *File_name*>. sqlplan; por ejemplo, miplandepresentaciónxml. sqlplan.  
+ Para ver los planes de presentación XML, ejecute las siguientes consultas en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y, a continuación, haga clic en **ShowPlanXML** en la columna **query_plan** de la tabla devuelta por **sys.dm_exec_query_plan**. El plan de presentación XML se muestra en el panel de resumen de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para guardar el plan de presentación XML en un archivo, haga clic con el botón secundario en **ShowPlanXML** en la columna **query_plan** , haga clic en **Guardar resultados como**, asigne al archivo el nombre format \<*file_name*> . sqlplan; por ejemplo, miplandepresentaciónxml. sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recuperar el plan de consulta en la caché de una consulta o proceso por lotes de Transact-SQL de ejecución lenta  
  Los planes de consulta de varios tipos de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], como los lotes "ad hoc", procedimientos almacenados y funciones definidas por el usuario, se almacenan en un área de la memoria caché denominada caché del plan. Cada plan de consulta almacenado en la caché está identificado mediante un identificador exclusivo denominado identificador del plan. Puede especificar este identificador del plan mediante la vista de administración dinámica **sys.dm_exec_query_plan** para recuperar el plan de ejecución de una consulta o lote [!INCLUDE[tsql](../../includes/tsql-md.md)] determinado.  

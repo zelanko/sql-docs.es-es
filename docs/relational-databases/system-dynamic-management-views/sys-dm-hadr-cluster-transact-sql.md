@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6195682217af76a27342c3592e69cccc74655210
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734484"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Si el nodo de clústeres de conmutación por error de Windows Server (WSFC) que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tiene quórum de WSFC, **Sys. dm_hadr_cluster** devuelve una fila que expone el nombre del clúster e información sobre el cuórum. Si el nodo de WSFC no tiene quórum, no se devuelve ninguna fila.  
  > [!TIP]

@@ -20,15 +20,15 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71eefe5aca3271ca76f996ec255ce2f34c3a9ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733438"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una fila por evento para el que se activa un desencadenador.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833891"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<Columnas heredadas de sys. Events>**|No aplicable|Hereda las columnas **object_id**, **Type** **type_desc** de [Sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
+|**\<Columns inherited from sys.events>**|No disponible|Hereda las columnas **object_id**, **Type** **type_desc** de [Sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|El desencadenador está marcado como el primero que se activará para este evento.|  
 |**is_last**|**bit**|El desencadenador está marcado como el último que se activará para este evento.|  
 |**event_group_type**|**int**|Grupo de eventos donde se crea el desencadenador o NULL si no se crea en un grupo de eventos.|  

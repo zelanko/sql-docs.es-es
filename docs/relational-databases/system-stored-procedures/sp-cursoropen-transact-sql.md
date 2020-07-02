@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733341"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Abre un cursor. sp_cursoropen define la instrucción SQL asociada a las opciones cursor y cursor y, a continuación, rellena el cursor. sp_cursoropen es equivalente a la combinación de las [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones DECLARE_CURSOR y Open. Este procedimiento se invoca especificando el identificador 2 en un paquete de flujo TDS.  
   
@@ -117,7 +117,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Está en curso una operación FETCH.  
   
- Un  
+ A  
  Este cursor se ha desasignado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no está disponible.  
   
  Cuando se produce un error, los valores devueltos pueden ser incoherentes y no se puede garantizar la exactitud.  
@@ -147,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Si el procedimiento de sp_cursoropen se ejecuta correctamente, se envían los parámetros devueltos por RPC y un conjunto de resultados con información de formato de columna TDS (0XA0 & mensajes 0xa1). Si no puede ejecutarse se envían uno o varios mensajes de error TDS. En cualquier caso, no se devolverá ningún dato de fila y el número de mensajes *terminados* será cero. Si usa una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la 7.0, se devuelven 0xa0, 0xa1 (estándar de las instrucciones SELECT) junto con las flujos de token 0xa5 y 0xa4. Si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, se devuelve 0x81 (estándar para las instrucciones SELECT) junto con las flujos de token 0xa5 y 0xa4.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="stmt-parameter"></a>Parámetro stmt  
  Si *stmt* especifica la ejecución de un procedimiento almacenado, los parámetros de entrada pueden definirse como constantes como parte de la cadena de *stmt* o especificarse como argumentos de *boundparam* . Las variables declaradas se pueden pasar como parámetros enlazados de esta manera.  

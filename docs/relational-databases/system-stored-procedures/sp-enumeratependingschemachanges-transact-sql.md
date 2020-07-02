@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f1e6d9b7f9bce06a8003b56fc6767c992636957
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ab8827795c2d65bcd6044102567d9b265c319f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733276"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una lista de todos los cambios de esquema pendientes. Este procedimiento almacenado se puede utilizar con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), lo que permite a un administrador omitir los cambios de esquema pendientes seleccionados para que no se repliquen. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -56,7 +56,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_enumeratependingschemachanges** se utiliza en la replicación de mezcla.  
   
  **sp_enumeratependingschemachanges**, que se usa con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), está pensado para la compatibilidad con la replicación de mezcla y solo debe usarse cuando otras acciones correctivas, como la reinicialización, no hayan podido corregir la situación.  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35a1418e416e32ab5b8dc9647c4a9aa24700b624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734164"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Referencia del lenguaje XQuery (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)]admite un subconjunto del lenguaje XQuery que se utiliza para consultar el tipo de datos **XML** . Esta implementación de XQuery se basa en el borrador de trabajo de XQuery de julio de 2004. El lenguaje está siendo desarrollado por el World Wide Web Consortium (W3C), con la participación de los principales proveedores de bases de datos, incluido Microsoft. Dado que las especificaciones del W3C pueden someterse a futuras revisiones antes de convertirse en recomendaciones del W3C, esta implementación puede ser distinta de la recomendación final. En este tema se define de forma general la semántica y la sintaxis del subconjunto de XQuery admitido en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Para obtener más información, vea la [especificación del lenguaje de W3C XQuery 1,0](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
- XQuery es un lenguaje que permite realizar consultas en datos XML estructurados o semiestructurados. Con la compatibilidad del tipo de datos **XML** proporcionada [!INCLUDE[ssDE](../includes/ssde-md.md)]en el, los documentos pueden almacenarse en una base de datos y, a continuación, consultarse mediante XQuery.  
+ XQuery es un lenguaje que permite realizar consultas en datos XML estructurados o semiestructurados. Con la compatibilidad del tipo de datos **XML** proporcionada en el [!INCLUDE[ssDE](../includes/ssde-md.md)] , los documentos pueden almacenarse en una base de datos y, a continuación, consultarse mediante XQuery.  
   
  XQuery se basa en el lenguaje para consultas XPath existente, con un incremento de la compatibilidad para lograr una mejor iteración, mejores resultados de la ordenación y la posibilidad de generar el XML necesario. XQuery opera según el modelo de datos XQuery. Se trata de una abstracción de documentos XML, y los resultados de XQuery pueden tener tipo o no tenerlo. La información del tipo se basa en los tipos proporcionados por el lenguaje para esquemas XML del W3C. Si no se dispone de información de tipos, XQuery trata los datos como sin tipo. Esto es similar al modo en que XPath versión 1.0 trata el XML.  
   
@@ -53,7 +53,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La XQuery incluye la declaración de espacio `declare namespace``AWMI=...`de nombres,, y la `/AWMI:root/AWMI:Location[@LocationID=10]`expresión de consulta,.  
+ La XQuery incluye la declaración de espacio de nombres, `declare namespace``AWMI=...` , y la expresión de consulta, `/AWMI:root/AWMI:Location[@LocationID=10]` .  
   
  Tenga en cuenta que la expresión XQuery se especifica en la columna instructions de tipo **XML** . El [método Query ()](../t-sql/xml/query-method-xml-data-type.md) del tipo de datos XML se utiliza para especificar la consulta XQuery.  
   
@@ -66,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  La organización de esta sección se basa en las especificaciones del borrador de trabajo de XQuery del World Wide Web Consortium (W3C). Algunos de los diagramas que se ofrecen en esta sección se han tomado de esas especificaciones. En esta sección, se compara la implementación de Microsoft XQuery con las especificaciones del W3C, se describe en qué se diferencia Microsoft XQuery del W3C y se indican las características del W3C que no se admiten. La especificación del W3C está disponible [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)en.  
+>  La organización de esta sección se basa en las especificaciones del borrador de trabajo de XQuery del World Wide Web Consortium (W3C). Algunos de los diagramas que se ofrecen en esta sección se han tomado de esas especificaciones. En esta sección, se compara la implementación de Microsoft XQuery con las especificaciones del W3C, se describe en qué se diferencia Microsoft XQuery del W3C y se indican las características del W3C que no se admiten. La especificación del W3C está disponible en [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846) .  
   
 ## <a name="in-this-section"></a>En esta sección  
   

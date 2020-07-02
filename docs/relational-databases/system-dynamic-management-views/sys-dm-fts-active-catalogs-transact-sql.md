@@ -20,20 +20,20 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734585"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información de catálogos de texto completo que tienen alguna actividad de rellenado en progreso en el servidor.  
   
 > [!NOTE]
->  Las columnas siguientes se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description y worker_count. Evite el uso de estas columnas en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
+>  Las columnas siguientes se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description y worker_count. Evite el uso de estas columnas en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
   
  
 |Nombre de la columna|Tipo de datos|Descripción|  
@@ -55,12 +55,12 @@ ms.locfileid: "68265966"
 |**row_count_in_thousands**|**int**|Número de filas estimado (en miles) en todos los índices de texto completo en este catálogo de texto completo.|  
 |**is_importing**|**bit**|Indica si se va a importar el catálogo de texto completo:<br /><br /> 1 = Se va a importar el catálogo.<br /><br /> 2 = No se va a importar el catálogo.|  
   
-## <a name="remarks"></a>Observaciones  
- La columna de is_importing era nueva [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]en.  
+## <a name="remarks"></a>Comentarios  
+ La columna de is_importing era nueva en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Combinaciones físicas  
@@ -68,7 +68,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|De|A|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

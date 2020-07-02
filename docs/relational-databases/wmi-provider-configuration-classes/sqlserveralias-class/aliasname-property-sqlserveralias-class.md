@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea108a1996facab7549d2bea40e016af39dc29d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbcd21262bb17e191cd08dfba5569bccca547294
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738471"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propiedad AliasName (clase SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre del alias de la conexión del servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,5 +41,5 @@ object.AliasName [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **string** que especifica el nombre del alias de conexión del servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   

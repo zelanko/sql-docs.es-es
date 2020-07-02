@@ -20,21 +20,21 @@ ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883469cb57a9735ccfc27ecaafa85fedd41cf9b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0af2974f9f2372430bcb6a1672e2bcaa8b5dadf1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733495"
 ---
 # <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una fila para cada columna que se encuentra en **Sys. Columns** , que es una columna calculada.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<Columnas heredadas>**||La vista **Sys. computed_columns** devuelve todas las columnas de la vista **Sys. Columns** . También devuelve las columnas adicionales descritas a continuación. Para obtener una descripción de las columnas que la vista **Sys. computed_columns** hereda de **Sys. Columns**, vea [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). El valor de la columna **is_computed** siempre se establece en 1 en la vista **Sys. computed_columns** .|  
+|**\<Inherited columns>**||La vista **Sys. computed_columns** devuelve todas las columnas de la vista **Sys. Columns** . También devuelve las columnas adicionales descritas a continuación. Para obtener una descripción de las columnas que la vista **Sys. computed_columns** hereda de **Sys. Columns**, vea [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). El valor de la columna **is_computed** siempre se establece en 1 en la vista **Sys. computed_columns** .|  
 |**definir**|**nvarchar(max)**|Texto SQL que define esta columna calculada.|  
 |**uses_database_collation**|**bit**|1 = La definición de columna depende de la intercalación predeterminada de la base de datos para su correcta evaluación; de lo contrario, 0. Esta dependencia evita el cambio de la intercalación predeterminada de la base de datos.|  
 |**is_persisted**|**bit**|Se almacena la columna calculada.|  

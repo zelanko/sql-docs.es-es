@@ -20,15 +20,15 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734718"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve la información acerca del estado actual del semáforo de recursos de consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Sys. dm_exec_query_resource_semaphores** proporciona el estado general de la memoria de ejecución de consultas y permite determinar si el sistema puede tener acceso a memoria suficiente. Esta vista complementa la información de memoria obtenida de [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) para proporcionar una imagen completa del estado de la memoria del servidor. **Sys. dm_exec_query_resource_semaphores** devuelve una fila para el semáforo de recursos normal y otra fila para el semáforo de recursos de consulta pequeña. Hay dos requisitos para un semáforo de consulta pequeña:  
   

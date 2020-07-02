@@ -1,5 +1,5 @@
 ---
-title: DBO. sysjobhistory (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c35f7963ec7b817f6bcf98f95f950c4fc0a5fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736881"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

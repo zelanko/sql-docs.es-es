@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1c4d976d97dee95e09a053525a14df632cd7e62
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46c68043b1b04f888fb154862ca5e4368ba604e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736821"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSmerge_agents** contiene una fila por cada agente de mezcla que se ejecuta en el suscriptor. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82803172"
 |**creation_date**|**datetime**|Fecha y hora en que se creó la distribución o el Agente de mezcla.|  
 |**offload_enabled**|**bit**|Especifica que el agente puede activarse de manera remota.<br /><br /> **0** especifica que no se puede activar el agente de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en la propiedad offload_server.|  
 |**offload_server**|**sysname**|Especifica el nombre de red del servidor a utilizar en la activación remota del agente.|  
-|**Junction**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
+|**sid**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  
 |**subscriber_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utilizará en la conexión con el suscriptor.|  

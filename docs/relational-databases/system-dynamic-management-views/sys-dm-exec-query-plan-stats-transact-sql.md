@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734749"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>Sys. dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Devuelve el equivalente del último plan de ejecución real conocido para un plan de consulta almacenado en caché previamente.
 
@@ -61,8 +61,8 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**xml**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
 
-## <a name="remarks"></a>Observaciones
-Esta función del sistema está disponible a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] partir de CTP 2,4.
+## <a name="remarks"></a>Comentarios
+Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
 
 Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -84,7 +84,7 @@ En las siguientes condiciones, se devuelve una salida del plan de presentación 
     **AND**    
 -   La consulta es lo suficientemente sencilla, normalmente clasificada como parte de una carga de trabajo OLTP.
 
-<sup>1</sup> a partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] de CTP 2,5, esto hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select). En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] el caso de CTP 2,4, esto hace referencia al plan almacenado `sys.dm_exec_cached_plans`en caché como disponible a través de.
+<sup>1</sup> a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5, esto hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select). En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] el caso de CTP 2,4, esto hace referencia al plan almacenado en caché como disponible a través de `sys.dm_exec_cached_plans` .
 
 En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys. dm_exec_query_plan_stats**:
 
@@ -93,7 +93,7 @@ En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys.
 -   No se pudo almacenar en caché el plan de consulta en primer lugar. Para obtener más información, consulte [almacenamiento en caché y reutilización del plan de ejecución ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_plan** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía la devolución del plan de consulta y generaba el [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **query_plan** devuelve NULL.  
+> Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_plan** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta condición impedía la devolución del plan de consulta y generaba el [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **QUERY_PLAN** devuelve NULL.  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
@@ -101,14 +101,14 @@ En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys.
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Examinando el último plan de ejecución de consultas real conocido para un plan almacenado en caché específico  
- En el ejemplo siguiente se consulta **Sys. dm_exec_cached_plans** para buscar el plan interesante y `plan_handle` copiar su desde la salida.  
+ En el ejemplo siguiente se consulta **Sys. dm_exec_cached_plans** para buscar el plan interesante y copiar su `plan_handle` desde la salida.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-A continuación, para obtener el último plan de ejecución de consulta real conocido, `plan_handle` utilice el copiado con la función del sistema **Sys. dm_exec_query_plan_stats**.  
+A continuación, para obtener el último plan de ejecución de consulta real conocido, utilice el copiado `plan_handle` con la función del sistema **sys. dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

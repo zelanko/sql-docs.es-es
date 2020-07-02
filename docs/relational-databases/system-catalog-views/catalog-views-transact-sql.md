@@ -23,16 +23,16 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733619"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Vistas de catálogo del sistema (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Las vistas de catálogo devuelven información utilizada por el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se recomienda utilizar las vistas de catálogo porque son la interfaz más general para los metadatos del catálogo y proporcionan el método más eficaz para obtener, transformar y presentar formas personalizadas de esta información. Todos los metadatos del catálogo disponibles para el usuario se exponen mediante las vistas de catálogo.
 
@@ -45,7 +45,7 @@ Las vistas de catálogo devuelven información utilizada por el [!INCLUDE[ssDEno
 - La vista derivada contiene un superconjunto de columnas y un subconjunto de filas.
 
 > [!IMPORTANT]
-> En versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede aumentar la definición de cualquier vista de catálogo del sistema y agregar columnas al final de la lista. Se recomienda no usar la sintaxis SELECT \* from *Sys. catalog_view_name* en el código de producción porque el número de columnas devueltas podría cambiar e interrumpir la aplicación.
+> En versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede aumentar la definición de cualquier vista de catálogo del sistema y agregar columnas al final de la lista. Se recomienda no usar la sintaxis SELECT \* from *sys. catalog_view_name* en el código de producción porque el número de columnas devueltas podría cambiar e interrumpir la aplicación.
 
 Las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se han organizado en las siguientes categorías:
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a07c87dea5be1a3d66c5e24996a120323d09ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738459"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Proporciona las propiedades para ver los eventos en un archivo de registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -49,7 +49,7 @@ class SQLErrorLogEvent
 |Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ class SQLErrorLogEvent
 |Espacio de nombres|\raíz\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo recuperar los valores para todos los eventos anotados en un archivo de registro especificado. Para ejecutar el ejemplo, reemplace \< *Instance_Name*> por el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como ' Instance1 ', y reemplace ' File_Name ' por el nombre del archivo de registro de errores, como ' ERRORLOG. 1 '.  
+ En el siguiente ejemplo se muestra cómo recuperar los valores para todos los eventos anotados en un archivo de registro especificado. Para ejecutar el ejemplo, reemplace \<*Instance_Name*> por el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como ' Instance1 ', y reemplace ' File_Name ' por el nombre del archivo de registro de errores, como ' ERRORLOG. 1 '.  
   
 ```  
 on error resume next  
@@ -90,9 +90,9 @@ Next
   
 -   Acceso de lectura al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta.  
   
--   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, los registros de errores se encuentran en la siguiente \<ruta de acceso (donde *unidad>* representa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la \<unidad donde instaló y *InstanceName*> es el nombre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de la instancia de):  
+-   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, los registros de errores se encuentran en la siguiente ruta de acceso (donde \<*Drive> * representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **> de unidad: \Archivos de programa\Microsoft SQL Server\MSSQL13. \<** **\< NombreDeInstancia> \Mssql\log.**  
+     ** \<Drive> : \Archivos de Programa\microsoft SQL Server\MSSQL13** **. \<InstanceName> \Mssql\log.**  
   
  Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota a partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

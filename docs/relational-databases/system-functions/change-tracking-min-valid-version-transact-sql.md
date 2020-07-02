@@ -19,15 +19,15 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734409"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la versión mínima del cliente que es válida para su uso en la obtención de información de seguimiento de cambios de la tabla especificada, cuando se usa la función [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) .  
     
@@ -47,7 +47,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use esta función para validar el valor del parámetro *last_sync_version* de CHANGETABLE. Si *last_sync_version* es menor que el valor indicado por esta función, es posible que los resultados que se devuelven de una llamada posterior a CHANGETABLE no sean válidos.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION utiliza la información siguiente para determinar el valor devuelto:  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733334"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Compila la instrucción de cursor o lote en un plan de ejecución, pero no crea el cursor. sp_cursorexecute puede utilizar después la instrucción compilada. Este procedimiento, junto con sp_cursorexecute, tiene la misma función que sp_cursoropen, pero se divide en dos fases. sp_cursorprepare se invoca especificando el identificador 3 en un paquete de flujo TDS.  
   
@@ -106,7 +106,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Al igual que con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar un valor diferente al solicitado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El parámetro de estado de RPC es uno de los siguientes:  
   
 |Valor|Descripción|  
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT *scrollopt* es on, el formato de la cadena es el siguiente:  
   
- { * \< nombre de variable local> * * \< tipo de datos>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_cursorexecute &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

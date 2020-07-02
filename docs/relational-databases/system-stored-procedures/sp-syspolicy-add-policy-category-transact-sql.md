@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7489b68c8e41ca90acc83e0a0ea0b4fe5783ed9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a60a1055b9f183ce6b13c977c774c4f2907750eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736888"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una categoría de directiva que se puede utilizar con la administración basada en directivas. Las categorías de directiva le permiten organizar las directivas y establecer su ámbito.  
   
@@ -50,7 +50,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_add_policy_category en el contexto de la base de datos del sistema msdb.  
   
 ## <a name="permissions"></a>Permisos  

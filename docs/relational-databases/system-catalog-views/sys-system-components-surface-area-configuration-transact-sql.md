@@ -1,5 +1,5 @@
 ---
-title: Sys. system_components_surface_area_configuration (Transact-SQL) | Microsoft Docs
+title: sys.system_components_surface_area_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d12a73f8efc2b4278fc24f41af4e1d720beef43
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1fdd39f81de3ca41c38d811095c5a81b700a318e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733455"
 ---
 # <a name="syssystem_components_surface_area_configuration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada objeto de sistema ejecutable que un componente de configuración del área expuesta puede habilitar o deshabilitar. Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   

@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733662"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Al actualizar los datos existentes, debe especificar los dos **\<before>** bloques y **\<after>** . Los elementos especificados en **\<before>** los **\<after>** bloques y describen el cambio deseado. Diagrama usa los elementos que se especifican en el **\<before>** bloque para identificar los registros existentes en la base de datos. Los elementos correspondientes en el **\<after>** bloque indican cómo deben ser los registros después de ejecutar la operación de actualización. A partir de esta información, diagrama crea una instrucción SQL que coincide con el **\<after>** bloque. A continuación, el diagrama de actualización utiliza esta instrucción para actualizar la base de datos.  
   
  Este es el formato del diagrama de actualización para una operación de actualización:  

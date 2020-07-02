@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734707"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>Sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Devuelve el plan de ejecución de la consulta para las solicitudes en curso. Use esta DMV para recuperar SHOWPLAN XML con estadísticas transitorias. 
 
@@ -54,8 +54,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary (64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|
 |query_plan|**xml**|Contiene la representación del plan de presentación en tiempo de ejecución del plan de ejecución de consultas especificado con *plan_handle* que contienen estadísticas parciales. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario. Acepta valores NULL.|
 
-## <a name="remarks"></a>Observaciones
-Esta función del sistema está disponible a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partir de SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
+## <a name="remarks"></a>Comentarios
+Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
 
 Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **estándar** y **ligera** . Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -63,23 +63,23 @@ En las siguientes condiciones, no se devuelve ningún resultado del plan de pres
   
 -   Si el plan de consulta que corresponde al *session_id* especificado ya no se está ejecutando, la columna de **query_plan** de la tabla devuelta es NULL. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se capturó el identificador del plan y el momento en que se usó con **Sys. dm_exec_query_statistics_xml**.  
     
-Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_statistics_xml** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía la devolución del plan de consulta y generaba el error 6335. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **query_plan** devuelve NULL.   
+Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_statistics_xml** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía la devolución del plan de consulta y generaba el error 6335. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **QUERY_PLAN** devuelve NULL.   
 
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso en el servidor.  
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , requiere `VIEW SERVER STATE` el permiso en el servidor.  
 En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .
 
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Examinar el plan de consulta activo y las estadísticas de ejecución de un lote en ejecución  
- En el ejemplo siguiente se consulta **Sys. dm_exec_requests** para encontrar la consulta interesante y `session_id` copiar su desde la salida.  
+ En el ejemplo siguiente se consulta **Sys. dm_exec_requests** para encontrar la consulta interesante y copiar su `session_id` desde la salida.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- A continuación, para obtener el plan de consulta activo y las estadísticas de ejecución `session_id` , utilice el copiado con la función del sistema **Sys. dm_exec_query_statistics_xml**.  
+ A continuación, para obtener el plan de consulta activo y las estadísticas de ejecución, utilice el copiado `session_id` con la función del sistema **sys. dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

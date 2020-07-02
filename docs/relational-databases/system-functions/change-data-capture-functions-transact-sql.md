@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9031f4b2e5923d1382c10c97dd6886959af108a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734440"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Funciones de captura de datos modificados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   El mecanismo de captura de datos modificados registra las operaciones de inserción, actualización y eliminación aplicadas sobre las tablas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], proporcionando los detalles de los cambios en un formato relacional de fácil uso. Para las filas modificadas, se captura la información de columna que duplica la estructura de las columnas de una tabla de origen sometida a seguimiento, junto con los metadatos necesarios para aplicar los cambios a un entorno de destino. Las siguientes funciones se usan para devolver información acerca de los cambios.  
   

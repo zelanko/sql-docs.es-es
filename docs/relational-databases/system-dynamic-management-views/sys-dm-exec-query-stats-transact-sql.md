@@ -20,15 +20,15 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734704"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve estadísticas de rendimiento de agregado para planes de consulta en caché en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una fila por cada instrucción de consulta dentro del plan en caché, y la duración de las filas está ligada al propio plan. Cuando se quita un plan de la caché, se eliminan las filas correspondientes de esta vista.  
   
@@ -128,7 +128,7 @@ Devuelve estadísticas de rendimiento de agregado para planes de consulta en cac
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -173,7 +173,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

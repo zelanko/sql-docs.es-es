@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8dc6c2294d089ca86f571eec5f348c4270782740
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734301"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Clase SqlServiceAdvancedProperty
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   La [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) representa una propiedad avanzada del servicio al que hace referencia el objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) .  
   
  La [propiedad AdvancedProperties (clase SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) hace referencia a una matriz de objetos de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) .  

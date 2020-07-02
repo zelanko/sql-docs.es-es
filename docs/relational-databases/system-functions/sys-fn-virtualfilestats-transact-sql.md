@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738602"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve las estadísticas de E/S de los archivos de las bases de datos, incluidos los archivos de registro. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta información también está disponible en la vista de administración dinámica [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+  Devuelve las estadísticas de E/S de los archivos de las bases de datos, incluidos los archivos de registro. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta información también está disponible en la vista de administración dinámica [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Id. de la base de datos.|  
 |**ID**|**smallint**|Identificador de archivo.|  
-|**Indicaciones**|**bigint**|Marca de tiempo de la base de datos en la que se obtuvieron los datos. **int** en versiones anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]a. |  
+|**Indicaciones**|**bigint**|Marca de tiempo de la base de datos en la que se obtuvieron los datos. **int** en versiones anteriores a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
 |**NumberReads**|**bigint**|Número de operaciones de lectura realizadas en el archivo.|  
 |**BytesRead**|**bigint**|Número de bytes leídos emitidos en el archivo.|  
 |**IoStallReadMS**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que finalicen las E/S de lectura en el archivo.|  
@@ -66,7 +66,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valor del identificador de archivos.|  
 |**BytesOnDisk**|**bigint**|Tamaño físico del archivo (recuento de bytes) en disco.<br /><br /> En el caso de los archivos de base de datos, este valor es el mismo que el **tamaño** en **Sys. database_files**, pero se expresa en bytes en lugar de en páginas.<br /><br /> En los archivos dispersos de instantáneas de base de datos, se trata del espacio que utiliza el sistema operativo para el archivo.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **fn_virtualfilestats** es una función con valores de tabla del sistema que proporciona información estadística, como el número total de operaciones de e/s realizadas en un archivo. Puede utilizarse esta función como ayuda para realizar un seguimiento del tiempo que los usuarios tienen que esperar para leer un archivo o escribir en él. La función también ayuda a identificar los archivos que tienen mucha actividad de E/S.  
   
 ## <a name="permissions"></a>Permisos  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Mostrar información estadística de una base de datos y un archivo con nombre  
- En el siguiente ejemplo se muestra información estadística del archivo de registro de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La función `DB_ID` del sistema se usa para especificar el parámetro *database_id* .  
+ En el siguiente ejemplo se muestra información estadística del archivo de registro de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La función del sistema `DB_ID` se usa para especificar el parámetro *database_id* .  
   
 ```sql  
 SELECT *  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737659"
 ---
 # <a name="clr-integration-and-transactions"></a>Integración CLR y transacciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System. Transactions** y ADO.net funcionan conjuntamente para extender y simplificar el uso de transacciones locales y distribuidas en aplicaciones administradas.  
   
 > [!NOTE]  

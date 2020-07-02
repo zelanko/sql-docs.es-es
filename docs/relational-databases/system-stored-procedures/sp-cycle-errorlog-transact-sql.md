@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f21f3ce4c69bf9cb0df0d2fbd078c7614bd1a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 482b9af4ee76e6f8aea185440924eb579fabd71c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733315"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cierra el archivo del registro de errores actual y continúa el ciclo de números de extensión de registro de errores, como ocurre al reiniciar el servidor. El nuevo registro de errores contiene información de versión y de copyright, y una línea que indica que se ha creado un nuevo registro.  
   

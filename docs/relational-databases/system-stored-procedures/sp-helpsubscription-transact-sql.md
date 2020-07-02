@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736940"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Presenta la información de suscripción asociada con una publicación particular, un artículo, un suscriptor o un conjunto de suscripciones. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones.  
   
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
-|**ARTICLE**|**sysname**|Nombre del artículo.|  
+|**artículo**|**sysname**|Nombre del artículo.|  
 |**base de datos de destino**|**sysname**|Nombre de la base de datos de destino a la que se envían los datos duplicados.|  
 |**Estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
 |**synchronization type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = ninguno|  

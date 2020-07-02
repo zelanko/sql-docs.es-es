@@ -18,15 +18,15 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4f84f187ea3f511b8dddcc79c712dfd7809748d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736969"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información estadística acerca de las columnas e índices de la tabla especificada.  
   
@@ -54,7 +54,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  En la tabla siguiente se describen las columnas del conjunto de resultados.  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**statistics_name**|Nombre de la estadística. Devuelve **sysname** y no puede ser null.|  
 |**statistics_keys**|Claves en que se basa la estadística. Devuelve **nvarchar (2078)** y no puede ser null.|  

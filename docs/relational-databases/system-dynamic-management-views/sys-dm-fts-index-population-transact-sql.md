@@ -20,15 +20,15 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0326d5117371f23cd446caf2c17e0d832ea5cf4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734532"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de los rellenados de frases clave semánticas e índices de texto completo actualmente en curso en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -54,12 +54,12 @@ ms.locfileid: "73983114"
 |**start_time**|**datetime**|Hora en que se inició el rellenado.|  
 |**incremental_timestamp**|**timestamp**|Representa la marca de tiempo de inicio de un llenado completo. Para los otros de tipos de llenado este valor es el último punto de comprobación confirmado que representa el progreso de los llenados.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando la indización semántica estadística está habilitada además de la indización de texto completo, la extracción y el rellenado de frases clave semánticas y la extracción de datos de similitud de documentos se producen simultáneamente con la indización de texto completo. El rellenado del índice de similitud de documentos se produce posteriormente en una segunda fase. Para obtener más información, vea [administrar y supervisar la búsqueda semántica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="physical-joins"></a>Combinaciones físicas  
@@ -67,7 +67,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|De|A|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

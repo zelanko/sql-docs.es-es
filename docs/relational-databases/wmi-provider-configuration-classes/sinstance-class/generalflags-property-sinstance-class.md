@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17a88e5a7003057d4a7b8b0e3cbae6083022f9bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8d30c2631f47356487c5d4187972dd2d4ed8d30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888600"
 ---
 # <a name="generalflags-property-sinstance-class"></a>Propiedad GeneralFlags (clase SInstance)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene las marcas generales asociadas a una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintaxis  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df899a146a8cf2c797f980baec1bb1792a8f2b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb4ac1dbce35c3dd480e735581943d18f88094f3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725436"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889600"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSpub_identity_range** se proporciona compatibilidad con la administración del intervalo de identidad. Esta tabla se almacena en la base de datos de publicaciones y de suscripciones.  
   

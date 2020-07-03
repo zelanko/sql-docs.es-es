@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf92cace1565ce8e48cbb4855aac5a0baf02131b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d708164b39345fb48f9069ff86afed0e14ad7c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888580"
 ---
 # <a name="instancename-property-serversettings-class"></a>Propiedad InstanceName (clase ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se aplica la configuración del servidor.  
   
 ## <a name="syntax"></a>Sintaxis  

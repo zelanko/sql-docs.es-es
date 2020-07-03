@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f9582f9377c1ae9cdcbefb00e772f456e1018e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bdbfed403a8b85a195134e053a151905efa128f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889420"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El proceso de replicación utiliza la tabla **MSreplication_queue** para almacenar los comandos en cola emitidos por todas las suscripciones de actualización en cola que utilizan la cola basada en SQL. Esta tabla se almacena en la base de datos de suscripciones.  
   

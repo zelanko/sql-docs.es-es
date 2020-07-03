@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 448035852653bd40c7cdf441f2f4e04b3a35f554
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69cc583a1378e78456855472f14768943f9b1951
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888591"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Método GetCurrentCertificate (clase ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el certificado de seguridad actual.  
   
 ## <a name="syntax"></a>Sintaxis  

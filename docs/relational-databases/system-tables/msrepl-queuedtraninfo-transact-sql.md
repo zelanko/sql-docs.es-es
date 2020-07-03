@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 762caa6d11de7917ab56192bcf8e6dc0ce80f043
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dcefa2680dd5126c9d3cd378d6e71f527681f12e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889478"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El proceso de replicación utiliza la tabla **MSreplication_queuedtraninfo** para almacenar información acerca de los comandos en cola emitidos por todas las suscripciones de actualización en cola que utilizan la actualización en cola basada en SQL. Esta tabla se almacena en la base de datos de suscripciones.  
   

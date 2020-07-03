@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 787217996a491b37bb7b46ec505ac7d374d9aed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 210329f301790b9a977e356d883c13a8a246a9c3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758674"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889318"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSsubscriptions** contiene una fila por cada artículo publicado en una suscripción a la que presta servicio el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   

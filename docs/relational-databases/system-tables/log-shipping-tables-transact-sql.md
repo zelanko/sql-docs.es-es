@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965db8bf7af993c37551ddbc5e7c7343a85a2950
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e34caa87f529edcac10ea77bf3346d3f276fc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764166"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890095"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Tablas de trasvase de registros (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En los temas siguientes se describen las tablas del sistema que almacenan la información utilizada por las operaciones de trasvase de registros.  
   

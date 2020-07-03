@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 482998563530a2b3a735be883a353e519eb64d60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891610"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Comprueba que el índice clúster de la vista indizada es exclusivo y no contiene ninguna columna que pueda tener el valor NULL cuando se vaya a utilizar la vista indizada para crear una publicación transaccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   

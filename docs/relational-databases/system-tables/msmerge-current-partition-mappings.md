@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82e4d489647838e6a0a84b98f82493a76b28417a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68244a9fe6933d4bffe79591d4f6c043c5d18658
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736737"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889848"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSmerge_current_partition_mappings** almacena una fila por cada ID. de partición al que pertenece una fila modificada. Esta tabla se almacena en la base de datos de publicación.  
   

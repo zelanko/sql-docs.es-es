@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa87169a0988336e8a00537a76126120fb95d196
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e20a8a8145bad532ecc7dfad04d5358ff393136d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890257"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHpublisherconstraints** contiene una fila por cada restricción replicada desde publicadores que no son de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 252b68ea2f6512f2acbc9bbb7555eae172a641ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753968"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890333"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHarticles** contiene una fila por cada artículo que se está replicando desde un publicador que no es de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764248"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890317"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHcolumns** contiene una fila por cada columna publicada. Esta tabla se utiliza para definir cómo se van a representar cuando se publiquen los tipos de datos de columna de un publicador que no es de SQL Server, proceso que esencialmente consiste en asignar tipos de datos entre un sistema de administración de bases de datos (DBMS) que no es de SQL Server y SQL Server. Esta tabla se almacena en la base de datos de distribución.  
   

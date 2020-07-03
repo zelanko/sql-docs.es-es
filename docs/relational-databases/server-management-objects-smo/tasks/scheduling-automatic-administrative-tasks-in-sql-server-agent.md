@@ -15,15 +15,15 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897787"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Los objetos siguientes representan al Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en SMO:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74094385"
 ## <a name="examples"></a>Ejemplos  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-En el caso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los programas que utilizan el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
+En el caso de los programas que utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;

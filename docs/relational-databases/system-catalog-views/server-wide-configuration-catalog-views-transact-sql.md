@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a54f82c38250561fd4f2cb8872ceb187a3e21fc1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54b4af56ca64b44f991cf7388ede86b7413106ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898907"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>Vistas de catálogo de la configuración del servidor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta sección contiene las siguientes vistas de catálogo.  
   

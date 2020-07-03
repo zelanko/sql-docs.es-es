@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898458"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API de OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos del BLOB mediante el uso de las API de Win32. PathName es de solo lectura.  
   

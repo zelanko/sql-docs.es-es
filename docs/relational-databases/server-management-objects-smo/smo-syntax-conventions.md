@@ -16,19 +16,19 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5047719be180ff311f606f43c1f91fdb5fa6824e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897162"
 ---
 # <a name="smo-syntax-conventions"></a>Convenciones de sintaxis de SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Las convenciones tipográficas de los objetos de administración de (SMO) [!INCLUDE[msCoName](../../includes/msconame-md.md)] se basan en las que se usan en los materiales de referencia de Visual Studio .net.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Las convenciones tipográficas de los objetos de administración de (SMO) se basan en las que se usan en los [!INCLUDE[msCoName](../../includes/msconame-md.md)] materiales de referencia de Visual Studio .net.  
   
-|Convención|Se usa para|  
+|Convención|Usada para|  
 |----------------|--------------|  
 |MAYÚSCULAS|Instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], nombres de macro y condiciones usadas en el sistema operativo; nombres de archivos en texto.|  
 |`monospace`|Líneas de comandos y código de programación de ejemplo.|  

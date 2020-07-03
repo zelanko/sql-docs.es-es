@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cafaf2a4ea26b620bbcf5932031a8781cb9a14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1702e045edd2a232a8fe7db001207e14fc228269
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647015"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898248"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>Procedimientos almacenados de captura de datos modificados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La captura de datos modificados hace que el registro histórico de la actividad del Lenguaje de manipulación de datos (DML) que se produjo en las tablas habilitadas esté disponible en un formato relacional apropiado. Los procedimientos almacenados siguientes se utilizan para configurar la captura de datos modificados, administrar los trabajos del Agente de captura de datos modificados y proporcionar los metadatos actuales para cambiar los consumidores de datos.  
   

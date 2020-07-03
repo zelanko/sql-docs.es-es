@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148715"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899066"
 ---
 # <a name="setting-properties---smo"></a>Establecer propiedades: SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Las propiedades son valores que almacenan información descriptiva sobre el objeto. Por ejemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las opciones de configuración se representan <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> mediante las propiedades del objeto. Se puede tener acceso a las propiedades de forma directa o indirecta mediante la colección de propiedades. Para tener acceso directamente a las propiedades, se utiliza la sintaxis siguiente:  
+  Las propiedades son valores que almacenan información descriptiva sobre el objeto. Por ejemplo, las [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de configuración se representan mediante las <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propiedades del objeto. Se puede tener acceso a las propiedades de forma directa o indirecta mediante la colección de propiedades. Para tener acceso directamente a las propiedades, se utiliza la sintaxis siguiente:  
   
  `objInstance.PropertyName`  
   
@@ -62,7 +62,7 @@ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Obtener y establecer una propiedad en Visual Basic  
- En este ejemplo de código se muestra cómo <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> obtener la propiedad <xref:Microsoft.SqlServer.Management.Smo.Information> del objeto y cómo establecer la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propiedad en el miembro **ExecuteSql** del tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerado.  
+ En este ejemplo de código se muestra cómo obtener la <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propiedad del <xref:Microsoft.SqlServer.Management.Smo.Information> objeto y cómo establecer la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propiedad en el miembro **ExecuteSql** del <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerado.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Obtener y establecer una propiedad en Visual C#  
- En este ejemplo de código se muestra cómo <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> obtener la propiedad <xref:Microsoft.SqlServer.Management.Smo.Information> del objeto y cómo establecer la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propiedad en el miembro **ExecuteSql** del tipo <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerado.  
+ En este ejemplo de código se muestra cómo obtener la <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propiedad del <xref:Microsoft.SqlServer.Management.Smo.Information> objeto y cómo establecer la <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propiedad en el miembro **ExecuteSql** del <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> tipo enumerado.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Recorrer en iteración todas las propiedades de un objeto en Visual Basic  
- En este ejemplo de código se recorre en iteración <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> la colección de **propiedades** del objeto [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] y se muestran en la pantalla de salida.  
+ En este ejemplo de código se recorre en iteración la colección de **propiedades** del <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto y se muestran en la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pantalla de salida.  
   
  En el ejemplo, el objeto <xref:Microsoft.SqlServer.Management.Smo.Property> se ha incluido entre corchetes porque también es una palabra clave de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Recorrer en iteración todas las propiedades de un objeto en Visual C#  
- En este ejemplo de código se recorre en iteración <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> la colección de **propiedades** del objeto [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] y se muestran en la pantalla de salida.  
+ En este ejemplo de código se recorre en iteración la colección de **propiedades** del <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto y se muestran en la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pantalla de salida.  
   
 ```csharp  
 {   

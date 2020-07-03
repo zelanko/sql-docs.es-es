@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b229db409520275fa1b043fa54c8ce6e6421096e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269a49f76bd583c2233cf3720818590ca132c6a3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899400"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Invalida el puntero de texto consecutivo especificado en la transacción, o todos ellos. **sp_invalidate_textptr** solo se puede usar en punteros de texto consecutivos. Estos punteros son de tablas que tienen habilitada la opción **Text in row** .  
   

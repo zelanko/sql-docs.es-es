@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bae98cc2fe82cca2c5dc0fb7267b1608d96e364b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 56bea991f705a9dfdbcd3189737eb3e2a51a8c63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898559"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los valores de configuración de los objetos enlazados a una sesión.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85648321"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns. object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|Sys. dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
 |dm_xe_session_object_columns. column_name,<br /><br /> dm_xe_session_object_columns.column_id|Sys. dm_xe_object_columns. Name,<br /><br /> sys.dm_xe_object_columns.column_id|Varios a uno|  

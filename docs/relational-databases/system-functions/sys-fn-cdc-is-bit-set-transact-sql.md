@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b9de9ca9259ed89e4965a1659f46031e74cac3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724610"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898378"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Indica si se ha actualizado una columna capturada comprobando si su posición ordinal está dentro de una máscara de bits proporcionada.  
   
@@ -42,7 +42,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *position*  
+ *localización*  
  Es la posición ordinal en la máscara que hay que comprobar. la *posición* es **int**.  
   
  *update_mask*  

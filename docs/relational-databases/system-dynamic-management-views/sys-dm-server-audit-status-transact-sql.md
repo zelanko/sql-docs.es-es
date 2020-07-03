@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 982ebf62124a392c98ea2357e112cdb8bb56d45b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898670"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve una fila para cada auditoría de servidor que indica el estado actual de la misma. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82830431"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Identificador de la auditoría. Asigna al campo **audit_id** de la vista de catálogo **Sys. Audits** .|  
 |**name**|**sysname**|Nombre de la auditoría. Igual que el campo **nombre** de la vista de catálogo **Sys. server_audits** .|  
-|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Error de tiempo de ejecución<br /><br /> 3 = error de creación de destino<br /><br /> 4 = cerrando|  
+|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Comenzado<br /><br /> 2 =<br />      Error de tiempo de ejecución<br /><br /> 3 = error de creación de destino<br /><br /> 4 = cerrando|  
 |**status_desc**|**nvarchar(256)**|Cadena que muestra el estado de la auditoría de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Marca de tiempo en UTC del último cambio de estado de la auditoría.|  
 |**event_session_address**|**varbinary(8**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionado con la vista de catálogo **Sys. dm_xe_sessions. Address** .|  

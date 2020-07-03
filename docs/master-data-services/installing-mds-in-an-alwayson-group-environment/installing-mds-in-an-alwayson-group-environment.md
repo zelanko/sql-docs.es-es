@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901723"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En este artículo se describe una solución de Master Data Service (MDS) hospedada en Always On configuración de grupo de disponibilidad. En el artículo se describe cómo instalar y configurar SQL 2016 Master Data Services en un grupo de disponibilidad (AG) de SQL 2016 Always On. El propósito principal de esta solución es mejorar la alta disponibilidad y la recuperación ante desastres de datos de back-end MDS hospedados en una base de datos de SQL Server.
 

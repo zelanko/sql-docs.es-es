@@ -16,17 +16,17 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c749f1d0a1cd5076d09de9fb38bba75c637fd130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148754"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900640"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Conectarse a una instancia de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  El primer paso de programación en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una aplicación de objetos de administración de (SMO) consiste en crear <xref:Microsoft.SqlServer.Management.Smo.Server> una instancia del objeto y establecer su conexión con una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instancia de.  
+  El primer paso de programación en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicación de objetos de administración de (SMO) consiste en crear una instancia del <xref:Microsoft.SqlServer.Management.Smo.Server> objeto y establecer su conexión con una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Puede crear una instancia del objeto <xref:Microsoft.SqlServer.Management.Smo.Server> y establecer una conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de tres maneras. La primera es utilizar una variable de objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para proporcionar la información de conexión. La segunda es proporcionar la información de conexión estableciendo explícitamente las propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. La tercera es pasar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el constructor del objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
@@ -51,7 +51,7 @@ ms.locfileid: "70148754"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>Conectarse a una instancia de SQL Server para RMO  
  Replication Management Objects (RMO) usa un método ligeramente distinto de SMO para conectarse a un servidor de replicación.  
   
- Los objetos de programación de RMO requieren que se realice una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexión a una instancia de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> mediante el objeto implementado por el espacio de nombres **Microsoft. SqlServer. Management. Common** . Esta conexión al servidor se realiza independientemente de los objetos de programación RMO. A continuación, se pasa al objeto RMO durante la creación de la instancia o por asignación a la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
+ Los objetos de programación de RMO requieren que se realice una conexión a una instancia de mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto implementado por el espacio de nombres **Microsoft. SqlServer. Management. Common** . Esta conexión al servidor se realiza independientemente de los objetos de programación RMO. A continuación, se pasa al objeto RMO durante la creación de la instancia o por asignación a la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
   
 -   Todas las propiedades de la conexión se definen para un objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> especificado.  
   
@@ -99,7 +99,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectarse a una instancia remota de SQL Server mediante la autenticación de Windows en Visual Basic  
  Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación de Windows, no es necesario especificar el tipo de autenticación. La autenticación de Windows es el valor predeterminado.  
   
- Este ejemplo es [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código de .net que se conecta a la instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remota de mediante la autenticación de Windows. La variable de cadena *strServer* contiene el nombre de la instancia remota.  
+ Este ejemplo es [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código de .net que se conecta a la instancia remota de mediante la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación de Windows. La variable de cadena *strServer* contiene el nombre de la instancia remota.  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.

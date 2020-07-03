@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783895"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900605"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra una fila para cada condición de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_conditions pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista de syspolicy_conditions.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85783895"
 |date_modified|**datetime**|Fecha y hora en que se creó la condición. Es NULL si nunca se produjo una modificación.|  
 |is_name_condition|**smallint**|Especifica si la condición es de denominación.<br /><br /> 0 = la expresión de condición no contiene la variable @Name.<br /><br /> 1 = la expresión de condición contiene la variable @Name.|  
 |facet|**nvarchar(max)**|Nombre de la faceta en que está basada la condición.|  
-|Expression|**nvarchar(max)**|Expresión de los estados de faceta.|  
+|Expresión|**nvarchar(max)**|Expresión de los estados de faceta.|  
 |obj_name|**sysname**|Nombre de objeto asignado a @Name si la expresión de condición contiene esta variable.|  
   
 ## <a name="remarks"></a>Comentarios  

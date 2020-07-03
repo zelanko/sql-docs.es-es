@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e0e65f06ccecd01ae9396b2c64962040a446aeb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900520"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada opción de configuración establecida por un usuario. debajo **contiene las** opciones de configuración que se definen antes del inicio más reciente de, además de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Opciones de configuración dinámicas establecidas desde entonces.  
   

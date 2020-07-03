@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f3f7c55d0a4cf165b5ff77e51f1fe7bb861abc7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900988"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contiene una fila por cada mensaje de Correo electrónico de base de datos con el estado sin **Enviar** o de **reintento** . Los mensajes con el estado unsent o retrying siguen en la cola de correo y pueden ser enviados en cualquier momento. Los mensajes pueden tener el estado sin **Enviar** por los siguientes motivos:  
   

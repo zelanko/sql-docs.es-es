@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899469"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Presenta información acerca de un servidor remoto o de replicación concreto, o acerca de todos los servidores de los dos tipos. Proporciona la siguiente información sobre el servidor: nombre, nombre de red, estado de replicación, número de identificación y nombre de intercalación. Asimismo proporciona valores de tiempo de espera para conectarse a servidores vinculados o para realizar consultas en los mismos.  
   

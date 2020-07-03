@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879955"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Agrega un paso (operación) a un trabajo del Agente SQL.
 
@@ -74,7 +74,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`Subsistema utilizado por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente para ejecutar el *comando*. el *subsistema* es **nvarchar (40)** y puede tener uno de estos valores.
 
-|Value|Descripción|
+|Valor|Descripción|
 |-----------|-----------------|
 |'**ActiveScripting**'|Script Active<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|Comando del sistema operativo o programa ejecutable|
@@ -109,7 +109,7 @@ Para obtener más información sobre estos tokens y la actualización de los pas
 
 `[ @on_success_action = ] success_action`Acción que se va a realizar si el paso se realiza correctamente. *success_action* es **tinyint**y puede tener uno de estos valores.
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1** (predeterminado)|Salir con éxito|  
 |**2**|Salir con error|  
@@ -120,7 +120,7 @@ Para obtener más información sobre estos tokens y la actualización de los pas
 
 `[ @on_fail_action = ] fail_action`Acción que se va a realizar si se produce un error en el paso. *fail_action* es **tinyint**y puede tener uno de estos valores.
 
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir con éxito|  
 |**2** (predeterminado)|Salir con error|  
@@ -145,7 +145,7 @@ Para obtener más información sobre estos tokens y la actualización de los pas
 
 `[ @flags = ] flags`Es una opción que controla el comportamiento. *Flags* es de **tipo int**y puede tener uno de estos valores.  
 
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida|  
 |**2**|Anexar al archivo de salida|  

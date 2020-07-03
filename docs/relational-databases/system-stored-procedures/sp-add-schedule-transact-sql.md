@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878295"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una programación que puede ser utilizada por un número indeterminado de trabajos.  
   
@@ -60,7 +60,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Valor que indica cuándo se va a ejecutar un trabajo. *freq_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Especifica las unidades para *freq_subday_interval*. *freq_subday_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0X2**|Segundos|  
@@ -95,7 +95,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`La repetición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es 32 (relativo mensual). *freq_relative_interval* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores. *freq_relative_interval* se omite en los casos en los que *freq_type* no es igual a 32.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|Second|  

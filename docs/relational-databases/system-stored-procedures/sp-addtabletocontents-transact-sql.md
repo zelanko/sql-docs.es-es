@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876045"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserta en las tablas de seguimiento de mezcla las referencias para las filas de una tabla de origen que no están incluidas actualmente en las tablas de seguimiento. Utilice esta opción si ha cargado de forma masiva una gran cantidad de datos mediante **BCP**, que no activará los desencadenadores de seguimiento de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   

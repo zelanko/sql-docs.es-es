@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151954"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879966"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una programación para un trabajo del Agente SQL.  
   
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1**|Una sola vez|  
 |**4**|Diario|  
 |**8**|Cada semana|  
-|**dieciséi**|Mensual|  
+|**16**|Mensual|  
 |**32**|Mensualmente, con respecto a *frequency_interval.*|  
 |**64**|Se ejecuta cuando se inicia el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Se ejecuta cuando el equipo está inactivo.|  
@@ -106,11 +106,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 |Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
-|**1**|Primero|  
-|**2**|Segundo|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
-|**dieciséi**|Último|  
+|**16**|Último|  
   
  *frequency_relative_interval* indica la aparición del intervalo. Por ejemplo, si *frequency_relative_interval* está establecido en **2**, *frequency_type* se establece en **32**y *frequency_interval* se establece en **3**, el trabajo programado se produciría el segundo martes de cada mes.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fc6d9e9aa0e4da2e2e2652d5d34b833cd7b2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730072"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879934"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este procedimiento almacenado comprueba si se ha creado un trabajo de alerta en este servidor. Si no existe un trabajo de alerta, este procedimiento almacenado crea el trabajo de alerta y agrega su identificador de trabajo a la tabla **log_shipping_monitor_alert** . El trabajo de alerta está habilitado de forma predeterminada y se ejecuta según un programa de una vez cada dos minutos.  
   

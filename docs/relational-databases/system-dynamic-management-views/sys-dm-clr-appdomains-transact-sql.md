@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724618"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893978"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada dominio de aplicación en el servidor. El dominio de aplicación (**AppDomain**) es una construcción del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) que es la unidad de aislamiento para una aplicación. Puede utilizar esta vista para comprender y solucionar problemas de objetos de integración CLR que se ejecutan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -58,13 +58,13 @@ ms.locfileid: "85724618"
   
 ## <a name="appdomain-initialization"></a>Inicialización de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Se está creando el **AppDomain** .|  
   
 ## <a name="appdomain-usage"></a>Uso de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|El **AppDomain** en tiempo de ejecución está listo para que lo usen varios usuarios.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** está listo para su uso en operaciones DDL. Se diferencian de E_APPDOMAIN_SHARED en que AppDomains compartidos se usan para ejecuciones de integración CLR en contraposición con operaciones de DDL. Dichos AppDomains están aislados de las operaciones simultáneas.|  
@@ -72,7 +72,7 @@ ms.locfileid: "85724618"
   
 ## <a name="appdomain-cleanup"></a>Limpieza de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha solicitado que CLR Descargue el **AppDomain**, normalmente porque se ha modificado o quitado el ensamblado que contiene los objetos de base de datos administrados.|  
 |E_APPDOMAIN_UNLOADED|CLR ha descargado el **AppDomain**. Esto suele ser el resultado de un procedimiento de extensión debido a **ThreadAbort**, **OutOfMemory**, o a una excepción no controlada en el código de usuario.|  

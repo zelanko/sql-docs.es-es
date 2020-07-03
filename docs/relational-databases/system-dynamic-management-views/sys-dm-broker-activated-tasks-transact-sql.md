@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a8d8c7d8c78af63afbd3c0343c855289d40e97b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893960"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada procedimiento almacenado activado por Service Broker.  
  
@@ -47,7 +47,7 @@ ms.locfileid: "85677808"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Uno a uno|  
   

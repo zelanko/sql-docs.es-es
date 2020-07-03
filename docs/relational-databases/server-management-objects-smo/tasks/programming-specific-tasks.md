@@ -19,15 +19,15 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d38096aacda2d50992c7ac3bc886a8740cb22f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892001"
 ---
 # <a name="programming-specific-tasks"></a>Tareas específicas de programación
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   La programación de tareas específicas con objetos SMO incluye temas complejos que solo son necesarios en programas con una función concreta, como copia de seguridad, supervisión de estadísticas, replicación, administración de objetos de instancia y establecimiento de opciones de configuración.  
   

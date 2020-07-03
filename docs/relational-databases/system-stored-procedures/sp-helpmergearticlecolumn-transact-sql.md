@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891642"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la lista de columnas del artículo de vista o tabla especificado para una publicación de combinación. Puesto que los procedimientos almacenados no tienen columnas, este procedimiento almacenado devuelve un error si se especifica un procedimiento almacenado como artículo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   

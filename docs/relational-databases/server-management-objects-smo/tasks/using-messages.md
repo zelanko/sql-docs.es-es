@@ -13,17 +13,17 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e62b90ee9d5d3eaa15747435395510629e2e5feb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911228"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892426"
 ---
 # <a name="using-messages"></a>Usar mensajes
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  En SMO, los mensajes del sistema se representan <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> mediante el objeto que pertenece al objeto de **servidor** . Dado que los mensajes del sistema no se pueden modificar, las propiedades del objeto **SystemMessage** son de solo lectura.  
+  En SMO, los mensajes del sistema se representan mediante el <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objeto que pertenece al objeto de **servidor** . Dado que los mensajes del sistema no se pueden modificar, las propiedades del objeto **SystemMessage** son de solo lectura.  
   
  El objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> representa los mensajes definidos por el usuario mediante programación en SMO. Los mensajes definidos por el usuario existentes se pueden detectar realizando una iteración en la colección. Los nuevos mensajes definidos por el usuario se pueden crear creando instancias de un nuevo objeto **UserDefinedMessage** y estableciendo las propiedades adecuadas.  
   

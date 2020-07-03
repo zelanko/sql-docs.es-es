@@ -16,26 +16,26 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e606844d031bb4ab2c29d9dfd012c97601ca12f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 510ec428f43f20715ab85d1f1f5e719e11863a74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71077539"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894820"
 ---
 # <a name="smo-object-model-namespaces"></a>Espacios de nombres del modelo de objetos de SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los objetos de administración (SMO) tienen varios espacios de nombres. Los diferentes espacios de nombres representan áreas de funcionalidad diferentes dentro de los SMO.  
   
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados SMO se encuentran en la carpeta C:\Archivos de Programa\microsoft SQL Server\130\SDK\Assemblies  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , los ensamblados SMO se encuentran en la carpeta c:\Archivos de programa\Microsoft SQL Server\130\SDK\Assemblies  
   
 ## <a name="namespaces"></a>Espacios de nombres  
  Los espacios de nombres de SMO son los siguientes:  
   
 |Clase|Función|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contiene clases de instancia, clases de utilidad y enumeraciones que se utilizan para manipular [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante programación.|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contiene clases de instancia, clases de utilidad y enumeraciones que se utilizan para manipular mediante programación [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contiene las clases que son comunes a Replication Management Objects (RMO) y SMO, como clases de conexión.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contiene clases que representan el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contiene clases que representan el proveedor WMI.|  

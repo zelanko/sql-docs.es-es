@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 090957694bd37e24fb99db2b1a2190c188bc4540
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6bb8b71b67a91c90e48372d33ef348d67704257
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894662"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con el regulador de recursos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta sección contiene las siguientes vistas de administración dinámicas para el regulador de recursos.  
   

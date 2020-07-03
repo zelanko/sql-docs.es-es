@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: ebae9f75ac25698582b7f3e4c78c2fb773bd803e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84929096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891992"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configuración de copia de seguridad administrada de SQL Server para Azure para grupos de disponibilidad
   Este tema es un tutorial sobre la configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para las bases de datos participantes en Grupos de disponibilidad AlwaysOn.  
@@ -80,7 +80,7 @@ ms.locfileid: "84929096"
   
 6.  **Habilite y configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en nodo1:** inicie SQL Server Management Studio y conéctese a la instancia en el nodo1 donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -92,14 +92,13 @@ ms.locfileid: "84929096"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      Para obtener más información sobre la creación de un certificado para el cifrado, vea el paso **crear un certificado de copia** de seguridad en [creación de una copia de seguridad cifrada](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Habilite y configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB en nodo2:** inicie SQL Server Management Studio y conéctese a la instancia en el nodo 2, donde está instalada la base de datos de disponibilidad. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL de almacenamiento, la credencial SQL y el período de retención según sus requisitos:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -111,15 +110,14 @@ ms.locfileid: "84929096"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está habilitada ahora en la base de datos especificada. Puede tardarse hasta 15 minutos en que las operaciones de copia de seguridad de la base de datos empiecen a ejecutarse. La copia de seguridad tendrá lugar en la réplica de la copia de seguridad preferida.  
   
 8.  **Revise la configuración predeterminada del evento extendido:**  Revise la configuración de eventos extendidos ejecutando la siguiente instrucción Transact-SQL en la réplica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa para programar las copias de seguridad. Esta suele ser la configuración de la réplica de copia de seguridad preferida para el Grupo de disponibilidad al que pertenece la base de datos.  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      Debe ver que los eventos de canal Administración, Operativo y Analítico están habilitados de forma predeterminada y no se pueden deshabilitar. Debe ser suficiente supervisar los eventos que requieren intervención manual.  Puede habilitar los eventos de depuración, pero estos canales incluyen eventos informativos y de depuración que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa para detectar problemas y solucionarlos. Para obtener más información, consulte [supervisión SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -132,11 +130,10 @@ ms.locfileid: "84929096"
   
     3.  **Habilite las notificaciones por correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          Para obtener más información y un script de ejemplo completo, vea [Monitor SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -145,7 +142,7 @@ ms.locfileid: "84929096"
   
 11. **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que ha configurado previamente, o bien supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -166,18 +163,16 @@ ms.locfileid: "84929096"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -187,7 +182,6 @@ ms.locfileid: "84929096"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes mediante el mismo procedimiento almacenado del sistema **smart_admin. sp_set_db_backup** y proporcionar los nuevos valores. Para obtener más información, consulte [SQL Server la copia de seguridad administrada en Azure: configuración de retención y almacenamiento](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  

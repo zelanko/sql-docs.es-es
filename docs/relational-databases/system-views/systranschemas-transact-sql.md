@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ec81b3d330ad9dfdcd69d46188a02313fa94e275
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ba5516920cee6cb2f6f18f0120844e4320afe5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881191"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **systranschemas** se usa para realizar el seguimiento de los cambios de esquema en los artículos publicados en publicaciones transaccionales y de instantáneas. Esta tabla se almacena en las bases de datos de publicaciones y suscripciones.  
   

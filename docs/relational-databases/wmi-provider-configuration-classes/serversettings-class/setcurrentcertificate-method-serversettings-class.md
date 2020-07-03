@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70af60ce6ae633adf339f81216b461e052f6f8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ece4c477961e4e3add98d85c8d62aea3f74ea2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880740"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Método SetCurrentCertificate (clase ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Establece el certificado de seguridad actual.  
   
 ## <a name="syntax"></a>Sintaxis  

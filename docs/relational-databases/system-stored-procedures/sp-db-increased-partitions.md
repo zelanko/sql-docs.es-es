@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b93680fd4a4688aa36243f0d09c491254e9aa378
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e73f98e2548427ae8d102b56e729c2bd21235572
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760168"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867745"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita o deshabilita la compatibilidad con hasta 15.000 particiones de la base de datos especificada.  
   

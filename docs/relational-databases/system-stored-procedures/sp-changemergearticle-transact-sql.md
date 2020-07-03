@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872385"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia las propiedades de un artículo de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -52,7 +52,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Valores|Descripción|  
+|Propiedad.|Valores|Descripción|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Habilita el uso de un solucionador interactivo para el artículo.|  
 ||**false**|Deshabilita el uso de un solucionador interactivo para el artículo.|  

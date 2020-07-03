@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733341"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868864"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Abre un cursor. sp_cursoropen define la instrucción SQL asociada a las opciones cursor y cursor y, a continuación, rellena el cursor. sp_cursoropen es equivalente a la combinación de las [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones DECLARE_CURSOR y Open. Este procedimiento se invoca especificando el identificador 2 en un paquete de flujo TDS.  
   

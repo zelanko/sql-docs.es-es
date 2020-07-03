@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 34a91283d735730bcc5f011377b1f1e729e7e753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883348"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
   El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
@@ -40,7 +40,7 @@ ms.locfileid: "84544671"
   
 2.  Escriba la siguiente consulta y presione F5 para ejecutar:  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   

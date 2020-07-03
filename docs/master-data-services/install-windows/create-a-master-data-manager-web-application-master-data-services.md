@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 84da8c7a87901ddcb964773bea2f330ea86a742e
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 1f7504244f658af94cccb42bead95de60b2c409e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731696"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882107"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Crear una aplicación Web de Master Data Manager (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] proporciona una interfaz a los usuarios para trabajar con datos maestros y a los administradores para configurar y administrar MDS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "83731696"
   
 4.  En el cuadro de diálogo **Crear sitio web** , especifique la información para un sitio web nuevo. Para obtener más información sobre las opciones de la interfaz de usuario (IU) en el cuadro de diálogo, vea [Cuadro de diálogo Crear sitio web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md).  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>Para crear una aplicación web de Master Data Manager en un sitio web existente  
  Al crear una aplicación web en un sitio web existente , puede elegir la ruta de acceso virtual y el alias de la aplicación web. La aplicación web se agrega a un nuevo grupo de aplicaciones.  
@@ -73,7 +73,7 @@ ms.locfileid: "83731696"
   
 5.  En el cuadro de diálogo **Crear aplicación web** , especifique la información para una aplicación web nueva. Para obtener más información sobre las opciones de la interfaz de usuario (IU) en el cuadro de diálogo, vea [Cuadro de diálogo Crear aplicación web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   

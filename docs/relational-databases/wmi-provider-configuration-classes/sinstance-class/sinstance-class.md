@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaff9bea929843dbdca73ba65e5f30ab3c39b60e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1234c45d2b5099530fef5246a777487871c2298f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725312"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888497"
 ---
 # <a name="sinstance-class"></a>Clase SInstance
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La [Clase SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) representa una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La [Clase SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) puede utilizarse para administrar los protocolos y las bibliotecas de red asociados a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También puede especificarse un certificado de seguridad para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

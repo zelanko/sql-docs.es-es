@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afe6fdb10e16bf3507b8d4a102e01f8095a3640
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787155"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882018"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia del servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Nombre|**sysname**|Nombre de la especificación de auditoría.|  
+|NOMBRE|**sysname**|Nombre de la especificación de auditoría.|  
 |database_specification_id|**int**|Identificador de la especificación de base de datos.|  
 |create_date|**datetime**|Fecha en la que se creó la especificación de auditoría.|  
 |modified_date|**datetime**|Fecha en la que se modificó por última vez la especificación de auditoría.|  

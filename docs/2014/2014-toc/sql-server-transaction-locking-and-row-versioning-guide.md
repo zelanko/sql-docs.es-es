@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882119"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones de SQL Server
 
@@ -231,7 +231,7 @@ GO
   
      Una lectura fantasma es una situación que se produce cuando se ejecutan dos consultas idénticas y la recopilación de filas devuelta por la segunda consulta es diferente. En el siguiente ejemplo se muestra cómo se puede producir esto. Suponga que las dos transacciones siguientes se están ejecutando al mismo tiempo. Las dos instrucciones SELECT de la primera transacción pueden devolver resultados diferentes porque la instrucción INSERT de la segunda transacción cambia los datos utilizados por ambas.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -316,7 +315,7 @@ GO
 |Nivel de aislamiento de versiones de fila|Definición|  
 |------------------------------------|----------------|  
 |Instantánea de lectura confirmada|Cuando el valor de la opción de base de datos READ_COMMITTED_SNAPSHOT es ON, el aislamiento de lectura confirmada utiliza las versiones de fila para proporcionar una coherencia de lectura en las instrucciones. Las operaciones de lectura solo requieren bloqueos de tablas SCH-S, pero no bloqueos de páginas ni filas. Es decir, el motor de base de datos utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos. Una función definida por el usuario puede devolver datos confirmados después del inicio de la instrucción que contiene que la UDF.<br /><br /> Cuando la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en OFF, que es el valor de configuración predeterminado, el aislamiento confirmado de lectura utiliza bloqueos compartidos para evitar que otras transacciones modifiquen filas mientras la transacción actual está ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. Ambas implementaciones cumplen la definición ISO del aislamiento de lectura confirmada.|  
-|Instantánea|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos ALLOW_SNAPSHOT_ISOLATION es ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. Las instrucciones de DDL siguientes no se admiten bajo el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni ninguna instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se permiten cuando usa el aislamiento de la instantánea en transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir error 3961: "Error de la transacción de aislamiento de instantánea en la base de datos '%. * ls' porque el objeto al que tuvo acceso la instrucción ha sido modificado por una instrucción DDL de otra transacción simultánea desde el inicio de esta transacción. No se permite porque los metadatos no tienen control de versiones. Una actualización simultánea de los metadatos puede dar lugar a incoherencias si se combina con aislamiento de instantánea."|  
+|Depurador de|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos ALLOW_SNAPSHOT_ISOLATION es ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. Las instrucciones de DDL siguientes no se admiten bajo el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni ninguna instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se permiten cuando usa el aislamiento de la instantánea en transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir error 3961: "Error de la transacción de aislamiento de instantánea en la base de datos '%. * ls' porque el objeto al que tuvo acceso la instrucción ha sido modificado por una instrucción DDL de otra transacción simultánea desde el inicio de esta transacción. No se permite porque los metadatos no tienen control de versiones. Una actualización simultánea de los metadatos puede dar lugar a incoherencias si se combina con aislamiento de instantánea."|  
   
  En la tabla siguiente se muestran los efectos secundarios de la simultaneidad habilitados por los distintos niveles de aislamiento.  
   
@@ -326,7 +325,7 @@ GO
 |**Lectura confirmada**|No|Sí|Sí|  
 |**Lectura repetible**|No|No|Sí|  
 |**Instantánea**|No|No|No|  
-|**Serializable**|No|No|No|  
+|**Serial**|No|No|No|  
   
  Para obtener más información sobre los tipos de bloqueo específicos o las versiones de fila que controlan cada nivel de aislamiento de transacción, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -474,7 +473,7 @@ GO
   
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Modo solicitado**|**ENCUENTRA**|**Seg**|**U**|**IX**|**SEIS**|**X**|  
+|**Modo solicitado**|**ENCUENTRA**|**S**|**U**|**IX**|**SEIS**|**X**|  
 |**Intención compartida (IS)**|Sí|Sí|Sí|Sí|Sí|No|  
 |**Compartido (S)**|Sí|Sí|Sí|No|No|No|  
 |**Actualizar (U)**|Sí|Sí|No|No|No|No|  
@@ -521,7 +520,7 @@ GO
   
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
-|**Modo solicitado**|**Seg**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**Compartido (S)**|Sí|Sí|No|Sí|Sí|Sí|No|  
 |**Actualizar (U)**|Sí|No|No|Sí|No|Sí|No|  
 |**Exclusivo (X)**|No|No|No|No|No|Sí|No|  
@@ -572,7 +571,7 @@ GO
 
  Para poder asegurar que una consulta de recorrido de intervalos es serializable, la misma consulta debe devolver los mismos resultados cada vez que se ejecuta en la misma transacción. Otras transacciones no deben insertar nuevas filas en la consulta de recorrido de intervalos; de lo contrario, se convierten en inserciones fantasma. Por ejemplo, la siguiente consulta utiliza la tabla y el índice de la ilustración anterior:  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  Si una consulta de una transacción intenta seleccionar una fila que no existe, la ejecución de la consulta en un punto posterior de la misma transacción tiene que devolver el mismo resultado. No se puede permitir a otra transacción insertar la fila inexistente. Por ejemplo, con esta consulta:  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  Cuando se elimina un valor en una transacción, el intervalo en el que entra el valor no debe estar bloqueado mientras se ejecuta la transacción que realiza la operación de eliminación. Para mantener la seriabilidad basta con bloquear el valor de la clave eliminada hasta el final de la transacción. Por ejemplo, con esta instrucción DELETE:  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  Cuando se inserta un valor en una transacción, el intervalo en el que entra el valor no debe estar bloqueado mientras se ejecuta la transacción que realiza la operación de inserción. Basta con bloquear el valor de clave insertado hasta el final de la transacción para mantener la seriabilidad. Por ejemplo, con esta instrucción INSERT:  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  Estas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] crean objetos de prueba que se utilizan en los siguientes ejemplos.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  Una instrucción `SELECT` se ejecuta en una transacción. Debido a la sugerencia de bloqueo `HOLDLOCK`, esta instrucción adquirirá y retendrá un bloqueo Intención compartida (IS) en una tabla (en esta ilustración, los bloqueos de fila y página se pasan por alto). El bloqueo IS solo se adquirirá en la partición asignada a la transacción. Para este ejemplo, se supone que el bloqueo IS se adquiere en el id. 7 de la partición.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  Se inicia una transacción y la instrucción `SELECT` que se ejecuta bajo esta transacción adquirirá y retendrá un bloqueo compartido (S) en la tabla. El bloqueo S se adquirirá en todas las particiones que tengan como resultado varios bloqueos de tabla, uno para cada partición. Por ejemplo, en un sistema de 16 cpu, 16 bloqueos S se emitirán por el bloqueo en los id. 0-15 de la partición. Dado que el bloqueo S es compatible con el bloqueo IS que se retiene en el id. 7 de la partición por la transacción de la sesión 1, no hay ningún bloqueo entre las transacciones.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  La siguiente instrucción `SELECT` se ejecuta bajo la transacción que todavía está activa bajo la sesión 1. Debido a la sugerencia de bloqueo de tabla (X) exclusiva, la transacción intentará adquirir un bloqueo X en la tabla. Sin embargo, el bloqueo S que retiene la transacción en la sesión 2 bloqueará el bloqueo X en el id. 0 de la partición.  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  Una instrucción `SELECT` se ejecuta en una transacción. Debido a la sugerencia de bloqueo `HOLDLOCK`, esta instrucción adquirirá y retendrá un bloqueo Intención compartida (IS) en una tabla (en esta ilustración, los bloqueos de fila y página se pasan por alto). El bloqueo IS solo se adquirirá en la partición asignada a la transacción. Para este ejemplo, se supone que el bloqueo IS se adquiere en el id. 6 de la partición.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  En los Id. 7 a 15 de la partición que el bloqueo X aún no ha alcanzado, otras transacciones puede seguir adquiriendo bloqueos.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1314,7 +1313,7 @@ BEGIN TRANSACTION
   
  En la sesión 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  En la sesión 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  En la sesión 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  En la sesión 2:  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  En la sesión 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  En la sesión 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  En la sesión 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  En la sesión 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  En la sesión 2:  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  En la sesión 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  La siguiente instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] habilita READ_COMMITTED_SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  La siguiente instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] habilita ALLOW_SNAPSHOT_ISOLATION:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   Lectura de confirmadas, que utiliza versiones de fila al establecer la opción de base de datos `READ_COMMITTED_SNAPSHOT` en `ON`, como se muestra en el siguiente ejemplo de código:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   Puede habilitar el aislamiento de instantáneas configurando la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` en `ON`, como se muestra en el ejemplo de código siguiente:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      Una transacción que se ejecute en aislamiento de instantánea puede tener acceso a tablas de la base de datos que se hayan habilitado para instantáneas. Para obtener acceso a tablas que no se han habilitado para instantáneas, debe cambiarse el nivel de aislamiento. El siguiente ejemplo de código muestra una instrucción `SELECT` que une dos tablas mientras se ejecuta en una transacción de instantáneas. Una tabla pertenece a una base de datos en la que no se habilitó el aislamiento de instantánea. Cuando la instrucción `SELECT` se ejecuta en aislamiento de instantánea, no lo hace correctamente.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      El siguiente ejemplo de código muestra la misma instrucción `SELECT` modificada para cambiar el nivel de aislamiento de transacción a lectura de confirmadas. Gracias a este cambio, la instrucción `SELECT` se ejecuta correctamente.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      Por ejemplo, el administrador de la base de datos ejecuta la siguiente instrucción `ALTER INDEX`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  Para determinar el valor de LOCK_TIMEOUT actual, ejecute la @LOCK_TIMEOUT función @:  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  En el siguiente ejemplo, se configura el nivel de aislamiento `SERIALIZABLE`:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  Para determinar el nivel de aislamiento de transacción que está establecido actualmente, utilice la instrucción `DBCC USEROPTIONS` como se indica en el siguiente ejemplo. El conjunto de resultados puede variar según el conjunto de resultados del sistema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  Según se muestra en el siguiente ejemplo, si se establece el nivel de aislamiento de la transacción en `SERIALIZABLE` y se utiliza la sugerencia de bloqueo de nivel de tabla `NOLOCK` con la instrucción `SELECT`, no se aplican los bloqueos de intervalos de claves usados normalmente para mantener las transacciones serializables.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  En el ejemplo siguiente se muestra el uso para el que están diseñadas las transacciones anidadas. El procedimiento `TransProc` exige su transacción, sin tener en cuenta el modo de transacción del proceso que lo ejecute. Si se llama a `TransProc` cuando una transacción está activa, la transacción anidada de `TransProc` se pasará por alto y se confirmarán o revertirán sus instrucciones INSERT basándose en la acción final adoptada para la transacción externa. Si un proceso que no tiene ninguna transacción pendiente ejecuta `TransProc`, la instrucción COMMIT TRANSACTION al final del procedimiento confirmará de manera efectiva las instrucciones INSERT.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

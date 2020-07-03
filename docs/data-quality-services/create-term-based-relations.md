@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3f747839945d8f2ea4c6960d8a8c594f64777040
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b6b0a4fe9786e47ec8352ce829be628c11bea928
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811657"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882584"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término "Inc." por "Incorporated". El término "Inc." se cambiará cada vez que aparezca en el dominio. Las instancias de "Contoso, Inc." se cambiarán por "Contoso, Incorporated", y ambos valores se considerarán sinónimos exactos.  
   

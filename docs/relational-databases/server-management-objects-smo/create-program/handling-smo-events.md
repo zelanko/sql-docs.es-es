@@ -16,15 +16,15 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 155bcf3e74e08d63aa714282aba42de3f6784e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883028"
 ---
 # <a name="handling-smo-events"></a>Controlar eventos SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Hay tipos de evento de servidor a los que se puede suscribir utilizando un controlador de eventos y el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70148721"
   
  Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información sobre el evento del parámetro *ServerEventNotificatificationArgs* que se puede usar para notificar información sobre el evento.  
   
- Los tipos de eventos de base de datos y de servidor que se pueden controlar <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> se enumeran <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>en la clase y en la clase.  
+ Los tipos de eventos de base de datos y de servidor que se pueden controlar se enumeran en la <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> clase y en la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> clase.  
   
 ## <a name="example"></a>Ejemplo  
 Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

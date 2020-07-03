@@ -11,20 +11,20 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 74486901a641b42f5f3c2c324b97307ef17c0182
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f90d13f65fbdd9f0c3f6626f15f65fa6d18d641a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813857"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882837"
 ---
 # <a name="domain-management-domain-list"></a>Administración de dominios: Lista de dominios
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describen los controles de la lista de dominios de la página **Administración de dominios** de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilice este panel para seleccionar el dominio en el que va a realizar las operaciones de administración. Este mismo panel se utiliza en todas las páginas con pestañas de la página **Administración de dominios** .  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opciones  
   
 ### <a name="domains-list"></a>Lista de dominios  
  **Dominio**  

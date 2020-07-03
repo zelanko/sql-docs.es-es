@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ed21f6458cfeb7b9a812a179339029846209344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cacca0d6558670f48ba0d8458c28d0213e57373f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882976"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>Vistas de catálogo de operaciones externas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Estas son las vistas de catálogo de los objetos de datos externos, como los orígenes de datos, los formatos de archivo y las tablas. Use estas vistas para consultar el estado de los elementos, como las tablas de Hadoop usadas en las operaciones de polybase.  
   

@@ -15,17 +15,17 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 707ee3cc48cbc459cab98d5d97aa252697cd307f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883022"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guía de programación para objetos de administración de SQL Server (SMO)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son una colección de objetos diseñados para programar todos los aspectos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de la administración de. Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son una colección de objetos diseñados para programar todos los aspectos de la administración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Tema|Descripción|  
 |-----------|-----------------|

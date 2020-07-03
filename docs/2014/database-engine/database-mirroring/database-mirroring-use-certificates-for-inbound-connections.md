@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: c05397dfbd1740293c4b154ace1ed5704cec11a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84934226"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886003"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)
   En este tema se describen los pasos necesarios para configurar instancias del servidor que utilicen certificados para autenticar conexiones entrantes para la creación de reflejo de la base de datos. Antes de poder configurar las conexiones entrantes, deberá configurar las conexiones salientes en cada una de las instancias del servidor. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "84934226"
   
      En el siguiente ejemplo se crea un inicio de sesión para el sistema HOST_B en la base de datos **master** de la instancia del servidor de HOST_A; en este ejemplo, el inicio de sesión se denomina `HOST_B_login`. Sustituya la contraseña de ejemplo por su propia contraseña.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -56,8 +56,8 @@ ms.locfileid: "84934226"
   
      Para ver los inicios de sesión en esta instancia del servidor, puede utilizar la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      Para obtener más información, vea [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql).  
@@ -66,7 +66,7 @@ ms.locfileid: "84934226"
   
      En el siguiente ejemplo se crea un usuario, `HOST_B_user`, para el inicio de sesión creado en el paso anterior.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -76,7 +76,7 @@ ms.locfileid: "84934226"
   
      Para ver los usuarios en esta instancia del servidor, puede utilizar la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84934226"
   
      En el siguiente ejemplo se asocia el certificado de HOST_B al usuario de HOST_A.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -104,8 +104,8 @@ ms.locfileid: "84934226"
   
      Para ver los certificados de esta instancia del servidor, utilice la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      Para obtener más información, vea [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql).  
@@ -114,7 +114,7 @@ ms.locfileid: "84934226"
   
      Por ejemplo, para conceder permiso para HOST_A a la instancia del servidor remoto de HOST_B para que se conecte a su inicio de sesión local (es decir, para que se conecte a `HOST_B_login`), use las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes:  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -132,13 +132,13 @@ ms.locfileid: "84934226"
 > [!NOTE]  
 >  Este ejemplo usa un archivo de certificado que contiene el certificado HOST_A que se ha creado por un fragmento de código en [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -148,7 +148,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   

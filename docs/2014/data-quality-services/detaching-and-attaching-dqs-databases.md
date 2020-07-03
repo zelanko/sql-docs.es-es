@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: e83f8c2f75725c5de0dc7fa6e3e78666568fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886010"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
@@ -82,14 +82,13 @@ ms.locfileid: "84937776"
   
 9. En la ventana del editor de consultas, copie las instrucciones SQL siguientes:  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
     RECONFIGURE WITH OVERRIDE  
     ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
     ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
     ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
     ```  
   
 10. Presione F5 para ejecutar las instrucciones. Vea el panel Resultados para comprobar que las instrucciones se han ejecutado correctamente. Aparecerá el mensaje siguiente: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

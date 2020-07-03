@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539707"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883931"
 ---
 # <a name="relational-query-designer-ssas"></a>Diseñador de consultas relacionales (SSAS)
   El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que se van a recuperar de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] las bases de datos relacionales y y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -219,7 +219,7 @@ ms.locfileid: "84539707"
 #### <a name="example"></a>Ejemplo  
  La siguiente consulta devuelve la lista de nombres de una tabla denominada `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Ejemplo  
  La consulta siguiente llama a un procedimiento almacenado denominado `uspGetWhereUsedProductID`. Cuando el procedimiento almacenado tenga parámetros de entrada, al ejecutar la consulta debe proporcionar los valores de los parámetros.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

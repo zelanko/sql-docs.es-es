@@ -2,19 +2,18 @@
 title: Administración de contraseñas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/05/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b5be535275742efa87dec804e17a94ef6cc8d092
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000161"
 ---
 # <a name="managing-passwords-db2tosql"></a>Administrar contraseñas (DB2ToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  
@@ -32,7 +31,7 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
   
 1.  **Texto no cifrado:** Escriba la contraseña de la base de datos en el atributo de valor del nodo ' contraseña '. Se encuentra en el nodo definición del servidor en la sección servidor del archivo de script o el archivo de conexión de servidor.  
   
-    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se mostrará el siguiente mensaje de advertencia en la salida de la consola: * &lt;"&gt; la contraseña del ID. del servidor del servidor se proporciona en forma de texto no cifrado no seguro, la aplicación de consola SSMA proporciona una opción para proteger la contraseña a través del cifrado, consulte la opción-securepassword en el archivo de ayuda de SSMA para obtener más información".*  
+    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se mostrará el siguiente mensaje de advertencia en la salida de la consola: *"la &lt; contraseña del ID. del servidor del servidor &gt; se proporciona en forma de texto no cifrado no seguro, la aplicación de consola SSMA proporciona una opción para proteger la contraseña a través del cifrado, consulte la opción-securepassword en el archivo de ayuda de SSMA para obtener más información".*  
   
     **Contraseñas cifradas:** La contraseña especificada, en este caso, se almacena en un formato cifrado en el equipo local en ProtectedStorage. SSMA.  
   
@@ -67,66 +66,72 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
     
     -   **Quitar contraseñas cifradas**  
   
-        Ejecute `SSMAforDB2Console.exe` con el`-securepassword` modificador `-remove` y en la línea de comandos pasando los identificadores de servidor para quitar las contraseñas cifradas del archivo de almacenamiento protegido presente en el equipo local.  
+        Ejecute `SSMAforDB2Console.exe` con el `-securepassword` `-remove` modificador y en la línea de comandos pasando los identificadores de servidor para quitar las contraseñas cifradas del archivo de almacenamiento protegido presente en el equipo local.  
   
         Ejemplo:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
-  
+
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"
+        ```
+
     -   **Enumerar los identificadores de servidor cuyas contraseñas están cifradas**  
   
-        Ejecute `SSMAforDB2Console.exe` con la línea `-securepassword` de `-list` comandos y en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
+        Ejecute `SSMAforDB2Console.exe` con la `-securepassword` línea de `-list` comandos y en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
   
         Ejemplo:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
-  
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -list
+        ```
+
     > [!NOTE]  
     > 1.  La contraseña en texto no cifrado mencionada en el archivo de conexión de script o servidor tiene prioridad sobre la contraseña cifrada en un archivo protegido.  
     > 2.  Cuando no existe ninguna contraseña en la sección servidor del archivo de conexión del servidor o el archivo de script o si no se ha protegido en el equipo local, la consola de le pide que escriba la contraseña.  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportar o importar contraseñas cifradas  
-La aplicación de consola SSMA permite exportar contraseñas de base de datos cifradas presentes en un archivo del equipo local a un archivo protegido y viceversa. Ayuda a que las contraseñas cifradas sean independientes de la máquina. La funcionalidad de exportación lee el identificador y la contraseña del servidor desde el almacenamiento protegido local y guarda la información en un archivo cifrado. Se solicita al usuario que escriba la contraseña del archivo protegido. Asegúrese de que la contraseña especificada tiene una longitud de 8 caracteres o más. Este archivo protegido es portátil entre diferentes equipos. La funcionalidad de importación lee el ID. de servidor y la información de contraseña del archivo protegido. Se solicita al usuario que escriba la contraseña del archivo protegido y anexa la información al almacenamiento protegido local.  
-  
-Ejemplo:  
+La aplicación de consola SSMA permite exportar contraseñas de base de datos cifradas presentes en un archivo del equipo local a un archivo protegido y viceversa. Ayuda a que las contraseñas cifradas sean independientes de la máquina.
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-Ejemplo:  
+La _funcionalidad de exportación_ lee el identificador y la contraseña del servidor desde el almacenamiento protegido local. Después, el sistema guarda el identificador y la contraseña en un archivo cifrado. Se solicita al usuario que escriba la contraseña del archivo protegido. Asegúrese de que la contraseña especificada tiene una longitud de 8 o más caracteres. Este archivo protegido es portátil entre diferentes equipos.
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
+La _funcionalidad de importación_ lee el ID. de servidor y la información de contraseña del archivo protegido. Se solicita al usuario que escriba la contraseña del archivo protegido y anexa la información al almacenamiento protegido local.  
 
-  
+### <a name="export-example"></a>Ejemplo de exportación
+
+1. Exporte la contraseña.
+
+2. Escriba la contraseña para proteger el archivo exportado.
+
+3. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+
+4. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
+
+5. Confirme la contraseña: xxxxxxxx
+
+6. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+
+7. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
+
+8. Confirme la contraseña: xxxxxxxx  
+
+### <a name="import-example"></a>Ejemplo de importación
+
+1. Importe una contraseña cifrada.
+
+2. Escriba la contraseña para proteger el archivo importado.
+
+3. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+
+4. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
+
+5. Confirme la contraseña: xxxxxxxx
+
+6. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+
+7. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
+
+8. Confirmar contraseña: xxxxxxxx
+
 ## <a name="see-also"></a>Consulte también  
 [Ejecución de la consola de SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

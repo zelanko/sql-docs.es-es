@@ -20,15 +20,14 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd504c18b41480b2d384efc5546f10b957a43bac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764321"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000252"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve información acerca de los recursos del administrador de bloqueos activos actualmente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cada fila representa una solicitud activa al administrador de bloqueos sobre un bloqueo que se ha concedido o está esperando a ser concedido.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "85764321"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un estado de solicitud Granted indica que se ha concedido el bloqueo sobre un recurso al solicitante. Una solicitud en espera indica que la solicitud aún no se ha concedido. La columna **request_status** devuelve los siguientes tipos de solicitud en espera:  
   
 -   Un estado de solicitud Convert indica que el solicitante ya tiene concedida una solicitud para un recurso y está esperando la concesión de una actualización a la solicitud inicial.  
@@ -97,15 +96,15 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 |Tipo de recurso|Descripción del recurso|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|Representa una base de datos.|No disponible|  
-|ARCHIVO|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No disponible|  
+|DATABASE|Representa una base de datos.|No aplicable|  
+|ARCHIVO|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
 |OBJECT|Representa un objeto de la base de datos. Este objeto puede ser una tabla de datos, una vista, un procedimiento almacenado, un procedimiento almacenado extendido o cualquier objeto que tenga un Id. de objeto.|Id. de objeto|  
 |PAGE|Representa una página de un archivo de datos.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**. El identificador de HoBt no está siempre disponible para recursos PAGE, ya que es información adicional que puede proporcionar el autor de la llamada y no todos los autores de llamadas pueden proporcionar esta información.|  
 |KEY|Representa una fila en un índice.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**.|  
-|EXTENT|Representa la extensión de un archivo de datos. Una extensión es un grupo de ocho páginas contiguas.|No disponible|  
+|EXTENT|Representa la extensión de un archivo de datos. Una extensión es un grupo de ocho páginas contiguas.|No aplicable|  
 |RID|Representa una fila física en un montón.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**. El identificador de HoBt no está siempre disponible para recursos RID, ya que es información adicional que puede proporcionar el autor de la llamada y no todos los autores de llamadas pueden proporcionar esta información.|  
-|APPLICATION|Representa un recurso específico de aplicación.|No disponible|  
-|METADATOS|Representa información de metadatos.|No disponible|  
+|APPLICATION|Representa un recurso específico de aplicación.|No aplicable|  
+|METADATOS|Representa información de metadatos.|No aplicable|  
 |HOBT|Representa un montón o un árbol b. Se trata de las estructuras de ruta de acceso básicas.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**.|  
 |ALLOCATION_UNIT|Representa un conjunto de páginas relacionadas, por ejemplo, una partición de índice. Cada unidad de asignación cubre una única cadena del Mapa de asignación de índices (IAM).|Identificador de unidad de asignación. Este valor corresponde a **sys.allocation_units.allocation_unit_id**.|  
   
@@ -199,7 +198,7 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 |Recurso|Formato|Descripción|  
 |--------------|------------|-----------------|  
-|DATABASE|No disponible|El Id. de base de datos ya está disponible en la columna **resource_database_id**.|  
+|DATABASE|No aplicable|El Id. de base de datos ya está disponible en la columna **resource_database_id**.|  
 |ARCHIVO|<file_id>|Id. del archivo representado por este recurso.|  
 |OBJECT|<object_id>|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
 |PAGE|<file_id>:<page_in_file>|Representa el Id. de página y de archivo de la página representada por este recurso.|  
@@ -207,8 +206,8 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
 |EXTENT|<file_id>:<page_in_files>|Representa el Id. de página y de archivo de la extensión representada por este recurso. El Id. de extensión es el mismo que el Id. de página correspondiente a la primera página de la extensión.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Representa el Id. de página y de fila de la fila representada por este recurso. Tenga en cuenta que si el Id. del objeto asociado es 99, este recurso representa una de las ocho zonas de página mixta en la primera página IAM de una cadena IAM.|  
 |APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|Representa el Id. de la entidad de seguridad de base de datos utilizada para asignar el ámbito de este recurso de bloqueo de aplicación. También se incluyen hasta 32 caracteres de la cadena del recurso correspondiente a este recurso de bloqueo de la aplicación. En determinados casos solo pueden mostrarse 2 caracteres porque la cadena completa ya no está disponible. Este comportamiento solo se produce en tiempo de recuperación de la base de datos para bloqueos de aplicaciones que se vuelven a adquirir como parte del proceso de recuperación. El valor hash representa un hash de la cadena de recurso completa correspondiente a este recurso de bloqueo de la aplicación.|  
-|HOBT|No disponible|El Id. de HoBt se incluye como **resource_associated_entity_id**.|  
-|ALLOCATION_UNIT|No disponible|El identificador de unidad de asignación se incluye como **resource_associated_entity_id**.|  
+|HOBT|No aplicable|El Id. de HoBt se incluye como **resource_associated_entity_id**.|  
+|ALLOCATION_UNIT|No aplicable|El identificador de unidad de asignación se incluye como **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

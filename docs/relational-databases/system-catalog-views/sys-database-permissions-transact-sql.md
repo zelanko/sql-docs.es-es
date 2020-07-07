@@ -20,15 +20,14 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775256"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011974"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una fila por cada permiso o permiso de excepción de columnas en la base de datos. En las columnas, hay una fila por cada permiso que sea diferente del permiso de objeto correspondiente. Si el permiso de columna es el mismo que el permiso de objeto correspondiente, no hay ninguna fila para él y el permiso aplicado es el del objeto.  
   

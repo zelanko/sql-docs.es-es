@@ -20,15 +20,14 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c203cef9234c070bcefcc82bea396734123d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738707"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011886"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Devuelve el histograma de estadísticas para el objeto de base de datos especificado (tabla o vista indizada) en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos actual. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
@@ -61,7 +60,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior. |
 |average_range_rows |**real** |Número promedio de filas con valores de columna duplicados dentro de un paso del histograma, excluido el límite superior ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Comentarios  
+ ## <a name="remarks"></a>Observaciones  
  
  El conjunto de resultados de `sys.dm_db_stats_histogram` devuelve información similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM` y también incluye `object_id` , `stats_id` y `step_number` .
 

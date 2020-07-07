@@ -16,15 +16,14 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 593f0b17ead284940d6f22b5983d284ddd37d7d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760719"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009580"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia masiva de datos de texto e imagen
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los valores **Text**, **ntext**e **Image** grandes se copian de forma masiva mediante la función [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Codifique [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para la columna **Text**, **ntext**o **Image** con un puntero *pdata* establecido en NULL que indica que los datos se proporcionarán con **bcp_moretext**. Es importante especificar la longitud exacta de los datos proporcionados para cada columna **Text**, **ntext**o **Image** en cada fila copiada de forma masiva. Si la longitud de los datos de una columna es diferente de la especificada en [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), use [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) para establecer la longitud en el valor adecuado. Un [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) envía todos los datos que no son de**texto**, no**ntext**ni de**imagen** ; a continuación, llame a **bcp_moretext** para enviar los datos **Text**, **ntext**o **Image** en unidades independientes. Las funciones de copia masiva determinan que se han enviado todos los datos para la columna **Text**, **ntext**o **Image** actual cuando la suma de las longitudes de los datos enviados a través de **bcp_moretext** es igual a la longitud especificada en el **bcp_collen** o **bcp_bind**más reciente.  
   

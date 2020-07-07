@@ -11,15 +11,14 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3d7dd27e451f24c6c989eaf674c81519b1e6c7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895006"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012327"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son objetos diseñados para la administración mediante programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede usar SMO para crear aplicaciones de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas. Aunque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una aplicación eficaz y completa para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habrá ocasiones en las que resultará más conveniente usar una aplicación SMO.  
   

@@ -14,15 +14,14 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8628fc41c474ca0c1dc4833af7bcd7c2c1cba408
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6f609a066d06a82edfb8961222d94d0d92cf0915
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789160"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010099"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   

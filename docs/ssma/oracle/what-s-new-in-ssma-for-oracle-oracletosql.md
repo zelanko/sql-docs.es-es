@@ -4,22 +4,31 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 5d1a12d41d7d25154998f39be136266631b6d421
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779562"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011298"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 
 En este artículo se enumeran los cambios SQL Server Migration Assistant (SSMA) para Oracle en cada versión.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+La versión v 8.11 de SSMA para Oracle contiene los siguientes cambios:
+
+* Compatibilidad con subconsultas en `INSERT ... VALUES` Statement
+* Conversión mejorada de la `COMMIT` instrucción
+* Corrección de errores en la conversión de la `CONNECT BY LEVEL` cláusula
+* La lógica de recuperación de errores del analizador se ha actualizado para ser menos expansiva
+* Usar la biblioteca MSAL.NET para la autenticación interactiva Azure Active Directory
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

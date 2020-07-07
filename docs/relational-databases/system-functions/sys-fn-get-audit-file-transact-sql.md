@@ -21,15 +21,14 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
-ms.translationtype: MT
+ms.openlocfilehash: e4e107fea977e70d8b32e4b84c09bfb320cc8b47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009951"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   Devuelve información de un archivo de auditoría creado por una auditoría de servidor en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -127,7 +126,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, Azure SQL Database e instancia administrada<br /><br /> Se usa para registrar información adicional que el usuario desea grabar en el registro de auditoría mediante el **sp_audit_write** procedimiento almacenado. |  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el argumento *file_pattern* pasado a **fn_get_audit_file** hace referencia a una ruta o un archivo que no existe, o si el archivo no es un archivo de auditoría, se devuelve el mensaje de error **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Permisos

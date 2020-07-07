@@ -19,15 +19,14 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24a5c0d5742f495f7e94e0408a6997ecebc47e7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 56831c5cde9a446cb5ecef49d925eea39db5e354
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787650"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010438"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  
   

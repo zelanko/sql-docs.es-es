@@ -12,15 +12,14 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0cf7dd86775187f88c7ce07047ea38434e64ce2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1a8cf47763d1705821cfc70708595185c21cf23c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725097"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009552"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Llamar a SQLColumns sobre una tabla con columnas dispersas
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo, se muestra cómo llamar a SQLColumns sobre una tabla con columnas dispersas definidas mediante ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

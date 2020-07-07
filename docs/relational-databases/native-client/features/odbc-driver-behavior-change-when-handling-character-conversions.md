@@ -10,15 +10,14 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73d448e1a012fd27de748e810940b598b2b89044
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0bce5fa58dfb665d3c4fe23f417a8585a4ec8eb6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773200"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009048"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] controlador ODBC de Native Client (SQLNCLI11.dll) ha cambiado la forma de las conversiones de SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (Max)) y SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (Max)). Las funciones ODBC, como SQLGetData, SQLBindCol y SQLBindParameter, devuelven (-4) SQL_NO_TOTAL como el parámetro indicador de longitud al utilizar el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Las versiones anteriores del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client devolvían un valor de longitud, que puede ser incorrecto.  
   

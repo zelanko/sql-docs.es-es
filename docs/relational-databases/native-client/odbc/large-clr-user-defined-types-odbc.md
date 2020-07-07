@@ -14,15 +14,14 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e07912f0f2f524759d866a5099345f1816913a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787808"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009755"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este tema se describen los cambios realizados en ODBC en SQL Server Native Client para admitir los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85787808"
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de resultados:  
   
-|Tipos de datos de SQL Server|Tipo de datos de SQL|Valor|  
+|Tipos de datos de SQL Server|Tipo de datos de SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -133,7 +132,7 @@ ms.locfileid: "85787808"
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Realizar|  
-|SQL_C_BINARY|Compatible.|  
+|SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Realizar|  
   
  \*Los datos binarios se convierten en una cadena hexadecimal.  
@@ -143,7 +142,7 @@ ms.locfileid: "85787808"
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Realizar|  
-|SQL_C_BINARY|Compatible.|  
+|SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Realizar|  
   
  \*Se produce una conversión de cadena hexadecimal a datos binarios.  

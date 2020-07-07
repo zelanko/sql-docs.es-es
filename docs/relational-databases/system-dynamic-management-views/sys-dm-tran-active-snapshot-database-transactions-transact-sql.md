@@ -20,15 +20,14 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dd4273074d543c97161ce0fdca9b585bb1a6d5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790508"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009375"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta vista de administración dinámica devuelve una tabla virtual de todas las transacciones activas que generan versiones de fila o que pueden tener acceso a ellas. Las transacciones se incluyen en función de una o varias de las siguientes condiciones:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "85790508"
 > [!NOTE]  
 >  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -76,7 +75,7 @@ sys.dm_tran_active_snapshot_database_transactions
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Sys. dm_tran_active_snapshot_database_transactions** notifica las transacciones que tienen asignado un número de secuencia de la transacción (xsn). Este XSN se asigna cuando la transacción tiene acceso por primera vez al almacén de versiones. En una base de datos habilitada para el aislamiento de instantáneas o el aislamiento de lectura confirmada que utiliza las versiones de fila, los ejemplos muestran cuándo se asigna un valor XSN a una transacción:  
   
 -   Si una transacción se ejecuta con el nivel de aislamiento serializable, se asigna un XSN cuando la transacción ejecuta por primera vez una instrucción, como una operación UPDATE, que provoca la creación de una versión de fila.  

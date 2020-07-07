@@ -18,15 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf19a1995f29c6b0635d1a87657b11d70cd668d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719682"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009877"
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabajar con tipos de datos de valores grandes requería un tratamiento especial. Los tipos de datos de valores grandes son aquellos que superan el tamaño de fila máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]se presentó un especificador **máximo** para los tipos de datos **VARCHAR**, **nvarchar** y **varbinary** para permitir el almacenamiento de valores de hasta 2 ^ 31-1 bytes. Las columnas de tabla y [!INCLUDE[tsql](../../../includes/tsql-md.md)] las variables pueden especificar tipos de datos **VARCHAR (Max)**, **nvarchar (Max)** o **varbinary (Max)** .  
   

@@ -20,15 +20,14 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754472"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011966"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una fila para cada entidad de seguridad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,7 +49,7 @@ ms.locfileid: "85754472"
 |**default_language_lcid**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
 |**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario realizar una copia masiva de datos cifrados mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las propiedades de *PasswordLastSetTime* están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y se habilitan tanto CHECK_POLICY como CHECK_EXPIRATION. Consulte [Directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.
 Los valores de la principal_id se pueden volver a usar en caso de que se hayan quitado las entidades de seguridad y, por lo tanto, no se garantice que se incremente cada vez.
   

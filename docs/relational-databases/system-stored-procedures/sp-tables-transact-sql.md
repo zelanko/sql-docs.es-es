@@ -18,15 +18,14 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725513"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85985010"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una lista de objetos que se pueden consultar en el entorno actual. Esto significa cualquier tabla o vista, excepto los objetos sinónimos.  
   
@@ -76,7 +75,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**VARCHAR (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener la máxima interoperatividad, el cliente de la puerta de enlace solo debe dar por supuesta la concordancia del patrón estándar de SQL-92 (los caracteres comodín % y _).  
   
  No siempre se comprueba la información de privilegios acerca del acceso de lectura o de escritura del usuario actual para una tabla específica. Por lo tanto, el acceso no está garantizado. Este conjunto de resultados no solo incluye tablas y vistas, sino también sinónimos y alias para las puertas de enlace a productos DBMS que admiten dichos tipos. Si el atributo de servidor **ACCESSIBLE_TABLES** es Y en el conjunto de resultados de **sp_server_info**, solo se devuelven las tablas a las que puede tener acceso el usuario actual.  

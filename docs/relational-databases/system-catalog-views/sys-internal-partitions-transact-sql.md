@@ -13,15 +13,14 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724665"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002721"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>Sys. internal_partitions (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
   

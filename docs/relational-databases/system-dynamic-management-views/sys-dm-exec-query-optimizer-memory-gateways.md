@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01b0a68658112ebde642dde3f9c1fa0fb1d73c57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: da47c1b31551abd538adca6a447ac57a3fc429ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734741"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005189"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>Sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Devuelve el estado actual de los semáforos de recursos usados para limitar la optimización de consultas simultáneas.
 
@@ -50,7 +49,7 @@ SQL Server requiere el permiso VIEW SERVER STATE en el servidor.
 Azure SQL Database requiere el permiso VIEW DATABASE STATE en la base de datos.
 
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 SQL Server usa un enfoque de puerta de enlace en capas para limitar el número de compilaciones simultáneas permitidas.  Se usan tres puertas de enlace, como pequeño, mediano y grande. Las puertas de enlace ayudan a evitar el agotamiento de los recursos de memoria generales por la memoria de compilación más grande, que requiere consumidores.
 
 Espera en una puerta de enlace como resultado de la compilación diferida. Además de los retrasos en la compilación, las solicitudes limitadas tendrán un asociado RESOURCE_SEMAPHORE_QUERY_COMPILE la acumulación del tipo de espera. El tipo de espera de RESOURCE_SEMAPHORE_QUERY_COMPILE puede indicar que las consultas usan una gran cantidad de memoria para la compilación y que se ha agotado la memoria, o que, como alternativa, hay suficiente memoria disponible en general, pero se han agotado las unidades disponibles en una puerta de enlace específica. La salida de **Sys. dm_exec_query_optimizer_memory_gateways** se puede usar para solucionar problemas de escenarios en los que no había memoria suficiente para compilar un plan de ejecución de consulta.  

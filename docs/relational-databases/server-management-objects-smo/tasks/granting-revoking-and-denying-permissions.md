@@ -16,15 +16,14 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40b45a3b761a2846df714b6d93ed928839cad865
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 4516d94482e70fe704906dec6bd6ba3df36e108c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894106"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001227"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Conceder, revocar y denegar permisos
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   El objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> se utiliza para asignar un conjunto de permisos o un permiso de servidor individual al objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para los permisos en el nivel de servidor, el cesionario hace referencia a un inicio de sesión. Se hace una lista de los inicios de sesión autenticados por Windows como nombres de usuario de Windows. Cuando este ejemplo de código se ejecuta, revoca el permiso del cesionario y comprueba se ha quitado con el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
   

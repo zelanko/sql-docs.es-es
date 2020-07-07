@@ -11,15 +11,14 @@ ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43c40611ea122c06b12556cb1e439103c65fdeb3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a5e0e31418e2399a8d2fcfb35fde2422636d2469
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787112"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003049"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Devuelve una fila por cada acción en cada evento de una sesión de eventos.  
   
@@ -38,12 +37,12 @@ ms.locfileid: "85787112"
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  
 |-|-|-|  
-|De|A|Relación|  
+|De|En|Relación|  
 |Sys. database_event_session_actions. event_session_id|sys.sys. database_event_sessions. event_session_id|Varios a uno|  
 |Sys. database_event_session_actions. event_id<br /><br /> Sys. database_event_session_actions. event_session_id|Sys. database_event_session_events. event_session_id<br /><br /> Sys. database_event_session_events. event_id|Varios a uno|  
   

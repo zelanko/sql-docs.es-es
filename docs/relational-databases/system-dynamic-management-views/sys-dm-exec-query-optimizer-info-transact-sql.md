@@ -20,15 +20,14 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734771"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005228"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve información estadística detallada acerca de la operación del optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar esta vista al optimizar una carga de trabajo para identificar los problemas o las mejoras de la optimización de consultas. Por ejemplo, puede usar el número total de optimizaciones, el valor de tiempo transcurrido y el valor del costo final para comparar las optimizaciones de las consultas de la carga de trabajo actual y los cambios observados durante el proceso de optimización. Algunos contadores proporcionan datos que solo son relevantes para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de diagnósticos internos. Estos contadores se marcan como "Solo para uso interno".  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85734771"
   
 |Nombre|Tipo de datos|Descripción|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
+|**bloque**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
 |**occurrence**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
 |**value**|**float**|Valor promedio de la propiedad por repetición del evento.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
@@ -47,12 +46,12 @@ ms.locfileid: "85734771"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
     
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Sys. dm_exec_query_optimizer_info** contiene las siguientes propiedades (contadores). Todos los valores de repetición son acumulativos y se establecen en 0 cuando se reinicia el sistema. Todos los valores de los campos de valor se establecen en NULL cuando se reinicia el sistema. Todos los valores de columnas de valor que especifican un promedio utilizan el valor de repetición de la misma fila que el denominador en el cálculo del promedio. Todas las optimizaciones de consultas se miden cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina los cambios en **dm_exec_query_optimizer_info**, incluidas las consultas generadas por el sistema y por el usuario. La ejecución de un plan ya almacenado en caché no cambia los valores de **dm_exec_query_optimizer_info**, solo las optimizaciones son significativas.  
   
-|Contador|Repetición|Valor|  
+|Contador|Repetición|Value|  
 |-------------|----------------|-----------|  
-|optimizations|Número total de optimizaciones.|No disponible|  
+|optimizations|Número total de optimizaciones.|No aplicable|  
 |elapsed time|Número total de optimizaciones.|Tiempo promedio transcurrido por optimización de instrucción individual (consulta), en segundos.|  
 |final cost|Número total de optimizaciones.|Costo promedio estimado para un plan optimizado en unidades de costo internas.|  
 |trivial plan|Solo para uso interno|Solo para uso interno|  
@@ -71,26 +70,26 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 |gain stage 1 to stage 2|Solo para uso interno|Solo para uso interno|  
 |timeout|Solo para uso interno|Solo para uso interno|  
 |memory limit exceeded|Solo para uso interno|Solo para uso interno|  
-|insert stmt|Número de optimizaciones que son para instrucciones INSERT.|No disponible|  
-|delete stmt|Número de optimizaciones que son para instrucciones DELETE.|No disponible|  
-|update stmt|Número de optimizaciones que son para instrucciones UPDATE.|No disponible|  
-|contains subquery|Número de optimizaciones de una consulta que contiene al menos una subconsulta.|No disponible|  
+|insert stmt|Número de optimizaciones que son para instrucciones INSERT.|No aplicable|  
+|delete stmt|Número de optimizaciones que son para instrucciones DELETE.|No aplicable|  
+|update stmt|Número de optimizaciones que son para instrucciones UPDATE.|No aplicable|  
+|contains subquery|Número de optimizaciones de una consulta que contiene al menos una subconsulta.|No aplicable|  
 |unnest failed|Solo para uso interno|Solo para uso interno|  
 |tablas|Número total de optimizaciones.|Número promedio de tablas referenciadas por consulta optimizada.|  
-|sugerencias|Número de veces que se ha especificado alguna sugerencia. Las sugerencias contadas incluyen: sugerencias de consulta JOIN, GROUP, UNION y FORCE ORDER, la opción de conjunto FORCE PLAN y las sugerencias de combinación.|No disponible|  
-|order hint|Número de veces que se ha especificado una sugerencia de orden forzada.|No disponible|  
-|join hint|Número de veces que una sugerencia de combinación ha forzado el algoritmo de combinación.|No disponible|  
-|view reference|Número de veces que se ha hecho referencia a una vista en una consulta|No disponible|  
-|remote query|Número de optimizaciones donde la consulta hacía referencia al menos a un origen de datos remoto, como una tabla con un nombre de cuatro partes o una salida de OPENROWSET.|No disponible|  
+|sugerencias|Número de veces que se ha especificado alguna sugerencia. Las sugerencias contadas incluyen: sugerencias de consulta JOIN, GROUP, UNION y FORCE ORDER, la opción de conjunto FORCE PLAN y las sugerencias de combinación.|No aplicable|  
+|order hint|Número de veces que se ha especificado una sugerencia de orden forzada.|No aplicable|  
+|join hint|Número de veces que una sugerencia de combinación ha forzado el algoritmo de combinación.|No aplicable|  
+|view reference|Número de veces que se ha hecho referencia a una vista en una consulta|No aplicable|  
+|remote query|Número de optimizaciones donde la consulta hacía referencia al menos a un origen de datos remoto, como una tabla con un nombre de cuatro partes o una salida de OPENROWSET.|No aplicable|  
 |maximum DOP|Número total de optimizaciones.|Valor promedio de MAXDOP efectivo de un plan optimizado. De forma predeterminada, el MAXDOP efectivo viene determinado por la opción de configuración del servidor **grado máximo de paralelismo** y se puede invalidar para una consulta específica mediante el valor de la sugerencia de consulta MAXDOP.|  
 |maximum recursion level|Número de optimizaciones en las que se ha especificado un nivel de MAXRECURSION mayor que 0 con la sugerencia de consulta.|Nivel promedio de MAXRECURSION en optimizaciones donde se ha especificado un nivel máximo de recursividad con la sugerencia de consulta.|  
 |indexed views loaded|Solo para uso interno|Solo para uso interno|  
 |indexed views matched|Número de optimizaciones donde han coincidido una o más vistas indizadas.|Número promedio de vistas coincidentes.|  
 |indexed views used|Número de optimizaciones donde se han utilizado una o más vistas indizadas en el plan de salida después de la coincidencia.|Número promedio de vistas utilizadas.|  
 |indexed views updated|Número de optimizaciones de una instrucción DML que producen un plan que mantiene una o más vistas indizadas.|Número promedio de vistas mantenidas.|  
-|dynamic cursor request|Número de optimizaciones en las que se ha especificado una solicitud de cursor dinámico.|No disponible|  
-|fast forward cursor request|Número de optimizaciones en las que se ha especificado una solicitud de cursor de avance rápido.|No disponible|  
-|merge stmt|Número de optimizaciones que son para instrucciones MERGE.|No disponible|  
+|dynamic cursor request|Número de optimizaciones en las que se ha especificado una solicitud de cursor dinámico.|No aplicable|  
+|fast forward cursor request|Número de optimizaciones en las que se ha especificado una solicitud de cursor de avance rápido.|No aplicable|  
+|merge stmt|Número de optimizaciones que son para instrucciones MERGE.|No aplicable|  
   
 ## <a name="examples"></a>Ejemplos  
   

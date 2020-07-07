@@ -11,15 +11,14 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46cf671dd8a261130676c13dca09b1b9ad33a3c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 34e569b0e42a569591f8e3a1e28f47586b9765d9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773323"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004574"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Mostrar metadatos de columna y del catálogo para columnas dispersas (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo se crea una tabla con tres columnas: una columna dispersa, otra que no es dispersa y una tercera de conjunto de columnas. A continuación, el ejemplo muestra las marcas OLE DB que muestran los metadatos de columna y de catálogo para la columna no dispersa y para la columna de conjunto de columnas.  
   

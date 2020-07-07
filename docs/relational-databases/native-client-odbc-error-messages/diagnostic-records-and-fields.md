@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775967"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002374"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros y campos de diagnóstico
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los registros de diagnóstico se asocian a controladores de entorno, conexión, instrucción o descriptor de ODBC. Cuando una función de ODBC genera un código de retorno distinto de SQL_SUCCESS o SQL_INVALID_HANDLE, el identificador que llama la función incluye registros de diagnóstico asociados que contienen mensajes informativos o de error. Estos registros se conservan hasta que se llama a otra función con el mismo identificador, momento en el cual se descartan. No hay ningún límite al número de registros de diagnóstico que pueden estar asociados a un identificador en un momento determinado.  
   

@@ -4,22 +4,30 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779057"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003878"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+La versión v 8.11 de SSMA para DB2 contiene los siguientes cambios:
+
+* Compatibilidad con DB2 para i (v 7.1 y versiones posteriores)
+* Traducción de `SQLSTATE` y`SQLCODE`
+* Mensaje de error de conversión para los operadores de efectos secundarios dentro de una función
+* Usar la biblioteca MSAL.NET para la autenticación interactiva Azure Active Directory
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

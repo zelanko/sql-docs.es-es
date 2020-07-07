@@ -20,15 +20,14 @@ ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30eed5a2832f586cc25224c7fbd2e9fdc7df3777
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: cd0623862186d8e4a69bff98a15118c4bebe5113
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738686"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85989565"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve la actividad de asignación y desasignación de páginas por tarea de la base de datos.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "85738686"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las páginas IAM no se incluyen en ninguno de los recuentos de páginas incluidos en esta vista.  
   
  Los contadores de páginas se inicializan en cero (0) al principio de la solicitud. Estos valores se agregan en el nivel de sesión cuando finaliza la solicitud. Para obtener más información, consulte [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  
@@ -91,7 +90,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|Uno a uno|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|Uno a uno|  

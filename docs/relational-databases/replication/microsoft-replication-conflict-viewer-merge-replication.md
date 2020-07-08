@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722041"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El Visor de conflictos de replicación le permite ver los conflictos que hayan podido producirse durante la sincronización de la replicación. Los conflictos ocurren cuando los mismos datos se modifican en dos servidores diferentes, por ejemplo, en un publicador y en un suscriptor, o en dos suscriptores diferentes. La replicación soluciona automáticamente los conflictos mediante el solucionador de conflictos seleccionado durante la creación del artículo. Sin embargo, el Visor de conflictos de replicación le permite elegir una resolución diferente para el conflicto si fuese necesario. Pueden producirse los siguientes conflictos:  
   
 -   Conflictos de actualización. Los conflictos de actualización se producen cuando se modifican los mismos datos en dos ubicaciones. Una de las modificaciones "gana", mientras que la otra "pierde". Existe la opción de mantener los datos existentes (los datos que ganan), sobrescribir los datos existentes con los datos con los que se produce el conflicto (los datos que pierden) o mezclar los datos que ganan y los que pierden para actualizar los datos existentes.  

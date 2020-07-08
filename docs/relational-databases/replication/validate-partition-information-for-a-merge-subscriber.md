@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da57b7586fb80346dda466004a9cd47a3bb08884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27166e2218d8e2c67cf00f0835872dbf31bb5fb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720650"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Validar la información de particiones para un suscriptor de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Al definir un filtro de fila con parámetros para una publicación de combinación, se utiliza una función que hace referencia a la información del suscriptor, como el nombre de inicio de sesión del suscriptor. De manera predeterminada, la replicación valida la información del suscriptor basándose en esa función antes de cada sincronización y cada vez que se aplica una instantánea al suscriptor. El proceso de validación garantiza que los datos se dividan correctamente para cada suscriptor. El comportamiento de la validación se controla con la propiedad de publicación **validate_subscriber_info**, que se puede cambiar con [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) o en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación**. Para obtener más información acerca de cómo cambiar las propiedades de la publicación, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ## <a name="how-partition-validation-works"></a>Cómo funciona la validación de particiones  

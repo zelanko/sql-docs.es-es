@@ -3,7 +3,6 @@ title: Habilitación o deshabilitación de sumas de comprobación de copia de se
 description: En este artículo se muestra cómo habilitar o deshabilitar las sumas de comprobación de copia de seguridad de una base de datos en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/17/2017
-ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3552fc8ccc44522d7bd2a520d5b9ad646ee586d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3675b4557bae7a394ef5b1b3ac47d2d1da9b2af3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718144"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Habilitación o deshabilitación de sumas de comprobación de copia de seguridad durante copia de seguridad o restauración (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo habilitar o deshabilitar sumas de comprobación de copia de seguridad cuando se realiza una copia de seguridad o se restaura una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

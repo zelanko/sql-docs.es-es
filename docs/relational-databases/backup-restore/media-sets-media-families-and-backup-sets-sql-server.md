@@ -5,6 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: af54a71c97397954db3a4aa86acccd64a9f8afa4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8dd7099a8460d72104a3e6616d75bc5586c82c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718051"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está pensada para lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
   Este tema describe el formato que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los medios de copia de seguridad, la correspondencia entre los medios y los dispositivos de copia de seguridad, la organización de las copias de seguridad en los medios y varias consideraciones para los conjuntos y las familias de medios. El tema también describe los pasos inicializar o dar formato a los medios de copia de seguridad antes de usarlos por primera vez o reemplazar un conjunto de medios anterior por otro nuevo, cómo sobrescribir los conjuntos de copia de seguridad anteriores en un conjunto de medios y cómo agregar nuevos conjuntos de copia de seguridad a un conjunto de medios.  

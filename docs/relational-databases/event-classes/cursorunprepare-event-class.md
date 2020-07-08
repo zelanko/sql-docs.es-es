@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719848"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **CursorUnprepare** proporciona información sobre los eventos de cancelación de preparación de cursor que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de cancelación de preparación de cursor se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] descarta un plan de ejecución.  
   
  Incluya la clase de evento **CursorUnprepare** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorUnprepare** se incluye en un seguimiento, la cantidad de carga que se genera depende de la frecuencia con la que los cursores se utilizan en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ece8a9d031b5b85c7da672a50e56666f3814cd20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3abf911faf82a4a20ed99c2f89d4171300981de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718050"
 ---
 # <a name="full-database-backups-sql-server"></a>Copias de seguridad completas de bases de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Una copia de seguridad completa de la base de datos crea una copia de seguridad de toda la base de datos, Esto incluye la parte del registro de transacciones para poder recuperar la base de datos completa después de restaurar una copia de seguridad completa de la base de datos. Las copias de seguridad completas representan la base de datos en el momento en que finalizó la copia de seguridad.  
   
 > [!TIP]  

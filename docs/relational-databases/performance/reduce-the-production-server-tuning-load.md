@@ -19,15 +19,15 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719580"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reducir la carga de optimización del servidor de producción
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Cómo utiliza el Asistente para la optimización de motor de base de datos un servidor de prueba  

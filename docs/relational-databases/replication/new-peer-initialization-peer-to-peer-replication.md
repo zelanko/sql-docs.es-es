@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5841e80156b177d63e5975498a667e3f95cabcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a89f539aa8d03b14be4dbcd81e08c308a2c72d30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721218"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Inicialización de nuevos nodos del mismo nivel (replicación punto a punto)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use la página **Inicialización de nuevos nodos del mismo nivel** para especificar cómo se han inicializado las bases de datos del mismo nivel. (Antes de completar este asistente se deben inicializar las bases de datos del mismo nivel). Las bases de datos del mismo nivel se inicializan manualmente o bien mediante la funcionalidad **initialize with backup** que proporciona la replicación transaccional. (La replicación transaccional punto a punto no permite inicializar bases de datos del mismo nivel mediante una instantánea). Si diferentes bases de datos del mismo nivel se deben inicializar con métodos diferentes, debe agregarlas por separado mediante la ejecución del asistente varias veces.  
   
 ## <a name="options"></a>Opciones  

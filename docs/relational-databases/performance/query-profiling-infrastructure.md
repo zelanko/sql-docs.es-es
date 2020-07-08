@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719560"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ofrece la posibilidad de acceder a información en tiempo de ejecución sobre los planes de ejecución de consultas. Una de las acciones más importantes cuando se produce un problema de rendimiento es obtener una descripción precisa de la carga de trabajo que se está ejecutando y de cómo se controla el uso de recursos. Por eso es importante el acceso al [plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 

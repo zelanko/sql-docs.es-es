@@ -3,7 +3,6 @@ title: Uso de una copia de seguridad administrada en Azure
 description: Aprenda a habilitar la copia de seguridad administrada de SQL Server para Microsoft Azure en el nivel de base de datos y de instancia, así como a habilitar las notificaciones y supervisar la actividad de copia de seguridad.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
-ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -12,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e4729b5576b7c3558c99369cc80a68a236f2cf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718102"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitación de la copia de seguridad administrada de SQL Server en Azure
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con la configuración predeterminada en el nivel de la base de datos y de la instancia. También se describe cómo habilitar las notificaciones de correo electrónico y cómo supervisar la actividad de copia de seguridad.  
   
  En este tutorial se usa Azure PowerShell. Antes de iniciar el tutorial, [descargue e instale Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

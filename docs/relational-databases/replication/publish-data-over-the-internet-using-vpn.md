@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9200883cb64877d8b4fc2c35e6f19b28df4715c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b7fc72fedddf18927ab4f90ac3e93d31ae44481
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720835"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Publicar datos a través de Internet mediante VPN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La tecnología de Red privada virtual (VPN) permite a los usuarios que trabajan en su casa, oficinas subsidiarias, clientes remotos y otras empresas conectarse a una red corporativa por Internet, al tiempo que se mantiene una comunicación segura. Los usuarios pueden utilizar la autenticación de Windows como si estuvieran en una red de área local (LAN). Todos los tipos de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden replicar datos a través de una VPN, pero se puede usar la sincronización web si se está empleando la replicación de mezcla, porque con la sincronización web no es necesario usar una VPN. Para más información, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Una VPN incluye el software cliente para que los equipos se conecten a través de Internet (o incluso en una Intranet, en casos especiales) al software de un equipo dedicado o servidor. Opcionalmente, se utiliza el cifrado en ambos extremos y métodos de autenticación de usuario. La conexión VPN a través de Internet funciona lógicamente como un vínculo de red de área extensa (WAN) entre los sitios.  

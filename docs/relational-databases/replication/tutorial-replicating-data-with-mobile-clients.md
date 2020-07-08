@@ -14,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720691"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La replicación de mezcla es una buena solución al problema de mover datos entre un servidor central y clientes móviles que solo se conectan en determinadas ocasiones. Al usar los asistentes para replicación, es más fácil configurar y administrar una topología de replicación de mezcla. 
 
 Este tutorial le mostrará cómo configurar una topología de replicación para clientes móviles. Para más información sobre la replicación de mezcla, vea [Replicación de mezcla](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).

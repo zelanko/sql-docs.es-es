@@ -12,15 +12,15 @@ ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b23b9f20814c5cd00aa977223e9a5a4e6d3b5924
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc8aec7c4027fb55ace2fc8256d8f2b3439c2f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635558"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Audit App Role Change Password** se produce cuando se cambia la contraseña de un rol de aplicación.  
   
 ## <a name="audit-app-role-change-password-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit App Role Change Password  

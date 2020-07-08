@@ -12,15 +12,17 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa33ba9ef7b956e94a66137f6a3c342034542b9a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d7d4d938bb2f214b540c4795b4318693a1cfdb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635875"
 ---
 # <a name="attention-event-class"></a>Attention, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+
   La clase de eventos **Attention** indica que ha ocurrido un evento de atención, como conexiones de cliente interrumpidas, solicitudes de interrupción de cliente o cancelaciones. Las operaciones de cancelación también pueden considerarse parte de la implementación de tiempos de espera del controlador de acceso a datos.  
   
 ## <a name="attention-event-class-data-columns"></a>Columnas de datos de la clase de eventos Attention  

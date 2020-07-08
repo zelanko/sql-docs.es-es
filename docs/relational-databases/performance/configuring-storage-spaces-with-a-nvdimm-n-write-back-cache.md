@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655748"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 es compatible con dispositivos de NVDIMM-N que permiten operaciones de entrada y salida (E/S) extremadamente rápidas. Una manera atractiva de usar dichos dispositivos es usarlos como una memoria caché con reescritura para obtener latencias de escritura bajas. En este tema se describe cómo configurar un espacio de almacenamiento reflejado con una caché con reescritura reflejada de NVDIMM-N como una unidad virtual para almacenar el registro de transacciones de SQL Server. Si quiere usarlo también para almacenar tablas de datos u otros datos, puede incluir más discos en el grupo de almacenamiento o crear varios grupos si el aislamiento es importante.  
   
  Para ver un vídeo de Channel 9 con esta técnica, vea [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016 (Usar una memoria no volátil (NVDIMM-N) como almacenamiento en bloque en Windows Server 2016)](https://channel9.msdn.com/Events/Build/2016/P466).  

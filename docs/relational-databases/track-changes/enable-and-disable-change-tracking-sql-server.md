@@ -18,15 +18,15 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 075d192e2fba3849ae1293cce6f9125f4190ab4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3820ea3e450e00f2cdf812e52170ada80495c74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638897"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar y deshabilitar el seguimiento de cambios (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se describe cómo habilitar y deshabilitar el seguimiento de cambios para una tabla y una base de datos.  
   

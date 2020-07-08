@@ -19,15 +19,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e838636d3d52fa05933601c2ad9fae1f6006f7b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629170"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Anteriormente, el contenido de las propiedades de documento no podían distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
   
  El [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) asociado (IFilter) determina si la búsqueda de propiedades es posible en un tipo de documento específico. En algunos tipos de documento, el IFilter asociado extrae algunas o todas las propiedades definidas para ese tipo de documento, así como el contenido del cuerpo del documento. Puede configurar un índice de texto completo para que admita la búsqueda de propiedades solo en aquellas propiedades extraídas por un IFilter durante la indización de texto completo. Entre los IFilters que extraen muchas propiedades de documento se encuentran los IFilters para tipos de documento de Microsoft Office (como .docx, .xlsx y .pptx). Por otra parte, el IFilter XML no emite propiedades.  

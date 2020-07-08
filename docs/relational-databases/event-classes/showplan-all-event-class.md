@@ -12,15 +12,15 @@ ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7576217c87fa43a1d10bf87f916d34dff7ff2716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1951f39021c98c81f2007e6df4418e73c92e4319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641975"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos Showplan All se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. La información contenida es un subconjunto de la disponible en las clases de eventos Showplan XML Statistics Profile o Showplan XML.  
   
  La clase de eventos Showplan All muestra datos completos de tiempo de compilación y, por tanto, los seguimientos que contienen Showplan All pueden implicar una importante sobrecarga en el rendimiento. Para minimizar este riesgo, limite el uso de esta clase de eventos a los seguimientos que supervisen problemas específicos durante periodos breves.  

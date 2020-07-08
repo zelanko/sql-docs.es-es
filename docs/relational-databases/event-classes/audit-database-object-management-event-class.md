@@ -12,15 +12,15 @@ ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e73736a0dd7d13730e74b1364daecb6933f79ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a09428b2554e240e0caef03077ff357c02bb48ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630439"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Audit Database Object Management** se genera al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos tales como esquemas.  
   
 > [!NOTE]  

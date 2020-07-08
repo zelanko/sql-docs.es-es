@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a05de3b0fbdec71ec15f221158dc9f2e362da8f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: d38a541f1c323199e02a86f0c0e23cd5b5620659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632329"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Ejemplo: Especificación de las directivas ID e IDREFS
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El atributo de un elemento se puede especificar como un atributo de tipo **ID** y el atributo **IDREFS** puede usarse para hacer referencia a él. De esta forma se habilitan vínculos dentro de los documentos; esto es similar a las relaciones entre la clave principal y la clave externa en las bases de datos relacionales.  
   

@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629447"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Las funciones [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64763c4878da010e861e1707092cdab1c55dedc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: daea91039b7166036a105fa55b3951fcfda04ea6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635711"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Audit Add Member to DB Role** tiene lugar cuando se agrega o quita un inicio de sesión en un rol de base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_addrolemember**, **sp_changegroup**y **sp_droprolemember** .  
   
 ## <a name="audit-add-member-to-db-role-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Add Member to DB Role  

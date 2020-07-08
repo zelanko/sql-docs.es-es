@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655218"
 ---
 # <a name="start-system-monitor-windows"></a>Iniciar el Monitor de sistema (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el Monitor de sistema para supervisar el uso de los recursos del sistema. Recopilar y ver datos de rendimiento en tiempo real en forma de contadores. Puede utilizar contadores para recursos de servidor, como el uso de la memoria y el procesador. También puede utilizarlas para muchos recursos de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bloqueos y transacciones.  
   
 ## <a name="start-system-monitor-in-windows"></a>Iniciar el Monitor de sistema en Windows  

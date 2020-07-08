@@ -11,15 +11,15 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85293f063efa905d83ae8a07e9f66f8f36239a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629605"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   SQL Server 2016 incorpora análisis operativos en tiempo real, esto es, la posibilidad de ejecutar simultáneamente análisis y cargas de trabajo OLTP en las mismas tablas de base de datos. Aparte de poder ejecutar análisis en tiempo real, también puede prescindir del uso de ETL y de un almacén de datos.  
   

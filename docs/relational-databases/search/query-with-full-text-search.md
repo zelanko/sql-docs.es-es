@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629247"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Escriba consultas de texto completo mediante los predicados **CONTAINS** y **FREETEXT** y las funciones de conjunto de filas **CONTAINSTABLE** y **FREETEXTTABLE** con la instrucción **SELECT**. En este artículo se proporcionan ejemplos de cada predicado y función, para que le resulte más fácil elegir cuál le conviene más.
 
 -   Para hacer coincidir palabras y frases, use **CONTAINS** y **CONTAINSTABLE**.

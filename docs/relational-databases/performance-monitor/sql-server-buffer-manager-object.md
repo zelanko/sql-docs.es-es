@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656450"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Buffer Manager (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Buffer Manager** proporciona contadores para supervisar cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza:  
   
 -   La memoria para almacenar las páginas de datos.  

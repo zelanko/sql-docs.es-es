@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631367"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema solamente es pertinente para copias de seguridad y restauración de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
   
  Una *copia del final del registro* captura las entradas del registro de las que todavía no se ha realizado copia de seguridad (el *final del registro*) para evitar la pérdida de trabajo y mantener intacta la cadena de registros. Para poder recuperar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al último momento, debe realizar una copia del final del registro de transacciones. La copia del final del registro será la copia de seguridad de interés en el plan de recuperación de la base de datos.  

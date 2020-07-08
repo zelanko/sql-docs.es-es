@@ -12,15 +12,15 @@ ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c14ba04bc487552f99f955d75df947b3676bbf44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fda4e9cce7d090873ea016e7df71f52fa5ba2f19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641986"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Log File Auto Grow** indica que el archivo de registro creció automáticamente. Este evento no se desencadena si el archivo de registro se aumentó explícitamente mediante ALTER DATABASE.  
   
  Incluya la clase de eventos **Log File Auto Grow** en seguimientos que supervisen el crecimiento del archivo de registro. Cuando esta clase de eventos se incluye en un seguimiento, la cantidad de sobrecarga será baja a menos que el archivo de registro crezca automáticamente con frecuencia.  

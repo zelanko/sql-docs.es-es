@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6485a99d759d4c4b09ec2b78946f7e1aecd46204
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 11f6ac4dbc4c4955b05f43ce65f5da231820c3da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656511"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>Objeto SQL Server, Broker TO Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto de rendimiento SQLServer:Broker To Statistics informa del número de veces que los cuadros de diálogo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] solicitan objetos de transmisión y con qué frecuencia se escriben los objetos de transmisión en **tempdb**.  
   
  Los objetos de transmisión registran el estado de las transmisiones de mensajes para un diálogo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Están almacenados en la memoria. Para liberar memoria, [!INCLUDE[ssSB](../../includes/sssb-md.md)] escribe periódicamente lotes de objetos de transmisión inactivos en las tablas de trabajo de **tempdb**.  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 4fd20f632cd99151888c6e68b396690ef332fe26
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a1938b5eea673d5b62525a480f6cc03c7e13e5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632106"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve el valor **context_info** establecido para la sesión o lote actual, o derivada del uso de la instrucción [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).
   

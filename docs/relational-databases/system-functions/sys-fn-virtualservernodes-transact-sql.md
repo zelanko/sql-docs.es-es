@@ -23,15 +23,14 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059192"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091669"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Devuelve una lista de nodos de la instancia en clúster de conmutación por error en los que se puede ejecutar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta información es útil en entornos de clústeres de conmutación por error.  
   
@@ -48,12 +47,12 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
- Si el servidor actual es un servidor en clúster, **fn_virtualservernodes** devuelve una lista de nodos de instancia en clúster de conmutación por error en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los que se ha definido esta instancia de.  
+ Si el servidor actual es un servidor en clúster, **fn_virtualservernodes** devuelve una lista de nodos de instancia en clúster de conmutación por error en los que se ha definido esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Si la instancia del servidor actual no es un servidor en clúster, **fn_virtualservernodes** devuelve un conjunto de filas vacío.  
   
 ## <a name="permissions"></a>Permisos  
- El usuario debe tener el permiso VIEW SERVER STATE para la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
+ El usuario debe tener el permiso VIEW SERVER STATE para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza `fn_virtualservernodes` para realizar una consulta en una instancia de servidor en clúster:  

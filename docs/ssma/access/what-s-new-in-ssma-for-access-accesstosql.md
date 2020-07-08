@@ -10,11 +10,11 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978857"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091769"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 
@@ -213,7 +213,7 @@ La versión de vista previa de marzo de 2016 de SSMA para Access agrega compatib
 La versión de mantenimiento de enero de 2016 de SSMA para Access contiene los cambios siguientes:
 
 * Función no válida corregida para el valor predeterminado de un campo GUID (RFC 3894811).
-* Se corrigió el bloqueo en la importación de registros a SQL Database (Azure) (RFC 4919573).
+* Se corrigió un problema que hacía que el sistema dejara de responder al importar registros a SQL Database (Azure) (RFC 4919573).
 * Se ha agregado el elemento de menú Ver registro a SSMA (RFC 5706203).
 * Telemetría agregada.
 

@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011601"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091549"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,8 +166,8 @@ Este comando restablece todos los contadores en 0.
 |CONNECTION_ENDPOINT_LOCK |Exclusivamente para uso interno. <br /> **Válido para** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones posteriores.| 
 |COUNTRECOVERYMGR |Exclusivamente para uso interno. <br /> **Válido para** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] y versiones posteriores.| 
 |CREATE_DATINISERVICE |Exclusivamente para uso interno. <br /> **Válido para** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] y versiones posteriores.| 
-|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso de consumidor espera a que un subproceso de productor envíe filas. Se trata de una parte normal de la ejecución de consultas en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Tiene lugar con planes de consulta paralelos al sincronizar el iterador de intercambio del procesador de consultas y al generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.<br /> **Nota:** A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , esperas cxpacket solo hace referencia a la sincronización del iterador de intercambio del procesador de consultas y a la generación de filas para los subprocesos de consumidor. Se realiza un seguimiento de los subprocesos de consumidor por separado en el tipo de espera CXCONSUMER.| 
+|CXCONSUMER<a name="cxconsumer"></a>|Tiene lugar con planes de consulta paralelos cuando un subproceso de consumidor (primario) espera a que un subproceso de productor envíe filas. Las esperas de CXCONSUMER se deben a un iterador de Exchange que se queda sin filas de su subproceso de productor. Se trata de una parte normal de la ejecución de consultas en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|ESPERAS CXPACKET<a name="cxpacket"></a>|Tiene lugar con planes de consulta paralelos al sincronizar el iterador de intercambio del procesador de consultas y al generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para el paralelismo o reducir el grado máximo de paralelismo (MaxDOP).<br /> **Nota:** A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , esperas cxpacket solo hace referencia a la sincronización del iterador de intercambio del procesador de consultas y al generar filas. Si los subprocesos de consumidor son demasiado lentos, el búfer de iterador de Exchange puede llenarse y provocar esperas esperas CXPACKET. Se realiza un seguimiento de los subprocesos de consumidor por separado en el tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Tiene lugar durante un examen de intervalo en paralelo.| 
 |DAC_INIT |Tiene lugar mientras se inicializa la conexión de administrador dedicada.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Exclusivamente para uso interno. <br /> **Válido para** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] y versiones posteriores.| 

@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1e89e4901cf8e0bb5674038bfd8fe74bc637511
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814799"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053049"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>Sys. sp_rda_get_rpo_duration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Obtiene el número de horas de datos migrados que SQL Server conserva en una tabla de ensayo para ayudar a garantizar una restauración completa de la base de datos remota de Azure, en caso de que sea necesaria una restauración a un momento dado. 
   
@@ -47,7 +46,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>Permisos    
  Requiere permisos de db_owner.    
     
-## <a name="remarks"></a>Comentarios    
+## <a name="remarks"></a>Observaciones    
  Cambie el valor ejecutando [Sys. sp_rda_set_rpo_duration &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Consulte también    

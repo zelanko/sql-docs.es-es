@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d9b7a733acaf5f6136f6746b313c30c03f63683
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 65fcc8dc4054c3aa7b55a543acb1aeebc9bd3bcd
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834123"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052907"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>Sys. resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Devuelve la configuración del grupo de recursos externos almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada fila de la vista determina la configuración de un grupo.

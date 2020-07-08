@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544359"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091579"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
@@ -69,7 +68,7 @@ ms.locfileid: "84544359"
   
      En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
   
-     Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores) se usa con bastante frecuencia.  
+     Otras regiones (por ejemplo, Hong Kong RAE y Macao RAE) también usan chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores) se usa con bastante frecuencia.  
   
 -   Para el japonés, la intercalación utiliza con más frecuencia es Japanese_CI_AS. Japanese_XJIS_100 se usa en instalaciones que admiten [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 suele aparecer en proyectos de migración de datos, con datos que se originan en plataformas que no son de Windows o en orígenes de datos distintos al motor de base de datos relacional de SQL Server.  
   
@@ -161,5 +160,3 @@ ms.locfileid: "84544359"
 ## <a name="see-also"></a>Consulte también  
  [Escenarios de globalización para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Escribir instrucciones Transact-SQL internacionales](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

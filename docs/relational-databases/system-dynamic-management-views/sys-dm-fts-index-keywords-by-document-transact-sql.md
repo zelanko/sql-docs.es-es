@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078560"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091589"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Devuelve información sobre el contenido de nivel de documento de un índice de texto completo asociado a la tabla especificada.  
   
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Cuántas veces aparece una palabra clave en el índice de texto completo; es decir:  
   
-     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) la **palabra clave**=Where*keyword_value* )  
+     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) **palabra clave** = Where *keyword_value* )  
   
 -   Número de veces que una palabra clave aparece en un documento o fila determinados.  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  Cuando la columna de clave de texto completo es un tipo de datos entero, como se recomienda, document_id se asigna directamente al valor de clave de texto completo de la tabla base.  
   
- Por el contrario, cuando la columna de clave de texto completo utiliza un tipo de datos que no es entero, document_id no representa la clave de texto completo en la tabla base. En este caso, para identificar la fila de la tabla base devuelta por dm_fts_index_keywords_by_document, debe combinar esta vista con los resultados devueltos por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Para poder combinarlos, debe almacenar la salida del procedimiento almacenado en una tabla temporal. A continuación, puede combinar la columna document_id de dm_fts_index_keywords_by_document con la columna DocId que este procedimiento almacenado devuelve. Tenga en cuenta que una columna de **marca** de tiempo no puede recibir valores en el momento de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]inserción, porque los genera automáticamente. Por lo tanto, la columna **timestamp** debe convertirse en columnas **varbinary (8)** . En el ejemplo siguiente se muestran estos pasos. En este ejemplo, *table_id* es el identificador de la tabla, *database_name* es el nombre de la base de datos y *TABLE_NAME* es el nombre de la tabla.  
+ Por el contrario, cuando la columna de clave de texto completo utiliza un tipo de datos que no es entero, document_id no representa la clave de texto completo en la tabla base. En este caso, para identificar la fila de la tabla base devuelta por dm_fts_index_keywords_by_document, debe combinar esta vista con los resultados devueltos por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Para poder combinarlos, debe almacenar la salida del procedimiento almacenado en una tabla temporal. A continuación, puede combinar la columna document_id de dm_fts_index_keywords_by_document con la columna DocId que este procedimiento almacenado devuelve. Tenga en cuenta que una columna de **marca** de tiempo no puede recibir valores en el momento de la inserción, porque los genera automáticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por lo tanto, la columna **timestamp** debe convertirse en columnas **varbinary (8)** . En el ejemplo siguiente se muestran estos pasos. En este ejemplo, *table_id* es el identificador de la tabla, *database_name* es el nombre de la base de datos y *TABLE_NAME* es el nombre de la tabla.  
   
 ```  
 USE database_name;  
@@ -119,7 +118,7 @@ GO
  En el ejemplo siguiente se muestra el contenido del índice de texto completo en el nivel de documento en la tabla `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks2012`.  
   
 > [!NOTE]  
->  Puede crear este índice ejecutando el ejemplo proporcionado para la `HumanResources.JobCandidate` tabla en [create fulltext index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Puede crear este índice ejecutando el ejemplo proporcionado para la `HumanResources.JobCandidate` tabla en [CREATE FULLTEXT index &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   

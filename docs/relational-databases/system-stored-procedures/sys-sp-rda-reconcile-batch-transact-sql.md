@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40fb2b497f799bc03551ff113c3b779510d1dee1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827409"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053241"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>Sys. sp_rda_reconcile_batch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Concilia el ID. de lote almacenado en la tabla de SQL Server habilitada para Stretch con el identificador de lote almacenado en la tabla remota de Azure.  
   
@@ -49,7 +48,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>Permisos  
  Requiere permisos de db_owner.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si desea eliminar los datos que ya se han migrado a Azure, haga lo siguiente.  
   
 1.  Pausar la migración de datos. Para más información, vea [Pausa y reanudación de la migración de datos &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  

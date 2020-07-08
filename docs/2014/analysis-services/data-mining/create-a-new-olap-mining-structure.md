@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523791"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091599"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   Puede utilizar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utiliza los datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
@@ -41,13 +40,13 @@ ms.locfileid: "84523791"
   
      Por ejemplo, si intenta identificar agrupaciones de clientes, puede seleccionar la dimensión Customer; si intenta analizar las compras entre las distintas transacciones, puede seleccionar la dimensión Internet Sales Order Details. No está obligado a utilizar únicamente los datos de esta dimensión, pero esta debería contener atributos importantes para su uso en el análisis.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 6.  En la página **Seleccionar la clave de caso** , en **Atributos**, seleccione el atributo que se utilizará como clave de la estructura de minería de datos y, a continuación, haga clic en **Siguiente**.  
   
      Normalmente, el atributo utilizado como clave para la estructura de minería de datos es también una clave para la dimensión y aparecerá seleccionado.  
   
-7.  En la página **Seleccionar columnas de nivel de caso** , en **Atributos y medidas relacionados**, seleccione los atributos y las medidas que contengan los valores que desea agregar a la estructura de minería de datos como datos de los casos. Haga clic en **Next**.  
+7.  En la página **Seleccionar columnas de nivel de caso** , en **Atributos y medidas relacionados**, seleccione los atributos y las medidas que contengan los valores que desea agregar a la estructura de minería de datos como datos de los casos. Haga clic en **Siguiente**.  
   
 8.  En la página **Especificar el uso de las columnas del modelo de minería** , en **Estructura del modelo de minería de datos**, establezca primero la columna de predicción y, a continuación, elija las columnas que desea utilizar como entradas.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "84523791"
   
      Tenga en cuenta que las columnas que ha designado como claves no se pueden utilizar para la entrada o la predicción.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 9. También puede agregar y quitar tablas anidadas a la estructura de minería de datos en la página **Especificar el uso de las columnas del modelo de minería** , utilizando **Agregar tablas anidadas** y **Tablas anidadas**.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "84523791"
     > [!NOTE]  
     >   Los modelos de minería de datos OLAP no admiten el uso de la característica **Detectar** para detectar automáticamente si una columna contiene datos continuos o discretos.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 11. En la página **Segmentar el cubo de origen** , puede filtrar los datos que se utilizan para crear la estructura de minería de datos.  
   
@@ -102,13 +101,13 @@ ms.locfileid: "84523791"
   
     -   **Expresión de filtro**: escriba un valor o una expresión que se usará como condición de filtro, o utilice la lista desplegable para seleccionar un valor en la lista de miembros en el nivel especificado de la jerarquía.  
   
-         Por ejemplo, si seleccionó [Geography] como dimensión y [Region Country Name] como nivel de jerarquía, la lista desplegable contendrá todos los países válidos que puede usar como condición de filtro. Puede hacer selecciones múltiples. Como resultado, los datos de la estructura de minería de datos estarán limitados a los datos del cubo de estas áreas geográficas.  
+         Por ejemplo, si seleccionó [Geography] como dimensión y [Region Country name] como nivel de jerarquía, la lista desplegable contiene todos los países o regiones válidos que puede usar como una condición de filtro. Puede hacer selecciones múltiples. Como resultado, los datos de la estructura de minería de datos estarán limitados a los datos del cubo de estas áreas geográficas.  
   
     -   **Parámetros**: omita esta casilla. Este cuadro de diálogo admite varios escenarios de filtrado de cubos y esta opción no es relevante para generar una estructura de minería de datos.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
-12. En la página **Dividir los datos en conjuntos de aprendizaje y conjuntos de pruebas** , especifique el porcentaje de los datos de la estructura de minería de datos que va a reservar para realizar pruebas, o especifique el número máximo de casos de prueba. Haga clic en **Next**.  
+12. En la página **Dividir los datos en conjuntos de aprendizaje y conjuntos de pruebas** , especifique el porcentaje de los datos de la estructura de minería de datos que va a reservar para realizar pruebas, o especifique el número máximo de casos de prueba. Haga clic en **Siguiente**.  
   
      Si especifica ambos valores, los límites se combinan para usar el que sea más bajo.  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523791"
   
 ## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
-  
-  

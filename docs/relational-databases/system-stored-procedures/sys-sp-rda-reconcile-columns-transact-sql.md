@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814689"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053128"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>Sys. sp_rda_reconcile_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Concilia las columnas de la tabla remota de Azure con las columnas de la tabla SQL Server habilitada para Stretch.  
     
@@ -53,7 +52,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Permisos  
  Requiere permisos de db_owner.  
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si hay columnas en la tabla remota de Azure que ya no existen en la tabla de SQL Server habilitada para Stretch, estas columnas adicionales no impiden que Stretch Database funcione con normalidad. También puede quitar estas columnas adicionales de forma manual.  
   
 ## <a name="example"></a>Ejemplo  

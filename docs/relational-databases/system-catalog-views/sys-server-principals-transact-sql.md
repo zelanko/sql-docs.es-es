@@ -20,15 +20,14 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 822d0663d13e4ad03c852758e97277e6711af0bd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133086"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091896"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contiene una fila por cada entidad de seguridad a nivel de servidor.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "68133086"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**principal_id**|**int**|Número de Id. de la entidad de seguridad. Es exclusivo en el servidor.|  
-|**Junction**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, coincide con el SID de Windows.|  
+|**sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, coincide con el SID de Windows.|  
 |**type**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> S = Inicio de sesión de SQL<br /><br /> U = Inicio de sesión de Windows<br /><br /> G = Grupo de Windows<br /><br /> R = Rol del servidor<br /><br /> C = Inicio de sesión asignado a un certificado<br /><br /> K = Inicio de sesión asignado a una clave asimétrica|  
 |**type_desc**|**nvarchar(60)**|Descripción de los tipos de entidad de seguridad:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Inicio de sesión deshabilitado|  

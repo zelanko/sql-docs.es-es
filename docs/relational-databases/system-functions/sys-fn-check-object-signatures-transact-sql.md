@@ -20,15 +20,14 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046308"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091525"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Devuelve una lista de todos los objetos que se pueden firmar e indica si una clave asimétrica o certificado especificados firman un objeto. Si la clave asimétrica o certificado especificados firman el objeto, también devuelve si la firma del objeto es válida.  
   
@@ -45,7 +44,7 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- {'\@*Class*'}  
+ { '\@ *clase*'}  
  Identifica el tipo de huella digital que se proporciona:  
   
 -   'certificado'  

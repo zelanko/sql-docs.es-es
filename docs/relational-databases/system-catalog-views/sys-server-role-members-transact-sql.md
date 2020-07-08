@@ -20,15 +20,14 @@ ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: decb7b7ce4d1c2937c5c787e92c7c35472f30133
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133029"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091729"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Devuelve una fila por cada miembro de cada rol fijo de servidor y cada rol de servidor definido por el usuario.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68133029"
 ## <a name="permissions"></a>Permisos  
  Los inicios de sesión pueden ver su propia pertenencia al rol de servidor y pueden ver los principal_id de los miembros de los roles fijos de servidor. Para ver toda la pertenencia al rol de servidor, es necesario el permiso **View definition on Server role** o la pertenencia al rol fijo de servidor **securityadmin** .  
   
-  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve los nombres y los identificadores de los roles y sus miembros.  

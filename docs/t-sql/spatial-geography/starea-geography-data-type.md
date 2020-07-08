@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbc28abde35089acbb76af886b1e9a8c27ed9a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705260"
 ---
 # <a name="starea-geography-data-type"></a>STArea (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el área expuesta total de una instancia de **geography**. Los resultados para STArea() son la unidad al cuadrado de la medida que el identificador de referencia espacial de la instancia de **geography** usa. Por ejemplo, si el SRID de la instancia es 4326, STArea() devuelve resultados en metros cuadrados.  
   

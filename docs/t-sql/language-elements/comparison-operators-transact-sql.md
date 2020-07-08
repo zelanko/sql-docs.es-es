@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706604"
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparación (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Los operadores de comparación comprueban si dos expresiones son iguales. Se pueden usar en todas las expresiones, excepto en las de los tipos de datos **text**, **ntext** o **image**. En la siguiente tabla se presentan los operadores de comparación [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

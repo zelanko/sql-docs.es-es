@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717759"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos Sort Warnings indica que las operaciones de orden no caben en la memoria. Esto no incluye aquellas operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula ORDER BY en una instrucción SELECT).  
   
  Si una consulta que incluye una operación de ordenación genera una clase de eventos Sort Warnings con el valor 2 para la columna de datos EventSubClass, podría verse afectado el rendimiento de la consulta, ya que es necesario pasar muchas veces por los datos para ordenarlos. Examine la consulta para determinar si se puede eliminar la operación de orden.  

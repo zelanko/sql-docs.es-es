@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714945"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la configuración de las opciones SET de una sesión.  
   
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Determina si los resultados de la concatenación se tratan como valores NULL o como valores de cadena vacía.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Especifica si se generan mensajes de error y advertencias cuando el redondeo en una expresión provoca una pérdida de precisión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Especifica si las reglas de ISO en cuanto a si hay que seguir las comillas delimitadoras de identificadores y cadenas literales.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<Cualquier otra cadena>|NULL = La entrada no es válida.|  
+|\<Any other string>|NULL = La entrada no es válida.|  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **sql_variant**  

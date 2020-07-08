@@ -12,15 +12,15 @@ ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c0f545cfbd17d9b651c7386697769edc7467566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fd15f3c331ff43509827a59e62e980ac1844782
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717734"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP:CacheMiss se produce con frecuencia, esto puede indicar que es necesario asignar más memoria a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con lo que aumenta el tamaño de la caché de procedimientos.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:CacheMiss  

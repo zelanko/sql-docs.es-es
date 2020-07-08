@@ -12,15 +12,15 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fd54ddc0f40da91efca486759e2b55dc00cdfc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c66dc8844aa47748fe5f4beb3a15e8b26f120c90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716944"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Use la clase de eventos **DTCTransaction** para supervisar el estado de las transacciones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinadas por medio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas). Entre estas transacciones se incluyen las que implican dos o más bases de datos en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], así como las transacciones distribuidas que implican dos o más instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>Columnas de datos de la clase de eventos DTCTransaction  

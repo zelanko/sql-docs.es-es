@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717782"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock (clase de eventos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La clase de eventos Lock:Deadlock se produce cuando se cancela un intento de obtener un bloqueo porque dicho intento forma parte de un interbloqueo y se ha elegido como sujeto del interbloqueo.  
   
  Utilice la clase de eventos Lock:Deadlock para supervisar el momento en que se generan los interbloqueos y los objetos implicados. Puede utilizar esta información para determinar si los interbloqueos afectan de forma significativa al rendimiento de la aplicación. De este modo, puede examinar el código de la aplicación para determinar si puede realizar cambios para minimizar los interbloqueos.  

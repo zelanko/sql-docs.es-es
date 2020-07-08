@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705964"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructor con valores de tabla (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica un conjunto de expresiones de valores de fila que se va a construir en una tabla. El constructor de valor de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que se especifiquen varias filas de datos en una sola instrucción DML. El constructor del valor de la tabla se puede especificar como la cláusula VALUES de una instrucción INSERT ... VALUES o como una tabla derivada en la cláusula USING de la instrucción MERGE o en la cláusula FROM.
   

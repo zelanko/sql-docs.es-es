@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef9afc7492e371562cbdba8c84af84f5b8bd9f51
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715389"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importación de datos de Excel a SQL Server o Azure SQL Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Hay varias formas de importar datos de archivos de Excel a SQL Server o a Azure SQL Database. Algunos métodos permiten importar datos en un solo paso directamente desde archivos de Excel, mientras que otros requieren que exporte los datos de Excel como texto (archivo CSV) antes de poder importarlos. En este artículo se resumen los métodos que se usan con frecuencia y se proporcionan vínculos a información más detallada.
 

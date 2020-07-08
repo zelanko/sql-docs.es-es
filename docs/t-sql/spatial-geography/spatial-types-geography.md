@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9bef65845acd2e81cfea0910e81443d7e4bc390f
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80891156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705359"
 ---
 # <a name="spatial-types---geography"></a>Tipos espaciales: geography
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El tipo de datos de geografía espacial, **geography**, se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo representa los datos en un sistema de coordenadas de tierra redonda. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** almacena datos elipsoidales (globo), como coordenadas de latitud y longitud de GPS.  
   

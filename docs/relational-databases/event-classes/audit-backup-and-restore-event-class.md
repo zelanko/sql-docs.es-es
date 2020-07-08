@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9fb1de6376895c6c35bbbb7ec957837ae166250f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 07e448a8d63b7047ecafe19aa6f7adfbb535338d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693815"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Clase de evento de auditoría de restauración y copia de seguridad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La clase de eventos **Audit Backup/Restore** se produce cuando se emite un comando BACKUP o RESTORE.  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Backup/Restore  

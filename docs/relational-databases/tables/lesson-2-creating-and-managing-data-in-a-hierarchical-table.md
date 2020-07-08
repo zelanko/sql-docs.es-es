@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692490"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de los datos de una tabla jerárquica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos. 
 
 ## <a name="prerequisites"></a>Prerequisites  
@@ -289,7 +289,7 @@ Ahora que está totalmente rellena la tabla HumanResources.EmployeeOrg, esta tar
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenación de los datos de una tabla jerárquica mediante métodos jerárquicos
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Reorganizar una jerarquía es una tarea de mantenimiento común. En esta tarea, usaremos una instrucción UPDATE con el método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primero una única fila a una nueva ubicación en la jerarquía. A continuación, moveremos un subárbol completo a una nueva ubicación.  
   
 El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/** , dejando los dos últimos nodos (**2/3/** ) sin modificar. Debe proporcionar los nodos que cambian ( **/1/4/** ) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/** . No es necesario que los dos argumentos tengan el mismo número de niveles.  

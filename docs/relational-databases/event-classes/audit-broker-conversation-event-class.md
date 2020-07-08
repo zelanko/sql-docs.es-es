@@ -12,15 +12,15 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5389bd711a9427a0487e7d7374d899a8ac2c67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22dba70f903d19a0be15bfe7acb440dd1b1f4b1a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693773"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Conversation** para emitir mensajes de auditoría relacionados con la seguridad de diálogo de Service Broker.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Conversation  

@@ -12,15 +12,15 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc4b50bdc589a609bf10f207333b82a4a98d4c23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d850cc7b19d3470fe4e57f4b81e7b6eda13cd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693233"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Audit Change Database Owner** tiene lugar cuando se utiliza la instrucción ALTER AUTHORIZATION para cambiar el propietario de una base de datos y se comprueban los permisos necesarios para hacerlo.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Change Database Owner  

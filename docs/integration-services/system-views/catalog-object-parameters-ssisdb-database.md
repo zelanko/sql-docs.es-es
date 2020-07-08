@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69c9c6247acd2adfbc3f22b03cb52da1bf5c4980
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671888"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los parámetros para todos los paquetes y proyectos en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 408cbc5749487efaa25ef5d8acd42d346fc9df6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671441"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los detalles de todos los proyectos que aparecen en el catálogo de **SSISDB**.  
   

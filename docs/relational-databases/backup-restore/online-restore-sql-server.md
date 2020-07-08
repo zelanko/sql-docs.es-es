@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670444"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La restauración en línea solo se admite en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
   
  La restauración de datos mientras la base de datos está en línea se denomina *restauración en línea*. Se considera que una base de datos está en línea siempre que el grupo de archivos principal esté en línea, aunque alguno de los grupos de archivos secundarios esté sin conexión. En todos los modelos de recuperación se puede restaurar un archivo sin conexión mientras la base de datos está en línea. En el modelo de recuperación completa, también se pueden restaurar páginas mientras la base de datos está en línea.  

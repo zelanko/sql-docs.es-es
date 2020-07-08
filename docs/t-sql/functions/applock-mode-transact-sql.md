@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 6f0bca8d8838b76c3b0af22bcd6e8d359ff172b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba622c928d2ec1300dbe9eec29ea3a249b7ca89a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85684963"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recurso de aplicación específico. Como función de bloqueo de la aplicación, APPLOCK_MODE funciona en la base de datos actual. La base de datos es el ámbito de los bloqueos de la aplicación.
   

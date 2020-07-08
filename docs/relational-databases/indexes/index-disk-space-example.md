@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668286"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cuando se crea, regenera o quita un índice, se necesita espacio en disco para las estructuras antiguas (origen) y nuevas (destino) en los archivos y grupos de archivos correspondientes. La asignación de la estructura antigua no se cancela hasta que no se confirma la transacción de creación del índice. También puede resultar necesario espacio en disco temporal adicional para operaciones de ordenación. Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  En este ejemplo, se determinan las necesidades de espacio en disco para crear un índice clúster.  

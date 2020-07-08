@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f6e370ce717190b6f7a14b6eaf354c7c5321a011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6343929a2f893d020d992a7bd68ba70e178ed2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666922"
 ---
 # <a name="job-activity-monitor-refresh"></a>Actualizar el Monitor de actividad de trabajo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Actualizar configuración** para configurar la frecuencia con la que el Monitor de actividad de trabajo obtiene información nueva sobre la actividad del servidor. El Monitor de actividad debe ejecutar consultas en el servidor supervisado para obtener información sobre la cuadrícula Monitor de actividad de trabajo. Cuando el intervalo de actualización automática se establece en un valor inferior a 30 segundos, el tiempo usado para ejecutar estas consultas puede afectar al rendimiento del servidor.  
   
  Para abrir este cuadro de diálogo, haga clic en **Ver configuración de actualización**, en la sección **Estado** del Monitor de actividad de trabajo.  

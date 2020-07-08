@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7f37c55278762a30314d2ece3c631c84f0ab777a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5781f32050dc2afe09bd5c0b2f1c11b9d818022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670509"
 ---
 # <a name="partial-backups-sql-server"></a>Copias de seguridad parciales (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Todos los modelos de recuperación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten copias de seguridad parciales, por lo que este tema es aplicable a todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, las copias de seguridad parciales están diseñadas para usarse con el modelo de recuperación simple a fin de mejorar la flexibilidad al realizar copias de seguridad de bases de datos de gran tamaño que contienen uno o varios grupos de archivos de solo lectura.  
   
  Las copias de seguridad parciales resultan útiles cuando desea excluir grupos de archivos de solo lectura. Una *copia de seguridad parcial* es similar a una copia de seguridad de base de datos completa, pero no contiene todos los grupos de archivos. En lugar de ello, en el caso de una base de datos de lectura y escritura, una copia de seguridad parcial contiene todos los datos del grupo de archivos principal, todos los grupos de archivos de lectura/escritura y, de manera opcional, uno o varios archivos de solo lectura. Una copia de seguridad parcial de una base de datos de solo lectura contiene únicamente el grupo de archivos principal.  

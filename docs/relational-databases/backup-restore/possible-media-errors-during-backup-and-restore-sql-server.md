@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670105"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  
   
 > [!NOTE]  

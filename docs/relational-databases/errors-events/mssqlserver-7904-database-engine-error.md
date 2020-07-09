@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc9cfccbad7d41997199f25d3d69ef0fff55e8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b380f7967ab055aecc5d10b2af4f8f45aa26d100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780206"
 ---
 # <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7904|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_FILE|  
-|Texto del mensaje|Error de tabla: no se encontró el archivo de Filestream para el Id. de columna C_ID, ROWGUID RG_ID, en el Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID.|  
+|Texto del mensaje|Error de tabla: no se encontró el archivo de Filestream para el id. de columna C_ID, ROWGUID RG_ID, en el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID.|  
   
 ## <a name="explanation"></a>Explicación  
 Un valor de columna de una partición no tiene un archivo de FILESTREAM coincidente en el directorio de columna de FILESTREAM correspondiente.  

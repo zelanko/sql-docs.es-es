@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068f4737a3367acdd01862cc800a4255a472c843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0d4c51bd7f4e1eca3bf57fbcfa89aec93357fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723744"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|3151|  
 |Origen de eventos|MSSQLSERVER|  
@@ -36,5 +36,5 @@ ms.locfileid: "68001910"
 Se trata de un mensaje de error general que indica diversos problemas con la base de datos **maestra**.  
   
 ## <a name="user-action"></a>Acción del usuario  
-Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Cómo instalar SQL Server desde el símbolo del sistema" en los Libros en pantalla de SQL Server.  
+Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Procedimientos: Instalar SQL Server desde el símbolo del sistema" en los Libros en pantalla de SQL Server.  
   

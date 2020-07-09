@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748880"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este método comprueba si la instancia de **geometry** es la misma que la del tipo especificado. Devuelve 1 si el tipo de una instancia de **geometry** es el mismo que el tipo especificado. Este método también devuelve 1 si el tipo especificado es un antecesor del tipo de instancia. De lo contrario, este método devuelve un 0.
   

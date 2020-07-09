@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7c8b190e1678ff53d29e31dde55069739c2ce76f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b2eeeab17ad2f130886ad2f47ebcbe4ddc75715
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68079892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736076"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve true si una instancia de **geography** tiene el formato correcto y está reconocida como un objeto de geografía válido basado en su tipo OGC (Open Geospatial Consortium). Devuelve false si una instancia de **geography** no tiene el formato correcto. Este método es preciso.  
   

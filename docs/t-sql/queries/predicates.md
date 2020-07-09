@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e0b4708c30f1fdbcc6246ffc6e24e95cadb58cd2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92a1535156e4190238dad6a3274f684053b73ddf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706021"
 ---
 # <a name="predicates"></a>Predicados
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Es una expresión que se evalúa como TRUE (verdadero), FALSE (falso) o UNKNOWN (desconocido). Se usan predicados en la condición de búsqueda de las cláusulas [WHERE](../../t-sql/queries/where-transact-sql.md) y [HAVING](../../t-sql/queries/select-having-transact-sql.md), en las condiciones de combinación de las cláusulas [FROM](../../t-sql/queries/from-transact-sql.md) y en otras construcciones que requieren un valor booleano.  
   

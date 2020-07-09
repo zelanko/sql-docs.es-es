@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e5a0920c0e56685885345d730f481bb7eba1ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736200"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve un objeto geométrico que representa la unión de todos los valores de puntos cuya distancia desde una instancia de **geography** es menor o igual que un valor especificado, permitiendo una tolerancia determinada.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737812"
 ---
 # <a name="differential-backups-sql-server"></a>Copias de seguridad diferenciales (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema de copias de seguridad y restauración es pertinente para todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  la copia de seguridad diferencial se basa en la copia de seguridad de datos completa anterior más reciente. Una copia de seguridad diferencial captura solo los datos que han cambiado después de la última copia de seguridad completa. La copia de seguridad completa en la que se basa una diferencial se denomina *base* de la diferencial. Las copias de seguridad completas, a excepción de las de solo copia, pueden servir como base para una serie de copias de seguridad diferenciales, incluidas las de base de datos, las parciales, y las de archivos. La copia de seguridad de base de una copia de seguridad diferencial de archivos puede estar contenida en una copia de seguridad completa, una copia de seguridad de archivos o una copia de seguridad parcial.  

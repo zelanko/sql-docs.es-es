@@ -12,15 +12,15 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a65f8ab02309f11438dcbe5af0984ac930a060b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737188"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
   
  Incluya la clase de eventos **Log File Auto Shrink** en los seguimientos que supervisen la reducción del archivo de registro. Cuando esta clase de eventos se incluye en un seguimiento, el volumen de sobrecarga suele ser bajo a no ser que el archivo se reduzca con frecuencia.  

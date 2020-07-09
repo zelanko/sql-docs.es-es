@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737118"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El almacén de consultas permite supervisar el rendimiento del código compilado de forma nativa para cargas de trabajo que ejecuten OLTP en memoria.  
 Las estadísticas de compilación y de runtime se recopilan y exponen de la misma manera que en el caso de cargas de trabajo basadas en disco.   

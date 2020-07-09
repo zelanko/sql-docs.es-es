@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737090"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Consulta y trabajo con la salida del Asistente para la optimización de motor de base de datos (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cuando el Asistente para la optimización de motor de base de datos optimiza bases de datos, crea resúmenes, recomendaciones, informes y registros de optimización. Puede utilizar la salida de registro de optimización para solucionar problemas de las sesiones de optimización del Asistente para la optimización de motor de base de datos. Puede usar los resúmenes, recomendaciones e informes para determinar si desea implementar las recomendaciones de optimización o continuar con la optimización hasta alcanzar las mejoras de rendimiento de consultas que necesita para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información acerca de cómo usar el Asistente para la optimización de bases de datos para crear cargas de trabajo y optimizar una base de datos, vea [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

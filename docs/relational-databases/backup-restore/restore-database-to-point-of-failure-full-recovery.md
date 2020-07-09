@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1980c9911e9b8af8fc305c712be479af15926201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737710"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Restaurar la base de datos en el punto de error: Recuperación completa
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se explica cómo realizar una restauración hasta el momento del error. Este tema solo es relevante para las bases de datos que utilizan los modelos de recuperación completa u optimizado para cargas masivas de registros.  
   

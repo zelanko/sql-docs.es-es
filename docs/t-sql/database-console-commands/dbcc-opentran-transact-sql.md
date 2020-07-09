@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748919"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN ayuda a identificar las transacciones activas que pueden evitar el truncamiento del registro. DBCC OPENTRAN muestra información acerca de la transacción activa más antigua y las transacciones distribuidas y no distribuidas replicadas más antiguas, si las hubiera, dentro del registro de transacciones de la base de datos especificada. Solo se presentan resultados si hay una transacción activa que existe en el registro o si la base de datos contiene información de replicación. Si no hay transacciones activas en el registro, se muestra un mensaje informativo.
   

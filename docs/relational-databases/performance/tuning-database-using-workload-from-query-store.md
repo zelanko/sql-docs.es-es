@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737128"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 La característica [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] captura de forma automática un historial de las consultas, planes y estadísticas de tiempo de ejecución, y almacena esta información en la base de datos. El [Asistente para la optimización del motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) es compatible con una nueva opción para usar el Almacén de consultas para seleccionar automáticamente una carga de trabajo adecuada para la optimización. Para muchos usuarios, esto puede evitar la necesidad de recopilar explícitamente una carga de trabajo para la optimización. Esta característica solo está disponible si la base de datos tiene activada la característica Almacén de consultas. 

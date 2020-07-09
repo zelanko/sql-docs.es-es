@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748491"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación simple)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El objetivo de una restauración completa de la base de datos es restaurar toda la base de datos. Durante el proceso de restauración, la base de datos completa se encuentra sin conexión. Antes de que ninguna parte de la base de datos esté en línea, se recuperan todos los datos a un punto coherente en el que todas las partes de la base de datos se encuentran en el mismo momento y en el que no existe ninguna transacción sin confirmar.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829789"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Información general de la restauración de la base de datos en el modelo de recuperación simple  
  Una restauración completa de base de datos con el modelo de recuperación simple implica una o dos instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , en función de si desea restaurar una copia de seguridad diferencial de la base de datos. Si solo usa copias de seguridad completas de la base de datos, restaure solo la copia de seguridad más reciente, como se muestra en la siguiente ilustración.  
   
- ![Restauración exclusiva de una copia de seguridad completa de la base de datos](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restauración exclusiva de una copia de seguridad completa de la base de datos")  
+ ![Restauración exclusiva de una copia de seguridad completa de la base de datos](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "Restauración exclusiva de una copia de seguridad completa de la base de datos")  
   
  Si también usa una copia de seguridad diferencial de la base de datos, restaure la copia de seguridad completa más reciente de la base de datos sin recuperar la base de datos y, a continuación, restaure la copia de seguridad diferencial más reciente de la base de datos y recupere la base de datos. En la siguiente ilustración se muestra este proceso.  
   
- ![Restaurar copias de seguridad de bases de datos completas y diferenciales](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Restaurar copias de seguridad de bases de datos completas y diferenciales")  
+ ![Restaurar copias de seguridad de bases de datos completas y diferenciales](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "Restaurar copias de seguridad de bases de datos completas y diferenciales")  
   
 > [!NOTE]  
 >  Si planea restaurar una copia de seguridad de la base de datos en una instancia de servidor distinta, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

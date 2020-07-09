@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737078"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>Consulta del registro de errores de SQL Server en SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene eventos definidos por el usuario y determinados eventos del sistema que puede usar para solucionar problemas. 
 
 ## <a name="view-the-logs"></a>Visualización de los registros

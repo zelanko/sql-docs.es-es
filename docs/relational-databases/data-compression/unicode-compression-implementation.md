@@ -14,15 +14,15 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab0732ae3773a7fefb86461272ff036fdb41d7a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737648"
 ---
 # <a name="unicode-compression-implementation"></a>Implementación de la compresión Unicode
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una implementación del algoritmo del esquema de compresión estándar para Unicode (SCSU) para comprimir los valores Unicode que están almacenados en objetos comprimidos de fila o página. Para estos objetos comprimidos, la compresión Unicode es automática para columnas **nchar(n)** y **nvarchar(n)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena los datos Unicode como 2 bytes, independientemente de la configuración regional. Esto se denomina codificación UCS-2. Para algunas configuraciones regionales, la implementación de la compresión SCSU en SQL Server puede ahorrar hasta el 50% de espacio de almacenamiento.  
   

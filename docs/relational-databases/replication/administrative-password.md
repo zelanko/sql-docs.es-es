@@ -13,15 +13,15 @@ ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fe3015085187c42cc95380054070bb5e7c8955fb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a16cbfbbae359a563b60d11a79451ad72bd45383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740437"
 ---
 # <a name="administrative-password"></a>Contraseña administrativa
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Si en la página **Distribuidores** de este asistente ha seleccionado un distribuidor remoto para este publicador, debe escribir una contraseña para la replicación de conexión entre el publicador y el distribuidor utilizando el inicio de sesión **distributor_admin** . La contraseña debe coincidir con la especificada en la página **Contraseña del distribuidor** del Asistente para configurar la distribución o en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** .  
   
 ## <a name="options"></a>Opciones  

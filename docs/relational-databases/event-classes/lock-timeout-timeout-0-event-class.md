@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737178"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Clase de eventos Lock:Timeout (timeout &gt; 0)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La clase de eventos **Lock:Timeout (timeout > 0)** indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. Esta clase de evento se comporta del mismo modo que la clase de evento **Lock:Timeout** , excepto que no incluye ningún evento cuando el valor del tiempo de espera es 0.  
   
  Incluya la clase de eventos **Lock:Timeout (timeout > 0)** en los seguimientos cuando use sondeos de bloqueo u otros procesos que tengan el valor cero de tiempo de espera. Esto permite ver dónde ocurren los tiempos de espera reales sin necesidad de ver valores de tiempo de espera de cero.  

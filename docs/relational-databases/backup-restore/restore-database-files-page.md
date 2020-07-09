@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab1cedc6960052ec8a9007b72d9062b8fc818ab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737726"
 ---
 # <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use la página **Archivos** del cuadro de diálogo **Restaurar base de datos** para administrar los archivos concretos que ha elegido restaurar dentro de la base de datos.  
   
 ## <a name="options"></a>Opciones  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743933"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las aplicaciones que usan SqlOpenFilestream() para abrir los identificadores de archivos de Win32 con el fin de leer o escribir datos BLOB de FILESTREAM pueden encontrar errores de conflictos con las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se administran en una transacción común. Esto incluye las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS que tardan mucho en finalizar la ejecución. Las aplicaciones deben diseñarse cuidadosamente para ayudar a evitar estos tipos de conflictos.  
   
  Cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o las aplicaciones intentan abrir BLOB de FILESTREAM, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba el contexto de transacciones asociado. [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite o deniega la solicitud en función de si la operación abierta opera con instrucciones DDL, instrucciones DML, la recuperación de los datos o la administración de las transacciones. La tabla siguiente muestra cómo [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina si una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] se permitirá o denegará según el tipo de archivos que se abran en la transacción.  

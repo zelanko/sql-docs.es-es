@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217100"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818228"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
@@ -58,10 +58,6 @@ El motor de PolyBase es el componente principal que está detrás de las consult
   
 El servicio de movimiento de datos de PolyBase recibe instrucciones del motor de PolyBase y transfiere los datos entre HDFS y SQL Server, y entre las instancias de SQL Server de los nodos principal y de ejecución.
   
-## <a name="editions-availability"></a>Disponibilidad de ediciones  
-
-Después de instalar SQL Server, la instancia puede designarse como nodo principal o de ejecución. La elección dependerá de qué versión de SQL Server PolyBase se esté ejecutando. En una instalación de Enterprise Edition, la instancia se puede designar como nodo principal o de ejecución. En Standard Edition, la instancia solo puede designarse como nodo de ejecución.
-
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para configurar un grupo de escalado horizontal de PolyBase, consulte la guía siguiente:

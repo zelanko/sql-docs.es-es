@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786888"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Las funciones deterministas devuelven siempre el mismo resultado cada vez que se invocan con un conjunto específico de valores de entrada y cuando el estado de la base de datos es el mismo. Las funciones no deterministas pueden devolver resultados diferentes cada vez que se llaman con un conjunto específico de valores de entrada aunque el estado de la base de datos a la que tienen acceso permanezca sin cambios. Por ejemplo, la función AVG siempre devuelve el mismo resultado dadas las condiciones indicadas anteriormente pero la función GETDATE, que devuelve el valor datetime actual, siempre devuelve un resultado diferente.  
   
  Son varias las propiedades de las funciones definidas por el usuario que determinan la capacidad de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para indizar los resultados de la función, ya sea mediante índices en columnas calculadas que llaman a la función o mediante vistas indizadas que hacen referencia a la función. El determinismo de una función es una propiedad así. Por ejemplo, no se puede crear un índice clúster en una vista si ésta hace referencia a funciones no deterministas. Para obtener más información sobre las propiedades de las funciones, incluido el determinismo, vea [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md).  

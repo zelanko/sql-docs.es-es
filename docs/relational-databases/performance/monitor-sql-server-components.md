@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 252162be51d79224ac786ff44ae2620f4f189f81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68046753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790787"
 ---
 # <a name="monitor-sql-server-components"></a>Supervisar los componentes de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La supervisión es importante, puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
   
 Para supervisar cualquier componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eficazmente:  

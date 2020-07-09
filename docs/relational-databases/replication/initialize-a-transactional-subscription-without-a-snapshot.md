@@ -16,15 +16,15 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790801"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   De forma predeterminada, una suscripción a una publicación transaccional se inicializa con una instantánea generada por el Agente de instantáneas y aplicada por el Agente de distribución. En algunos escenarios, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método. Otros métodos para inicializar un suscriptor incluyen:  
   
 -   Especificar una copia de seguridad. Se restaura la copia de seguridad en el suscriptor y, a continuación, el Agente de distribución copia los metadatos de replicación y los procedimientos del sistema necesarios. La inicialización con una copia de seguridad es la forma más rápida de entregar datos al suscriptor, además de resultar cómoda, ya que se puede utilizar cualquier copia de seguridad reciente si se ha realizado después de que se habilitara la publicación para inicialización mediante una copia de seguridad.  

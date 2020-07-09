@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787405"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
   
  Para obtener información detallada acerca del volumen de datos, la fragmentación y el uso, utilice las siguientes vistas de administración dinámica:  

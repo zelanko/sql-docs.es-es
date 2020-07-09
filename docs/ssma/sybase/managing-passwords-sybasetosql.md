@@ -1,7 +1,7 @@
 ---
 title: Administración de contraseñas (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/07/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -13,20 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 14cd4a9c4fb3c49bfa3bd5778e4872bd7b002017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a228f8d624d3a4250d10a258a7e51c9162d885a2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028902"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159853"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Administración de contraseñas (SybaseToSQL)
-Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  
-  
-1.  Protección de contraseñas  
-  
-2.  Exportar o importar contraseña cifrada  
-  
+Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores.
+
 ## <a name="securing-password"></a>Protección de contraseñas  
 SSMA le permite proteger la contraseña de una base de datos.  
   
@@ -36,7 +32,7 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
   
 1.  **Texto no cifrado:** Escriba la contraseña de la base de datos en el atributo de valor del nodo ' contraseña '. Se encuentra en el nodo definición del servidor en la sección servidor del archivo de script o el archivo de conexión de servidor.  
   
-    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se mostrará el siguiente mensaje de advertencia en la salida de la consola: * &lt;"&gt; la contraseña del ID. del servidor del servidor se proporciona en forma de texto no cifrado no seguro, la aplicación de consola SSMA proporciona una opción para proteger la contraseña a través del cifrado, consulte la opción-securepassword en el archivo de ayuda de SSMA para obtener más información".*  
+    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se mostrará el siguiente mensaje de advertencia en la salida de la consola: *"la &lt; contraseña del ID. del servidor del servidor &gt; se proporciona en forma de texto no cifrado no seguro, la aplicación de consola SSMA proporciona una opción para proteger la contraseña a través del cifrado, consulte la opción-securepassword en el archivo de ayuda de SSMA para obtener más información".*  
   
     **Contraseñas cifradas:** La contraseña especificada, en este caso, se almacena en un formato cifrado en el equipo local en ProtectedStorage. SSMA.  
   
@@ -50,42 +46,46 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
             
             Ejemplo 1:  
             
-                Specify password
+            1. Especificar contraseña
                 
-                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"
+            2. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml"`
                 
-                Enter password for server_id 'XXX_1': xxxxxxx
+            3. Escriba la contraseña de server_id ' XXX_1 ': xxxxxxx
                 
-                Re-enter password for server_id 'XXX_1': xxxxxxx
+            4. Vuelva a escribir la contraseña de server_id ' XXX_1 ': xxxxxxx
             
             Ejemplo 2:
             
-                C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            1. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o`
                 
-                Enter password for server_id 'source_1': xxxxxxx
+            2. Escriba la contraseña de server_id ' source_1 ': xxxxxxx
                 
-                Re-enter password for server_id 'source_1': xxxxxxx
+            3. Vuelva a escribir la contraseña de server_id ' source_1 ': xxxxxxx
                 
-                Enter password for server_id 'target_1': xxxxxxx
+            4. Escriba la contraseña de server_id ' target_1 ': xxxxxxx
                 
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            5. Vuelva a escribir la contraseña para server_id ' Target _ 1 ': xxxxxxx  
     
     -   **Quitar contraseñas cifradas**  
   
-        Ejecute `SSMAforSybaseConsole.exe` con el`-securepassword` modificador `-remove` y en la línea de comandos pasando los identificadores de servidor para quitar las contraseñas cifradas del archivo de almacenamiento protegido presente en el equipo local.  
+        Ejecute `SSMAforSybaseConsole.exe` con el `-securepassword` `-remove` modificador y en la línea de comandos pasando los identificadores de servidor para quitar las contraseñas cifradas del archivo de almacenamiento protegido presente en el equipo local.  
   
         Ejemplo:  
         
+        ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove "source_1,target_1"  
+        ```
   
     -   **Enumerar los identificadores de servidor cuyas contraseñas están cifradas**  
   
-        Ejecute `SSMAforSybaseConsole.exe` con la línea `-securepassword` de `-list` comandos y en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
+        Ejecute `SSMAforSybaseConsole.exe` con la `-securepassword` línea de `-list` comandos y en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
   
         Ejemplo:  
-        
+
+        ```console
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  
+        ```
   
     > [!NOTE]  
     > 1.  La contraseña en texto no cifrado mencionada en el archivo de conexión de script o servidor tiene prioridad sobre la contraseña cifrada en un archivo protegido.  
@@ -94,41 +94,41 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportar o importar contraseñas cifradas  
 La aplicación de consola SSMA permite exportar contraseñas de base de datos cifradas presentes en un archivo del equipo local a un archivo protegido y viceversa. Ayuda a que las contraseñas cifradas sean independientes de la máquina. La funcionalidad de exportación lee el identificador y la contraseña del servidor desde el almacenamiento protegido local y guarda la información en un archivo cifrado. Se solicita al usuario que escriba la contraseña del archivo protegido. Asegúrese de que la contraseña especificada tiene una longitud de 8 caracteres o más. Este archivo protegido es portátil entre diferentes equipos. La funcionalidad de importación lee el ID. de servidor y la información de contraseña del archivo protegido. Se solicita al usuario que escriba la contraseña del archivo protegido y anexa la información al almacenamiento protegido local.  
   
-Ejemplo:  
+### <a name="export-example"></a>Ejemplo de exportación:  
 
-    Export password
+1. Exportar contraseña
     
-    Enter password for protecting the exported file
+2. Escriba la contraseña para proteger el archivo exportado
     
-    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"
+3. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -export all "machine1passwords.file"`
     
-    Enter password for protecting the exported file: xxxxxxxx
+4. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
     
-    Please confirm password: xxxxxxxx
+5. Confirme la contraseña: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"
+6. `C:\SSMA\SSMAforSybaseConsole.EXE -p -e "SybaseDB_1_1,Sql_1" "machine2passwords.file"`
     
-    Enter password for protecting the exported file: xxxxxxxx
+7. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
     
-    Please confirm password: xxxxxxxx  
+8. Confirme la contraseña: xxxxxxxx  
   
-Ejemplo:  
+### <a name="import-example"></a>Ejemplo de importación:  
 
-    Import an encrypted password
+1. Importar una contraseña cifrada
     
-    Enter password for protecting the imported file
+2. Escriba la contraseña para proteger el archivo importado.
     
-    C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"
+3. `C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -import all "machine1passwords.file"`
     
-    Enter password to import the servers from encrypted file: xxxxxxxx
+4. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
     
-    Please confirm password: xxxxxxxx
+5. Confirme la contraseña: xxxxxxxx
     
-    C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"
+6. `C:\SSMA\SSMAforSybaseConsole.EXE -p -i "SybaseDB_1,Sql_1" "machine2passwords.file"`
     
-    Enter password to import the servers from encrypted file: xxxxxxxx
+7. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
     
-    Please confirm password: xxxxxxxx  
+8. Confirme la contraseña: xxxxxxxx  
   
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar la consola SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

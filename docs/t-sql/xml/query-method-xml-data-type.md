@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9501e1cf2b6c34ba3cf0ff4494866e2a32d16366
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893891"
 ---
 # <a name="query-method-xml-data-type"></a>query() (método de tipo de datos xml)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Especifica una expresión XQuery en una instancia del tipo de datos **xml**. El resultado es de tipo **xml**. El método devuelve una instancia XML sin tipo.  
   

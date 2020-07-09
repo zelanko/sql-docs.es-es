@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528499"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882729"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conexión a un agente de escucha del grupo de disponibilidad Always On 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   
 Una vez que haya [configurado la escucha de grupo de disponibilidad](create-or-configure-an-availability-group-listener-sql-server.md), tendrá que actualizar la cadena de conexión para conectarse a la escucha de grupo de disponibilidad de Always On. Esto redirigirá el tráfico de la aplicación automáticamente a la réplica deseada sin tener que actualizar manualmente la cadena de conexión después de cada conmutación por error. 
   

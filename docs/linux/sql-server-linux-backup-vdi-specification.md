@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68810971"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892285"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Especificación del SDK de cliente VDI de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este documento se describen las interfaces proporcionadas por el SDK de cliente de la interfaz de dispositivo virtual (VDI) de SQL Server en Linux. Los fabricantes de software independientes (ISV) pueden usar la interfaz de programación de aplicaciones (API) del dispositivo de copia de seguridad virtual para integrar SQL Server en sus productos. En general, VDI en Linux se comporta de forma similar a VDI en Windows, con los cambios siguientes:
 

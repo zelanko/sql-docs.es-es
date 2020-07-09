@@ -25,16 +25,16 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893091"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se proporcionan detalles de las características admitidas en las diversas ediciones de SQL Server 2017 en Linux. Para conocer las ediciones y las características admitidas de SQL Server en Windows, vea [SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -229,7 +229,6 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Alertas |
 | &nbsp; | Agente de registro del LOG |
 | &nbsp; | Copia de seguridad administrada |
-| &nbsp; | Administración de varios servidores con MSX/TSX |
 | **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 

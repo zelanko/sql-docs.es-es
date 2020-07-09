@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ca654d637ace759e7dcc42a0ad77437871ee844
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894980"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Consideraciones de seguridad para la replicación de SQL Server Compact
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La protección de la conectividad entre una instancia del Motor de base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../../includes/ssew-md.md)] implica la correcta configuración de seguridad de Microsoft Internet Information Services (IIS) y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  

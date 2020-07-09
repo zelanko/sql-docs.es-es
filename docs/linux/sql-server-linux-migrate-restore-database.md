@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f8436e463a969921ef3e37ebf89f48bc94b49dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895187"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migración de una base de datos SQL Server de Windows a Linux mediante Copia de seguridad y restauración
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 La característica Copia de seguridad y restauración de SQL Server es el método recomendado para migrar una base de datos de SQL Server en Windows a SQL Server en Linux. Este tutorial le guiará por los pasos necesarios para mover una base de datos a Linux con técnicas de copia de seguridad y restauración.
 

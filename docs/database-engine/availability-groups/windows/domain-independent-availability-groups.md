@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894497"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Los grupos de disponibilidad AlwaysOn (AG) requieren un clúster de conmutación por error de Windows Server (WSFC) subyacente. Implementar un WSFC a través de Windows Server 2012 R2 siempre ha requerido que los servidores que participan en ese WSFC (también conocidos como nodos) estén unidos al mismo dominio. Para más información sobre Active Directory Domain Services (AD DS), vaya [aquí](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 

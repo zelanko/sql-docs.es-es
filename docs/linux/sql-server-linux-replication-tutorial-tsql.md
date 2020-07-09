@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fcabf34eae115f7fed2b74989e0e76c11562c7ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952506"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882661"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configuración de la replicación con T-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)] 
 
 En este tutorial se configura la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL. El publicador y el distribuidor son la misma instancia, mientras que el suscriptor está en una instancia independiente.
 

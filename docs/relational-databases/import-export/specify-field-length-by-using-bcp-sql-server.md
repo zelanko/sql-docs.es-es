@@ -18,15 +18,15 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96fd9d883a115de64f0b1b8eb3879c941bc37b8a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980536"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000380"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  

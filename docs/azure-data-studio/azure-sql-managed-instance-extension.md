@@ -1,22 +1,21 @@
 ---
 title: Extensión de instancia administrada de Azure SQL Database
-titleSuffix: Azure Data Studio
 description: Uso de Azure Data Studio con una instancia administrada de Azure SQL
 ms.custom: seodec18
 ms.date: 10/07/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alanyu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75883996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774707"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de instancias administradas de Azure SQL Database para Azure Data Studio (versión preliminar)
 

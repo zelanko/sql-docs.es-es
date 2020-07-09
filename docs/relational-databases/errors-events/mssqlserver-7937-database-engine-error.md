@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6525c6c1cbcd6071eeb99e899b15bda107f4868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767897"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7937|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texto del mensaje|Error de tabla: no se encontró el directorio de FileStream para el Id. de columna C_ID del Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID.|  
+|Texto del mensaje|Error de tabla: no se encontró el directorio de secuencia de archivos para el id. de columna C_ID del id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID.|  
   
 ## <a name="explanation"></a>Explicación  
 La columna especificada existe en una partición; sin embargo, no se ha encontrado su directorio de FILESTREAM correspondiente en el espacio de datos de FILESTREAM.  

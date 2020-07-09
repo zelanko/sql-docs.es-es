@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ca1044bf5f748aee304ebd5ac95f12813b6ebe6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7226b42823ff51a00a22124b1fd1851c1943b97c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765838"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Controla el comportamiento de la instrucción COMMIT TRANSACTION de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El valor predeterminado de esta configuración es OFF. Indica que el servidor no cerrará los cursores cuando se confirme una transacción.  
   

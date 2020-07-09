@@ -12,15 +12,15 @@ ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 419a967edbfc6b184facb3ef3dae833ef1eb8196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3e260feb3554feab5811647367ebb6aa9374192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762978"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Los eventos de cierre de cursores tienen lugar cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] cierra y desasigna un cursor. La clase de evento **CursorClose** describe los eventos de cierre de cursores que se producen en los cursores de la interfaz de programación de aplicaciones (API). Esta clase de evento tiene lugar cuando se cierra una instrucción de cursor de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.  
   
  Incluya la clase de evento **CursorClose** en los seguimientos que registren el rendimiento de los cursores. La cantidad de sobrecarga generada depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  

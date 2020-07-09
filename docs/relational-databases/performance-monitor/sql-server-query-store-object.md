@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 620e79cd69c11c6f5de32d3ef0ae97af489f9398
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775772"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, objeto Query Store
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El objeto Query Store proporciona contadores para supervisar la utilización de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar textos de las consultas, planes de ejecución y estadísticas de tiempo de ejecución para los objetos como procedimientos almacenados, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc y preparadas y desencadenadores.  
   
@@ -40,7 +40,7 @@ En esta tabla se describen los contadores del **Almacén de consultas de SQL Ser
 |Instancia del Almacén de consultas|Descripción|  
 |--------------------------|-----------------|  
 |**_Total**|Información para el Almacén de consultas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|\<nombre de la base de datos>|Información del Almacén de consultas para esta base de datos.|  
+|\<database name>|Información del Almacén de consultas para esta base de datos.|  
   
 ## <a name="see-also"></a>Consulte también  
 

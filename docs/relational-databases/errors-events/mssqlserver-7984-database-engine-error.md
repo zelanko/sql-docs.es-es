@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b83638f5579facffdc4dbcc11b53b61bf856b432
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e7ee58e9db83f3382d3dcfb07707390fff6881e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767885"
 ---
 # <a name="mssqlserver_7984"></a>MSSQLSERVER_7984
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7984|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|Texto del mensaje|Comprobaciones previas de tabla del sistema: Id. de objeto O_ID. La página P_ID tiene un tipo de página inesperado PAGETYPE. Instrucción de comprobación terminada debido a un error irreparable.|  
+|Texto del mensaje|Comprobaciones previas de tabla del sistema: id. de objeto O_ID. La página P_ID tiene un tipo de página inesperado PAGETYPE. Instrucción de comprobación terminada debido a un error irreparable.|  
   
 ## <a name="explanation"></a>Explicación  
 Se encontró una página con un tipo distinto de DATA_PAGE en el nivel de datos del objeto especificado. Este error se produce durante la primera fase de las comprobaciones del comando DBCC CHECKDB. Durante esa fase, DBCC CHECKDB realiza comprobaciones básicas en las páginas de datos de las tablas base críticas del sistema.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765463"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
 ##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Procedimientos para: Trabajar con directorios y rutas de acceso de FileTables  
@@ -97,9 +97,9 @@ GO
 |-|-|-|  
 |*is_directory* **value**|*file_stream* **value**|**Comportamiento**|  
 |FALSE|NULL|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
-|FALSE|\<valor>|El elemento representa un archivo.|  
+|FALSE|\<value>|El elemento representa un archivo.|  
 |TRUE|NULL|El elemento representa un directorio.|  
-|TRUE|\<valor>|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
+|TRUE|\<value>|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn:  

@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10da9d407308c9ffe4a076378ca9f82b41ebc852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766716"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de base de datos de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deniega los permisos concedidos para un usuario de base de datos, un rol de base de datos o un rol de aplicación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -45,7 +45,7 @@ ms.locfileid: "75244580"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -85,7 +85,7 @@ DENY permission [ ,...n ]
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal>  
+ AS \<database_principal>.  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   
  *Database_user*  

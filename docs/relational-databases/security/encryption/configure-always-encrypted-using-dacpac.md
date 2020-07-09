@@ -12,15 +12,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc10c556999d843456728289acb72bddb3b0784e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765130"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Un [paquete de aplicación de capa de datos (DAC)](../../data-tier-applications/data-tier-applications.md), también conocido como DACPAC, es una unidad portátil de implementación de bases de datos de SQL Server que define todos los objetos de SQL Server, incluidas las tablas y las columnas que contienen. Al publicar un DACPAC en una base de datos (cuando se actualiza una base de datos mediante un DACPAC), el esquema de la base de datos de destino se actualiza para que coincida con el esquema del DACPAC. Puede publicar un DACPAC mediante el [Asistente para actualizar la aplicación de capa de datos](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) en SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) o [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables).
 

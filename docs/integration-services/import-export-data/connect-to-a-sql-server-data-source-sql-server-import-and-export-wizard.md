@@ -1,7 +1,7 @@
 ---
 title: Conectarse a un origen de datos de SQL Server (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f063ae9f49c294fa10413eb3b5d5b494838f2fc6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773607"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de SQL Server (Asistente para importación y exportación de SQL Server)
 
@@ -98,18 +98,18 @@ Especifique **Trusted_Connection=Yes** para conectarse con la autenticación int
 ### <a name="connection-string-format"></a>Formato de la cadena de conexión
 Este es el formato de una cadena de conexión que usa la autenticación integrada de Windows.
 
-    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Este es el formato de una cadena de conexión que usa la autenticación de SQL Server en lugar de la autenticación integrada de Windows.
 
-     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Escribir la cadena de conexión
 Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **DSN**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
 En el siguiente ejemplo se emplea esta cadena de conexión.
 
-    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Esta es la pantalla que verá después de escribir la cadena de conexión.
 

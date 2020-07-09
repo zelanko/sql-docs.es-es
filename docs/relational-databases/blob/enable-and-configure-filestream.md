@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 16bf62cd9f0ce54f3a6d72fc4651410dde26c0da
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767991"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para empezar a utilizar FILESTREAM, debe habilitarlo en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En este tema se describe cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.  
   
 ##  <a name="enabling-filestream"></a><a name="enabling"></a> Habilitar FILESTREAM  

@@ -12,15 +12,15 @@ ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 658d9311b5f175ddfe66b2eb144e1d12b4ecd003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 22b77db3d47f0398377be4c7d3c57feda6b82b3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765262"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph, clase de eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La clase de eventos **Deadlock Graph** proporciona la descripción en formato XML de un interbloqueo. Esta clase de eventos se produce al mismo tiempo que la clase de eventos **Lock:Deadlock** .  
   
 ## <a name="deadlock-graph-event-class-data-columns"></a>Columnas de datos de la clase de eventos Deadlock Graph  

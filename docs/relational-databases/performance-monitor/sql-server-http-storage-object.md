@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d1406bc3696cfcd16121e2f12758791e2da86e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775846"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, Almacenamiento HTTP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto de rendimiento **SQLServer:Almacenamiento HTTP** está compuesto por contadores de rendimiento que supervisan la cuenta de Microsoft Azure Storage. Si usa la característica [Archivos de datos de SQL Server de Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md), puede almacenar archivos de base de datos en blobs de Azure Storage Blob. Este objeto de rendimiento trata cada cuenta de Azure Storage como una unidad diferente.  
   
 |Nombre del contador|Descripción|  

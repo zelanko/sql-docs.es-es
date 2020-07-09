@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3fa77a50b32541a4ed9b8742bebe04e4e735b45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33df8f287cc60c34035ee22b8a03be65440f6ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767851"
 ---
 # <a name="mssqlserver_824"></a>MSSQLSERVER_824
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|824|  
 |Origen de eventos|MSSQLSERVER|  
@@ -62,7 +62,7 @@ Estas comprobaciones de coherencia lógica son comprobaciones de integridad adic
  
 El mensaje de error 824 suele indicar que hay un problema con el sistema de almacenamiento subyacente, el hardware o un controlador que se encuentra en la ruta de acceso de la solicitud de E/S. Este error puede producirse si hay incoherencias en el sistema de archivos o si el archivo de base de datos está dañado.
 
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
 
 Si se produce el error 824, puede probar las siguientes soluciones: 
 

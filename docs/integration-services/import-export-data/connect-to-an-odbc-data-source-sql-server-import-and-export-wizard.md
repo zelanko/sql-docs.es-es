@@ -2,7 +2,7 @@
 title: Conectarse a un origen de datos ODBC (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 description: Cómo configurar un DSN de ODBC o crear una cadena de conexión ODBC para utilizarla con el Asistente para importación y exportación de SQL Server
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773586"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos ODBC (Asistente para importación y exportación de SQL Server)
 
@@ -93,9 +93,9 @@ Si quiere proporcionar la información de conexión con una cadena de conexión,
 
 En este ejemplo se va a usar la siguiente cadena de conexión, que se conecta a Microsoft SQL Server. El ejemplo de base de datos que se usa es **WideWorldImporters** y se va a conectar a SQL Server en la máquina local.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Escriba la cadena de conexión en el campo **ConnectionString** en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
@@ -140,7 +140,7 @@ Para compilar y probar la cadena de conexión para el controlador ODBC en su pro
 
 10. Abra el archivo guardado con el Bloc de notas u otro editor de texto. Este es el contenido de nuestro ejemplo de SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ Para compilar y probar la cadena de conexión para el controlador ODBC en su pro
 
     Después de ensamblar los valores necesarios del DSN de archivo de ejemplo, tendrá la cadena de conexión siguiente.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Normalmente, no necesita todas las configuraciones de un DSN creado con el Administrador de origen de datos ODBC para crear una cadena de conexión que funcione.  
     -   Siempre tiene que especificar el controlador ODBC.

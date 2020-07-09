@@ -1,7 +1,7 @@
 ---
 title: Conectar a un origen de datos de Oracle (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773554"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Oracle (Asistente para importación y exportación de SQL Server)
 
@@ -36,6 +36,7 @@ Después de seleccionar el **proveedor de datos de .NET Framework para Oracle** 
 |---|---|
 |Nombre de servidor|**Data Source** (Origen de datos)|
 |Información de autenticación (inicio de sesión)|**Id. de usuario** y **contraseña** o **seguridad integrada**|
+|||
 
 No tiene que escribir la cadena de conexión en el campo **ConnectionString** de la lista. Después de escribir los valores individuales del nombre del servidor de Oracle (**Origen de datos**) y obtener la información de inicio de sesión, el asistente ensambla la cadena de conexión de las propiedades individuales y sus valores. 
 
@@ -70,9 +71,9 @@ Son el id. de usuario y la contraseña para conectarse.
 ### <a name="connection-string-format"></a>Formato de la cadena de conexión
 Este es el formato de una cadena de conexión típica.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Escribir la cadena de conexión
 Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **DSN**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.

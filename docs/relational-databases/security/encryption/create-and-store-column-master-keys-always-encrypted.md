@@ -12,15 +12,15 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765048"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Las*claves maestras de columna* son claves que protegen las claves que se usan en Always Encrypted para cifrar las claves de cifrado de columnas. Las claves maestras de columna pueden almacenarse en un almacén de claves de confianza, y las claves deben ser accesibles a las aplicaciones que necesiten cifrar o descifrar datos y a las herramientas para configurar Always Encrypted y administrar las claves de Always Encrypted.
 
@@ -122,7 +122,7 @@ $azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for
 New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
-$akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
+$akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
 ### <a name="using-sql-server-management-studio-ssms"></a>Usar SQL Server Management Studio (SSMS)

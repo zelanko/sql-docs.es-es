@@ -1,7 +1,7 @@
 ---
 title: Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768083"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server)
 
@@ -40,6 +40,7 @@ Después de seleccionar el **proveedor de datos de .NET Framework para MySQL** e
 |Nombre de servidor|**Server**|
 |Nombre de la base de datos|**Base de datos**|
 |Información de autenticación (inicio de sesión)|**Id. de usuario** y **contraseña**|
+|||
 
 No tiene que escribir la cadena de conexión en el campo **ConnectionString** de la lista. Después de escribir los valores individuales del nombre del servidor de MySQL (**Server**) y obtener la información de inicio de sesión, el asistente ensambla la cadena de conexión de las propiedades individuales y sus valores. 
 
@@ -79,18 +80,18 @@ Son el id. de usuario y la contraseña para conectarse.
 ### <a name="connection-string-format"></a>Formato de la cadena de conexión
 Este es el formato de una cadena de conexión típica.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>Escribir la cadena de conexión
 Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **DSN**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
 En el siguiente ejemplo se emplea esta cadena de conexión.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 Esta es la pantalla que verá después de escribir la cadena de conexión.
 

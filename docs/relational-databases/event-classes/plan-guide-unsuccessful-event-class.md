@@ -12,15 +12,15 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb11261f8ff099874ebadbdaffb02b5c8706aa02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c65beb690edf055b1cf3730d08e8d3ecb02841c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733759"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Clase de eventos Plan Guide Unsuccessful
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La clase de eventos Plan Guide Unsuccessful indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. En su lugar, el plan se compiló sin utilizar la guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
   

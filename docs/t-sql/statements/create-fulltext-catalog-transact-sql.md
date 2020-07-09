@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acc423ca4ddefae5c1e7ee70965200af7c7fa4a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 888be4bfe27530a726d7352494959af05fe240e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735824"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un catálogo de texto completo para una base de datos. Un catálogo de texto completo puede tener varios índices de texto completo, pero un índice de texto completo solo puede pertenecer a un catálogo de texto completo. Cada base de datos puede contener varios catálogos de texto completo o ninguno.  
   

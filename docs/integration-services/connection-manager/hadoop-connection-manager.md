@@ -1,7 +1,7 @@
 ---
 title: Administrador de conexiones de Hadoop | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735115"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
 
@@ -83,7 +83,7 @@ En el equipo SSIS:
 
     El equipo debe estar configurado como miembro de un grupo de trabajo, ya que un dominio Kerberos es diferente de un dominio de Windows. Establezca el dominio Kerberos y agregue un servidor KDC como se explica en el siguiente ejemplo. Reemplace `REALM.COM` por su dominio Kerberos propio correspondiente, según sea necesario.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ En el equipo SSIS:
 
 2.  Compruebe la configuración con el comando **Ksetup**. La salida debe tener un aspecto similar al siguiente ejemplo:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ En el servidor KDC:
 
 1.  Edite la configuración del KDC en el archivo **krb5.conf**. Permita que KDC confíe en el dominio de Windows, haciendo referencia para ello a la siguiente plantilla de configuración. La configuración se encuentra de forma predeterminada en **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ En el controlador de dominio:
 
 1.  Ejecute los siguientes comandos **Ksetup** para agregar una entrada de dominio Kerberos:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ En el equipo de puerta de enlace:
 
 Ejecute los siguientes comandos **Ksetup** para agregar una entrada de dominio Kerberos.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>Consulte también  
  [Tarea de Hive de Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   

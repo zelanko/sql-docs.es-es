@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1cf931a10c75549dc3dbd1d022d3456f8591d2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9475e53b10fc68763471441163a7905d2bcfc5bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735774"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un esquema en la base de datos actual que asigna a grupos de archivos las particiones de una tabla o índice con particiones. El número y el dominio de las particiones de una tabla o índice con particiones se determinan en una función de partición. Antes de crear un esquema de partición, es necesario crear una función de partición de una instrucción [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md).  
 

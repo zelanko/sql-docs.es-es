@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735132"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurar cuentas de inicio de sesión - Creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para que dos instancias del servidor se conecten a [extremos de creación de reflejo de la base de datos](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) entre sí, la cuenta de inicio de sesión de cada instancia debe tener acceso a la otra instancia. Además, cada cuenta de inicio de sesión requiere permiso de conexión al extremo de creación de reflejo de la base de datos de la otra instancia.  
   

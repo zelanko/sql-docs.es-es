@@ -17,15 +17,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44a966ba100441a652ca0558552152a460e21c66
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735475"
 ---
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Agrega una o varias filas a una tabla `node` o `edge` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 

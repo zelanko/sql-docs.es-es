@@ -1,7 +1,7 @@
 ---
 title: SQL Server Extended Events Sessions
 description: Una sesión de Eventos extendidos de SQL Server se crea en el proceso de SQL Server en el que se hospeda el motor de Eventos extendidos. Obtenga información sobre los estados de sesión y el contenido de la sesión.
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756846"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events se crea en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda el motor de Extended Events. Los aspectos siguientes de una sesión de Extended Events proporcionan un contexto para entender la infraestructura de Extended Events y el procesamiento general que se produce:  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487673"
   
 ## <a name="session-states"></a>Estados de sesión  
  La ilustración siguiente muestra los diversos estados de una sesión de Extended Events.  
-  
- ![Estado de la sesión de eventos extendidos](../../relational-databases/extended-events/media/xesessionstate.gif "Estado de la sesión de eventos extendidos")  
-  
+
+![Estado de la sesión de eventos extendidos](../../relational-databases/extended-events/media/xesessionstate.png "Estado de la sesión de eventos extendidos")
+
  En la figura anterior, observe que el estado de la sesión cambia cuando se emiten los distintos comandos DDL para una sesión de evento. En la tabla siguiente se describen estos cambios de estado.  
   
 |Etiqueta de la ilustración|Instrucción DDL|Descripción|  

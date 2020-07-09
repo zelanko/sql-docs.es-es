@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c1c3de18f4da7d6f55ad0bba5b684e21989b1e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8b787f59da14c1414e66f158f8001e05cca6006
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754640"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>Incluir servidor testigo (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para especificar si desea incluir un servidor testigo en esta configuración de seguridad de la creación de reflejo de bases de datos.  
   
  **Para configurar la creación de reflejo de la base de datos mediante SQL Server Management Studio**  

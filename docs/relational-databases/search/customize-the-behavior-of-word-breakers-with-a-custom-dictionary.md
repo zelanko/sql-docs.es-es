@@ -1,6 +1,5 @@
 ---
 title: Personalización del comportamiento de los separadores de palabras con un diccionario personalizado
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,15 +10,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 806d2f7aa35fc3299f22dbd1c3423834aaa8936f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d9a3f034312dcb6be52534968034fe526cfa5955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758060"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Personalización del comportamiento de los separadores de palabras con un diccionario personalizado (Búsqueda de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede personalizar el comportamiento del separador de palabras para un idioma determinado creando un archivo de diccionario personalizado específico del idioma. Por ejemplo, puede evitar que el separador de palabras separe algunos términos o patrones.  
   
  Para obtener más información, vea el artículo siguiente de SharePoint:  

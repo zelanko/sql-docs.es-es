@@ -14,15 +14,15 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb9c8b9774be0daa74b30bfd51ee97bf1e2271c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756118"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** para informar de los mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de bases de datos.  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Database Mirroring Login  

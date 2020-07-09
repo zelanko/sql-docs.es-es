@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760476"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 El uso de directivas de administración basada en directivas permite administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o varios objetos de instancia, instancias de servidor, una o varias bases de datos o uno o varios objetos de base de datos. Como administrador de bases de datos, debe asegurarse de que ciertos servidores no tienen habilitado Correo electrónico de base de datos. En esta lección, creará una condición y una directiva que establezca esa opción de servidor. Probará el servidor para ver si cumple con la directiva. A continuación, utilizará la directiva para volver a configurar el servidor de modo que cumpla con ella.  
 
 ## <a name="prerequisites"></a>Prerrequisitos

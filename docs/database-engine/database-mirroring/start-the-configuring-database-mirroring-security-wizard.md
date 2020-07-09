@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd7bdb74f679f32132361aac5c2b751b9bda9494
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756468"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Iniciar el Asistente para la configuración de seguridad del reflejo de bases de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El Asistente para la configuración de seguridad de la creación de reflejo de bases de datos se puede usar para configurar inicialmente los parámetros de seguridad de algunas o todas las instancias de servidor que intervienen en la creación del reflejo. Este asistente trabaja junto con la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>Para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos  

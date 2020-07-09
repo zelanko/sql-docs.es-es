@@ -17,15 +17,15 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25ab3abd88a92afb2dc90c4d97bcced3443d22e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753791"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 Éste es el tutorial de introducción a [!INCLUDE[ssDE](../includes/ssde-md.md)] . Este tutorial está destinado a usuarios nuevos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que hayan instalado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Este breve tutorial le ayuda a comenzar a usar [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   

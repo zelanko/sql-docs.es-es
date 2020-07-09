@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757691"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crear desencadenadores DML para administrar varias filas de datos
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cuando escriba el código para un desencadenador DML, tenga en cuenta que la instrucción que hace que se active el disparador puede ser una sola instrucción que afecte a varias filas de datos, en lugar de una sola fila. Este comportamiento es habitual para los desencadenadores UPDATE y DELETE, ya que estas instrucciones suelen afectar a varias filas. No es tan corriente para los desencadenadores INSERT, porque la instrucción INSERT básica solo agrega una fila. Pero, dado que un desencadenador INSERT puede ser activado por una instrucción INSERT INTO (*nombre_tabla*) SELECT, la inserción de muchas filas puede tener como resultado la invocación de un solo desencadenador.  
   
  Las consideraciones acerca de los procesos que afectan a varias filas son especialmente importantes cuando la función de un desencadenador DML consiste en volver a calcular automáticamente los valores de resumen de una tabla y almacenar los resultados en otra para realizar cálculos continuos.  

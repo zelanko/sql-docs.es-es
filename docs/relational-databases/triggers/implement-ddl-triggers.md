@@ -12,15 +12,15 @@ ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 129fb14a73c54a880a4a1b24d3f38bac5218a0ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8466ffbe1327647f01a6da275cba843b0502a6bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750116"
 ---
 # <a name="implement-ddl-triggers"></a>Implementar desencadenadores DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se ofrece información acerca de la creación y modificación de desencadenadores DDL, así como para su deshabilitación o eliminación.  
   
 ## <a name="creating-ddl-triggers"></a>Crear desencadenadores DDL  

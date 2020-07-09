@@ -14,15 +14,15 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e4371ed373d7937f177dab5979c3e50fe1096c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68074163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757657"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  

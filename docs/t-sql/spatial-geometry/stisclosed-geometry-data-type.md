@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762423"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve 1 si el punto inicial y el punto final de la instancia de **geometry** especificada son los mismos. Devuelve 1 para los tipos de **geometrycollection** si están cerradas todas las instancias de **geometry** que contienen. Devuelve 0 si la instancia no está cerrada.
   

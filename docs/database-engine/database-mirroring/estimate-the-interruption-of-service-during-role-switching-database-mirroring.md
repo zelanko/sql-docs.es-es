@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754672"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará fuera de servicio depende del tipo y la causa de la conmutación de roles.  
   
 -   En el caso de la conmutación automática por error, existen dos factores que influyen en el tiempo durante el cual estará interrumpido el servicio: el tiempo necesario para que el servidor reflejado reconozca que ha fallado la instancia del servidor principal (es decir, detección del error) y el tiempo necesario para realizar una conmutación por error de la base de datos (es decir, tiempo de conmutación por error).  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760558"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Database Mirroring (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto de rendimiento **SQLServer:Creación de reflejo de la base de datos** contiene contadores de rendimiento que proporcionan información acerca de la creación de reflejo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
 |Nombre|Descripción|  

@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753343"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de evento **OLEDB Call** tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos.  
   
  Incluya la clase de evento **OLEDB Call** en seguimientos para supervisar solo aquellas llamadas que no solicitan datos o que no se realizan al método **QueryInterface** . Cuando se incluye la clase de evento **OLEDB Call** en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con que se produzcan las llamadas OLE DB a la base de datos durante el seguimiento. Si se realizan llamadas con frecuencia, el seguimiento puede mermar notablemente el rendimiento.  

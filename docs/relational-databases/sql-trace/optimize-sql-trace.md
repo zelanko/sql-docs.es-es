@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59b1a599a38e31abeee677059d5a99842e76d807
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 275e2c1b26608cbca2835dbe43efd72058fc998f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750962"
 ---
 # <a name="optimize-sql-trace"></a>Optimizar el seguimiento de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Aunque la ejecución de Seguimiento de SQL supone un costo de rendimiento porque utiliza recursos del sistema para recopilar datos, dicho costo se puede reducir al mínimo de muchas maneras. Para minimizar el costo de rendimiento que provoca un seguimiento, intente las siguientes acciones:  
   
 -   Considere el uso del símbolo del sistema para ejecutar seguimientos. El uso de una interfaz gráfica de usuario afecta negativamente al rendimiento. Para obtener más información, vea [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  

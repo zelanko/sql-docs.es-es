@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756013"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos Object:Altered indica que se ha modificado un objeto; por ejemplo, mediante una instrucción ALTER INDEX, ALTER TABLE o ALTER DATABASE. Esta clase de evento se puede utilizar para determinar si están modificando objetos; por ejemplo, con aplicaciones ODBC, que, a menudo, crean procedimientos almacenados temporales.  
   
  La clase de eventos Object:Altered siempre tiene lugar como dos eventos. El primer evento indica la fase de Principio. El segundo evento indica la fase de reversión o de confirmación.  

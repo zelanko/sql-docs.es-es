@@ -1,21 +1,20 @@
 ---
 title: Extensión Servidores de administración central de SQL Server
-titleSuffix: Azure Data Studio
 description: Instalación y uso de la extensión Servidores de administración central de SQL Server (versión preliminar) para Azure Data Studio
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758356"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extensión Servidores de administración central de SQL Server (versión preliminar)
 

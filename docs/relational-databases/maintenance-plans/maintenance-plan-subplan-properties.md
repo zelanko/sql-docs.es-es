@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 440afb0c0b2c3f43de0bca54339b0f87872e9a90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754505"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de mantenimiento (Propiedades del subplán)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el cuadro de diálogo **Plan de mantenimiento (Propiedades del subplán)** para especificar un nombre, descripción y programación de un subplán del plan de mantenimiento. Haga clic en **Propiedades del subplán** en la pestaña **Diseño** del plan de mantenimiento o haga doble clic en un subplán en la cuadrícula del diseñador para mostrar este cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  

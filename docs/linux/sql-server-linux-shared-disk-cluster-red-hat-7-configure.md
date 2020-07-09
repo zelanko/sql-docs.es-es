@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 493239906f83b74735f9fcd4b6673fb2748abfff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75656632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897288"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configuración del clúster de instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En esta guía se proporcionan instrucciones para crear un clúster e conmutación por error de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
 
@@ -373,7 +373,7 @@ Un dispositivo STONITH proporciona un agente de barrera. En [Configuración de P
    mssqlha  (ocf::mssql:fci): Started sqlfcivm1
    
    PCSD Status:
-    slqfcivm1: Online
+    sqlfcivm1: Online
     sqlfcivm2: Online
    
    Daemon Status:

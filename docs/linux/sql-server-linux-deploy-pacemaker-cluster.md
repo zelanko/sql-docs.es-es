@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896521"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementación de un clúster de Pacemaker para SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este tutorial se documentan las tareas necesarias para implementar un clúster de Pacemaker de Linux para un grupo de disponibilidad Always On (AG) de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] o una instancia de clúster de conmutación por error (FCI). A diferencia de la pila ligada estrechamente de Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la creación de clústeres de Pacemaker, así como la configuración de grupos de disponibilidad (AG) en Linux, se pueden realizar antes o después de la instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. La integración y configuración de los recursos para la parte de Pacemaker de una implementación de AG o FCI se realiza una vez configurado el clúster.
 > [!IMPORTANT]

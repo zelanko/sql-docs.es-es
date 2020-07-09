@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014698"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897373"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociado utilizando [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  
   
 > [!TIP]  

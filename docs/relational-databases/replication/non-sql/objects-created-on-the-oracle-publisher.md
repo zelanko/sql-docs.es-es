@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940316"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901234"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  
   
 |Nombre de objeto|Tipo de objeto|Descripción|  

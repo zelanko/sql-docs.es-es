@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900922"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>Identificación de las esperas asociadas a grupos de disponibilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cuando solucione problemas de latencia de grupos de disponibilidad Always On, puede supervisar las estadísticas de espera de acumulación utilizando los tipos de espera específicos de grupos de disponibilidad en la vista de administración dinámica (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
  Para obtener información general sobre el uso de las estadísticas de espera, vea [SQL Server 2005 Waits and Queues](https://technet.microsoft.com/library/cc966413.aspx) (Esperas y colas de SQL Server 2005). Dicho documento se escribió para SQL Server 2005, pero su información se puede aplicar a versiones posteriores de SQL Server.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 901059ea6aa203dfcf21878c35eb1bc0214408b9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ebe94614467e4b4c3d3ef2b9eb52287cdcc3feb7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301656"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897038"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual forzada de un grupo de disponibilidad Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar una conmutación por error forzada (con posible pérdida de datos) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una conmutación por error forzada es una forma de conmutación por error manual pensada estrictamente para la recuperación ante desastres, cuando no es posible realizar una [conmutación por error manual planeada](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Por tanto, se recomienda encarecidamente que solo fuerce la conmutación por error si debe restaurar el servicio al grupo de disponibilidad inmediatamente y asume el riesgo de perder datos.  
   
  Después de una conmutación por error forzada, el destino de la conmutación por error al que se aplicó la conmutación por error del grupo de disponibilidad se convierte en la nueva réplica principal. Las bases de datos secundarias de las réplicas secundarias restantes se suspenden y se deben reanudar manualmente. Cuando la réplica principal anterior está disponible, realiza la transición al rol secundario, haciendo que las bases de datos principales anteriores se conviertan en bases de datos secundarias y realicen la transición al estado SUSPENDED. Antes de reanudar una base de datos secundaria determinada, quizás pueda recuperar datos perdidos de ella. Sin embargo, tenga en cuenta que el truncamiento del registro de transacciones se retrasa en una base de datos principal determinada mientras cualquiera de sus bases de datos secundarias está suspendida.  

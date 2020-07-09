@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a563558f6b7d20dd4ca8d5f6573d1b16f598fa1f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900873"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Con SQL Server 2016, se introduce la propagación automática de grupos de disponibilidad. Cuando se crea un grupo de disponibilidad con propagación automática, SQL Server crea automáticamente las réplicas secundarias para cada base de datos del grupo. Ya no es necesario realizar copias de seguridad de las réplicas secundarias ni restaurarlas de forma manual. Para habilitar la propagación automática, cree el grupo de disponibilidad con T-SQL o use la versión más reciente de SQL Server Management Studio.
 

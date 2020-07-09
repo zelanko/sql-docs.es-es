@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896969"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Unión de SQL Server en un host de Linux a un dominio de Active Directory
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se proporcionan instrucciones generales para unir un equipo host de Linux de SQL Server a un dominio de Active Directory (AD). Hay dos métodos: usar un paquete SSSD integrado o emplear proveedores ajenos de Active Directory. Ejemplos de productos de unión a dominio ajenos son [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) y [Centrify](https://www.centrify.com/). En esta guía se incluyen los pasos necesarios para comprobar la configuración de Active Directory, aunque no está concebida para proporcionar instrucciones sobre cómo unir un equipo a un dominio cuando se usan utilidades de terceros.
 

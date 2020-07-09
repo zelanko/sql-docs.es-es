@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288549"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900904"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 En SQL Server 2012 y 2014, la única manera de inicializar una réplica secundaria en un grupo de disponibilidad AlwaysOn de SQL Server es recurriendo a los trabajos de copia de seguridad, copia y restauración. SQL Server 2016 incorpora una característica nueva para inicializar una réplica secundaria: la *propagación automática*. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esta nueva característica se puede usar durante la creación inicial de un grupo de disponibilidad o cuando una base de datos se agrega a uno de estos grupos. La propagación automática se incluye en todas las ediciones de SQL Server que admiten grupos de disponibilidad AlwaysOn, y se puede usar tanto con los grupos de disponibilidad tradicionales como con los [grupos de disponibilidad distribuidos](distributed-availability-groups.md).
 

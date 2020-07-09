@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897007"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinación de la posible causa de los errores de conectividad entre réplicas de disponibilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden producir un error en una sesión entre dos réplicas de disponibilidad. Una réplica de disponibilidad no comprueba con regularidad los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que podrían pasar desapercibidos, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa su propio mecanismo de tiempo de espera de la sesión. Especifica el período de espera de la sesión en segundos. El período de espera es el tiempo máximo durante el que una instancia de servidor espera hasta recibir un mensaje PING de otra instancia, antes de considerar que la otra instancia está desconectada. Cuando se agota el tiempo de espera de sesión entre dos réplicas de disponibilidad, las réplicas de disponibilidad suponen que se ha producido un error y declaran *un error de software*.  
   
 > [!IMPORTANT]  

@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: aeac57c5ae6facfeb092592c2f3dca851bb9b87b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901263"
 ---
 # <a name="polybase-query-scenarios"></a>Escenarios de consulta de PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En este artículo se proporcionan ejemplos de consultas mediante el uso de la característica [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server (a partir de la versión de 2016). Antes de usar estos ejemplos, debe instalar y configurar PolyBase. Para más información, consulte la [información general de PolyBase](polybase-guide.md).
   

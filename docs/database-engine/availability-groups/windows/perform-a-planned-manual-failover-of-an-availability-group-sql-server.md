@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897024"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error planeada, al igual que cualquier conmutación por error de un grupo de disponibilidad AlwaysOn, realiza la transición de una réplica secundaria a un rol principal. Al mismo tiempo, la conmutación por error realiza la transición de la réplica principal antigua al rol secundario.  
   
 Una conmutación por error manual planeada solo se admite cuando la réplica principal y la réplica secundaria de destino se ejecutan en modo de confirmación sincrónica y están sincronizadas. Una conmutación por error manual planeada conserva todos los datos de las bases de datos secundarias que se unen al grupo de disponibilidad en la réplica secundaria de destino. Después de que la réplica principal antigua realiza la transición al rol secundario, sus bases de datos se convierten en bases de datos secundarias. A continuación, pueden empezar a sincronizarse con las bases de datos principales. Después de que todas realicen la transición al estado SYNCHRONIZED, la nueva réplica secundaria es apta para actuar como destino de una conmutación por error manual planeada futura.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8cde9d19b4f8b1c04290f6b36006b83aadc0e5ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321905"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900797"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Consideraciones administrativas para los publicadores de Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Después de configurar un publicador de Oracle y de implementar los mecanismos de seguimiento de cambios de la replicación, los administradores del sistema de bases de datos de Oracle pueden seguir utilizando las utilidades estándar de bases de datos de Oracle y realizar las tareas normales de administración del sistema. No obstante, debe tener en cuenta los efectos de ciertas tareas administrativas sobre los datos publicados.  
   
  Excepto cuando se quita o se modifica una columna publicada para replicación, o cuando se quitan o se modifican objetos de replicación, estas consideraciones no se aplican a las publicaciones de instantáneas.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900692"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transacciones - Grupos de disponibilidad y creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describe la compatibilidad de las transacciones entre bases de datos y distribuidas para la creación de reflejo de bases de datos y grupos de disponibilidad Always On.  
 

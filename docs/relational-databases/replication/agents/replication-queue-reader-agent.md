@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3dacfe725541c93f3d5fe1276513423d77aeba9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897868"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de lectura de cola de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   El Agente de lectura de cola de replicación es un ejecutable que lee los mensajes almacenados en una cola de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o una cola de mensajes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue y luego aplica esos mensajes al publicador. El Agente de lectura de cola se utiliza con la instantánea y las publicaciones transaccionales que permiten la actualización en cola.  
   
 > [!NOTE]  

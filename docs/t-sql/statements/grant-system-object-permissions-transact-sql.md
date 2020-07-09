@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc9f2cf4409edb882b6f74516f604a0f6c3eeead
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899918"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (permisos de objeto de sistema de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permisos para objetos de sistema, como procedimientos almacenados del sistema, procedimientos almacenados extendidos, funciones y vistas.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68050670"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Conceder el permiso SELECT para una vista  
- En este ejemplo se concede el permiso `Sylvester1` del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
+ En este ejemplo se concede el permiso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión de `Sylvester1` para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
   
 ```  
 USE AdventureWorks2012;  

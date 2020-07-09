@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901250"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtrar datos publicados para la replicación de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Además de los filtros de fila estáticos y los filtros de columna que se pueden definir en otros tipos de replicación, la replicación de mezcla ofrece filtros de fila con parámetros y filtros de combinación. Para más información sobre los filtros de fila estáticos y los filtros de columna, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  La replicación de mezcla se utiliza en muchas aplicaciones que admiten usuarios móviles; estas aplicaciones normalmente tienen muchas suscripciones, cada una de las cuales recibe un conjunto de datos único. Los filtros con parámetros combinados con los filtros de combinación permiten a un administrador configurar una publicación (o, como máximo, un pequeño número de publicaciones) y proporcionar diferentes conjuntos de datos a los usuarios, lo que reduce la sobrecarga de administración que supone la creación de varias publicaciones.  

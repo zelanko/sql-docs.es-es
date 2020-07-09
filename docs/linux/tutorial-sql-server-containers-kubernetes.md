@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635432"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902310"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementación de un contenedor de SQL Server en Kubernetes con Azure Kubernetes Service (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Aprenda a configurar una instancia de SQL Server en Kubernetes en Azure Kubernetes Service (AKS), con almacenamiento persistente para la alta disponibilidad. La solución proporciona resistencia. Si se produce un error en la instancia de SQL Server, Kubernetes vuelve a crearla automáticamente en un nuevo pod. Kubernetes también proporciona resistencia frente a un error de nodo.
 
@@ -160,12 +160,15 @@ En este paso, cree un manifiesto para describir el contenedor basado en la image
 1. Cree un manifiesto (un archivo YAML) para describir la implementación. En el ejemplo siguiente se describe una implementación, incluido un contenedor basado en la imagen de contenedor de SQL Server.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

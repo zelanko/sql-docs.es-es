@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 26a71907372fc6f69d76a8eba6bf3478ae6ec938
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c02704b8d18464ead042769038378acc07177ba8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998529"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Uso del formato de caracteres para importar o exportar datos (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se recomienda utilizar el formato de caracteres al exportar datos de forma masiva a un archivo de texto que se va a utilizar en otro programa o al importar datos de forma masiva desde un archivo de texto generado por otro programa.  
 
 El formato de caracteres utiliza el formato de datos de caracteres para todas las columnas. El almacenamiento de información en el formato de caracteres resulta útil si se utilizan los datos en otro programa, como hojas de cálculo, o bien cuando es necesario copiar los datos a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una base de datos de otro proveedor, como Oracle.  

@@ -13,15 +13,15 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095481"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998309"
 ---
 # <a name="writing-pages"></a>Escribir páginas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 La E/S de una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] incluye escrituras lógicas y físicas. Se produce una escritura lógica cuando se modifican los datos en una página de la caché del búfer. Una escritura física se produce cuando la página se escribe de la [caché del búfer](../relational-databases/memory-management-architecture-guide.md) al disco.
 

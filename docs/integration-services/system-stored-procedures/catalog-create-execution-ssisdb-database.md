@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec8045ffb6e8b555f8b199170b171f8f01e25d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749661"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea una instancia de ejecución en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -31,14 +31,14 @@ ms.locfileid: "71295556"
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog.create_execution [@folder_name = folder_name  
-     , [@project_name =] project_name  
-     , [@package_name =] package_name  
-  [  , [@reference_id =] reference_id ]  
-  [  , [@use32bitruntime =] use32bitruntime ] 
-  [  , [@runinscaleout =] runinscaleout ]
-  [  , [@useanyworker =] useanyworker ] 
-     , [@execution_id =] execution_id OUTPUT  
+catalog.create_execution [ @folder_name = ] folder_name  
+     , [ @project_name = ] project_name  
+     , [ @package_name = ] package_name  
+  [  , [ @reference_id = ] reference_id ]  
+  [  , [ @use32bitruntime = ] use32bitruntime ] 
+  [  , [ @runinscaleout = ] runinscaleout ]
+  [  , [ @useanyworker = ] useanyworker ] 
+     , [ @execution_id = ] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

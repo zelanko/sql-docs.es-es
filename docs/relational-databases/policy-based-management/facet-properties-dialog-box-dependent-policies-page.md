@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb5cb5798118e1b88a0e6ee1b85ab2f8a4846be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749390"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Propiedades de faceta, página Directivas dependientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta faceta de administración basada en directivas.  
   
 ## <a name="options"></a>Opciones  

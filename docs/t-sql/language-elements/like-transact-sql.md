@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884004"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007309"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=. Si alguno de los argumentos no es del tipo de datos de cadena de caracteres, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo convierte al tipo de datos de cadena de caracteres, si es posible.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884004"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -293,7 +293,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
- El ejemplo siguiente busca empleados cuyo nombre sea `Cheryl` o `Sheryl` en la tabla `Person`.  
+ El ejemplo siguiente busca empleados cuyo nombre sea `Person` o `Cheryl` en la tabla `Sheryl`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
- El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `612` en la tabla `DimEmployee`.  
+ El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `DimEmployee` en la tabla `612`.  
   
 ```sql  
 -- Uses AdventureWorks  

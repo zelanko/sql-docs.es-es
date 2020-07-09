@@ -2,7 +2,7 @@
 title: Usar un archivo de formato para omitir una columna de tabla (SQL Server) | Microsoft Docs
 description: En este artículo se describe cómo usar un archivo de formato para omitir la importación de una columna de tabla cuando los datos de la columna omitida no existen en el archivo de datos de origen.
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980422"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007192"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar un archivo de formato para omitir una columna de tabla  (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En este artículo se describe cómo usar un archivo de formato para omitir la importación de una columna de tabla cuando los datos de la columna omitida no existen en el archivo de datos de origen. Un archivo de datos puede contener menos campos que el número de columnas de la tabla de destino; es decir, se puede omitir la importación de una columna, pero solo si se cumple al menos una de las dos condiciones siguientes en la tabla de destino:
 -   La columna omitida admite valores NULL.
@@ -46,7 +46,7 @@ GO
   
 Los ejemplos de este artículo también usan un archivo de datos de ejemplo, `myTestSkipCol2.dat`. Este archivo de datos solo contiene dos campos, aunque la tabla de destino tiene tres columnas.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 Para usar un archivo de formato XML para omitir una columna de tabla mediante el uso de `OPENROWSET(BULK...)`, debe proporcionar una lista explícita de las columnas en la lista de selección y en la tabla de destino de la siguiente forma:  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 En el siguiente ejemplo se utiliza el proveedor de conjuntos de filas BULK `OPENROWSET` y el archivo de formato `myTestSkipCol2.xml` . En el ejemplo se importa masivamente el archivo de datos `myTestSkipCol2.dat` a la tabla `myTestSkipCol` . La instrucción contiene una lista explícita de las columnas en la lista de selección y también en la tabla de destino, según convenga.  
   

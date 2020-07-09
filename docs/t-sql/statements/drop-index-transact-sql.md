@@ -32,15 +32,15 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dab01be570e871cfb1aed5c28bba91f81b55c559
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4d6e1349f98bdf5b98d1d70ff68d50014f0dcdde
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635306"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009254"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Quita uno o más índices XML, filtrados, espaciales o relacionales de la base de datos actual. Puede quitar un índice clúster y mover la tabla resultante a otro grupo de archivos o esquema de partición en una sola transacción especificando la opción MOVE TO.  
   

@@ -14,15 +14,15 @@ ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c0db066b17e00c374e788395815d4e844e2c8ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cea78f558ab8df4b1c32ae7c9dcf9d55b004d849
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081611"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005825"
 ---
 # <a name="sql-server-guides"></a>Guías de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Las siguientes guías están disponibles. Se explican los conceptos generales y se aplican a todas las versiones de SQL Server, a menos que se indique lo contrario en la guía correspondiente. 
 

@@ -11,16 +11,16 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550221"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007533"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En este artículo se describen las opciones y las recomendaciones para cargar datos en un índice de almacén de columnas mediante los métodos de inserción gradual y carga masiva SQL estándar. La carga de datos en un índice de almacén de columnas es una parte esencial de cualquier proceso de almacenamiento de datos, ya que mueve la información al índice que se está preparando para el análisis.
   

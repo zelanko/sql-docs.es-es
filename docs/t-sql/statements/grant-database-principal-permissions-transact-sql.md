@@ -27,15 +27,15 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473166d89ec44c9f5fa2c13ad9da6031f951da57
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3f9dfe52c4a55d260b32879a803d771271ac2034
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633736"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003630"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de base de datos de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Concede permisos a un usuario de base de datos, un rol de base de datos o un rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
- AS \<database_principal>  
+ AS \<database_principal>.  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
  *Database_user*  

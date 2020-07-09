@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982405"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882010"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Proporciona estadísticas de uso del espacio del registro de transacciones para todas las bases de datos. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también se puede usar para restablecer las estadísticas de esperas y bloqueos temporales.
   

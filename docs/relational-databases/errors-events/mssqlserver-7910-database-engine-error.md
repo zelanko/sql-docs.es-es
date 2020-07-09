@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8638d205ba3958a88096d12e001a9362bb3d59cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eee9101e3d9d0684b1e2f7cbc28f99777823f33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793138"
 ---
 # <a name="mssqlserver_7910"></a>MSSQLSERVER_7910
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7910|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Texto del mensaje|Reparación: se ha asignado la página P_ID al Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE).|  
+|Texto del mensaje|Reparación: se ha asignado la página P_ID al id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicación  
 Se trata de un mensaje informativo de REPAIR que indica que se ha asignado una página a la matriz de espacios asignados en una página IAM (Mapa de asignación de índices).  

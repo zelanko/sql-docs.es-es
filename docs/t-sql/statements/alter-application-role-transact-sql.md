@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813904"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Esta instrucción cambia el nombre, la contraseña o el esquema predeterminado de un rol de aplicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Sintaxis
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *application_role_name*  
  Nombre del rol de aplicación que va a modificarse.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos. *schema_name* puede ser un esquema que no exista en la base de datos.  
   
-## <a name="remarks"></a>Observaciones  
- Si el nombre del rol de aplicación nuevo ya existe en la base de datos, la instrucción producirá un error. Cuando se modifica el nombre, la contraseña o el esquema predeterminado de un rol de aplicación, no se cambia el identificador asociado al rol.  
+## <a name="remarks"></a>Observaciones
+
+Si el nombre del rol de aplicación nuevo ya existe en la base de datos, la instrucción producirá un error. Cuando se modifica el nombre, la contraseña o el esquema predeterminado de un rol de aplicación, no se cambia el identificador asociado al rol.  
   
 > [!IMPORTANT]  
 >  La directiva de expiración de contraseñas no se aplica a las contraseñas de rol de aplicación. Por esta razón, debe extremar las precauciones y seleccionar contraseñas seguras. Las aplicaciones que invocan roles de aplicación deben almacenar sus propias contraseñas.  

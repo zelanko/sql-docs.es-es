@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3f3601aca4a8cf5325071a99a6c7605253ff0aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880081"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   El marco de trabajo de controladores de lógica de negocios permite escribir un ensamblado de código administrado al que se llama durante el proceso de sincronización de mezcla. El ensamblado incluye lógica de negocios que puede responder a varias condiciones durante la sincronización: cambios de datos, conflictos y errores. El marco de trabajo de controladores de lógica de negocios proporciona un modelo de programación simple y los datos que el proceso de mezcla suministra al ensamblado tienen el formato de un conjunto de datos ADO.NET, lo que permite aprovechar el conocimiento de ADO.NET en lugar de aprender el uso de una interfaz privada. Para obtener más información acerca de los controladores de lógica de negocios de programación, vea:  
   
 -   Referencia de la interfaz de programación de aplicaciones (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

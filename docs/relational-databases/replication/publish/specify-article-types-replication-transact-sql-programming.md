@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5814caf6381ce80f66c375c3a3e13fd23ff17bc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880215"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artículo (programación de la replicación con Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Los tipos de artículo predeterminados para la replicación son los artículos de tabla, pero puede publicar otros objetos de base de datos como los artículos, entre los que se incluyen las vistas, los procedimientos almacenados, las funciones definidas por el usuario y la ejecución de procedimientos almacenados. Puede usar los procedimientos almacenados de replicación para especificar mediante programación un tipo de artículo al definir un artículo. Los procedimientos que se usan dependen del tipo de replicación y del tipo de artículo.  
   
 > [!NOTE]  

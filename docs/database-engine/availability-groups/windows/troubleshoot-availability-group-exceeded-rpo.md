@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822182"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882362"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Después de realizar una conmutación por error manual forzada de un grupo de disponibilidad a una réplica secundaria de confirmación asincrónica, es posible que la pérdida de datos supere su objetivo de punto de recuperación (RPO). También puede ser que al calcular la pérdida de datos potencial de una réplica secundaria de confirmación sincrónica usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RPO.  
   
  Una réplica secundaria de confirmación sincrónica garantiza que no se pierdan datos, pero la pérdida de datos potencial de una réplica secundaria de confirmación asincrónica depende de la cantidad de registro que todavía está esperando a ser protegido en la réplica secundaria.  

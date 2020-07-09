@@ -2,7 +2,7 @@
 title: Detección de errores con replicación transaccional
 description: Describe cómo localizar e identificar errores con la replicación transaccional, así como la metodología de solución de problemas para abordar problemas con la replicación.
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882282"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 
 
@@ -77,8 +77,10 @@ El Agente de instantáneas genera la instantánea y la escribe en la carpeta de 
 
     ![Error del Agente de instantáneas para acceso denegado](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 Si los permisos de Windows no están configurados correctamente para la carpeta de instantáneas, verá un error de "acceso denegado" para el Agente de instantáneas. Tendrá que comprobar los permisos para la carpeta donde se almacena la instantánea y asegurarse de que la cuenta que se usa para ejecutar al Agente de instantáneas tiene permisos para acceder al recurso compartido.  
 
@@ -108,10 +110,12 @@ El Agente de registro del LOG se conecta a la base de datos del publicador y exa
     
     ![Detalles del error para el Agente de registro del LOG](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. Normalmente, el error se produce cuando el propietario de la base de datos del publicador no se ha establecido correctamente. Esto puede ocurrir cuando se restaura una base de datos. Para comprobarlo:
 
@@ -127,7 +131,7 @@ El Agente de registro del LOG se conecta a la base de datos del publicador y exa
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ El Agente de distribución busca los datos en la base de datos de distribución 
 2. Se abre el cuadro de diálogo **Historial de Distribuidor a suscriptor** y aclara qué tipo de error está detectando el agente: 
 
      ![Detalles del error para el Agente de distribución](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. El error indica que el Agente de distribución está volviendo a intentarlo. Para buscar más información, compruebe el historial de trabajos del Agente de distribución: 
 
@@ -175,9 +181,11 @@ El Agente de distribución busca los datos en la base de datos de distribución 
 5. Seleccione una de las entradas de error y vea el texto del error en la parte inferior de la ventana:  
 
     ![Texto de error que indica una contraseña incorrecta para el agente de distribución](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. Este error indica que la contraseña usada por el Agente de distribución es incorrecta. Para resolverlo:
 
@@ -194,11 +202,13 @@ El Agente de distribución busca los datos en la base de datos de distribución 
     Abra el historial de **Distribución al suscriptor** haciendo clic con el botón derecho en la suscripción en **Monitor de replicación** > **Ver detalles**. En este caso, el error ahora es diferente: 
 
     ![Error que indica que el Agente de distribución no se puede conectar](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. Este error indica que el Agente de distribución no se pudo conectar al suscriptor, ya que se produjo un error al iniciar sesión con el usuario **NODE2\repl_distribution**. Para investigar en profundidad, conéctese al suscriptor y abra el registro de errores de SQL Server *actual* en el nodo **Administración** del Explorador de objetos: 
 
@@ -234,8 +244,10 @@ Puede usar el registro detallado para ver información más detallada sobre los 
 
 1. En el cuadro **Comando**, inicie una línea nueva, escriba el texto siguiente y haga clic en **Aceptar**: 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     Puede modificar la ubicación y el nivel de detalle según sus preferencias.
 
     ![Resultados detallados en las propiedades del paso del trabajo](media/troubleshooting-tran-repl-errors/verbose.png)

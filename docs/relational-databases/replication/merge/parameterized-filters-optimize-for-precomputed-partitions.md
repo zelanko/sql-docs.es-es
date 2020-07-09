@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 132e991a0418155ed6d0d1db2eca2945dab3e307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882292"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Cuando un suscriptor se sincroniza con un publicador, el publicador debe evaluar los filtros del suscriptor para determinar qué filas pertenecen a la partición, o conjunto de datos, de ese suscriptor. Este proceso de determinar la pertenencia a particiones de los cambios en el publicador para cada suscriptor que recibe un conjunto de datos filtrados se denomina *evaluación de particiones*. Sin las particiones precalculadas, la evaluación de particiones debe realizarse para cada cambio efectuado en una columna filtrada del publicador desde la última vez que se ejecutó el Agente de mezcla para un suscriptor concreto, y este proceso tiene que repetirse para cada suscriptor que se sincroniza con el publicador.  

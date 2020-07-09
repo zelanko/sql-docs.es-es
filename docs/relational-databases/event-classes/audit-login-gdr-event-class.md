@@ -12,15 +12,15 @@ ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fefb0d64710fda5c499747fb9f3205563240a6a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a0e3cfda6f67bff76ce001cdf4b98bfdac0b215
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726371"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Audit Login GDR** se produce siempre que se agrega o quita un derecho de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Esta clase de eventos se aplica a los procedimientos almacenados **sp_grantlogin**, **sp_revokelogin**y **sp_denylogin** .  
   
  Es posible que esta clase de eventos se elimine en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, se recomienda usar la clase de eventos **Audit Server Principal Management** .  

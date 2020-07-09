@@ -12,15 +12,15 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64df0d85fb8e4bb9e3ea54c7d8613a1a39ac3406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726245"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos OLEDB Errors se produce en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando una llamada a un proveedor OLE DB devuelve un error. Incluya esta clase de eventos en los seguimientos para ver un HRESULT con errores de un proveedor OLE DB.  
   
  Cuando se incluye la clase de eventos OLEDB Errors en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con la que se producen errores del proveedor OLE DB en relación con la base de datos durante el seguimiento. Si se producen con frecuencia, puede que el seguimiento reduzca el rendimiento de forma significativa.  

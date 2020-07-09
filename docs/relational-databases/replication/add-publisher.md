@@ -15,15 +15,15 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726087"
 ---
 # <a name="add-publisher"></a>Agregar publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores en el panel izquierdo del Monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
   
 ## <a name="options"></a>Opciones  

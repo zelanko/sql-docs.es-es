@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724778"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb7fbdc8085fbf068ddc4f97587e919b1872971f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726431"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo preparar el cambio al modelo de base de datos parcialmente independiente y, a continuación, se proporcionan los pasos de migración.  
   
  **En este tema:**  

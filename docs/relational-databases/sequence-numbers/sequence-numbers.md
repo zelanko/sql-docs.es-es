@@ -17,15 +17,15 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725915"
 ---
 # <a name="sequence-numbers"></a>Números de secuencia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas. Una aplicación hace referencia a un objeto de secuencia para recibir su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia a un objeto de secuencia y coordinar las claves de valores entre varias filas y tablas.  
   
  Una secuencia se crea independientemente de las tablas utilizando la instrucción **CREATE SEQUENCE** . Las opciones permiten controlar el incremento, los valores máximo y mínimo, el punto de inicio, la capacidad de reinicio automático y el almacenamiento en caché para aumentar el rendimiento. Para obtener información acerca de las opciones, vea [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  

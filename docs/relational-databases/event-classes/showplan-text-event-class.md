@@ -12,15 +12,15 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f41511d90850670ae4d5325ce4db200bb65a9d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20ad4337407a46d91adbbeb080b662a2e4e99f28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726175"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos Showplan Text se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. La información contenida es un subconjunto de la información disponible en las clases de eventos Showplan All, Showplan XML Statistics Profile o Showplan XML.  
   
  Cuando la clase de eventos Showplan Text se incluye en un seguimiento, la sobrecarga dificultará el rendimiento de forma significativa. Para minimizar este riesgo, limite el uso de esta clase de eventos a los seguimientos que supervisen problemas específicos durante periodos breves. Showplan Text no implicará tanta sobrecarga como otras clases de eventos del plan de presentación.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728514"
 ---
 # <a name="backup-timeline"></a>Escala de tiempo de copia de seguridad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el cuadro de diálogo **Escala de tiempo de la copia de seguridad** para buscar y especificar las copias de seguridad para restaurar una base de datos a un momento dado. El acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad** se abre haciendo clic en **Escala de tiempo** en el panel **Restaurar base de datos (página General)** . Este cuadro de diálogo permite ver una escala de tiempo de las operaciones de restauración realizadas sobre la base de datos.  
   
  El Asesor para recuperación de base de datos se asegura de que solo estén seleccionadas las copias de seguridad necesarias para restaurar a ese momento específico. Estas copias de seguridad seleccionadas componen el plan de restauraciones recomendado para la operación de restauración. Debe usar solo las copias de seguridad seleccionadas. Para obtener más información sobre el Asistente para recuperación de base de datos, vea [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  

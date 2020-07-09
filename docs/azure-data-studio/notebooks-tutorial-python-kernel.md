@@ -5,20 +5,20 @@ author: garyericson
 ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 8d0666c74f464535d2de08dd44e92c521cfcd73f
-ms.sourcegitcommit: 4f4ca7075a73a7a4d7196dcb279c58e15c2daf37
+ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82196797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728861"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Creación y ejecución de un cuaderno de Python
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este tutorial se muestra cómo crear y ejecutar un cuaderno en Azure Data Studio con Python.
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ea83b7e0ba1a70ef4d3242206809190df613199
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731123"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (tipo de datos Geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve un mensaje que puede ayudar a identificar problemas con un objeto espacial no válido. Cuando el objeto no es válido, solo se devuelve el primer error. Cuando el objeto es válido, se devuelve el valor 24400.  
   

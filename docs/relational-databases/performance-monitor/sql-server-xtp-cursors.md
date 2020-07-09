@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2920b0f21cca13272b8d8678106d0d231ad56e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afe09ef4736425943b5a7e31e74ca202155173fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730304"
 ---
 # <a name="sql-server-xtp-cursors"></a>Cursores SQL Server XTP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El objeto de rendimiento Cursores XTP de SQL Server contiene contadores relacionados con los cursores internos del motor OLTP en memoria. Los cursores son los bloques de creación de bajo nivel que usa el motor OLTP en memoria para procesar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por tanto, el usuario no tiene normalmente control directo sobre ellos.  
   

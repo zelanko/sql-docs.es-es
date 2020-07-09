@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729653"
 ---
 # <a name="tostring-database-engine"></a>ToString (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una cadena con la representación lógica de *this*. Se llama implícitamente a ToString cuando se produce una conversión de **hierarchyid** en un tipo de cadena. Tiene el efecto contrario de [Parse &#40;motor de base de datos&#41;](../../t-sql/data-types/parse-database-engine.md).
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b00d10e27e515cb30d32cdd08d7d10e69ac55b0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 79f35b2f228905d9d929d5198f20502d8c7197f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731162"
 ---
 # <a name="filter-geography-data-type"></a>Filter (tipo de datos Geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Método que proporciona una forma rápida de intersección solo para índices con la que se puede determinar si una instancia de **geography** forma intersección con otra instancia de **geography**, siempre y cuando haya un índice disponible.  
   

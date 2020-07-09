@@ -12,15 +12,15 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730205"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe cómo habilitar o deshabilitar la indización semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
   
  La búsqueda semántica estadística usa los datos que indiza la búsqueda de texto completo y crea índices adicionales. Como resultado de esta dependencia en la búsqueda de texto completo, se crea un nuevo índice semántico al definir un nuevo índice de texto completo o al modificar un índice de texto completo existente. Puede crear un nuevo índice semántico mediante instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o mediante el Asistente para indización de texto completo y otros cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como se describe en este tema.  

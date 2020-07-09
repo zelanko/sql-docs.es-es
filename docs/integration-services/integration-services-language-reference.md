@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f32f03c7059cdb2410bc40312ce7d32555003e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83f65e243a719756c254f663c5cc91898d28f2de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729417"
 ---
 # <a name="integration-services-language-reference"></a>Referencia del lenguaje de Integration Services
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se describe la API de [!INCLUDE[tsql](../includes/tsql-md.md)] para administrar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

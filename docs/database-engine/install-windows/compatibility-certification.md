@@ -19,16 +19,16 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b1505d27dfa186999d1730eece740b711d87ae0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659668"
 ---
 # <a name="compatibility-certification"></a>Certificación de compatibilidad
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La certificación de compatibilidad permite que las empresas actualicen y modernicen una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el entorno local, en la nube y en el perímetro, lo cual elimina los riesgos relativos a la compatibilidad de las aplicaciones. 
 

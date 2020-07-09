@@ -14,15 +14,15 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420e659988abb4292a1653261034361f9d5f6055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d09bc4bb7382c236661ba6433ee24ec4f96219ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729399"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (Suscripción transaccional)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
   
 ## <a name="options"></a>Opciones  

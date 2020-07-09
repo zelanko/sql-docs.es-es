@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729284"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   En el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un grupo de recursos de servidor representa un subconjunto de los recursos físicos de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Cada grupo de recursos de servidor puede contener uno o más grupos de cargas de trabajo. Cuando se inicia una sesión, el clasificador del regulador de recursos asigna la sesión a un grupo de cargas de trabajo concreto y la sesión se debe ejecutar utilizando los recursos asignados al grupo de cargas de trabajo.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1d3e6c8d141f2923cb2fd9074999fde7c80dfcc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731349"
 ---
 # <a name="_-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use el carácter de subrayado _ para hacer coincidir todos los caracteres de una operación de comparación de cadenas que implica una coincidencia de patrón como `LIKE` y `PATINDEX`.  
   

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8e78717be0ca9a6370c21fe8eea209e6b93b06c7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732625"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve un patrón de bits **varbinary** que indica las columnas de una tabla o vista que se insertaron o se actualizaron. Use `COLUMNS_UPDATED` en cualquier lugar del cuerpo de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para probar si el desencadenador debe ejecutar ciertas acciones.
   

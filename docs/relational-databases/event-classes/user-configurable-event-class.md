@@ -12,15 +12,15 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3f3e67ed262cfd83bbbc52174e704bf4cc3d4c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a84c7f73458264789d7d5043ebaae109a3c03207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728308"
 ---
 # <a name="user-configurable-event-class"></a>clases de eventos configurables por el usuario
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Columnas de datos de las clases de eventos configurables por el usuario  

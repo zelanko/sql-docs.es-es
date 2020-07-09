@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730885"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   De forma predeterminada, la copia de seguridad con compresión aumenta significativamente el uso de CPU, y la CPU adicional consumida por el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría querer crear una copia de seguridad comprimida de prioridad baja en una sesión en la que el uso de CPU esté limitado por el[regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) cuando se produce la contención por la CPU. En este tema se presenta un escenario en el que se clasifican las sesiones de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinado asignándolas a un grupo de cargas de trabajo del regulador de recursos que limita el uso de CPU en tales casos.  
   

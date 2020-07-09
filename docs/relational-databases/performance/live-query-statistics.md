@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731796"
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece información en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen de un [operador de plan de consulta](../../relational-databases/showplan-logical-and-physical-operators-reference.md) a otro. El plan de consulta activa muestra el progreso general de las consultas, así como estadísticas de tiempo de ejecución de nivel de operador como el número de filas, las filas generadas, el tiempo transcurrido, el progreso del operador, etc. Estos datos están disponibles en tiempo real sin necesidad de esperar a que la consulta se complete, de modo que estas estadísticas de ejecución son extremadamente útiles para depurar problemas de rendimiento de consultas. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], pero puede funcionar con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 

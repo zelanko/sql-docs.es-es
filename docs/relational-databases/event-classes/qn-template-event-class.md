@@ -12,15 +12,15 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9c1d26fb993544fd58ecb6dd9e33f6d6fd26cd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727401"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   El evento QN:Template ofrece información acerca del uso interno de plantillas de consulta. Las plantillas de consulta son el mecanismo que utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para compartir las definiciones de una consulta para su notificación. Estas plantillas se crean junto con tablas de parámetros. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un evento de este tipo cuando se crea, utiliza o destruye una plantilla de consulta.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Columnas de datos de la clase de eventos QN:Template  

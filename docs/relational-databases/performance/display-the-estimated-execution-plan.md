@@ -20,15 +20,15 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63eada30892325c60d438e3bca11343c76e1c9da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730275"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Mostrar el plan de ejecución estimado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo generar planes de ejecución estimados gráficos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se generan planes de ejecución estimados, las consultas o lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] no se ejecutan. Por este motivo, un plan de ejecución estimado no contiene ninguna información en tiempo de ejecución, como métricas de uso real de recursos o advertencias en tiempo de ejecución. En su lugar, el plan de ejecución que se genera muestra el plan de ejecución de la consulta que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usaría con más probabilidad si se ejecutaran realmente las consultas, así como las filas estimadas de los operadores del plan.  
   
  Para utilizar esta característica, los usuarios deben tener los permisos correspondientes para ejecutar la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para la que se va a generar un plan de ejecución gráfico, y se les debe conceder el permiso SHOWPLAN para todas las bases de datos a las que haga referencia la consulta.  

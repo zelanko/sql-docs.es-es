@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bc420d4e086e8256590fd206790f5fa41689e0a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731248"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
   Especifica una condición de búsqueda para un gráfico. MATCH puede usarse solo con tablas perimetrales o de nodo del gráfico, en la instrucción SELECT y como parte de la cláusula WHERE. 
   
@@ -50,7 +50,7 @@ MATCH (<graph_search_pattern>)
       LAST_NODE(<node_alias>) | <node_alias>   { 
           { <-( <edge_alias> )- } 
         | { -( <edge_alias> )-> }
-        <node_alias> | LAST(<node_alias>)
+        <node_alias> | LAST_NODE(<node_alias>)
         } 
   }
   [ { AND } { ( <simple_match_pattern> ) } ]

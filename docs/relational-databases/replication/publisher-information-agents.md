@@ -13,15 +13,15 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728281"
 ---
 # <a name="publisher-information-agents"></a>Información de publicador, Agentes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La pestaña **Agentes** muestra información sobre los agentes y trabajos de mantenimiento asociados con el publicador:  
   
 -   Agente de instantáneas, que se muestra en todas las publicaciones.  

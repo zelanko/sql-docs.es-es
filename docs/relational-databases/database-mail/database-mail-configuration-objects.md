@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726540"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Correo electrónico de base de datos tiene dos objetos de configuración: los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Cuentas de Correo electrónico de base de datos  

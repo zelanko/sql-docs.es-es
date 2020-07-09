@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87c9ee4bff2206508cb3100604c84219b1cea1d5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81387979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729886"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Compatibilidad de FOR XML con el tipo de datos xml
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si una consulta FOR XML especifica una columna de tipo **xml** en la cláusula SELECT, los valores de columna se asignan como elementos en el XML devuelto, aunque no se especifique la directiva ELEMENTS. Las declaraciones XML en la columna de tipo **xml** no se serializan.  
   
  Por ejemplo, la consulta siguiente recupera información de contacto de clientes, como las columnas `BusinessEntityID`, `FirstName`y `LastName` , y los números de teléfono de la columna `AdditionalContactInfo` de tipo **xml** .  

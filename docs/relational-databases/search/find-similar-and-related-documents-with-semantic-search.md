@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42dc892fcf33a052105ccbfaeea6fbaf09a41895
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730185"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>buscar documentos similares y relacionados con la búsqueda semántica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
    
 ##  <a name="find-similar-or-related-documents-with-semanticsimilaritytable"></a><a name="HowToQuerySimilar"></a> Buscar documentos similares o relacionados con SEMANTICSIMILARITYTABLE  

@@ -1,5 +1,6 @@
 ---
 title: Creación de un rol de aplicación | Microsoft Docs
+description: Cree un rol de aplicación en SQL Server con SQL Server Management Studio o Transact-SQL para restringir el acceso a una base de datos excepto mediante una aplicación.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628114"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo crear un rol de aplicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los roles de aplicación limitan el acceso de los usuarios a una base de datos excepto a través de aplicaciones específicas. Los roles de aplicación no tienen usuarios, de modo que no aparece la lista **Miembros del rol** cuando se selecciona **Rol de aplicación** .  
   
 > [!IMPORTANT]  
@@ -71,7 +72,7 @@ ms.locfileid: "72903149"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>Opciones adicionales  
- En el cuadro de diálogo **Rol de aplicación - Nuevo** también se proporcionan opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
+ En el cuadro de diálogo **rol de aplicación - Nuevo** también se ofrecen opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

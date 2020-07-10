@@ -19,15 +19,15 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287179"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053751"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En cualquier base de datos, la falta de administración de las transacciones a menudo produce problemas de contención y de rendimiento en sistemas con muchos usuarios. A medida que aumenta el número de usuarios que obtienen acceso a los datos, adquiere importancia el que las aplicaciones utilicen las transacciones eficazmente. En esta guía se describen los mecanismos de versiones de fila y bloqueo que el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza para garantizar la integridad física de cada transacción y proporciona información acerca de cómo las aplicaciones pueden controlar las transacciones de manera eficaz.  
   
@@ -344,7 +344,7 @@ GO
   
  En la siguiente tabla se muestran los recursos que el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede bloquear.  
   
-|Resource|Descripción|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |RID|Identificador de fila que se utiliza para bloquear una sola fila de un montón.|  
 |KEY|Bloqueo de fila dentro de un índice que se utiliza para proteger intervalos de claves en transacciones serializables.|  

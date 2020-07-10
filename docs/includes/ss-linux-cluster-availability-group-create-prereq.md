@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de crear el grupo de disponibilidad, debe:
 
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Para obtener más información sobre esta sesión de XE, vea [Eventos extendidos de AlwaysOn](https://msdn.microsoft.com/library/dn135324.aspx).
+Para obtener más información sobre esta sesión de XE, vea [Eventos extendidos de AlwaysOn](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## <a name="create-a-certificate"></a>Crear un certificado
 

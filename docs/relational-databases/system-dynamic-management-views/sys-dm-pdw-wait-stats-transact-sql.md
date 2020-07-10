@@ -12,17 +12,17 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28fb7ffe37631fc7f77333683f6bda4ccf1ddedf
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088720"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197038"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>Sys. dm_pdw_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene información relacionada con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el estado del sistema operativo relacionado con las instancias que se ejecutan en los distintos nodos. Para obtener una lista de los tipos de esperas y su descripción, vea [Sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
+  Contiene información relacionada con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Estado del sistema operativo relacionado con las instancias que se ejecutan en los distintos nodos. Para obtener una lista de los tipos de esperas y su descripción, vea [Sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  

@@ -11,15 +11,15 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108322"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196930"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Devuelve información acerca de los tipos de datos que admite el entorno actual.  
   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint**y su valor predeterminado es 2.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,7 +54,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**VARCHAR (** 32 **)**|Descripción de los parámetros de creación para este tipo de datos. Por ejemplo, **decimal** es "Precision, Scale", **float** es NULL y **VARCHAR** es "max_length".|  
 |NULLABLE|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Permite valores NULL.<br /><br /> 0 = No permite valores NULL.|  
 |CASE_SENSITIVE|**smallint**|Especifica si deben distinguirse mayúsculas y minúsculas.<br /><br /> 1 = Todas las columnas de este tipo distinguen mayúsculas y minúsculas (para intercalaciones).<br /><br /> 0 = Las columnas de este tipo no distinguen mayúsculas y minúsculas.|  
-|SEARCHABLE|**smallint**|Especifica la capacidad de búsqueda del tipo de columna:<br /><br /> 1 = No se puede buscar.<br /><br /> 2 = Se puede buscar con LIKE.<br /><br /> 3 = Se puede buscar con WHERE.<br /><br /> 4 = Se puede buscar con WHERE o LIKE.|  
+|BUSCABLE|**smallint**|Especifica la capacidad de búsqueda del tipo de columna:<br /><br /> 1 = No se puede buscar.<br /><br /> 2 = Se puede buscar con LIKE.<br /><br /> 3 = Se puede buscar con WHERE.<br /><br /> 4 = Se puede buscar con WHERE o LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Especifica el signo del tipo de datos.<br /><br /> 1 = Tipo de datos sin signo.<br /><br /> 0 = Tipo de datos con signo.|  
 |MONEY|**smallint**|Especifica el tipo de datos **Money** .<br /><br /> 1 = tipo de datos **Money** .<br /><br /> 0 = no es un tipo de datos **Money** .|  
 |AUTO_INCREMENT|**smallint**|Especifica el incremento automático.<br /><br /> 1 = Incremento automático.<br /><br /> 0 = Sin incremento automático.<br /><br /> NULL = Atributo no aplicable.<br /><br /> Una aplicación puede insertar valores en una columna que tenga este atributo, pero no puede actualizar los valores de la columna. A excepción del tipo de datos **bit** , AUTO_INCREMENT solo es válido para los tipos de datos que pertenecen a las categorías de tipos de datos numéricos exacto y numéricos aproximados.|  
@@ -74,7 +74,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  Debe pertenecer al rol public.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se recupera información de los tipos de datos **sysname** y **nvarchar** especificando el valor de `-9` *data_type* de.  
+ En el ejemplo siguiente se recupera información de los tipos de datos **sysname** y **nvarchar** especificando el valor de *data_type* de `-9` .  
   
 ```  
 USE master;  

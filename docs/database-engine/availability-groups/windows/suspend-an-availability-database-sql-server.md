@@ -1,6 +1,6 @@
 ---
 title: Suspensión de una base de datos de disponibilidad
-description: Obtenga información sobre cómo suspender el movimiento de datos de una base de datos en un grupo de disponibilidad AlwaysOn mediante SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o PowerShell.
+description: Obtenga información sobre cómo suspender el movimiento de datos de una base de datos en un grupo de disponibilidad AlwaysOn mediante SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251275"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900710"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Puede suspender una base de datos de disponibilidad en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que un comando de suspender tiene que emitirse en la instancia de servidor que hospeda la base de datos que se va a suspender o a reanudar.  
   
  El efecto de un comando de suspensión depende de si suspende una base de datos secundaria o una base de datos principal, según se indica a continuación:  
   
 |Base de datos suspendida|Efecto del comando de suspensión|  
 |------------------------|-------------------------------|  
-|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> **\*\* Importante \*\*** Mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará registros de transacciones sin enviar. Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
+|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos. Este comportamiento solo se aplica cuando se abren conexiones con el agente de escucha y el enrutamiento de solo lectura.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> **\*\* Importante \*\*** Mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará registros de transacciones sin enviar. Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
 |Base de datos principal|La base de datos principal detiene el movimiento de datos a cada base de datos secundaria conectada. La base de datos principal continúa ejecutándose en un modo expuesto. La base de datos principal sigue disponible para los clientes y las conexiones existentes en una base de datos secundaria legible permanecen utilizables y se pueden establecer nuevas conexiones.|  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089155"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196828"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>Sys. dm_pdw_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene información sobre todos los SQL Server las distribuciones de consultas como parte de un paso de SQL en la consulta.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68089155"
 |total_elapsed_time|**int**|Representa el tiempo en milisegundos durante el que se ha estado ejecutando la distribución de la consulta.|Mayor o igual que 0. Igual a la diferencia de start_time y end_time para distribuciones de consulta completadas, con error o canceladas.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |row_count|**bigint**|Número de filas modificadas o leídas por esta distribución de consulta.|-1 para las operaciones que no cambian o devuelven datos, como CREATE TABLE y DROP TABLE.|  
 |spid|**int**|Identificador de sesión en la instancia de SQL Server que ejecuta la distribución de la consulta.||  
-|command|**nvarchar(4000)**|Texto completo del comando para esta distribución de consulta.|Cualquier cadena de solicitud o consulta válida.|  
+|.|**nvarchar(4000)**|Texto completo del comando para esta distribución de consulta.|Cualquier cadena de solicitud o consulta válida.|  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

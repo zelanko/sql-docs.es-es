@@ -12,15 +12,15 @@ ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42cf071ca0f99fee4a5fc5cf4b4d4c7059ea8276
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899227"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197292"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>Sys. dm_pdw_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   
   

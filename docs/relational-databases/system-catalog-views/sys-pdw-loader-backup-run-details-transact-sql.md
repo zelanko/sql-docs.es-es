@@ -12,17 +12,17 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a0837b713f5c17f9bfb0357b9b1d999a1338e71
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127648"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197182"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>Sys. pdw_loader_backup_run_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene información detallada adicional, más allá de la información de [Sys. pdw_loader_backup_runs &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), acerca de las operaciones de copia [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de seguridad y restauración en curso y completadas en y sobre las [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]operaciones de copia de seguridad, restauración y carga en curso y completadas en. La información se conserva entre reinicios del sistema.  
+  Contiene información detallada adicional, más allá de la información de [Sys. pdw_loader_backup_runs &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), acerca de las operaciones de copia de seguridad y restauración en curso y completadas en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y sobre las operaciones de copia de seguridad, restauración y carga en curso y completadas en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . La información se conserva entre reinicios del sistema.  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  

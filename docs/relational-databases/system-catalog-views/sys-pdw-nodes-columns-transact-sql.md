@@ -12,15 +12,15 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059402"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197388"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>Sys. pdw_nodes_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Muestra las columnas para las tablas definidas por el usuario y las vistas definidas por el usuario.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68059402"
 |system_type_id|**tinyint**|Id. del tipo de sistema de la columna.||  
 |user_type_id|**int**|Id. del tipo de la columna, tal como lo ha definido el usuario.||  
 |max_length|**smallint**|Longitud máxima de la columna, en bytes.|Incluye-1 (no válido) para los tipos de columna no admitidos.|  
-|precision|**tinyint**|Precisión de la columna, si está basada en números; de lo contrario, es 0.||  
+|Precisión|**tinyint**|Precisión de la columna, si está basada en números; de lo contrario, es 0.||  
 |scale|**tinyint**|La escala de la columna se basa en valores numéricos; en caso contrario, es 0.||  
 |collation_name|**sysname**|Nombre de la intercalación de la columna, si está basada en caracteres; de lo contrario, es NULL.||  
 |is_nullable|**bit**|1 = La columna acepta valores NULL.||  

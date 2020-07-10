@@ -12,14 +12,15 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999119"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196873"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>Sys. pdw_nodes_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene una fila por cada objeto de tabla al que pertenece una entidad de seguridad o en la que se ha concedido algún permiso a la entidad de seguridad.  
   
@@ -29,7 +30,7 @@ ms.locfileid: "85999119"
 |lob_data_space_id|**int**||Siempre es 0.|  
 |filestream_data_space_id|**int**|IDENTIFICADOR de espacio de datos para un grupo de archivos FILESTREAM o[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|IDENTIFICADOR de columna máximo usado por esta tabla.||  
-|lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva.|TBD|  
+|lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva.|Por determinar|  
 |uses_ansi_nulls|**bit**|La tabla se creó con la opción de base de datos SET ANSI_NULLS establecida en ON.|1|  
 |is_replicated|**bit**|1 = la tabla se publica mediante la replicación.|0,1 no se admite la replicación.|  
 |has_replication_filter|**bit**|1 = La tabla tiene un filtro de replicación.|0|  

@@ -12,15 +12,15 @@ ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b71df1a25a9cd8480f23dc104792ad8f3e70f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68c2782a7aaed19edd4e24e04e19b90bdf67800
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401691"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196966"
 ---
 # <a name="syspdw_column_distribution_properties-transact-sql"></a>Sys. pdw_column_distribution_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene información de distribución para las columnas.  
   

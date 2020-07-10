@@ -12,15 +12,15 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899407"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197093"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>Sys. dm_pdw_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene información acerca de todas las sesiones que se han abierto actualmente o recientemente en el dispositivo. Muestra una fila por sesión.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67899407"
 |is_transactional|**bit**|Captura si una sesión está actualmente dentro de una transacción o no.|0 para la confirmación automática, 1 para transaccional.|  
 |client_id|**nvarchar(255)**|Captura la información de cliente para la sesión.|Cualquier cadena válida.|  
 |app_name|**nvarchar(255)**|Captura la información del nombre de la aplicación opcionalmente establecida como parte del proceso de conexión.|Cualquier cadena válida.|  
-|sql_spid|**int**|Número de ID. del SPID. Use `session_id` esta sesión. Use la `sql_spid` columna para unirse a **Sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ** \* ADVERTENCIA de \* \* ** Esta columna contiene SPID cerrados.||  
+|sql_spid|**int**|Número de ID. del SPID. Use `session_id` esta sesión. Use la `sql_spid` columna para unirse a **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ADVERTENCIA: esta columna contiene SPID cerrados. ** \* \* \* \* **||  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

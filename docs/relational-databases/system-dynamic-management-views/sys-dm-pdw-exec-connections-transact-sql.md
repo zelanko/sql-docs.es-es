@@ -12,15 +12,15 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899415"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197110"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>Sys. dm_pdw_exec_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Devuelve información acerca de las conexiones establecidas con esta instancia de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y los detalles de cada conexión.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67899415"
 |encrypt_option|**nvarchar(40)**|Indica TRUE (la conexión está cifrada) o FALSE (la conexión no es enctypred).|  
 |auth_scheme|**nvarchar(40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
 |client_id|**varchar(48)**|Dirección IP del cliente que se conecta a este servidor. Acepta valores NULL.|  
-|sql_spid|**int**|IDENTIFICADOR de proceso de servidor de la conexión. Use `@@SPID` para devolver el `sql_spid` de la conexión actual. En la mayoría de los `session_id` casos, use en su lugar.|  
+|sql_spid|**int**|IDENTIFICADOR de proceso de servidor de la conexión. Use `@@SPID` para devolver el `sql_spid` de la conexión actual. En la mayoría de los casos, use `session_id` en su lugar.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **View Server State** en el servidor.  

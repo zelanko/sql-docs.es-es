@@ -1,5 +1,6 @@
 ---
 title: Aumentar el rendimiento de la replicación transaccional | Microsoft Docs
+description: Además de sugerencias de rendimiento generales para mejorar el rendimiento de la replicación en SQL Server, obtendrá información sobre técnicas adicionales para la replicación transaccional.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288182"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807987"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +147,7 @@ Es posible que se haya percatado de las siguientes tendencias en los contadores 
 - El valor del contador de rendimiento **Dist: Transacciones entregadas/s** es siempre 0.
 - El contador de rendimiento **Dist: Latencia de entrega** informa de un aumento del valor hasta que se resuelve el interbloqueo.
 
-El tema "Agente de distribución de replicación" de los Libros en pantalla de SQL Server contiene la siguiente descripción del parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
+En el tema "Agente de distribución de replicación" de Libros en pantalla de SQL Server se incluye la descripción siguiente para el parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
 
 El Agente de distribución utiliza una sesión para reintentar el lote que no se pudo aplicar. Después de que el Agente de distribución haya aplicado correctamente el lote, retomará el uso de varias sesiones sin reiniciar.
 

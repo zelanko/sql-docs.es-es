@@ -12,15 +12,15 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 298a24276ff9c1d73a7b15ddc977d0623af70af3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e51acd0ef179d4bb9bf85bed34593f9676db063
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127483"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196793"
 ---
 # <a name="syspdw_index_mappings-transact-sql"></a>Sys. pdw_index_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Asigna los índices lógicos al nombre físico que se usa en los nodos de proceso, tal y como se refleja en una combinación única de **object_id** de la tabla que contiene el índice y el **index_id** de un índice determinado dentro de esa tabla.  
   

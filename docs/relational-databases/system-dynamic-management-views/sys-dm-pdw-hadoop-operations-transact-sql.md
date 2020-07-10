@@ -12,17 +12,17 @@ ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6378ddd4b0604fabe81d669d272b59207781fdf8
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899392"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197083"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>Sys. dm_pdw_hadoop_operations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene una fila por cada trabajo de asignación y reducción que se inserta en Hadoop como parte de la ejecución [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de una consulta en una tabla de Hadoop externa. Cada trabajo de asignación y reducción representa uno de los predicados de la consulta. Solo se usa cuando el predicado aplicación está habilitado para consultas en tablas externas de Hadoop.  
+  Contiene una fila por cada trabajo de asignación y reducción que se inserta en Hadoop como parte de la ejecución de una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] consulta en una tabla de Hadoop externa. Cada trabajo de asignación y reducción representa uno de los predicados de la consulta. Solo se usa cuando el predicado aplicación está habilitado para consultas en tablas externas de Hadoop.  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  

@@ -12,15 +12,15 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d30ceadf292387900469fe99018ed7e2fdb361d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401638"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196643"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>Sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Devuelve información sobre el estado de cifrado de una base de datos y sus claves de cifrado de la base de datos asociadas. **Sys. dm_pdw_nodes_database_encryption_keys** proporciona esta información para cada nodo. Para obtener más información acerca del cifrado de base de datos, vea [cifrado de datos transparente (PDW de SQL Server)](../../analytics-platform-system/transparent-data-encryption.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74401638"
  Necesita el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se `sys.dm_pdw_nodes_database_encryption_keys` combinan las tablas del sistema para indicar el estado de cifrado de cada nodo de las bases de datos protegidas por TDE.  
+ En el ejemplo siguiente se combinan las `sys.dm_pdw_nodes_database_encryption_keys` tablas del sistema para indicar el estado de cifrado de cada nodo de las bases de datos protegidas por TDE.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   

@@ -12,16 +12,16 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440812"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197072"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>Sys. dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene información acerca de todas las solicitudes que se encuentran actualmente o que están activas recientemente en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Muestra una fila por solicitud o consulta.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85440812"
 |result_cache_hit|**decimal**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure SQL Data Warehouse| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
 ||||
   
-## <a name="remarks"></a>Comentarios 
+## <a name="remarks"></a>Observaciones 
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
  El result_cache_hit es una máscara de máscara del uso de la memoria caché del conjunto de resultados de una consulta.  Esta columna puede ser la [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores:  

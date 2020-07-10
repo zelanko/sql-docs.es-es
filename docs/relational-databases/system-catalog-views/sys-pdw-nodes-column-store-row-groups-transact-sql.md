@@ -12,17 +12,17 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399875"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197349"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>Sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Proporciona información del índice de almacén de columnas agrupado por segmento para ayudar al administrador a tomar decisiones de administración [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]del sistema en. **Sys. pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar qué grupos de filas tienen un alto porcentaje de filas eliminadas y deben volver a generarse.  
+  Proporciona información del índice de almacén de columnas agrupado por segmento para ayudar al administrador a tomar decisiones de administración del sistema en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys. pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar qué grupos de filas tienen un alto porcentaje de filas eliminadas y deben volver a generarse.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

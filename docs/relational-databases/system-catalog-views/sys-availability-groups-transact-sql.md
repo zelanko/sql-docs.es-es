@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764781"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279191"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,12 @@ ms.locfileid: "85764781"
 |**basic_features**|**bit**|Especifica si se trata de un grupo de disponibilidad básico. Para obtener más información, vea [Grupos de disponibilidad básica &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Especifica si se ha habilitado la compatibilidad con DTC para este grupo de disponibilidad. La opción **DTC_SUPPORT** de **Crear grupo de disponibilidad** controla esta configuración.|  
 |**db_failover**|**bit**|Especifica si el grupo de disponibilidad admite la conmutación por error para las condiciones de mantenimiento de la base de datos. La opción **DB_FAILOVER** de **Crear grupo de disponibilidad** controla esta configuración.|  
-|**is_distributed**|**bit**|Especifica si se trata de un grupo de disponibilidad distribuido. Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Especifica si se trata de un grupo de disponibilidad distribuido. Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0: clúster de conmutación por error de Windows Server <br/><br/>1: clúster externo (por ejemplo, Linux Pacemaker)<br/><br/>2: ninguno|
+|**cluster_type_desc**|**nvarchar(60)**|Descripción de texto de tipo de clúster|
+|**required_synchronized_secondaries_to_commit**|**int**| El número de réplicas secundarias que deben estar en un estado sincronizado para que se complete una confirmación|
+|**sequence_number**|**bigint**|Identifica la secuencia de configuración del grupo de disponibilidad. Aumenta incrementalmente cada vez que la réplica principal del grupo de disponibilidad actualiza la configuración del grupo.|
+|**is_contained**|**bit**|1: instancia maestra de clúster de Big Data configurada para alta disponibilidad. <br/><br/> 0: todos los demás.|
   
 ## <a name="failure-condition-level--values"></a>Valores de nivel de condición de error  
  En la tabla siguiente se describen los posibles niveles de condición de error de la columna **failure_condition_level** .  

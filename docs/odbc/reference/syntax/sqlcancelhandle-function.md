@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299670"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279605"
 ---
 # <a name="sqlcancelhandle-function"></a>Función SQLCancelHandle
 **Conformidad**  
- Versión introducida: ODBC 3,8  
-  
- Compatibilidad con estándares: ninguno  
+ Versión introducida: cumplimiento de estándares de ODBC 3,8: ninguno  
   
  Se espera que la mayoría de los controladores ODBC 3,8 (y posteriores) implementen esta función. Si un controlador no lo hace, una llamada a **SQLCancelHandle** con un identificador de conexión en el parámetro *Handle* devolverá SQL_ERROR con un SQLSTATE de IM001 y el mensaje ' driver ' no admite esta función ' ' una llamada a **SQLCancelHandle** con un identificador de instrucción, ya que el parámetro *Handle* se asignará a una llamada a **SQLCancel** por el administrador de controladores y se puede procesar si el controlador implementa **SQLCancel**. Una aplicación puede usar **SQLGetFunctions** para determinar si un controlador admite **SQLCancelHandle**.  
   
@@ -50,10 +48,10 @@ SQLRETURN SQLCancelHandle(
   
  Si el *identificador* no es un identificador válido del tipo especificado por *HandleType*, **SQLCancelHandle** devuelve SQL_INVALID_HANDLE.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnostics  
  Cuando **SQLCancelHandle** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *identificador* de identificador de instrucción o un *HandleType* de SQL_HANDLE_DBC y un *identificador*de identificador de conexión.  
   
  En la tabla siguiente se enumeran los valores de SQLSTATE que devuelve normalmente **SQLCancelHandle** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
@@ -61,7 +59,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) en el búfer del argumento * \*MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) en el búfer del argumento * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|Se llamó a una función relacionada con instrucciones que se ejecuta de forma asincrónica para uno de los identificadores de instrucciones asociados al *identificador*y *HandleType* se estableció en SQL_HANDLE_DBC. La función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLCancelHandle** .<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_STMT; se llamó a una función que se ejecuta de forma asincrónica en el identificador de conexión asociado; y la función todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados al *identificador* y *HandleType* se estableció en SQL_HANDLE_DBC y devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> Se llamó a **SQLBrowseConnect** para *ConnectionHandle*y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de que se completara el proceso de exploración.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  

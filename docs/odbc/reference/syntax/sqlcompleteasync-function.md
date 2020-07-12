@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299660"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279593"
 ---
 # <a name="sqlcompleteasync-function"></a>Función SQLCompleteAsync
 **Conformidad**  
- Versión introducida: ODBC 3,8  
-  
- Compatibilidad con estándares: ninguno  
+ Versión introducida: cumplimiento de estándares de ODBC 3,8: ninguno  
   
  **Resumen**  
  **SQLCompleteAsync** se puede usar para determinar cuándo se completa una función asincrónica mediante el procesamiento basado en notificaciones o en el sondeo. Para obtener más información acerca de las operaciones asincrónicas, vea [ejecución asincrónica](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -58,10 +56,10 @@ SQLRETURN SQLCompleteAsync(
  *AsyncRetCodePtr*  
  Genere Puntero a un búfer que contendrá el código de retorno de la API asincrónica. Si *AsyncRetCodePtr* es null, **SQLCompleteAsync** devuelve SQL_ERROR.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnostics  
  Si **SQLCompleteAsync** devuelve SQL_SUCCESS, una aplicación debe obtener el código de retorno de la función asincrónica del búfer al que apunta *AsyncRetCodePtr*. El SQLSTATE asociado, si existe, se puede obtener llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un identificador de instrucción o un *HandleType* de SQL_HANDLE_DBC y un identificador de conexión. Estos registros de diagnóstico están asociados a la función asincrónica, no a esta función **SQLCompleteAsync** .  
   
  **SQLCompleteAsync** devuelve un código distinto de SQL_SUCCESS para indicar que no se llama a **SQLCompleteAsync** correctamente. En este caso, **SQLCompleteAsync** no publicará ningún registro de diagnóstico. Los códigos de retorno posibles son:  

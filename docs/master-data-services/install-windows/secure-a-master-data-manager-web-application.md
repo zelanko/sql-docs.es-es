@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 542828e26b82d0df0174886f706117feb8ad2322
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883832"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279381"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger una aplicación web Master Data Services
 
@@ -32,7 +32,11 @@ ms.locfileid: "85883832"
 -   Debe ser administrador en el servidor web donde está instalado [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
 -   MDS debe estar instalado en el servidor web y debe existir una aplicación web. Para obtener más información, vea [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) y [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
-  
+
+- La [protección ampliada de IIS para la autenticación de Windows](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) no debe estar habilitada. 
+
+- Configure el servidor web para que escuche en todas las direcciones IP disponibles. No configure el servidor web para que escuche en una dirección IP específica. 
+
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>Para proteger la aplicación web Administrador de datos maestros con HTTP  
   
 1.  Después de confirmar que la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] está configurada correctamente con HTTP, cree un certificado en IIS. Para obtener más información, vea [Configurar certificados de servidor en IIS 7](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  

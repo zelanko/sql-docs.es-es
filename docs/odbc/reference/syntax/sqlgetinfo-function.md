@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418102c7573f27278282a67e3119d07a2c6d1342
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215619"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279579"
 ---
 # <a name="sqlgetinfo-function"></a>Función SQLGetInfo
 
@@ -71,11 +71,11 @@ SQLRETURN SQLGetInfo(
   
  En el caso de todos los demás tipos de datos, se omite el valor de *BufferLength* y el controlador asume que el tamaño de \* *INFOVALUEPTR* es SQLUSMALLINT o sqluinteger que incluya, en función de la *InfoType*.  
   
-## <a name="return-value"></a>Valor devuelto  
+## <a name="returns"></a>Devoluciones  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnostics  
 
  Cuando **SQLGetInfo** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_DBC y un *identificador* de *ConnectionHandle*. En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLGetInfo** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   

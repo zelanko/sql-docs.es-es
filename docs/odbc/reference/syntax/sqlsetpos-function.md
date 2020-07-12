@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287335"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279556"
 ---
 # <a name="sqlsetpos-function"></a>Función SQLSetPos
 **Conformidad**  
@@ -71,11 +71,11 @@ SQLRETURN SQLSetPos(
   
  Para obtener más información, vea "Comentarios".  
   
- **Devuelve**  
+## <a name="returns"></a>Devoluciones  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnostics  
  Cuando **SQLSetPos** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *identificador* de *StatementHandle*. En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLSetPos** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
  En el caso de todos los SQLSTATEs que pueden devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en una o varias filas de una operación de MultiRow y se devuelve SQL_ERROR si se produce un error en una operación de una sola fila.  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
 |42000|Error de sintaxis o infracción de acceso|El controlador no pudo bloquear la fila según sea necesario para realizar la operación solicitada en la *operación*de argumento.<br /><br /> El controlador no pudo bloquear la fila tal como se solicitó en el argumento *LockType*.|  
 |44000|Infracción de WITH CHECK OPTION|Se SQL_UPDATE el argumento *Operation* y la actualización se realizó en una tabla vista o en una tabla derivada de la tabla vista que se creó especificando **with check Option**, de modo que una o varias filas afectadas por la actualización ya no estarán presentes en la tabla vista.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*y, a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función SQLSetPos.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute**o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) el controlador era un controlador ODBC *2. x* y se llamó a **SQLSetPos** para un *StatementHandle* después de llamar a **SQLFetch** .|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  Coloca los valores en los datos y en los búferes de indicador y longitud enlazados con **SQLBindCol**:  
   
-    -   En el caso de las columnas normales, la aplicación coloca el nuevo * \** valor de columna en el búfer de TargetValuePtr y la * \** longitud de ese valor en el búfer de StrLen_or_IndPtr. Si no se debe actualizar la fila, la aplicación coloca SQL_ROW_IGNORE en el elemento de esa fila de la matriz de operación de fila.  
+    -   En el caso de las columnas normales, la aplicación coloca el nuevo valor de columna en el búfer de * \* TargetValuePtr* y la longitud de ese valor en el búfer de * \* StrLen_or_IndPtr* . Si no se debe actualizar la fila, la aplicación coloca SQL_ROW_IGNORE en el elemento de esa fila de la matriz de operación de fila.  
   
-    -   En el caso de las columnas de datos en ejecución, la aplicación coloca un valor definido por la aplicación, como el número de * \** columna, en el búfer de TargetValuePtr. El valor se puede usar más adelante para identificar la columna.  
+    -   En el caso de las columnas de datos en ejecución, la aplicación coloca un valor definido por la aplicación, como el número de columna, en el búfer de * \* TargetValuePtr* . El valor se puede usar más adelante para identificar la columna.  
   
          La aplicación coloca el resultado de la macro SQL_LEN_DATA_AT_EXEC (*length*) en el búfer **StrLen_or_IndPtr* . Si el tipo de datos SQL de la columna es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos específico de origen de datos largo y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *length* es el número de bytes de datos que se van a enviar para el parámetro; de lo contrario, debe ser un valor no negativo y se omite.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   Si hay columnas de datos en ejecución, la función devuelve SQL_NEED_DATA y continúa en el paso 3.  
   
-3.  Llama a **SQLParamData** para recuperar la dirección del búfer * \*TargetValuePtr* de la primera columna de datos en ejecución que se va a procesar. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación del búfer * \*TargetValuePtr* .  
+3.  Llama a **SQLParamData** para recuperar la dirección del búfer * \* TargetValuePtr* de la primera columna de datos en ejecución que se va a procesar. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación del búfer * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Aunque los parámetros de datos en ejecución son similares a las columnas de datos en ejecución, el valor devuelto por **SQLParamData** es diferente para cada uno.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Las columnas de datos en ejecución son columnas de un conjunto de filas para el que se enviarán datos con **SQLPutData** cuando una fila se actualice con **SQLSetPos**. Están enlazadas con **SQLBindCol**. El valor devuelto por **SQLParamData** es la dirección de la fila del búfer **TargetValuePtr* que se está procesando.  
   
-4.  Llama a **SQLPutData** una o más veces para enviar datos para la columna. Se necesita más de una llamada si no se pueden devolver todos los valores de datos * \** en el búfer de TargetValuePtr especificado en **SQLPutData**; solo se permiten varias llamadas a **SQLPutData** para la misma columna cuando se envían datos de caracteres c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos, o cuando se envían datos binarios de c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos.  
+4.  Llama a **SQLPutData** una o más veces para enviar datos para la columna. Se necesita más de una llamada si no se pueden devolver todos los valores de datos en el búfer de * \* TargetValuePtr* especificado en **SQLPutData**; se permiten varias llamadas a **SQLPutData** para la misma columna solo cuando se envían datos de caracteres c a una columna con un tipo de datos de caracteres, binarios o de origen de datos, o cuando se envían datos binarios de c a una columna con un tipo de datos de  
   
 5.  Llama de nuevo a **SQLParamData** para indicar que se han enviado todos los datos para la columna.  
   

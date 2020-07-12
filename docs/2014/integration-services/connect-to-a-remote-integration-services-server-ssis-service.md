@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434662"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279481"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectarse a un servidor remoto de Integration Services (servicio SSIS)
     
@@ -96,13 +96,6 @@ ms.locfileid: "85434662"
   
 ## <a name="connecting-by-using-a-local-account"></a>Conectarse con una cuenta local  
  Si se trabaja en una cuenta local de Windows en un equipo cliente, solo es posible conectarse al servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un equipo remoto si en el equipo remoto existe una cuenta local con el mismo nombre y contraseña, y con los derechos adecuados.  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>De forma predeterminada, el servicio SSIS no admite la delegación  
-De forma predeterminada [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el servicio no admite la delegación de credenciales o lo que a veces se conoce como salto doble. En este escenario, se trabaja con un equipo cliente, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se ejecuta en un segundo equipo y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecuta en un tercer equipo. Primero, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pasa correctamente las credenciales del equipo cliente al segundo equipo en el que se ejecuta el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pero, después, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no puede delegar las credenciales del segundo equipo al tercero, en el que se ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
-
-Puede habilitar la delegación de credenciales si concede el derecho **Confiar en este usuario para la delegación a cualquier servicio (solo Kerberos)** a la cuenta de servicio de SQL Server, que inicia el servicio Integration Services (ISServerExec.exe) como un proceso secundario. Antes de conceder este derecho, considere si cumple los requisitos de seguridad de su organización.
-
-Para obtener más información, vea [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Conseguir que la delegación y Kerberos entre dominios funcionen con el paquete SSIS).
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar Firewall de Windows para el acceso al servicio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

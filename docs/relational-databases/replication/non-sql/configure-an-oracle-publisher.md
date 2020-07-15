@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900013"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Las publicaciones de publicadores de Oracle se crean de la misma forma que las publicaciones de instantáneas y transaccionales típicas, pero antes de crear una publicación desde un publicador de Oracle, debe completar los siguientes pasos (los pasos uno, tres y cuatro se describen con todo detalle en este tema):  
   
 1.  Cree un usuario administrativo de replicación en la base de datos de Oracle con el script que se proporciona.  
@@ -56,7 +56,7 @@ ms.locfileid: "72907190"
 > [!NOTE]  
 >  Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
   
- Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidad>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<drive>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Conéctese a la base de datos de Oracle utilizando una cuenta con privilegios DBA y ejecute el script. Este script solicita el nombre usuario y la contraseña del esquema de usuario administrativo de replicación y también el espacio de tablas predeterminado donde crear los objetos (el espacio de tablas debe existir en la base de datos de Oracle). Para información sobre cómo especificar otros espacios de tablas para objetos, vea [Administrar espacios de tabla de Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Elija un nombre de usuario y una contraseña segura, pero anótelos porque deberá proporcionar esta información más tarde al configurar la base de datos de Oracle como un publicador. Se recomienda utilizar el esquema solo para los objetos requeridos por la replicación; no cree tablas para publicarlas en este esquema.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72907190"
   
  En Oracle Universal Installer debe proporcionar la siguiente información:  
   
-|Information|Descripción|  
+|Información|Descripción|  
 |-----------------|-----------------|  
 |Oracle Home (Directorio de inicio de Oracle)|Es la ruta de acceso al directorio de instalación del software de Oracle. Acepte el valor predeterminado (C:\oracle\ora90 o similar) o escriba otra ruta de acceso. Para obtener más información sobre el directorio de inicio de Oracle, vea la sección "Consideraciones sobre el directorio de inicio de Oracle" más adelante en este tema.|  
 |Oracle home name (Nombre del directorio de inicio de Oracle)|Un alias para la ruta de acceso del directorio de inicio de Oracle.|  
@@ -137,7 +137,7 @@ ms.locfileid: "72907190"
 > [!NOTE]  
 >  Un publicador de Oracle no puede tener el mismo nombre que su distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el mismo nombre que ninguno de los publicadores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan el mismo distribuidor.  
   
- Al identificar la base de datos de Oracle como un publicador, se debe elegir una opción de publicación de Oracle: Oracle o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
+ Al identificar la base de datos de Oracle como publicador, se debe elegir una opción de publicación de Oracle: Completa o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
   
  Después de identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replicación crea un servidor vinculado con el mismo nombre que el nombre del servicio TNS en la base de datos de Oracle. Este servidor vinculado solo lo puede utilizar la replicación. Si necesita conectarse al publicador de Oracle a través de una conexión con el servidor vinculado, cree otro nombre de servicio TNS y después úselo para llamar a [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   

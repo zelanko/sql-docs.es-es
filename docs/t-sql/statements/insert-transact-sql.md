@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181106"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009267"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Agrega una o varias filas a una tabla o una vista en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener ejemplos, vea [Ejemplos](#InsertExamples).  
@@ -233,7 +233,7 @@ Cláusula OUTPUT
  No puede especificar un parámetro con valores de tabla como el destino de una instrucción INSERT EXEC; sin embargo, se puede especificar como un origen en la cadena o procedimiento almacenado INSERT EXEC. Para obtener más información, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  \<dml_table_source>  
- Especifica que las filas insertadas en la tabla de destino son las que ha devuelto la cláusula OUTPUT de una instrucción INSERT, UPDATE, DELETE o MERGE, filtradas opcionalmente por una cláusula WHERE. Si se especifica \<dml_table_source>, el destino de la instrucción INSERT externa debe cumplir las siguientes restricciones: 
+ Especifica que las filas insertadas en la tabla de destino son las que ha devuelto la cláusula OUTPUT de una instrucción INSERT, UPDATE, DELETE o MERGE, filtradas opcionalmente por una cláusula WHERE. Si se especifica \<dml_table_source>, el destino de la instrucción INSERT externa debe cumplir las restricciones siguientes: 
   
 -   Debe ser una tabla base, no una vista.  
   
@@ -251,13 +251,13 @@ Cláusula OUTPUT
  Es una lista separada por comas que especifica las columnas devueltas por la cláusula OUTPUT que se tienen que insertar. Las columnas de \<select_list> deben ser compatibles con las columnas en las que se insertan los valores. \<select_list> no puede hacer referencia a funciones de agregado ni a TEXTPTR. 
   
 > [!NOTE]  
->  Las variables enumeradas en la lista SELECT hacen referencia a sus valores originales, sin tener en cuenta los cambios realizados en ellos en \<dml_statement_with_output_clause>.  
+>  Las variables enumeradas en la lista SELECT hacen referencia a sus valores originales, con independencia de los cambios realizados en ellas en \<dml_statement_with_output_clause>.  
   
  \<dml_statement_with_output_clause>  
  Es una instrucción INSERT, UPDATE, DELETE o MERGE válida que devuelve las filas afectadas en una cláusula OUTPUT. La instrucción no puede contener una cláusula WITH y no puede tener como destino tablas remotas o vistas con particiones. Si se especifica UPDATE o DELETE, no puede ser una instrucción UPDATE o DELETE basada en cursores. No se puede hacer referencia a las filas de origen como instrucciones DML anidadas.  
   
  WHERE \<search_condition>  
- Es cualquier cláusula WHERE que contiene una condición \<search_condition> válida que filtra las filas devueltas por \<dml_statement_with_output_clause>. Para más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Cuando se usa en este contexto, \<search_condition> no puede contener subconsultas, funciones escalares definidas por el usuario que realicen acceso a datos, funciones de agregado, TEXTPTR ni predicados de búsqueda de texto completo. 
+ Es cualquier cláusula WHERE que contiene una condición \<search_condition> válida que filtra las filas devueltas por \<dml_statement_with_output_clause>. Para más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Cuando se usa en este contexto, \<search_condition> no puede contener subconsultas, funciones escalares definidas por el usuario que accedan a datos, funciones de agregado, TEXTPTR ni predicados de búsqueda de texto completo. 
   
  DEFAULT VALUES  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  

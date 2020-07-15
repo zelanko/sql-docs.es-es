@@ -1,5 +1,6 @@
 ---
 title: Seguridad de nivel de fila | Microsoft Docs
+description: Obtenga información sobre cómo la característica Seguridad de nivel de fila utiliza la pertenencia a un grupo o el contexto de ejecución para controlar el acceso a las filas de una tabla de base de datos en SQL Server.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288975"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000534"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Gráfico de seguridad de nivel de fila](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de seguridad de nivel de fila")  
   
@@ -41,7 +42,7 @@ Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/sta
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure SQL Data Warehouse.
+> Azure Synapse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure Synapse.
 
 ## <a name="description"></a><a name="Description"></a> Descripción
 
@@ -159,7 +160,7 @@ Es posible perder información con el uso de consultas cuidadosamente diseñadas
   
 - **Secuencia de archivos:** RLS no es compatible con la secuencia de archivos.  
   
-- **PolyBase:** RLS se solo se admite con tablas externas de Polybase para Azure SQL Data Warehouse.
+- **PolyBase:** RLS se solo se admite con tablas externas de Polybase para Azure Synapse.
 
 - **Tablas optimizadas para memoria:** la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla optimizada para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION`. Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas optimizadas para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ Es posible perder información con el uso de consultas cuidadosamente diseñadas
   
  Cree tres cuentas de usuario que mostrarán las distintas capacidades de acceso.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse no admite EXECUTE AS USER, por lo que debe crear el inicio de sesión para cada usuario con antelación. Más adelante, iniciará la sesión como el usuario apropiado para probar este comportamiento.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse no admite EXECUTE AS USER, de modo que inicie sesión como el usuario apropiado para probar el comportamiento anterior.
-
 El administrador debe ver las seis filas. Los usuarios Sales1 y Sales2 solo deben ver sus propias ventas.
 
 Modifique la directiva de seguridad para deshabilitar la directiva.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Escenarios para el uso de Seguridad de nivel de fila en una tabla externa de Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Escenarios para el uso de Seguridad de nivel de fila en una tabla externa de Azure Synapse
 
 Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Después, crea una función con valores de tabla insertados y una directiva de seguridad para la tabla externa. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Cree una tabla externa de Azure SQL Data Warehouse a partir de la tabla Sales creada.
+Cree una tabla externa de Azure Synapse a partir de la tabla Sales creada.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Ahora los usuarios Sales1 y Sales2 pueden ver las seis filas.
 
-Conexión a la base de datos SQL Data Warehouse para limpiar los recursos
+Conexión a la base de datos de Azure Synapse para limpiar los recursos
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Escenario para los usuarios que se conectan a la base de datos a través de una aplicación de nivel intermedio
 
 > [!NOTE]
-> En este ejemplo, la funcionalidad de predicados de bloque no se admite actualmente para Azure SQL Data Warehouse, por lo que la inserción de filas para el identificador de usuario incorrecto no se bloquea con Azure SQL Data Warehouse.
+> En este ejemplo, la funcionalidad de predicados de bloque no se admite actualmente para Azure Synapse, por lo que la inserción de filas para el identificador de usuario incorrecto no se bloquea con Azure Synapse.
 
 Este ejemplo muestra cómo una aplicación de nivel intermedio puede implementar el filtrado de conexiones, donde los usuarios de la aplicación (o inquilinos) comparten el mismo usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la aplicación). La aplicación configura el identificador de usuario de la aplicación actual en [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) después de conectarse a la base de datos y, luego, las directivas de seguridad filtran de forma transparente las filas que no deberían ser visibles para este identificador e impiden también que el usuario inserte filas para el identificador de usuario incorrecto. No es necesario ningún otro cambio en la aplicación.  
   

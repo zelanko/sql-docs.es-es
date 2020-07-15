@@ -1,7 +1,8 @@
 ---
-title: PREDICT (Transact-SQL) | Microsoft Docs
+title: PREDICT (Transact-SQL)
+titleSuffix: SQL machine learning
 ms.custom: ''
-ms.date: 10/24/2019
+ms.date: 06/26/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,18 +17,19 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72bbe67c63867b932944412f220d07d360ee1c95
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636119"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012569"
 ---
-# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
-Genera un valor de predicción o puntuaciones basadas en un modelo almacenado. Para obtener más información, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/sql-native-scoring.md).
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+
+Genera un valor de predicción o puntuaciones basadas en un modelo almacenado. Para obtener más información, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,7 +37,8 @@ Genera un valor de predicción o puntuaciones basadas en un modelo almacenado. P
 PREDICT  
 (  
   MODEL = @model | model_literal,  
-  DATA = object AS <table_alias>  
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
 )  
 WITH ( <result_set_definition> )  
 
@@ -54,21 +57,32 @@ MODEL = @model | model_literal
 
 ### <a name="arguments"></a>Argumentos
 
-**model**
+**MODEL**
 
 El parámetro `MODEL` se usa para especificar el modelo que se usa para la puntuación o predicción. El modelo se especifica como una variable o un literal, o bien una expresión escalar.
 
-El objeto de modelo se puede crear mediante R, Python u otra herramienta.
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+`PREDICT` admite modelos entrenados mediante los paquetes [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) y [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
+::: moniker-end
 
-**data**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En Azure SQL Managed Instance, `PREDICT` admite modelos en formato [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) o entrenados con los paquetes [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) y [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+En Azure Synapse Analytics, `PREDICT` admite modelos en formato [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html).
+::: moniker-end
+
+**DATOS**
 
 El parámetro DATA se usa para especificar los datos que se usan para la puntuación o predicción. Los datos se especifican en forma de un origen de tabla en la consulta. El origen de tabla puede ser una tabla, un alias de tabla, alias de CTE, vista o función con valores de tabla.
 
-**parameters**
+**RUNTIME = ONNX**
 
-El parámetro PARAMETERS se usa para especificar los parámetros opcionales definidos por el usuario que se usan para la puntuación o predicción.
+> [!IMPORTANT]
+> El argumento `RUNTIME = ONNX` solo está disponible en [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) y [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
 
-El nombre de cada parámetro es específico del tipo de modelo. Por ejemplo, la función [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) en RevoScaleR admite el parámetro `@computeResiduals`, lo que indica si se deben calcular valores residuales al puntuar un modelo de regresión logística. Si se llama a un modelo compatible, se podría pasar ese nombre de parámetro y un valor TRUE o FALSE a la función `PREDICT`.
+Indica el motor de aprendizaje automático que se usa para la ejecución del modelo. El valor del parámetro `RUNTIME` siempre es `ONNX`. El parámetro es obligatorio para Azure SQL Edge. En Azure SQL Managed Instance, el parámetro es opcional y solo se usa cuando se utilizan modelos ONNX.
 
 **WITH ( <definición_de_conjunto_de_resultados> )**
 
@@ -78,27 +92,30 @@ Además de las columnas devueltas por la propia función `PREDICT`, todas las co
 
 ### <a name="return-values"></a>Valores devueltos
 
-No hay ningún esquema predefinido disponible; SQL Server no valida el contenido del modelo ni los valores de columna devueltos.
+No hay ningún esquema predefinido disponible; el contenido del modelo no se valida ni tampoco los valores de columna devueltos.
 
 - La función `PREDICT` se pasa a través de las columnas como entrada.
 - La función `PREDICT` también genera columnas nuevas, pero el número de columnas y sus tipos de datos dependen del tipo de modelo que se usó para la predicción.
 
 Los mensajes de error relacionados con los datos, el modelo o el formato de columna se devuelven mediante la función de predicción subyacente asociada con el modelo.
 
-- Para RevoScaleR, la función equivalente es [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict).  
-- Para MicrosoftML, la función equivalente es [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict).  
-
-No es posible ver la estructura de modelo interna con `PREDICT`. Para entender el contenido del modelo en sí mismo, se debe cargar el objeto de modelo, deserializarlo y usar código de R adecuado para analizar el modelo.
-
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="remarks"></a>Observaciones
 
-La función `PREDICT` se admite en todas las ediciones de SQL Server 2017 o posteriores, en Windows y Linux. `PREDICT` también es compatible con Azure SQL Database en la nube. Todas estas compatibilidades están activas sin importar si hay habilitadas otras características de aprendizaje automático.
-
-No es necesario instalar R, Python u otro lenguaje de aprendizaje automático en el servidor para usar la función `PREDICT`. Se puede entrenar el modelo en otro entorno y guardarlo en una tabla de SQL Server para su uso con `PREDICT`, o bien llamar al modelo desde otra instancia de SQL Server que contenga el modelo guardado.
+La función `PREDICT` se admite en todas las ediciones de SQL Server 2017 o posteriores, en Windows y Linux. No es necesario habilitar [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) para usar `PREDICT`.
+::: moniker-end
 
 ### <a name="supported-algorithms"></a>Algoritmos admitidos
 
-El modelo que se use se debe haber creado mediante uno de los algoritmos admitidos del paquete RevoScaleR. Para obtener una lista de los modelos admitidos actualmente, vea [Puntuación en tiempo real](../../machine-learning/real-time-scoring.md).
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+El modelo que se use se debe haber creado mediante uno de los algoritmos admitidos de los paquetes [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) o [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md). Para obtener una lista de los modelos admitidos actualmente, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+Se admiten los algoritmos que se pueden convertir al formato de modelo [ONNX](https://onnx.ai/).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Se admiten los algoritmos que se pueden convertir al formato de modelo [ONNX](https://onnx.ai/) y a los modelos que se hayan creado mediante uno de los algoritmos admitidos de los paquetes [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) o [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md). Para obtener una lista de los modelos admitidos actualmente en RevoScaleR y revoscalepy, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
+::: moniker-end
 
 ### <a name="permissions"></a>Permisos
 
@@ -114,72 +131,38 @@ Este ejemplo se hace referencia a la función `PREDICT` en la cláusula `FROM` d
 
 ```sql
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = @logit_model, 
-  DATA = dbo.mytable AS d) WITH (Score float) AS p;
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-El alias **d** especificado para el origen de tabla en el parámetro `DATA` se usa para hacer referencia a las columnas que pertenecen a dbo.mytable. El alias **p** especificado para la función **PREDICT** se usa para hacer referencia a las columnas devueltas por la función PREDICT.
+El alias **d** especificado para el origen de tabla en el parámetro `DATA` se usa para hacer referencia a las columnas que pertenecen a `dbo.mytable`. El alias **p** especificado para la función `PREDICT` se usa para hacer referencia a las columnas devueltas por la función `PREDICT`.
+
+- El modelo se almacena como la columna `varbinary(max)` en la tabla **Models**. En la tabla se guarda información adicional como el **id.** y la **descripción** para identificar el modo.
+- El alias **d** especificado para el origen de tabla en el parámetro `DATA` se usa para hacer referencia a las columnas que pertenecen a `dbo.mytable`. Los nombres de las columnas de datos de entrada deben coincidir con el nombre de las entradas del modelo.
+- El alias **p** especificado para la función `PREDICT` se usa para hacer referencia a la columna predicha devuelta por la función `PREDICT`. El nombre de la columna debe ser el mismo que el nombre de salida del modelo.
+- Todas las columnas de datos de entrada y las columnas de predicción están disponibles para mostrarse en la instrucción SELECT.
 
 ### <a name="combining-predict-with-an-insert-statement"></a>Combinación de PREDICT con una instrucción INSERT
 
-Uno de los casos de uso comunes para la predicción consiste en generar una puntuación para los datos de entrada y después insertar los valores de predicción en una tabla. En el ejemplo siguiente se da por supuesto que la aplicación que realiza la llamada usa un procedimiento almacenado para insertar una fila que contiene el valor de predicción en una tabla:
+Un caso de uso común para la predicción consiste en generar una puntuación para los datos de entrada y después insertar los valores de predicción en una tabla. En el ejemplo siguiente se da por supuesto que la aplicación que realiza la llamada usa un procedimiento almacenado para insertar una fila que contiene el valor de predicción en una tabla:
 
 ```sql
-CREATE PROCEDURE InsertLoanApplication
-(@p1 varchar(100), @p2 varchar(200), @p3 money, @p4 int)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (select model
-  FROM scoring_model
-  WHERE model_name = 'ScoringModelV1');
-  WITH d as ( SELECT * FROM (values(@p1, @p2, @p3, @p4)) as t(c1, c2, c3, c4) )
+DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = d) WITH(score float) as p;
-END;
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 ```
 
-Si el procedimiento toma varias filas a través de un parámetro con valores de tabla, se puede escribir de esta forma:
-
-```sql
-CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (SELECT model_bin FROM scoring_models WHERE model_name = 'ScoringModelV1');
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = @new_applications as d)
-  WITH (score float) as p;
-END;
-```
-
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Creación de un modelo de R y generación de puntuaciones con parámetros de modelo opcionales
-
-En este ejemplo se da por supuesto que se ha creado un modelo de regresión logística equipado con una matriz de covarianza, mediante una llamada a RevoScaleR como esta:
-
-```R
-logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
-```
-
-Si el modelo se almacena en SQL Server en formato binario, se puede usar la función PREDICT para generar no solo las predicciones, sino información adicional compatible con el tipo de modelo, por ejemplo, los intervalos de error o confianza.
-
-En el código siguiente se muestra la llamada equivalente de R a [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict):
-
-```R
-rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
-```
-
-La llamada equivalente con la función `PREDICT` también proporciona los intervalos de puntuación (el valor de predicción), error y confianza:
-
-```sql
-SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
-FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
-  PARAMETERS = N'computeStdErr bit, interval varchar(30)',
-  computeStdErr = 1, interval = 'confidence')
-WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
-```
+- Los resultados de `PREDICT` se almacenan en una tabla denominada PredictionResults. 
+- El modelo se almacena como la columna `varbinary(max)` en la tabla **Models**. En la tabla se puede guardar información adicional como el id. y la descripción para identificar el modelo.
+- El alias **d** especificado para el origen de tabla en el parámetro `DATA` se usa para hacer referencia a las columnas de `dbo.mytable`. Los nombres de las columnas de datos de entrada deben coincidir con el nombre de las entradas del modelo.
+- El alias **p** especificado para la función `PREDICT` se usa para hacer referencia a la columna predicha devuelta por la función `PREDICT`. El nombre de la columna debe ser el mismo que el nombre de salida del modelo.
+- Todas las columnas de entrada y la columna de predicción están disponibles para mostrarse en la instrucción SELECT.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/sql-native-scoring.md)
+- [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+-   [Más información sobre los modelos de ONNX](/azure/machine-learning/concept-onnx#get-onnx-models)
+::: moniker-end

@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831815"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091926"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres, como **char** y **varchar**, dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. 
 
 Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas, y acentos de los datos con los que se trabaja. Para obtener una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -178,12 +178,12 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Árabe (Yemen)|0x2401|0x0401|Arabic_CI_AS|
 |Armenio (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
 |Asamés (India)|0x044d|0x044d|No disponible en el nivel de servidor|
-|Azerí (cirílico, Azerbaiyán)|0x082c|0x082c|Obsoleta, no disponible en el nivel de servidor|
-|Azerí (Azerbaiyán, alfabeto latino)|0x042c|0x042c|Obsoleta, no disponible en el nivel de servidor|
+|Azerbaiyano (Azerbaiyán, cirílico)|0x082c|0x082c|Obsoleta, no disponible en el nivel de servidor|
+|Azerbaiyano (Azerbaiyán, latino)|0x042c|0x042c|Obsoleta, no disponible en el nivel de servidor|
 |Baskir (Rusia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Vasco (España)|0x042d|0x0409|Latin1_General_CI_AS|
 |Bielorruso (Bielorrusia)|0x0423|0x0419|Cyrillic_General_CI_AS|
-|Bengalí (Bangladés)|0x0845|0x0445|No disponible en el nivel de servidor|
+|Bengalí (Bangladesh)|0x0845|0x0445|No disponible en el nivel de servidor|
 |Bengali (India)|0x0445|0x0439|No disponible en el nivel de servidor|
 |Bosnio (cirílico, Bosnia-Herzegovina)|0x201a|0x201a|Latin1_General_CI_AI|
 |Bosnio (latino, Bosnia-Herzegovina)|0x141a|0x141a|Latin1_General_CI_AI|
@@ -235,7 +235,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Francés (Mónaco)|0x180c|0x040c|French_CI_AS|
 |Francés (Suiza)|0x100c|0x040c|French_CI_AS|
 |Frisón (Países Bajos)|0x0462|0x0462|Latin1_General_CI_AI|
-|Gallego (España)|0x0456|0x0409|Latin1_General_CI_AS|
+|Gallego|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgiano (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgiano (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
 |Alemán (alfabetización de libreta de teléfonos, DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Bajo sorbio (Alemania)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxemburgués (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonio (ERY de Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonio (Macedonia del Norte, ARYM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malayo (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malayo (Malasia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|No disponible en el nivel de servidor|
@@ -290,7 +290,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Noruego (Bokmål, Noruega)|0x0414|0x0414|Latin1_General_CI_AI|
 |Noruego (nynorsk, Noruega)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitano (Francia)|0x0482|0x040c|French_CI_AS|
-|Oriya (India)|0x0448|0x0439|No disponible en el nivel de servidor|
+|Odia (India)|0x0448|0x0439|No disponible en el nivel de servidor|
 |Pastún (Afganistán)|0x0463|0x0463|No disponible en el nivel de servidor|
 |Persa (Irán)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polaco (Polonia)|0x0415|0x0415|Polish_CI_AS|
@@ -303,6 +303,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Rumano (Rumanía)|0x0418|0x0418|Romanian_CI_AS|
 |Romanche (Suiza)|0x0417|0x0417|Latin1_General_CI_AI|
 |Ruso (Rusia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sakha (Rusia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Sami (inari, Finlandia)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Noruega)|0x103b|0x043b|Latin1_General_CI_AI|
 |Sami (lule, Suecia)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Galés (Reino Unido)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (Sudáfrica)|0x0434|0x0409|Latin1_General_CI_AS|
-|Yakuto (Rusia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulú/isiZulu (Sudáfrica)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ Para más información, vea el contenido relacionado siguiente:
 [Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Juegos de caracteres de un solo byte y de varios bytes](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

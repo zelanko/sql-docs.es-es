@@ -32,18 +32,18 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afeedcc46f53b57b90e7e5b117c13af188da1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ce067a0ade3a84aed090532a92064db00a8bc9d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002237"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Estas funciones convierten una expresión de un tipo de datos a otro.  
 
@@ -165,7 +165,7 @@ En el caso de una *expression* **binary(n)** , **char(n)** , **varbinary(n)** o 
 |Value|Output|  
 |---|---|
 |**0** (valor predeterminado)|Traduce caracteres ASCII a bytes binarios o bytes binarios a caracteres ASCII. Cada carácter o byte se convierte con una proporción 1:1.<br /><br /> En el caso de un *data_type* binario, los caracteres 0x se agregan a la izquierda del resultado.|  
-|**1**, **2**|Para un *data_type* binario, la expresión debe ser de caracteres. *expression* debe tener un número **par** de dígitos hexadecimales (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si *style* se establece en 1, los dos primeros caracteres de la expresión deben ser 0x. Si la expresión contiene un número impar de caracteres o si alguno de los caracteres no es válido, se producirá un error.<br /><br /> Si la longitud de la expresión convertida supera la longitud de *data_type*, el resultado se truncará a la derecha.<br /><br /> Los *data_type* de longitud fija que sean mayores que el resultado convertido tienen ceros agregados a la derecha del resultado.<br /><br /> Los *data_type* con el tipo carácter necesitan una expresión binaria. Cada carácter binario se convierte en dos caracteres hexadecimales. Si la longitud de la expresión convertida supera la longitud de *data_type*, se truncará a la derecha.<br /><br /> En el caso de que *data_type* sea un tipo de caracteres de tamaño fijo y de que la longitud del resultado convertido sea menor que la longitud de *data_type*, se agregan espacios a la derecha de la expresión convertida para mantener un número par de dígitos hexadecimales.<br /><br /> Los caracteres 0x se agregarán a la izquierda del resultado convertido para *style* 1.|  
+|**1**, **2**|Para un *data_type* binario, la expresión debe ser de caracteres. *expression* debe tener un número **par** de dígitos hexadecimales (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si *style* se establece en 1, los dos primeros caracteres de la expresión deben ser 0x. Si la expresión contiene un número impar de caracteres o si alguno de los caracteres no es válido, se producirá un error.<br /><br /> Si la longitud de la expresión convertida supera la longitud de *data_type*, el resultado se truncará a la derecha.<br /><br /> Los *data_type* de longitud fija que sean mayores que el resultado convertido tienen ceros agregados a la derecha del resultado.<br /><br /> Los *data_type* con el tipo carácter necesitan una expresión binaria. Cada carácter binario se convierte en dos caracteres hexadecimales. Si la longitud de la expresión convertida supera la longitud de *data_type*, se truncará a la derecha.<br /><br /> En el caso de que *data_type* sea un tipo de caracteres de tamaño fijo y de que la longitud del resultado convertido sea menor que la longitud de *data_type*, se agregan espacios a la derecha de la expresión convertida para mantener un número par de dígitos hexadecimales.<br /><br /> Los caracteres 0x se agregarán a la izquierda del resultado convertido para *style* 2.|  
   
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 Las conversiones implícitas no requieren la especificación de la función CAST ni de la función CONVERT. Las conversiones explícitas requieren la especificación de la función CAST o de la función CONVERT. En la siguiente ilustración se muestran todas las conversiones de tipos de datos explícitas e implícitas permitidas para los tipos de datos proporcionados por el sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas de ellas son **bigint**, **sql_variant** y **xml**. No existe una conversión implícita en la asignación del tipo de datos **sql_variant**, pero sí hay una conversión implícita en **sql_variant**.
@@ -302,13 +302,15 @@ Al convertir tipos de datos donde el tipo de datos de destino tiene menos decima
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error al convertir datos **char**, **nchar**, **nvarchar** o **varchar** no numéricos en datos **decimal**, **float**, **int** o **numeric**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también devuelve un error cuando se convierte una cadena vacía (" ") en los tipos de datos **numeric** o **decimal**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Determinadas conversiones de fecha y hora son no deterministas
-En la siguiente tabla se muestran los estilos para los que la conversión de cadena a fecha y hora es no determinista.
+
+Los estilos para los que la conversión de cadena a fecha y hora es no determinista son los siguientes:
   
-|||  
-|-|-|  
-|Todos los estilos por debajo de 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- Todos los estilos por debajo de 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> Con la excepción de los estilos 20 y 21
 

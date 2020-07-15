@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588241"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000718"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifica un índice existente de una tabla o una vista (almacén de filas, almacén de columnas o XML) mediante su deshabilitación, regeneración o reorganización, o mediante el establecimiento de sus opciones.  
   
@@ -308,7 +308,7 @@ COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta 
 
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<establecer_opción_de_índice> [ **,** ... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Especifica las opciones del índice sin volver a generar ni organizar el índice. No es posible especificar SET para un índice deshabilitado.  
   
 PAD_INDEX = { ON | OFF }  
@@ -547,13 +547,13 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.  
   
- \<partition_number_expression> se puede especificar de las maneras siguientes:  
+ \<partition_number_expression> se puede especificar de estas maneras:  
   
 -   Proporcionar el número de una partición, por ejemplo: `ON PARTITIONS (2)`.  
 -   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: `ON PARTITIONS (1, 5)`.  
 -   Proporcionar particiones individuales y de intervalos: `ON PARTITIONS (2, 4, 6 TO 8)`.  
   
- \<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: `ON PARTITIONS (6 TO 8)`.  
+ \<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: `ON PARTITIONS (6 TO 8)`.  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   
@@ -704,7 +704,7 @@ ONLINE INDEX REBUILD se especifica como reanudable mediante la opción RESUMABLE
 -  La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula RESUMABLE = ON debe especificarse explícitamente para habilitar la capacidad de reanudación.
 -  La opción MAX_DURATION es compatible con la opción RESUMABLE = ON o la opción del argumento **low_priority_lock_wait**. 
    -  MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para regenerar un índice. Una vez pasado este tiempo, la operación de regeneración de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una recompilación de un índice en pausa. El valor **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos o menor o igual que una semana (7 \* 24 \* 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error. 
-   -  La opción del argumento \<low_priority_lock_wait> permite al usuario decidir cómo puede continuar la operación de índice cuando se bloquea en el bloqueo SCH-M.
+   -  La opción del argumento \<low_priority_lock_wait> le permite decidir cómo puede continuar la operación de índice cuando se bloquea en el bloqueo SCH-M.
  
 -  Al volver a ejecutar la instrucción ALTER INDEX REBUILD original con los mismos parámetros, se reanuda una operación de regeneración de índice en pausa. También se puede reanudar una operación de regeneración de índice en pausa mediante la instrucción ALTER INDEX RESUME.
 -  La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 

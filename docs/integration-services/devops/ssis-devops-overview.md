@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152168"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091786"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Herramientas de DevOps para SQL Server Integration Services
 
@@ -74,7 +74,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- En la tarea de compilación de SSIS no se admiten los niveles de protección **EncryptSensitiveWithPassword** y **EncryptAllWithPassword**. Asegúrese de que todos los proyectos de SSIS del código base no usan ninguno de estos dos niveles de protección para evitar que la tarea de compilación de SSIS se bloquee y agote el tiempo de espera durante la ejecución.
+- En la tarea de compilación de SSIS no se admiten los niveles de protección **EncryptSensitiveWithPassword** y **EncryptAllWithPassword**. Asegúrese de que todos los proyectos de SSIS del código base no usan ninguno de estos dos niveles de protección, o la tarea de compilación de SSIS dejará de responder y agotará el tiempo de espera durante la ejecución.
 
 ## <a name="ssis-deploy-task"></a>Tarea de implementación de SSIS
 
@@ -314,7 +314,7 @@ El esquema JSON de configuración tiene tres niveles:
 |Propiedad  |Descripción  |Notas  |
 |---------|---------|---------|
 |name|Nombre del parámetro.|El parámetro puede ser *parámetro de proyecto* o *parámetro de paquete*. <br> El parámetro se omitirá si el proyecto no existe en el proyecto principal.|
-|contenedor|Contenedor del parámetro.|<li>Si el parámetro es un parámetro de proyecto, *container* debe ser el nombre del proyecto. <li>Si es un parámetro de paquete, *container* debe ser el nombre del paquete con la extensión **.dtsx**. <li> Si el parámetro es una propiedad del administrador de conexiones, el nombre debe tener el formato siguiente: **CM.\<Nombre del administrador de conexiones>.\<Nombre de la propiedad>** .|
+|contenedor|Contenedor del parámetro.|<li>Si el parámetro es un parámetro de proyecto, *container* debe ser el nombre del proyecto. <li>Si es un parámetro de paquete, *container* debe ser el nombre del paquete con la extensión **.dtsx**. <li> Si el parámetro es una propiedad del administrador de conexiones, el nombre debe tener el formato siguiente: **CM.\<Connection Manager Name>.\<Property Name>** .|
 |value|Valor del parámetro.|<li>Cuando *valueType* es *referenced*: el valor es una referencia a una variable de entorno con el tipo de *cadena*. <li> Cuando *valueType* es *literal*: este atributo admite cualquier valor JSON *booleano*, de *número* y de *cadena* válido. <br> El valor se convertirá al tipo de parámetro de destino. Se producirá un error si no se puede convertir.<li> El valor de *null* no es válido. La tarea omitirá este objeto de parámetro y mostrará una advertencia.|
 |valueType|Tipo del valor del parámetro.|Los tipos válidos son los siguientes: <br> *literal*: el atributo *value* representa un valor literal. <br> *referenced*: el atributo *value* es una referencia a una variable de entorno.|
 
@@ -344,6 +344,12 @@ El esquema JSON de configuración tiene tres niveles:
 |sensitive|Si el valor de la variable de entorno es confidencial.|Las entradas válidas son: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notas de la versión
+
+### <a name="version-102"></a>Versión 1.0.2
+
+Fecha de lanzamiento: 26 de mayo de 2020
+
+- Se ha corregido un problema que hacía que se produjera un error en la tarea de configuración del catálogo de SSIS en algún caso después de realizar la configuración.
 
 ### <a name="version-101"></a>Versión 1.0.1
 

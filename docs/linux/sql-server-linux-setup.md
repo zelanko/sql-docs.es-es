@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: Instale, actualice y desinstale SQL Server en Linux. En este artículo se tratan escenarios en línea, sin conexión y desatendidos.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897311"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se ofrecen instrucciones para instalar, actualizar y desinstalar SQL Server 2017 y SQL Server 2019 en Linux.
 
@@ -47,7 +47,7 @@ SQL Server se admite en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise 
 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtener RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Obtener RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obtener SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Motor de Docker** | 1.8+ | [Obtener Docker](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server se admite en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Plataforma | Versiones admitidas | Obtener
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Obtener RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [Obtener SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Obtener Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
-| **Motor de Docker** | 1.8+ | [Obtener Docker](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 

@@ -11,20 +11,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217138"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901288"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Evaluaciones](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
    
 - Edición SQL Server Evaluation (64 bits).  
    
@@ -179,9 +179,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 El programa de instalación de SQL Server PolyBase crea las siguientes reglas de firewall en el equipo:  
    
-- SQL Server PolyBase - Motor de base de datos - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
+- SQL Server PolyBase - Motor de base de datos: \<SQLServerInstanceName> (TCP de entrada)  
    
-- SQL Server PolyBase -> Servicios de PolyBase - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
+- SQL Server PolyBase -> Servicios de PolyBase: \<SQLServerInstanceName> (TCP de entrada)  
 
 - SQL Server PolyBase -> SQL Browser -> (UDP de entrada)  
    

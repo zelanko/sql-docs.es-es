@@ -1,5 +1,6 @@
 ---
 title: Actualizar Master Data Services | Microsoft Docs
+description: Descubra los cuatro escenarios para actualizar Microsoft SQL Server Master Data Services. Obtenga información sobre las ubicaciones de archivos y la solución de problemas de las actualizaciones.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900270"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Estos son los escenarios para actualizar Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
@@ -151,7 +152,7 @@ ms.locfileid: "67934826"
 ## <a name="troubleshooting"></a>Solución de problemas  
  **Problema:** al abrir la aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se muestra un mensaje de error similar a "La versión del cliente no es compatible con la versión de la base de datos".  
   
- **Solución:** este problema se produce cuando una aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager intenta tener acceso a una base de datos que se ha actualizado a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Debe usar una aplicación web de [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] en su lugar.  
+ **Solución:** este problema se produce cuando una aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager intenta acceder a una base de datos que se ha actualizado a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Debe usar una aplicación web de [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] en su lugar.  
   
  Este problema puede producirse también si no se ha detenido y reiniciado el **Grupo de aplicaciones de MDS** en IIS al actualizar el esquema de la base de datos de MDS. Reinicie el **Grupo de aplicaciones de MDS** para corregir el problema.  
   

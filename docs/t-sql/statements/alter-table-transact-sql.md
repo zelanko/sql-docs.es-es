@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000668"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Modifica una definición de tabla mediante la alteración, adición o retirada de columnas y restricciones. ALTER TABLE también vuelve a asignar y compilar particiones, o deshabilita y habilita restricciones y desencadenadores.
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Sintaxis de Azure Synapse Analytics
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -499,7 +501,7 @@ Solo se aplica a los tipos de datos **varchar**, **nvarchar** y **varbinary** pa
 
 Solo se aplica al tipo de datos **xml** para asociar un esquema XML con el tipo. Antes de escribir una columna **xml** en una colección de esquemas, cree primero la colección de esquema en la base de datos mediante el uso de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
-COLLATE \< *nombre_de_intercalación* >  
+COLLATE \< *collation_name* >  
 Especifica la nueva intercalación para la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) [Nombre de intercalación de Windows (Transact-SQL)] y [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md) [Nombre de intercalación de SQL Server (Transact-SQL)].
 
 La cláusula COLLATE cambia únicamente las intercalaciones de las columnas con tipos de datos **char**, **varchar**, **nchar** y **nvarchar**. Para cambiar la intercalación de una columna de tipo de datos de alias definido por el usuario, use distintas instrucciones ALTER TABLE para cambiar la columna a un tipo de datos del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, cambie su intercalación y cambie la columna de nuevo a un tipo de datos de alias.
@@ -563,7 +565,7 @@ Especifica una máscara dinámica de datos. *mask_function* es el nombre de la f
 
 Para quitar una máscara, utilice `DROP MASKED`. Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámicos](../../relational-databases/security/dynamic-data-masking.md).
 
-WITH ( ONLINE = ON | OFF) \<tal como se aplica al modificar una columna>  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite realizar numerosas acciones de alteración de columna mientras la tabla sigue estando disponible. El valor predeterminado es OFF. La alteración de columna se puede realizar en línea para los cambios de columna relacionados con el tipo de datos, la precisión o la longitud de la columna, la nulabilidad, la escasez y la intercalación.
@@ -621,7 +623,7 @@ Especifica los nombres de las columnas que el sistema usa para registrar el per�
 
 Utilice este argumento con el argumento SET SYSTEM_VERSIONING para habilitar el control de versiones del sistema en una tabla existente. Para obtener más información, consulte [Tablas temporales](../../relational-databases/tables/temporal-tables.md) e [Introducción a las tablas temporales de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).
 
-A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM \<nombre_de_tabla>** no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal.
+A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM \<table_name>** no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal.
 
 DROP  
 Especifica que se quitan una o más definiciones de columna, definiciones de columnas calculadas o restricciones de tabla, o que se quita la especificación para las columnas que el sistema utiliza para el control de versiones del sistema.
@@ -685,7 +687,7 @@ Para obtener más información, vea [Configurar operaciones de índice en parale
 > [!NOTE]
 > Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-ONLINE **=** { ON | **OFF** } \<tal como se aplica a drop_clustered_constraint_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF. Puede ejecutar REBUILD como una operación ONLINE.
 
 ACTIVAR  
@@ -845,7 +847,7 @@ Solo se aplica a las tablas de almacén de columnas almacenadas con un índice c
 
 Para volver a generar al mismo tiempo varias particiones, vea [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md). Si la tabla no tiene un índice agrupado, al cambiar la compresión de datos se vuelven a generar el montón y los índices no agrupados. Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
 
-ONLINE **=** { ON | **OFF** } \<tal y como se aplica a single_partition_rebuild_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 Especifica si una única partición de las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de indización. El valor predeterminado es OFF. Puede ejecutar REBUILD como una operación ONLINE.
 
 ACTIVAR  
@@ -1031,7 +1033,7 @@ ONLINE **=** ON tiene las siguientes restricciones:
 Para quitar un índice clúster, se necesita un espacio temporal en disco del mismo tamaño que el del índice clúster existente. Este espacio adicional se libera en cuanto se completa la operación.
 
 > [!NOTE]
-> Las opciones que aparecen con *\<drop_clustered_constraint_option>* se aplican a índices agrupados en tablas y no se pueden aplicar a índices agrupados en vistas o índices no agrupados.
+> Las opciones que aparecen en *\<drop_clustered_constraint_option>* se aplican a índices agrupados en tablas y no se pueden aplicar a índices agrupados en vistas o índices no agrupados.
 
 ## <a name="replicating-schema-changes"></a>Replicar cambios de esquema
 
@@ -1046,8 +1048,8 @@ Para evaluar cómo afecta el cambio del estado de compresión a una tabla, índi
 Las restricciones siguientes se aplican a las tablas con particiones:
 
 - No se puede cambiar la configuración de compresión de una partición única si la tabla tiene índices no alineados.
-- La sintaxis ALTER TABLE \<tabla> REBUILD PARTITION ... vuelve a recompilar la partición especificada.
-- La sintaxis ALTER TABLE \<tabla> REBUILD WITH... vuelve a recompilar todas las particiones.
+- La sintaxis ALTER TABLE \<table> REBUILD PARTITION ... recompila la partición especificada.
+- La sintaxis ALTER TABLE \<table> REBUILD WITH ... recompila todas las particiones.
 
 ## <a name="dropping-ntext-columns"></a>Quitar columnas NTEXT
 

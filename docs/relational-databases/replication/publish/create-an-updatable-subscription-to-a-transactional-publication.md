@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321257"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896814"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Crear una suscripción actualizable en una publicación transaccional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  Esta característica sigue siendo compatible con las versiones de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] entre 2012 y 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
@@ -201,7 +201,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 1, la publicación admite suscripciones de actualización inmediata.
-    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, consulte Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
+    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, vea: Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
 
 2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de inserción. 
 
@@ -228,10 +228,10 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>Establecimiento de opciones de resolución de conflictos de actualización en cola 
-Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
   
-1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** , seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:  
+1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione uno de los valores siguientes para la opción **Directiva de resolución de conflictos**:  
   
     -   **Mantener el cambio del publicador**    
     -   **Mantener el cambio del suscriptor**    

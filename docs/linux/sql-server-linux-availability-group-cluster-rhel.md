@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706297"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896948"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de RHEL para grupos de disponibilidad de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este documento se explica cómo crear un clúster de grupos de disponibilidad de tres nodos para SQL Server en Red Hat Enterprise Linux. Para lograr una alta disponibilidad, un grupo de disponibilidad en Linux necesita tres nodos (vea [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md) [Alta disponibilidad y protección de datos para configuraciones de grupos de disponibilidad]). La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). 
 
@@ -167,7 +167,7 @@ Para obtener información sobre las propiedades de clúster de Pacemaker, vea [P
 
 ## <a name="create-availability-group-resource"></a>Crear un recurso de grupo de disponibilidad
 
-Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El siguiente comando crea un recurso `ocf:mssql:ag` de tipo principal/secundario para el grupo de disponibilidad con el nombre `ag1`.
+Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El comando siguiente crea un recurso `ocf:mssql:ag` de tipo principal/secundario para el grupo de disponibilidad con el nombre `ag1`.
 
 **RHEL 7**
 

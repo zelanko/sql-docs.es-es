@@ -1,5 +1,6 @@
 ---
 title: Certificados y claves asimétricas de SQL Server | Microsoft Docs
+description: Obtenga información sobre los certificados y las claves asimétricas en SQL Server, incluidos los certificados, las herramientas y las tareas relacionadas que se hayan generado externamente o mediante SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153123"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001024"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  La criptografía de clave pública es un método para mantener la confidencialidad de los mensajes mediante el cual el usuario crea una clave *pública* y una clave *privada*. La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se puede usar para cifrar los datos que solamente la clave privada correspondiente podrá descifrar. Esto puede usarse para cifrar los mensajes al propietario de la clave privada. Del mismo modo, el propietario de una clave privada puede cifrar los datos que solo pueden descifrarse con la clave pública. Este uso constituye la base de los certificados digitales en los que se cifra la información contenida en el certificado por parte del propietario de una clave privada, garantizando así el autor del contenido. Dado que las claves de cifrado y descifrado son diferentes, se conocen como claves *asimétricas*.
   

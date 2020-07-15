@@ -13,12 +13,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086822"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942911"
 ---
 # <a name="transact-sql-statements"></a>Instrucciones Transact-SQL
 
@@ -34,7 +34,7 @@ Las instrucciones de copia de seguridad y restauración proporcionan formas de c
 
 ## <a name="data-definition-language"></a>Lenguaje de definición de datos
 
-Las instrucciones del lenguaje de definición de datos (DDL) definen estructuras de datos. Use estas instrucciones para crear, modificar o quitar estructuras de datos en una base de datos.
+Las instrucciones del lenguaje de definición de datos (DDL) definen estructuras de datos. Use estas instrucciones para crear, modificar o quitar estructuras de datos en una base de datos. Estas instrucciones incluyen las siguientes:
 
 - ALTER
 - Intercalaciones
@@ -52,6 +52,7 @@ El lenguaje de manipulación de datos (DML) afecta a la información almacenada 
 - BULK INSERT
 - Delete
 - INSERT
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

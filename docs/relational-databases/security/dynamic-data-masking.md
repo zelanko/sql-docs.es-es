@@ -1,5 +1,6 @@
 ---
 title: Enmascaramiento de datos dinámicos | Microsoft Docs
+description: Obtenga información sobre el enmascaramiento dinámico de datos, que limita la exposición de información confidencial mediante su enmascaramiento a los usuarios sin privilegios. Puede simplificar considerablemente la seguridad en SQL Server.
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997715"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005594"
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento dinámico de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![Enmascaramiento de datos dinámicos](../../relational-databases/security/media/dynamic-data-masking.png)
 

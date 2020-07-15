@@ -5,20 +5,20 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897299"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configuración de una instancia de clúster de conmutación por error: iSCSI: SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se explica cómo configurar el almacenamiento de iSCSI de una instancia de clúster de conmutación por error (FCI) en Linux. 
 
@@ -56,7 +56,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     - iface.ipaddress
     - iface.subnet_Mask 
 
-    Vea el ejemplo siguiente:
+    Observe el ejemplo siguiente:
 
     ![iSCSITargetSettings][2]
 
@@ -77,7 +77,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName> es el nombre único o descriptivo de la red y \<TargetIPAddress> es la dirección IP del destino iSCSI.
+    \<iSCSIIfaceName> es el nombre único o descriptivo de la red, y \<TargetIPAddress> es la dirección IP del destino iSCSI.
 
     ![iSCSITargetLogin][4]
 
@@ -112,7 +112,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName> es el nombre del grupo de volúmenes y \<devicename> es el nombre del dispositivo del paso 6. 
+    \<VolumeGroupName> es el nombre del grupo de volúmenes y \<devicename> el nombre del dispositivo del paso 6. 
  
 9.  Cree y compruebe el volumen lógico del disco.
 
@@ -120,7 +120,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<size> es el tamaño del volumen que se va a crear. Se puede especificar con G (gigabytes), T (terabytes), etc. \<LogicalVolumeName> es el nombre del volumen lógico y \<VolumeGroupName> es el nombre del grupo de volúmenes del paso anterior. 
+    \<size> es el tamaño del volumen que se va a crear y que se puede especificar con G (gigabytes), T (terabytes), etc.; \<LogicalVolumeName> es el nombre del volumen lógico y \<VolumeGroupName> el del grupo de volúmenes del paso anterior. 
 
     En el ejemplo siguiente se crea un volumen de 25 GB.
  
@@ -138,208 +138,209 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
 12. En el caso de las bases de datos del sistema o cualquier elemento almacenado en la ubicación de datos predeterminada, siga estos pasos. De lo contrario, vaya al paso 13.
 
-   *    Asegúrese de que SQL Server está detenido en el servidor en el que está trabajando.
+   * Asegúrese de que SQL Server está detenido en el servidor en el que está trabajando.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    Cambie por completo para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
-
-    ```bash
-    sudo -i
-    ```
-
-   *    Cambie para ser el usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
-
-    ```bash
-    su mssql
-    ```
-
-   *    Cree un directorio temporal para almacenar los archivos de registro y los datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> es el nombre de la carpeta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/TempDir.
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    Copie los archivos de registro y los datos de SQL Server en el directorio temporal. No recibirá ninguna confirmación si se realiza correctamente.
+   * Cambie por completo para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> es el nombre de la carpeta del paso anterior.
+        ```bash
+        sudo -i
+        ```
     
-   *    Compruebe que los archivos están en el directorio.
+   * Cambie para ser el usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> es el nombre de la carpeta del paso d.
+        ```bash
+        su mssql
+        ```
+    
+   * Cree un directorio temporal para almacenar los archivos de registro y los datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
 
-   *    Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> es el nombre de la carpeta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/TempDir.
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * Copie los archivos de registro y los datos de SQL Server en el directorio temporal. No recibirá ninguna confirmación si se realiza correctamente.
 
-   *    Compruebe que se han eliminado los archivos. En la imagen siguiente se muestra un ejemplo de la secuencia completa de c a h.
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> es el nombre de la carpeta del paso anterior.
+    
+   * Compruebe que los archivos están en el directorio.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    Escriba `exit` para volver al usuario raíz.
+        \<TempDir> es el nombre de la carpeta del paso d.
 
-   *    Monte el volumen lógico de iSCSI en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
+   * Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * Compruebe que se han eliminado los archivos. En la imagen siguiente se muestra un ejemplo de la secuencia completa de c a h.
 
-    \<VolumeGroupName> es el nombre del grupo de volúmenes y \<LogicalVolumeName> es el nombre del volumen lógico que se ha creado. La siguiente sintaxis de ejemplo coincide con el grupo de volúmenes y el volumen lógico del comando anterior.
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * Escriba `exit` para volver al usuario raíz.
 
-   *    Cambie el propietario del montaje a mssql. No recibirá ninguna confirmación si se realiza correctamente.
+   * Monte el volumen lógico de iSCSI en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    Cambie la propiedad del grupo del montaje a mssql. No recibirá ninguna confirmación si se realiza correctamente.
+        \<VolumeGroupName> es el nombre del grupo de volúmenes y \<LogicalVolumeName> el del volumen lógico que se ha creado. La siguiente sintaxis de ejemplo coincide con el grupo de volúmenes y el volumen lógico del comando anterior.
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    Cambie al usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
+   * Cambie el propietario del montaje a mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    Copie los archivos del directorio temporal /var/opt/mssql/data. No recibirá ninguna confirmación si se realiza correctamente.
+   * Cambie la propiedad del grupo del montaje a mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    Compruebe que los archivos están allí.
+   * Cambie al usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * Copie los archivos del directorio temporal /var/opt/mssql/data. No recibirá ninguna confirmación si se realiza correctamente.
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * Compruebe que los archivos están allí.
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    Escriba `exit` para no ser mssql.
-    
+
    *    Escriba `exit` para no ser el usuario raíz.
 
    *    Inicie SQL Server. Si todo se ha copiado correctamente y la seguridad se ha aplicado correctamente, SQL Server debería mostrarse como iniciado.
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    Detenga SQL Server y compruebe que se ha apagado.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. Para comprobar otros aspectos que no sean las bases de datos del sistema (por ejemplo, las bases de datos de usuario o las copias de seguridad), siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 14.
 
    *    Cambie para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    Cree una carpeta que usará SQL Server. 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> es el nombre de la carpeta. Es necesario especificar la ruta de acceso completa de la carpeta si no está en la ubicación correcta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/userdata.
+        \<FolderName> es el nombre de la carpeta. Es necesario especificar la ruta de acceso completa de la carpeta si no está en la ubicación correcta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/userdata.
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    Monte el volumen lógico de iSCSI en la carpeta creada en el paso anterior. No recibirá ninguna confirmación si se realiza correctamente.
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> es el nombre del grupo de volúmenes, \<LogicalVolumeName> es el nombre del volumen lógico que se ha creado y \<FolderName> es el nombre de la carpeta. A continuación, se muestra un ejemplo de la sintaxis.
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> es el nombre del grupo de volúmenes, \<LogicalVolumeName> el nombre del volumen lógico que se ha creado y \<FolderName> el nombre de la carpeta. A continuación, se muestra un ejemplo de la sintaxis.
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    Cambie a mssql la propiedad de la carpeta creada. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
+        \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    Cambie a mssql el grupo de la carpeta creada. No recibirá ninguna confirmación si se realiza correctamente.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
+        \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    Escriba `exit` para dejar de ser el superusuario.
 
    *    Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a ella y comprobar que los archivos existen en el nivel del sistema operativo; después, se elimina la ubicación temporal. Puede usar SSMS.
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    Desmontaje del recurso compartido 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> es el nombre del grupo de volúmenes, \<LogicalVolumeName> es el nombre del volumen lógico que se ha creado y \<FolderName> es el nombre de la carpeta. A continuación, se muestra un ejemplo de la sintaxis.
+        \<VolumeGroupName> es el nombre del grupo de volúmenes, \<LogicalVolumeName> el nombre del volumen lógico que se ha creado y \<FolderName> el nombre de la carpeta. A continuación, se muestra un ejemplo de la sintaxis.
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. Configure el servidor para que solo Pacemaker pueda activar el grupo de volúmenes.
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. Genere una lista de los grupos de volúmenes del servidor. El sistema usará cualquier elemento que no sea el disco iSCSI, como el disco del sistema operativo.
 
     ```bash
@@ -355,8 +356,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     \<ListOfVGsNotUsedByPacemaker> es la lista de grupos de volúmenes de la salida del paso 20 que la FCI no usará. Coloque cada uno entre comillas y sepárelos con una coma. A continuación se muestra un ejemplo.
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. Cuando se inicie Linux, montará el sistema de archivos. Para asegurarse de que solo Pacemaker pueda montar el disco iSCSI, vuelva a compilar la imagen del sistema de archivos raíz. 
 
     Ejecute el comando siguiente, que podría tardar unos minutos en completarse. No recibirá ningún mensaje si se realiza correctamente.
@@ -374,6 +374,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     ```bash
     sudo vgs
     ``` 
+
 23. Inicie SQL Server y compruebe que se puede iniciar en este servidor.
 
     ```bash
@@ -387,14 +388,15 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. Repita los pasos 1-6 en cualquier otro servidor que vaya a participar en la FCI.
 
 Ya puede configurar la FCI.
 
-|Distribución |Tema 
-|----- |-----
-|**Red Hat Enterprise Linux con complemento de alta disponibilidad** |[Configuración](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operaciones](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server con complemento de alta disponibilidad** |[Configuración](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| Distribución | Tema |
+| :----------- | :---- |
+| Red Hat Enterprise Linux con complemento de alta disponibilidad | [Configuración](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operaciones](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| SUSE Linux Enterprise Server con complemento de alta disponibilidad | [Configuración](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

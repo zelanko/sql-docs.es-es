@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165458"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984704"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Las tablas temporales con control de versiones del sistema para [tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) están diseñadas con el objetivo de ofrecer una solución rentable para escenarios donde se requieren [auditorías de los datos y análisis puntales](https://msdn.microsoft.com/library/mt631669.aspx) , además de los datos recopilados con cargas de trabajo de OLTP en memoria. Ofrecen gran rendimiento transaccional, simultaneidad sin bloqueo y, al mismo tiempo, la capacidad de almacenar grandes cantidades de datos de historial en los que se pueden realizar consultas fácilmente.
 
@@ -52,9 +52,9 @@ Los siguientes datos sobre las tablas temporales con control de versiones del si
 
 La tabla de almacenamiento provisional interna optimizada para memoria es un objeto interno que crea el sistema con la finalidad de optimizar las operaciones DML.
 
-- El nombre de la tabla se genera con el siguiente formato: **Memory_Optimized_History_Table_<object_id>** , donde *<object_id>* es el identificador de la tabla temporal actual.
+- El nombre de tabla se genera en el formato siguiente: **Memory_Optimized_History_Table_<object_id>** , donde *<object_id>* es el identificador de la tabla temporal actual.
 - La tabla replica el esquema de la tabla temporal actual, más una columna BIGINT. Esta columna adicional garantiza la exclusividad de las filas trasladadas al búfer interno de historial.
-- La columna adicional tiene el siguiente formato de nombre: **Change_ID[_< sufijo>]** , donde *_\<sufijo>* se agrega de manera opcional en el caso de que la tabla ya cuente con una columna *Change_ID*.
+- La columna adicional tiene el formato de nombre siguiente: **Change_ID[_< suffix>]** , donde *_\<suffix>* se agrega de manera opcional en caso de que la tabla ya cuente con una columna *Change_ID*.
 - El tamaño máximo de fila de una tabla con control de versiones del sistema y optimizada para memoria se reduce en 8 bytes debido a la columna BIGINT adicional de la tabla de almacenamiento provisional. Ahora, el nuevo máximo es 8052 bytes.
 - La tabla de almacenamiento provisional interna optimizada para memoria no se representa en el Explorador de objetos de SQL Server Management Studio.
 - En [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md), es posible encontrar metadatos sobre esta tabla, así como su conexión con la tabla temporal actual.

@@ -1,5 +1,6 @@
 ---
 title: Eventos y errores del motor de base de datos
+description: Consulte esta lista de códigos de error de MSSQL para buscar explicaciones de los mensajes de error para eventos del motor de base de datos de SQL Server.
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728255"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158624"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -1849,7 +1850,7 @@ ORDER BY message_id
 |    3991    |    16    |    No    |    La transacción de contexto que estaba activa antes de especificar una rutina, un desencadenador o un agregado "%.*ls" definido por el usuario ha terminado dentro de éstos, lo cual no está permitido. Cambie la lógica de la aplicación para exigir un nivel de anidamiento estricto de la transacción.    |
 |    3992    |    16    |    No    |    Se cambió el recuento de transacciones de %d a %d dentro de la rutina, desencadenador o agregado  "%.*ls" definido por el usuario. Esto no está permitido y la transacción de usuario se revertirá. Cambie la lógica de la aplicación para exigir un nivel de anidamiento estricto de la transacción.    |
 |    3993    |    16    |    No    |    La transacción de usuario que se inició en una rutina, desencadenador o agregado "%.*ls" definido por el usuario no terminará hasta salir de éstos. Esto no está permitido: la transacción de usuario se revertirá. Cambie la lógica de la aplicación para exigir un nivel de anidamiento estricto de la transacción.    |
-|    3994    |    16    |    No    |    La rutina, desencadenador o agregado definido por el usuario trató de revertir una transacción que no se inició en ese nivel CLR  Se producirá una excepción para impedir la ejecución del resto de la rutina, desencadenador o agregado definido por el usuario.    |
+|    3994    |    16    |    No    |    La rutina, desencadenador o agregado definido por el usuario trató de revertir una transacción que no se inició en ese nivel CLR Se producirá una excepción para impedir la ejecución del resto de la rutina, desencadenador o agregado definido por el usuario.    |
 |    3995    |    16    |    No    |    Nivel de aislamiento de transacción desconocido %d. El intervalo válido de valores es de 0 a 5.    |
 |    3996    |    16    |    No    |    No se admite el nivel de aislamiento de instantánea para una transacción distribuida. Utilice otro nivel de aislamiento o no use transacciones distribuidas.    |
 |    3997    |    16    |    No    |    Una transacción iniciada la final de un lote MARS todavía está activa al final del lote. Se ha revertido la transacción.    |
@@ -2719,7 +2720,7 @@ ORDER BY message_id
 |    6113    |    16    |    No    |    La transacción distribuida asociada a UOW %s está en estado PREPARE. Utilice la sintaxis KILL UOW WITH COMMIT/ABORT para eliminar la transacción.    |
 |    6114    |    16    |    No    |    Otro usuario está usando la transacción distribuida con UOW %s. Error del comando KILL.    |
 |    6115    |    16    |    No    |    No se puede utilizar el comando KILL dentro de transacciones de usuario.    |
-|    6117    |    16    |    No    |    Hay una conexión asociada a la transacción distribuida con UOW %s. Es necesario eliminar primero la conexión mediante la sintaxis KILL SPID.      |
+|    6117    |    16    |    No    |    Hay una conexión asociada a la transacción distribuida con UOW %s. Es necesario eliminar primero la conexión mediante la sintaxis KILL SPID.    |
 |    6118    |    16    |    No    |    La transacción distribuida asociada con UOW %s no está en estado PREPARED. Para eliminar la transacción, ejecute KILL UOW.    |
 |    6119    |    10    |    No    |    Se está deshaciendo la transacción distribuida con UOW %s: estimación de porcentaje de reversión: %d%%, estimación de tiempo restante %d segundos.    |
 |    6120    |    16    |    No    |    No se pudo obtener un informe de estado. No hay ninguna operación Revertir en curso para el id. de proceso %d.    |
@@ -2833,7 +2834,7 @@ ORDER BY message_id
 |    6312    |    16    |    No    |    No se encontraron componentes de esquema con el espacio de nombres de destino "%.*ls" en la colección "%.* ls".    |
 |    6314    |    16    |    No    |    La colección especificada no existe en los metadatos: "%.*ls"    |
 |    6315    |    16    |    No    |    XQuery: no se puede actualizar con el valor "%.*ls" porque la forma canónica de tipo "{%.* ls}%.*ls" infringe el patrón requerido. Se recomienda no utilizar facetas de patrón en tipos que no son string.    |
-|    6316    |    16    |    No    |    El componente especificado '% s' no se puede quitar porque lo utiliza el componente:'%s'      |
+|    6316    |    16    |    No    |    El componente especificado '% s' no se puede quitar porque lo utiliza el componente:'%s'    |
 |    6317    |    16    |    No    |    XQuery: no se puede actualizar con el valor "%.*ls" porque no se pudo validar con el tipo "{%.* ls}%.*ls"    |
 |    6318    |    16    |    No    |    XQuery: error de conversión de cadena durante la validación de UPDATE    |
 |    6320    |    16    |    No    |    XQuery: solo los elementos o nodos de texto con el atributo nillable se pueden actualizar con una secuencia vacía    |
@@ -2845,14 +2846,14 @@ ORDER BY message_id
 |    6326    |    16    |    No    |    Comprobación de corrección de XML: la declaración del espacio de nombres XML no puede aparecer fuera de la declaración del elemento. Escriba de nuevo la expresión XQuery para que devuelva XML correcto.    |
 |    6327    |    16    |    No    |    El identificador de la colección de esquemas XML especificado no es válido: %d    |
 |    6328    |    16    |    No    |    La colección '%.*ls' especificada no se puede quitar porque la está utilizando %S_MSG '%ls'.    |
-|    6329    |    16    |    No    |    Uso no permitido de un valor de tipo QName en el nodo '%.*ls'      |
+|    6329    |    16    |    No    |    Uso no permitido de un valor de tipo QName en el nodo '%.*ls'    |
 |    6330    |    16    |    No    |    La columna "%.*ls" de la tabla "%.* ls" no es de tipo XML, que es necesario para crear un índice XML en ella.    |
 |    6331    |    16    |    No    |    Ya existe el índice XML principal "%.*ls" en la columna "%.* ls" de la tabla "%.*ls" y no se permiten varios índices XML principales por columna.    |
 |    6332    |    16    |    No    |    La tabla '%.*ls' debe tener una clave principal clúster con menos de %d columnas para poder crear un índice XML principal en ella.    |
 |    6333    |    16    |    No    |    No se encontró el índice XML %ls denominado "%.*ls" en la tabla "%.* ls"    |
 |    6334    |    16    |    No    |    No se pudo crear el índice XML o espacial en el objeto '%.*ls', porque el objeto no es una tabla. Cree el índice en la columna de la tabla base.    |
 |    6335    |    16    |    No    |    La instancia del tipo de datos XML tiene demasiados niveles de nodos anidados. El máximo permitido es %d niveles.    |
-|    6336    |    16    |    No    |    El tamaño máximo del índice principal de la tabla '%.*ls' es %d bytes. CREATE XML INDEX requiere que este tamaño esté limitado a %3d bytes      |
+|    6336    |    16    |    No    |    El tamaño máximo del índice principal de la tabla '%.*ls' es %d bytes. CREATE XML INDEX requiere que este tamaño esté limitado a %3d bytes    |
 |    6337    |    16    |    No    |    '%.*ls' no es un nombre de índice XML válido porque comienza con el carácter '%c'. El nombre del índice XML no debe comenzar con "#" o "\@"    |
 |    6338    |    10    |    No    |    Se ha quitado del DTD XML uno o más fragmentos XML. Se han omitido los subconjuntos externos existentes.    |
 |    6339    |    16    |    No    |    La colección '%.*ls' especificada no se puede modificar porque es una colección de esquemas XML integrada de SQL Server.    |
@@ -2888,7 +2889,7 @@ ORDER BY message_id
 |    6503    |    16    |    No    |    No se encuentra el ensamblado '%.*ls' en el catálogo de SQL.    |
 |    6504    |    16    |    No    |    El valor devuelto por %.*ls.%.* ls no puede ser NULL.    |
 |    6505    |    16    |    No    |    No se encontró el tipo '%s' en el ensamblado '%s'.    |
-|    6506    |    16    |    No    |    No se encontró el método '%s' para el tipo '%s' en el ensamblado '%s'      |
+|    6506    |    16    |    No    |    No se encontró el método '%s' para el tipo '%s' en el ensamblado '%s'    |
 |    6507    |    16    |    No    |    No se pudo abrir el ensamblado '%ls' que tiene un formato incorrecto con HRESULT 0x%x.    |
 |    6508    |    16    |    No    |    No se encontró el campo '%s' del tipo '%s' del ensamblado '%s'.    |
 |    6509    |    16    |    No    |    Error al recopilar metadatos del ensamblado '%ls' con HRESULT 0x%x.    |
@@ -2966,15 +2967,15 @@ ORDER BY message_id
 |    6581    |    16    |    No    |    No se encontró el ensamblado "%.*ls" en el directorio "%.* ls".    |
 |    6582    |    16    |    No    |    El ensamblado '%.*s' no es visible para crear objetos SQL. Utilice ALTER ASSEMBLY para cambiar la visibilidad del ensamblado.    |
 |    6583    |    16    |    No    |    El ensamblado '%.*s' no se puede usar para crear objetos SQL porque es un ensamblado de sistema.    |
-|    6584    |    16    |    No    |    La propiedad o campo '%ls' del tipo '%ls' del ensamblado '%ls' no es estático      |
+|    6584    |    16    |    No    |    La propiedad o campo '%ls' del tipo '%ls' del ensamblado '%ls' no es estático    |
 |    6585    |    16    |    No    |    No se pudo suplantar el cliente durante la operación del archivo de ensamblado.    |
 |    6586    |    16    |    No    |    No se pudo instalar el ensamblado '%.*ls' porque la directiva existente impediría que se utilizara.    |
-|    6587    |    16    |    No    |    Una directiva externa redirigió la referencia de ensamblado '%ls' hacia '%ls'      |
+|    6587    |    16    |    No    |    Una directiva externa redirigió la referencia de ensamblado '%ls' hacia '%ls'    |
 |    6588    |    16    |    No    |    No se permiten operaciones de archivos de ensamblado para usuarios de Windows NT activados con SETUSER.    |
 |    6589    |    16    |    No    |    Error de DROP ASSEMBLY porque el ensamblado '%ls' hace referencia a los ensamblados especificados.    |
 |    6590    |    16    |    No    |    Error de DROP ASSEMBLY porque el objeto '%ls' hace referencia a '%ls'.    |
 |    6591    |    16    |    No    |    Error de %s para "%.*ls" porque el primer parámetro del método "%.* ls" debe ser del tipo System.Object.    |
-|    6592    |    16    |    No    |    No se encontró la propiedad o campo '%ls' para el tipo '%ls' del ensamblado '%ls'.     |
+|    6592    |    16    |    No    |    No se encontró la propiedad o campo '%ls' para el tipo '%ls' del ensamblado '%ls'.    |
 |    6593    |    16    |    No    |    La propiedad o el campo '%ls' del tipo '%ls' del ensamblado '%ls' es estático.    |
 |    6594    |    16    |    No    |    No se pudo leer la propiedad '%ls' del tipo '%ls' del ensamblado '%ls' porque no tiene un descriptor de acceso get.    |
 |    6595    |    16    |    No    |    No se pudo asignar a la propiedad '%ls' del tipo '%ls' del ensamblado '%ls' porque es de solo lectura.    |
@@ -3161,7 +3162,7 @@ ORDER BY message_id
 |    6967    |    16    |    No    |    Definición de tipo no válida para el tipo '%s'. Los tipos base y derivado deben tener el mismo valor para 'mixed' a no ser que se deriven por restricción, en cuyo caso siempre se permite 'false' para el tipo derivado.    |
 |    6968    |    16    |    No    |    Definición de tipo no válida para el tipo '%s'. Los tipos complejos no se pueden restringir a tipos simples    |
 |    6969    |    16    |    No    |    La validación de ID/IDREF consumió demasiada memoria. Reduzca el número de atributos ID e IDREF. También puede ser útil reorganizar el archivo para que los elementos con atributos IDREF aparezcan después de los elementos a los que hacen referencia.    |
-|    6970    |    16    |    No    |    Definición de tipo no válida para el tipo '%s'. Ningún tipo debe tener más de un atributo de cualquier tipo derivado de id.      |
+|    6970    |    16    |    No    |    Definición de tipo no válida para el tipo '%s'. Ningún tipo debe tener más de un atributo de cualquier tipo derivado de id.    |
 |    6971    |    16    |    No    |    Definición de tipo no válida para el tipo '%s'. El tipo contiene el atributo '%s', que no está permitido en el tipo base.    |
 |    6972    |    16    |    No    |    Redefinición no válida del atributo '%s' en el tipo '%s'. Debe ser de un tipo que sea una restricción válida del atributo correspondiente en el tipo base.    |
 |    6973    |    16    |    No    |    Redefinición no válida del atributo '%s' en el tipo '%s'. Debe requerirse en el tipo derivado si se requiere en el tipo base.    |
@@ -4474,7 +4475,7 @@ ORDER BY message_id
 |    9736    |    16    |    No    |    Error de transmisión de diálogo: Error: %i. Estado: %i. %.*ls    |
 |    9737    |    16    |    Sí    |    La clave privada del certificado de seguridad enlazado con la entidad de seguridad de base de datos (id. %i) está protegida con contraseña. No se pueden utilizar claves privadas protegidas con contraseña con diálogos seguros.    |
 |    9738    |    16    |    No    |    No se puede crear la tarea para el distribuidor de mensajes de Service Broker. Este mensaje es un síntoma de otro problema que impide que SQL Server cree tareas. Compruebe el registro de errores de SQL Server y el registro de eventos de Windows para ver otros mensajes.    |
-|    9739    |    16    |    No    |    El transmisor de mensajes en el distribuidor de mensajes de Service Broker ha dado error %d veces      |
+|    9739    |    16    |    No    |    El transmisor de mensajes en el distribuidor de mensajes de Service Broker ha dado error %d veces    |
 |    9740    |    16    |    No    |    No se puede iniciar el distribuidor de mensajes de Service Broker. Este error es un síntoma de otro problema. Compruebe el registro de errores de SQL Server y el registro de eventos de Windows para ver otros mensajes y solucionar este problema subyacente.    |
 |    9741    |    10    |    No    |    %S_MSG '%.*ls' se quitó al actualizar porque hacía referencia a un contrato de sistema que se había quitado.    |
 |    9742    |    16    |    No    |    El procedimiento almacenado de activación '%.*ls' no es válido. No se pueden configurar procedimientos temporales para activación.    |
@@ -4636,7 +4637,7 @@ ORDER BY message_id
 
 | Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
-|    10000    |    16    |    No    |    Error desconocido del proveedor.    |
+|    10 000    |    16    |    No    |    Error desconocido del proveedor.    |
 |    [10001](mssqlserver-10001-database-engine-error.md)    |    16    |    No    |    El proveedor informó de un error grave inesperado.    |
 |    10002    |    16    |    No    |    El proveedor no implementó la funcionalidad.    |
 |    [10003](mssqlserver-10003-database-engine-error.md)    |    16    |    No    |    Memoria insuficiente para el proveedor.    |
@@ -4825,7 +4826,7 @@ ORDER BY message_id
 |    10706    |    15    |    No    |    No se admiten subconsultas en la cláusula OUTPUT.    |
 |    10707    |    15    |    No    |    Hay demasiadas expresiones especificadas en la cláusula GROUP BY. El número máximo es %d cuando se proporcionan conjuntos de agrupaciones.    |
 |    10708    |    15    |    No    |    No se permiten las agrupaciones de construcciones CUBE() y ROLLUP() en el modo de compatibilidad actual. Solo se permiten en modo 100 o superior.    |
-|    10709    |    15    |    No    |    No se permite DEFAULT en el lado derecho de "%.*ls"     |
+|    10709    |    15    |    No    |    No se permite DEFAULT en el lado derecho de "%.*ls"    |
 |    10710    |    15    |    No    |    El número de columnas para cada fila de un constructor con valores de tabla debe ser el mismo.    |
 |    10711    |    15    |    No    |    No se permite una acción de tipo '%S_MSG' en la cláusula 'WHEN NOT MATCHED' de una instrucción MERGE.    |
 |    10712    |    15    |    No    |    No se permite una acción de tipo 'INSERT' en la cláusula '%S_MSG' de una instrucción MERGE.    |
@@ -4972,7 +4973,7 @@ ORDER BY message_id
 |    11231    |    16    |    No    |    No se pudo entregar este mensaje porque el extremo de conversación no está protegido, mientras que el mensaje lo está.    |
 |    11232    |    16    |    No    |    No se pudo entregar este mensaje porque el extremo de conversación está protegido, mientras que el mensaje no lo está.    |
 |    11233    |    16    |    No    |    Se quitó este mensaje porque la clave de sesión del extremo de conversación no coincide con la del mensaje.    |
-|    11234    |    16    |    No    |    No se pudo entregar este mensaje porque se detectó un error interno al procesarlo;  Código de error %d, estado %d: %.*ls.    |
+|    11234    |    16    |    No    |    No se pudo entregar este mensaje porque se detectó un error interno al procesarlo; Código de error %d, estado %d: %.*ls.    |
 |    11235    |    16    |    No    |    Se recibió un mensaje mal formado. No se definió la clase de mensaje binario (%d:%d). Esto puede indicar que existen problemas de red o que hay otra aplicación conectada al extremo de Service Broker.    |
 |    11236    |    16    |    No    |    Se recibió un mensaje dañado. Se esperaba el tamaño de encabezado binario %d y se recibió %d.    |
 |    11237    |    16    |    No    |    No se pudo procesar un mensaje %S_MSG porque no había memoria suficiente. Se quitó el mensaje.    |
@@ -6000,7 +6001,7 @@ ORDER BY message_id
 |    15079    |    10    |    No    |    Consultas procesadas: %d    |
 |    15080    |    16    |    No    |    No se puede utilizar el parámetro %s para un inicio de sesión de Windows.    |
 |    15081    |    16    |    No    |    No se puede cambiar la pertenencia al rol public.    |
-|    15083    |    16    |    No    |    El tipo de datos físico '%s' no admite la intercalación      |
+|    15083    |    16    |    No    |    El tipo de datos físico '%s' no admite la intercalación    |
 |    15084    |    16    |    No    |    El tipo de datos de columna o de usuario debe estar en la base de datos actual.    |
 |    15085    |    16    |    No    |    Uso: sp_addtype name, "data type" [,"NULL" | "NOT NULL"]    |
 |    15096    |    16    |    No    |    No se encuentra el objeto '%ls' o bien el usuario no tiene el permiso necesario o el objeto no es válido para agregar propiedades extendidas.    |
@@ -6067,7 +6068,7 @@ ORDER BY message_id
 |    15164    |    16    |    No    |    '%.*ls' no es un inicio de sesión válido o no se puede emitir el token de suplantación.    |
 |    15165    |    16    |    No    |    No se encontró el objeto '%ls' o el usuario no tiene permiso.    |
 |    15166    |    10    |    No    |    Advertencia: los tipos de usuario creados a través de sp_addtype están contenidos en el esquema dbo. Si se especifica el parámetro \@owner, se omitirá.    |
-|    15167    |    16    |    No    |    No se puede generar el GUID.      |
+|    15167    |    16    |    No    |    No se puede generar el GUID.    |
 |    15168    |    16    |    No    |    No se puede cambiar el nombre de la vista '%s' ni de sus columnas e índices porque es una vista generada por el sistema que se creó con fines de optimización.    |
 |    15169    |    16    |    No    |    La opción de servidor "%ls" no está disponible en esta edición de SQL Server.    |
 |    15170    |    16    |    No    |    Este inicio de sesión es propietario de %ld trabajos. Debe eliminar o volver a asignar estos trabajos para poder quitar el inicio de sesión.    |
@@ -6259,7 +6260,7 @@ ORDER BY message_id
 |    15380    |    16    |    Sí    |    No se pudo configurar la instancia de usuario al iniciar. Error al configurar las rutas de la base de datos del sistema en MASTER DB.    |
 |    15381    |    16    |    Sí    |    No se pudo generar una instancia de usuario de SQL Server debido a un error al actualizar el descriptor de seguridad en el proceso de la instancia de usuario.    |
 |    15382    |    16    |    Sí    |    No se pudo generar una instancia de usuario de SQL Server debido a un error al recuperar la ruta de datos de la aplicación local del usuario. Asegúrese de que el usuario tiene un perfil de usuario local en el equipo. La conexión se cerrará.%.*ls    |
-|    15383    |    16    |    Sí    |    Se ha deshabilitado la generación de instancias de usuario en SQL Server. Utilice el valor 'user instances enabled' en sp_configure para generar instancias de usuario.%.*ls      |
+|    15383    |    16    |    Sí    |    Se ha deshabilitado la generación de instancias de usuario en SQL Server. Utilice el valor 'user instances enabled' en sp_configure para generar instancias de usuario.%.*ls    |
 |    15384    |    16    |    Sí    |    No se pudo configurar la instancia de usuario al iniciar. Error al actualizar el id. de administrador de recursos.    |
 |    15385    |    16    |    No    |    No se ha definido ninguna entidad de seguridad de base de datos para el SID '%.*ls'.    |
 |    15386    |    16    |    No    |    Otro lote de la sesión está cambiando el contexto de seguridad; el nuevo lote no puede iniciarse.    |
@@ -6270,7 +6271,7 @@ ORDER BY message_id
 |    15391    |    11    |    No    |    sp_indexoption no es compatible con el índice XML y la tabla incluye un índice XML. Utilice ALTER INDEX en su lugar para establecer la opción para todos los índices.    |
 |    15392    |    16    |    No    |    Esta edición de SQL Server no admite la opción especificada '%s', que no se puede cambiar con sp_configure.    |
 |    15393    |    16    |    No    |    Error durante el descifrado de la contraseña para el inicio de sesión vinculado '%.*ls', que se cifró con la clave maestra antigua. Puede utilizarse la opción FORCE para omitir el error y continuar con la operación, pero se perderán los datos cifrados con la clave maestra antigua.    |
-|    15394    |    16    |    No    |    El sistema operativo no admite la intercalación '%s'      |
+|    15394    |    16    |    No    |    El sistema operativo no admite la intercalación '%s'    |
 |    15395    |    11    |    No    |    No se encuentra el nombre anterior calificado del tipo de elemento '%s'.    |
 |    15396    |    16    |    No    |    Ya existe una clave asimétrica con el nombre '%s' o ya se ha agregado a la base de datos.    |
 |    15397    |    16    |    No    |    %S_MSG no está protegido mediante contraseña. No se puede utilizar una contraseña de descifrado en esta operación.    |
@@ -6611,14 +6612,14 @@ ORDER BY message_id
 |    17188    |    16    |    Sí    |    SQL Server no puede aceptar nuevas conexiones porque se está cerrando. Se cerró la conexión.%.*ls    |
 |    17189    |    16    |    Sí    |    Error de SQL Server, con código 0x%x, al generar un subproceso para procesar un nuevo inicio de sesión o una nueva conexión. Consulte el registro de errores de SQL Server y los registros de eventos de Windows para obtener información sobre posibles problemas relacionados..%.*ls    |
 |    17190    |    16    |    Sí    |    Error de inicialización del certificado FallBack con el código de error: %d.    |
-|    17191    |    16    |    Sí    |    No se puede aceptar una nueva conexión porque se ha terminado la sesión. Este error ocurre cuando se intenta ejecutar un nuevo lote en una sesión que se está cerrando, o bien cuando se detecta un error grave al conectarse. Compruebe en el registro de errores si se terminó esta sesión con un comando KILL o a causa de errores graves.%.*ls     |
+|    17191    |    16    |    Sí    |    No se puede aceptar una nueva conexión porque se ha terminado la sesión. Este error ocurre cuando se intenta ejecutar un nuevo lote en una sesión que se está cerrando, o bien cuando se detecta un error grave al conectarse. Compruebe en el registro de errores si se terminó esta sesión con un comando KILL o a causa de errores graves.%.*ls    |
 |    17192    |    10    |    Sí    |    No se inició la conexión de administración dedicada a causa del error 0x%lx, código de estado: 0x%lx. Este error suele indicar un error de socket, como un puerto que ya está en uso.    |
 |    17193    |    10    |    Sí    |    La compatibilidad con SOAP nativa de SQL Server ya está preparada para recibir conexiones de clientes. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.    |
 |    [17194](mssqlserver-17194-database-engine-error.md)    |    16    |    Sí    |    El servidor no pudo cargar la biblioteca de proveedores SSL necesaria para el inicio de sesión; se cerró la conexión. SSL se utiliza para cifrar la secuencia de inicio de sesión o todas las comunicaciones, según el modo en que el administrador haya configurado el servidor. Consulte los Libros en pantalla para información sobre este mensaje de error: %d %.*ls %.* ls    |
 |    17195    |    16    |    Sí    |    El servidor no puede completar la secuencia de inicialización porque las bibliotecas de red disponibles no son compatibles con el nivel de cifrado requerido. El proceso del servidor se ha detenido. Antes de reiniciar el servidor, compruebe que se hayan instalado los certificados SSL. Consulte el tema de los Libros en pantalla acerca de la configuración de protocolos de cliente y bibliotecas de red.    |
 |    17196    |    10    |    Sí    |    Preparándose para un posible aumento a %d GB con Agregar memoria sin interrupción.    |
-|    17197    |    16    |    Sí    |    Error de inicio de sesión debido a que se superó el tiempo de espera; se cerró la conexión. Este error puede indicar una sobrecarga del servidor. Reduzca la carga e intente iniciar la sesión de nuevo.%.*ls     |
-|    17198    |    16    |    Sí    |    Error de conexión debido a que no se pudo encontrar el extremo. Esto puede ocurrir si se quita un extremo mientras se está intentando realizar una conexión. Intente conectarse a otro extremo del servidor.%.*ls     |
+|    17197    |    16    |    Sí    |    Error de inicio de sesión debido a que se superó el tiempo de espera; se cerró la conexión. Este error puede indicar una sobrecarga del servidor. Reduzca la carga e intente iniciar la sesión de nuevo.%.*ls    |
+|    17198    |    16    |    Sí    |    Error de conexión debido a que no se pudo encontrar el extremo. Esto puede ocurrir si se quita un extremo mientras se está intentando realizar una conexión. Intente conectarse a otro extremo del servidor.%.*ls    |
 |    17199    |    10    |    Sí    |    No se inició la compatibilidad con la conexión de administrador dedicada porque está deshabilitada en esta edición de SQL Server. Si desea utilizar una conexión de administrador dedicada, reinicie el SQL Server mediante una marca de seguimiento %d. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.    |
 |    17200    |    16    |    Sí    |    Error al cambiar la configuración de acceso remoto para la conexión de administrador dedicada: 0x%lx, código de estado 0x%lx.    |
 |    17201    |    10    |    Sí    |    Se estableció la compatibilidad con la conexión de administración dedicada para escuchar localmente en el puerto %d.    |
@@ -6630,7 +6631,7 @@ ORDER BY message_id
 |    17253    |    10    |    Sí    |    SQL Server no puede usar la opción NO_BUFFERING durante la E/S en este archivo porque el tamaño de sector para el archivo '%s, %d, no es válido. Mueva el archivo a un disco con un tamaño de sector válido.    |
 |    17255    |    10    |    Sí    |    El archivo TempDB '%.*ls' reside en una unidad extraíble y, por lo tanto, no se adjuntará durante el inicio.    |
 |    17256    |    10    |    Sí    |    El archivo TempDB secundario '%.*ls' no se adjuntará durante el inicio de TempDB. No se pudo comprobar la unidad. Error: '%ld'.    |
-|    17257    |    10    |    Sí    |    Error del sistema mientras se intentaba inicializar la información de disco. Error '%ld'      |
+|    17257    |    10    |    Sí    |    Error del sistema mientras se intentaba inicializar la información de disco. Error '%ld'    |
 |    17258    |    10    |    Sí    |    No hay espacio disponible en la base de datos TempDB    |
 |    [17300](mssqlserver-17300-database-engine-error.md)    |    16    |    Sí    |    SQL Server no pudo ejecutar una nueva tarea de sistema porque la memoria no es suficiente o porque el número de sesiones configuradas supera el máximo permitido en el servidor. Compruebe que el servidor tiene la memoria necesaria. Utilice sp_configure con la opción 'user connections' para comprobar el número máximo de conexiones de usuario permitido. Utilice sys.dm_exec_sessions para comprobar el número de sesiones actual, incluidos los procesos de usuario.    |
 |    17303    |    16    |    Sí    |    Se ha determinado que la sesión con el SPID %d no era válida durante la terminación, posiblemente porque la estructura de la sesión está dañada. Póngase en contacto con los Servicios de soporte técnico de Microsoft.    |
@@ -6669,7 +6670,7 @@ ORDER BY message_id
 |    17753    |    16    |    No    |    %.*ls solo puede ejecutarse en la base de datos maestra.    |
 |    17802    |    20    |    Sí    |    La versión del flujo TDS 0x%x de la biblioteca cliente utilizada para abrir la conexión no es compatible o es desconocida. Se cerró la conexión. %.*ls    |
 |    [17803](mssqlserver-17803-database-engine-error.md)    |    20    |    Sí    |    Error de asignación de memoria durante el establecimiento de la conexión. Reduzca la carga de memoria no esencial o aumente la memoria del sistema. Se cerró la conexión.%.*ls    |
-|    17805    |    20    |    Sí    |    El valor del campo usertype del registro de inicios de sesión no es válido. El valor 0x01, que utilizaban los clientes de Sybase, ya no es compatible con SQL Server. Póngase en contacto con el proveedor de la biblioteca cliente que se utiliza para realizar la conexión a SQL Server.%.*ls     |
+|    17805    |    20    |    Sí    |    El valor del campo usertype del registro de inicios de sesión no es válido. El valor 0x01, que utilizaban los clientes de Sybase, ya no es compatible con SQL Server. Póngase en contacto con el proveedor de la biblioteca cliente que se utiliza para realizar la conexión a SQL Server.%.*ls    |
 |    17806    |    20    |    Sí    |    Error del protocolo de enlace SSPI, con el código 0x%x, al establecer una conexión con seguridad integrada; se cerró la conexión.%.*ls    |
 |    17807    |    20    |    Sí    |    SQL Server no reconoce el evento '%d recibido del cliente. Póngase en contacto con el proveedor de la biblioteca cliente que se utiliza para realizar la conexión a SQL Server a fin de que corrija el número de evento de flujo TDS enviado.    |
 |    [17809](mssqlserver-17809-database-engine-error.md)    |    20    |    Sí    |    No se pudo realizar la conexión porque ya se ha alcanzado el número máximo de conexiones de usuario '%d'. El administrador del sistema puede aumentar el número máximo con sp_configure. Se cerró la conexión.%.*ls    |
@@ -6679,12 +6680,12 @@ ORDER BY message_id
 |    17825    |    18    |    Sí    |    No se pudo cerrar el extremo de red o la biblioteca de red. Esto se debe a un error interno en una biblioteca de red. Revise el registro de errores: la entrada que aparece después de este error incluye el código de error de la biblioteca de red.    |
 |    17826    |    18    |    Sí    |    No se pudo iniciar la biblioteca de red debido a un error interno. Para determinar la causa, revise los errores inmediatamente anteriores a éste en el registro de errores.    |
 |    17827    |    20    |    Sí    |    Error al intentar cifrar una contraseña. Se cerró la conexión.%.*ls    |
-|    17828    |    20    |    Sí    |    La estructura del paquete de inicio de sesión previo utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls     |
+|    17828    |    20    |    Sí    |    La estructura del paquete de inicio de sesión previo utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls    |
 |    17829    |    20    |    Sí    |    Error de red al establecer una conexión; se cerró la conexión..%.*ls    |
 |    17830    |    20    |    Sí    |    Código de error de red 0x%x al establecer una conexión; se cerró la conexión. Esto puede ser debido a que expiró el tiempo de espera de inicio de sesión del cliente o el servidor. Tiempo transcurrido durante el inicio de sesión: total %d ms, puestos en cola %d ms, escrituras en red %d ms, lecturas en red %d ms, establecimiento de SSL %d ms, negociación de SSPI %d ms, validación del inicio de sesión %d ms, incluido el procesamiento de inicio de sesión definido por el usuario %d ms.%.*ls    |
-|    [17832](mssqlserver-17832-database-engine-error.md)    |    20    |    Sí    |    La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls     |
+|    [17832](mssqlserver-17832-database-engine-error.md)    |    20    |    Sí    |    La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls    |
 |    17835    |    20    |    Sí    |    El cifrado es necesario para realizar la conexión al servidor, pero la biblioteca cliente no lo admite; se cerró la conexión. Actualice la biblioteca cliente.%.*ls    |
-|    17836    |    20    |    Sí    |    La longitud especificada en la carga del paquete de red no coincide con el número de bytes leídos; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls     |
+|    17836    |    20    |    Sí    |    La longitud especificada en la carga del paquete de red no coincide con el número de bytes leídos; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls    |
 |    17881    |    16    |    Sí    |    '%ls' es una API de Servicios abiertos de datos no admitida.    |
 |    [17883](mssqlserver-17883-database-engine-error.md)    |    10    |    Sí    |    Parece que el proceso %ld:%ld:%ld (0x%lx) Trabajo 0x%p no rinde en el programador %ld. Thread creation time: %I64d. CPU usada por el subproceso (aprox.): kernel %I64d ms, usuario %I64d ms. Uso del proceso %d%%. Sistema inactivo %d%%. Intervalo: %I64d ms.    |
 |    [17884](mssqlserver-17884-database-engine-error.md)    |    10    |    Sí    |    Un subproceso de trabajo no ha recogido las nuevas consultas asignadas al proceso en el nodo %d durante los últimos %d segundos. Puede que contribuya a ello la existencia de consultas de bloqueo o consultas que se ejecutan durante mucho tiempo, lo cual puede degradar el tiempo de respuesta del cliente. Utilice la opción de configuración "max worker threads" para aumentar el número de subprocesos permitidos u optimice las consultas que se estén ejecutando. Uso del proceso de SQL: %d%%. Sistema inactivo: %d%%.    |
@@ -6692,7 +6693,7 @@ ORDER BY message_id
 |    17886    |    20    |    Sí    |    El servidor quitará la conexión porque el controlador cliente envió varias solicitudes mientras el modo de la sesión era de usuario único. Este error se produce cuando un cliente envía una solicitud para restablecer la conexión mientras aún hay lotes ejecutándose en la sesión, o bien mientras la sesión está restableciendo una conexión. Póngase en contacto con el proveedor del controlador cliente.    |
 |    [17887](mssqlserver-17887-database-engine-error.md)    |    10    |    Sí    |    Parece que la escucha de finalización de E/S (0x%lx) Trabajo 0x%p no rinde en el nodo %ld. Uso de CPU (aprox.): kernel %I64d ms, usuario %I64d ms, Intervalo: %I64d.    |
 |    17888    |    10    |    Sí    |    Parece que hay interbloqueo en todos los programadores del nodo %d a causa de un gran número de subprocesos de trabajo que esperan en %ls. Uso del proceso %d%%.    |
-|    17889    |    16    |    Sí    |    Se rechazó una nueva conexión porque se alcanzó el número máximo de conexiones en la sesión con id. %d. Cierre la conexión existente en esta sesión y vuelva a intentarlo.%.*ls     |
+|    17889    |    16    |    Sí    |    Se rechazó una nueva conexión porque se alcanzó el número máximo de conexiones en la sesión con id. %d. Cierre la conexión existente en esta sesión y vuelva a intentarlo.%.*ls    |
 |    17890    |    10    |    Sí    |    Se ha transferido al archivo de paginación una parte significativa de la memoria de proceso de SQL Server. Esto puede dar lugar a una degradación del rendimiento. Duración: %d segundos. Espacio de trabajo (KB): %I64d, confirmado (KB): %I64d, uso de memoria: %d%%.    |
 |    17891    |    10    |    Sí    |    Parece que el monitor de recursos (0x%lx) Trabajo 0x%x no rinde en el nodo %ld. Memoria liberada: %I64d KB. Uso de CPU (aprox.): kernel %I64d ms, usuario %I64d ms, Intervalo: %I64d.    |
 |    17892    |    20    |    Sí    |    Error del inicio de sesión "%.*ls" debido a la ejecución del desencadenador.%.* ls    |
@@ -6804,8 +6805,8 @@ ORDER BY message_id
 |    18454    |    10    |    Sí    |    Inicio de sesión correcto del usuario "%.*ls". Conexión realizada mediante autenticación de SQL Server.%.* ls    |
 |    18455    |    10    |    Sí    |    Inicio de sesión correcto del usuario "%.*ls".%.* ls.    |
 |    [18456](mssqlserver-18456-database-engine-error.md)    |    14    |    Sí    |    Error de inicio de sesión del usuario "%.*ls".%.* ls%.*ls.    |
-|    18458    |    14    |    Sí    |    Error de inicio de sesión. El número de usuarios simultáneos ya es igual a las %d licencias registradas para este servidor. Para aumentar el número máximo de usuarios simultáneos, obtenga licencias adicionales y regístrelas mediante el elemento Licencias del Panel de control.%.*ls     |
-|    18459    |    14    |    Sí    |    Error de inicio de sesión. Ya se ha alcanzado el límite de licencias de estaciones de trabajo para el acceso a SQL Server.%.*ls      |
+|    18458    |    14    |    Sí    |    Error de inicio de sesión. El número de usuarios simultáneos ya es igual a las %d licencias registradas para este servidor. Para aumentar el número máximo de usuarios simultáneos, obtenga licencias adicionales y regístrelas mediante el elemento Licencias del Panel de control.%.*ls    |
+|    18459    |    14    |    Sí    |    Error de inicio de sesión. Ya se ha alcanzado el límite de licencias de estaciones de trabajo para el acceso a SQL Server.%.*ls    |
 |    18460    |    14    |    Sí    |    Error de inicio de sesión. Ya se ha alcanzado el límite de licencias para usuarios simultáneos, %d, para este servidor '%ls'. Obtenga e instale licencias adicionales o realice una actualización a la versión completa.%.*ls    |
 |    18461    |    14    |    Sí    |    Error de inicio de sesión del usuario "%.*ls". Motivo: el servidor está en modo de usuario único. En este momento solo puede conectarse un administrador.%.* ls    |
 |    18462    |    14    |    No    |    Error de inicio de sesión del usuario "%.*ls". Error de cambio de contraseña. La contraseña del usuario es demasiado reciente para cambiarla. %.* ls    |
@@ -8194,14 +8195,14 @@ ORDER BY message_id
 |    22560    |    16    |    No    |    La replicación de mezcla no admite filtros que hacen referencia a funciones dinámicas que usan uno o más parámetros. Compruebe la función "%s".    |
 |    22561    |    16    |    No    |    No se pudo completar la operación solicitada porque el nivel de compatibilidad de la publicación es inferior a 90. Use sp_changemergepublication para establecer el valor de publication_compatibility_level de la publicación "%s" en 90RTM.    |
 |    22562    |    16    |    No    |    No se puede cambiar el nivel de compatibilidad de una publicación a un valor inferior al existente.    |
-|    22563    |    16    |    No    |    contiene uno o más artículos que no cargan cambios     |
+|    22563    |    16    |    No    |    contiene uno o más artículos que no cargan cambios    |
 |    22564    |    16    |    No    |    utiliza replicación ddl    |
 |    22565    |    16    |    No    |    utiliza una unidad de período de retención distinta de day    |
 |    22566    |    16    |    No    |    utiliza registros lógicos    |
 |    22567    |    16    |    No    |    contiene uno o más artículos que usan filtrado basado en suscripciones o en particiones    |
 |    22568    |    16    |    No    |    contiene uno o más artículos sin compensación por errores    |
-|    22569    |    16    |    No    |    contiene uno o más artículos solo de esquema     |
-|    22570    |    16    |    No    |    contiene uno o más artículos que usan la administración automática de intervalos de identidad     |
+|    22569    |    16    |    No    |    contiene uno o más artículos solo de esquema    |
+|    22570    |    16    |    No    |    contiene uno o más artículos que usan la administración automática de intervalos de identidad    |
 |    22571    |    16    |    No    |    contiene uno o más artículos que usan tipos de datos nuevos en SQL Server 2000    |
 |    22572    |    16    |    No    |    contiene uno o más artículos con una columna de marca de tiempo    |
 |    22573    |    16    |    No    |    utiliza comprensión de instantáneas con snapshot_in_defaultfolder establecida en false    |
@@ -8799,7 +8800,7 @@ ORDER BY message_id
 |    30046    |    16    |    No    |    SQL Server encontró el error 0x%x mientras se comunicaba con el proceso de host de demonio de filtro (FDHost) de texto completo. Asegúrese de que el proceso FDHost se esté ejecutando. Para reiniciar el proceso FDHost, ejecute el comando sp_fulltext_service 'restart_all_fdhosts' o reinicie la instancia de SQL Server.    |
 |    30047    |    16    |    No    |    El usuario no tiene permiso para %.*ls la lista de palabras irrelevantes "%.* ls".    |
 |    30048    |    10    |    No    |    Informativo: se omitirá la regla duplicada "%ls" del diccionario de sinónimos durante la carga del archivo de diccionario de sinónimos para el LCID %d. Se encontró una frase del diccionario de sinónimos duplicada en la sección <sub> de una regla de expansión o en la sección <pat> de una regla de reemplazo. Esto da lugar a ambigüedad y, por tanto, se omitirá la frase.    |
-|    30049    |    17    |    No    |    Error interno del diccionario de sinónimos de texto completo (HRESULT = '0x%08x')      |
+|    30049    |    17    |    No    |    Error interno del diccionario de sinónimos de texto completo (HRESULT = '0x%08x')    |
 |    30050    |    16    |    No    |    No se encontró el archivo de diccionario de sinónimos para el LCID '%d' ni el diccionario de sinónimos global.    |
 |    30051    |    16    |    No    |    No se permiten frases con más de 512 caracteres Unicode en un archivo de diccionario de sinónimos. Frase: '%ls'.    |
 |    30052    |    16    |    No    |    La consulta de texto completo tiene una cláusula NEAR muy compleja en el predicado CONTAINS o la función CONTAINSTABLE. Para asegurarse de que una cláusula NEAR se ejecute correctamente, use solo seis términos o menos. Modifique la consulta para simplificar la condición quitando prefijos o términos repetidos.    |

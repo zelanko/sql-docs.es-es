@@ -1,5 +1,6 @@
 ---
 title: Actualización o revisión de bases de datos replicadas | Microsoft Docs
+description: SQL Server admite la actualización de bases de datos replicadas desde versiones anteriores de SQL Server sin detener la actividad en otros nodos.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008456"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900220"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Actualización o revisión de bases de datos replicadas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] admite la actualización de bases de datos replicadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a la versión admitida en una topología:  
   
@@ -36,7 +37,7 @@ ms.locfileid: "72008456"
     - En un suscriptor a una publicación de combinación todas las versiones pueden ser iguales o inferiores a la versión del publicador que se admite según el ciclo de soporte del ciclo de vida de las versiones.  
  
 La ruta de actualización a SQL Server es diferente según el modelo de implementación. SQL Server ofrece dos rutas de actualización en general:
-- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, trabajos, etc. 
+- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, los trabajos, etc. 
 - Actualización local: se permite que los medios de instalación de SQL Server actualicen la instalación de SQL Server existente mediante el reemplazo de los bits de SQL Server y la actualización de los objetos de base de datos. Para los entornos que ejecutan grupos de disponibilidad Always On o instancias de clúster de conmutación por error, una actualización local se combina con una [actualización gradual](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar el tiempo de inactividad. 
 
 Un enfoque común que se ha adoptado para las actualizaciones en paralelo de las topologías de replicación es mover los pares de publicador y suscriptor por partes al nuevo entorno en paralelo, en lugar de mover toda la topología. Este enfoque por fases ayuda a controlar el tiempo de inactividad y a minimizar, hasta cierto punto, el impacto para la empresa que depende de la replicación.  

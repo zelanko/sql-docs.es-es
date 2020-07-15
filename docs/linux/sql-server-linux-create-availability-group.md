@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077444"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896552"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creación y configuración de un grupo de disponibilidad para SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este tutorial se habla de cómo crear y configurar un grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux. A diferencia de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] y versiones anteriores en Windows, puede habilitar grupos de disponibilidad al crear primero el clúster de Pacemaker subyacente o sin hacerlo. La integración con el clúster, si fuera necesaria, no se realiza hasta más tarde.
 
@@ -582,7 +582,9 @@ Un clúster de alta disponibilidad de Pacemaker subyacente a [!INCLUDE[ssnoversi
 
 Después de crear un grupo de disponibilidad en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], se deben crear los recursos correspondientes en Pacemaker si se ha especificado un tipo de clúster Externo. Hay dos recursos asociados a un grupo de disponibilidad: el propio grupo de disponibilidad y una dirección IP. La configuración del recurso de dirección IP es opcional si no se usa la funcionalidad del cliente de escucha, pero se recomienda.
 
-El recurso de grupo de disponibilidad que se crea es un tipo especial de recurso denominado clon. El recurso de grupo de disponibilidad básicamente tiene copias en cada nodo y hay un recurso que controla denominado maestro. El maestro está asociado al servidor que hospeda la réplica principal. Las réplicas secundarias (normales o de solo configuración) se consideran esclavas y se pueden promover a maestras en una conmutación por error.
+El recurso de grupo de disponibilidad que se crea es un tipo especial de recurso denominado clon. El recurso de grupo de disponibilidad básicamente tiene copias en cada nodo y hay un recurso que controla denominado maestro. El maestro está asociado al servidor que hospeda la réplica principal. El resto de recursos hospedan réplicas secundarias (normales o de solo configuración) y se pueden promover a maestras en una conmutación por error.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Cree el recurso de grupo de disponibilidad con la siguiente sintaxis:
 

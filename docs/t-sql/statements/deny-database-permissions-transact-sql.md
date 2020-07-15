@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d99f732d76bda9f44c20701818e61a2b2af98e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010743"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY (permisos de base de datos de Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Deniega permisos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* Especifica un permiso que puede denegarse en una base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.
 
-ALL Esta opción no deniega todos los permisos posibles. Denegando ALL está denegando los siguientes permisos: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, y CREATE VIEW.
+ALL Esta opción no deniega todos los permisos posibles. Denegar ALL es equivalente a denegar los permisos siguientes: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE y CREATE VIEW.
 
 PRIVILEGES Incluido por compatibilidad con ISO. No cambia el comportamiento de ALL.
 
 CASCADE Indica que el permiso también se denegará a las entidades de seguridad para las que la entidad de seguridad especificada lo concedió.
 
-AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.
+AS \<database_principal> Especifica una entidad de seguridad desde la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.
 
 *Database_user* Especifica un usuario de base de datos.
 

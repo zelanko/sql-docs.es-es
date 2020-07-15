@@ -1,5 +1,6 @@
 ---
 title: 'Actualización: Asistente para instalación (configuración)'
+description: El Asistente para instalación de SQL Server proporciona un único árbol de características para la actualización local de componentes de SQL Server a la versión más reciente de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258805"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900207"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Actualizar SQL Server con el Asistente para instalación (programa de instalación)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 El Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la actualización local de componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -41,7 +42,7 @@ El Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 > * [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Actualización de PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 Debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, debe usar una cuenta de dominio que tenga permisos de lectura y ejecución para el recurso compartido remoto y que sea de un administrador local.  
   
 > [!WARNING]  
@@ -97,7 +98,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
     > [!NOTE]  
-    >  Si ha optado por actualizar las características compartidas seleccionando **\<Actualizar solo características compartidas>** en la página **Seleccionar instancia**, todas las características compartidas estarán ya seleccionadas en la página Selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
+    >  Si optó por actualizar las características compartidas seleccionando **\<Upgrade shared features only>** en la página **Seleccionar instancia**, todas las características compartidas estarán ya seleccionadas en la página Selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
   
 12. En la página Configuración de instancia, especifique el identificador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

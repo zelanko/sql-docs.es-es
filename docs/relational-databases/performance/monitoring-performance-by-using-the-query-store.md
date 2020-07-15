@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816489"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006214"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece datos detallados sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente las diferencias de rendimiento provocadas por cambios en los planes de consulta. El Almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución y las conserva para su revisión. Además, separa los datos por ventanas de tiempo, lo que permite ver patrones de uso de la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con la opción [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -153,29 +153,11 @@ Estos son algunos ejemplos de cómo se puede obtener más información sobre la 
 
 ## <a name="configuration-options"></a><a name="Options"></a> Opciones de configuración
 
-Tiene disponibles las siguientes opciones para configurar los parámetros del Almacén de consultas.
-
-*OPERATION_MODE* Puede ser **READ_WRITE** (valor predeterminado) o READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* Configure el argumento `STALE_QUERY_THRESHOLD_DAYS` para especificar el número de días en que se conservarán los datos en el almacén de consultas. El valor predeterminado es 30. En la edición [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, el valor predeterminado es **7** días.
-
-*DATA_FLUSH_INTERVAL_SECONDS* Determina la frecuencia con la que los datos escritos en el Almacén de consultas se conservan en el disco. Para optimizar el rendimiento, los datos recopilados por el almacén de consultas se escriben de manera asincrónica en el disco. La frecuencia con la que se produce esta transferencia asincrónica se configura mediante `DATA_FLUSH_INTERVAL_SECONDS`. El valor predeterminado es **900** (15 minutos).
-
-*MAX_STORAGE_SIZE_MB* Configura el tamaño máximo del Almacén de consultas. Si los datos del Almacén de consultas alcanzan el límite de `MAX_STORAGE_SIZE_MB`, el Almacén de consultas cambia automáticamente el estado de lectura-escritura a solo lectura y deja de recopilar datos nuevos. El valor predeterminado es de **100 MB** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el valor predeterminado es **1 GB**. En la edición [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium, el valor predeterminado es **1 GB** y en la edición [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, el valor predeterminado es **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES* Determina el intervalo de tiempo en el que se agregan los datos de estadísticas de ejecución en tiempo de ejecución al Almacén de consultas. Para optimizar el uso del espacio, se agregan las estadísticas de ejecución en tiempo de ejecución en el almacén de estadísticas de tiempo de ejecución en una ventana de tiempo fijo. Este período fijo de tiempo se configura mediante `INTERVAL_LENGTH_MINUTES`. El valor predeterminado es **60**.
-
-*SIZE_BASED_CLEANUP_MODE* Controla si el proceso de limpieza se activará de forma automática cuando la cantidad total de datos se acerque al tamaño máximo. Puede ser **AUTO** (valor predeterminado) u OFF.
-
-*QUERY_CAPTURE_MODE* Designa si el Almacén de consultas captura todas las consultas o las pertinentes en función del consumo de recursos y el número de ejecuciones, o bien si deja de agregar consultas nuevas y solo realiza el seguimiento de las actuales. Puede ser **ALL** (se capturan todas las consultas), AUTO (se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante), CUSTOM (directiva de captura definida por el usuario) o NONE (se detiene la captura de nuevas consultas). El valor predeterminado es **ALL** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el valor predeterminado es **AUTO**. El valor predeterminado para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] es **AUTO**.
-
-*MAX_PLANS_PER_QUERY* Entero que representa el número máximo de planes que se mantienen para cada consulta. El valor predeterminado es **200**.
-
-*WAIT_STATS_CAPTURE_MODE* Controla si el Almacén de consultas captura información de estadísticas de espera. Puede ser OFF u **ON** (valor predeterminado).
+Para consultar las opciones disponibles a fin de configurar los parámetros del Almacén de consultas, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Consulte la vista **sys.database_query_store_options** para determinar las opciones actuales del Almacén de consultas. Para obtener más información sobre los valores, vea [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-Para obtener más información sobre el establecimiento de opciones mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , vea [Administración de opciones](#OptionMgmt).
+Para obtener ejemplos sobre cómo establecer opciones de configuración mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Administración de opciones](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Vistas, funciones y procedimientos relacionados
 

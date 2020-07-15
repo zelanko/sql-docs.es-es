@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f72290faba54a8130c42b0736945c6d1a2f39448
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631883"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007632"
 ---
 # <a name="set-operators---union-transact-sql"></a>Operadores de conjuntos: UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concatena los resultados de dos consultas en un único conjunto de resultados. Puede controlar si en el conjunto de resultados se incluyen filas duplicadas:
 
@@ -59,7 +59,7 @@ A continuación, se muestran las reglas básicas para combinar los conjuntos de 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<especificación_de_consulta> | ( \<expresión_de_consulta> ) es una especificación o expresión de consulta que devuelve datos que se van a combinar con los de otra especificación o expresión de consulta. No es preciso que las definiciones de las columnas que forman parte de una operación UNION sean iguales, pero deben ser compatibles en una conversión implícita. Cuando los tipos de datos difieren, el tipo de datos resultante se determina según las reglas de [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md). Cuando los tipos son los mismos pero varían en cuanto a precisión, escala o longitud, el resultado se basa en las mismas reglas para combinar expresiones. Para obtener más información, vea [Precisión, escala y longitud (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Es una especificación de consulta o una expresión de consulta que devuelve datos que se combinarán con los datos de otra especificación de consulta o expresión de consulta. No es preciso que las definiciones de las columnas que forman parte de una operación UNION sean iguales, pero deben ser compatibles en una conversión implícita. Cuando los tipos de datos difieren, el tipo de datos resultante se determina según las reglas de [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md). Cuando los tipos son los mismos pero varían en cuanto a precisión, escala o longitud, el resultado se basa en las mismas reglas para combinar expresiones. Para obtener más información, vea [Precisión, escala y longitud (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Las columnas con el tipo de datos **xml** deben ser iguales. Todas las columnas deben tener un tipo de esquema XML o no tener tipo. Si tienen tipo, debe ser el de la misma colección de esquemas XML.  
   

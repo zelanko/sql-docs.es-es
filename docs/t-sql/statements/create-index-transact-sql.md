@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632505"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010793"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Crea un índice relacional en una tabla o una vista. También se denomina índice de almacén de filas porque es un índice de árbol B agrupado o no agrupado. Puede crear un índice de almacén de filas antes de que haya datos en la tabla. Utilice un índice de almacén de filas para mejorar el rendimiento de las consultas, especialmente cuando las consultas hacen la selección en columnas específicas o requieren que los valores se ordenen en un orden concreto.
 
@@ -584,13 +584,13 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_
 
 Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.
 
-\<partition_number_expression> se puede especificar de las maneras siguientes:
+\<partition_number_expression> se puede especificar de las siguientes maneras:
 
 - Proporcionar el número de una partición, por ejemplo: EN PARTICIONES (2).
 - Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1, 5).
 - Proporcione ambos rangos y las particiones individuales, por ejemplo: EN PARTICIONES (2, 4, 6 A 8).
 
-\<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: `ON PARTITIONS (6 TO 8)`.
+\<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: `ON PARTITIONS (6 TO 8)`.
 
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:
 
@@ -721,11 +721,11 @@ Para obtener más información, vea [Indexes on Computed Columns](../../relation
 Las columnas que no son de clave, denominadas columnas incluidas, se pueden agregar en el nivel hoja de un índice no clúster para mejorar el rendimiento de las consultas al cubrir la consulta. Es decir, todas las columnas a las que se hace referencia en la consulta se incluyen en el índice como columnas de clave o que no son de clave. De este modo, el optimizador de consultas puede ubicar toda la información requerida con un examen del índice; no se tiene acceso a los datos de la tabla o del índice clúster. Para obtener más información vea [Creación de índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="specifying-index-options"></a>Especificar opciones de índice
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluye opciones de índice nuevas y también modifica el modo en que se especifican las opciones. En la sintaxis compatible con versiones anteriores, WITH *nombre_de_opción* es equivalente a WITH **(** \<nombre_de_opción> **= ON )** . Al establecer opciones de índice, se aplican las siguientes reglas:
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluye opciones de índice nuevas y también modifica el modo en que se especifican las opciones. En la sintaxis compatible con versiones anteriores, WITH *option_name* es equivalente a WITH **(** \<option_name> **= ON )** . Al establecer opciones de índice, se aplican las siguientes reglas:
 
-- Las nuevas opciones de índice solo se pueden especificar mediante WITH ( **_option\_name_ = ON | OFF**).
+- Las nuevas opciones de índice solo se pueden especificar mediante WITH (**_option\_name_ = ON | OFF**).
 - Las opciones no se pueden especificar utilizando la sintaxis compatible con versiones anteriores y la nueva sintaxis en la misma instrucción. Por ejemplo, al especificar WITH (**DROP_EXISTING, ONLINE = ON**), se genera un error en la instrucción.
-- Cuando se crea un índice XML, las opciones se deben especificar mediante WITH ( **_option_name_= ON | OFF**).
+- Cuando se crea un índice XML, las opciones se deben especificar mediante WITH (**_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Cláusula DROP_EXISTING
 Puede utilizar la cláusula DROP_EXISTING para volver a generar el índice, agregar o quitar columnas, modificar opciones, modificar el criterio de ordenación de las columnas o cambiar el grupo de archivos o el esquema de partición.

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151558"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091651"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuevo grupo de disponibilidad, si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada para la característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  Los valores FAILURE_CONDITION_LEVEL y HEALTH_CHECK_TIMEOUT definen una *directiva flexible de conmutación por error* para un grupo dado. Esta directiva flexible de conmutación por error proporciona mayor control sobre las condiciones que deben causar una conmutación por error automática. Para obtener más información, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Especifica el tiempo de espera (en milisegundos) que tiene el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) para devolver información de estado del servidor antes de que el clúster de WSFC asuma que la instancia de servidor es lenta o está bloqueada. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de confirmación sincrónica con conmutación automática por error (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
+ Especifica el tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de estado del servidor antes de que el clúster de WSFC asuma que la instancia de servidor es lenta o no responde. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de confirmación sincrónica con conmutación automática por error (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
   
  El valor predeterminado de HEALTH_CHECK_TIMEOUT es 30000 milisegundos (30 segundos). El valor mínimo es 15000 milisegundos (15 segundos) y el valor máximo es 4294967295 milisegundos.  
   
@@ -347,7 +347,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Estos son los valores de READ_ONLY_ROUTING_LIST:  
   
- \<server_instance> Especifica la dirección de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el host de una réplica que es una réplica secundaria legible cuando se ejecuta en el rol secundario.  
+ \<server_instance> Especifica la dirección de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el host de una réplica secundaria legible cuando se ejecuta en el rol secundario.  
   
  Use una lista separada por comas para especificar todas las instancias del servidor que pueden hospedar una réplica secundaria inteligible. El enrutamiento de solo lectura sigue el orden en que se hayan especificado las instancias de servidor en la lista. Si incluye la instancia del servidor de host de una réplica en la lista de enrutamiento de solo lectura de la réplica, por lo general, resulta recomendable colocar esta instancia del servidor al final de la lista, ya que las conexiones de intención de lectura van a una réplica secundaria, si hay alguna disponible. .  
   
@@ -356,7 +356,7 @@ CREATE AVAILABILITY GROUP group_name
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica principal, no se admite el enrutamiento de solo lectura. Este es el comportamiento predeterminado.  
 
- READ_WRITE_ROUTING_URL **=** { **("** \<instancia_servidor> **")** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Se aplica a: SQL Server (a partir de SQL Server 2019 [15.x]) 
 
  Especifica instancias de servidor que hospedan réplicas de disponibilidad para este grupo de disponibilidad que cumplen los requisitos siguientes al ejecutarse con el rol primario:
@@ -422,7 +422,7 @@ Para obtener más información, consulte [Redireccionamiento de la conexión de 
  MANUAL  
  Especifica la propagación manual (valor predeterminado). Este método requiere la creación de una copia de seguridad de la base de datos en la réplica principal y su restauración manual en las réplicas del grupo de disponibilidad secundario.  
   
- LISTENER **"** _dns\_name_ **"(** \<listener_option\> **)** Define un nuevo cliente de escucha del grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Define una nueva escucha de grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
   
 > [!IMPORTANT]
 >  Antes de crear el primer agente de escucha, se recomienda encarecidamente leer [Crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -496,7 +496,7 @@ Para obtener más información, consulte [Redireccionamiento de la conexión de 
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Esta preferencia de copia de seguridad automatizada indica que las copias de seguridad deben aparecer en una réplica secundaria, excepto cuando la réplica principal es la única réplica en línea (este es el comportamiento predeterminado). Para que el valor de AUTOMATED_BACKUP_PREFERENCE surta efecto, debe crear scripts de trabajos de copia de seguridad en las bases de datos de disponibilidad para tener en cuenta la preferencia de copia de seguridad automatizada.|  
 |FAILURE_CONDITION_LEVEL|3|Este nivel de condición de error especifica que se debe iniciar una conmutación por error automática en caso de errores internos graves de SQL Server, como bloqueos por subprocesos huérfanos, infracciones graves de acceso de escritura o un volcado excesivo.|  
-|HEALTH_CHECK_TIMEOUT|600000|Este valor de tiempo de espera de comprobación de estado, 60 segundos, especifica que el clúster de WSFC espera 60000 milisegundos a que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de estado del servidor sobre una instancia de servidor que hospeda una réplica de confirmación sincrónica automática antes de que asuma que la instancia de servidor host es lenta o se ha bloqueado. (El valor predeterminado es 30000 segundos).|  
+|HEALTH_CHECK_TIMEOUT|600000|Este valor de tiempo de espera de comprobación de estado, 60 segundos, especifica que el clúster de WSFC espera 60 000 milisegundos a que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de estado del servidor sobre una instancia de servidor que hospeda una réplica de confirmación sincrónica automática antes de que asuma que la instancia de servidor host es lenta o no responde. (El valor predeterminado es 30000 segundos).|  
   
  Tres réplicas de disponibilidad se hospedan en las instancias del servidor predeterminadas en los equipos denominados `COMPUTER01`, `COMPUTER02` y `COMPUTER03`. En la tabla siguiente se resumen los valores especificados para las opciones de cada réplica.  
   
@@ -584,6 +584,3 @@ GO
  [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

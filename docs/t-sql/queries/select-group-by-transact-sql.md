@@ -32,15 +32,15 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e93f24bcd2b136cdc055faf3a100a76fa5bb4db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 03c9b8dae913f7fb8dd770effcfd56a32e368c96
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634255"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999788"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Cláusula de la instrucción SELECT que divide el resultado de la consulta en grupos de filas, normalmente con el fin de realizar una o varias agregaciones en cada grupo. La instrucción SELECT devuelve una fila por grupo.  
   
@@ -112,7 +112,7 @@ Especifica una columna o un cálculo no agregado en una columna. Esta columna pu
 
 Para conocer las expresiones válidas, vea [Expresiones](~/t-sql/language-elements/expressions-transact-sql.md).    
 
-La columna debe aparecer en la cláusula FROM de la instrucción SELECT, pero no es necesario que aparezca en la lista SELECT. Aun así, deben incluirse en la lista GROUP BY todas las columnas de la tabla o la vista de cualquier expresión no agregada de la lista de \<select>:  
+La columna debe aparecer en la cláusula FROM de la instrucción SELECT, pero no es necesario que aparezca en la lista SELECT. Pero todas las columnas de la tabla o vista de cualquier expresión no agregada de la lista de \<select> se deben incluir en la lista GROUP BY:  
   
 Están permitidas las siguientes instrucciones:  
   

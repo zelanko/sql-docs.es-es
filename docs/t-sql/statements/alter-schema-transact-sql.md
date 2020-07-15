@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bccc7152a13000d667a5f980847eb251c08d1182
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626825"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091851"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Transfiere un elemento protegible entre esquemas.  
   
@@ -83,6 +83,8 @@ ALTER SCHEMA schema_name
  Mover un objeto como una tabla o una columna no hace que las referencias a ese objeto se actualicen automáticamente. Será necesario pues modificar de forma manual los objetos que hagan referencia al objeto que se ha movido. Por ejemplo, si se mueve una tabla y en un desencadenador existe una referencia a esa tabla, será necesario modificar el desencadenador para reflejar el nuevo nombre de esquema. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de moverlo.  
 
  Para cambiar el esquema de una tabla con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la tabla en el Explorador de objetos y, después, haga clic en **Diseño**. Presione **F4** para abrir la ventana Propiedades. En el cuadro **Esquema**, seleccione un nuevo esquema.  
+ 
+ ALTER SCHEMA usa un bloqueo de nivel de esquema.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

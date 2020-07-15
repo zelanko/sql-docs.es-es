@@ -14,15 +14,15 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7eefffe6d401c401c7fffa290000a63f4947f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288279"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006222"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 La página es la unidad fundamental del almacenamiento de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una extensión es una colección de ocho páginas físicamente contiguas. Las extensiones ayudan a administrar las páginas con eficacia. En esta guía se describen las estructuras de datos que se utilizan para administrar páginas y extensiones en todas las versiones de SQL Server. Comprender la arquitectura de las páginas y las extensiones es importante para diseñar y desarrollar bases de datos que funcionen eficazmente.
 
@@ -162,7 +162,7 @@ Una página IAM cubre un intervalo de 4 GB en un archivo, lo que equivale a la c
 Las páginas IAM se asignan según se necesitan para cada unidad de asignación y se ubican en el archivo de forma aleatoria. La vista de sistema sys.system_internals_allocation_units señala la primera página IAM de la unidad de asignación. Todas las páginas IAM de esa unidad de asignación se vinculan en una cadena.
 
 > [!IMPORTANT]
-> La vista de sistema `sys.system_internals_allocation_units` se ha diseñado para uso interno y está sujeta a cambios, por lo que la compatibilidad no está garantizada.
+> La vista de sistema `sys.system_internals_allocation_units` se ha diseñado para uso interno y está sujeta a cambios, por lo que la compatibilidad no está garantizada. La vista no está disponible en Azure SQL Database. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  

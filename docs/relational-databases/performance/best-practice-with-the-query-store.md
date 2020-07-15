@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287579"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006001"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 En este artículo se describen los procedimientos recomendados para usar el almacén de consultas de SQL Server con la carga de trabajo.
 
@@ -34,9 +34,9 @@ Para obtener una descripción rápida sobre cómo usar el almacén de consultas 
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Uso de Información de rendimiento de consultas en Azure SQL Database
 
-Si ejecuta el almacén de consultas en Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], puede usar [Información de rendimiento de consultas](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) para analizar el consumo de recursos en el tiempo. Aunque se puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria y E/S) Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU de la base de datos. Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Si ejecuta Almacén de consultas en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede usar [Información de rendimiento de consultas](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) para analizar el consumo de recursos a lo largo del tiempo. Aunque se puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [Azure Data Studio](../../azure-data-studio/what-is.md) para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria y E/S) Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU de la base de datos. Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-En esta sección se describen los valores predeterminados de configuración óptimos que están diseñados para garantizar el funcionamiento confiable del Almacén de consultas y de las características que dependen de él. La configuración predeterminada está optimizada para una recopilación continua de los datos, es decir, un tiempo mínimo en los estados OFF y READ_ONLY.
+En esta sección se describen los valores predeterminados de configuración óptimos que están diseñados para garantizar el funcionamiento confiable del Almacén de consultas y de las características que dependen de él. La configuración predeterminada está optimizada para una recopilación continua de los datos, es decir, un tiempo mínimo en los estados OFF y READ_ONLY. Para obtener más información sobre todas las opciones disponibles del Almacén de consultas, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 | Configuración | Descripción | Valor predeterminado | Comentario |
 | --- | --- | --- | --- |
@@ -49,11 +49,14 @@ En esta sección se describen los valores predeterminados de configuración ópt
 | | | | |
 
 > [!IMPORTANT]
-> Estos valores predeterminados se aplican automáticamente en la fase final de la activación del Almacén de consultas en todas las bases de datos de Azure SQL (consulte la nota importante anterior). Después de esta optimización, Azure SQL Database no cambiará los valores de configuración establecidos por los clientes, a no ser que influyan de manera negativa en la carga de trabajo principal o en las operaciones confiables del Almacén de consultas.
+> Estos valores predeterminados se aplican automáticamente en la fase final de la activación del Almacén de consultas en todo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una vez habilitado, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no cambia los valores de configuración establecidos por los clientes, a no ser que influyan de manera negativa en la carga de trabajo principal o en las operaciones de confianza del Almacén de consultas.
 
-Si quiere permanecer con su configuración personalizada, utilice [ALTER DATABASE con las opciones del Almacén de consultas](https://msdn.microsoft.com/library/bb522682.aspx) para revertir la configuración al estado anterior. Consulte [Best Practices with the Query Store](https://msdn.microsoft.com/library/mt604821.aspx) (Procedimientos recomendados con el Almacén de consultas) para aprender a elegir los parámetros de configuración óptima.
+> [!NOTE]  
+> El Almacén de consultas no se puede deshabilitar en la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ni Grupo elástico. Al ejecutar `ALTER DATABASE [database] SET QUERY_STORE = OFF` se devuelve la advertencia `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
-## <a name="use-query-store-with-elastic-pool-databases"></a>Uso del almacén de consultas con grupos de bases de datos elásticas
+Si quiere permanecer con su configuración personalizada, utilice [ALTER DATABASE con las opciones del Almacén de consultas](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) para revertir la configuración al estado anterior. Vea [Procedimientos recomendados con el almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md) para aprender a elegir los parámetros de configuración óptimos.
+
+## <a name="use-query-store-with-elastic-pool-databases"></a>Uso del Almacén de consultas con bases de datos de Grupo elástico
 
 Puede usar el Almacén de consultas en todas las bases de datos sin problemas, incluso en grupos densamente empaquetados. Se han solucionado todas las incidencias relacionadas con el uso excesivo de los recursos que es posible que hayan surgido cuando el almacén de consultas estaba habilitado para el gran número de bases de datos en los grupos elásticos.
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

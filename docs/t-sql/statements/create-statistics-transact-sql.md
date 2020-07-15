@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8240965a5cc057e3c22e8a721a05542aca17db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632133"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002501"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea estadísticas de optimización de consultas en una o más columnas de una tabla, en una vista indizada o en una tabla externa. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para mejorar el rendimiento de la consulta necesita crear estadísticas adicionales con CREATE STATISTICS modificar el diseño de la consulta.  
   
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
 **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Puede mostrar hasta 64 columnas por objeto de estadísticas.
 * La opción MAXDOP no es compatible con opciones STATS_STREAM, ROWCOUNT y PAGECOUNT.
 * La opción MAXDOP está limitada por la configuración MaX_DOP del grupo de cargas de trabajo de Resource Governor, si se usa.
+* En Azure SQL Database no se admiten CREATE y DROP STATISTICS en las tablas externas.
   
 ## <a name="examples"></a>Ejemplos  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Crear estadísticas en una tabla externa  
- La única decisión que debe tomar al crear las estadísticas en una tabla externa, además de proporcionar la lista de columnas, es si desea crear las estadísticas mediante el muestreo de las filas o examinando todas las filas.  
+ La única decisión que debe tomar al crear las estadísticas en una tabla externa, además de proporcionar la lista de columnas, es si desea crear las estadísticas mediante el muestreo de las filas o examinando todas las filas. En Azure SQL Database no se admiten CREATE y DROP STATISTICS en las tablas externas.
   
  Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa datos de la tabla externa en una tabla temporal para crear estadísticas, la opción de examen completo tardará mucho más tiempo. En una tabla grande, el método de muestreo predeterminado generalmente es suficiente.  
   

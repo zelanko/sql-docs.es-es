@@ -21,15 +21,15 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99323a0124e5e5507a22fdf36c6622738aea3ce2
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 11fadfd71bfc78128e83eb2157d32c5684d6ea35
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517664"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999008"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Las variables se declaran en el cuerpo de un proceso por lotes o un procedimiento con la instrucción DECLARE, y se les asignan valores con una instrucción SET o SELECT. Las variables de cursor pueden declararse con esta instrucción y utilizarse con otras instrucciones relacionadas con los cursores. Después de la declaración, todas las variables se inicializan como NULL, a menos que se proporcione un valor como parte de la declaración.  
   
@@ -106,7 +106,7 @@ CURSOR
 <table_type_definition>  
 Define el tipo de datos de **table**. La declaración de tabla incluye definiciones de columna, nombres, tipos de datos y restricciones. Solo se permiten los tipos de restricciones PRIMARY KEY, UNIQUE, NULL y CHECK. Un tipo de datos de alias no puede usarse como un tipo de datos de columna escalar si una regla o definición de valor predeterminado está enlazada al tipo.
   
-\<table_type_definiton> es un subconjunto de información que se usa para definir una tabla en CREATE TABLE. Aquí se incluyen los elementos y definiciones fundamentales. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definiton> Es un subconjunto de información que se usa para definir una tabla en CREATE TABLE. Aquí se incluyen los elementos y definiciones fundamentales. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar y asignar valores a varias variables. Cuando se declara una variable de **table**, esta debe ser la única variable de **table** que se declara en la instrucción DECLARE.  

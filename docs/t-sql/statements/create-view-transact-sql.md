@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634851"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002491"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea una tabla virtual cuyo contenido (columnas y filas) se define mediante una consulta. Utilice esta instrucción para crear una vista de los datos de una o varias tablas de la base de datos. Por ejemplo, una vista se puede utilizar para lo siguiente:  
   
@@ -131,7 +131,7 @@ OR ALTER
   
 -   Una referencia a una tabla temporal o a una variable de tabla  
   
- Dado que *select_statement* utiliza la instrucción SELECT, es válido utilizar \<join_hint> y \<table_hint> hints como se especifican en la cláusula FROM. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
+ Dado que *select_statement* utiliza la instrucción SELECT, es válido utilizar las sugerencias \<join_hint> y \<table_hint>, tal como se especifican en la cláusula FROM. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  En *select_statement* se pueden utilizar funciones y varias instrucciones SELECT separadas por UNION o UNION ALL.  
   

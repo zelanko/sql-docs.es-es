@@ -1,5 +1,6 @@
 ---
 title: Elementos protegibles | Microsoft Docs
+description: Obtenga información sobre los ámbitos protegibles, que el sistema de autorización del Motor de base de datos de SQL Server utiliza para regular el acceso a los elementos protegibles.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -19,19 +20,19 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0d87132c7a0d0d6b9f44e28ca3d797d20fb4b32
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986566"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999600"
 ---
 # <a name="securables"></a>Elementos protegibles
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito protegible: servidor  
+## <a name="securable-scope-server"></a>Ámbito protegible: Server  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
@@ -44,7 +45,7 @@ ms.locfileid: "67986566"
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito protegible: base de datos  
+## <a name="securable-scope-database"></a>Ámbito protegible: Base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  
@@ -79,7 +80,7 @@ ms.locfileid: "67986566"
   
 -   Usuario  
   
-## <a name="securable-scope-schema"></a>Ámbito protegible: esquema  
+## <a name="securable-scope-schema"></a>Ámbito protegible: Schema  
  El ámbito protegible **esquema** contiene los siguientes valores que se pueden proteger:  
   
 -   Tipo  

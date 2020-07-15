@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908156"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882244"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificación de las propiedades de replicación de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 En este tema se explica cómo especificar varias propiedades para la replicación de mezcla. 
 
 ## <a name="merge-article-is-download-only"></a>El artículo de mezcla es de solo descarga
@@ -38,13 +38,13 @@ En la página **Artículos** del Asistente para nueva publicación, seleccione u
   
 #### <a name="on-the-properties-tab-of-the-article-properties"></a>En la pestaña Propiedades de las propiedades del artículo  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.    
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla y haga clic en **Propiedades del artículo**.    
 2.  Haga clic en **Establecer propiedades del artículo de Tabla resaltado** o **Establecer propiedades de todos los artículos de la tabla**.  
   
-3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , especifique uno de los siguientes valores para **Dirección de la sincronización**:    
+3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , especifique uno de los siguientes valores para **Dirección de la sincronización**:    
     -   **Solo descargar en suscriptor y prohibir cambios del suscriptor**    
     -   **Solo descargar en suscriptor y permitir cambios del suscriptor**    
-4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+4.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
 
 ###  <a name="use-transact-sql"></a>Uso de Transact-SQL  
   
@@ -84,16 +84,16 @@ En la página **Artículos** del Asistente para nueva publicación, seleccione u
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Habilitación de la resolución interactiva de conflictos para un artículo  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).   
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.    
-3.  En la página **Propiedades del artículo - \<Artículo>** o **Propiedades del artículo - \<ArticleType>** , haga clic en la pestaña **Resolución**.    
+3.  En las páginas **Propiedades del artículo: \<Article>** o **Propiedades del artículo: \<ArticleType>** , haga clic en la pestaña **Resolución**.    
 4.  Seleccione **Permitir que el suscriptor resuelva los conflictos de modo interactivo durante la sincronización a petición**.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+6.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Especificación de que una suscripción debe usar la resolución interactiva de conflictos  
   
-1.  En el cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>** , especifique el valor **True** para la opción **Solucionar conflictos de manera interactiva**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Subscriber>: \<SubscriptionDatabase>** , especifique un valor de **True** para la opción **Solucionar conflictos de manera interactiva**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>Uso de Transact-SQL  
@@ -127,14 +127,14 @@ En este tema se describe cómo especificar el seguimiento de conflictos y el niv
 -   Con el seguimiento por columna y por fila, la resolución de conflictos se realiza siempre en el nivel de fila: la fila ganadora sobrescribe la fila perdedora. La replicación de mezcla también le permite especificar que se realice un seguimiento de los conflictos y se resuelvan en el nivel de registro lógico, pero dichas opciones no están disponibles en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obtener información acerca de cómo establecer estas opciones con procedimientos almacenados de replicación, vea [Definir una relación de registros lógicos entre artículos de tabla de mezcla](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ### <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio  
- Especifique seguimiento de nivel de columna o fila para los artículos de mezcla en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo**, disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Especifique el seguimiento de nivel de columna o fila para los artículos de combinación en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo**, disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="specify-row--or-column-level-tracking"></a>Especificación del seguimiento por fila o columna  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla.  
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.   
-3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por fila** o **Seguimiento por columna**.   
-4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo \<Article>** , seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por filas** o **Seguimiento por columna**.   
+4.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 ### <a name="use-transact-sql"></a>Uso de Transact-SQL  
   

@@ -1,30 +1,28 @@
 ---
-title: Preguntas más frecuentes
-titleSuffix: Azure Data Studio
+title: Preguntas más frecuentes sobre Azure Data Studio
 description: Preguntas más frecuentes (P+F) sobre Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774609"
 ---
-# <a name="azure-data-studio-faq"></a>Preguntas más frecuentes de [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
+# <a name="azure-data-studio-faq"></a>Preguntas más frecuentes sobre Azure Data Studio
 
 ## <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
-Azure Data Studio es un nuevo entorno de escritorio multiplataforma de código abierto para profesionales de datos que usan la familia de las plataformas de datos locales y en la nube de Azure Data en Windows, MacOS y Linux. Azure Data Studio, que anteriormente se había publicado con el nombre de versión preliminar SQL Operations Studio, ofrece una experiencia de editor moderna con IntelliSense rápido y ligero, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado con el usuario de la plataforma de datos en mente, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
+Azure Data Studio es un nuevo entorno de escritorio multiplataforma de código abierto para profesionales de datos que usan la familia de las plataformas de datos locales y en la nube de Azure Data en Windows, macOS y Linux. Azure Data Studio, que anteriormente se había publicado con el nombre de versión preliminar SQL Operations Studio, ofrece una experiencia de editor moderna con IntelliSense rápido y ligero, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado con el usuario de la plataforma de datos en mente, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
 
 La investigación ha demostrado que los usuarios pasan mucho más tiempo trabajando en la edición de consultas que en cualquier otra tarea con SQL Server Management Studio. Por ese motivo, Azure Data Studio se ha diseñado para centrarse profundamente en la funcionalidad más usada, con experiencias adicionales disponibles como extensiones opcionales en el producto. Esto permite a todos los usuarios personalizar su entorno a los flujos de trabajo que usan con mayor frecuencia.
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>¿Cuánto cuesta Azure Data Studio?
 
@@ -94,7 +92,7 @@ No. Las inversiones en las herramientas insignia de Windows (SSMS, SSDT y PowerS
 |Panel de tareas|Sí||
 |Temas|Sí||
 |Modo oscuro|Sí||
-|Azure Resource Explorer|Vista previa||
+|Azure Resource Explorer|Versión preliminar||
 |Asistente para generar scripts||Sí
 |Importación o exportación de DACPAC||Sí|
 |Propiedades de objeto||Sí|
@@ -108,7 +106,7 @@ No. Las inversiones en las herramientas insignia de Windows (SSMS, SSDT y PowerS
 |Exportar resultados a CSV, JSON o XLSX|Sí||
 |IntelliSense|Sí|Sí|
 |Fragmentos de código|Sí|Sí|
-|Mostrar plan|Vista previa|Sí|
+|Mostrar plan|Versión preliminar|Sí|
 |Estadísticas de clientes||Sí|
 |Estadísticas de consultas dinámicas||Sí|
 |Opciones de consulta||Sí|
@@ -130,18 +128,18 @@ No. Las inversiones en las herramientas insignia de Windows (SSMS, SSDT y PowerS
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Asistente de datos externos|Vista previa||
-|Integración de HDFS|Vista previa||
-|Cuaderno|Vista previa||
+|Asistente de datos externos|Versión preliminar||
+|Integración de HDFS|Versión preliminar||
+|Cuaderno|Versión preliminar||
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Copia de seguridad o restauración|Sí|Sí|
-|Importación de archivos planos|Vista previa|Sí|
-|Agente SQL|Vista previa|Sí|
-|SQL Profiler|Vista previa|Sí|
+|Importación de archivos planos|Versión preliminar|Sí|
+|Agente SQL|Versión preliminar|Sí|
+|SQL Profiler|Versión preliminar|Sí|
 |Always On||Sí|
 |Always Encrypted||Sí|
 |Asistente para copiar datos||Sí|

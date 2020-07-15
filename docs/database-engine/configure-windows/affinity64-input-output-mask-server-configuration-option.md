@@ -1,5 +1,6 @@
 ---
 title: affinity64 I/O mask (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción Máscara de afinidad de E/S de 64 bits. Vea cuándo se usa para enlazar la E/S de disco de SQL Server a un subconjunto especificado de CPU.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - affinity64 I/O mask option
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9a0f63af10e8baf21cf17d316f64e66d4e663852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c056959118deba7473471808db228d646fc7f64c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724015"
 ---
 # <a name="affinity64-input-output-mask-server-configuration-option"></a>affinity64 I/O mask (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La opción **affinity64 I/O mask** enlaza la E/S del disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un subconjunto específico de CPU, de forma similar a la opción **affinity I/O mask** . Use **affinity I/O mask** para enlazar los primeros 32 procesadores y **affinity64 I/O mask** para enlazar los demás procesadores del equipo. Si vuelve a configurar **affinity64 I/O mask**, debe reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción solo está visible en la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

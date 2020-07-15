@@ -1,5 +1,6 @@
 ---
 title: Informes de conjuntos de recopilación de datos del sistema | Microsoft Docs
+description: El recopilador de datos proporciona un informe para cada uno de los conjuntos de recopilación de datos del sistema para supervisar la capacidad y el rendimiento del sistema en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34992877bd226fd62df290e5d196fdf1a667f031
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715541"
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El recopilador de datos proporciona un informe histórico para cada uno de los conjuntos de recopilación de datos del sistema. Cada uno de los informes siguientes utiliza datos que están almacenados en el almacén de administración de datos:  
   
 -   [Resumen de uso de disco](#Disk)  
@@ -88,14 +89,14 @@ ms.locfileid: "79287599"
  Utilice el botón de calendario para especificar la fecha de inicio, la hora de inicio y la duración de los datos que desea notificar.  
   
 #### <a name="query-statistics-history-report"></a>Informe Historial de estadísticas de consultas  
- El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar una vista diferente del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **Lecturas físicas**o **Escrituras lógicas**.  
+ El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar otra vista del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **Lecturas físicas** o **Escrituras lógicas**.  
   
  La tabla situada debajo del gráfico proporciona datos de consulta adicionales. Muestra el texto de cada consulta que se representa mediante un gráfico junto con información estadística detallada. Observe que las barras del gráfico son vínculos activos, como lo son cada una de las consultas que se muestran en la tabla. Al hacer clic en un vínculo activo, se abre el subinforme Detalles de consulta correspondiente a la consulta.  
   
 #### <a name="query-details-subreport"></a>Subinforme Detalles de consulta  
  El subinforme Detalles de consulta proporciona todo el texto de la consulta. Al lado de la consulta se encuentra el hipervínculo **Editar texto de consulta** . Puede hacer clic en este vínculo para abrir la consulta en el Editor de consultas. La tabla situada debajo de la consulta proporciona estadísticas de ejecución de la consulta, como el promedio de duración por cada ejecución de una consulta.  
   
- Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar una vista diferente del costo relativo del plan de consulta, haga clic en uno de los hipervínculos que se muestran debajo del gráfico: **Duración**, **Lecturas físicas**o **Escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
+ Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar otra vista del costo relativo del plan de consulta, haga clic en cualquiera de los hipervínculos que se muestran debajo del gráfico: **Duración**, **Lecturas físicas** o **Escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
   
  La tabla situada debajo del gráfico muestra los diez primeros planes de consulta según el uso de CPU por ejecución. Cada número de la columna **Nº de planes** es un vínculo activo en el que se puede hacer clic para abrir el subinforme Detalles del plan de consulta.  
   
@@ -125,9 +126,9 @@ ms.locfileid: "79287599"
   
 |Grafo|Descripción del informe|  
 |-----------|------------------------|  
-|%CPU|Se tiene acceso a estos subinformes haciendo clic en cualquier punto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en las líneas del gráfico Sistema del gráfico %CPU.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : el informe Historial de estadísticas de consultas proporciona un gráfico de las consultas más caras en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una tabla debajo del gráfico muestra las consultas e incluye datos estadísticos para cada una. Puede hacer clic en una consulta para obtener detalles adicionales.<br /><br /> **Sistema**: el informe Uso de CPU del sistema proporciona un gráfico del porcentaje de tiempo de CPU por procesador y datos estadísticos de cada proceso en formato tabular.|  
-|Uso de la memoria|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Utilización de la memoria.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : el informe Uso de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos para el uso de memoria de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , contadores de memoria, consumo de memoria interna por tipo y una tabla que ofrece datos sobre el uso medio de memoria por cada tipo de componente.<br /><br /> **Sistema**: el informe Uso de memoria del sistema proporciona gráficos con la utilización de memoria y las frecuencias de aciertos de páginas y caché, además de una tabla que ofrece información sobre los bytes privados y el espacio de trabajo de cada proceso.|  
-|Uso de E/S de disco|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Uso de E/S de disco.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : el informe Uso de E/S de disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos del tiempo de respuesta del disco y la velocidad de transferencia de disco. En una tabla adicional se proporcionan estadísticas de los archivos virtuales por cada disco, base de datos y archivo.<br /><br /> **Sistema**: el informe Uso de disco del sistema proporciona gráficos con el tiempo de respuesta del disco, la longitud media de la cola de disco y la velocidad de transferencia de disco, además de una tabla con información sobre las escrituras y lecturas de E/S de cada proceso.|  
+|%CPU|Se tiene acceso a estos subinformes haciendo clic en cualquier punto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en las líneas del gráfico Sistema del gráfico %CPU.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : El informe Historial de estadísticas de consultas proporciona un gráfico de las consultas más caras en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una tabla debajo del gráfico muestra las consultas e incluye datos estadísticos para cada una. Puede hacer clic en una consulta para obtener detalles adicionales.<br /><br /> **Sistema**: El informe Uso de CPU del sistema proporciona un gráfico del porcentaje de tiempo de CPU por procesador y datos estadísticos de cada proceso en formato tabular.|  
+|Uso de la memoria|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Utilización de la memoria.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : El informe Utilización de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos para el uso de memoria de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , contadores de memoria, consumo de memoria interna por tipo y una tabla que ofrece datos sobre el promedio de utilización de la memoria por cada tipo de componente.<br /><br /> **Sistema**: El informe Uso de memoria del sistema proporciona gráficos para la utilización de memoria y las frecuencias de aciertos de páginas y memoria caché, y una tabla que ofrece información sobre los bytes privados y el espacio de trabajo de cada proceso.|  
+|Uso de E/S de disco|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Uso de E/S de disco.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : El informe Uso de E/S de disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos del tiempo de respuesta del disco y de la tasa de la transferencia de disco. En una tabla adicional se proporcionan estadísticas de los archivos virtuales por cada disco, base de datos y archivo.<br /><br /> **Sistema**: El informe Uso de disco del sistema proporciona gráficos para el tiempo de respuesta del disco, el promedio de longitud de la cola de disco y la velocidad de transferencia de disco, y una tabla con información sobre las escrituras y lecturas de E/S de cada proceso.|  
 |Uso de red|No hay ningún informe adicional disponible.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esperas|El gráfico Esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las esperas que encontraron los subprocesos que se ejecutan por cada categoría de espera. Puede tener acceso a un informe detallado haciendo clic en cualquier segmento del gráfico. Además de ofrecer estadísticas gráficas de las esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un intervalo de tiempo más reducido, este informe proporciona información sobre las categorías de las esperas en formato tabular. Para cada categoría, como CPU y sus subcategorías, la tabla muestra el número de esperas, el tiempo de espera y el porcentaje de tiempo de espera total.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Actividad|Desde el gráfico Actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede tener acceso a diferentes aspectos de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los informes que puede obtener haciendo clic en un punto de la línea del gráfico Compilaciones SQL/s son los siguientes:<br /><br /> <br /><br /> Conexiones y sesiones<br /><br /> Requests<br /><br /> Frecuencia de aciertos de caché de plan<br /><br /> Características de TempDb|  

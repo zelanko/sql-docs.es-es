@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892333"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de SLES para grupos de disponibilidad de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En esta guía se proporcionan instrucciones para crear un clúster de tres nodos para SQL Server en SUSE Linux Enterprise Server (SLES) 12 SP2. Para lograr una alta disponibilidad, un grupo de disponibilidad en Linux necesita tres nodos (vea [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md) [Alta disponibilidad y protección de datos para configuraciones de grupos de disponibilidad]). La capa de agrupación en clústeres se basa en SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) desarrollado sobre [Pacemaker](https://clusterlabs.org/). 
 
@@ -28,6 +28,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 >[!NOTE]
 >En este momento, la integración de SQL Server con Pacemaker en Linux no es tan perfecta como con WSFC en Windows. El servicio SQL Server en Linux no es compatible con clústeres. Pacemaker controla toda la orquestación de los recursos del clúster, incluido el grupo de disponibilidad. En Linux, no debería confiar en las vistas de administración dinámica (DMV) del grupo de disponibilidad Always On que proporcionan información de clúster, como sys.dm_hadr_cluster. Además, el nombre de red virtual es específico de WSFC y no hay ningún equivalente en Pacemaker. No obstante, puede crear un agente de escucha para usarlo en la reconexión transparente tras una conmutación por error, pero tendrá que registrar manualmente el nombre del agente de escucha en el servidor DNS con la dirección IP que se usa para crear el recurso de IP virtual (como se explica en las secciones siguientes).
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>Plan de desarrollo
 
@@ -48,7 +49,7 @@ El procedimiento para crear un grupo de disponibilidad para alta disponibilidad 
 
 5. [Agregue el grupo de disponibilidad como un recurso en el clúster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para completar el siguiente escenario integral, necesita tres equipos en los que implementar el clúster de tres nodos. En los pasos siguientes se describe cómo configurar estos servidores.
 
@@ -313,8 +314,8 @@ La restricción de ubicación tiene una restricción de orden implícita. Mueve 
 1. El usuario emite la migración de recursos al maestro del grupo de disponibilidad desde el nodo 1 al nodo 2.
 2. El recurso de dirección IP virtual se detiene en el nodo 1.
 3. El recurso de dirección IP virtual se inicia en el nodo 2. En este punto, la dirección IP apunta temporalmente al nodo 2, mientras que el nodo 2 sigue siendo una réplica secundaria previa a la conmutación por error. 
-4. El maestro del grupo de disponibilidad en el nodo 1 se degrada a principal/secundario.
-5. El principal/secundario del grupo de disponibilidad en el nodo 2 asciende a maestro. 
+4. El maestro del grupo de disponibilidad en el nodo 1 se degrada.
+5. El grupo de disponibilidad en el nodo 2 asciende a maestro. 
 
 Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. Para agregar una restricción de orden, ejecute el siguiente comando en un nodo: 
 

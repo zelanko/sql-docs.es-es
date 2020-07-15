@@ -1,5 +1,6 @@
 ---
 title: Publicación de datos y objetos de base de datos | Microsoft Docs
+description: En este artículo se resumen las tablas y otros objetos de base de datos que se pueden publicar para la replicación en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,12 +43,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287612"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807307"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.locfileid: "76287612"
   
 -   ALTER TRIGGER  
   
- Para obtener más información, vea [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+ Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="considerations-for-publishing"></a>Consideraciones sobre las publicaciones  
  Tenga en cuenta los siguientes aspectos a la hora de publicar objetos de base de datos:  

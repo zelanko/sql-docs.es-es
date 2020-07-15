@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736311"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Es un predicado que se usa en la [!INCLUDE[tsql](../../includes/tsql-md.md)]cláusula WHERE[ de ](../../t-sql/queries/where-transact-sql.md) de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indexadas de texto completo que contienen tipos de datos basados en caracteres. Este predicado busca valores que coincidan con el significado y no solo con la redacción exacta de las palabras en la condición de búsqueda. Cuando se usa FREETEXT, el motor de consultas de texto completo realiza internamente las siguientes acciones en *cadena_freetext*, asigna a cada uno de los términos una ponderación y busca las coincidencias:  
+  Es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indexadas de texto completo que contienen tipos de datos basados en caracteres. Este predicado busca valores que coincidan con el significado y no solo con la redacción exacta de las palabras en la condición de búsqueda. Cuando se usa FREETEXT, el motor de consultas de texto completo realiza internamente las siguientes acciones en *cadena_freetext*, asigna a cada uno de los términos una ponderación y busca las coincidencias:  
   
 -   Separa la cadena en palabras individuales basándose en límites de palabras (separación de palabras).  
   
@@ -115,7 +115,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## <a name="general-remarks"></a>Notas generales  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
-Las consultas de texto completo que utilizan FREETEXT son menos precisas que las consultas de texto completo que utilizan CONTAINS. El motor de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica las palabras y las frases importantes. No se le da significado especial a ninguna de las palabras clave reservadas o caracteres comodín que suelen tener significado cuando se especifican en el parámetro \<contiene_condición_de_búsqueda> del predicado CONTAINS.
+Las consultas de texto completo que utilizan FREETEXT son menos precisas que las consultas de texto completo que utilizan CONTAINS. El motor de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica las palabras y las frases importantes. No se le da significado especial a ninguna de las palabras clave reservadas o caracteres comodín que suelen tener significado cuando se especifican en el parámetro \<contains_search_condition> del predicado CONTAINS.
   
  Los predicados de texto completo no se pueden usar en la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) cuando el nivel de compatibilidad de la base de datos está establecido en 100.  
   

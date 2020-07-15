@@ -1,6 +1,6 @@
 ---
 title: Conmutación por error de un grupo de disponibilidad
-description: En este tema se describe cómo realizar una conmutación por error manual forzada de un grupo de disponibilidad AlwaysOn (con posible pérdida de datos) mediante Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
+description: En este tema se describe cómo realizar una conmutación por error manual forzada o planeada de un grupo de disponibilidad Always On mediante SQL Server Management Studio, Transact-SQL o SQL PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821947"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882405"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar una conmutación por error manual planeada o conmutación por error manual forzada (conmutación por error forzada) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Si se realiza una conmutación por error a una réplica secundaria en el estado SYNCHRONIZED, el asistente realiza una conmutación por error manual planeada (sin pérdida de datos). Si se realiza una conmutación por error a una réplica secundaria en el estado UNSYNCHRONIZED o NOT SYNCHRONIZING, el asistente realiza una conmutación por error manual forzada, también denominada *conmutación por error forzada* (con posible pérdida de datos). En ambas formas de conmutación por error manual tiene lugar la transición a la réplica secundaria a la que se está conectado al rol principal. Una conmutación por error manual planeada actualmente realiza transacciones de la réplica principal anterior al rol secundario. Después de una conmutación por error forzada, cuando la réplica principal pasa a estar en línea, realiza la transición al rol secundario.  
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Antes de la primera conmutación por error manual planeada, consulte la sección "Antes de comenzar" de [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Antes de realizar la primera conmutación por error forzada, consulte las secciones "Antes de empezar" y "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Antes de realizar la primera conmutación por error forzada, vea las secciones "Antes de empezar" y "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821947"
   
      Para obtener más información, vea [Página Resultados &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. Después de una conmutación por error forzada, consulte la sección "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Después de una conmutación por error forzada, vea la sección "Seguimiento: después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Ayuda para las páginas que son exclusivas para este asistente  
  En esta sección se describen las páginas que son únicas para [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  

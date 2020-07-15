@@ -1,5 +1,6 @@
 ---
 title: Tarea Limpieza de historial (Plan de mantenimiento) | Microsoft Docs
+description: Obtenga información sobre cómo descartar el historial de copias de seguridad y restauración, el historial de trabajos del Agente SQL Server y el historial del plan de mantenimiento de la base de datos msdb mediante la tarea Limpieza de historial.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667060"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tarea Limpieza de historial (Plan de mantenimiento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Tarea Limpieza de historial** para descartar la antigua información histórica de las tablas de la base de datos msdb. Esta tarea admite la eliminación del historial de copias de seguridad y restauración, del historial de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del historial del plan de mantenimiento.  
   
  Esta instrucción usa las instrucciones **sp_purge_jobhistory** y **sp_delete_backuphistory** .  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Connection**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   

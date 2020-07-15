@@ -1,5 +1,6 @@
 ---
 title: Servicios SCM - Configurar una instancia para que se inicie automáticamente | Microsoft Docs
+description: Descubra cómo establecer que una instancia de SQL Server se inicie automáticamente. Obtenga información sobre la configuración predeterminada y vea cómo establecer el modo de inicio en automático.
 ms.custom: ''
 ms.date: 01/06/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - SQL Server, automatic startup
 - starting SQL Server, automatically
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf9ce68d802bdfc3178b6712adb7335a63c79ae6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651485"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>Servicios SCM - Configurar una instancia para que se inicie automáticamente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo establecer una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Durante la instalación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura normalmente para iniciarse automáticamente. Si esto no se ha hecho, puede modificar la configuración en cualquier momento.  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
@@ -37,13 +38,13 @@ ms.locfileid: "70212417"
     >  -   **Windows 10**:  
     >          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , escriba SQLServerManager13.msc (para **) en la**página de inicio [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reemplace el 13 por un número inferior. Al hacer clic en SQLServerManager13.msc, se abre el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o a la barra de tareas, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Anclar a Inicio** o **Anclar a la barra de tareas**.  
     > -   **Windows 8**:  
-    >          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], escriba **SQLServerManager\<versión>.msc** (por ejemplo, **SQLServerManager13.msc**) en el acceso a **Buscar** de **Aplicaciones** y, después, pulse **Entrar**.  
+    >          Para abrir Configuration Manager de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], escriba **SQLServerManager\<version>.msc** (por ejemplo, **SQLServerManager13.msc**) en el acceso a **Buscar** de **Aplicaciones** y, después, presione **Entrar**.  
   
 2.  En el **Administrador de configuración de SQL Server**, expanda **Servicios**y, a continuación, haga clic en **SQL Server**.  
   
 3.  En el panel de detalles, haga clic con el botón derecho en el nombre de la instancia que quiera iniciar automáticamente y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de \<** _nombreDeInstancia_ **> de SQL Server**, establezca **Modo de inicio** en **Automático**.  
+4.  En el cuadro de diálogo **Propiedades de \<**_instancename_**> de SQL Server**, establezca **Modo de inicio** en **Automático**.  
   
 5.  Haga clic en **Aceptar**y, a continuación, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

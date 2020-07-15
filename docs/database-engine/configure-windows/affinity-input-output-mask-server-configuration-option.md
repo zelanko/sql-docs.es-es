@@ -1,5 +1,6 @@
 ---
 title: affinity Input-Output mask (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción affinity I/O mask. Úsela para mejorar el rendimiento de los subprocesos de SQL Server que emiten entradas o salidas al enlazar la entrada o salida de disco a las CPU especificadas.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa19cdc7db8b5966eb5ab89a5df8103e7f417244
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789849"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para realizar varias tareas, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a veces mueve subprocesos del proceso entre diferentes procesadores. Aunque es eficaz desde el punto de vista del sistema operativo, esta actividad puede reducir el rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en casos de elevadas cargas, ya que cada caché de procesador se recarga repetidamente con los datos. La asignación de procesadores a subprocesos específicos puede mejorar el rendimiento en estas condiciones, ya que se eliminan las recargas de procesador; esta asociación entre un subproceso y un procesador se denomina afinidad del procesador.  
   

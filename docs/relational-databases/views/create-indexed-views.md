@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727072"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este artículo se describe cómo crear índices en una vista. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.
 
@@ -92,7 +92,7 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
 - Cuando crea el índice, la opción `IGNORE_DUP_KEY` debe establecerse en OFF (configuración predeterminada).
 - En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, _esquema_ **.** _nombretabla_ .
 - Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción `WITH SCHEMABINDING`.
-- Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, _\<schema\>_ **.** _\<function\>_ .
+- Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista se deben usar nombres de dos partes, _\<schema\>_ **.** _\<function\>_ .
 - La propiedad de acceso a datos de una función definida por el usuario debe ser `NO SQL` y la propiedad de acceso externo debe ser `NO`.
 - Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.
 - Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.

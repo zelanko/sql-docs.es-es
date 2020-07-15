@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895665"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.
 
-Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo se permite una \<database_mirroring_option> por instrucción ALTER DATABASE.
+Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo se permite una opción \<database_mirroring_option> por instrucción ALTER DATABASE.
 
 > [!NOTE]
 > Es recomendable configurar la creación de reflejo de la base de datos durante las horas de menor actividad, ya que la configuración puede afectar al rendimiento.
@@ -91,12 +91,12 @@ Esta opción se especifica una vez por sesión en cada asociado. Para iniciar un
 
 El valor de *partner_server* es una dirección de red de servidor. Tiene la siguiente sintaxis:
 
-TCP **://** _\<dirección del sistema>_ **:** _\<puerto>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 , donde
 
 - *\<system-address>* es una cadena, como un nombre de sistema, un nombre de dominio completo o una dirección IP, que identifica sin ambigüedad el equipo de destino.
-- *\<port>* es un número de puerto que está asociado al extremo de reflejo de la instancia del servidor asociado.
+- *\<port>* es un número de puerto que está asociado al punto de conexión de reflejo de la instancia del servidor asociado.
 
 Para obtener más información, vea [Especificar una dirección de red de servidor - Creación de reflejo de la base de datos](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 

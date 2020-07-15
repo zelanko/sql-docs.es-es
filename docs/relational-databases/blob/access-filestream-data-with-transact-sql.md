@@ -1,5 +1,6 @@
 ---
 title: Obtener acceso a datos FILESTREAM con Transact-SQL | Microsoft Docs
+description: Obtenga información sobre cómo utilizar las instrucciones INSERT, DELETE y UPDATE de Transact-SQL para acceder a los datos de FILESTREAM y administrarlos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7f1f6d33e9828478392f3ccb19ea4f7306a6196e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744827"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Obtener acceso a datos FILESTREAM con Transact-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo utilizar las instrucciones INSERT, DELETE y UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar los datos de FILESTREAM.  
   
 > [!NOTE]  

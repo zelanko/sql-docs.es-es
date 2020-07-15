@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8bfaa8ffee65be6c0c5693420c89032c9b83763
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759118"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar la base de datos maestra (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se explica cómo restaurar la base de datos **maestra** desde una copia de seguridad de base de datos completa.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82180738"
  El ejemplo siguiente restaura la base de datos `master` en la instancia de servidor predeterminada. En el ejemplo se asume que la instancia de servidor ya se ejecuta en modo de usuario único. El ejemplo inicia `sqlcmd` y ejecuta una instrucción `RESTORE DATABASE` que restaura una copia de seguridad de base de datos completa de `master` desde un dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Para una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S** _\<nombreDeEquipo>_ \\ *\<nombreDeInstancia>* .  
+>  En el caso de una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   

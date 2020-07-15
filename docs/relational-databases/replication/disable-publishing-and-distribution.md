@@ -1,5 +1,6 @@
 ---
 title: Deshabilitar la publicación y la distribución | Microsoft Docs
+description: Obtenga información sobre cómo deshabilitar la publicación y distribución en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b8c2e87e15f1ed30940f33953a339fc711305b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653854"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  Puede hacer lo siguiente:  

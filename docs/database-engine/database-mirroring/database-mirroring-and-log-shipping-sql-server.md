@@ -1,5 +1,6 @@
 ---
 title: Crear reflejo de la base de datos y trasvase de registros (SQL Server) | Microsoft Docs
+description: Obtenga información sobre las consideraciones relativas a la combinación del trasvase de registros y la creación de reflejos de las bases de datos en SQL Server, incluido el número de servidores de destino que se necesitan.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789705"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Se puede crear el reflejo de una determinada base de datos o realizar un trasvase de registros; también es posible realizar ambos procesos de forma simultánea. Para elegir qué método se debe utilizar, tenga en cuenta los siguientes aspectos:  
   
 -   ¿Cuántos servidores de destino necesita?  

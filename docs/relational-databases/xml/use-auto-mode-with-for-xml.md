@@ -1,5 +1,6 @@
 ---
 title: Usar el modo AUTO con FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo usar el modo AUTO con la cláusula FOR XML para devolver los resultados de la consulta como elementos XML anidados.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d8d3674766bfa6cb96a23e53b9f2aee440beb37
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f77aaefd763a1902c1cd4e4be1dbf78e5f85a19a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758493"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Tal como se describe en [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
   
  Cada tabla de la cláusula FROM, de la que al menos se presenta una columna en la cláusula SELECT, se representa como un elemento XML. Las columnas que se incluyen en la cláusula SELECT se asignan a atributos o subelementos, si se especifica la opción ELEMENTS en la cláusula FOR XML.  
@@ -137,7 +138,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Heurística del modo AUTO para dar forma al XML devuelto](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Ejemplos: Usar el modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
+-   [Ejemplos: Uso del modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

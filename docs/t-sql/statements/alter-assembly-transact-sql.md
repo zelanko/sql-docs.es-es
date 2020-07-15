@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d389b0de6e00095729fdf3636ed7a0db872c7055
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892576"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica una ensamblado cambiando las propiedades del catálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un ensamblado. ALTER ASSEMBLY lo actualiza a la última copia de los módulos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contienen su implementación y agrega o quita los archivos asociados con él. Los ensamblados se crean mediante [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -71,15 +71,15 @@ ALTER ASSEMBLY assembly_name
  *assembly_name*  
  Es el nombre del ensamblado que se desea modificar. *assembly_name* ya debe existir en la base de datos.  
   
- FROM \<especificador_de_ensamblado_de_cliente> | \<bits_de_ensamblado>  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Actualiza un ensamblado a la última copia de los módulos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que conservan su implementación. Esta opción solo se puede utilizar si no hay archivos asociados con el ensamblado especificado.  
   
- \<especificador_de_ensamblado_de_cliente> especifica la ubicación local o de red donde se encuentra el ensamblado que se va a actualizar. La ubicación de red incluye el nombre del equipo, el nombre del recurso compartido y una ruta dentro de ese recurso compartido. *manifest_file_name* especifica el nombre del archivo que contiene el manifiesto del ensamblado.  
+ \<client_assembly_specifier> especifica la ubicación local o de red donde se encuentra el ensamblado que se va a actualizar. La ubicación de red incluye el nombre del equipo, el nombre del recurso compartido y una ruta dentro de ese recurso compartido. *manifest_file_name* especifica el nombre del archivo que contiene el manifiesto del ensamblado.  
 
 > [!IMPORTANT]
 > Azure SQL Database no admite la referencia a un archivo.
   
- \<bits_de_ensamblado> es el valor binario para el ensamblado.  
+ \<assembly_bits> es el valor binario para el ensamblado.  
   
  Deben generarse instrucciones ALTER ASSEMBLY independientes para cada ensamblado dependiente que también debe actualizarse.  
   

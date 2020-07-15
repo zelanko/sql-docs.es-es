@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759130"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
@@ -325,7 +325,7 @@ Las siguientes características del Motor de base de datos de SQL Server se adm
 
 | Característica desusada | Sustituta | Nombre de característica |
 |--------------------|-------------|--------------|
-| Secuencia de llamada a funciones :: | Reemplazado por SELECT *column_list* FROM sys.\<*nombre_función*>().<br /><br />Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
+| Secuencia de llamada a funciones :: | Reemplazada por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
 | Referencias de columnas de tres y de cuatro partes en la lista SELECT. | Los nombres de dos partes son el comportamiento compatible con el estándar.|Nombre de columna de varias partes |
 | Cadena entrecomillada utilizada como alias de columna para una expresión de una lista SELECT:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | Literales de cadena como alias de columna |
 | Procedimientos numerados | Ninguno. No debe usarse. | ProcNums |

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050790"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880394"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (permisos de servidor de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permisos en un servidor. 
   
@@ -33,7 +33,7 @@ ms.locfileid: "68050790"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ]
   
  TO \<grantee_principal> Especifica la entidad de seguridad para la que se concede el permiso.  
   
- AS \<grantor_principal> Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
+ AS \<grantor_principal> Especifica la entidad de seguridad desde la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
  WITH GRANT OPTION  
  Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  

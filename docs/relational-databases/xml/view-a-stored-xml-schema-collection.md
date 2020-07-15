@@ -1,5 +1,6 @@
 ---
 title: Ver una colección de esquemas XML almacenada | Microsoft Docs
+description: Aprenda a ver una colección de esquemas XML almacenada mediante la función de XQuery xml_schema_namespace().
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef32368031876bc14619cd14aa215402c67618b6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 76671186663e4d4173389d9aec19b0c0da2fbf88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729798"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
   
  Por ejemplo, la siguiente consulta recupera una colección de esquemas XML (`ProductDescriptionSchemaCollection`) del esquema relacional de producción de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  

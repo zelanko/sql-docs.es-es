@@ -1,5 +1,6 @@
 ---
 title: Registros de SQL Server Audit | Microsoft Docs
+description: Las auditorías de SQL Server constan de elementos de acción de auditoría, que se registran en un destino de auditoría. Consulte este resumen para conocer los registros que se pueden enviar a un destino.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885311"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Las auditorías constan de cero o más elementos de acción de auditoría que se registran en un *destino*de auditoría. Este destino de auditoría puede ser un archivo binario, el registro de eventos de aplicación Windows o el registro de eventos de seguridad de Windows. Los registros que se envían al destino pueden contener los elementos descritos en la tabla siguiente:  
@@ -29,7 +30,7 @@ ms.locfileid: "82922194"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Fecha y hora en la que se desencadena la acción auditable.|**datetime2**|Sí|  
 |**sequence_no**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías.|**int**|Sí|  
-|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como un predicado, debe convertirse de una cadena de caracteres a un valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Sí|  
+|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como predicado, debe convertirse de cadena de caracteres en valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Sí|  
 |**succeeded**|Indica si la comprobación del permiso de la acción que desencadena el evento de auditoría se ha realizado correctamente o no. |**bit**<br /> - 1 = correcto, <br />0 = error|Sí|  
 |**permission_bitmask**|Cuando es aplicable, muestra los permisos concedidos, denegados, o revocados.|**bigint**|No|  
 |**is_column_permission**|Marca que especifica un permiso de nivel de columna|**bit** <br />- 1 = True, <br />0 = False|No|  

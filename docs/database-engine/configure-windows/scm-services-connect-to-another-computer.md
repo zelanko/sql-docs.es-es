@@ -1,5 +1,6 @@
 ---
 title: Conectarse a otro equipo (Administrador de configuración de SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo administrar los servicios de un equipo remoto. Vea cómo usar Administrador de configuración de SQL Server o SQL Server Management Studio para esta tarea.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651352"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Servicios SCM - Conectarse a otro equipo
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describe cómo conectar con otro equipo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga el primer procedimiento para abrir [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc) de Administración de equipos de Windows, conéctese al equipo y expanda el árbol Servicios y Aplicaciones. Siga el segundo procedimiento para crear un archivo con un vínculo al Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto.
 
@@ -38,7 +39,7 @@ Para iniciar, detener, pausar o reanudar servicios en otro equipo, también pued
 2. En el menú **Acción**, haga clic en **Conectarse a otro equipo**.
 3. En el cuadro de diálogo **Seleccionar equipo** , en el cuadro de texto **Otro equipo** , escriba el nombre del equipo que desea administrar y, a continuación, haga clic en **Aceptar**.
 
-   Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos** \<*equipoRemoto*>.
+   Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos** \<*remotecomputer*>.
 
 4. En el árbol de consola, expanda **Servicios y aplicaciones**y, a continuación, expanda **Administrador de configuración de SQL Server** para administrar los servicios del equipo remoto.
 
@@ -53,7 +54,7 @@ Para iniciar, detener, pausar o reanudar servicios en otro equipo, también pued
 6. En la ventana **Administración de equipos** , haga clic en **Otro equipo**, escriba el nombre del equipo remoto que desea administrar y, a continuación, haga clic en **Finalizar**.
 7. En la ventana **Agregar un complemento independiente** , haga clic en **Cerrar**.
 8. En la ventana **Agregar o quitar complemento** , haga clic en **Aceptar**.
-9. Expanda **Administración de equipos(** _\<nombre de equipo>_ **)** y, luego, **Servicios y Aplicaciones**.
+9. Expanda **Administración de equipos (** _\<computer name>_ **)** y **Servicios y Aplicaciones**.
 10. Haga clic con el botón derecho en **Administrador de configuración de SQL Server**y, después, haga clic en **Nueva ventana desde aquí**.
 11. En el menú **Ventana**, haga clic en **Raíz de consola**para regresar a la primera ventana y eliminar la ventana.
 12. En el menú **Archivo** , haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado con la extensión de archivo **.msc** . Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

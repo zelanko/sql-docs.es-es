@@ -1,5 +1,6 @@
 ---
 title: 'Planeación de la adopción de OLTP en memoria '
+description: Obtenga información sobre cómo la adopción de características para OLTP en memoria en SQL Server afecta a otros aspectos del sistema empresarial.
 ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722415"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planear la adopción de características de OLTP en memoria en SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 En este artículo se describen las maneras en las que la adopción de características en memoria afecta a otros aspectos del sistema empresarial.
@@ -54,7 +55,7 @@ Una tabla optimizada para memoria que contiene 200 GB de datos requiere que más
 
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### <a name="azure-sql-database"></a>Azure SQL Database
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 Para una base de datos hospedada en el servicio en la nube de Base de datos SQL de Azure, el nivel de servicio elegido afecta a la cantidad de memoria activa que la base de datos puede consumir. Debe planear la supervisión del uso de memoria de la base de datos mediante una alerta. Para obtener detalles, consulte:
 
@@ -283,7 +284,7 @@ Cuando el plan de consulta de un procedimiento nativo requiere una fase de agreg
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Diseño de aplicación: transacciones y lógica de reintento
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Diseño de aplicaciones: transacciones y lógica de reintento
 
 Una transacción que implica una tabla optimizada para memoria puede llegar a ser dependiente de otra transacción que implique la misma tabla. Si el recuento de transacciones dependientes supera el máximo permitido se producirá un error en todas las transacciones dependientes.
 

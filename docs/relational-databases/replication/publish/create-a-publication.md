@@ -1,5 +1,6 @@
 ---
 title: Creación de una publicación | Microsoft Docs
+description: Obtenga información sobre cómo crear una publicación en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af5e23db429ddd7dcb41b6bf84c1c513e0332609
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286542"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807893"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Configurar registros de errores de SQL Server | Microsoft Docs
+description: Obtenga información sobre el reciclaje de registros de errores. Vea cómo establecer un tamaño máximo de archivo de registro y cómo establecer el número de archivos de registro anteriores que SQL Server archiva y del que hace una copia de seguridad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 060b3828c772a030ab095ae1bea857dc8eaa3b5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74127480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651375"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Servicios SCM - Configurar registros de errores de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ver o modificar la forma en que se reciclan los registros de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>Para abrir el cuadro de diálogo Configurar registros de errores de SQL Server  

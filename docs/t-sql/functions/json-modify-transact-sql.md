@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752286"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635113"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -47,7 +46,7 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Modificador opcional que especifica que el nuevo valor se debe anexar a la matriz a la que hace referencia *\<json path>* .  
+    Modificador opcional que especifica que el valor nuevo se debe anexar a la matriz a la que hace referencia *\<json path>* .  
   
 - *lax*  
     Especifica que la propiedad a la que hace referencia *\<json path>* no tiene que existir necesariamente. Si la propiedad no está presente, JSON_MODIFY intenta insertar el nuevo valor en la ruta de acceso especificada. Es posible que la inserción no se realice si la propiedad no se puede insertar en la ruta de acceso. Si no se especifica *lax* o *strict*, *lax* es el modo predeterminado.  
@@ -97,7 +96,7 @@ JSON_MODIFY convierte todos los caracteres especiales en el nuevo valor si el ti
   
  **Consultar**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **Consultar**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **Consultar**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **Consultar**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>Consulte también
 
- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

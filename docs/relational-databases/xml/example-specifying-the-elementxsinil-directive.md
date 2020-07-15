@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: Especificar la directiva ELEMENTXSINI | Microsoft Docs'
+title: 'Ejemplo: Especificación de la directiva ELEMENTXSINIL | Microsoft Docs'
+description: Obtenga información sobre cómo especificar la directiva ELEMENTXSINIL en SQL para generar elementos XML para valores NULL donde el atributo xsi:nil es true.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 64e44b8f84f2ff4b908556b31b6088a6a2c77c55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632507"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Ejemplo: Especificar la directiva ELEMENTXSINIL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-elementxsinil-directive"></a>Ejemplo: Especificación de la directiva ELEMENTXSINIL
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cuando se especifica la directiva ELEMENT para recuperar XML centrado en elementos, si la columna tiene algún valor NULL, el modo EXPLICIT no genera el elemento correspondiente. Opcionalmente, se puede especificar la directiva ELEMENTXSINIL para solicitar al elemento que se genera valores NULL donde el atributo **xsi:nil** esté establecido con el valor TRUE.  
   
  La consulta siguiente genera XML que incluye una dirección del empleado. Para las columnas `AddressLine2` y `City` , los nombres de columna especifican la directiva `ELEMENTXSINIL` . Así, se genera el elemento para los valores NULL en las columnas `AddressLine2` y `City` del conjunto de filas.  

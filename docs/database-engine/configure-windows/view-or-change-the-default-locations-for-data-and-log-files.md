@@ -1,5 +1,6 @@
 ---
 title: Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro | Microsoft Docs
+description: Descubra cómo ver o cambiar las ubicaciones predeterminadas para los archivos de datos y de registro de SQL Server. Vea cómo proteger los archivos con listas de control de acceso (ACL).
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a0c720684f0eefa301e9a5387ffda54e349f85d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680788"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
  El mejor procedimiento para proteger los archivos de datos y de registro es asegurarse de que estén protegidos mediante listas de control de acceso (ACL). Establezca las ACL en el directorio raíz en el que se crean los archivos.  
  

@@ -1,25 +1,24 @@
 ---
 title: Copia de seguridad y restauración de una base de datos
-titleSuffix: Azure Data Studio
 description: Información sobre cómo realizar una copia de seguridad y restauración de una base de datos con Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758294"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>Copia de seguridad y restauración de bases de datos con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Copia de seguridad y restauración de bases de datos con Azure Data Studio
 
-En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
+En este tutorial, obtendrá información sobre cómo usar Azure Data Studio para:
 > [!div class="checklist"]
 > * Realizar una copia de seguridad de una base de datos 
 > * Ver el estado de la copia de seguridad
@@ -27,7 +26,7 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](..
 > * Restaurar una base de datos
 > * Ver el estado de la tarea de restauración
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para este tutorial, es necesario usar *TutorialDB* de SQL Server. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 

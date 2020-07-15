@@ -1,7 +1,8 @@
 ---
 title: 'Función MERGE: procedimiento almacenado compilado de forma nativa'
+description: Use este ejemplo para obtener información sobre cómo simular la instrucción MERGE de Transact-SQL en un módulo compilado de forma nativa.
 ms.custom: seo-dt-2019
-ms.date: 11/17/2016
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,132 +12,126 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811b3dfbd79e60d5fb626f814f7b4bf38272fd19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd9a5bb3bf6defa117026f4743a0bb7c86639bcc
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834796"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>Implementación de la funcionalidad MERGE en un procedimiento almacenado compilado de forma nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 Con el ejemplo de código Transact-SQL de esta sección se muestra cómo simular la instrucción T-SQL MERGE en un módulo compilado de forma nativa. En el ejemplo se usa una variable de tabla con una columna de identidad, se itera por las filas en la variable de tabla y, en cada fila, se lleva a cabo una actualización si se cumple la condición o una inserción si la condición no se cumple.
   
 Esta es la instrucción T-SQL MERGE que quisiéramos que se admitiera dentro de un proceso nativo y que el ejemplo de código simula.  
-  
-  
-  
-  
-    MERGE INTO dbo.Table1 t  
-        USING @tvp v  
-        ON t.Column1 = v.c1  
-        WHEN MATCHED THEN   
-            UPDATE SET Column2 = v.c2  
-        WHEN NOT MATCHED THEN  
-            INSERT (Column1, Column2) VALUES (v.c1, v.c2);  
-  
-  
-  
-  
+
+```sql
+MERGE INTO dbo.Table1 t  
+    USING @tvp v  
+    ON t.Column1 = v.c1  
+    WHEN MATCHED THEN   
+        UPDATE SET Column2 = v.c2  
+    WHEN NOT MATCHED THEN  
+        INSERT (Column1, Column2) VALUES (v.c1, v.c2);  
+```
+
 Esta es la instrucción T-SQL MERGE para lograr una solución alternativa y simular la instrucción MERGE.  
-  
-  
-  
-  
-    DROP PROCEDURE IF EXISTS dbo.usp_merge1;  
-    go  
-    DROP TYPE IF EXISTS dbo.Type1;  
-    go  
-    DROP TABLE IF EXISTS dbo.Table1;  
-    go  
-    -----------------------------  
-    -- target table and table type used for the workaround
-    -----------------------------  
-  
-    CREATE TABLE dbo.Table1  
-    (  
-        Column1  INT  NOT NULL  PRIMARY KEY NONCLUSTERED,  
-        Column2  INT  NOT NULL  
-    )   
-        WITH (MEMORY_OPTIMIZED = ON);  
-    go  
-  
-    CREATE TYPE dbo.Type1 AS TABLE  
-    (  
-        c1  INT  NOT NULL,  
-        c2  INT  NOT NULL,  
-  
-        RowID    INT  NOT NULL  IDENTITY(1,1),  
-        INDEX ix_RowID HASH (RowID) WITH (BUCKET_COUNT=1024)  
-    )   
-        WITH (MEMORY_OPTIMIZED = ON);  
-    go  
-    -----------------------------  
-    -- stored procedure implementing the workaround
-    -----------------------------  
-  
-    CREATE PROCEDURE dbo.usp_merge1   
-        @tvp1 dbo.Type1 READONLY  
-        WITH  
-        NATIVE_COMPILATION, SCHEMABINDING  
-    AS   
-    BEGIN ATOMIC  
-        WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-              LANGUAGE = N'us_english')  
 
-        DECLARE  @i INT = 1,  @c1 INT,  @c2 INT;  
-    
-        WHILE @i > 0  
-        BEGIN  
-            SELECT @c1 = c1, @c2 = c2  
-                FROM @tvp1  
-                WHERE RowID = @i;  
-    
-            --test whether the row exists in the TVP; if not, we end the loop
+```sql
+DROP PROCEDURE IF EXISTS dbo.usp_merge1;  
+go  
+DROP TYPE IF EXISTS dbo.Type1;  
+go  
+DROP TABLE IF EXISTS dbo.Table1;  
+go  
+-----------------------------  
+-- target table and table type used for the workaround
+-----------------------------  
+
+CREATE TABLE dbo.Table1  
+(  
+    Column1  INT  NOT NULL  PRIMARY KEY NONCLUSTERED,  
+    Column2  INT  NOT NULL  
+)   
+    WITH (MEMORY_OPTIMIZED = ON);  
+go  
+
+CREATE TYPE dbo.Type1 AS TABLE  
+(  
+    c1  INT  NOT NULL,  
+    c2  INT  NOT NULL,  
+
+    RowID    INT  NOT NULL  IDENTITY(1,1),  
+    INDEX ix_RowID HASH (RowID) WITH (BUCKET_COUNT=1024)  
+)   
+    WITH (MEMORY_OPTIMIZED = ON);  
+go  
+-----------------------------  
+-- stored procedure implementing the workaround
+-----------------------------  
+
+CREATE PROCEDURE dbo.usp_merge1   
+    @tvp1 dbo.Type1 READONLY  
+    WITH  
+    NATIVE_COMPILATION, SCHEMABINDING  
+AS   
+BEGIN ATOMIC  
+    WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
+            LANGUAGE = N'us_english')  
+
+    DECLARE  @i INT = 1,  @c1 INT,  @c2 INT;  
+
+    WHILE @i > 0  
+    BEGIN  
+        SELECT @c1 = c1, @c2 = c2  
+            FROM @tvp1  
+            WHERE RowID = @i;  
+
+        --test whether the row exists in the TVP; if not, we end the loop
+        IF @@ROWCOUNT=0  
+            SET @i = 0
+        ELSE
+        BEGIN
+            -- try the update
+            UPDATE dbo.Table1  
+                SET   Column2 = @c2  
+                WHERE Column1 = @c1;  
+
+            -- if there was no row to update, we insert
             IF @@ROWCOUNT=0  
-                SET @i = 0
-            ELSE
-            BEGIN
-                -- try the update
-                UPDATE dbo.Table1  
-                    SET   Column2 = @c2  
-                    WHERE Column1 = @c1;  
-    
-                -- if there was no row to update, we insert
-                IF @@ROWCOUNT=0  
-                    INSERT INTO dbo.Table1 (Column1, Column2)  
-                        VALUES (@c1, @c2);  
-    
-                SET @i += 1
-            END
-        END  
-    END  
-    go  
-    -----------------------------  
-    -- test to validate the functionality
-    -----------------------------  
-  
-    INSERT dbo.Table1 VALUES (1,2);  
-    go  
-  
-    SELECT N'Before-MERGE' AS [Before-MERGE], Column1, Column2  
-        FROM dbo.Table1;  
-    go  
-  
-    DECLARE @tvp1 dbo.Type1;  
-  
-    INSERT @tvp1 (c1, c2) VALUES (1,33), (2,4);  
-    EXECUTE dbo.usp_merge1 @tvp1;  
-    go  
-  
-    SELECT N'After--MERGE' AS [After--MERGE], Column1, Column2  
-        FROM dbo.Table1;  
-    go  
-    -----------------------------  
+                INSERT INTO dbo.Table1 (Column1, Column2)  
+                    VALUES (@c1, @c2);  
 
-  
+            SET @i += 1
+        END
+    END  
+END  
+go  
+-----------------------------  
+-- test to validate the functionality
+-----------------------------  
+
+INSERT dbo.Table1 VALUES (1,2);  
+go  
+
+SELECT N'Before-MERGE' AS [Before-MERGE], Column1, Column2  
+    FROM dbo.Table1;  
+go  
+
+DECLARE @tvp1 dbo.Type1;  
+
+INSERT @tvp1 (c1, c2) VALUES (1,33), (2,4);  
+EXECUTE dbo.usp_merge1 @tvp1;  
+go  
+
+SELECT N'After--MERGE' AS [After--MERGE], Column1, Column2  
+    FROM dbo.Table1;  
+go  
+```
+
+```console
     /****  Actual output:  
   
     Before-MERGE   Column1   Column2  
@@ -146,8 +141,8 @@ Esta es la instrucción T-SQL MERGE para lograr una solución alternativa y simu
     After--MERGE      1        33  
     After--MERGE      2         4  
     ****/  
-  
-  
+```
+
 ## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Construcciones de Transact-SQL no admitidas en In-Memory OLTP.](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  

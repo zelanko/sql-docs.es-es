@@ -1,25 +1,24 @@
 ---
 title: Habilitar el widget de ejemplo de cinco consultas más lentas
-titleSuffix: Azure Data Studio
 description: En este tutorial se muestra cómo habilitar el widget de ejemplo de cinco consultas más lentas en el panel de base de datos.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774546"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Agregar el widget de ejemplo *cinco consultas más lentas* al panel de base de datos
 
-En este tutorial se muestra el proceso de incorporación de uno de los widgets de ejemplo integrados de [!INCLUDE[name-sos](../includes/name-sos-short.md)] al *panel de base de datos* para ver rápidamente las cinco consultas más lentas de una base de datos. También se aprende a ver los detalles de las consultas lentas y los planes de consulta mediante características de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. En este tutorial, aprenderá lo siguiente:
+En este tutorial se muestra el proceso de incorporación de uno de los widgets de ejemplo integrados de Azure Data Studio al *panel de base de datos* para ver rápidamente las cinco consultas más lentas de una base de datos. También obtendrá información sobre cómo ver los detalles de las consultas lentas y los planes de consulta mediante características de Azure Data Studio. En este tutorial, aprenderá lo siguiente:
 
 > [!div class="checklist"]
 > * Habilitar Almacén de consultas en una base de datos
@@ -27,9 +26,9 @@ En este tutorial se muestra el proceso de incorporación de uno de los widgets d
 > * Ver detalles sobre las consultas más lentas de la base de datos
 > * Ver planes de ejecución de consulta para las consultas lentas
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye varios widgets de información listos para usar. En este tutorial se muestra cómo agregar el widget *query-data-store-db-insight*, pero los pasos son básicamente los mismos para agregar cualquier widget.
+Azure Data Studio incluye varios widgets de conclusiones listos para usar. En este tutorial se muestra cómo agregar el widget *query-data-store-db-insight*, pero los pasos son básicamente los mismos para agregar cualquier widget.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
@@ -117,9 +116,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
    ![Cuadro de diálogo de detalles de Información](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Haga clic con el botón derecho en la celda situada a la derecha de **query_sql_txt** en **Detalles del elemento** y haga clic en **Copiar celda**.
-
-4. Cierre el panel **Información**.
+3. Cierre el panel **Información**.
 
 ## <a name="view-the-query-plan"></a>Ver el plan de consulta
 

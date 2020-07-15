@@ -2,7 +2,7 @@
 title: 'Tutorial: Always Encrypted con enclaves seguros con SSMS'
 description: En este tutorial aprenderá a crear un entono básico de Always Encrypted con enclaves seguros, a cifrar los datos en contexto y a emitir consultas enriquecidas en columnas cifradas mediante SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288699"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807727"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -27,7 +27,7 @@ En este tutorial se explica cómo empezar a trabajar con los [enclaves seguros d
 - Cómo crear un entorno básico para probar y evaluar Always Encrypted con enclaves seguros.
 - Cómo cifrar datos in situ y emitir consultas enriquecidas en columnas cifradas mediante SQL Server Management Studio (SSMS).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para empezar a trabajar con Always Encrypted con enclaves seguros, necesita al menos dos equipos (pueden ser máquinas virtuales):
 
@@ -115,14 +115,14 @@ En este paso, deberá configurar el equipo con SQL Server como un host protegido
 
 3. Reinicie el equipo con SQL Server cuando se le pida para completar la instalación de Hyper-V.
 
-4. Si el equipo de SQL Server es una máquina virtual o si se trata de una máquina física heredad que no admite el arranque seguro de UEFI o no está equipada con IOMMU, se debe quitar el requisito de VBS de características de seguridad de plataforma.
-    1. Quite el requisito en el Registro de Windows.
+4. Si el equipo con SQL Server es una máquina virtual, una máquina física que no admite el arranque seguro de UEFI o una máquina física que no está equipada con una unidad IOMMU, tendrá que quitar el requisito de VBS de las características de seguridad de plataforma.
+    1. Para quitar el requisito de arranque seguro e IOMMU, ejecute el comando siguiente en el equipo con SQL Server en una consola de PowerShell con privilegios elevados:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Vuelva a reiniciar el equipo para que VBS se ponga en línea con los requisitos reducidos.
+    1. Vuelva a reiniciar el equipo con SQL Server para que VBS se ponga en línea con los requisitos reducidos.
 
         ```powershell
        Restart-Computer

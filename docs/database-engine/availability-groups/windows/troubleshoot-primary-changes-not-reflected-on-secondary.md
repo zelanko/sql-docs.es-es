@@ -1,6 +1,6 @@
 ---
 title: Cambios no visibles en la réplica del grupo de disponibilidad secundario
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: Obtenga información sobre cómo determinar por qué los cambios de una réplica principal no se reflejan en la secundaria de un grupo de disponibilidad Always On.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243007"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888007"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinación de por qué los cambios de la réplica principal no se reflejan en una réplica secundaria de un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado. En este caso, se presupone que el estado de sincronización de su disponibilidad es correcto. En la mayoría de casos, este comportamiento se resuelve pasados unos minutos.  
   
  Si los cambios aún no se reflejan en la réplica secundaria pasados unos minutos, puede haber un cuello de botella en el flujo de trabajo de sincronización. La ubicación del cuello de botella depende de si la réplica secundaria se establece en confirmación sincrónica o asincrónica.  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  Si realmente el subproceso de la fase de puesta al día se retrasa, debe investigar la causa principal de la degradación del rendimiento en la réplica secundaria. Si se produce una contención de E/S en la carga de trabajo de los informes, puede usar [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar, hasta cierto punto, los ciclos de CPU que usa la carga de trabajo de informes para controlar indirectamente los ciclos de E/S realizados. Por ejemplo, si la carga de trabajo de los informes está consumiendo un 10 % de la CPU, pero la carga de trabajo está enlazada a E/S, puede utilizar Resource Governor para limitar el uso de recursos de la CPU al 5 % y regular así la carga de trabajo de lectura. De esta forma, se reduce el impacto en la E/S.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Solucionar problemas de rendimiento en SQL Server 2008) 
+ [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Solucionar problemas de rendimiento en SQL Server 2008)
   
   

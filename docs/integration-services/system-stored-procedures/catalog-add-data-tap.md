@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749773"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una derivación de datos en el resultado de un componente de un flujo de datos de paquete, para una instancia de la ejecución.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración.  
   
- De forma predeterminada, el archivo se almacena en la carpeta \<*unidad*>:\Archivos de programa\Microsoft SQL Server\130\DTS\DataDumps.  
+ De forma predeterminada, el archivo se almacena en la carpeta \<*drive*>:\Archivos de programa\Microsoft SQL Server\130\DTS\DataDumps.  
   
  El parámetro *data_filename* es de tipo **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Devuelve el identificador de la derivación de datos. El parámetro *data_tap_id* es de tipo **bigint**.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se crea una derivación de datos en la ruta de flujo de datos, `'Paths[OLE DB Source.OLE DB Source Output]`, en la tarea de flujo de datos, `\Package\Data Flow Task`. Los datos derivados se almacenan en el archivo `output0.txt` en la carpeta DataDumps (\<*unidad*>:\Archivos de programa\Microsoft SQL Server\130\DTS\DataDumps).  
+ En el ejemplo siguiente, se crea una derivación de datos en la ruta de flujo de datos, `'Paths[OLE DB Source.OLE DB Source Output]`, en la tarea de flujo de datos, `\Package\Data Flow Task`. Los datos derivados se almacenan en el archivo `output0.txt`, en la carpeta DataDumps (\<*drive*>:\Archivos de programa\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  

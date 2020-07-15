@@ -1,5 +1,6 @@
 ---
 title: Recolección de elementos no utilizados de OLTP en memoria | Microsoft Docs
+description: Obtenga información sobre la recolección de elementos no utilizados en OLTP en memoria en SQL Server. Si una transacción que ya no está activa elimina una fila, está sujeta a la recolección de elementos no utilizados.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723142"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Recolección de elementos no utilizados de OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una fila de datos se considera obsoleta si la eliminó una transacción que ya no está activa. Una fila obsoleta es válida para la recolección de elementos no utilizados. A continuación se indican las características de la recolección de elementos no utilizados de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]:  
   
 -   No bloqueante. La recolección de elementos no utilizados se reparte uniformemente en el tiempo y tiene un impacto mínimo sobre la carga de trabajo.  

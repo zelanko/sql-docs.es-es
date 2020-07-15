@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001105"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892321"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar un clúster de Ubuntu y un recurso de grupo de disponibilidad
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este documento, se explica cómo crear un clúster de tres nodos en Ubuntu y cómo agregar un grupo de disponibilidad creado anteriormente como un recurso en el clúster. Para lograr una alta disponibilidad, un grupo de disponibilidad en Linux necesita tres nodos (vea [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md) [Alta disponibilidad y protección de datos para configuraciones de grupos de disponibilidad]).
 

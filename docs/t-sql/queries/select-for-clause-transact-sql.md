@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736295"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT: cláusula FOR (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use la cláusula FOR para especificar una de las siguientes opciones para los resultados de la consulta.
   
@@ -92,7 +92,7 @@ JSON
  Especifica que se permiten las actualizaciones mientras se visualizan los datos en el cursor del modo de exploración de DB-Library. Una tabla se puede explorar en una aplicación si la tabla incluye una columna **timestamp**, la tabla tiene un índice único y la opción FOR BROWSE está al final de las instrucciones SELECT enviadas a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
-> No se puede usar \<lock_hint> HOLDLOCK en una instrucción SELECT que incluya la opción FOR BROWSE.
+> No se puede usar HOLDLOCK \<lock_hint> en una instrucción SELECT que incluya la opción FOR BROWSE.
   
  FOR BROWSE no puede aparecer en instrucciones SELECT combinadas mediante el operador UNION.  
   

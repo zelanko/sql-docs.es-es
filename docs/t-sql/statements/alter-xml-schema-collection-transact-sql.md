@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895548"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega componentes de esquema nuevos a una colección de esquemas XML ya existente.  
   
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Observaciones  
  Utilice la instrucción ALTER XML SCHEMA COLLECTION para agregar esquemas XML nuevos cuyos espacios de nombre no se encuentren todavía en la colección de esquemas XML o para agregar componentes nuevos a espacios de nombre ya existentes en la colección.  
   
- En el siguiente ejemplo se agrega un \<element> nuevo al espacio de nombres `https://MySchema/test_xml_schema` ya existente en la colección `MyColl`.  
+ En el siguiente ejemplo se agrega un \<element> nuevo al espacio de nombres `https://MySchema/test_xml_schema` existente en la colección `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  

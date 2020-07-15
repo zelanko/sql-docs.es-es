@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ea3041fbd2389a64d3cb8933fd11eaa6786144
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000170"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894475"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitación o deshabilitación de la característica de grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Habilitar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es un requisito previo para que una instancia de servidor use grupos de disponibilidad. Para poder crear y configurar un grupo de disponibilidad, la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se debe haber habilitado en la cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará una réplica de disponibilidad para uno o varios grupos de disponibilidad.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68000170"
   
 2.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y haga clic en **Administrador de configuración de SQL Server**.  
   
-3.  En el **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en SQL Server ( **\<** _instance name_ **>)** , donde **\<** _instance name_ **>** es el nombre de una instancia del servidor local para la que quiera habilitar los grupos de disponibilidad AlwaysOn, y haga clic en **Propiedades**.  
+3.  En el **Administrador de configuración de SQL Server**,haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en SQL Server ( **\<**_instance name_**>)** , donde **\<**_instance name_**>** es el nombre de una instancia del servidor local para la que quiera habilitar los grupos de disponibilidad Always On, y haga clic en **Propiedades.**  
   
 4.  Seleccione la pestaña **Alta disponibilidad de AlwaysOn**.  
   
@@ -181,7 +181,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y haga clic en **Administrador de configuración de SQL Server**.  
   
-3.  En el **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en SQL Server ( **\<** _instance name_ **>)** , donde **\<** _instance name_ **>** es el nombre de una instancia del servidor local para la que quiera deshabilitar los grupos de disponibilidad AlwaysOn, y haga clic en **Propiedades**.  
+3.  En el **Administrador de configuración de SQL Server**,haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en SQL Server ( **\<**_instance name_**>)** , donde **\<**_instance name_**>** es el nombre de una instancia del servidor local para la que quiera deshabilitar los grupos de disponibilidad Always On, y haga clic en **Propiedades.**  
   
 4.  En la pestaña **Alta disponibilidad de AlwaysOn**, desactive la casilla **Habilitar los grupos de disponibilidad AlwaysOn** y haga clic en **Aceptar**.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999440"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858922"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ Con los enclaves seguros, Always Encrypted protege la privacidad de la informaci
 
 - **Cifrado en contexto**: las operaciones criptográficas sobre información confidencial, como el cifrado inicial de datos o la rotación de una clave de cifrado de columna, se realizan dentro del enclave seguro y no requieren sacar los datos de la base de datos. Puede genera cifrado en contexto con la instrucción Transact-SQL ALTER TABLE y no es necesario usar herramientas, como el Asistente para Always Encrypted en SSMS o el cmdlet Set-SqlColumnEncryption de PowerShell.
 
-- **Cálculos completos (versión preliminar)** : las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
+- **Cálculos completos**: las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de rangos, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios en los que es necesario que esos cálculos se realicen dentro del sistema de base de datos.
 
 ## <a name="secure-enclave-attestation"></a>Atestación de un enclave seguro
 

@@ -1,5 +1,6 @@
 ---
 title: Información general de administración de claves de Always Encrypted | Microsoft Docs
+description: 'Aprenda a administrar los dos tipos de claves criptográficas que Always Encrypted usa para proteger los datos en SQL Server: clave de cifrado de columna y clave maestra de columna.'
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784007"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Información general de administración de claves de Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa dos tipos de claves criptográficas para proteger los datos: una clave para cifrar los datos y otra para cifrar la clave que cifra los datos. La clave de cifrado de columnas cifra los datos, mientras que la clave maestra de columna cifra la clave de cifrado de columnas. En este artículo se proporciona información general detallada para administrar estas claves de cifrado.  
@@ -58,7 +59,7 @@ Teniendo en cuenta los roles anteriores, hay dos maneras de realizar tareas de a
 ## <a name="managing-keys-with-role-separation"></a>Administración de claves con separación de roles
 Cuando las claves de Always Encrypted se administran con separación de roles, los roles de administrador de seguridad y DBA están asignados a personas diferentes de una organización. Un proceso de administración de claves con separación de roles garantiza que los DBA no tengan acceso a las claves o a los almacenes de claves que contienen las claves reales y que los administradores de seguridad no tengan acceso a la base de datos que contiene información confidencial. Se recomienda que use la administración de claves con separación de roles si su objetivo es asegurarse de que los DBA de la organización no tengan acceso a información confidencial. 
 
-**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en equipos que hospeden un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
+**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en los mismos equipos que hospedan un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
 
 ## <a name="managing-keys-without-role-separation"></a>Administración de claves sin separación de roles
 Cuando las claves de Always Encrypted se administran sin separación de roles, una misma persona puede asumir los roles de administrador de seguridad y DBA, lo que implica que dicha persona debe tener acceso a las claves, los almacenes de claves y los metadatos de clave y debe poder administrarlos. La administración de claves sin separación de roles está recomendada para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es impedir que los administradores de la nube (pero no los DBA locales) accedan a información confidencial.

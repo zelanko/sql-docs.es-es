@@ -1,5 +1,6 @@
 ---
 title: Obtener acceso a los datos FILESTREAM con OpenSqlFilestream | Microsoft Docs
+description: Descubra cómo obtener acceso a los datos FILESTREAM con OpenSqlFilestream. Vea ejemplos en los que se muestra cómo usar esta API para obtener un manipulador de Win32.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 826e0a047e119b186905f9d3f2d56170aa7b9249
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f2f87e037f16d2d0dc46d9f677403076148868b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85745178"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Obtener acceso a los datos FILESTREAM con OpenSqlFilestream
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La API OpenSqlFilestream obtiene un identificador de archivos de Win32 compatible para un objeto binario grande (BLOB) de FILESTREAM almacenado en el sistema de archivos. El identificador se puede pasar a cualquiera de las API de Win32 siguientes: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si pasa este identificador a cualquier otra API de Win32, se devuelve un error de ERROR_ACCESS_DENIED. El identificador se debe cerrar al pasarlo a la API Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) antes de que la transacción se confirme o se revierta. Si no se puede cerrar el identificador, se producirán pérdidas de los recursos del lado servidor.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  La API OpenSqlFilestream obtiene un identificador de archivos de Win32 compatible para un objeto binario grande (BLOB) de FILESTREAM almacenado en el sistema de archivos. El identificador se puede pasar a cualquiera de las API de Win32 siguientes: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si pasa este identificador a cualquier otra API de Win32, se devuelve un error de ERROR_ACCESS_DENIED. El identificador se debe cerrar al pasarlo a la API Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) antes de que la transacción se confirme o se revierta. Si no se puede cerrar el identificador, se producirán pérdidas de los recursos del lado servidor.  
   
  Todo el acceso al contenedor de datos FILESTREAM debe realizarse en una transacción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] También puede ejecutar instrucciones en la misma transacción. Esto permite mantener la coherencia entre los datos SQL y los datos de BLOB FILESTREAM.  
   

@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895316"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 A partir de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] se admite en Linux y en Windows. Al igual que las implementaciones basadas en Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], las bases de datos y las instancias de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deben tener una alta disponibilidad en Linux. En este artículo se abordan los aspectos técnicos de la planeación e implementación de bases de datos e instancias de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux de alta disponibilidad, así como algunas de las diferencias con respecto a las instalaciones basadas en Windows. Como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] puede ser una novedad para los profesionales de Linux, así como Linux para los profesionales de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], el artículo a veces reflejará conceptos que pueden ser familiares para algunos y desconocidos para otros.
 
@@ -164,15 +164,18 @@ En esta sección se documentan los conceptos y la terminología comunes de una i
 #### <a name="node"></a>Nodo
 Un nodo es un servidor que participa en el clúster. Un clúster de Pacemaker admite de forma nativa hasta 16 nodos. Este número puede ser mayor si Corosync no se está ejecutando en otros nodos, pero Corosync es necesario con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Por lo tanto, el número máximo de nodos que un clúster puede tener en una configuración basada en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] es 16; este es el límite de Pacemaker, y no tiene nada que ver con los límites máximos impuestos por [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en relación con los grupos de disponibilidad y las instancias de clúster de conmutación por error. 
 
-#### <a name="resource"></a>Resource
+#### <a name="resource"></a>Recurso
 Tanto en WSFC como en un clúster de Pacemaker existe el concepto de recurso. Un recurso es una funcionalidad específica que se ejecuta en el contexto del clúster, como un disco o una dirección IP. Por ejemplo, en Pacemaker se pueden crear recursos de grupo de disponibilidad y de instancia de clúster de conmutación por error. Esto no difiere de lo que se lleva a cabo en un WSFC, donde hay un recurso de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para una instancia de clúster de conmutación por error o para un grupo de disponibilidad al configurar un grupo de disponibilidad, pero no es exactamente lo mismo, dadas las diferencias subyacentes en cuanto a la forma en que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] se integra con Pacemaker.
 
 Pacemaker tiene recursos estándar y de clonación. Los recursos de clonación son aquellos que se ejecutan simultáneamente en todos los nodos. Un ejemplo sería una dirección IP que se ejecuta en varios nodos con fines de equilibrio de carga. Cualquier recurso que se cree para instancias de clúster de conmutación por error usa un recurso estándar, ya que solo un nodo puede hospedar una instancia de clúster de conmutación por error en un momento dado.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 Cuando se crea un grupo de disponibilidad, es necesaria una forma especial del recurso de clonación, denominada recurso multiestado. Aunque un grupo de disponibilidad solo tiene una réplica principal, el grupo de disponibilidad en sí se está ejecutando en todos los nodos en los que esté configurada para ejecutarse, y puede permitir potencialmente cosas como el acceso de solo lectura. Dado que se trata de un uso "activo" del nodo, en los recursos existe el concepto de doble estado: maestro y principal/secundario. Para más información, vea [Recursos multiestado: recursos que tienen varios modos](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Conjuntos/Grupos de recursos
-De forma similar a los roles de un WSFC, en un clúster de Pacemaker existe el concepto de un grupo de recursos. Un grupo de recursos (denominado conjunto en SLES) es una colección de recursos que funcionan conjuntamente y que pueden conmutar por error de un nodo a otro como una sola unidad. Los grupos de recursos no pueden contener recursos que estén configurados como principal/secundario; por lo tanto, no se pueden usar con grupos de disponibilidad. Aunque un grupo de recursos se puede usar con instancias de clúster de conmutación por error, esta configuración no suele ser recomendable.
+
+De forma similar a los roles de un WSFC, en un clúster de Pacemaker existe el concepto de un grupo de recursos. Un grupo de recursos (denominado _conjunto_ en SLES) es una colección de recursos que funcionan de manera conjunta y que pueden conmutar por error de un nodo a otro como una sola unidad. Los grupos de recursos no pueden contener recursos que estén configurados como principal o secundario; por tanto, no se pueden usar para grupos de disponibilidad. Aunque un grupo de recursos se puede usar con instancias de clúster de conmutación por error, esta configuración no suele ser recomendable.
 
 #### <a name="constraints"></a>Restricciones
 Los WSFC tienen varios parámetros de recursos, así como dependencias, que indican al WSFC la relación principal/secundario entre dos recursos diferentes. Una dependencia es simplemente una regla que indica al WSFC qué recurso debe estar en línea en primer lugar.

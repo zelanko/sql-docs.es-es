@@ -1,5 +1,6 @@
 ---
 title: FileTables (SQL Server) | Microsoft Docs
+description: Explore las ventajas y la funcionalidad de FileTables, la característica de SQL Server que usa una estructura de directorios para almacenar los archivos. Aprenda a trabajar con FileTables.
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f694511c2f79bcaf86d7756410a2cbc286b968a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767956"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La característica FileTable proporciona compatibilidad con el espacio de nombres de archivo de Windows y con las aplicaciones Windows para los datos de archivo almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable permite que una aplicación pueda integrar sus componentes de administración de datos y almacenamiento, así como proporcionar servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrados (incluidas la búsqueda de texto completo y la búsqueda semántica) en datos y metadatos no estructurados.  
   
  Es decir, ahora puede almacenar archivos y documentos en tablas especiales de FileTables denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tener acceso a ellos desde las aplicaciones Windows como si estuviesen almacenados en el sistema de archivos, sin efectuar cambios en las aplicaciones cliente.  

@@ -1,5 +1,6 @@
 ---
 title: Usar el modo RAW con FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo el uso del modo RAW con la cláusula FOR XML en una consulta SQL transforma los datos XML resultantes.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784671"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar el modo RAW con FOR XML
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El modo RAW transforma cada fila del conjunto de resultados de la consulta en un elemento XML que tiene el identificador genérico \<row> o el nombre del elemento, que se proporciona de manera opcional. De forma predeterminada, cada valor de columna del conjunto de filas que no es NULL se asigna a un atributo del elemento \<row>. Si se agrega la directiva ELEMENTS a la cláusula FOR XML, cada valor de columna se asigna a un subelemento del elemento \<row>. Opcionalmente, junto con la directiva ELEMENTS se puede especificar la opción XSINIL para asignar los valores de columna NULL del conjunto de resultados a un elemento que tenga el atributo, `xsi:nil="true"`.
   
@@ -38,19 +39,19 @@ El modo RAW transforma cada fila del conjunto de resultados de la consulta en un
 ## <a name="in-this-section"></a>En esta sección  
  En esta sección se incluyen los ejemplos siguientes:  
   
--   [Ejemplo: Recuperar información de modelos de productos como XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [Ejemplo: Recuperación de información de modelos de productos como XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Ejemplo: Especificar XSINIL con la directiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Ejemplo: Especificación de XSINIL con la directiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Ejemplo: Recuperar datos binarios](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [Ejemplo: Recuperación de datos binarios](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [Ejemplo: Cambiar el nombre del elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [Ejemplo: Cambio del nombre del elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Ejemplo: Especificación de un elemento raíz para el XML generado por FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Ejemplo: Consultar columnas de tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [Ejemplo: Consulta de columnas de tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

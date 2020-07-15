@@ -1,5 +1,6 @@
 ---
 title: Mejora de rendimiento de OLTP en memoria
+description: En este ejemplo de código, se muestra el rápido rendimiento de las tablas optimizadas para memoria con Transact-SQL interpretado y un procedimiento almacenado compilado de forma nativa.
 ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d5cccaa99ae0343c3f6c99cd7f7bcfb249df0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723256"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: Mejora de rendimiento de OLTP en memoria
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En el ejemplo de código de este tema se muestra el rápido funcionamiento de las tablas optimizadas para memoria. La mejora del rendimiento es evidente cuando el acceso a los datos de una tabla optimizada para memoria se realiza desde [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional interpretado. Esta mejora del rendimiento es incluso mayor cuando el acceso a los datos de una tabla optimizada para memoria se realiza a través de un procedimiento almacenado compilado de forma nativa (NCSProc).  
  
@@ -67,7 +68,7 @@ go
   
  Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas con optimización para memoria y un NCSProc.  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas optimizadas para memoria y un NCSProc  
  En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Haga lo siguiente:  
   
 1.  Use SSMS.exe para conectarse a la nueva base de datos.  

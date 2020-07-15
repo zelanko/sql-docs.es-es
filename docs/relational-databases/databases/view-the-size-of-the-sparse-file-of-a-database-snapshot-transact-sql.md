@@ -1,10 +1,10 @@
 ---
 title: Visualización del tamaño del archivo disperso de una instantánea de base de datos (T-SQL)
+description: Use Transact-SQL para comprobar que un archivo de base de datos de SQL Server es un archivo disperso y encontrar su tamaño real y máximo. Las instantáneas de base de datos usan archivos dispersos.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727534"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Ver el tamaño del archivo disperso de una instantánea de base de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo usar [!INCLUDE[tsql](../../includes/tsql-md.md)] para comprobar que un archivo de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un archivo disperso y para determinar su tamaño real y máximo. Las instantáneas de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan archivos dispersos, que son una característica del sistema de archivos NTFS.  
   
 > [!NOTE]  
@@ -47,7 +48,7 @@ ms.locfileid: "74055207"
 > [!NOTE]  
 >  El tamaño de los archivos dispersos aumenta en incrementos de 64 kilobytes (KB), por lo que siempre es un múltiplo de 64 KB.  
   
- Para ver el número de bytes que cada archivo disperso de una instantánea está usando actualmente en el disco, consulte la columna **size_on_disk_bytes** de la vista de administración dinámica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ de ](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
+ Para ver el número de bytes que cada archivo disperso de una instantánea está usando actualmente en el disco, consulte la columna **size_on_disk_bytes** de la vista de administración dinámica [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para ver el espacio en disco que usa un archivo disperso, haga clic con el botón derecho en el archivo en Microsoft Windows, haga clic en **Propiedades**y consulte el valor de **Tamaño en disco** .  
   

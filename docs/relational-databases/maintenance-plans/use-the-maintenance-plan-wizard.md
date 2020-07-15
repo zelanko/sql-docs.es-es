@@ -1,5 +1,6 @@
 ---
 title: Usar el Asistente para planes de mantenimiento | Microsoft Docs
+description: Obtenga información sobre cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de SQL Server.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758979"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
     
  
@@ -374,7 +375,7 @@ Casilla**Incluir índices**
      Especifique el nombre del contenedor de Azure Storage.  
   
      **Prefijo URL:**  
-     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  
+     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<storage account>.blob.core.windows.net**.  
   
      Cuadro**Extensión del archivo de copia de seguridad**  
      Especifique la extensión que se va a utilizar para los archivos de copia de seguridad. El valor predeterminado es .bak.  

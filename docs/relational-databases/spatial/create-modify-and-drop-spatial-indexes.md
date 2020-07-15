@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751117"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un índice espacial puede realizar determinadas operaciones de manera más eficaz en una columna del tipo de datos **geometry** o **geography** (una *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
   
  Existen varias restricciones para la creación de índices espaciales. Para obtener más información, vea [Restricciones en los índices espaciales](#restrictions) más adelante en este tema.  
@@ -56,7 +56,7 @@ ms.locfileid: "68048708"
   
 7.  Para especificar la columna espacial que desee indizar, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de** *\<nombre tabla>* , seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Seleccionar columnas de** *\<table name>* , seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
   
 9. Compruebe su selección de columna en la cuadrícula **Columnas de clave de índice** .  
   

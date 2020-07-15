@@ -1,7 +1,7 @@
 ---
 title: 'Inicio rápido: Copia de seguridad y restauración de una base de datos'
 titleSuffix: SQL Server
-description: En este inicio rápido se muestra cómo realizar una copia de seguridad de una base de datos SQL Server local y restaurarla.
+description: En este artículo, obtendrá información sobre cómo crear una nueva base de datos, realizar una copia de seguridad de la base de datos y restaurar la copia de seguridad en SQL Server.
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669956"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Inicio rápido: Copias de seguridad y restauración de bases de datos de SQL Server en el entorno local
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este inicio rápido, creará una base de datos, realizará una simple copia de seguridad de ella y luego la restaurará. 
 
 Para un procedimiento más detallado, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](create-a-full-database-backup-sql-server.md) y [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md) (Restaurar una copia de seguridad con SSMS).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 Para completar este inicio rápido, necesitará lo siguiente: 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

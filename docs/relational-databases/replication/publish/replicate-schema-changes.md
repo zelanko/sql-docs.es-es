@@ -1,5 +1,6 @@
 ---
 title: Replicación de cambios de esquema | Microsoft Docs
+description: Obtenga información sobre cómo replicar cambios de esquema en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 956ce42f5fc4d9d367e496b4ff3f22f0c6ee24da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e81c7b72962f02f9179bf458b84a1cd9dac9e411
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287593"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807227"
 ---
 # <a name="replicate-schema-changes"></a>Replicar cambios de esquema
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

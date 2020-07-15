@@ -1,5 +1,6 @@
 ---
 title: Columna de evento de seguimiento ObjectType | Microsoft Docs
+description: Consulte los valores posibles de la columna de evento de seguimiento Object Type, que se utiliza en una variedad de eventos de seguimiento en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755969"
 ---
 # <a name="objecttype-trace-event-column"></a>Columna de evento de seguimiento ObjectType
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La columna de evento de seguimiento Object Type se utiliza en una variedad de eventos de seguimiento. En este tema se describen los valores posibles de esta columna y sus definiciones asociadas.  
   
 ## <a name="object-type-column-values"></a>Valores de la columna Object Type  

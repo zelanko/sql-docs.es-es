@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773912"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Crear una instantánea para una publicación de mezcla con filtros con parámetros
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En este tema se describe cómo se crea una instantánea de una publicación de combinación con filtros con parámetros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
 
 Cuando se utilizan filtros de fila con parámetros en las publicaciones de combinación, la replicación inicializa cada suscripción con una instantánea en dos partes. Primero, se crea una instantánea de esquema que contiene todos los objetos necesarios para la replicación y el esquema de los objetos publicados, pero no los datos. Después, se inicializa cada suscripción con una instantánea que incluye los objetos y el esquema de la instantánea de esquema, y los datos que pertenecen a la partición de la suscripción. Si hay más de una suscripción que recibe una partición determinada (es decir, que reciben el mismo esquema y los mismos datos), la instantánea de esa partición se creará una sola vez; se inicializarán varias suscripciones con la misma instantánea. Para obtener más información acerca de los filtros de fila con parámetros, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -59,7 +59,7 @@ Cuando se utilizan filtros de fila con parámetros en las publicaciones de combi
 -   Si el filtrado de uno o más artículos de la publicación produce particiones no superpuestas y únicas para cada suscripción, los metadatos se limpian cada vez que se ejecuta el Agente de mezcla. Esto significa que la instantánea con particiones expira antes. Cuando utilice esta opción, puede ser conveniente permitir a los suscriptores que inicien la generación y entrega de instantáneas. 
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Genere instantáneas de particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Puede permitir a los suscriptores iniciar la generación y entrega de instantáneas y/o generar instantáneas.  
+ Genere instantáneas de particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Puede permitir a los suscriptores iniciar la generación y entrega de instantáneas y/o generar instantáneas.  
   
  Antes de generar instantáneas de una o varias particiones debe:  
   
@@ -75,19 +75,19 @@ Cuando se utilizan filtros de fila con parámetros en las publicaciones de combi
   
 3.  Haga clic con el botón secundario en la publicación para la que desee crear una instantánea y, a continuación, haga clic en **Ver estado del agente de instantáneas**.  
   
-4.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<publicación>** , haga clic en **Iniciar**.  
+4.  En el cuadro de diálogo **Ver estado del agente de instantáneas: \<Publication>** , haga clic en **Iniciar**.  
   
      Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Para permitir a los suscriptores inicializar la generación y distribución de instantáneas  
   
-1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , seleccione **Definir automáticamente una partición y generar una instantánea si es necesario cuando un suscriptor nuevo intente sincronizarse**.  
+1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione **Definir automáticamente una partición y generar una instantánea si es necesario cuando un suscriptor nuevo intente sincronizarse**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>Para generar y actualizar instantáneas  
   
-1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar**.  
+1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Agregar**.  
   
 2.  Escriba un valor para **HOST_NAME()** y/o el valor **SUSER_SNAME()** asociado con la partición para la que desea crear una instantánea.  
   
@@ -97,7 +97,7 @@ Cuando se utilizan filtros de fila con parámetros en las publicaciones de combi
   
     2.  Acepte la programación predeterminada para actualizar instantáneas o haga clic en **Cambiar** para especificar una programación diferente.  
   
-4.  Haga clic en **Aceptar**, que le lleva de vuelta al cuadro de diálogo **Propiedades de la publicación: \<Publicación>** .  
+4.  Haga clic en **Aceptar**, que le lleva de vuelta al cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
 5.  Seleccione la partición en la cuadrícula de propiedades y, a continuación, haga clic en **Generar instantáneas seleccionadas ahora**.  
   

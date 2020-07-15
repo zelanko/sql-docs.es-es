@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784659"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883002"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible puede estar en modo de disponibilidad de confirmación sincrónica o en el modo de disponibilidad de confirmación asincrónica. Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784659"
      El administrador de la base de datos debe configurar una o varias réplicas de modo que, cuando se ejecutan en el rol secundario, permiten todas las conexiones (solo para el acceso de solo lectura) o solo conexiones con intención de lectura.  
   
     > [!NOTE]  
-    >  Opcionalmente, el administrador de bases de datos puede configurar cualquiera de las réplicas de disponibilidad para excluir las conexiones de solo lectura al ejecutarse en el rol principal.  
+    >  Opcionalmente, el administrador de bases de datos puede configurar cualquiera de las réplicas de disponibilidad para excluir las conexiones de solo lectura al ejecutarse en el rol principal.
   
      Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Solo se podrán leer las réplicas que se encuentren en la misma compilación principal de SQL Server. Consulte [Conceptos básicos de la actualización gradual](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags) para obtener más información.
+  
   
 -   **Agente de escucha de grupo de disponibilidad**  
   

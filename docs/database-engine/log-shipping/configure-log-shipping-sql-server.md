@@ -1,5 +1,6 @@
 ---
 title: Configurar el trasvase de registros (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo configurar el trasvase de registros mediante SQL Server Management Studio o Transact-SQL en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696264"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -78,7 +79,7 @@ ms.locfileid: "68057892"
   
 8.  Tenga presente la programación de copia de seguridad que aparece en el cuadro **Programación** bajo **Trabajo de copia de seguridad**. Si desea personalizar la programación de su instalación, a continuación, haga clic en **Programar** y ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad**o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Haga clic en **OK**.  
   

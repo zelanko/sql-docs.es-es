@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 8af6e4e5e3b159249e9437c48791b0519821cbb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757208"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reduce el tamaño de los archivos de datos y de registro de la base de datos especificada.
   
@@ -120,7 +120,7 @@ Por ejemplo, si establece el valor de _porcentaje\_destino_ en 25 para reducir *
   
 Suponga que el archivo de datos de **mydb** contiene 7 MB de datos. Si se especifica un _porcentaje\_destino_ de 30, este archivo de datos se puede reducir al porcentaje libre de 30. Pero si se especifica un _porcentaje\_destino_ de 40, no se reduce el archivo de datos porque el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no reducirá ningún archivo a un tamaño menor que el que los datos ocupan actualmente. 
 
-O lo que es lo mismo: 40 % de espacio disponible deseado + 70 % de datos en el archivo (7 MB de 10 MB) es mayor que 100 %. Cualquier valor de _tamaño\_destino_ mayor que 30 no reducirá el archivo de datos. No se reducirá porque el porcentaje de espacio disponible que quiere y el porcentaje actual que ocupa el archivo de datos es más del 100 %.
+Este problema también se puede considerar de otra manera: 40 % de espacio disponible deseado + 70 % de datos en el archivo (7 MB de 10 MB) es mayor que 100 %. Cualquier valor de _tamaño\_destino_ mayor que 30 no reducirá el archivo de datos. No se reducirá porque el porcentaje de espacio disponible que quiere y el porcentaje actual que ocupa el archivo de datos es más del 100 %.
   
 En los archivos de registro, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _porcentaje\_destino_ para calcular el tamaño de destino completo del registro. Por ese motivo _porcentaje\_destino_ es la cantidad de espacio libre en el registro después de la operación de reducción. El tamaño final del registro entero se traduce al tamaño final de cada archivo de registro.
   
@@ -130,7 +130,7 @@ Un archivo de registro solo se puede reducir a un límite de archivo de registro
   
 ## <a name="best-practices"></a>Prácticas recomendadas  
 Tenga en cuenta la siguiente información cuando vaya a reducir una base de datos:
--   Una operación de reducción es más efectiva después de una operación. Esta operación crea espacio no utilizado, como una operación para truncar o eliminar una tabla.  
+-   Una reducción es más efectiva después de una operación que cree espacio sin usar, como por ejemplo una operación para truncar o eliminar tablas.
 -   La mayoría de las bases de datos requieren que haya espacio disponible para realizar las operaciones diarias normales. Es posible que reduzca una base de datos varias veces y observe que vuelve a aumentar de tamaño. Este crecimiento indica que el espacio reducido es necesario para las operaciones normales. En estos casos, no sirve reducir la base de datos reiteradamente.  
 -   La reducción no mantiene el estado de fragmentación de los índices de la base de datos y generalmente aumenta la fragmentación hasta cierto punto. Este resultado es otra razón para no reducir la base de datos de forma repetida.  
 -   A menos que tenga un requisito específico, no establezca la opción de base de datos AUTO_SHRINK en ON.  

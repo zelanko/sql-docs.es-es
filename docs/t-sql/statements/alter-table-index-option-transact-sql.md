@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760953"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica un conjunto de opciones que se pueden aplicar a un índice que forma parte de una definición de restricción creada con [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -213,17 +213,17 @@ Especifica si se deben optimizar la contención de inserción de la última pág
   
  Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no tiene particiones, el argumento ON PARTITIONS genera un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de una tabla con particiones.  
   
-\<partition_number_expression> se puede especificar de las maneras siguientes:  
+\<partition_number_expression> se puede especificar de estas maneras:  
   
--   Proporcionando el número de una partición, por ejemplo: ON PARTITIONS (2).  
--   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
--   Proporcionar intervalos y particiones individuales: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Proporcionar el número de una partición, por ejemplo: EN PARTICIONES (2).  
+-   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1, 5).  
+-   Proporcione ambos rangos y las particiones individuales, por ejemplo: EN PARTICIONES (2, 4, 6 A 8).  
   
-\<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: ON PARTITIONS (6 TO 8).  
+\<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: EN PARTICIONES (6 A 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   

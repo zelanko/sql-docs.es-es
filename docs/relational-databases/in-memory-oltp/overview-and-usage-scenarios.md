@@ -1,5 +1,6 @@
 ---
 title: Información general y escenarios de uso | Microsoft Docs
+description: Obtenga información sobre OLTP en memoria, una tecnología de SQL Server y Azure SQL Database para el procesamiento de transacciones optimizado. Revise ejemplos y recursos adicionales.
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722423"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OLTP en memoria es la tecnología principal disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para optimizar el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones. En este artículo se incluye información general sobre dicha tecnología y se describen escenarios de uso de OLTP en memoria. Use esta información para determinar si OLTP en memoria es adecuado para la aplicación. El artículo concluye con un ejemplo que muestra objetos de OLTP en memoria, hace referencia a una demostración de rendimiento y a recursos que puede usar para los pasos siguientes.
 

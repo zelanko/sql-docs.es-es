@@ -24,16 +24,16 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba279273a8e0a477f24cc204abee7f29e2420e1e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 51889da6d3ce13b6815767fc7651d6d0ac203eca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761973"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Establece [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos del procesamiento de consultas para que sean compatibles con la versión especificada del motor de SQL. Para más información sobre otras opciones de ALTER DATABASE, consulte [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
@@ -292,7 +292,7 @@ En esta sección se describen nuevos comportamientos incluidos con nivel de comp
 |Los predicados de texto completo se permiten en la cláusula `OUTPUT`.|Los predicados de texto completo no se permiten en la cláusula `OUTPUT`.|Bajo|
 |No se admiten `CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` y `DROP FULLTEXT STOPLIST`. La lista de palabras irrelevantes del sistema se asocia automáticamente a nuevos índices de texto completo.|Se admite `CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` y `DROP FULLTEXT STOPLIST`.|Bajo|
 |`MERGE` no se aplica como una palabra clave reservada.|MERGE es una palabra clave totalmente reservada. La instrucción `MERGE` se admite por debajo de los niveles de compatibilidad 100 y 90.|Bajo|
-|Al usar el argumento \<dml_table_source> de la instrucción INSERT, se genera un error de sintaxis.|Puede capturar los resultados de una cláusula OUTPUT en una instrucción anidada INSERT, UPDATE, DELETE o MERGE, e insertar los resultados obtenidos en una vista o tabla de destino. Para ello, es necesario usar el argumento \<dml_table_source> de la instrucción INSERT.|Bajo|
+|Al usar el argumento \<dml_table_source> de la instrucción INSERT, se genera un error de sintaxis.|Puede capturar los resultados de una cláusula OUTPUT en una instrucción anidada INSERT, UPDATE, DELETE o MERGE, e insertar los resultados obtenidos en una vista o tabla de destino. Para ello se usa el argumento \<dml_table_source> de la instrucción INSERT.|Bajo|
 |A menos que se especifique `NOINDEX`, `DBCC CHECKDB` o `DBCC CHECKTABLE` realizan comprobaciones de coherencia física y lógica en una sola tabla o vista indexada, y en todos sus índices XML y no agrupados. Los índices espaciales no se admiten.|A menos que se especifique `NOINDEX`, `DBCC CHECKDB` o `DBCC CHECKTABLE` realizan comprobaciones de coherencia física y lógica en una sola tabla y en todos sus índices no agrupados. Sin embargo, en los índices XML, índices espaciales y vistas indexadas solamente se realizan comprobaciones de coherencia física de forma predeterminada.<br /><br /> Si se especifica `WITH EXTENDED_LOGICAL_CHECKS`, se realizan comprobaciones lógicas en las vistas indexadas, índices XML e índices espaciales, si los hay. De forma predeterminada, las comprobaciones de coherencia física se realizan antes que las comprobaciones de coherencia lógica. Si también se especifica `NOINDEX`, solamente se realizarán las comprobaciones lógicas.|Bajo|
 |Cuando una cláusula OUTPUT se utiliza con una instrucción del lenguaje de manipulación de datos (DML) y se produce un error en tiempo de ejecución durante la ejecución de la instrucción, toda la transacción se termina y se revierte.|Cuando una cláusula `OUTPUT` se usa con una instrucción del lenguaje de manipulación de datos (DML) y ocurre un error en tiempo de ejecución durante la ejecución de la instrucción, el comportamiento depende del valor de `SET XACT_ABORT`. Si `SET XACT_ABORT` es OFF, un error de anulación de la instrucción generado por la instrucción DML que usa la cláusula `OUTPUT` terminará la instrucción, pero la ejecución del lote continúa y la transacción no se revierte. Si `SET XACT_ABORT` es ON, todos los errores en tiempo de ejecución generados por la instrucción DML que usa la cláusula OUTPUT terminarán el lote y la transacción se revertirá.|Bajo|
 |CUBE y ROLLUP no se exigen como palabras clave reservadas.|`CUBE` y `ROLLUP` son palabras clave reservadas dentro de la cláusula GROUP BY.|Bajo|

@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: Recuperar información de modelos de productos como XML | Microsoft Docs'
+title: 'Ejemplo: Recuperación de información de modelos de productos como XML | Microsoft Docs'
+description: Vea un ejemplo de cómo recuperar la información del modelo de producto como XML mediante el modo RAW con la cláusula FOR de XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 82ed3302c9a0bc3046f999bafd31258023db8856
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4850857682bddf64be8312cea67d577cc3a1f939
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632758"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperar información de modelos de productos como XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperación de información de modelos de productos como XML
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En la siguiente consulta se devuelve información de modelos de productos. `RAW` se especifica en la cláusula `FOR XML` .  
   
 ## <a name="example"></a>Ejemplo  

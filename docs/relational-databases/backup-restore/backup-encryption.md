@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728494"
 ---
 # <a name="backup-encryption"></a>Cifrado de copia de seguridad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema proporciona información general sobre las opciones de cifrado para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Incluye detalles del uso, los beneficios y las prácticas recomendadas para el cifrado durante la copia de seguridad.  
 
 ## <a name="overview"></a><a name="Overview"></a> Información general  
@@ -73,8 +73,20 @@ ms.locfileid: "82220528"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
 
-Para cifrar una copia de seguridad o restaurar desde una copia de seguridad cifrada, use el permiso**VIEW DEFINITION** en el certificado o la clave asimétrica que se usa para cifrar la copia de seguridad de base de datos.  
-  
+La cuenta que realiza las operaciones de copia de seguridad en una base de datos cifrada requiere permisos específicos. 
+
+- Rol de nivel de base de datos **db_backupoperator** en la base de datos de la que se hace una copia de seguridad. Esto es necesario independientemente del cifrado. 
+- Permiso **VIEW DEFINITION** en el certificado de la base de datos `master`.
+
+   En el ejemplo siguiente se conceden los permisos adecuados para el certificado. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > El acceso al certificado TDE no es necesario para realizar una copia de seguridad o restaurar una base de datos protegida por TDE.  
   

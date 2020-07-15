@@ -1,5 +1,6 @@
 ---
 title: Configurar Firewall de Windows para el acceso al motor de base de datos | Microsoft Docs
+description: Descubra cómo configurar un firewall de Windows para que los equipos cliente puedan acceder a una instancia del Motor de base de datos de SQL Server a través del firewall.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784136"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
@@ -96,6 +97,6 @@ ms.locfileid: "68012890"
 7.  En el cuadro de diálogo **Nombre**, escriba el nombre y la descripción de esta regla y haga clic en **Finalizar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configuración del firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7eb8bb64e79fbd575e3b470c8e5312e58c0544ac
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767037"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREAR ÍNDICE XML SELECTIVO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un nuevo índice XML selectivo en la tabla y la columna XML especificadas. Los índices XML selectivos mejoran el rendimiento de la indización y las consultas XML al indizar únicamente el subconjunto de nodos que se suele consultar. También puede crear índices XML selectivos secundarios. Para obtener más información, vea [Creación, modificación y eliminación de índices XML selectivos secundarios](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
@@ -98,7 +98,7 @@ identifier
  *index_name*  
  Es el nombre del nuevo índice que se va a crear. Los nombres de índice deben ser únicos en una tabla, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *\<objeto_de_tabla>* Es la tabla que contiene la columna XML que se va a indexar. Use uno de los formatos siguientes:  
+ *\<table_object>* Es la tabla que contiene la columna XML que se va a indexar. Use uno de los formatos siguientes:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -111,11 +111,11 @@ identifier
  *xml_column_name*  
  Es el nombre de la columna XML que contiene las rutas de acceso que se van a indizar.  
   
- [WITH XMLNAMESPACES **(** \<lista_de_espacios_de _nombres_xml> **)** ] Es la lista de espacios de nombres usados por las rutas de acceso al índice. Para saber más sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] Es la lista de espacios de nombres que usan las rutas de acceso al índice. Para saber más sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(** \<lista_de_rutas_de_acceso_de_nodos_promocionados> **)** Es la lista de rutas de acceso que se va a indexar con sugerencias opcionales de optimización. Para obtener información sobre las rutas de acceso y las sugerencias de optimización que se pueden especificar en la instrucción CREATE o ALTER, vea [Especificación de rutas de acceso y sugerencias de optimización para índices XML selectivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<promoted_node_path_list> **)** Es la lista de rutas de acceso que se va a indexar con sugerencias opcionales de optimización. Para obtener información sobre las rutas de acceso y las sugerencias de optimización que se pueden especificar en la instrucción CREATE o ALTER, vea [Especificación de rutas de acceso y sugerencias de optimización para índices XML selectivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
- WITH *\<opciones_de_índice>* Para obtener información sobre las opciones de índice, vea [CREATE XML INDEX &#40;índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* Para obtener información sobre las opciones de índice, vea [CREATE XML INDEX &#40;Índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>Prácticas recomendadas  
  Cree un índice XML selectivo en lugar de un índice XML normal en la mayoría de los casos para mejorar el rendimiento y lograr un almacenamiento más eficiente. Sin embargo, no se recomienda usar un índice XML selectivo cuando alguna de las condiciones siguientes sea verdadera:  

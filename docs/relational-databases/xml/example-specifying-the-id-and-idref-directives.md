@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: especificar las directivas ID e IDREF | Microsoft Docs'
+title: 'Ejemplo: Especificación de las directivas ID e IDREF | Microsoft Docs'
+description: Vea un ejemplo de cómo especificar las directivas ID e IDREF en una consulta SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a98637671787e70dff614779c9e49393cae8a6e8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a3afe4f049cf74353a790f6a9e3fdcdc42902d72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632471"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: especificar las directivas ID e IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: Especificación de las directivas ID e IDREF
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este ejemplo es casi idéntico al ejemplo [Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . La única diferencia consiste en que la consulta especifica las directivas **ID** e **IDREF** . Estas directivas sobrescriben los tipos del atributo **SalesPersonID** en los elementos <`OrderHeader`> y <`OrderDetail`>. De este modo, se forman vínculos dentro de los documentos. Para ver los tipos sobrescritos, se necesita el esquema. Por lo tanto, la consulta especifica la opción **XMLDATA** en la cláusula FOR XML para recuperar el esquema.  
   

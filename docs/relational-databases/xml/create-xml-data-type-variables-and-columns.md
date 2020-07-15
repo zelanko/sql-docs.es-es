@@ -1,5 +1,6 @@
 ---
 title: Creación de variables y columnas del tipo de datos XML | Microsoft Docs
+description: Obtenga información sobre cómo crear columnas y variables del tipo de datos XML en SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691475"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, se puede usar el tipo de datos **xml** como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="creating-columns-and-variables"></a>Crear columnas y variables  

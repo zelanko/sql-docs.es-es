@@ -1,5 +1,6 @@
 ---
 title: disallow results from triggers (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "No permitir resultados de desencadenadores". Vea cómo puede evitar problemas en aplicaciones que no están diseñadas para funcionar con conjuntos de resultados.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772522"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>disallow results from triggers (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice la opción **disallow results from triggers** para controlar si los desencadenadores devuelven conjuntos de resultados. Los desencadenadores que devuelven conjuntos de resultados pueden provocar un comportamiento inesperado en aplicaciones que no estén diseñadas para utilizarlos.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011861"
   
  Si se asigna el valor 1, la opción **disallow results from triggers** se establece en el valor ON. El valor predeterminado para esta opción es 0 (OFF). Si a esta opción se le asigna el valor 1 (ON), se producirá un error cuando un desencadenador intente devolver un conjunto de resultados y el usuario recibirá el siguiente mensaje de error:  
   
- "Mensaje 524, nivel 16, estado 1, procedimiento \<nombre de procedimiento>, línea \<número de línea>  
+ "Mensaje 524, nivel 16, estado 1, procedimiento \<Procedure Name>, línea \<Line#>  
   
  "Un desencadenador devolvió un conjunto de resultados pero la opción de servidor 'disallow_results_from_triggers' es true."  
   

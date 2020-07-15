@@ -1,5 +1,6 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
+description: Obtenga información sobre soft-NUMA en SQL Server 2014 SP2 y versiones posteriores. Vea cómo usar soft-NUMA automático y cómo configurar manualmente SQL Server para usar soft-NUMA.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789765"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Los procesadores de hoy en día tienen varios núcleos por socket. Normalmente, cada socket se representa como un solo nodo NUMA. El motor de base de datos de SQL Server crea particiones de las diversas estructuras internas y de los subprocesos de servicio por nodo NUMA.  En procesadores con 10 o más núcleos por socket, el uso de NUMA de software para dividir los nodos NUMA de hardware suele aumentar la escalabilidad y el rendimiento. Antes de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, NUMA basado en software (soft-NUMA) requería modificar el Registro para agregar una máscara de afinidad de configuración de nodo y, además, se configuraba en el nivel de host, en vez de por instancia. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], soft-NUMA se configura automáticamente en el nivel de instancia de base de datos cuando se inicia el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

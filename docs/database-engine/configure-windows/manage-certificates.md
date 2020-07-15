@@ -1,5 +1,6 @@
 ---
 title: Administración de certificados (Administrador de configuración de SQL Server) | Microsoft Docs
+description: Aprenda a instalar certificados en diversas configuraciones de SQL Server. Entre los ejemplos se incluyen instancias únicas, clústeres de conmutación por error y grupos de disponibilidad Always On.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68212741"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196052"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Administración de certificados (Administrador de configuración de SQL Server)
 
@@ -35,8 +36,8 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 
 * Ver y validar certificados instalados en una instancia de SQL Server. 
 * Identificar aquellos certificados a punto de expirar. 
-* Implementar certificados en equipos de grupos de disponibilidad desde el nodo que contiene la réplica principal. 
-* Implementar certificados en equipos que participan en una instancia de clúster de conmutación por error desde el nodo activo.
+* Implementar certificados en equipos de Grupos de disponibilidad Always On desde el nodo que contiene la réplica principal. 
+* Implementar certificados en equipos que participan en una instancia de clúster de conmutación por error Always On desde el nodo activo.
 
 > [!NOTE]
 > Puede usar la administración de certificados de Administrador de configuración de SQL Server con versiones anteriores de SQL Server, a partir de SQL Server 2008.
@@ -54,7 +55,7 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 5. Seleccione **Siguiente** para validar el certificado. Si no hay ningún error, seleccione **Siguiente** para importar el certificado a la instancia local.  
   
  
-##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar un certificado en una configuración de clúster de conmutación por error  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar un certificado en una configuración de instancia de clúster de conmutación por error  
   
 1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.
   
@@ -66,7 +67,7 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 
 5. Si va a instalar para un solo nodo, elija **Examinar** y seleccione el archivo del certificado. Luego vaya al paso 8.
 
-6. Si va a instalar un certificado para cada nodo, seleccione **Siguiente** para ver los posibles nodos propietarios. Los posibles propietarios de la instancia de clúster de conmutación por error de SQL Server actual están preseleccionados.
+6. Si va a instalar un certificado para cada nodo, seleccione **Siguiente** para ver los posibles nodos propietarios. Los posibles propietarios de la instancia actual de clúster de conmutación por error están previamente seleccionados.
 
 7. Elija **Siguiente** para seleccionar el certificado que se va a importar.
 
@@ -75,9 +76,9 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 9. Seleccione **Siguiente** para importar los certificados seleccionados.
 
 > [!NOTE]
-> Siga estos pasos en el nodo activo de la instancia de clúster de conmutación por error de SQL Server. El usuario debe tener permisos de administrador en todos los nodos de clúster.
+> Realice estos pasos en el nodo activo de la instancia de clúster de conmutación por error Always On. El usuario debe tener permisos de administrador en todos los nodos de clúster.
 
-##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar un certificado en una configuración de grupo de disponibilidad  
+##  <a name="to-install-a-certificate-in-an-always-on-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar un certificado en una configuración de grupo de disponibilidad Always On  
   
 1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.
   

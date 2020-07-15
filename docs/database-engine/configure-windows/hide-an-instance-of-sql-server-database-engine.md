@@ -1,5 +1,6 @@
 ---
 title: Ocultar una instancia del Motor de base de datos de SQL Server | Microsoft Docs
+description: Aprenda a ocultar una instancia del motor de base de datos de SQL Server. Los equipos cliente no pueden usar el servicio SQL Server Browser para buscar instancias ocultas.
 ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5be741205c17d32e9a2ddb253574c8dd50e4c4fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772443"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar una instancia del motor de base de datos de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ocultar una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando el Administrador de configuración de SQL Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser para enumerar las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] instaladas en el equipo. De esta manera, las aplicaciones cliente pueden buscar un servidor y los clientes pueden distinguir las distintas instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que están instaladas en el mismo equipo. Puede usar el procedimiento siguiente para evitar que el servicio SQL Server Browser exponga una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los equipos cliente que intenten buscarla mediante el botón **Examinar** .  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>Para ocultar una instancia del motor de base de datos de SQL Server  
   
-1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y seleccione **Propiedades**.  
+1.  En el **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<server instance>* y, después, seleccione **Propiedades**.  
   
 2.  En la pestaña **Marcas** , en el cuadro **HideInstance** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo. El cambio se aplica de forma inmediata para las conexiones nuevas.  
   

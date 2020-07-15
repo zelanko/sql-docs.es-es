@@ -1,5 +1,6 @@
 ---
 title: Cambio de los valores de configuración de una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo cambiar las opciones de nivel de base de datos en SQL Server 2019 mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59162df3f9a28beb5273a4e94768588dc53714fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bec4ac42635494ae49573d353314d4e156684328
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679602"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>Cambiar los valores de configuración de una base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo cambiar las opciones de nivel de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Las opciones son únicas para cada base de datos y no afectan a otras bases de datos.  
   
  **En este tema**  

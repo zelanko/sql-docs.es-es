@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73032995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725215"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
 
@@ -76,7 +76,7 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<nombre_equipo\>_ **\\** _\<nombre_instancia\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
+3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<computer_name\>_ **\\** _\<instance_name\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -109,5 +109,5 @@ Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > Esta información es básica para empezar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo entorno de seguridad y, obviamente, la seguridad es un aspecto importante de las operaciones de base de datos.  
 
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Conectarse desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Lección 2: Conexión desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

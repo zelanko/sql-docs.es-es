@@ -1,5 +1,6 @@
 ---
 title: Ver los resultados de la directiva de mantenimiento de recursos (Utilidad de SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo usar SQL Server Management Studio para ver los resultados de la directiva de mantenimiento de recursos de la Utilidad de SQL Server para instancias de SQL Server y aplicaciones de capa de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6397ebab2f53ebb37c54df20313926ebc84e68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650781"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Ver los resultados de la directiva de mantenimiento de recursos (Utilidad de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el panel de Utilidad de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ver los parámetros de recursos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de capa de datos. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ##  <a name="SSMSProcedure"></a>  

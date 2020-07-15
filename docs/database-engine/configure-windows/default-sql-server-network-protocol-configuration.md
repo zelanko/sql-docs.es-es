@@ -1,5 +1,6 @@
 ---
 title: Configuración predeterminada del protocolo de red de SQL Server | Microsoft Docs
+description: Vea los factores que afectan a la activación o desactivación de los protocolos de red durante la instalación de SQL Server. Vea cómo configurar protocolos después de la instalación.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772577"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuración predeterminada de protocolo de red de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Para mejorar la seguridad, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deshabilita la conectividad de red de algunas instalaciones nuevas. La conectividad de red a través de TCP/IP no se deshabilitará si se usa la edición Enterprise, Standard, Evaluation o Workgroup, o si hay una instalación anterior de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El protocolo de memoria compartida se habilita para todas las instalaciones con el fin de permitir las conexiones locales con el servidor. Puede que el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se detenga, según las condiciones y opciones de instalación.
 
 Use el nodo Configuración de red de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para configurar los protocolos de red tras la instalación. Use el nodo Servicios de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para configurar el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de modo que se inicie automáticamente. Para más información, consulte [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).

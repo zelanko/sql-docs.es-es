@@ -22,15 +22,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720875"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Cuadro de diálogo "Propiedades de la publicación" de Replicación de SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 En esta página se describen las páginas del cuadro de diálogo Propiedades de la publicación. 
 
@@ -108,7 +108,7 @@ Para obtener el máximo rendimiento de la aplicación y reducir la cantidad de a
  **Buscar tabla**  
  Solo en publicaciones de combinación. Haga clic en **Buscar tabla** para buscar una tabla en un árbol de filtros complejo. En una base de datos con relaciones complejas, una tabla se puede combinar con varias tablas y, por tanto, puede aparecer en más de un sitio en el árbol de filtros.  
   
- La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y, al expandir ese nodo, se muestra el texto **Haga clic en Buscar tabla para ver la tabla de \<nombre de tabla>** .  
+ La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y, al expandir ese nodo, se muestra el texto **Haga clic en Buscar tabla para ver la tabla de \<tablename>** .  
   
  Seleccione un nodo de acceso directo en el panel y haga clic en **Buscar tabla** . El panel se expande y la tabla se resalta. Si hace clic en **Buscar tabla** sin seleccionar un nodo de acceso directo, se abre un cuadro de diálogo **Buscar tabla** .  
   
@@ -166,7 +166,7 @@ Para obtener el máximo rendimiento de la aplicación y reducir la cantidad de a
 
 ## <a name="data-partitions"></a>Particiones de datos
 Particiones de datos  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   La página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación** le permite definir particiones de datos para publicaciones de combinación que utilizan el filtro con parámetros. Después de definir particiones, puede generar instantáneas para estas particiones, proporcionando distintos conjuntos de datos iniciales para diferentes suscriptores sobre la base de las propiedades de conexión (inicio de sesión o nombre del equipo) de los suscriptores. También puede optar por permitir que los suscriptores soliciten la entrega y la generación de instantáneas si no tienen una instantánea disponible para su partición la primera vez que realizan la sincronización. Para más información, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opciones  
@@ -190,7 +190,7 @@ Particiones de datos
 
 ## <a name="snapshot"></a>Instantánea
 Instantánea  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   La página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** permite establecer el formato de instantánea, la ubicación de la carpeta de instantáneas y los scripts que deben ejecutarse antes y después de aplicar la instantánea. La carpeta de instantáneas debe designarse como recurso compartido y debe disponer de los permisos necesarios para que los agentes puedan leer y escribir archivos en ella. Para obtener más información sobre cómo proteger la carpeta adecuadamente, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  

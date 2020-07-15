@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737098"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Uso de SQL Server Profiler para crear y probar guías de plan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide** . Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Captura de texto de consulta utilizando SQL Server Profiler  
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  No se puede utilizar el evento **Showplan XML for Query Compile** . **PlanGuideDB** no existe en ese evento.  
   
-5.  Si la guía de plan es de tipo OBJECT o SQL, compruebe que el evento **Showplan XML** contiene los atributos **PlanGuideDB** y **PlanGuideName** para la guía de plan que espera que coincida con la consulta. O bien, en el caso de una guía de plan TEMPLATE, compruebe que el evento **Showplan XML** contiene los atributos **TemplatePlanGuideDB** y **TemplatePlanGuideName** de la guía de plan que se espera. Esto comprueba que la guía de plan funciona. Estos atributos se incluyen en el elemento **\<StmtSimple>** del plan.  
+5.  Si la guía de plan es de tipo OBJECT o SQL, compruebe que el evento **Showplan XML** contiene los atributos **PlanGuideDB** y **PlanGuideName** para la guía de plan que espera que coincida con la consulta. O bien, en el caso de una guía de plan TEMPLATE, compruebe que el evento **Showplan XML** contiene los atributos **TemplatePlanGuideDB** y **TemplatePlanGuideName** de la guía de plan que se espera. Esto comprueba que la guía de plan funciona. Estos atributos se incluyen en el elemento del plan de **\<StmtSimple>** .  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  

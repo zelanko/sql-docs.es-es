@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Umbral de cursor | Microsoft Docs
+description: Obtenga información sobre la opción Umbral de cursor. Vea cómo su valor afecta a si SQL Server genera conjuntos de claves de cursor de forma asincrónica y cómo configurarlo.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 243798abec1a00d3c5ea3a9426449c3bd42e462b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0a8d61714928482cf15f00a74175606ec43ca6e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697909"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Establecer la opción de configuración del servidor Umbral de cursor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **umbral de cursor** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **umbral de cursor** especifica el número de filas del conjunto de cursores donde se generan de manera asincrónica los conjuntos de claves del cursor. Cuando los cursores generan un conjunto de claves para un conjunto de resultados, el optimizador de consultas calcula el número de filas que se va a devolver para ese conjunto de resultados. Si el optimizador de consultas calcula que el número de filas devuelto es superior a este umbral, el cursor se genera de manera asincrónica, lo que permite al usuario capturar las filas del cursor mientras sigue llenándose. De lo contrario, el cursor se genera de manera sincrónica y la consulta espera a que se devuelvan todas las filas.  
   

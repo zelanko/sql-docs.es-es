@@ -1,5 +1,6 @@
 ---
 title: Instancias del motor de base de datos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre las instancias del Motor de base de datos. Vea información sobre las tareas que puede realizar en las instancias, como la configuración de propiedades y la habilitación de protocolos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772598"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del ejecutable de **sqlservr.exe** que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
   
 ## <a name="instances"></a>Instancias  

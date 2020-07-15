@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753117"
 ---
 # <a name="create-filtered-indexes"></a>Crear índices filtrados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se describe cómo crear un índice filtrado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice filtrado es un índice no clúster optimizado, especialmente indicado para atender consultas que realizan selecciones a partir un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas, así como reducir los costos de almacenamiento y mantenimiento del índice en comparación con los índices de tabla completa.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908110"
   
     -   Índices no únicos. Los índices filtrados pueden ser no únicos, mientras que las vistas indizadas deben ser únicas.  
   
--   Los índices filtrados se definen en una tabla y solamente admiten operadores de comparación simples. Cuando necesite una expresión de filtro que haga referencia a varias tablas o que tenga lógica compleja, deberá crear una vista.  
+-   Los índices filtrados se definen en una tabla y solamente admiten [operadores de comparación](../../t-sql/language-elements/comparison-operators-transact-sql.md) simples. Cuando necesite una expresión de filtro que haga referencia a varias tablas o que tenga lógica compleja, deberá crear una vista. Los índices filtrados no admiten operadores `LIKE`. 
   
 -   Una columna de la expresión del índice filtrado no tiene por qué ser una columna incluida o de clave en la definición del índice filtrado cuando la expresión del índice filtrado es equivalente al predicado de la consulta y la consulta no devuelve la columna de la expresión del índice filtrado con los resultados de la consulta.  
   

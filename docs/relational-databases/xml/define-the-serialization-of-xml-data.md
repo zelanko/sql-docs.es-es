@@ -1,5 +1,6 @@
 ---
 title: Definición de la serialización de datos XML | Microsoft Docs
+description: Obtenga información sobre las reglas que se usan al serializar datos XML en SQL Server.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738439"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
   
 ## <a name="serialization-encoding"></a>Codificación de la serialización  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Creación de entidades para caracteres XML durante la serialización  
  Todas las estructuras XML serializadas deberían poder analizarse de nuevo. Por tanto, algunos caracteres deben serializarse como entidades para que conserven su funcionalidad de ida y vuelta durante la fase de normalización del analizador XML. Sin embargo, deben crearse entidades para algunos caracteres con el fin de que el formato del documento sea correcto, y, por tanto, se pueda analizar. A continuación se exponen las reglas de creación de entidades que se aplican durante la serialización:  
   
--   Para los caracteres &, \< y > siempre se crean las entidades &amp;, &lt; y &gt;, respectivamente, si aparecen en valores de atributos o en el contenido de elementos.  
+-   Para los caracteres &, \<, and > siempre se crean las entidades &amp;, &lt; y &gt;, respectivamente, si aparecen en valores de atributos o en el contenido de elementos.  
   
 -   Dado que SQL Server usa comillas (U+0022) para incluir los valores de los atributos, para las comillas de los valores de atributo se crea la entidad &quot;.  
   

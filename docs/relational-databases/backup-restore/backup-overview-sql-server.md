@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834806"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se presenta el componente de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La copia de seguridad de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es esencial para proteger los datos. En esta descripción se tratan los tipos y las restricciones de copia de seguridad. En el tema también se presentan los dispositivos y los medios de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220500"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copias de seguridad, y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores pueden restaurar una copia de seguridad comprimida. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restricciones en las operaciones de copia de seguridad 
- Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las siguientes restricciones.  
+ Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las restricciones siguientes:  
   
 ### <a name="cannot-back-up-offline-data"></a>No se pueden realizar copias de seguridad de datos sin conexión  
  Cualquier operación de copia de seguridad en la que se haga referencia de forma implícita o explícita a datos sin conexión provocará un error. A continuación, se exponen algunos ejemplos habituales:  

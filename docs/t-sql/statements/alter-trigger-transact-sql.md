@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ecc01e4b9b7a5bcc7baad3ca1c6af481eb9df5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c9759a56800cd03c107fb9f578e9af2dbe86d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760938"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica la definición de un desencadenador logon, DDL o DML creado anteriormente por una instrucción CREATE TRIGGER. Los desencadenadores se crean con CREATE TRIGGER. Se pueden crear directamente a partir de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre los parámetros que se usan en la instrucción ALTER TRIGGER, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   

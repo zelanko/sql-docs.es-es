@@ -1,6 +1,6 @@
 ---
 title: Conmutación por error a una base de datos secundaria de trasvase de registros
-description: Instrucciones sobre cómo conmutar por error a una base de datos secundaria de trasvase de registros de SQL Server.
+description: Obtenga información sobre cómo realizar una conmutación por error en un trasvase de registros secundario de SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696181"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Conmutar por error a una base de datos secundaria de trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La conmutación por error a una base de datos secundaria de trasvase de registros es útil si la instancia del servidor principal produce un error o requiere mantenimiento.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Preparación para una conmutación por error controlada  

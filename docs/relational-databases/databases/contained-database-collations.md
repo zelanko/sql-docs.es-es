@@ -1,5 +1,6 @@
 ---
 title: Intercalaciones de bases de datos independientes | Microsoft Docs
+description: Obtenga información sobre el funcionamiento de la intercalación en bases de datos dependientes e independientes. Vea las incidencias que pueden surgir cuando se cruzan sesiones entre contextos dependientes e independientes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763625"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Varias propiedades afectan a la semántica de igualdad y al criterio de ordenación de los datos de texto, como son la distinción entre mayúsculas y minúsculas y de los acentos, y el idioma básico que se usa. Estas cualidades se expresan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la opción de intercalación de los datos. Para obtener una explicación más detallada de las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Las intercalaciones se aplican no solo a los datos almacenados en las tablas de usuario, sino a todo el texto que se administra en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como son los metadatos, los objetos temporales, los nombres de variables, etc. Su tratamiento difiere en las bases de datos independientes y en las dependientes. Este cambio no afectará a muchos usuarios, pero ayuda a proporcionar independencia de la instancia y uniformidad. Pero esto también puede generar confusión, así como problemas en las sesiones que acceden tanto a bases de datos independientes como a bases de datos dependientes.  

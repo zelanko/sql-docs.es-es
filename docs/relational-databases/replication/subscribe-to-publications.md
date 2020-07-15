@@ -1,5 +1,6 @@
 ---
 title: Suscribirse a publicaciones | Microsoft Docs
+description: Obtenga información sobre los tipos de suscripciones de la replicación de SQL Server, cómo elegir el tipo que necesita y cómo crear una suscripción.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,20 +26,20 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765162"
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   Una suscripción es una solicitud de copia de datos y objetos de base de datos en una publicación. Una suscripción define qué publicación se recibirá, dónde y cuándo. Al planear suscripciones, tenga en cuenta dónde se realizará el proceso del agente. El tipo de suscripción que elige controla dónde se ejecuta el agente. Con una suscripción de inserción, el Agente de mezcla o el Agente de distribución se ejecutan en el distribuidor, mientras que en una suscripción de extracción los agentes se ejecutan en los suscriptores. Después de crear una suscripción, no se puede cambiar de un tipo a otro.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|Subscription|Características|Se utiliza si|  
+|Suscripción|Características|Se utiliza si|  
 |------------------|---------------------|--------------|  
 |Suscripción de inserción|Con una suscripción de inserción, el publicador propaga los cambios al suscriptor sin que éste lo solicite. Los cambios pueden insertarse en los suscriptores a petición, de manera continua o según una programación. De forma predeterminada, el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor.|Normalmente, los datos se sincronizarán de forma continua o con una frecuencia determinada.<br /><br /> Las publicaciones requieren que el movimiento de datos sea casi en tiempo real.<br /><br /> La sobrecarga del procesador en el distribuidor no afecta al rendimiento.<br /><br /> Se utiliza frecuentemente en la replicación de instantáneas y transaccional.|  
 |Suscripción de extracción|En una suscripción de extracción, el suscriptor solicita los cambios efectuados en el publicador. Las suscripciones de extracción permiten al usuario del suscriptor determinar cuándo se sincronizan los cambios en los datos. El Agente de distribución o el Agente de mezcla se ejecutan en el suscriptor.|Los datos se sincronizarán, generalmente, a petición o en función de una programación, en lugar de hacerlo de forma continuada.<br /><br /> La publicación dispone de un gran número de suscriptores y/o la ejecución de todos los agentes en el distribuidor supone un uso demasiado intensivo de recursos.<br /><br /> Los suscriptores son autónomos, están desconectados o se desplazan. Los suscriptores determinan cuándo se conectarán y sincronizarán los cambios.<br /><br /> Se utiliza frecuentemente en la replicación de mezcla.|  

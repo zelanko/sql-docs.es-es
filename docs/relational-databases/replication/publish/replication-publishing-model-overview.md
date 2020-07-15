@@ -1,5 +1,6 @@
 ---
 title: Información general del modelo de publicación de replicación | Microsoft Docs
+description: Obtenga información sobre el modelo de publicación de replicación en SQL Server, incluidos el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones.
 ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 963e9c1ffba4c1286793c564e22cd1a122c795b3
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287573"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807090"
 ---
 # <a name="replication-publishing-model-overview"></a>Información general del modelo de publicación de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "76287573"
 ## <a name="publication"></a>Publicación  
  Una publicación es un conjunto de uno o más artículos de una base de datos. La agrupación de varios artículos en una publicación permite especificar más fácilmente un conjunto de objetos y datos de bases de datos relacionados lógicamente, que se replican como una unidad.  
   
-## <a name="subscription"></a>Subscription  
+## <a name="subscription"></a>Suscripción  
  Una suscripción es una solicitud de una copia de una publicación que se entrega a un suscriptor. La suscripción define qué publicación se recibirá, dónde y cuándo. Hay dos tipos de suscripciones: de inserción y de extracción. Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>Consulte también  

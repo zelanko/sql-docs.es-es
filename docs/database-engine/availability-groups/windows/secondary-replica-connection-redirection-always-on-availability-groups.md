@@ -1,6 +1,6 @@
 ---
 title: Redireccionamiento de conexiones de lectura y escritura a la réplica principal
-description: Obtenga información sobre cómo redirigir siempre las conexiones de lectura y escritura a la réplica principal de un grupo de disponibilidad AlwaysOn con independencia del servidor de destino especificado en la cadena de conexión.
+description: Obtenga información sobre cómo redirigir las conexiones de lectura y escritura a la réplica principal de un grupo de disponibilidad Always On con independencia del servidor especificado en la cadena de conexión.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637822"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduce el *redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal* para los grupos de disponibilidad Always On. El redireccionamiento de la conexión de lectura/escritura está disponible en cualquier plataforma de sistema operativo. Permite que las conexiones de las aplicaciones cliente se dirijan a la réplica principal, independientemente del servidor de destino especificado en la cadena de las conexiones. 
 

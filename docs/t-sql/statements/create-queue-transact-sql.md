@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8247b0fe0e17ae717fddd89ff4a608481e0777ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892513"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crea una nueva cola en una base de datos. Las colas almacenan mensajes. Cuando llega un mensaje para un servicio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] lo coloca en la cola asociada a ese servicio.
 
@@ -86,7 +86,7 @@ ACTIVATION Especifica información sobre qué procedimiento almacenado es necesa
 
 STATUS (activación) Especifica si [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no inicia el procedimiento almacenado. Si no se especifica esta cláusula, el valor predeterminado es ON.
 
-PROCEDURE_NAME = \<procedimiento> Especifica el nombre del procedimiento almacenado que es necesario iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+PROCEDURE_NAME = \<procedure> Especifica el nombre del procedimiento almacenado que se va a iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 *database_name*(procedimiento) Nombre de la base de datos que contiene el procedimiento almacenado.
 

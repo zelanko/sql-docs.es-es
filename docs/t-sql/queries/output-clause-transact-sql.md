@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b53928fb2f90b4e97227f933a36648acd7b60cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706032"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información de las filas afectadas por una instrucción INSERT, UPDATE, DELETE o MERGE, o expresiones basadas en esas filas. Estos resultados se pueden devolver a la aplicación de procesamiento para que los utilice en mensajes de confirmación, archivado y otros requisitos similares de una aplicación. Los resultados también se pueden insertar en una tabla o variable de tabla. Además, puede capturar los resultados de una cláusula OUTPUT en una instrucción anidada INSERT, UPDATE, DELETE o MERGE, e insertar los resultados en una tabla de destino o vista.  
   
@@ -133,20 +133,20 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar se debe certificar correctamente mediante el prefijo INSERTED o DELETED, según corresponda; por ejemplo: INSERTED **.** _column\_name_.  
+ Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar debe certificarse correctamente mediante el prefijo INSERTED o DELETED, según corresponda; por ejemplo: INSERTED **.** _nombre\_columna_.  
   
  $action  
- Solo está disponible para la instrucción MERGE. Especifica una columna de tipo **nvarchar(10)** en la cláusula OUTPUT de una instrucción MERGE que devuelve uno de estos tres valores por cada fila: "INSERT", "UPDATE" o "DELETE", según la acción realizada en esa fila.  
+ Solo está disponible para la instrucción MERGE. Especifica una columna de tipo **nvarchar(10)** en la cláusula OUTPUT de una instrucción MERGE que devuelve uno de los tres valores para cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción realizada en esa fila.  
   
 ## <a name="remarks"></a>Observaciones  
- Las cláusulas OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
+ Las cláusulas OUTPUT \<dml_select_list> y OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  A menos que se indique lo contrario, las referencias a la cláusula OUTPUT se refieren tanto a la cláusula OUTPUT como a la cláusula OUTPUT INTO.  
   
  La cláusula OUTPUT puede ser útil para recuperar el valor de las columnas de identidad o calculadas después de una operación con INSERT o UPDATE.  
   
- Cuando se incluye una columna calculada en \<lista_de_selección_dml>, la columna correspondiente de la tabla de salida o la variable de tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó la instrucción.  
+ Cuando se incluye una columna calculada en \<dml_select_list>, la columna correspondiente de la tabla de salida o la variable de tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó la instrucción.  
   
  No se garantiza que coincidan el orden en que se aplican los cambios en la tabla y el orden en que se insertan las filas en la tabla de salida o variable de tabla.  
   
@@ -209,7 +209,7 @@ DELETE Sales.ShoppingCartItem
   
 -   Las notificaciones de consulta tratan la instrucción como una entidad única, y el tipo de cualquier mensaje creado es el del DML anidado, aunque el cambio significativo provenga de la propia instrucción INSERT externa.  
   
--   En la cláusula \<dml_table_source>, las cláusulas SELECT y WHERE no pueden incluir subconsultas, funciones de agregado, funciones de categoría, predicados de texto completo, funciones definidas por el usuario que realicen accesos a datos, ni la función TEXTPTR.  
+-   En la cláusula \<dml_table_source>, las cláusulas SELECT y WHERE no pueden incluir subconsultas, funciones de agregado, funciones de categoría, predicados de texto completo, funciones definidas por el usuario que realicen accesos a datos ni la función TEXTPTR.  
 
 ## <a name="parallelism"></a>Paralelismo
  Una cláusula OUTPUT que devuelve resultados al cliente siempre usará un plan en serie.
@@ -307,9 +307,9 @@ DROP TABLE dbo.table1;
 >  Use la sugerencia de tabla READPAST en las instrucciones UPDATE y DELETE si el escenario permite que varias aplicaciones realicen una lectura destructiva de una tabla. De esta forma se impide que surjan problemas de bloqueo si otra aplicación ya está leyendo el primer registro de la tabla que reúne los requisitos.  
   
 ## <a name="permissions"></a>Permisos  
- Se requieren permisos SELECT en las columnas recuperadas a través de \<lista_de_selección_dml> o usadas en \<expresión_escalar>.  
+ Se requieren permisos SELECT en las columnas recuperadas mediante \<dml_select_list> o usadas en \<scalar_expression>.  
   
- Se requieren permisos INSERT en las tablas especificadas en \<tabla_de_salida>.  
+ Se requieren permisos INSERT en las tablas especificadas en \<output_table>.  
   
 ## <a name="examples"></a>Ejemplos  
   

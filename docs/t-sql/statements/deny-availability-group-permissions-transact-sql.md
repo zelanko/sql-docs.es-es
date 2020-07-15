@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1d843feede96fbecb75575f3899491931c95598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766803"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deniega los permisos en un grupo de disponibilidad Always On de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75258312"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  

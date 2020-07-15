@@ -1,5 +1,6 @@
 ---
 title: in-doubt xact resolution (opción de configuración del servidor) | Microsoft Docs
+description: Familiarícese con la opción "in-doubt xact resolution". Vea cómo determina el resultado predeterminado de las transacciones dudosas en SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 946f36bb379e5fde01f4232b01699405dd63aa8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772418"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción **in-doubt xact resolution** para controlar el resultado predeterminado de las transacciones que el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) no consigue resolver. La incapacidad de resolver estas transacciones puede estar relacionada con un tiempo de inactividad de MS DTC o con un resultado de transacción inesperado en el momento de la recuperación.  
   

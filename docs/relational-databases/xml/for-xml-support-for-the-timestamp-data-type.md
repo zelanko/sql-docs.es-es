@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad de FOR XML con el tipo de datos de marca de tiempo | Microsoft Docs
+description: Obtenga información sobre la compatibilidad con el tipo de datos de marca de tiempo al usar la cláusula FOR XML en una consulta SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: df404c4c666b43bf9b2c7275196e5cb7ba74bb48
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 374cc13dbb95f548db632ab89f41e6b57302e436
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729945"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Compatibilidad de FOR XML con el tipo de datos de marca de tiempo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En la transformación FOR XML, los valores de tipo **timestamp** se tratan como datos **varbinary(8)** y siempre se codifican en base 64. El esquema XSD o XDR, si se solicita, refleja este tipo.  
   
 ```  

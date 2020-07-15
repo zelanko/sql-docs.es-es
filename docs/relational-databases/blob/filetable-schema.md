@@ -1,5 +1,6 @@
 ---
 title: Esquema de FileTable | Microsoft Docs
+description: Obtenga información sobre el esquema predefinido y fijo de FileTables, una característica de SQL Server que usa una estructura de directorios para almacenar archivos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49199c617f916413e79a5c6ffc71e6c4f21a69e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767979"
 ---
 # <a name="filetable-schema"></a>Esquema de FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe los esquemas predefinido y fijo de una FileTable.  
   
 |Nombre de atributo de archivo|type|Size|Valor predeterminado|Descripción|Accesibilidad del sistema de archivos|  

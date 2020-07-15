@@ -3,16 +3,16 @@ title: Notas de la versión de SQL Server 2019 en Linux
 description: Este artículo contiene las notas de la versión y las características admitidas de SQL Server 2019 ejecutándose en Linux. Se incluyen las notas de la versión más reciente y de varias versiones anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/31/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7782806a1ba44c4f18c4005dfa592998cc9f026b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: b9b16d15bd3b819e0e14932e42db791118cf4e1e
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301728"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215836"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas de la versión de SQL Server 2019 en Linux
 
@@ -23,17 +23,7 @@ Las siguientes notas de la versión se aplican a la versión de SQL Server 201
 > [!TIP]
 > Para obtener información sobre las nuevas características de Linux en SQL Server 2019, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
-## <a name="supported-platforms"></a>Plataformas compatibles
-
-| Plataforma | Sistema de archivos | Guía de instalación |
-|-----|-----|-----|
-| Servidor Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 u 8 | XFS o EXT4 | [Guía de instalación](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2, SP3, SP4 o SP5 | XFS o EXT4 | [Guía de instalación](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04 LTS, 18.04 LTS | XFS o EXT4 | [Guía de instalación](quickstart-install-connect-ubuntu.md) | 
-| Motor de Docker 1.8 y versiones posteriores en Windows, Mac o Linux | N/D | [Guía de instalación](quickstart-install-connect-docker.md) | 
-
-> [!TIP]
-> Para obtener más información, consulte los [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux. Para obtener la directiva de soporte técnico más reciente para SQL Server 2017, consulte la [Directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ## <a name="tools"></a>Herramientas
 
@@ -45,6 +35,7 @@ En la tabla siguiente se muestra el historial de las versiones de SQL Server 2
 
 | Release                   | Versión       | Fecha de la versión |
 |---------------------------|---------------|--------------|
+| [CU5](#cu5)               | 15.0.4043.16  | 22-06-2020   |
 | [CU4](#cu4)               | 15.0.4033.1   | 31-03-2020   |
 | [CU3](#cu3)               | 15.0.4023.6   | 12-03-2020   |
 | [CU2](#cu2)               | 15.0.4013.40  | 13-02-2020   |
@@ -64,6 +55,25 @@ Si va a actualizar paquetes de SQL Server existentes, ejecute el comando de act
 - [Instalar la compatibilidad con R y Python de la versión de SQL Server 2019 Machine Learning Services en Linux](sql-server-linux-setup-machine-learning.md)
 - [Instalación del paquete de PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Habilitar el Agente SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (junio de 2020)
+
+Esta es la versión de la actualización acumulativa 5 (CU5) de SQL Server 2019 (15.x). La versión del Motor de base de datos de SQL Server es 15.0.4043.16. Para obtener información sobre las correcciones y mejoras, vea <https://support.microsoft.com/help/4552255>
+
+### <a name="package-details"></a>Detalles del paquete
+
+En el caso de las instalaciones de paquetes manuales o sin conexión, puede descargar los paquetes RPM y Debian con la información de la tabla siguiente:
+
+> [!NOTE]
+> A partir de CU1, los vínculos de instalación de paquetes sin conexión para Red Hat señalan a los paquetes RHEL 8. Si busca paquetes RHEL 7, consulte la ruta de acceso de descarga <https://packages.microsoft.com/rhel/7/mssql-server-2019/>.
+>
+> **Ubuntu 18.04** ya se admite en SQL Server 2019 a partir de la CU3. Los vínculos de instalación de paquetes sin conexión para Ubuntu señalan a los paquetes de Ubuntu 18.04. Si busca paquetes de Ubuntu 16.04, consulte la ruta de descarga <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| Paquete | Versión del paquete | Descargas |
+|-----|-----|-----|
+| Paquete RPM de Red Hat | 15.0.4043.16-4 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
+| Paquete RPM de SLES | 15.0.4043.16-4 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
+| Paquete de Debian para Ubuntu 18.04 | 15.0.4043.16-4 | [Paquete de Debian del motor](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4043.16-4_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4043.16-4_amd64.deb)</br>[Paquete de Debian de la búsqueda de texto completo](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4043.16-4_amd64.deb)</br>[Paquete de Debian de extensibilidad](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4043.16-4_amd64.deb)</br>[Paquete de Debian de extensibilidad de Java](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4043.16-4_amd64.deb)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4043.16-4_amd64.deb)|
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (abril de 2020)
 
@@ -264,7 +274,7 @@ Si usa recursos compartidos remotos de **NFS (Network File System)** en producci
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- Al ejecutar el programa de instalación mssql-conf y realizar una instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un idioma distinto del inglés, se muestran caracteres extendidos incorrectos después del texto localizado, “Configurando SQL Server…”. O bien, para instalaciones basadas en idiomas no latinos, puede que la frase no se muestre en absoluto. La frase que falta tendría que mostrar la siguiente cadena localizada: “El PID de licencias de proceso correctamente. La nueva edición es [Edición \<nombre\>]”. La cadena se muestra solo con fines informativos, y en la próxima actualización acumulativa de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se solucionará este problema para todos los idiomas. Esto no afecta a la instalación correcta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de ningún modo. 
+- Al ejecutar el programa de instalación mssql-conf y realizar una instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un idioma distinto del inglés, se muestran caracteres extendidos incorrectos después del texto localizado, “Configurando SQL Server…”. O bien, para instalaciones basadas en idiomas no latinos, puede que la frase no se muestre en absoluto. La frase que falta tendría que mostrar la siguiente cadena localizada: “El PID de licencias de proceso correctamente. La edición nueva es la [edición \<Name\>]". La cadena se muestra solo con fines informativos, y en la próxima actualización acumulativa de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se solucionará este problema para todos los idiomas. Esto no afecta a la instalación correcta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de ningún modo. 
 
 #### <a name="full-text-search"></a>Búsqueda de texto completo
 

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715399"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Uso de BULK INSERT u OPENROWSET(BULK...) para importar datos a SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este artículo se ofrece información general sobre cómo usar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e INSERT...SELECT * FROM OPENROWSET(BULK...) para realizar una importación en bloque de datos desde un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database. En este artículo también se describen las consideraciones de seguridad del uso de BULK INSERT y OPENROWSET(BULK...), así como el uso de estos métodos para una importación en bloque desde un origen de datos remoto.
 
@@ -109,6 +108,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ## <a name="bulk-importing-from-azure-blob-storage"></a>Importación en bloque desde Azure Blob Storage
 
 Cuando se importe desde Azure Blob Storage y los datos no sean públicos (acceso anónimo), cree una instancia de [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) basada en una clave SAS que esté cifrada con [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) y, después, cree un [origen de base de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md) para usarlo en el comando BULK INSERT.
+
+> [!NOTE]
+> No use transacciones explícitas o recibirá un error 4861.
 
 ### <a name="using-bulk-insert"></a>Usar BULK INSERT
 

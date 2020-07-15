@@ -1,5 +1,6 @@
 ---
 title: Instantáneas de base de datos (SQL Server) | Microsoft Docs
+description: Descubra cómo usar instantáneas de base de datos para crear vistas estáticas de solo lectura de una base de datos en SQL Server. Vea las ventajas, requisitos previos y limitaciones.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630817"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Una instantánea de base de datos es una vista estática de solo lectura de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada *base de datos de origen*. La instantánea de base de datos es coherente en cuanto a las transacciones con la base de datos de origen tal como existía en el momento de la creación de la instantánea. Una instantánea de base de datos siempre reside en la misma instancia de servidor que la base de datos de origen. Aunque las instantáneas de base de datos proporcionan una vista de solo lectura de los datos que se encuentran en el mismo estado que cuando se creó la instantánea, el tamaño del archivo de instantáneas crece a medida que se realizan cambios en la base de datos de origen. Para obtener más información, consulte la sección [Información general de la característica](#FeatureOverview), más adelante.
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925296"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896118"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Como recurso de clúster de conmutación por error, existen las interacciones externas entre SQL Server, el Servicio de clúster de conmutación por error de Windows Server (WSFC) y el DLL del recurso de SQL Server (hadrres.dll), que no se pueden supervisar en SQL Server. El registro de WSFC, CLUSTER.LOG, puede diagnosticar problemas en el clúster de WSFC o en el DLL de recursos de SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Generar el registro del clúster  
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificador|Source|Ejemplo de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` el subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` instrucción SQL gratis<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` desconecte de SQL Server|  
+|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` El subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Instrucción SQL libre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Desconecte de SQL Server|  
 |Mensajes precedidos por `[RHS]`|RHS. EXE (Subsistema de hospedaje de recursos, proceso de host de hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO [RHS] El recurso ag está sin conexión. RHS está a punto de informar del estado del recurso a RCM.|  
-|Mensajes precedidos por `[RCM]`|Supervisión del control de recursos (servicio de clúster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: primero se devuelve el grupo «ag» al estado sin conexión...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO [RCM] TransitionToState(ag) en línea --> OfflineCallIssued.|  
+|Mensajes precedidos por `[RCM]`|Supervisión del control de recursos (servicio de clúster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Primero se devuelve el grupo "ag" al estado sin conexión...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO [RCM] TransitionToState(ag) en línea --> OfflineCallIssued.|  
 |RcmApi/ClusAPI|Una llamada API, que significa principalmente que SQL Server está solicitando la acción|000011d0.00000f80::2011/08/05-13:47:42.465 INFO [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Depurar el DLL del recurso Always On de forma aislada  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Para aislar un grupo de disponibilidad desde otros DLL de recursos de clúster, incluidos otros grupos de disponibilidad, haga lo siguiente para ejecutar hadrres.dll dentro de un proceso rhs.exe independiente:  
   
-1.  Abra **Editor del Registro** y navegue hasta la siguiente clave: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta clave contiene las claves para todos los recursos, cada uno con un GUID diferente.  
+1.  Abra el **Editor del Registro** y desplácese hasta la clave siguiente: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta clave contiene las claves para todos los recursos, cada uno con un GUID diferente.  
   
 2.  Busque la clave de recurso que contenga un valor **Nombre** que coincida con el nombre del grupo de disponibilidad.  
   

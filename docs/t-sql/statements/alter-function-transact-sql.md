@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628455"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195831"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -263,7 +263,7 @@ RETURNS return_data_type
  *select-stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla.  
   
- EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
+ EXTERNAL NAME \<method_specifier>*nombre_ensamblado.nombre_clase*.*nombre_método*  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica el método de un ensamblado que se enlaza a la función. *assembly_name* debe coincidir con un ensamblado existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual con la visibilidad activada. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis ( **[]** ) o comillas ( **""** ). *method_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como método estático en la clase especificada.  
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Define el tipo de datos de tabla para una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
+\< clr_table_type_definition \> **(** { *nombre_columna**tipo_datos* } [ **,** ...*n* ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos.  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] cifra las columnas de vista de catálogo que contienen el texto de la instrucción ALTER FUNCTION. El uso de ENCRYPTION impide que la función se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ENCRYPTION no se puede especificar para funciones CLR.  
   
  SCHEMABINDING  
- Especifica que la función está enlazada a los objetos de base de datos a los que hace referencia. Esta condición impide que se realicen cambios en la función si otros objetos enlazados del esquema hacen referencia a ella.  
+ Especifica que la función está enlazada a los objetos de base de datos a los que hace referencia. Cuando se especifica SCHEMABINDING, los objetos base no se pueden modificar de una forma que afecte a la definición de la función. En primer lugar, se debe modificar o quitar la propia definición de la función para quitar las dependencias en el objeto que se va a modificar.  
   
  El enlace de la función a los objetos a los que hace referencia solamente se quita cuando se ejecuta una de estas acciones:  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b196cfca92a9a6cda8170b413a2b3701f09d22f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321982"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883278"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Cambiar entre modos de actualización para una suscripción transaccional actualizable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo cambiar entre modos en actualización para una suscripción de transacción actualizable en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Especifique el modo que desea utilizar para las suscripciones actualizables con el Asistente para nuevas suscripciones. Para información sobre cómo establecer el modo cuando se utiliza este asistente, vea [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
   
  **En este tema**  
@@ -63,17 +63,17 @@ ms.locfileid: "75321982"
   
 3.  Haga clic con el botón secundario en la suscripción para la que desea establecer el modo de actualización y, a continuación, haga clic en **Establecer método de actualización**.  
   
-4.  En el cuadro de diálogo **Establecer método de actualización - \<suscriptor>: \<baseBatosDeSuscripción>** , seleccione **Actualización inmediata** o **Actualización en cola**.  
+4.  En el cuadro de diálogo **Establecer método de actualización: \<Subscriber>: \<SubscriptionDatabase>** , seleccione **Actualización inmediata** o **Actualización en cola**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para establecer el modo de actualización para una suscripción de extracción  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<baseBatosDeSuscripción>** , seleccione el valor **Replicar cambios inmediatamente** o **Poner en cola cambios** para la opción **Método de actualización del suscriptor**.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Publisher>: \<PublicationDatabase>** , seleccione el valor **Replicar cambios inmediatamente** o **Poner en cola cambios** para la opción **Método de actualización del suscriptor**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Para más información sobre el acceso al cuadro de diálogo **Propiedades de la suscripción: \<publicador>: \<baseDatosPublicación**, vea [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
+ Para obtener más información sobre cómo acceder al cuadro de diálogo **Propiedades de la suscripción: \<Publisher>: \<PublicationDatabase>** , vea [Ver y modificar las propiedades de una suscripción de extracción](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

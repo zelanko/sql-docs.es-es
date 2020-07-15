@@ -1,5 +1,6 @@
 ---
 title: Prácticas recomendadas de seguridad de replicación | Microsoft Docs
+description: Obtenga información sobre el mejor enfoque que se debe utilizar para proteger las conexiones de replicación en SQL Server en una serie de circunstancias distintas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f2b45cde8e2ab16e97e17a72a51cd147203c2e51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528749"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893787"
 ---
 # <a name="replication-security-best-practices"></a>Prácticas recomendadas de seguridad de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replicación mueve datos en entornos distribuidos que incluyen desde intranets con un solo dominio hasta aplicaciones que tienen acceso a datos entre dominios sin confianza y por Internet. Es importante comprender el mejor método que se debe utilizar para proteger las conexiones de replicación en diferentes circunstancias.  
   
  La siguiente información es importante para la replicación en todos los entornos:  

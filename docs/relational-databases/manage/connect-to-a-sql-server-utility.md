@@ -1,5 +1,6 @@
 ---
 title: Conexión a una utilidad de SQL Server | Microsoft Docs
+description: Obtenga información sobre cómo conectarse a una utilidad de SQL Server para poder administrar el mantenimiento de recursos de SQL Server. Puede conectarse mediante SQL Server Management Studio (SSMS).
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d2ea96cc97f84a342c12ea841a263c8bf06adc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776017"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Conectarse a una utilidad de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Antes de poder conectarse a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe crear un punto de control de la utilidad (UCP). Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  Para ver y administrar el mantenimiento de los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) para conectar a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

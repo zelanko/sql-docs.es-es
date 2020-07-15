@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1530d8e225d449ce84df450ec28b9db36a78b3b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d111ba13b1b281f6ed6c18fd9a131a1c97e662ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735481"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (permisos de tipo de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Concede permisos para un tipo.  
   
@@ -58,12 +58,12 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
  Especifica el tipo en el que se va a conceder el permiso. El calificador de ámbito ( **::** ) es obligatorio. Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema ( **.** ).  
   
- TO \<database_principal> especifica la entidad de seguridad a la que se concede el permiso.  
+ TO \<database_principal> Especifica la entidad de seguridad para la que se concede el permiso.  
   
  WITH GRANT OPTION  
  Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
- AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
+ AS \<database_principal> Especifica una entidad de seguridad desde la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  

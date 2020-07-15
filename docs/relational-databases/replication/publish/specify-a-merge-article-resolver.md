@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf9ee7fc22e29e7e757b2c615b398a9233d0ad7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846570"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880255"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo especificar un solucionador de artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
 
   
@@ -45,15 +45,15 @@ ms.locfileid: "70846570"
     -   El servidor con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS), para una suscripción de extracción que utilice la sincronización web.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Una vez registrado el solucionador, especifique que un artículo debe utilizar el solucionador en la pestaña **Resolución** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , que está disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Una vez que se haya registrado la resolución, especifique que un artículo debe usarla en la pestaña **Resolución** del cuadro de diálogo **Propiedades del artículo: \<Article>** , que está disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Para especificar un solucionador  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla.  
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la página **Propiedades del artículo: \<artículo>** , haga clic en la pestaña **Resolución**.  
+3.  En la página **Propiedades del artículo: \<Article>** , haga clic en la pestaña **Solucionador**.  
   
 4.  Seleccione **Usar un solucionador personalizado (registrado en el distribuidor)** y después, en la lista, haga clic en el solucionador.  
   

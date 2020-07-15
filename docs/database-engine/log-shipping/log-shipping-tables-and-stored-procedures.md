@@ -1,5 +1,6 @@
 ---
 title: Tablas y procedimientos almacenados de trasvase de registros | Microsoft Docs
+description: Revise todas las tablas y los procedimientos almacenados asociados con una configuración de trasvase de registros. Cada servidor almacena las tablas de trasvase de registros en msdb.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695978"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen todas las tablas y los procedimientos almacenados asociados con una configuración de trasvase de registros. Todas las tablas de trasvase de registros se almacenan en **msdb** en cada servidor. En las tablas siguientes se describe qué tablas y procedimientos almacenados se utilizan en qué servidores en una configuración de trasvase de registros.  
   
 ## <a name="primary-server-tables"></a>Tablas de servidor principal  

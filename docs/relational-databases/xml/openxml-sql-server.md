@@ -1,5 +1,6 @@
 ---
 title: OPENXML (SQL Server) | Microsoft Docs
+description: Obtenga información sobre la instrucción OPENXML en SQL Server, que proporciona una vista de conjunto de filas de la representación interna de un documento XML.
 ms.custom: ''
 ms.date: 05/11/2020
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753708"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] , proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
   
  OPENXML puede utilizarse en instrucciones SELECT y SELECT INTO donde puedan aparecer como origen proveedores de conjuntos de filas, una vista u OPENROWSET. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  

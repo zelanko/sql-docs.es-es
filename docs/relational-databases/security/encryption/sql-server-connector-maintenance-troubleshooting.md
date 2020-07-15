@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882057"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Conector de SQL Server, apéndice
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se proporciona información adicional acerca del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Administración extensible de claves con el Almacén de claves de Azure & #40; SQL Server & #41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure) y [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md) (Usar el conector de SQL Server con características de cifrado de SQL).  
   
@@ -37,14 +37,14 @@ ms.locfileid: "75557940"
   
  Para TDE, así es cómo se lograría:  
   
--   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en el Almacén de claves.  
+-   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en Key Vault.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Mediante [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las instrucciones siguientes, tal como se muestra en el paso 3, sección 3.  
+-   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las siguientes instrucciones, como se muestra en el paso 3 de la sección 3.  
   
      Importe la nueva clave asimétrica.  
   
@@ -147,13 +147,13 @@ Si el almacén se ha perdido, tendrá que volver a crear un almacén y restaurar
 
 En resumen, estos son los pasos:  
   
-* Realice una copia de seguridad de la clave del almacén (con el cmdlet de Powershell Backup-AzureKeyVaultKey).  
+* Realice una copia de seguridad de la clave del almacén (con el cmdlet de PowerShell Backup-AzureKeyVaultKey).  
 * En caso de error del almacén, cree un nuevo almacén en la misma región geográfica*. El usuario que crea esto debería estar en el mismo directorio predeterminado que el programa de instalación de la entidad de servicio para SQL Server.  
-* Restaure la clave en el nuevo almacén (mediante el cmdlet Restore-AzureKeyVaultKey de Powershell; esto restaura la clave con el mismo nombre que antes). Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
+* Restaure la clave en el nuevo almacén (mediante el cmdlet Restore-AzureKeyVaultKey de PowerShell; esto restaura la clave con el mismo nombre que antes). Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
 * Conceda permisos a la entidad de servicio de SQL Server para que use este nuevo almacén.  
 * Modifique la credencial de SQL Server que usa el motor de base de datos para reflejar el nuevo nombre de almacén (si es necesario).  
   
-Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siempre y cuando permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Brasil y Europa, China, US Gov o Alemania.  
+Las copias de seguridad de claves se pueden restaurar entre regiones de Azure, siempre que permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Europa, Brasil, China, US Government o Alemania.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Preguntas más frecuentes  
@@ -167,7 +167,7 @@ Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siem
   
 ### <a name="on-configuring-ssnoversion"></a>Configuración [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**¿Qué son los extremos a los que necesita tener acceso el conector de SQL Server?** El conector se comunica con dos extremos, que deben estar en una lista blanca. El único puerto requerido para la comunicación saliente a estos otros servicios es el puerto 443 para Https:
+**¿Qué son los extremos a los que necesita tener acceso el conector de SQL Server?** El conector se comunica con dos puntos de conexión, que deben estar permitidos. El único puerto requerido para la comunicación saliente a estos otros servicios es el puerto 443 para Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 
@@ -216,7 +216,7 @@ Código de error  |Símbolo  |Descripción
 5 | scp_err_AuthFailure | Error durante la autenticación con el proveedor EKM.    
 6 | scp_err_InvalidArgument | El argumento proporcionado no es válido.    
 7 | scp_err_ProviderError | Se ha producido un error sin especificar en el proveedor EKM que ha detectado el motor de SQL.   
-401 | acquireToken | El servidor ha respondido con el error 401 a la solicitud. Asegúrese de que el secreto y el identificador de cliente son correctos, y que la cadena de credenciales es una concatenación de secreto e identificador de cliente de AAD sin guiones.
+401 | acquireToken | El servidor ha respondido con el error 401 a la solicitud. Asegúrese de que el secreto y el id. de cliente son correctos, y que la cadena de credenciales es una concatenación de secreto e id. de cliente de AAD sin guiones.
 404 | getKeyByName | El servidor respondió con un error 404 porque no se encontró el nombre de clave. Asegúrese de que el nombre de clave existe en el almacén.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | El nombre de la clave es demasiado largo para caber en la huella digital del motor de SQL. El nombre de la clave no debe superar los 26 caracteres.    
 2050 | scp_err_PasswordTooShort | La cadena de secreto, que es la concatenación del identificador de cliente y el secreto de AAD, no llega a 32 caracteres.    
@@ -256,7 +256,7 @@ Si no ve el código de error en esta tabla, estas son algunas razones más por l
   
 -   Si recibe un error de "No se puede cargar la biblioteca", asegúrese de tener la versión adecuada de Visual Studio C++ Redistribuible instalada en función de la versión de SQL Server que se esté ejecutando. En la tabla siguiente se especifica qué versión instalar desde el Centro de descarga de Microsoft.   
 
-El registro de eventos de Windows también registra los errores asociados con el conector de SQL Server, lo que puede ayudar proporcionando contexto adicional sobre el motivo por el que se produce el error. El origen del registro de eventos de la aplicación Windows será "Conector de SQL Server para Microsoft Azure Key Vault".
+El registro de eventos de Windows también registra los errores asociados con el Conector de SQL Server, lo que puede ayudar proporcionando contexto adicional sobre el motivo por el que se produce el error. El origen del registro de eventos de la aplicación Windows será "Conector de SQL Server para Microsoft Azure Key Vault".
   
 SQL Server Version  |Vínculo de instalación redistribuible    
 ---------|--------- 

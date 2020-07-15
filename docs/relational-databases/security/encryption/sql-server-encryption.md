@@ -1,5 +1,6 @@
 ---
 title: Cifrado de SQL Server | Microsoft Docs
+description: Use estos recursos para entender cómo emplea SQL Server el cifrado para mejorar la seguridad de las bases de datos.
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fea2c9fdd532385378e2c66af08eefd4804442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720431"
 ---
 # <a name="sql-server-encryption"></a>Cifrado de SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   El cifrado es el proceso consistente en ofuscar los datos mediante el uso de una clave o contraseña. Esto puede hacer que los datos sean inútiles sin la clave o contraseña de descifrado correspondiente. El cifrado no resuelve los problemas de control de acceso. Sin embargo, mejora la seguridad debido a que limita la pérdida de datos, incluso si se superan los controles de acceso. Por ejemplo, si el equipo host de base de datos no está configurado correctamente y un usuario malintencionado obtiene datos confidenciales, esa información robada podría resultar inservible si está cifrada.  
   
 

@@ -1,5 +1,6 @@
 ---
 title: Creación de procedimientos almacenados compilados de forma nativa | Microsoft Docs
+description: Obtenga información sobre las características de Transact-SQL admitidas solo para los procedimientos almacenados compilados de forma nativa. Vea cómo crear procedimientos almacenados compilados de forma nativa en SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723287"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   

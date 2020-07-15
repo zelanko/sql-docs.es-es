@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Grado máximo de paralelismo | Microsoft Docs
+description: Obtenga información sobre la opción de grado máximo de paralelismo (MAXDOP). Vea cómo usarla para limitar el número de procesadores que usa SQL Server en la ejecución de planes paralelos.
 ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - max degree of parallelism option
 - MaxDop
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 41c65a001047a32e51580633bd82366b7783a2aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 023c80f9f2e5ab5194c5e58ae2066e4758ad440c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697184"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Grado máximo de paralelismo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **grado máximo de paralelismo (MAXDOP)** en SQL Server mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo con más de un microprocesador o CPU, detecta el grado de paralelismo, es decir, el número de procesadores que se emplea para ejecutar una única instrucción en cada ejecución de planes en paralelo. Puede utilizar la opción **max degree of parallelism** (grado máximo de paralelismo) para limitar el número de procesadores que debe utilizarse en la ejecución de planes en paralelo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los planes de ejecución en paralelo para las consultas, las operaciones de lenguaje de definición de datos (DDL) de índice, las inserciones en paralelo, la modificación de columna en línea, la colección de estadísticas en paralelo y el rellenado de cursor estático y controlado por conjuntos de claves.
 

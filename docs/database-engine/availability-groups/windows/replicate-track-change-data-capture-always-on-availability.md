@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888057"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
   
@@ -190,7 +190,7 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Requisitos previos, restricciones y consideraciones para el uso de la replicación  
  En esta sección se describe las consideraciones para implementar la replicación con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluidos los requisitos previos, las restricciones y las recomendaciones.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
   
 -   Cuando se utiliza la replicación transaccional y la base de datos de publicación está en un grupo de disponibilidad, tanto el publicador como el distribuidor deben ejecutar al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. El suscriptor puede utilizar un nivel inferior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -217,11 +217,15 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
   
 ### <a name="considerations"></a>Consideraciones  
   
--   La base de datos de distribución no se puede usar con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o con la creación de reflejo de la base de datos. La configuración de replicación se acopla a la instancia de SQL Server donde se ha configurado el distribuidor; por lo tanto, la base de datos de distribución no se puede reflejar ni replicar. Para proporcionar alta disponibilidad para el distribuidor, utilice un clúster de conmutación por error de SQL Server. Para obtener más información, vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   La base de datos de distribución no se admite para su uso con la creación de reflejo de la base de datos, pero sí con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sujetos a ciertas limitaciones; vea [Configuración del grupo de disponibilidad de distribución](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions). La configuración de replicación se acopla a la instancia de SQL Server donde se ha configurado el distribuidor; por lo tanto, la base de datos de distribución no se puede reflejar ni replicar. También se puede proporcionar alta disponibilidad para el distribuidor mediante un clúster de conmutación por error de SQL Server. Para obtener más información, vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   La conmutación por error del suscriptor a una base de datos de secundaria, aunque se admite, es un procedimiento para suscriptores de replicación de mezcla. El procedimiento es básicamente idéntico al método utilizado para la conmutación por error de una base de datos de suscriptor reflejada. Los suscriptores de replicación transaccional no necesitan un tratamiento especial mientras participan en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Los suscriptores deben ejecutar [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o una versión posterior para participar en un grupo de disponibilidad.  Para obtener más información, consulte [Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   Los metadatos y los objetos que existen fuera de la base de datos no se propagan a las réplicas secundarias, incluidos los inicios de sesión, los trabajos y los servidores vinculados. Si se necesitan los metadatos y los objetos en la nueva base de datos principal después de la conmutación por error, se deben copiar manualmente. Para obtener más información, vea [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
+
+### <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
+
+El publicador o la base de datos de distribución de un grupo de disponibilidad no se pueden configurar como parte de un grupo de disponibilidad distribuido. La base de datos del publicador de un grupo de disponibilidad y la base de datos de distribución de un grupo de disponibilidad requieren un punto de conexión de escucha para la configuración y el uso adecuados. Pero no se puede configurar un punto de conexión de escucha para un grupo de disponibilidad distribuido.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Replicación**  
@@ -252,7 +256,7 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
  [Suscriptores de replicación y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

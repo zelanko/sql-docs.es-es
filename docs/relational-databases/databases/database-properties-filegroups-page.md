@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Grupos de archivos) | Microsoft Docs
+description: Obtenga información sobre cómo usar la pestaña Grupos de archivos en el cuadro de diálogo Propiedades de la base de datos para ver los grupos de archivos de una base de datos o para agregar un nuevo grupo de archivos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f44fd1c87cb1ed27e0d2d52fe658e97ec2edda7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756226"
 ---
 # <a name="database-properties-filegroups-page"></a>Propiedades de la base de datos (página Grupos de archivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para ver los grupos de archivos o para agregar un nuevo grupo de archivos a la base de datos seleccionada. Los tipos de grupo de archivos se separan en grupos de archivos de *filas* , datos FILESTREAM y grupos de archivos optimizados para memoria.  
   
  Los grupos de archivos de filas contienen archivos de registro y de datos normales. Los grupos de archivos de datos de FILESTREAM contienen archivos de datos de FILESTREAM. Estos archivos de datos almacenan información sobre cómo se almacenan los datos de objetos binarios grandes (BLOB) en el sistema de archivos, cuando se utiliza el almacenamiento de FILESTREAM. Las opciones son las mismas para ambos tipos de grupos de archivos.  

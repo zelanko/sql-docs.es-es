@@ -1,23 +1,22 @@
 ---
 title: Habilitación del widget de datos de ejemplo de uso de espacio de tabla
-titleSuffix: Azure Data Studio
 description: En este tutorial se muestra cómo habilitar el widget de datos de ejemplo de uso de espacio de tabla en el panel de base de datos de Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726696"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutorial: Habilitación del widget de datos de ejemplo de uso de espacio de tabla con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutorial: Habilitación del widget de datos de ejemplo de uso de espacio de tabla con Azure Data Studio
 
 En este tutorial se muestra cómo habilitar un widget de datos en el panel de base de datos, lo que proporciona una vista rápida sobre el uso de espacio para todas las tablas de una base de datos. En este tutorial, aprenderá lo siguiente:
 
@@ -26,16 +25,16 @@ En este tutorial se muestra cómo habilitar un widget de datos en el panel de ba
 > * Visualización de los detalles del uso de espacio de tabla
 > * Filtración de datos y visualización de los detalles de la etiqueta en un gráfico de conclusiones
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
 * [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Activación de los datos de administración en el panel de base de datos de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Activación de los datos de administración en el panel de base de datos de Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tiene un widget de ejemplo integrado para supervisar el espacio que usan las tablas de una base de datos.
+Azure Data Studio tiene un widget de ejemplo integrado para supervisar el espacio que usan las tablas de una base de datos.
 
 1. Abra *Configuración de usuario* al presionar **Ctrl + Mayús + P** para abrir la *paleta de comandos*.
 
@@ -78,11 +77,11 @@ En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azur
 
 ## <a name="working-with-the-insight-chart"></a>Trabajo con el gráfico de conclusiones
 
-El gráfico de conclusiones de [!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona detalles de filtrado y de desplazamiento del mouse. Para probar los pasos siguientes:
+El gráfico de conclusiones de Azure Data Studio proporciona detalles de filtrado y de desplazamiento del mouse. Para probar los pasos siguientes:
 
-1. Haga clic en la leyenda *row_count* del gráfico y actívela y desactívela. [!INCLUDE[name-sos](../includes/name-sos-short.md)] muestra y oculta las series de datos a medida que activa o desactiva una leyenda.
+1. Haga clic en la leyenda *row_count* del gráfico y actívela y desactívela. Azure Data Studio muestra y oculta las series de datos a medida que activa o desactiva una leyenda.
 
-2. Mueva el puntero del mouse sobre el gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] muestra más información sobre la etiqueta de la serie de datos y su valor, tal como se muestra en la siguiente captura de pantalla.
+2. Mueva el puntero del mouse sobre el gráfico. Azure Data Studio muestra más información sobre la etiqueta de la serie de datos y su valor, tal como se muestra en la siguiente captura de pantalla.
 
    ![leyenda y activación y desactivación del gráfico](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

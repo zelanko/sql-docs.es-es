@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: Recuperar información de los empleados | Microsoft Docs'
+title: 'Ejemplo: Recuperación de información de los empleados | Microsoft Docs'
+description: Vea un ejemplo de cómo recuperar información de los empleados de una base de datos como XML mediante una consulta con FOR XML EXPLICIT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 692ceb3d2c25bab437d92c5634a0b9c89d3b3221
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632777"
 ---
-# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperación de información de los empleados
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
   
  Supongamos que desea una transformación FOR XML EXPLICIT para generar XML como se indica a continuación:  

@@ -1,5 +1,6 @@
 ---
 title: ft crawl bandwidth (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "ft crawl bandwidth". Vea cómo afecta al número de búferes que SQL Server mantiene en el grupo de búferes de memoria de gran tamaño.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - memory [SQL Server], buffers
 - ft crawl bandwidth option
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c83790146e7572c8854cf12deda586adb1c0caeb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 59caa1e868c4caab24afd17909c34f57c96f0005
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789789"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>ft crawl bandwidth (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice la opción **ft crawl bandwidth** (ancho de banda de notificación de texto completo) para especificar el tamaño hasta donde puede crecer un grupo de búferes de memoria de gran tamaño. Los búferes de memoria de gran tamaño tienen 4 MB. El valor del parámetro **max** especifica el máximo de búferes que debe mantener el administrador de memoria de texto completo en un grupo de búferes de gran tamaño. Si el valor de **max** es cero, no habrá ningún límite superior para el número de búferes que pueden estar en un grupo de búferes de gran tamaño.  
   

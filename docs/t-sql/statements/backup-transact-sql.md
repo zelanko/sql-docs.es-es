@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922233"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215840"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -224,7 +224,7 @@ READ_WRITE_FILEGROUPS Especifica que en la copia de seguridad parcial se copiar�
 > [!IMPORTANT]
 > Si se enumeran de forma explícita los grupos de archivos de lectura/escritura con FILEGROUP en vez de READ_WRITE_FILEGROUPS, se crea una copia de seguridad de archivos.
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Es el nombre lógico de un grupo de archivos de solo lectura o una variable cuyo valor equivale al nombre lógico de un grupo de archivos de solo lectura que se va a incluir en la copia de seguridad parcial. Para más información, vea "\<file_or_filegroup>" anteriormente en este tema.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Es el nombre lógico de un grupo de archivos de solo lectura o una variable cuyo valor equivale al nombre lógico de un grupo de archivos de solo lectura que se va a incluir en la copia de seguridad parcial. Para obtener más información, consulte "\<file_or_filegroup>", que encontrará previamente en este tema.
 
 *n* Es un marcador de posición que indica que se pueden especificar varios grupos de archivos de solo lectura en una lista separada por comas.
 
@@ -267,7 +267,7 @@ Esta opción solo está disponible en la edición Enterprise de [!INCLUDE[ssNoVe
 > [!NOTE]
 > Para MIRROR TO = DISK, BACKUP determina automáticamente el tamaño de bloque apropiado de los dispositivos de disco en función del tamaño de sector del disco. Si al disco MIRROR TO se le aplica formato con un tamaño de sector diferente al del disco especificado como dispositivo de copia de seguridad principal, se producirá un error en el comando de copia de seguridad. Con el fin de reflejar las copias de seguridad en los dispositivos que tienen otros tamaños de sector, se debe especificar el parámetro BLOCKSIZE y se debe establecer en el tamaño de sector mayor de todos los dispositivos de destino. Para obtener más información sobre el tamaño de bloque, vea "BLOCKSIZE" más adelante en este tema.
 
-\<backup_device> Vea "\<backup_device>" más arriba en esta sección.
+\<backup_device> Consulte "\<backup_device>", que encontrará previamente en esta sección.
 
 *n* Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas. El número de dispositivos de la cláusula MIRROR TO debe ser igual al número de dispositivos de la cláusula TO.
 
@@ -436,7 +436,7 @@ El espacio total usado por los búferes está determinado por: `BUFFERCOUNT * MA
 > [!NOTE]
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
 
 > [!NOTE]
 > Al crear copias de seguridad con el Servicio del objeto de escritura de SQL, si la base de datos tiene configurado [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) o incluye [grupos de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), el valor de `MAXTRANSFERSIZE` en el momento de una restauración debe ser mayor o igual que el valor de `MAXTRANSFERSIZE` que se usó cuando se creó la copia de seguridad.
@@ -690,8 +690,9 @@ La instrucción BACKUP no se permite en una transacción explícita o implícita
 
 Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.
 
-Cuando se usa la compresión de copia de seguridad con bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, se recomienda usar un valor de `MAXTRANSFERSIZE`**mayor que 65536 (64 KB)** .
-Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esto habilita un algoritmo de compresión optimizada para bases de datos con cifrado TDE que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el valor `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** habilita un algoritmo de compresión optimizada para bases de datos con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si `MAXTRANSFERSIZE` no se especifica o si se usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+
+Desde [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, ya no es necesario establecer `MAXTRANSFERSIZE` para habilitar este algoritmo de compresión optimizada con TDE. Si se especifica el comando de copia de seguridad `WITH COMPRESSION` o la configuración de servidor  *predeterminada de compresión de copia de seguridad* se establece en 1, `MAXTRANSFERSIZE` aumentará automáticamente a 128K para habilitar el algoritmo optimizado. Si se especifica `MAXTRANSFERSIZE` en el comando de copia de seguridad con un valor > 64K, se respetará el valor proporcionado. En otras palabras, SQL Server nunca disminuirá automáticamente el valor, solo lo aumentará. Si necesita hacer una copia de seguridad de una base de datos con cifrado TDE con `MAXTRANSFERSIZE = 65536`, debe especificar `WITH NO_COMPRESSION` o asegurarse de que la configuración de servidor *predeterminada de compresión de copia de seguridad* esté establecida en 0.
 
 > [!NOTE]
 > Hay algunos casos en los que el `MAXTRANSFERSIZE` predeterminado es mayor que 64 KB:
@@ -699,7 +700,7 @@ Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esto habilita un algori
 > - Cuando la base de datos tiene varios archivos de datos creados, usa `MAXTRANSFERSIZE` > 64 KB.
 > - Al realizar una copia de seguridad en una dirección URL, el `MAXTRANSFERSIZE = 1048576` predeterminado (1 MB)
 >
-> Incluso si se aplica alguna de estas condiciones, debe establecer explícitamente `MAXTRANSFERSIZE` mayor que 64 KB en el comando de copia de seguridad para poder obtener el nuevo algoritmo de compresión de copia de seguridad.
+> Incluso si se aplica alguna de estas condiciones, debe establecer explícitamente `MAXTRANSFERSIZE` mayor que 64 KB en el comando de copia de seguridad para poder obtener el algoritmo de compresión de copia de seguridad optimizado, a menos que esté utilizando [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 o una versión posterior.
 
 De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -1044,7 +1045,7 @@ El espacio total usado por los búferes está determinado por: `BUFFERCOUNT * MA
 > [!NOTE]
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
 
 > [!NOTE]
 > En el caso de las bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, el valor predeterminado de `MAXTRANSFERSIZE` es 65536 (64 KB). En las bases de datos que no tienen cifrado TDE, el valor predeterminado de `MAXTRANSFERSIZE` es 1048576 (1 MB) cuando se usa la copia de seguridad en DISK y 65536 (64 KB) al usar VDI o TAPE.

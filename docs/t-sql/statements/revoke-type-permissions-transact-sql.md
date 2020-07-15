@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: abc81687b3d75575d1bf8c7727ae3415fc7b3c91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735341"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (permisos de tipo de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revoca permisos en un tipo.  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
  Especifica el tipo en el que se va a revocar el permiso. El calificador de ámbito ( **::** ) es obligatorio. Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema ( **.** ).  
   
- { FROM | TO } \<database_principal> especifica la entidad de seguridad a la que se revoca el permiso.  
+ { FROM | TO } \<database_principal> Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
  GRANT OPTION  
  Indica que se revocará el derecho de conceder el permiso especificado a otras entidades de seguridad. No se revocará el permiso.  
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Una revocación en cascada de un permiso concedido WITH GRANT OPTION revocará tanto GRANT como DENY de dicho permiso.  
   
- AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
+ AS \<database_principal> Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  

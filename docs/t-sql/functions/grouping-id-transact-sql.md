@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631568"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Es una función que calcula el nivel de agrupación. GROUPING_ID solo se puede usar en la lista de \<selección> de SELECT, las cláusulas HAVING u ORDER BY cuando se especifica GROUP BY.  
+  Es una función que calcula el nivel de agrupación. GROUPING_ID solo se puede usar en la lista de las cláusulas SELECT \<select>, HAVING o ORDER BY si se especifica GROUP BY.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Observaciones  
- GROUPING_ID \<column_expression> deben coincidir exactamente con la expresión en la lista GROUP BY. Por ejemplo, si agrupa por DATEPART (yyyy, \<*nombre de columna*>), use GROUPING_ID (DATEPART (yyyy, \<*nombre de columna*>)) o, si agrupa por \<*nombre de columna*>, use GROUPING_ID (\<*nombre de columna*>).  
+ El elemento GROUPING_ID \<column_expression> debe coincidir exactamente con la expresión en la lista GROUP BY. Por ejemplo, si agrupa el contenido por DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, \<*column name*>)); si lo hace por \<*column name*>, use GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>Comparar GROUPING_ID() con GROUPING()  
- GROUPING_ID (\<column_expression> [ **,** ...*n* ]) introduce el equivalente del valor devuelto de GROUPING (\<column_expression>) de cada columna de su lista de columnas en cada fila de salida como una cadena de unos y ceros. GROUPING_ID interpreta dicha cadena como un número de base 2 y devuelve el número entero equivalente. Por ejemplo, considere la siguiente instrucción: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. La tabla siguiente muestra los valores de entrada y salida de GROUPING_ID().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) introduce el equivalente del valor devuelto de GROUPING (\<column_expression>) para cada columna de su lista de columnas en cada fila de salida como una cadena de unos y ceros. GROUPING_ID interpreta dicha cadena como un número de base 2 y devuelve el número entero equivalente. Por ejemplo, considere la siguiente instrucción: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. La tabla siguiente muestra los valores de entrada y salida de GROUPING_ID().  
   
 |Columnas agregadas|Entrada de GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Resultado de GROUPING_ID()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

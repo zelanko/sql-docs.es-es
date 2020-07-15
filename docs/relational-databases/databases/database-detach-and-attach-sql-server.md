@@ -1,8 +1,8 @@
 ---
-title: Anexión y separación de bases de datos (SQL Server) | Microsoft Docs
+title: Adjuntar y separar bases de datos (SQL Server)
 description: Puede desasociar y volver a adjuntar los archivos de datos y de registro de transacciones de una base de datos de SQL Server para cambiar la base de datos a otra instancia o para moverla.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756280"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
   
   
@@ -63,7 +63,13 @@ No podrá separar una base de datos si se cumple cualquiera de las condiciones s
   
     > [!NOTE]  
     > No puede separar ni adjuntar una instantánea de base de datos.  
+
+-   La base de datos forma parte de un grupo de disponibilidad Always On.  
   
+    La base de datos no se puede desasociar hasta que se quite del grupo de disponibilidad. Para obtener más información, consulte [Eliminación de una base de datos principal de un grupo de disponibilidad Always On](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   Se va a reflejar la base de datos en una sesión de creación de reflejo de la base de datos.  
   
     No se puede separar la base de datos a menos que se termine la sesión. Para obtener más información, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

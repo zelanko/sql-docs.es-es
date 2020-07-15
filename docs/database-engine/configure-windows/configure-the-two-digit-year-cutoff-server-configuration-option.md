@@ -1,5 +1,6 @@
 ---
-title: Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos | Microsoft Docs
+title: Establecimiento de la opción de configuración del servidor Fecha límite de año de dos dígitos | Microsoft Docs
+description: Familiarícese con la opción "Fecha límite de año de dos dígitos". Descubra cómo determina la forma en que SQL Server traduce los años de dos dígitos en años de cuatro dígitos.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2c33209236b866816ce1c597ab5cfe1a8971d976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aa50fbd2eaa934c13704dc218084655c0f0f089
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764038"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo configurar la opción de configuración de servidor **fecha límite de año de dos dígitos** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **fecha límite de año de dos dígitos** especifica un número entero entre 1753 y 9999 que representa el año límite para interpretar años de dos dígitos como años de cuatro dígitos. El marco temporal predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de 1950 a 2049, que indica el año límite 2049. Esto significa que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta un año con dos dígitos igual a 49 como 2049, un año con dos dígitos igual a 50 como 1950 y un año con dos dígitos igual a 99 como 1999. Para mantener la compatibilidad con las versiones anteriores, utilice el valor predeterminado.  
   

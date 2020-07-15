@@ -1,5 +1,6 @@
 ---
 title: Promoción de los valores XML frecuentes con columnas calculadas | Microsoft Docs
+description: Obtenga información sobre cómo promover valores XML usados con frecuencia mediante la creación de columnas calculadas para realizar consultas más eficaces.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772095"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
   
  La columna promocionada puede ser una columna calculada de la misma tabla o puede ser una columna aparte, mantenida por el usuario, de una tabla. Esto es suficiente cuando se promocionan valores singleton desde cada instancia XML. No obstante, en el caso de propiedades con varios valores, es necesario crear una tabla aparte para la propiedad, como se describe en la sección siguiente.  
@@ -29,7 +30,7 @@ ms.locfileid: "80664877"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Columna calculada basada en el tipo de datos xml  
  Una columna calculada se puede crear mediante una función definida por el usuario que invoque métodos de tipos de datos **xml** . El tipo de la columna calculada puede ser cualquiera SQL, incluido XML. Esto se muestra en el ejemplo siguiente.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Ejemplo: columna calculada basada en el método de tipo de datos xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Ejemplo: Columna calculada basada en el método de tipo de datos XML  
  Cree la función definida por el usuario para obtener el número ISBN de un libro:  
   
 ```  
@@ -51,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La columna calculada se puede indizar de la manera habitual.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Ejemplo: consultas en una columna calculada basada en métodos de tipo de datos xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Ejemplo: Consultas en una columna calculada basada en métodos de tipo de datos XML  
  Para obtener el <`book`> cuyo ISBN es 0-7356-1588-2:  
   
 ```  
@@ -85,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Escriba consultas para el acceso de SQL a las tablas de propiedades y para el acceso de XML a la columna XML de la tabla base, con combinaciones entre las tablas mediante el uso de su clave principal.  
   
-### <a name="example-create-a-property-table"></a>Ejemplo: crear una tabla de propiedades  
+### <a name="example-create-a-property-table"></a>Ejemplo: Creación de una tabla de propiedades  
  A modo de ilustración, suponga que desea promocionar el nombre de los autores. Los libros tienen uno o varios autores, por lo que sus nombres son una propiedad con varios valores. Cada nombre se almacena en una fila distinta de una tabla de propiedades. La clave principal de la tabla base se duplica en la tabla de propiedades para que se puedan volver a combinar más tarde.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Ejemplo: crear una función definida por el usuario para generar un conjunto de filas a partir de una instancia XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Ejemplo: Creación de una función definida por el usuario para generar un conjunto de filas a partir de una instancia XML  
  La siguiente función con valores de tabla, udf_XML2Table, acepta un valor de clave principal y una instancia XML. Recupera el nombre de todos los autores de los elementos <`book`> y devuelve un conjunto de filas de pares de nombres y claves principales.  
   
 ```  
@@ -108,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Ejemplo: crear desencadenadores para rellenar una tabla de propiedades  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Ejemplo: Creación de desencadenadores para rellenar una tabla de propiedades  
  El desencadenador insert inserta filas en la tabla de propiedades:  
   
 ```  
@@ -155,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Ejemplo: buscar instancias XML cuyos autores tengan el mismo nombre  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Ejemplo: Búsqueda de instancias XML cuyos autores tengan el mismo nombre  
  La consulta se puede formar en la columna XML. Otra posibilidad es buscar en la tabla de propiedades el nombre "David" y combinarla de nuevo con la tabla base para devolver la instancia XML. Por ejemplo:  
   
 ```  
@@ -164,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Ejemplo: solución mediante la función de transmisión por secuencias con valores de tabla de CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Ejemplo: Solución mediante la función de transmisión por secuencias con valores de tabla de CLR  
  Esta solución consta de los siguientes pasos:  
   
 1.  Defina una clase de CLR, SqlReaderBase, que implemente ISqlReader y genere una función de salida de transmisión por secuencias con valores de tabla aplicando una expresión de ruta de acceso en una instancia XML.  

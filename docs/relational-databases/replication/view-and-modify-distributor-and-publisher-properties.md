@@ -17,15 +17,15 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720596"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Ver y modificar las propiedades del distribuidor y del publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema se describe cómo ver y modificar las propiedades del distribuidor y del publicador en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  
@@ -61,7 +61,7 @@ ms.locfileid: "76286942"
   
 2.  Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, haga clic en **Propiedades del distribuidor**.  
   
-3.  Vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** .  
+3.  Vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<Distributor>** .  
   
     -   Para ver y modificar las propiedades de una base de datos de distribución, haga clic en el botón de propiedades ( **...** ) de la base de datos en la página **General** del cuadro de diálogo.  
   

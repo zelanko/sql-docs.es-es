@@ -1,6 +1,6 @@
 ---
 title: Preparación de una base de datos para la creación de reflejo
-description: Obtenga información sobre cómo preparar una base de datos de SQL Server para la creación de reflejo de la base de datos.
+description: Aprenda a preparar una base de datos de SQL Server para la creación de reflejo de la base de datos mediante SQL Server Management Studio o Transact-SQL en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74cd9b60e38fb011360bbfc678ccd49509531b59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735242"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar una base de datos reflejada para la creación de reflejo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para poder empezar una sesión de creación de reflejo de la base de datos, el propietario de la base de datos o el administrador del sistema debe asegurarse de que la base de datos reflejada se ha creado y está preparada para la creación de reflejo. La creación de una base de datos reflejada requiere como mínimo que se haga una copia de seguridad completa de la base de datos principal y la subsiguiente copia de seguridad de registros, y que ambas se restauren en la instancia del servidor reflejado mediante WITH NORECOVERY.  
   
  En este tema se describe cómo preparar una base de datos reflejada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -131,7 +131,7 @@ ms.locfileid: "75255982"
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE Arguments &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Con RESTORE WITH NORECOVERY, aplique la copia de seguridad o las copias de seguridad de registros pendientes en la base de datos reflejada.  
   

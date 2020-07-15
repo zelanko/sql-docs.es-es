@@ -1,5 +1,6 @@
 ---
 title: Eliminación de una suscripción de inserción | Microsoft Docs
+description: Obtenga información sobre cómo eliminar una suscripción de inserción en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8dd5c9c741cd94eaf05a2181c821bb63bd6ed84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653917"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminar una suscripción de inserción
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo eliminar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  

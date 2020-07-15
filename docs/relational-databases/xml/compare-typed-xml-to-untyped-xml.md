@@ -1,5 +1,6 @@
 ---
 title: Comparar XML con tipo y XML sin tipo | Microsoft Docs
+description: Obtenga información sobre las principales diferencias entre XML con tipo y sin tipo.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775557"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Se pueden crear variables, parámetros y columnas del tipo de datos **xml** . Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo **xml** . En este caso, se dice que la instancia del tipo de datos **xml** es una instancia *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML correcto y tipo de datos XML  
@@ -68,14 +69,14 @@ ms.locfileid: "80664683"
   
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una variable de tipo XML  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociación de una colección de esquemas con una variable de tipo XML  
  En el ejemplo siguiente se crea una variable de tipo **xml** y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificar un esquema para una columna de tipo XML  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificación de un esquema para una columna de tipo XML  
  En el ejemplo siguiente se crea una tabla con una columna de tipo **xml** y se especifica un esquema para la columna:  
   
 ```  
@@ -84,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Pasar un parámetro de tipo XML a un procedimiento almacenado  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Cómo pasar un parámetro de tipo XML a un procedimiento almacenado  
  En el ejemplo siguiente se pasa un parámetro de tipo **xml** a un procedimiento almacenado y se especifica un esquema para la variable:  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  En la jerarquía de tipos de datos, el tipo de datos **xml** aparece por debajo de **sql_variant** y los tipos definidos por el usuario, pero por encima de los tipos integrados.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificar facetas para restringir una columna XML con tipo  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificación de facetas para restringir una columna XML con tipo  
  En las columnas **xml** con tipo se puede restringir la columna para permitir que solo se almacenen en ella elementos únicos de nivel superior para cada instancia. Para ello, se especifica la faceta opcional `DOCUMENT` cuando se crea una tabla, como se muestra en el ejemplo siguiente:  
   
 ```  

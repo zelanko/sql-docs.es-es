@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786481"
 ---
-# <a name="heaps-tables-without-clustered-indexes"></a>Montones (tablas sin índices agrupados)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="heaps-tables-without-clustered-indexes"></a>Montones (tablas sin índices clúster)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Un montón es una tabla que no tiene un índice clúster. En las tablas almacenadas, se pueden crear uno o varios índices no clúster como un montón. Los datos se almacenan en el montón sin especificar un orden. Normalmente, en un principio los datos se almacenan en el orden en el que las filas se insertan en la tabla, pero [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede mover los datos en el montón para almacenar las filas de forma eficaz, de modo que no se puede predecir el orden de los datos. Para garantizar el orden de las filas que se devuelven de un montón, debe usar la cláusula `ORDER BY`. Para especificar un orden lógico permanente con el fin de almacenar las filas, cree un índice agrupado en la tabla, de modo que la tabla no sea un montón.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220710"
 > A veces, hay buenos motivos para dejar una tabla como montón en lugar de crear un índice clúster, pero para usar los montones de forma eficaz se requieren conocimientos avanzados. La mayoría de las tablas deben tener un índice clúster cuidadosamente elegido a menos que exista un buen motivo para dejar la tabla como un montón.  
   
 ## <a name="when-to-use-a-heap"></a>Cuándo se usa un montón  
-Cuando una tabla se almacena como montón, las filas individuales se identifican mediante una referencia a un identificador de fila (RID) de 8 bytes formado por el número de archivo, el número de páginas de datos y la ranura de la página (FileID:PageID:SlotID). El identificador de fila es una estructura pequeña y eficaz. A veces, los profesionales de datos usan montones cuando el acceso a los datos se realiza siempre a través de índices no agrupados y el RID es menor que una clave de índice agrupado. Los montones también se usan así.   
- 
+Cuando una tabla se almacena como montón, las filas individuales se identifican mediante una referencia a un identificador de fila (RID) de 8 bytes formado por el número de archivo, el número de páginas de datos y la ranura de la página (FileID:PageID:SlotID). El identificador de fila es una estructura pequeña y eficaz. 
+
+Los montones se pueden usar como tablas de almacenamiento provisional para operaciones de inserción de gran tamaño y sin ordenar. Dado que los datos se insertan sin aplicar un orden estricto, la operación de inserción suele ser más rápida que la inserción equivalente en un índice agrupado. Si los datos del montón se leen y procesan en un destino final, puede ser útil crear un índice no agrupado estrecho que abarque el predicado de búsqueda que usa la consulta de lectura. 
+
+> [!NOTE]  
+> Los datos se recuperan de un montón en orden de páginas de datos, pero no necesariamente en el orden en el que se han insertado. 
+
+A veces, los profesionales de datos también usan montones cuando el acceso a los datos se realiza siempre a través de índices no agrupados y el RID es menor que una clave de índice agrupado. 
+
 Si una tabla es un montón y no tiene ningún índice agrupado, debe leerse la tabla completa (recorrido de tabla) cuando se busca una fila. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede buscar un RID directamente en el montón. Esto puede ser aceptable si la tabla es pequeña.  
   
 ## <a name="when-not-to-use-a-heap"></a>Cuándo no se usa un montón  

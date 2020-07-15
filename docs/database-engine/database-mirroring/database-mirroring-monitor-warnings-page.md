@@ -1,5 +1,6 @@
 ---
 title: Monitor de creación de reflejo de la base de datos (página Advertencias) | Microsoft Docs
+description: Use esta página de solo lectura Monitor de creación de reflejo de la base de datos para ver las advertencias que se admiten en los eventos de creación de reflejo de la base de datos, así como los valores de umbral de advertencia especificados, si los hubiera.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73efd4acedfbce0dcfdea72be63b5b11a086d38f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a2a5b2b940f1ee72e903e47dee3a3c5e76f293e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680433"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de creación de reflejo de la base de datos (página Advertencias)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Muestra una lista de solo lectura de las advertencias que se admiten en los eventos de creación de reflejo de la base de datos, así como los valores de umbral de advertencia especificados (si los hay).  
   
  **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  

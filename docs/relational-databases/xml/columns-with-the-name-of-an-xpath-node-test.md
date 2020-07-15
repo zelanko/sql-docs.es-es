@@ -1,5 +1,6 @@
 ---
 title: Columnas con el nombre de una prueba de nodo XPath | Microsoft Docs
+description: Obtenga información sobre cómo se asigna el contenido XML cuando una consulta SQL contiene columnas con el nombre de una prueba de nodo XPath, como text() o comment().
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 632fe07b7ffdf74f01d9cf87367fee9fa7886f27
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2605e407cabf004ba05d48fca092a7db269ecacd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692312"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Columnas con el nombre de una prueba de nodo XPath
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si el nombre de columna es una de las pruebas de nodo XPath, se asignará el contenido tal y como se muestra en la tabla siguiente. Cuando el nombre de la columna es una prueba de nodo XPath, se asigna el contenido al nodo correspondiente. Si el tipo SQL de la columna es **xml**, se devolverá un error.  
   
 |Nombre de columna|Comportamiento|  

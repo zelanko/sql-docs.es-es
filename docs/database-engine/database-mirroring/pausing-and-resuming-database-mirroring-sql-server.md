@@ -1,6 +1,6 @@
 ---
 title: Pausa y reanudación del reflejo de la base de datos
-description: Obtenga información sobre cómo pausar y reanudar posteriormente la sesión de creación de reflejo de la base de datos de SQL Server en cualquier momento.
+description: Aprenda a pausar y luego a reanudar una sesión de creación de reflejo de la base de datos de SQL Server para conservar el estado de sesión a la vez que se suspende la creación de reflejo.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735255"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausar y reanudar la creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El propietario de la base de datos puede pausar y reanudar posteriormente una sesión de creación de reflejo de la base de datos en cualquier momento. La pausa preserva el estado de la sesión mientras se suspende la creación de reflejo. Durante los cuellos de botella, las pausas pueden ser útiles para mejorar el rendimiento en el servidor principal.  
   
  Cuando se realiza una pausa en una sesión, la base de datos principal sigue estando disponible. La pausa establece el estado de la sesión de creación de reflejo de la base de datos en SUSPENDED y la base de datos reflejada ya no se mantiene al día con la base de datos principal, lo que ocasiona que la base de datos principal se ejecute de una manera expuesta.  

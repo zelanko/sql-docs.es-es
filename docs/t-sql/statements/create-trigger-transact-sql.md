@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766950"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Crea un desencadenador DML, DDL o logon. Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento en el servidor de bases de datos. Los desencadenadores DML se ejecutan cuando un usuario intenta modificar datos mediante un evento de lenguaje de manipulación de datos (DML). Los eventos DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista. Estos desencadenadores se activan cuando se desencadena cualquier evento válido, con independencia de que las filas de la tabla se vean o no afectadas. Para más información, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
@@ -264,7 +264,8 @@ Los desencadenadores DDL y logon capturan información acerca del evento desenca
   
 Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
-\< method_specifier > **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores  
+\< method_specifier > 
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 En el caso de un desencadenador CLR, especifica el método de enlace de un ensamblado con el desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza '.' para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por delimitadores de tipo [ ] o " ". La clase no puede ser anidada.  
   

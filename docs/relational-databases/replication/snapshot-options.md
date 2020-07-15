@@ -15,24 +15,24 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767606"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificación de las opciones de inicialización de instantáneas para la replicación de SQL 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Hay varias opciones disponibles que se pueden especificar al [inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md).
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>Especificar el formato de instantánea (SQL Server Management Studio)
-  Especifique el formato de instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Especifique el formato de instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="to-specify-snapshot-format"></a>Para especificar el formato de instantánea  
   
-1.  En la página **Instantánea**, del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione **SQL Server nativo: todos los suscriptores deben ser servidores que ejecuten SQL Server** o **Carácter: es necesario si un publicador o suscriptor no ejecuta SQL Server**.  
+1.  En la página **Instantánea**, del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione **SQL Server nativo: todos los suscriptores deben ser servidores que ejecuten SQL Server** o **Carácter: es necesario si un publicador o suscriptor no ejecuta SQL Server**.  
   
     > [!NOTE]  
     >  Se recomienda seleccionar el formato nativo, a menos que esta publicación deba ser compatible con suscripciones a una base de datos de SQL Server Compact o una base de datos que no sea de SQL Server.  
@@ -44,12 +44,12 @@ Hay varias opciones disponibles que se pueden especificar al [inicializar una su
 ### <a name="default-snapshot-location"></a>Ubicación predeterminada de instantáneas
 Especifique la ubicación predeterminada de instantáneas en la página **Carpeta de instantáneas** del Asistente para configurar la distribución. Para obtener más información sobre cómo usar este asistente, vea [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) (Configurar la publicación y la distribución). Si crea una publicación en un servidor que no está configurado como un distribuidor, especifique una ubicación predeterminada de instantáneas en la página **Carpeta de instantáneas** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md).  
   
- Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<distribuidor>** . Para obtener más información, vea [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación - \<publicación>** . Para más información, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<Distributor>** . Para obtener más información, vea [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para más información, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Para modificar la ubicación predeterminada de instantáneas  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** , haga clic en el botón de propiedades ( **...** ) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.    
-2.  En el cuadro de diálogo **Propiedades del publicador - \<publicador>** , escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.  
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distributor>** , haga clic en el botón de propiedades ( **...** ) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.    
+2.  En el cuadro de diálogo **Propiedades del publicador: \<Publisher>** , escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.  
   
     > [!NOTE]  
     >  El Agente de instantáneas debe tener permisos de escritura para el directorio especificado y el Agente de distribución o de mezcla debe tener permisos de lectura. Si usa suscripciones de extracción, debe especificar un directorio compartido como ruta de acceso, según la convención de nomenclatura universal (UNC), por ejemplo \\\nombreDeEquipo\instantánea. Para obtener más información, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).    
@@ -70,7 +70,7 @@ Si desea especificar una ubicación diferente para la carpeta de instantáneas o
 >  No use WebSync y las ubicaciones alternativas de carpeta de instantáneas a la vez.  
   
 #### <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :  
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** :  
   
     1.  Seleccione **Poner los archivos en la siguiente carpeta**y haga clic en **Examinar** para navegar al directorio, o bien escriba la ruta de acceso al directorio en el que deben almacenarse los archivos de instantáneas.  
   
@@ -98,7 +98,7 @@ Cuando [configure propiedades de instantáneas &#40;programación de la replicac
 >  En algunos casos, las instantáneas comprimidas pueden mejorar el rendimiento de la transferencia de archivos de instantáneas en la red. No obstante, la compresión de instantáneas requiere que el Agente de instantáneas realice un procesamiento adicional al generar los archivos de instantáneas, y otro procesamiento adicional por parte del Agente de distribución o del Agente de mezcla al aplicar los archivos de instantáneas. Esto puede ralentizar, en algunos casos, la generación de instantáneas y aumentar el tiempo de aplicación de una instantánea. Además, las instantáneas comprimidas no se pueden reanudar si se produce un error de red; por tanto, no son adecuadas para redes no confiables. Cuando utilice instantáneas comprimidas en una red, tenga en cuenta estos inconvenientes.  
   
 ### <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :  
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** :  
   
     1.  Seleccione **Poner los archivos en la siguiente carpeta**y haga clic en **Examinar** para navegar al directorio, o bien escriba la ruta de acceso al directorio en el que deben almacenarse los archivos de instantáneas.  
   
@@ -128,7 +128,7 @@ Puede especificar scripts que se ejecuten en el suscriptor antes o después de a
 
 ### <a name="execute-a-script"></a>Ejecución de un script 
 
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :    
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** :    
     -   Para especificar un script para que se ejecute antes de aplicar la instantánea, haga clic en **Examinar** para navegar al script, o escriba la ruta de acceso del script en el cuadro de texto **Antes de aplicar la instantánea, ejecutar este script** .  
   
         > [!NOTE]  

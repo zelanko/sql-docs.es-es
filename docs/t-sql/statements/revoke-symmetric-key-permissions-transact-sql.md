@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5adf46b8464541db3068dc439cd382e1562dfe7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765947"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE (permisos de clave simétrica de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revoca los permisos concedidos y denegados para una clave simétrica.  
    
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
- AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
+ AS \<database_principal> Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  

@@ -1,5 +1,6 @@
 ---
 title: Usar el modo EXPLICIT con FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo el uso del modo EXPLICIT ofrece la máxima flexibilidad para generar el XML a partir del resultado de una consulta.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736546"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Como se describe en el tema [Generar XML mediante FOR XML](../../relational-databases/xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
   
  La consulta en modo EXPLICIT debe escribirse de una determinada manera para poder especificar explícitamente la información adicional sobre el XML requerido, como el anidamiento esperado en el XML, como parte de la propia consulta. Dependiendo del XML que se solicite, la escritura de consultas en modo EXPLICIT puede resultar complicada. Tal vez, una alternativa más sencilla que escribir consultas en modo EXPLICIT sea [usar el modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) con anidamiento.  
@@ -148,25 +149,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
--   [Ejemplo: Recuperar información de los empleados](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Ejemplo: Recuperación de información de los empleados](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Ejemplo: especificar las directivas ID e IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Ejemplo: Especificar las directivas ID e IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Ejemplo: Especificar la directiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Ejemplo: Especificación de la directiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Ejemplo: Especificar la directiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Ejemplo: Especificación de la directiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Ejemplo: Especificar la directiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Ejemplo: Especificación de la directiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

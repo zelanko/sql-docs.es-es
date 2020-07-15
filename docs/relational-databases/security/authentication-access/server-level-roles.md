@@ -1,5 +1,6 @@
 ---
 title: Roles de nivel de servidor | Microsoft Docs
+description: SQL Server proporciona roles de nivel de servidor. Estas entidades de seguridad agrupan a otras entidades de seguridad para administrar los permisos de todo el servidor.
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116788"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334028"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68116788"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  El permiso **CONTROL SERVER** es similar, pero no idéntico al rol fijo de servidor **sysadmin** . Los permisos no conllevan la pertenencia a los roles y la pertenencia a los roles no otorga permisos. (por ejemplo, **CONTROL SERVER** no implica la pertenencia al rol fijo de servidor. **sysadmin** ). Sin embargo, en ocasiones, es posible hacer suplantaciones entre roles y permisos equivalentes. La mayoría de los comandos **DBCC** y muchos procedimientos del sistema necesitan pertenencia al rol fijo de servidor **sysadmin** . Para obtener una lista de 171 procedimientos almacenados del sistema que requieren la pertenencia a **sysadmin** , vea la siguiente publicación del blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats (CONTROL SERVER frente a administradores del sistema: permisos, procedimientos del sistema, DBCC, creación automática de esquemas y escalación de privilegios - advertencias)](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  El permiso **CONTROL SERVER** es similar, pero no idéntico al rol fijo de servidor **sysadmin** . Los permisos no conllevan la pertenencia a los roles y la pertenencia a los roles no otorga permisos. (por ejemplo, **CONTROL SERVER** no implica la pertenencia al rol fijo de servidor. **sysadmin**). Sin embargo, en ocasiones, es posible hacer suplantaciones entre roles y permisos equivalentes. La mayoría de los comandos **DBCC** y muchos procedimientos del sistema necesitan pertenencia al rol fijo de servidor **sysadmin** . Para obtener una lista de 171 procedimientos almacenados del sistema que requieren la pertenencia a **sysadmin** , vea la siguiente publicación del blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats (CONTROL SERVER frente a administradores del sistema: permisos, procedimientos del sistema, DBCC, creación automática de esquemas y escalación de privilegios - advertencias)](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Permisos de nivel de servidor  
  Solo se pueden agregar a los roles de servidor definidos por el usuario los permisos de nivel de servidor. Para obtener una lista de los permisos en el nivel de servidor, ejecute la siguiente instrucción: Los permisos en el nivel de servidor son:  

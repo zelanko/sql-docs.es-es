@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75efe2deeb76083ffcb8fdc2cfedb3951dfd6e3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717955"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "82180790"
     |------------|-----------|  
     |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
+    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<blank> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
     |**Fecha de inicio**|Fecha y hora de inicio de la operación de copia de seguridad, según la configuración regional del cliente.|  
     |**Fecha final**|Fecha y hora de finalización de la operación de copia de seguridad, según la configuración regional del cliente.|  

@@ -1,5 +1,6 @@
 ---
 title: Ayuda F1 del Visor de archivos de registro | Microsoft Docs
+description: Obtenga instrucciones de la Ayuda F1 de las columnas, los permisos y otras opciones que se muestran con frecuencia para el Visor de archivos de registro en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caa7cb4a5a6f5e5f2d3b951f56c3fde0b30978c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784039"
 ---
 # <a name="log-file-viewer-f1-help"></a>Ayuda F1 del Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El Visor de archivos de registro muestra información de registro de muchos componentes diferentes. Cuando el Visor del archivo de registros esté abierto, utilice el panel **Seleccionar registros** para seleccionar los registros que desea que se muestren. Cada registro muestra las columnas apropiadas a ese tipo de registro.  
   
  La disponibilidad de los registros dependerá del modo en que se abra el Visor del archivo de registros. Para obtener más información, vea [Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md).  
@@ -49,7 +50,7 @@ ms.locfileid: "68084095"
  Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
  **Resumen de archivos de registro**  
- Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se ve el texto siguiente, **Filtrar entradas del registro en:**  \<criterios de filtro>.  
+ Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplicó un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<filter criteria>.  
   
  **Detalles de las filas seleccionadas**  
  Seleccione una fila para mostrar detalles adicionales sobre la fila de evento seleccionada en la parte inferior de la página. Puede ordenar de nuevo las columnas arrastrándolas a nuevas ubicaciones de la cuadrícula. Puede modificar el tamaño de las columnas arrastrando las barras de separación de las columnas del encabezado de la cuadrícula hacia la izquierda o hacia la derecha. Haga doble clic en las barras de separación de las columnas del encabezado de la cuadrícula para ajustar automáticamente el tamaño de la columna al ancho del contenido.  

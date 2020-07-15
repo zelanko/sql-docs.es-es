@@ -9,25 +9,26 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606897"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868449"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-Microsoft Connector for Oracle permite exportar datos desde un origen de datos de Oracle y cargar datos en él en un paquete SSIS.
+Microsoft Connector for Oracle permite la capacidad de exportar datos desde un origen de datos de Oracle y cargar datos en él en un paquete SSIS.
 
 ## <a name="version-support"></a>Compatibilidad con versiones
 
 Microsoft Connector for Oracle admite los siguientes productos de Microsoft SQL Server:
 
 - A partir de SQL Server 2019 CU1
-- SQL Server Data Tools (SSDT) a partir de la versión 15.9.3
+- SQL Server Data Tools (SSDT) 15.9.3 o posterior para Visual Studio 2017
+- Microsoft SQL Server Data Tools (SSDT) para Visual Studio 2019
 
 Se admiten las siguientes versiones de la base de datos de Oracle del origen de datos:
 

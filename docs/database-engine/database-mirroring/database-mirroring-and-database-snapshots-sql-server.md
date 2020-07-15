@@ -1,6 +1,6 @@
 ---
 title: Creación de reflejo e instantáneas de base de datos
-description: Obtenga información sobre la interoperabilidad del uso de instantáneas de base de datos con la creación de reflejo de la base de datos.
+description: Obtenga información sobre la interoperabilidad del uso de instantáneas de base de datos con la creación de reflejo de la base de datos para descargar informes en SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789710"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Reflejo e instantáneas de base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede aprovechar una base de datos reflejada de la cual se está realizando el mantenimiento con fines de disponibilidad para descargar informes. A fin de utilizar una base de datos reflejada para informes, puede crear una instantánea de base de datos en la base de datos reflejada y dirigir las solicitudes de conexión de cliente a la instantánea más reciente. Una instantánea de base de datos es una instantánea estática coherente con las transacciones y de solo lectura de la base de datos de origen tal como existía en el momento de la creación de la instantánea. Para crear la instantánea de una base de datos en una base de datos reflejada, la base de datos debe hallarse en estado de reflejo sincronizado.  
   
  A diferencia de la base de datos reflejada, los clientes pueden obtener acceso a las instantáneas de base de datos. Mientras el servidor reflejado se comunique con el servidor principal, podrá dirigir clientes de informe para que se conecten a una instantánea. Observe que, puesto que las instantáneas de base de datos son estáticas, no hay nuevos datos disponibles. Para hacer que los datos relativamente recientes estén disponibles para los usuarios, deberá crear una nueva instantánea de base de datos de forma periódica y hacer que las aplicaciones dirijan las conexiones entrantes de cliente a la instantánea más reciente.  

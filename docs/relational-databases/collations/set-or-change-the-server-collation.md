@@ -1,7 +1,7 @@
 ---
 title: Configurar o cambiar la intercalación del servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733954"
 ---
 # <a name="set-or-change-the-server-collation"></a>Configurar o cambiar la intercalación del servidor
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La intercalación de servidor actúa como intercalación predeterminada para todas las bases de datos del sistema que se han instalado con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como las bases de datos de usuario recién creadas. Debe elegir cuidadosamente la intercalación de nivel de servidor porque afecta a:
  - Las reglas de ordenación y comparación en `=`, `JOIN`, `ORDER BY` y otros operadores que comparan datos textuales.
  - La intercalación de las columnas `CHAR`, `VARCHAR`, `NCHAR` y `NVARCHAR` en vistas del sistema, funciones del sistema y los objetos en TempDB (por ejemplo, las tablas temporales).
@@ -29,8 +29,11 @@ ms.locfileid: "82762946"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Configuración de la intercalación del servidor en SQL Server
 
-  La intercalación de servidor se especifica durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones exclusivas de Unicode como intercalación de nivel de servidor. Para más información, consulte [Compatibilidad con la intercalación y Unicode](collation-and-unicode-support.md).
-  
+  La intercalación de servidor se especifica durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La intercalación de nivel de servidor predeterminada se basa en la configuración regional del sistema operativo. Por ejemplo, la intercalación predeterminada para sistemas que usan inglés de Estados Unidos (en-US) es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones exclusivas de Unicode como intercalación de nivel de servidor. Para obtener más información, incluida la lista de la configuración regional del sistema operativo en las asignaciones de intercalación predeterminadas, vea la sección "Intercalaciones de nivel de servidor" de [Intercalación y compatibilidad con Unicode](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> La intercalación de nivel de servidor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB es **SQL_Latin1_General_CP1_CI_AS** y no se puede cambiar ni durante la instalación ni después de esta.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Cambio de la intercalación del servidor en SQL Server
 
  El cambio de la intercalación predeterminada para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser una operación compleja que incluye los siguientes pasos:  
@@ -56,7 +59,7 @@ ms.locfileid: "82762946"
 - Importar todos los datos.  
   
 > [!NOTE]  
-> En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar una intercalación predeterminada para cada nueva base de datos que cree.  
+> En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar una intercalación predeterminada para cada nueva base de datos que cree a través de la cláusula `COLLATE` de las instrucciones `CREATE DATABASE` y `ALTER DATABASE`. Para más información, vea [Set or Change the Database Collation](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Configuración de la intercalación del servidor en Instancia administrada
 La intercalación de nivel de servidor en Instancia administrada de Azure SQL se puede especificar al crear la instancia y no se puede cambiar posteriormente. Puede establecer la intercalación de nivel de servidor a través de [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o [PowerShell y la plantilla de Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) mientras crea la instancia. La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones UTF-8 ni exclusivas de Unicode la intercalación como nivel de servidor.

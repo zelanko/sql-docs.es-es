@@ -14,15 +14,15 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766315"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (índices XML selectivos)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Quita un índice XML selectivo existente o un índice XML selectivo secundario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option>* Para obtener más información sobre las opciones para quitar índices, vea [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Para obtener información sobre las opciones para quitar índices, vea [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   

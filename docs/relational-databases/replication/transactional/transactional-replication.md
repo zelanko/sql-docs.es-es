@@ -1,5 +1,6 @@
 ---
 title: Replicación transaccional | Microsoft Docs
+description: La replicación transaccional utiliza una instantánea de la base de datos y aplica los cambios en el suscriptor a medida que se han producido en el publicador para garantizar la coherencia.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716655"
 ---
 # <a name="transactional-replication"></a>Replicación transaccional
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   Normalmente, la replicación transaccional se inicia con una instantánea de los datos y los objetos de la base de datos de publicaciones. En cuanto se obtiene la instantánea inicial, los posteriores cambios de datos y modificaciones del esquema realizados en el publicador habitualmente se entregan en el suscriptor cuando se producen (casi en tiempo real). Los cambios de datos se aplican al suscriptor en el mismo orden y dentro de los mismos límites de la transacción que cuando se produjeron en el publicador. Por tanto, en una publicación, se garantiza la coherencia transaccional.  
   
  La replicación transaccional se utiliza normalmente en entornos entre servidores y es la adecuada en los siguientes casos:  

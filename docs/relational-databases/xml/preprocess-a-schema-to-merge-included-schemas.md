@@ -1,5 +1,6 @@
 ---
 title: Preprocesamiento de un esquema para combinar esquemas incluidos | Microsoft Docs
+description: Obtenga información sobre cómo se pueden procesar previamente los esquemas XML que incluyen la directiva xsd:include para copiar y combinar el contenido de todos estos esquemas incluidos en uno solo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757513"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
   
- Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente para copiar y combinar el contenido de todos los esquemas incluidos en un solo esquema para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
+ Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente a fin de copiar y combinar el contenido de todos estos esquemas incluidos en uno solo para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
   
 ```  
 // XSD Schema Include Normalizer  

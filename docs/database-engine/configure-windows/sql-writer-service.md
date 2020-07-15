@@ -1,5 +1,6 @@
 ---
 title: Servicio del objeto de escritura de SQL | Microsoft Docs
+description: Obtenga información sobre el Servicio del objeto de escritura de SQL. Vea cómo proporciona la función agregada de copia de seguridad y restauración en SQL Server mediante el marco del Servicio de instantáneas de volumen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764018"
 ---
 # <a name="sql-writer-service"></a>servicio del objeto de escritura de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El servicio del objeto de escritura de SQL proporciona otras funciones para la realización de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el marco del Servicio de instantáneas de volumen.  
   
  El servicio del objeto de escritura de SQL se instala automáticamente. Se debe ejecutar cuando la aplicación Servicio de instantáneas de volumen (VSS) solicita una copia de seguridad o una restauración. Para configurar el servicio, utilice el applet Servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. El servicio SQL Writer se instala en todos los sistemas operativos.  

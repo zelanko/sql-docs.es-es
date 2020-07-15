@@ -1,5 +1,6 @@
 ---
 title: Eliminación de una instancia de SQL Server de la utilidad de SQL Server | Microsoft Docs
+description: Obtenga información sobre cómo quitar una instancia de SQL Server de la Utilidad de SQL Server. Puede ejecutar un script de PowerShell o utilizar SQL Server Management Studio para esta tarea.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b0f36dd95146ec93819177b91d8abed1f0cc8c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773501"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Quitar una instancia de SQL Server de la utilidad de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Siga los pasos que se indican a continuación para quitar una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimiento quita la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la vista de lista del UCP y detiene la recopilación de datos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se desinstala la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
@@ -30,7 +31,7 @@ ms.locfileid: "72908658"
   
 2.  En la columna **Nombre de instancia de SQL Server** de la vista de lista, seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a quitar de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Haga clic con el botón derecho en la instancia que se va a quitar y seleccione **Quitar instancia administrada...** .  
   
-3.  Especifique las credenciales con privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: haga clic en **Conectar...** , compruebe la información en el cuadro de diálogo **Conectar con el servidor** y, después, haga clic en **Conectar**. Verá la información de inicio de sesión en el cuadro de diálogo **Quitar instancia administrada** .  
+3.  Especifique las credenciales con privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Haga clic en **Conectar...** , compruebe la información del cuadro de diálogo **Conectar al servidor** y, después, haga clic en **Conectar**. Verá la información de inicio de sesión en el cuadro de diálogo **Quitar instancia administrada** .  
   
 4.  Para confirmar la operación, haga clic en **Aceptar**. Para salir de la operación, haga clic en **Cancelar**.  
 

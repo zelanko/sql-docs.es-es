@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781657"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use el **Asistente para registrar aplicación de capa de datos** o un script de Windows PowerShell para compilar una definición de aplicación de capa de datos (DAC) que describa los objetos de una base de datos existente y registre la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
@@ -136,7 +136,7 @@ ms.locfileid: "68134678"
   
  **Registrando la DAC** : notifica si cada acción realizada para registrar la DAC se realizó correctamente o no. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
   
- **Guardar informe** : seleccione este botón para guardar el informe de registro en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows. El nombre de archivo tiene el formato \<nombreDelPaqueteDAC>_RegisterDACReport_aaaammdd.html, donde \<*nombreDelPaqueteDAC*> es el nombre del paquete que se implementa; *aaaa*, el año actual; *mm*, el mes actual y *dd*, el día actual.  
+ **Guardar informe** : seleccione este botón para guardar el informe de registro en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows. El nombre de archivo tiene el formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, donde \<*DACPackageName*> es el nombre del paquete que se implementa; *yyyy*, el año actual; *mm*, el mes actual y *dd* el día actual.  
   
  **Finalizar** : termina el asistente.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configurar la opción de configuración del servidor Límite de costo de regulador de consultas | Microsoft Docs
+description: Obtenga información sobre la opción del límite de costo del regulador de consultas. Vea cómo usarla para limitar la ejecución a consultas que SQL Server estima que se completarán en un determinado período de tiempo.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 133f98c2a050c6c271f4bfdcb7565d9ccaa33354
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785881"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar la opción de configuración del servidor Límite de costo de regulador de consultas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **límite de costo de regulador de consultas** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de límite de costo de regulador de consultas especifica un límite superior al periodo de tiempo en que una consulta puede ejecutarse. El costo de consulta hace referencia al tiempo estimado, en segundos, que se necesita para completar una consulta con una configuración de hardware específica. El valor predeterminado de esta opción es 0, que establece el regulador de consultas en OFF. Esto permite que todas las consultas se ejecuten sin limitación de tiempo. Si especifica un valor positivo distinto de cero, el regulador de consultas no permitirá la ejecución de ninguna consulta que tenga un costo estimado superior a ese valor.  
   

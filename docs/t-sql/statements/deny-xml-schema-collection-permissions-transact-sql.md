@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cb1bdea194ffa898ec3aa75f0d8380e13e6f28b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 79651726714c3dd861a46f88688be6bbd5726a1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766586"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (permisos de colección de esquemas XML de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deniega permisos en una colección de esquemas XML.  
   
@@ -62,13 +62,13 @@ DENY permission  [ ,...n ] ON
  ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  Especifica la colección de esquemas XML en la que se va a denegar el permiso. Se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
- TO \<database_principal>  
+ PARA \<database_principal>  
  Especifica la entidad de seguridad a la que se deniega el permiso.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal>  
+ AS \<database_principal>.  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  

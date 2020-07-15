@@ -1,5 +1,6 @@
 ---
 title: Explorador de Utilidad (Ayuda F1) | Microsoft Docs
+description: Familiarícese con la función que se ofrece en varias áreas de la Utilidad de SQL Server. Obtenga información sobre las vistas, el panel y las pestañas relativas a la administración de la utilidad.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640409"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En las secciones siguientes se documentan la funcionalidad de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus operaciones asociadas.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
@@ -36,7 +37,7 @@ ms.locfileid: "68024479"
  Para obtener más información sobre cómo crear un punto de control de la utilidad, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Para obtener más información sobre cómo agregar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Inscribir una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### <a name="uielement-list"></a>Lista de UIElement  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Estado de mantenimiento de la instancia administrada  
  El estado de mantenimiento de las instancias administrados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestra en a la izquierda del panel de contenido del explorador de la utilidad.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68024479"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
   La información en la vista de aplicaciones de capa de datos implementadas del explorador de Utilidad facilita datos de utilización para las aplicaciones de capa de datos individuales, el historial de la utilización de la CPU, los detalles de la utilización del almacenamiento de nivel de archivo, y la capacidad para ver y actualizar los umbrales de directivas. Los umbrales de directivas se pueden supervisar en el nivel de la aplicación de capa de datos para la utilización de la CPU y para los archivos de datos y de registro de la base de datos. También puede ver los detalles de propiedades para las aplicaciones de capa de datos individuales.  
   
-### <a name="uielement-list"></a>Lista de UIElement  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Vista de lista  
  La vista de lista en el panel superior muestra los datos sobre las aplicaciones de capa de datos individuales. Los iconos de estado de mantenimiento proporcionan un resumen del estado para cada aplicación de capa de datos por categoría de utilización:  
   
@@ -177,7 +178,7 @@ ms.locfileid: "68024479"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de la CPU muestra gráficos en paralelo de datos históricos para la aplicación de capa de datos y la utilización de la CPU del sistema informático.  
@@ -254,12 +255,12 @@ ms.locfileid: "68024479"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
  La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="uielement-list"></a>Lista de UIElement  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Vista de lista  
  La vista de lista del panel superior muestra los datos sobre las instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se enumeran en las filas según mombreDeEquipo\nombreDeInstancia.  
   
@@ -313,11 +314,11 @@ ms.locfileid: "68024479"
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distinguir mayúsculas de minúsculas: (True o False)  
   
 -   Language:  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -410,14 +411,14 @@ ms.locfileid: "68024479"
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distinguir mayúsculas de minúsculas: (True o False)  
   
 -   Language:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Administración de la utilidad (utilidad de SQL Server)
 Utilice las pestañas Administración de la utilidad para administrar la configuración de directivas, la seguridad y el almacenamiento de datos de una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre conceptos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### <a name="uielement-list"></a>Lista de UIElement
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario
  **Pestaña Directiva** : use la pestaña de directivas para ver o especificar las directivas globales de supervisión.  
   
  Establezca directivas globales de supervisión de aplicaciones de capas de datos. Para expandir la lista de valores correspondiente a esta opción, haga clic en la flecha junto al nombre de la directiva o haga clic en el título de la directiva.  
@@ -490,9 +491,9 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
   
 -   Frecuencia de la carga del conjunto de recopilación: cada 15 minutos.  
   
- El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ El directorio de UMDW se puede configurar: \<System drive>:\Archivos de programa\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, donde \<System drive> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
-> **NOTA:** La ubicación del archivo UMDW (sysutility_mdw) se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA:** La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Restablecer los valores originales  
  Para restablecer los valores de esta pestaña a los valores predeterminados, haga clic en el botón **Restaurar valores predeterminados** y, luego, en **Aplicar**.  

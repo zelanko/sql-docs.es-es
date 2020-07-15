@@ -1,5 +1,6 @@
 ---
 title: Resolver problemas de memoria insuficiente | Microsoft Docs
+description: Obtenga información sobre las situaciones de memoria insuficiente en OLTP en memoria de SQL Server, cómo restaurar y resolver impactos, resolver errores de asignación de páginas y procedimientos recomendados.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722395"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa más memoria y de maneras diferentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que la cantidad de memoria que instaló y asignó para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sea suficiente para sus necesidades en crecimiento. En ese caso, podría quedarse sin memoria. En este tema se describe cómo recuperarse de una situación de OOM (memoria insuficiente). Vea [Supervisar y solucionar problemas del uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) para obtener instrucciones específicas que pueden ayudarle a evitar muchas situaciones de memoria insuficiente.  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908451"
   
 |Tema|Información general|  
 |-----------|--------------|  
-|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<nombreDeGrupoDeRecursos>* "".|  
+|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<databaseName>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<resourcePoolName>* "".|  
 |[Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#bkmk_recoverFromOOM)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos " *\<nombreDeGrupoDeRecursos>* ". ..." cuando hay suficiente memoria disponible para la operación.|
+|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<databaseName>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<resourcePoolName>* "". ..." cuando hay suficiente memoria disponible para la operación.|
 |[Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs)|Qué debe tener en cuenta al usar OLTP en memoria en un entorno virtualizado.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error "No se pudo realizar la operación de restauración para la base de datos ' *\<nombreDeBaseDeDatos>* ' debido a que la memoria es insuficiente en el grupo de recursos ' *\<nombreDeGrupoDeRecursos>* '." Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
+ Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error "No se pudo realizar la operación de restauración para la base de datos " *\<databaseName>* " debido a que la memoria es insuficiente en el grupo de recursos " *\<resourcePoolName>* "". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
    
 El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará y se marcará como sospechosa.  
   
@@ -154,7 +155,7 @@ Es necesario modificar algunas prácticas recomendadas para virtualizar y admini
 
 Si sigue los procedimientos anteriores para una base de datos con tablas optimizadas para memoria, el intento de restaurar y recuperar una base de datos podría dar lugar a que esta pasara a un estado "Pendiente de recuperación", incluso si hay memoria suficiente para recuperarla. El motivo es que, al iniciarse, OLTP en memoria pone los datos en memoria de forma mucho más dinámica que la forma en que la asignación de memoria dinámica asigna la memoria necesaria a la base de datos.
 
-### <a name="resolution"></a>Solución
+### <a name="resolution"></a>Resolución
 Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,5 +1,6 @@
 ---
 title: Sincronizar una suscripción de inserción | Microsoft Docs
+description: Obtenga información sobre cómo sincronizar una suscripción de inserción en SQL Server mediante SQL Server Management Studio, agentes de replicación o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60901383eeab8202c47f897674140d2e808f5c99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716696"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "72907868"
   
 4.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **Ver estado de sincronización - \<Subscriber>:\<SubscriptionDatabase>** haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
 
@@ -57,7 +58,7 @@ ms.locfileid: "72907868"
   
 4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **OK**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **Ver estado de sincronización - \<Subscriber>:\<SubscriptionDatabase>** haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   

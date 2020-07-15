@@ -1,5 +1,6 @@
 ---
 title: Modelo de seguridad del Agente de replicación | Microsoft Docs
+description: En SQL Server, el modelo de seguridad del agente de replicación permite un control perfecto de las cuentas con las que los agentes de replicación se ejecutan y realizan las conexiones.
 ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882070"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  El modelo de seguridad del agente de replicación permite un control concreto sobre las cuentas con las que los agentes de replicación se ejecutan y realizan conexiones: se puede especificar una cuenta diferente para cada agente. Para más información sobre cómo especificar cuentas, vea [Identidad y control de acceso (replicación)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  El modelo de seguridad del agente de replicación permite un control perfecto de las cuentas con las que los agentes de replicación se ejecutan y realizan las conexiones: se puede especificar una cuenta distinta para cada agente. Para más información sobre cómo especificar cuentas, vea [Identidad y control de acceso (replicación)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
 El modelo de seguridad del agente de replicación es un poco diferente para las instancias administradas de Azure SQL Database, ya que no hay cuentas de Windows con las que se ejecutarán los agentes. En su lugar, todo debe realizarse a través de la autenticación de SQL Server. 
   
@@ -38,11 +39,11 @@ El modelo de seguridad del agente de replicación es un poco diferente para las 
   
  Los agentes de replicación, como todos los ejecutables, se ejecutan en el contexto de una cuenta de Windows. Los agentes establecen conexiones de seguridad integrada de Windows usando esta cuenta. La cuenta con la que se ejecuta el agente depende de la forma en que se inicie el agente:  
   
--   Inicio del agente desde un trabajo del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (valor predeterminado): cuando se utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para iniciar un agente de replicación, el agente se ejecuta en el contexto de la cuenta que se especifica al configurar la replicación. Para obtener más información acerca del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la replicación, vea la sección "Seguridad de agentes con el Agente SQL Server", más adelante en este tema. Para obtener información sobre los permisos necesarios para la cuenta con la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Configurar el Agente SQL Server](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Inicio del agente desde un trabajo del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (valor predeterminado): cuando se usa un trabajo del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para iniciar un agente de replicación, el agente se ejecuta en el contexto de la cuenta que se especifica al configurar la replicación. Para obtener más información acerca del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la replicación, vea la sección "Seguridad de agentes con el Agente SQL Server", más adelante en este tema. Para obtener información sobre los permisos necesarios para la cuenta con la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Configurar el Agente SQL Server](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Inicio del agente desde una línea de comandos de MS-DOS (directamente o mediante un script): el agente se ejecuta en el contexto de la cuenta del usuario que ejecuta el agente en la línea de comandos.  
+-   Inicio del agente desde una línea de comandos de MS-DOS, ya sea directamente o a través de un script: el agente se ejecuta en el contexto de la cuenta del usuario que ejecuta al agente en la línea de comandos.  
   
--   Inicio del agente desde una aplicación que utiliza Replication Management Objects (RMO) o un control ActiveX: el agente se ejecuta en el contexto de la aplicación que llama a RMO o al control ActiveX.  
+-   Inicio del agente desde una aplicación que usa Replication Management Objects (RMO) o un control ActiveX: el agente se ejecuta en el contexto de la aplicación que llama a RMO o al control ActiveX.  
   
     > [!NOTE]  
     >  Los controles ActiveX han quedado desusados.  
@@ -70,19 +71,19 @@ El modelo de seguridad del agente de replicación es un poco diferente para las 
   
 |Agente|Nombre del trabajo|  
 |-----------|--------------|  
-|Agente de instantáneas|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<entero>**|  
-|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<GUID>**|  
-|Agente de registro del LOG|**\<publicador>-\<baseDeDatosDePublicación>-\<entero>**|  
-|Agente de mezcla para suscripciones de extracción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDeSuscripciones>-\<entero>**|  
-|Agente de mezcla para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
-|Agente de distribución para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
-|Agente de distribución para suscripciones de extracción|**\<Publicador>-\<BaseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<BaseDeDatosDeSuscripción>-\<GUID>**|  
-|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
-|Agente de lectura de cola|**[\<distribuidor>].\<entero>**|  
+|Agente de instantáneas|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|  
+|Agente de replicación para una partición de publicación de combinación|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|  
+|Agente de registro del LOG|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
+|Agente de mezcla para suscripciones de extracción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Agente de mezcla para suscripciones de inserción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente de distribución para suscripciones de inserción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente de distribución para suscripciones de extracción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
+|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente de lectura de cola|**[\<Distributor>].\<integer>**|  
   
- \*Para suscripciones de inserción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<publicador**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>** .  
+ \*En el caso de suscripciones de inserción a publicaciones de Oracle, el nombre del trabajo es **\<Publisher>-\<Publisher**> en lugar de **\<Publisher>-\<PublicationDatabase>** .  
   
- \*\*Para suscripciones de extracción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<baseDeDatosDeDistribución**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>** .  
+ \*\*En el caso de suscripciones de extracción a publicaciones de Oracle, el nombre del trabajo es **\<Publisher>-\<DistributionDatabase**> en lugar de **\<Publisher>-\<PublicationDatabase>** .  
   
  Al configurar la replicación se especifican las cuentas en las que se ejecutarán los agentes. No obstante, todos los pasos del trabajo se ejecutan en el contexto de seguridad de un *proxy*, por lo que la replicación lleva a cabo internamente las siguientes asignaciones para las cuentas de agente que especifique:  
   

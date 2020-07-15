@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -22,15 +22,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97a33107ec7f03d6c797b9fc0271e5aa5f78f4ac
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 12749b2a014f1f7b3c305572b3b0e72c4aef2024
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735815"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Crea un grupo externo que sirve para definir los recursos de los procesos externos. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
 
@@ -74,9 +74,9 @@ Es el nombre definido por el usuario para identificar el grupo de recursos exter
 MAX_CPU_PERCENT =*value*  
 Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externo cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Adjunte el grupo de recursos externos a CPU concretas.
+AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Adjunte el grupo de recursos externos a CPU específicas.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID dados.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los valores CPU_ID dados.
 
 Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado. 
 

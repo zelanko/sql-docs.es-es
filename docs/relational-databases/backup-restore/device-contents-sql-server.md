@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748053"
 ---
 # <a name="device-contents-sql-server"></a>Contenido del dispositivo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para ver la información de copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.  
   
  **Para utilizar SQL Server Management Studio a fin de ver el contenido de un dispositivo de copia de seguridad**  
@@ -59,7 +59,7 @@ ms.locfileid: "82179195"
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
 |**Tipo**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
-|**Componente**|Componente del que se ha realizado una copia de seguridad: Base de datos, Archivo o en *\<blanco>* (para registros de transacciones).|  
+|**Componente**|Componente del que se ha realizado una copia de seguridad: Base de datos, Archivo o *\<blank>* (para registros de transacciones).|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  

@@ -20,19 +20,19 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: dd8046a013dab94bb25f4733cf9b8d49fb7bbaad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23b05c6355151aa556ad7531de60e3ccf65ea0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631562"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Indica si una expresión de columna especificada en una lista GROUP BY es agregada o no. GROUPING devuelve 1 para agregado y 0 para no agregado, en el conjunto de resultados. GROUPING solo se puede usar en la lista de SELECT \<selección>, cláusulas HAVING y ORDER BY cuando se especifica GROUP BY.  
+  Indica si una expresión de columna especificada en una lista GROUP BY es agregada o no. GROUPING devuelve 1 para agregado y 0 para no agregado, en el conjunto de resultados. GROUPING solo se puede usar en la lista de las cláusulas SELECT \<select>, HAVING y ORDER BY si se especifica GROUP BY.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

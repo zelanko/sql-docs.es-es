@@ -1,5 +1,6 @@
 ---
 title: Ver archivos de registro sin conexión | Microsoft Docs
+description: Obtenga información sobre cómo ver los archivos de registro de SQL Server desde una instancia local o remota de SQL Server cuando la instancia de destino está sin conexión o no se puede iniciar.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667852"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
   
  Puede tener acceso a los archivos de registro sin conexión de servidores registrados o mediante programación a través de consultas WMI y WQL (Lenguaje de la consulta de WMI).  
@@ -51,9 +52,9 @@ ms.locfileid: "72908556"
   
 -   Acceso de lectura al espacio de nombres de WMI **raíz\Microsoft\SqlServer\ComputerManagement12** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta. Para obtener más información, vea el procedimiento sobre comprobación de permisos de WMI más adelante en esta sección.  
   
--   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. Los archivos de registro de errores se encuentran de forma predeterminada en la siguiente ruta de acceso (donde \<*unidad>* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*nombreInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. De forma predeterminada, los archivos de registro de errores se encuentran en la ruta de acceso siguiente (donde \<*Drive>* representa la unidad en la que se ha instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<unidad>:\Microsoft SQL Server\MSSQL13.\<nombreInstancia>\MSSQL\Log**  
+     **\<Drive>:\Archivos de programa\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
  Para comprobar la configuración de seguridad del espacio de nombres WMI, puede utilizar el complemento Control WMI.  
   

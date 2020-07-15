@@ -1,5 +1,6 @@
 ---
 title: Supervisión de agentes de replicación | Microsoft Docs
+description: El Monitor de replicación de SQL Server proporciona una vista sistémica de la actividad de replicación y permite la búsqueda de información en un agente concreto.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7984491281088f345e3e263356c6dad323d2cf5a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288072"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807611"
 ---
 # <a name="monitor-replication-agents"></a>Supervisar agentes de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "76288072"
   
     -   Agente de lectura de cola  
   
-     Obtenga acceso a la información y a las tareas asociadas a cada uno de estos agentes a través de las siguientes pestañas: **Agentes** (disponible para todos los publicadores y las publicaciones) y **Advertencias** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Acceda a la información y a las tareas asociadas con estos agentes a través de las pestañas siguientes: **Agentes** (disponible para todos los publicadores y publicaciones) y **Advertencias** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Los siguientes agentes están asociados con suscripciones en el Monitor de replicación:  
   
@@ -47,7 +48,7 @@ ms.locfileid: "76288072"
   
     -   Agente de mezcla  
   
-     Obtenga acceso a la información y a las tareas asociadas a cada uno de estos agentes a través de las siguientes pestañas: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o **Todas las suscripciones** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Acceda a la información y a las tareas asociadas con estos agentes a través de las pestañas siguientes: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o la pestaña **Todas las suscripciones** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Usar SQL Server Management Studio para supervisar agentes de replicación  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] proporciona los siguientes cuadros de diálogo para supervisar agentes de replicación:  

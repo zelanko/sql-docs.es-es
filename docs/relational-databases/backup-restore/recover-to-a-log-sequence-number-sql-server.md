@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56f5262fe130d391bf152d0924df814e15ffc316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669838"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema solamente es aplicable a las bases de datos que utilizan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
   
  Puede usar un número de secuencia de registro (LSN) para definir el punto de recuperación de una operación de restauración. Sin embargo, esta es una característica especializada dirigida a los proveedores de herramientas y no es probable que tenga una utilidad general.  
@@ -60,11 +60,11 @@ ms.locfileid: "82180901"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxis de Transact-SQL para restaurar hasta un LSN  
  Con la instrucción [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , puede detenerse en el LSN o inmediatamente antes, como se indica a continuación:  
   
--   Use la cláusula WITH STOPATMARK **='** lsn: _<númeroDeIsn>_ **'** , donde lsn: *\<númeroDeIsn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPATMARK **="** lsn: _<número_lsn_>_ **"** , donde lsn: *\<lsnNumber>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
   
      STOPATMARK realiza una puesta al día hasta el LSN e incluye esa entrada de registro en la puesta al día.  
   
--   Use la cláusula WITH STOPBEFOREMARK **='** lsn: _<númeroDeIsn>_ **'** , donde lsn: *\<númeroDeIsn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
+-   Use la cláusula WITH STOPBEFOREMARK **="** lsn: _<número_lsn_>_ **"** , donde lsn: *\<lsnNumber>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la que contiene el número LSN especificado es el punto de recuperación.  
   
      STOPBEFOREMARK realiza una puesta al día al LSN y excluye esa entrada de registro de la puesta al día.  
   

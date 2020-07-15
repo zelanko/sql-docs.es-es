@@ -1,6 +1,6 @@
 ---
 title: Adición de una base de datos secundaria de trasvase de registros
-description: Describe cómo agregar una base de datos secundaria a una configuración de trasvase de registros existente.
+description: Describe cómo agregar una base de datos secundaria a una configuración de trasvase de registros existente mediante SQL Server Management Studio o Transact-SQL en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a140f44e848c7b8b00b8c8b7891467dde74822cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696737"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Agregar una base de datos secundaria a la configuración del trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo agregar una base de datos secundaria a una configuración de trasvase de registros de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   

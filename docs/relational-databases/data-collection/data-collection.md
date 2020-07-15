@@ -1,5 +1,6 @@
 ---
 title: Recopilación de datos | Microsoft Docs
+description: Obtenga información introductoria sobre el recopilador de datos, un componente de SQL Server 2019 que recopila diferentes conjuntos de datos.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733839"
 ---
 # <a name="data-collection"></a>Recopilación de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
   
 ## <a name="what-is-data-collector"></a>¿Qué es el recopilador de datos? 

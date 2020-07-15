@@ -1,5 +1,6 @@
 ---
 title: Agente de instantáneas de replicación | Microsoft Docs
+description: En SQL Server, el Agente de instantáneas de replicación prepara los archivos de instantáneas, los almacena en una carpeta y registra los trabajos de sincronización en la base de datos de distribución.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c48422e86cfd3f42e6634a3ca3be1d0dbc85f24
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730221"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
   
 > [!NOTE]  

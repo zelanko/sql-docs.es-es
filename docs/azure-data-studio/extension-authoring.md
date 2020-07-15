@@ -1,25 +1,24 @@
 ---
 title: Creación de extensiones
-titleSuffix: Azure Data Studio
 description: Más información sobre cómo crear extensiones y agregarlas a Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774636"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Extensión de la funcionalidad mediante la creación de extensiones de Azure Data Studio
 
-Las extensiones de [!INCLUDE[name-sos](../includes/name-sos-short.md)] proporcionan una manera sencilla de agregar más funcionalidad a la instalación base de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Las extensiones de Azure Data Studio proporcionan una manera sencilla de agregar más funcionalidad a la instalación base de Azure Data Studio.
 
 Las extensiones las proporciona el equipo de Azure Data Studio (Microsoft), así como la comunidad (los usuarios).
 
@@ -43,7 +42,7 @@ Para iniciar la nueva extensión, puede usar el generador de extensiones de Azur
 
 **Referencias de extensibilidad**
 
-Para obtener información sobre la extensibilidad de Azure Data Studio, consulte el artículo sobre [introducción a la extensibilidad](extensibility.md). También puede ver ejemplos de uso de la API en [ejemplos](https://github.com/Microsoft/azuredatastudio/tree/master/samples) existentes.
+Para obtener información sobre la extensibilidad de Azure Data Studio, consulte el artículo sobre [introducción a la extensibilidad](extensibility.md). También puede ver ejemplos de uso de la API en [ejemplos](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existentes.
 
 
 ## <a name="debug-an-extension"></a>Depuración de una extensión

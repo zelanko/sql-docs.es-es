@@ -1,6 +1,6 @@
 ---
 title: 'Ejemplo: Creación de reflejo de base de datos con certificados (T-SQL)'
-description: Ejemplo de configuración de la creación de reflejo de la base de datos de SQL Server con certificados mediante Transact-SQL.
+description: Este artículo contiene un ejemplo de configuración de la creación de reflejo de la base de datos de SQL Server con autenticación basada en certificados mediante Transact-SQL en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4341b53c4787e7a9c194b8ab5ad5892583d1db11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754660"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Ejemplo: configurar la creación de reflejo de la base de datos con certificados (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos mediante la autenticación basada en certificados. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que garantice que su red es segura, se recomienda utilizar el cifrado para las conexiones de creación de reflejo de la base de datos.  
   
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  

@@ -1,5 +1,6 @@
 ---
 title: Supervisión (replicación) | Microsoft Docs
+description: Obtenga información sobre las herramientas de supervisión que se usan para realizar un seguimiento de la actividad y el estado de la replicación en la topología de replicación de SQL Server.
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c463b8e1a0726fcde961b418fb12a902d7ce9b4e
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288060"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807947"
 ---
 # <a name="monitoring-replication"></a>Supervisar (replicación)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

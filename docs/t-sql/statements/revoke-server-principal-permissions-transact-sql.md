@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5510106a1b37e43210d043856825cfff56763e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 489b6c35f523c6f19d5b763cc54e5aeb6ace1e4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894530"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revoca los permisos concedidos o denegados para un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
- { FROM | TO } \<server_principal> Especifica el inicio de sesión o el rol de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que se va a revocar el permiso.  
+ { FROM | TO } \<server_principal> Especifica el rol de servidor o el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se va a revocar el permiso.  
   
  *SQL_Server_login*  
  Especifica el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

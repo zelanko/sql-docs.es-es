@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659479"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Aplicaciones de copia de seguridad de SQL Server: Servicio de instantáneas de volumen (VSS) y objeto de escritura de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server admite el Servicio de instantáneas de volumen (VSS) mediante un escritor (objeto de escritura de SQL) para que una aplicación de copia de seguridad de terceros pueda usar el marco de VSS para hacer copias de seguridad de los archivos de las bases de datos. En este artículo se describe el componente del objeto de escritura de SQL y su rol en el proceso de creación y restauración de instantáneas de VSS para las bases de datos de SQL Server. En él también se incluyen detalles sobre cómo configurar y utilizar el objeto de escritura de SQL para trabajar con aplicaciones de copia de seguridad en el marco de VSS.
 

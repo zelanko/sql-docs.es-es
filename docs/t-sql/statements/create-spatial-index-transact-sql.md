@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 956cdd77674442be8b375772175fdd5fa95b2567
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766982"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Crea un índice espacial en la tabla y la columna especificadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede crear un índice antes de que la tabla posea datos. Los índices se pueden crear en tablas o vistas de otra base de datos especificando un nombre completo de base de datos. Los índices espaciales requieren que la tabla tenga una clave principal clúster. Para más información sobre los índices espaciales, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
+  Crea un índice espacial en la tabla y la columna especificadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede crear un índice antes de que la tabla posea datos. Los índices se pueden crear en tablas o vistas de otra base de datos especificando un nombre completo de base de datos. Los índices espaciales requieren que la tabla tenga una clave principal clúster. Los índices espaciales no se pueden especificar en vistas indizadas. Para más información sobre los índices espaciales, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: Visualización de la lista de bases de datos en SQL Server
-ms.custom: seo-lt-2019
+description: Obtenga información sobre cómo ver una lista de bases de datos en una instancia de SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,15 +20,16 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6333815c8d741c69bd4d0ea651f6b31489881f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 5c22331de5c4848c28125d8c46d8eced7acc8cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758993"
 ---
-# <a name="view-list-of-databases-on-sql-server"></a>Visualización de la lista de bases de datos en SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="view-list-of-databases-on-sql-server"></a>Visualización de la lista de bases de datos en SQL Server     
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo ver una lista de bases de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  

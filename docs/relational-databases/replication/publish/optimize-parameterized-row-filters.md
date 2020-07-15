@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 8de8c84c20c410283372cb68cd871c55f9b0d043
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219354"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891979"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimizar los filtros de fila con parámetros
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo optimizar los filtros de fila con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -50,19 +50,19 @@ ms.locfileid: "81219354"
  Para optimizar los filtros de fila con parámetros se puede utilizar la siguiente configuración:  
   
  **Partition Options**  
- Establezca esta opción en la página **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , o en el cuadro de diálogo **Agregar filtro**. Los dos cuadros de diálogo están disponibles en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . El cuadro de diálogo **Propiedades del artículo: \<artículo>** le permite especificar valores adicionales para esta opción que no están disponibles en el cuadro de diálogo **Agregar filtro**.  
+ Establezca esta opción en la página **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** o en el cuadro **Agregar filtro**. Ambos cuadros de diálogo están disponibles en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . El cuadro de diálogo **Propiedades del artículo: \<Article>** permite especificar valores adicionales para esta opción que no están disponibles en el cuadro de diálogo **Agregar filtro**.  
   
  **Calcular particiones previamente**  
- Esta opción se establece en **True** de forma predeterminada si los artículos de la publicación cumplen un conjunto de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifique esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+ Esta opción se establece en **True** de forma predeterminada si los artículos de la publicación cumplen un conjunto de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifique esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
  **Optimizar sincronización**  
- Esta opción debe establecerse en **True** solamente si **Calcular particiones previamente** se establece en **False**. Establezca esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+ Esta opción debe establecerse en **True** solamente si **Calcular particiones previamente** se establece en **False**. Establezca esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
- Para obtener más información sobre el uso del Asistente para nueva publicación y el acceso al cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Para obtener más información sobre el uso del Asistente para nueva publicación y el acceso al cuadro de diálogo **Propiedades de la publicación: \<Publication>** , vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>Para establecer opciones de partición en el cuadro de diálogo Agregar filtro o Editar filtro  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar** y luego en **Agregar filtro**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Agregar** y en **Agregar filtro**.  
   
 2.  Cree un filtro con parámetros. Para más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -76,15 +76,15 @@ ms.locfileid: "81219354"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
-#### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>Para establecer Opciones de partición en el cuadro de diálogo Propiedades del artículo: \<artículo>  
+#### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>Para establecer Opciones de partición en el cuadro de diálogo Propiedades del artículo: \<Article>  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla y haga clic en **Propiedades del artículo**.  
   
 2.  Haga clic en **Establecer propiedades del artículo de Tabla resaltado** o **Establecer propiedades de todos los artículos de la tabla**.  
   
-3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , especifique uno de los siguientes valores para **Opciones de partición**:  
+3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , especifique uno de los siguientes valores para **Opciones de partición**:  
   
     -   **Superpuestas**  
   
@@ -98,11 +98,11 @@ ms.locfileid: "81219354"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-set-precompute-partitions"></a>Para establecer Calcular particiones previamente  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un valor para la opción **Calcular particiones previamente**. La propiedad es de solo lectura si:  
+1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione un valor para la opción **Calcular particiones previamente**. La propiedad es de solo lectura si:  
   
     -   La publicación no cumple los requisitos de las particiones precalculadas.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "81219354"
   
 #### <a name="to-set-optimize-synchronization"></a>Para establecer Optimizar sincronización  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un valor de `True` para la opción **Optimizar la sincronización**.  
+1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione un valor de `True` para la opción **Optimizar la sincronización**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

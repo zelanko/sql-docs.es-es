@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215860"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203562"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -31,7 +31,7 @@ Este artículo sirve como guía para describir el proceso de depuración de ese 
 > Esta herramienta le ayudará a evitar incidencias que no son de SQL Server, para ayudarle a concentrarse en la resolución de problemas de instalación de HDFS de Kerberos, en especial la identificación de incidencias de errores de configuración de nombre de usuario y contraseña, y de instalación de clúster de Kerberos.      
 > Esta herramienta es completamente independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Está disponible como Jupyter Notebook y requiere Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] o superior con PolyBase instalado
 1. Un clúster de Hadoop (Cloudera o Hortonworks) protegido con Kerberos (Active Directory o MIT)
@@ -89,6 +89,8 @@ Actualice **core-site.xml** y agregue las tres propiedades siguientes. Establezc
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> El valor de la propiedad `polybase.kerberos.realm` debe estar en mayúsculas.
 
 Los otros XML también se deberán actualizar más adelante si se desean operaciones de inserción pero, con solo este archivo configurado, al menos se debería poder acceder al sistema de archivos HDFS.
 

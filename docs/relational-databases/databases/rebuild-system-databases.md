@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681396511bbcee9b68800ccd86e62837a95efd77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728400"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)o de [recursos](../../relational-databases/databases/resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **En este tema**  
@@ -106,13 +106,13 @@ ms.locfileid: "76516556"
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa**de**. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta **sa** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=númeroDeArchivos ]|Especifica el número de archivos de datos de tempdb. Este valor se puede aumentar hasta 8 o hasta el número de núcleos, lo que sea mayor.<br /><br /> Valor predeterminado: 8 o el número de núcleos, lo que sea menor.|  
     |[ /SQLTEMPDBFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB de cada archivo de datos de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8|  
     |[ /SQLTEMPDBFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB de cada archivo de datos de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB del archivo de registro de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8.<br /><br /> Rango permitido: Mín. = 8, Máx. = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB del archivo de registro de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64<br /><br /> Rango permitido: Mín. = 8, Máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB del archivo de registro de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8.<br /><br /> Intervalo permitido: Mín. = 8, máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB del archivo de registro de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64<br /><br /> Intervalo permitido: Mín. = 8, máx. = 1024.|  
     |[ /SQLTEMPDBDIR=Directorios ]|Especifica el directorio de los archivos de datos de tempdb. Si especifica varios directorios, sepárelos con un espacio en blanco. Si se especifican varios directorios, los archivos de datos de tempdb se distribuirán por turnos entre los directorios.<br /><br /> Valor predeterminado: directorio de datos del sistema|  
     |[ /SQLTEMPDBLOGDIR=Directorio ]|Especifica el directorio de los archivos de registro de tempdb.<br /><br /> Valor predeterminado: directorio de datos del sistema|  
   
@@ -168,7 +168,7 @@ ms.locfileid: "76516556"
   
      Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  En otra ventana de la línea de comandos, separe la base de datos **msdb** ejecutando el siguiente comando y reemplazando *\<servername>* por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  En otra ventana de la línea de comandos, desasocie la base de datos **msdb** ejecutando el comando siguiente, reemplazando *\<servername>* con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`.  
   
 4.  Con el Explorador de Windows, cambie el nombre de los archivos de la base de datos **msdb** . De forma predeterminada, están en la subcarpeta DATA de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "76516556"
   
 6.  En una ventana de línea de comandos, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el comando: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Reemplace *\<servername>* por la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use la ruta de acceso al sistema de archivos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Reemplace *\<servername>* con la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use la ruta de acceso al sistema de archivos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  Con el Bloc de notas de Windows, abra el archivo **instmsdb.out** y compruebe si hay errores en la salida.  
   

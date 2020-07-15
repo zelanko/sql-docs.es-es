@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Opciones de usuario | Microsoft Docs
+description: Obtenga información sobre la opción "user options". Vea cómo cambia los valores predeterminados de las opciones de procesamiento de consultas que SQL Server establece para las sesiones de trabajo del usuario.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659764"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración de servidor para **opciones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción para **opciones de usuario** especifica valores predeterminados globales para todos los usuarios. Hay establecida una lista de opciones de procesamiento de consultas predeterminadas para la duración de la sesión de trabajo de un usuario. La opción **opciones de usuario** permite cambiar los valores predeterminados de las opciones SET si no resultan adecuados los valores predeterminados del servidor.  
   

@@ -1,5 +1,6 @@
 ---
 title: Información general del Monitor de creación de reflejo de la base de datos | Microsoft Docs
+description: Obtenga información sobre cómo usar el Monitor de creación de reflejos de bases de datos a fin de supervisar bases de datos reflejadas, comprobar el flujo de datos en la sesión de creación de reflejos de las bases de datos y solucionar problemas.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730917"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Si dispone de los permisos correctos, puede utilizar el Monitor de creación de reflejo de la base de datos para supervisar cualquier subconjunto de las bases de datos reflejadas de una instancia del servidor. La supervisión le permite comprobar si los datos fluyen en la sesión de creación de reflejo de la base de datos. Si hay flujo de datos, supervisa la calidad del mismo. Asimismo, el Monitor de creación de reflejo de la base de datos resulta útil para solucionar la causa de un flujo de datos reducido.  
   
  Puede registrar cualquiera de las bases de datos reflejadas para supervisar cada uno de los asociados de conmutación por error manualmente. Al registrar una base de datos, el Monitor de creación de reflejo de la base de datos almacena en caché la siguiente información acerca de dicha base de datos:  
@@ -54,7 +55,7 @@ ms.locfileid: "68006407"
  *\<Status>*  
  Los estados posibles y sus iconos asociados son los siguientes:  
   
-|Icono|Status|Descripción|  
+|Icono|Estado|Descripción|  
 |----------|------------|-----------------|  
 |Icono de advertencia|**Unknown**|El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.|  
 |Icono de advertencia|**Sincronizando**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
@@ -82,7 +83,7 @@ ms.locfileid: "68006407"
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el banner situado encima de las pestañas, en el panel de detalles se muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:** _\<fecha>\<hora>_ . Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor ha actualizado la información de estado, como **Última actualización:** _\<date>\<time>_ . Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a079b070df9718135a6c9d99dd56ed51ad04ab5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: db4649b67404e5f8cb50cbd13290fda78e475b62
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628124"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664658"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,7 +143,7 @@ Al crear bases de datos con una intercalación diferente de la predeterminada, l
 Para más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=** 
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
 
 Para más información, consulte [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -336,6 +336,7 @@ ALTER DATABASE { database_name | CURRENT }
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -472,15 +473,21 @@ El valor MAXSIZE para el modelo de DTU, si se especifica, tiene que ser válido 
 |:----- | ------: |-------: |-------: |-------: |
 |Número máximo de núcleos virtuales|10|12|14|16|
 
+**De uso general, proceso sin servidor, Gen5 (parte 3)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|Número máximo de núcleos virtuales|18|20|24|32|40|
+
 **Crítico para la empresa, proceso aprovisionado, Gen4 (parte 1)**
 
-|Nivel de rendimiento|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|Tamaño de proceso (objetivo de servicio)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Tamaño máximo de datos (GB)|1024|1024|1024|1024|1024|1024|
 
 **Crítico para la empresa, proceso aprovisionado, Gen4 (parte 2)**
 
-|Nivel de rendimiento|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|Tamaño de proceso (objetivo de servicio)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Tamaño máximo de datos (GB)|1024|1024|1024|1024|1024|1024|
 
@@ -509,7 +516,7 @@ Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 - Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 250 MB.
 - Si no se especifica MAXSIZE ni EDITION, este último se establece en De uso general y MAXSIZE se establece en 32 GB.
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica el nivel de rendimiento. En el ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica el tamaño de proceso (objetivo de servicio). En el ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
 
 ```sql
 ALTER DATABASE current
@@ -520,19 +527,19 @@ SERVICE_OBJECTIVE
 
 - **Solo bases de datos únicas y agrupadas**
 
-  - Especifica el nivel de rendimiento. Los valores disponibles para el objetivo de servicio son estos: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` y `BC_M_128`.
+  - Especifica el tamaño de proceso (objetivo de servicio). Los valores disponibles para el objetivo de servicio son estos: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80` y `BC_M_128`.
 
-- **Para bases de datos sin servidor**
+- **Para bases de datos únicas en el nivel de proceso sin servidor**
 
-  - Especifica el nivel de rendimiento. Los valores disponibles para el objetivo de servicio son estos: `GP_S_Gen5_1``GP_S_Gen5_2``GP_S_Gen5_4``GP_S_Gen5_6``GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14` y `GP_S_Gen5_16`.
+  - Especifica el tamaño de proceso (objetivo de servicio). Los valores disponibles para el objetivo de servicio son los siguientes: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32` y `GP_S_Gen5_40`.
 
 - **Para bases de datos en el nivel de servicio Hyperscale**
 
-  - Especifica el nivel de rendimiento. Los valores disponibles para el objetivo de servicio son: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+  - Especifica el tamaño de proceso (objetivo de servicio). Los valores disponibles para el objetivo de servicio son: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
 Para conocer las descripciones de los objetivos de servicio y obtener más información sobre las combinaciones de tamaño, ediciones y objetivos de servicio, consulte [Niveles de servicio y niveles de rendimiento de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) y [Límites de recursos del núcleo virtual](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Se ha quitado la compatibilidad para los objetivos de servicio de PRS. Si tiene preguntas, use este alias de correo electrónico: premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/) (Creación y administración de un grupo elástico de SQL Database). Para quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un nivel de rendimiento de una sola base de datos.
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/) (Creación y administración de un grupo elástico de SQL Database). A fin de quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un tamaño de proceso de base de datos única (objetivo de servicio).
 
 > [!NOTE]
 > No se pueden agregar bases de datos del nivel de servicio Hyperscale a un grupo elástico.
@@ -546,16 +553,16 @@ Crea una base de datos de replicación geográfica secundaria con el mismo nombr
 
 WITH ALLOW_CONNECTIONS { **ALL** | NO } Cuando no se especifica ALLOW_CONNECTIONS, se establece en ALL de forma predeterminada. Si se establece en ALL, es una base de datos de solo lectura que permite la conexión de todos los inicios de sesión con los permisos adecuados.
 
-WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128` }
+WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128` }
 
 Cuando no se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el mismo nivel de servicio que la principal. Cuando se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el nivel especificado. Esta opción permite crear bases de datos secundarias con replicación geográfica con niveles de servicio más económicos. El valor SERVICE_OBJECTIVE especificado debe estar en la misma edición que el origen. Por ejemplo, no se puede especificar S0 si la edición es Premium.
 
-ELASTIC_POOL (name = \<elastic_pool_name>) Cuando no se especifica ELASTIC_POOL, la base de datos secundaria no se crea en un grupo elástico. Cuando se especifica ELASTIC_POOL, la base de datos secundaria se crea en el grupo especificado.
+ELASTIC_POOL (name = \<elastic_pool_name>) Si no se especifica ELASTIC_POOL, la base de datos secundaria no se creará en un grupo elástico. Cuando se especifica ELASTIC_POOL, la base de datos secundaria se crea en el grupo especificado.
 
 > [!IMPORTANT]
 > El usuario que ejecuta el comando ADD SECONDARY debe ser DBManager en el servidor principal, ser miembro de db_owner en la base de datos local y DBManager en el servidor secundario.
 
-REMOVE SECONDARY ON SERVER \<partner_server_name> Quita la base de datos secundaria con replicación geográfica especificada en el servidor especificado. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos principal.
+REMOVE SECONDARY ON SERVER \<partner_server_name> Quita la base de datos secundaria con replicación geográfica indicada en el servidor especificado. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos principal.
 
 > [!IMPORTANT]
 > El usuario que ejecuta el comando REMOVE SECONDARY debe ser DBManager en el servidor principal.
@@ -662,7 +669,7 @@ ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 
 ### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Actualizar una única base de datos al nivel de servicio S0 (edición Estándar, nivel de rendimiento 0)
 
-Actualiza una sola base de datos a la edición Estándar (nivel de servicio) con un nivel de rendimiento de S0 y un tamaño máximo de 250 GB.
+Actualiza una base de datos única a la edición Estándar (nivel de servicio) con un tamaño de proceso (objetivo de servicio) de S0 y un tamaño máximo de 250 GB.
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
@@ -866,7 +873,7 @@ El tamaño máximo permitido para la base de datos. La base de datos no puede su
 
 Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
 
-SERVICE_OBJECTIVE Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para Azure Synapse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE Especifica el tamaño de proceso (objetivo de servicio). Para más información sobre los objetivos de servicio para Azure Synapse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Permisos
 
@@ -913,13 +920,13 @@ MODIFY NAME = Northwind;
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
 ```
 
-### <a name="c-change-the-performance-level"></a>C. Cambiar el nivel de rendimiento
+### <a name="c-change-the-compute-size-service-objective"></a>C. Cambiar el tamaño de proceso (objetivo de servicio)
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ```
 
-### <a name="d-change-the-max-size-and-the-performance-level"></a>D. Cambiar el tamaño máximo y el nivel de rendimiento
+### <a name="d-change-the-max-size-and-the-compute-size-service-objective"></a>D. Cambiar el tamaño máximo y el tamaño de proceso (objetivo de servicio)
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );

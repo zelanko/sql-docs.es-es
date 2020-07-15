@@ -1,5 +1,6 @@
 ---
 title: T-SQL no admitidas por OLTP en memoria
+description: Obtenga información sobre las características de Transact-SQL que no se admiten en las tablas optimizadas para memoria, los procedimientos almacenados compilados de forma nativa y las funciones definidas por el usuario.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753200"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las tablas con optimización para memoria, los procedimientos almacenados compilados de forma nativa y las funciones definidas por el usuario no admiten el área expuesta completa de [!INCLUDE[tsql](../../includes/tsql-md.md)] , pero las tablas basadas en disco, los procedimientos almacenados interpretados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y las funciones definidas por el usuario sí la admiten. Cuando se intenta usar una de las características no admitidas, el servidor devuelve un error.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "74412486"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de datos que utilizan OLTP en memoria  
  En la siguiente tabla se enumeran las características de [!INCLUDE[tsql](../../includes/tsql-md.md)] no compatibles y las palabras clave que pueden aparecer en el texto del mensaje de error que implica una base de datos OLTP en memoria. La tabla también muestra la resolución del error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Nombre|Resolución|  
 |----------|----------|----------------|  
 |Opción|AUTO_CLOSE|La opción de base de datos AUTO_CLOSE=ON no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Opción|ATTACH_REBUILD_LOG|La opción de base de datos ATTACH_REBUILD_LOG de CREATE no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -49,7 +50,7 @@ ms.locfileid: "74412486"
 ## <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
  En la siguiente tabla se enumeran las características de [!INCLUDE[tsql](../../includes/tsql-md.md)] no compatibles y las palabras clave que pueden aparecer en el texto del mensaje de error que implica una tabla optimizada para memoria. La tabla también muestra la resolución del error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Nombre|Resolución|  
 |----------|----------|----------------|  
 |Característica|ACTIVAR|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas optimizadas para memoria se asignan al grupo de archivos optimizados para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
@@ -80,7 +81,7 @@ ms.locfileid: "74412486"
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de una tabla optimizada para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Nombre|Resolución|  
 |----------|----------|----------------|  
 |Característica|Índice filtrado|Las tablas optimizadas para memoria no admiten índices filtrados. Omita la cláusula **WHERE** en la especificación de índice.|  
 |Característica|Columnas incluidas|No es necesario especificar columnas incluidas en las tablas optimizadas para memoria. Todas las columnas de la tabla optimizada para memoria se incluyen de forma implícita en cada índice optimizado para memoria.|  
@@ -90,14 +91,14 @@ ms.locfileid: "74412486"
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash no clúster  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de hash no clúster, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Nombre|Resolución|  
 |----------|----------|----------------|  
 |Opción|ASC/DESC|Los índices de hash no clúster no se ordenan. Quite las palabras clave **ASC** y **DESC** de la especificación de clave de índice.|  
   
 ## <a name="natively-compiled-stored-procedures-and-user-defined-functions"></a>Procedimientos almacenados compilados de forma nativa y funciones definidas por el usuario  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con procedimientos almacenados compilados de forma nativa y funciones definidas por el usuario, así como la acción correctiva para resolver el error.  
   
-|Tipo|Característica|Solución|  
+|Tipo|Característica|Resolución|  
 |----------|-------------|----------------|  
 |Característica|Variables de las tablas insertadas|Los tipos de tablas no pueden declararse insertadas con declaraciones de variable. Los tipos de tablas deben declararse de forma explícita mediante una instrucción **CREATE TYPE** .|  
 |Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursores. Con ODBC, evite la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> Cuando ejecute el procedimiento desde un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> Cuando cree un procedimiento almacenado compilado de forma nativa, en lugar de un cursor, use la lógica basada en conjunto o un bucle **WHILE** .|  
@@ -179,7 +180,7 @@ ms.locfileid: "74412486"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transacciones que tienen acceso a tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con transacciones que tienen acceso a tablas optimizadas para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Nombre|Resolución|  
 |----------|----------|----------------|  
 |Característica|punto de retorno|No se pueden crear puntos de retorno explícitos en transacciones que tienen acceso a tablas optimizadas para memoria.|  
 |Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas optimizadas para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  

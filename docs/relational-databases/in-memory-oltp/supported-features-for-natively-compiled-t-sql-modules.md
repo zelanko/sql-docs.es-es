@@ -1,7 +1,8 @@
 ---
 title: Características para los módulos T-SQL compilados de forma nativa
+description: Obtenga información sobre el área expuesta de T-SQL y las características admitidas en el cuerpo de los módulos T-SQL compilados de forma nativa, como los procedimientos almacenados y las funciones escalares definidas por el usuario.
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834726"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   En este tema se incluye una lista de áreas expuestas y características admitidas de T-SQL en el cuerpo de los módulos T-SQL compilados de forma nativa, como procedimientos almacenados ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), funciones escalares definidas por el usuario, funciones con valores de tabla insertadas y desencadenadores.  
 
  Si quiere conocer las características admitidas en torno a la definición de los módulos nativos, vea [Construcciones DDL admitidas para módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
-
--   [Área expuesta de consulta en los módulos nativos](#qsancsp)  
-
--   [Modificación de datos](#dml)  
-
--   [Idioma de control de flujo](#cof)  
-
--   [Operadores admitidos](#so)  
-
--   [Funciones integradas en módulos compilados de forma nativa](#bfncsp)  
-
--   [Auditoría](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Sugerencias de consulta y tabla](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Limitaciones de ordenación](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  Para tener información completa sobre las construcciones no admitidas y sobre cómo evitar algunas de las características no admitidas en los módulos compilados de forma nativa, consulte [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
@@ -66,7 +51,7 @@ Cláusula SELECT:
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el operador DISTINCT se admite en módulos compilados de forma nativa.
 
-              DISTINCT aggregates are not supported.  
+        - No se admiten agregados DISTINCT.  
 
 -   UNION y UNION ALL
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -76,9 +61,9 @@ Cláusula SELECT:
 
 Cláusula FROM:  
 
--   FROM \<tabla con optimización para memoria o variable de tabla>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<TVF insertada compilada de forma nativa>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -169,7 +154,7 @@ Se admiten las siguientes instrucciones DML.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - Para optimizar el rendimiento, use un solo bloque TRY/CATCH para un módulo T-SQL compilado completamente de forma nativa.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -184,7 +169,7 @@ Se admiten las siguientes instrucciones DML.
 
 -   Operadores binarios ((*, /, +, -, % (módulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - Se admite el operador más (+) en ambos números y cadenas.  
 
 -   Operadores lógicos (AND, OR, NOT).  
 
@@ -244,7 +229,7 @@ Se admiten las siguientes instrucciones DML.
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
 
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas, obtiene el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombre_procedimiento>* , línea *\<número_línea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas, obtiene el mensaje de error: **Mensaje 41398, Nivel 16, Estado 1, Procedimiento *\<procedureName>* , Línea *\<lineNumber>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<number>* .**  
 
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
 

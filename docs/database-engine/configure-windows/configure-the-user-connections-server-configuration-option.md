@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Conexiones de usuario | Microsoft Docs
+description: Obtenga información sobre la opción "Conexiones de usuario". Vea cómo puede ayudarle a evitar la sobrecarga de una instancia de SQL Server con demasiadas conexiones simultáneas.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1d9cab0c7e6d44eb94ff6f64b2825a316ab3006
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34595b6b5fb3f0b493ebc08d65a862d1e657d7e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77173649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729433"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Establecer la opción de configuración del servidor Conexiones de usuario
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **conexiones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **conexiones de usuario** especifica el número máximo de conexiones de usuario simultáneas que se permiten en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El número real de conexiones de usuario permitidas depende también de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se use y de los límites de las aplicaciones y del hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite un máximo de 32.767 conexiones de usuario. Como la opción **user connections** es una opción dinámica (autoconfiguración), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta automáticamente el número máximo de conexiones de usuario a medida que se necesitan, hasta el valor máximo permitido. Por ejemplo, si solo 10 usuarios han iniciado una sesión, se asignan 10 objetos de conexión de usuario. En la mayoría de los casos, no es necesario cambiar el valor de esta opción. El valor predeterminado es 0, lo que significa que se permite un máximo de 32 767 conexiones de usuario.  
   

@@ -1,5 +1,6 @@
 ---
 title: Modificación de una definición de la directiva de mantenimiento de recursos (utilidad de SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo usar SQL Server Management Studio para modificar la definición de una directiva de mantenimiento de recursos, de tal forma que pueda evaluar mejor los datos de rendimiento de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 83d1f152ef414022803d84781a7948d04c4a77b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77837f50ba3bf9d3e89ecddd0e7deb7df891a54e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725195"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modificar una definición de la directiva de mantenimiento de recursos (utilidad de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo modificar una definición de directiva de mantenimiento de recursos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de modificar una directiva de uso de recursos en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe crear un punto de control de la utilidad (UCP). Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las directivas de uso de recursos de la utilidad se pueden configurar para las aplicaciones de capa de datos y las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las directivas de uso de recursos se pueden definir globalmente para todas las aplicaciones de capa de datos y las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o se pueden definir individualmente para cada aplicación de capa de datos y para cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También es posible implementar directivas globales y configurar aplicaciones de capa de datos e instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con sus propias definiciones de la directiva.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789775"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
   
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Se necesita una consulta de SQL Server Browser si la cadena de conexión especifica el nombre de la instancia con nombre y no el puerto.  
   
- Para especificar la dirección IP y el puerto, el atributo **Server** adopta el siguiente formato: `Server=` *<dirección_ip>* `,` *\<puerto>* . Por ejemplo:  
+ Para especificar la dirección IP y el puerto, el atributo **Server** adopta el siguiente formato: `Server=` *<dirección_ip>* `,` *\<port>* . Por ejemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  En esta cadena se omite la información de autenticación.  
   
 > [!IMPORTANT]  
->  La unión del prefijo de protocolo con el atributo **Server** (`Server=tcp:` *\<nombreDeServidor>* ) es incompatible con el atributo **Network** y, si se especifica el protocolo en ambos lugares, lo más probable es que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y que se especifique solo el nombre de servidor en el atributo **Server** (`"Network=dbmssocn; Server=` *\<nombreDeServidor>* `"`).  
+>  La unión del prefijo de protocolo con el atributo **Server** (`Server=tcp:` *\<servername>* ) es incompatible con el atributo **Network** y, si se especifica el protocolo en ambos lugares, lo más probable es que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y que se especifique solo el nombre de servidor en el atributo **Server** (`"Network=dbmssocn; Server=` *\<servername>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Atributo Failover Partner  
  Además del nombre del asociado inicial, el cliente puede especificar también el nombre del asociado de conmutación por error, que debería identificar la instancia del servidor reflejado actual. Una de las palabras clave especifica el asociado de conmutación por error para el atributo de asociado de conmutación por error. La palabra clave para este atributo depende de la API que está utilizando. En la tabla siguiente se enumeran estas palabras clave.  

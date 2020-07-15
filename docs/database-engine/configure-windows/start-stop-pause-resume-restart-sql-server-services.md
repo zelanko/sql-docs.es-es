@@ -1,5 +1,6 @@
 ---
 title: Inicio, detención, pausa, reanudación o reinicio de servicios de SQL Server
+description: Obtenga información sobre cómo iniciar, detener, pausar, reanudar o reiniciar varios servicios SQL Server. Vea cómo utilizar Transact-SQL, PowerShell y otras herramientas para llevar a cabo estas acciones.
 ms.custom: ''
 ms.date: 03/05/2020
 ms.prod: sql
@@ -37,19 +38,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81287965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763987"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Inicio, detención, pausa, reanudación o reinicio de servicios de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe cómo iniciar, detener, pausar, reanudar o reiniciar el motor de base de datos de SQL Server, el Agente SQL Server o el servicio SQL Server Browser mediante el Administrador de configuración de SQL Server, SQL Server Management Studio (SSMS), comandos de net desde un símbolo del sistema, Transact-SQL o PowerShell.
 
@@ -187,7 +188,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Para iniciar una instancia con nombre del Motor de base de datos
 
-- En el símbolo del sistema, escriba uno de los siguientes comandos. Sustituya *\<instancename>* por el nombre de la instancia que quiera administrar.  
+- En el símbolo del sistema, escriba uno de los siguientes comandos. Sustituya *\<instancename>* por el nombre de la instancia que desea administrar.  
   
     **net start "SQL Server (** *instancename* **)"**
   

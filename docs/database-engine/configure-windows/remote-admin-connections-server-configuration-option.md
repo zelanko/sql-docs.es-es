@@ -1,5 +1,6 @@
 ---
 title: remote admin connections (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre cómo las aplicaciones en equipos remotos pueden usar la DAC. Vea cómo usar la opción "conexiones remotas de administrador" con "sp_configure" para activar esta funcionalidad.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - remote admin connections option
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 39df0ace2a24cb4c69f38617ba1a7b70f5da2f96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d7aa4d4b6658461be3a4fc5c762b3cef5343be4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651724"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La conexión DAC permite a los administradores tener acceso al servidor en ejecución a fin de realizar funciones de diagnóstico o ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , o para solucionar problemas del servidor incluso cuando está bloqueado o se ejecuta en un estado anormal, y no responde a ninguna conexión de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . De forma predeterminada, la conexión DAC solo está disponible en un cliente del servidor. Para habilitar las aplicaciones cliente en equipos remotos de modo que usen la DAC, utilice la opción remote admin connections de sp_configure.  
   

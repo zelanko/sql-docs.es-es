@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292764"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469330"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
 
@@ -144,7 +144,7 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
   
     -   Para incluir la descripción del error en una columna adicional, use una única línea de script para llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
   
-    -   Para incluir el nombre de columna en una columna adicional, use una única línea de script para llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
+    -   Incluya el nombre de columna en una columna adicional mediante el uso de una única línea de script para llamar al método [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
      Puede agregar el componente Script al segmento de error del flujo de datos en cualquier lugar en un nivel inferior de los componentes del flujo de datos cuyos errores desea capturar. Normalmente el componente Script se coloca inmediatamente antes de que las filas de error se escriban en un destino. De esta manera, el script solo busca descripciones para filas de error escritas. El segmento de error del flujo de datos puede corregir algunos errores y no escribir esas filas en un destino de error.  
 

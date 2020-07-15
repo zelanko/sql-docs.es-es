@@ -12,15 +12,15 @@ ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85996d94387fb1a20c7ae21b94307428e21819d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ffc040643cf6906089c026eb216b4d9b084c0e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717793"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos Hash Warning se puede utilizar para supervisar cuándo se ha producido una recursividad hash o un cese de hash (salida hash) durante una operación de hash.  
   
  La recursividad hash se produce cuando no hay suficiente memoria para la entrada generada, lo que causa que ésta se divida en varias particiones que se procesan por separado. Si alguna de estas particiones sigue sin caber en la memoria disponible, se vuelve a dividir en subparticiones, que también se procesan por separado. El proceso de división continúa hasta que cada partición quepa en la memoria disponible o hasta que se alcance el nivel máximo de recursividad (que se muestra en la columna de datos IntegerData).  
@@ -60,7 +60,7 @@ ms.locfileid: "68089504"
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|**int**|Nivel de recursividad (solo recursividad hash).|25|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<nombre de usuario\>* ).|11|Sí|  
+|LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (ya sea el de seguridad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las credenciales de inicio de sesión de Windows con el formato *\<DOMAIN>\\<nombre_de_usuario\>* ).|11|Sí|  
 |LoginSid|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  

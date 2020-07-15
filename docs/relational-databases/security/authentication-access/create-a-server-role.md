@@ -1,5 +1,6 @@
 ---
 title: Creación de un rol de servidor | Microsoft Docs
+description: Cree un rol del servidor en SQL Server mediante SQL Server Management Studio o Transact-SQL. Revise las limitaciones, las restricciones y los permisos necesarios.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094954"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334264"
 ---
 # <a name="create-a-server-role"></a>Crear un rol de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -77,7 +78,7 @@ ms.locfileid: "68094954"
   
 6.  En **Elementos protegibles**, seleccione uno o más elementos protegibles de nivel de servidor. Cuando se selecciona un elemento protegible, se pueden permitir o denegar permisos a este rol de servidor en dicho elemento protegible.  
   
-7.  En el cuadro **Permisos: Explícito** , active la casilla para conceder, conceder por concesión o denegar el permiso a este rol de servidor para los elementos protegibles seleccionados. Si un permiso no se puede conceder o denegar a todos los elementos protegibles seleccionados, el permiso se representará como una selección parcial.  
+7.  En el cuadro **Permisos: Explícitos**, active la casilla para conceder, conceder por concesión o denegar el permiso a este rol de servidor para los elementos protegibles seleccionados. Si un permiso no se puede conceder o denegar a todos los elementos protegibles seleccionados, el permiso se representará como una selección parcial.  
   
 8.  En la página **Miembros** , utilice el botón **Agregar** para agregar inicio de sesión que representan individuos o grupos al nuevo rol de servidor.  
   

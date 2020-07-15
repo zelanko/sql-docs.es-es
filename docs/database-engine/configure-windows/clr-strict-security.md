@@ -1,6 +1,6 @@
 ---
 title: CLR strict security | Microsoft Docs
-description: Cómo configurar CLR strict security en SQL Server
+description: Aprenda a configurar la seguridad estricta de Common Language Runtime (CLR) en SQL Server. Controle la interpretación de los permisos SAFE, EXTERNAL ACCESS y UNSAFE.
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd8f7f59c44187de4e639d12a9ab497a155f14f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85698009"
 ---
 # <a name="clr-strict-security"></a>CLR strict security   
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Controla la interpretación del permiso `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 

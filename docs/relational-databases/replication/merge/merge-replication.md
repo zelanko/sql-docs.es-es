@@ -1,5 +1,6 @@
 ---
 title: Replicación de mezcla | Microsoft Docs
+description: La replicación de mezcla utiliza una instantánea de los objetos y datos de la base de datos de publicación y, después, realiza un seguimiento de las modificaciones en el publicador y en los suscriptores con desencadenadores.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56858009571329d545a75f12d6a6364d3967bd59
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882313"
 ---
 # <a name="merge-replication"></a>Replicación de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replicación de mezcla, como la replicación transaccional, normalmente se inicia con una instantánea de los objetos y datos de una base de datos de publicaciones. Los cambios de datos y las modificaciones de esquema posteriores que se lleven a cabo en el publicador y en los suscriptores se controlan mediante desencadenadores. El suscriptor se sincroniza con el publicador cuando están conectados a la red e intercambian todas las filas que han cambiado entre el publicador y el suscriptor desde la última vez que se produjo la sincronización.  
   
  La replicación de mezcla se suele utilizar en entornos de servidor a cliente. La replicación de mezcla es adecuada en las siguientes situaciones:  

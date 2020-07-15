@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4793260717225b731f6675098a8fa187884de206
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321253"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882185"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Administrar particiones para una publicación de mezcla mediante filtros con parámetros
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo administrar particiones para una publicación de mezcla con filtros con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Los filtros de fila con parámetros se puede utilizar para generar particiones no superpuestas. Estas particiones pueden estar restringidas para que solo una suscripción reciba una partición determinada. En estos casos, un número grande de suscriptores producirá un número de particiones grande, las cuales a su vez requieren un número igual de instantánea con particiones. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **En este tema**  
@@ -49,11 +49,11 @@ ms.locfileid: "75321253"
 -   Cuando una publicación ha parametrizado filtros que producen suscripciones con particiones no superpuestas, y si una suscripción determinada se pierde y necesita volverse a crear, debe realizar las siguientes acciones: quitar la partición a la que se suscribió, volver a crear la suscripción y, a continuación, volver a crear la partición. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). La replicación genera scripts de creación para particiones del suscriptor existentes cuando se genera un script de creación de publicación. Para más información, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
+ Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
   
 #### <a name="to-create-a-partition"></a>Para crear una partición  
   
-1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar**.  
+1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Agregar**.  
   
 2.  En el cuadro de diálogo **Agregar partición de datos** , escriba valores para **HOST_NAME()** y/o **SUSER_SNAME()** asociados con la partición que desea crear.  
   

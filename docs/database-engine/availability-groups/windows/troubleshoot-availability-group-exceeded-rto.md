@@ -1,5 +1,6 @@
 ---
 title: 'Solución de problemas: el grupo de disponibilidad superó el RTO (SQL Server) | Microsoft Docs'
+description: Obtenga información sobre cómo solucionar problemas de una conmutación por error en un grupo de disponibilidad Always On cuando tarda más tiempo que el objetivo de tiempo de recuperación en SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888027"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: el grupo de disponibilidad superó el RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: El grupo de disponibilidad superó el RTO
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Después de una conmutación por error automática o manual planeada sin pérdida de datos en un grupo de disponibilidad, es posible que el tiempo de conmutación por error supere su objetivo de tiempo de recuperación (RTO). También puede ser que al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error) usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RTO.  
   
  Si la conmutación por error automática todavía no se ha completado, consulte [Solucionar problemas de conmutación por error automática en entornos de SQL Server 2012 Always On](https://support.microsoft.com/kb/2833707).  

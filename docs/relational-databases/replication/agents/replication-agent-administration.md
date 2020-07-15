@@ -1,5 +1,6 @@
 ---
 title: Administración del Agente de replicación | Microsoft Docs
+description: Obtenga información sobre cómo administrar agentes de replicación, que realizan tareas para la replicación, como la creación de copias de esquemas y datos, y la propagación de cambios entre servidores.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97ab969b453176e3b5ecfa8e2f9d85908407241f
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288166"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807825"
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

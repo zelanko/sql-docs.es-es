@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Opciones) | Microsoft Docs
+description: Obtenga información sobre cómo utilizar la pestaña Opciones del cuadro de diálogo Propiedades de la base de datos para ver o modificar la intercalación, el modelo de recuperación y otros valores de la base de datos.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630948"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286749"
  Especifique la intercalación de la base de datos seleccionándola en la lista. Para más información, vea [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperación**  
- Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completa**, **Registro masivo**o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completo**, **Registro masivo** o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nivel de compatibilidad**  
  Especifique la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitida por la base de datos. Para ver los valores posibles, vea [ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) (Nivel de compatibilidad ALTER DATABASE (Transact-SQL)). Cuando se actualiza una base de datos de SQL Server, el nivel de compatibilidad de esa base de datos se conserva (si es posible) o bien se cambia al nivel mínimo compatible con el nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -121,17 +122,17 @@ Cuando se conecta a Azure SQL Database, esta sección tiene opciones para cont
  Habilita o deshabilita el examen de parámetros en los elementos secundarios, si procede. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/kb/980653).  
   
  **Correcciones del optimizador de consultas**  
- Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Para obtener más información, consulte [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Correcciones del optimizador de consultas para secundaria**  
- Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Para obtener más información, consulte [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  
  Especifique el nombre del directorio para los datos de FILESTREAM asociados a la base de datos seleccionada.  
   
  **Acceso sin transacciones de FILESTREAM**  
- Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY**o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique una de las opciones siguientes para el acceso no transaccional a través del sistema de archivos a los datos FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY** o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varios  
 **Permitir el aislamiento de instantánea**  

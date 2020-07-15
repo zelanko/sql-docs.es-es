@@ -1,6 +1,6 @@
 ---
 title: Servidores vinculados (motor de base de datos) | Microsoft Docs
-ms.date: 10/14/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +19,21 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734946"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Los servidores vinculados permiten que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) lean datos de los orígenes de datos remotos y ejecuten comandos en los servidores de bases de datos remotos (por ejemplo, orígenes de datos OLE DB) fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores vinculados normalmente se configuran para habilitar [!INCLUDE[ssDE](../../includes/ssde-md.md)] a fin de ejecutar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que incluye las tablas de otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]u otro producto de base de datos como Oracle. Muchos tipos de orígenes de datos OLE DB pueden configurarse como servidores vinculados, incluidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel y Azure CosmosDB.
+  Los servidores vinculados permiten que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] lean datos de los orígenes de datos remotos y ejecuten comandos en los servidores de bases de datos remotos (por ejemplo, orígenes de datos OLE DB) fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores vinculados normalmente se configuran para habilitar [!INCLUDE[ssDE](../../includes/ssde-md.md)] a fin de ejecutar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que incluye las tablas de otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]u otro producto de base de datos como Oracle. Muchos tipos de orígenes de datos OLE DB pueden configurarse como servidores vinculados, incluidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel y Azure CosmosDB.
 
 > [!NOTE]
-> Los servidores vinculados están disponibles en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e Instancia administrada de Azure SQL Database. No están habilitados en los grupos elásticos y la base de datos única de Azure SQL Database. Hay algunas [restricciones en Instancia administrada que se pueden encontrar aquí](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Los servidores vinculados están disponibles en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. No están habilitados en los grupos elásticos y la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Hay algunas [restricciones en Instancia administrada que se pueden encontrar aquí](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>¿Cuándo usar servidores vinculados?
 
@@ -56,10 +56,10 @@ Puede configurar un servidor vinculado con [!INCLUDE[ssManStudioFull](../../incl
   
 Un *proveedor OLE DB* es una biblioteca DLL que administra un origen de datos específico e interactúa con él. Un *origen de datos OLE DB* identifica la base datos específica a la que se puede tener acceso mediante OLE DB. Aunque los orígenes de datos en los que se realizan consultas a través de definiciones de servidores vinculados son bases de datos normales, existen proveedores OLE DB para una amplia variedad de archivos y formatos de archivo. Se trata de archivos de texto, datos de hojas de cálculo y los resultados de búsquedas de contenido de texto completo.  
   
-El proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) es el proveedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) es el proveedor OLE DB predeterminado. En versiones anteriores, el [proveedor OLE DB SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) era el proveedor OLE DB predeterminado.
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se ha probado con el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y algunos otros.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha probado con el proveedor OLE DB predeterminado.  
   
 ## <a name="linked-server-details"></a>Detalles de servidores vinculados  
  En la siguiente ilustración se muestran los conceptos básicos de una configuración con servidores vinculados.  
@@ -75,7 +75,7 @@ Normalmente, los servidores vinculados se utilizan para tratar consultas distrib
 > Cuando se utiliza un proveedor OLE DB, la cuenta con la que se ejecuta el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de lectura y ejecución para el directorio y todos los subdirectorios en los que esté instalado el proveedor. Esto incluye los proveedores publicados por Microsoft y cualquier proveedor externo.
 
 > [!NOTE]
-> Los servidores vinculados admiten la autenticación de paso a través de Active Directory cuando se usa la delegación completa. A partir de SQL Server 2017 CU17, también se admite la autenticación de paso a través con delegación restringida, pero no se admite la [delegación restringida basada en recursos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview).
+> Los servidores vinculados admiten la autenticación de paso a través de Active Directory cuando se usa la delegación completa. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, también se admite la autenticación de paso a través con delegación restringida, pero no la [delegación restringida basada en recursos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview).
 
 ## <a name="managing-providers"></a>Administrar proveedores  
 Existe un conjunto de opciones para controlar cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga y utiliza proveedores OLE DB que se hayan especificado en el registro.  
@@ -99,17 +99,12 @@ También puede definir servidores vinculados mediante [!INCLUDE[ssManStudioFull]
 > Es posible definir servidores vinculados que señalen al servidor donde se han definido, es decir, que operen como bucle invertido. Los servidores en bucle invertido resultan muy útiles cuando se prueba una aplicación que utiliza consultas distribuidas en una red con un único servidor. Los servidores vinculados en bucle invertido están previstos para la realización de pruebas y no se admiten para muchas operaciones, como las transacciones distribuidas.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Crear servidores vinculados &#40;Motor de base de datos de SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [Creación de servidores vinculados &#40;Motor de base de datos de SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>Contenido relacionado  
- [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

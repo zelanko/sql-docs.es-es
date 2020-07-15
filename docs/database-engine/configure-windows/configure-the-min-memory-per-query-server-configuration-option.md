@@ -1,5 +1,6 @@
 ---
 title: Configurar la opción de configuración del servidor Memoria mínima por consulta | Microsoft Docs
+description: Aprenda a usar la opción min memory per query a fin de especificar la concesión de memoria mínima o el número mínimo de kilobytes que SQL Server asigna para una consulta.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - min memory per query option
 - min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784dc57403cdb5c8dad6ba3e8f910ecd6d4dee26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696853"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar la opción de configuración del servidor Memoria mínima por consulta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo configurar la opción de configuración de servidor **memoria mínima por consulta** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **min memory per query** especifica la cantidad mínima de memoria (en kilobytes) que se va a asignar para la ejecución de una consulta. Esto también se conoce como concesión de memoria mínima. Por ejemplo, si se establece el valor 2.048 KB para la opción **min memory per query** , se garantiza que la consulta va a obtener esa cantidad de memoria total, como mínimo. El valor predeterminado es 1.024 KB. El valor mínimo es 512 KB y el valor máximo es 2 147 483 647 KB (2 GB).  
   

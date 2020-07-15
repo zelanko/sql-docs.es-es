@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725955"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Las actividades de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comunes con una clave asimétrica protegida por el Almacén de claves de Azure incluyen las siguientes tres áreas:  
   
 -   Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
@@ -53,12 +53,14 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
         - Si usa la **versión global de Azure**, reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
         - Si usa **nube pública de Azure** (por ejemplo, Azure Government, Azure China, 21Vianet o Azure Germany), reemplace el argumento `IDENTITY` por el URI de almacén que se devolvió en la parte II, paso 3. No incluya "https://" en el URI de almacén.   
   
-    -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  Debe quitar los guiones de **Client ID**.  
   
-    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.  
+    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte 1. En este ejemplo, el **secreto de cliente** de la parte 1 es `ReplaceWithAADClientSecret`. 
+  
+    -   La cadena final del argumento SECRET es una secuencia larga de letras y números, sin guiones.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

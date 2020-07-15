@@ -1,5 +1,6 @@
 ---
 title: Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad | Microsoft Docs
+description: Obtenga información sobre cómo usar SQL Server Management Studio para supervisar y administrar grupos de disponibilidad Always On, réplicas de disponibilidad y bases de datos de disponibilidad existentes.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013632"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894160"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo se usa el panel **Detalles del Explorador de objetos** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para supervisar y administrar grupos de disponibilidad AlwaysOn, réplicas de disponibilidad y bases de datos de disponibilidad existentes.  
   
 > [!NOTE]  
@@ -95,7 +96,7 @@ ms.locfileid: "68013632"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**No sincronizadas**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
-|**Sincronizada**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
+|**Sincronizada**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado sincronizado.|  
 |**NULL**|Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).|  
   
 > [!NOTE]  
@@ -114,7 +115,7 @@ ms.locfileid: "68013632"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Sincronizando**.|  
+|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónico, el estado de la sincronización siempre es **Sincronizando**.|  
 |||  
   
  **Suspendido**  

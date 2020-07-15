@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Creación de reflejo) | Microsoft Docs
+description: Obtenga información sobre cómo configurar las propiedades de creación de reflejo y ver el estado de una sesión de creación de reflejo. Vea cómo iniciar, pausar o quitar una sesión de creación de reflejo.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630987"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Acceda a esta página desde la base de datos principal y utilícela para configurar y modificar las propiedades de la creación de reflejo de una base de datos. Utilícela también para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos, ver el estado de una sesión de creación de reflejo y pausar o quitar la sesión de creación de reflejo de la base de datos.  
   
 > **IMPORTANTE** La seguridad debe configurarse antes de empezar la creación del reflejo. Si la creación de reflejo no se ha iniciado, debe empezar con el asistente. Los cuadros de texto de la página **Creación de reflejo** se deshabilitan hasta que finalice el asistente.  
@@ -41,7 +42,7 @@ ms.locfileid: "68099591"
 |Si la creación del reflejo ha empezado.|Si el servidor testigo se ha modificado en el asistente, se debe configurar en consecuencia.|  
   
  **Direcciones de red de servidor**  
- Existe una opción equivalente para cada instancia del servidor: **Principal**, **Reflejado**y **Testigo**.  
+ Existe una opción equivalente para cada instancia del servidor: **Principal**, **Reflejado** y **Testigo**.  
   
  Las direcciones de red de las instancias del servidor se especifican automáticamente cuando finalice el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos. Una vez finalizado el asistente, puede modificar las direcciones de red manualmente, en caso necesario.  
   
@@ -94,7 +95,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Quitar creación de reflejo**  
  En la instancia del servidor principal, haga clic en esta opción para detener la sesión y quitar la configuración de creación de reflejo de las bases de datos. Aparecerá un mensaje para solicitar confirmación. Si hace clic en **Sí**se detendrá la sesión y se quitará la creación de reflejo. Para obtener más información sobre las repercusiones de quitar la creación de reflejo de la base de datos, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-> **NOTA:** Si esta es la única base de datos reflejada de la instancia del servidor, el trabajo de supervisión se quitará.  
+> **NOTA:** Si ésta es la única base de datos reflejada de la instancia del servidor, el trabajo de supervisión se quitará.  
   
  **Conmutación por error**  
  Haga clic para conmutar por error manualmente la base de datos principal a la base de datos reflejada.  
@@ -116,7 +117,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**Rendimiento alto (asincrónico)**|Null (si existe, no se usa excepto cuando la sesión requiere un quórum)|Para maximizar el rendimiento, la base de datos reflejada siempre estará algo detrás de la base de datos principal, nunca acercándose demasiado. Sin embargo, el espacio entre las bases de datos suele ser pequeño. La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el servidor reflejado se detiene. Sin embargo, si la sesión no tiene testigos (recomendado) o el testigo se conecta al servidor reflejado, éste permanecerá inaccesible en estado de espera activa; el propietario de la base de datos puede forzar el servicio en la instancia del servidor reflejado (con una posible pérdida de datos).|  
 |**Seguridad alta sin conmutación automática por error (sincrónico)**|No|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el reflejo se detiene, pero está disponible como estado de espera activa; el propietario de la base de datos puede forzar el servicio en la instancia del servidor reflejado (con una posible pérdida de datos).|  
-|**Seguridad alta con conmutación automática por error (sincrónico)**|Sí (obligatorio)|Máxima disponibilidad al incluir una instancia del servidor testigo para permitir la conmutación automática por error. Tenga en cuenta que solo puede seleccionar la opción **Seguridad alta con conmutación automática por error (sincrónico)** si antes ha especificado una dirección del servidor testigo.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Si el testigo se desconecta, los asociados deben estar conectados entre ellos para que la base de datos esté disponible. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> En los modos de funcionamiento sincrónicos, se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado. En la presencia de un testigo, la pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia del servidor principal deja de estar disponible, se produce una conmutación automática por error. La instancia del servidor reflejado cambia al rol de servidor principal y ofrece su base de datos como base de datos principal.<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> <br /><br /> Para más información, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
+|**Seguridad alta con conmutación automática por error (sincrónico)**|Sí (obligatorio)|Máxima disponibilidad al incluir una instancia del servidor testigo para permitir la conmutación automática por error. Tenga en cuenta que solo puede seleccionar la opción **Seguridad alta con conmutación automática por error (sincrónico)** si antes ha especificado una dirección del servidor testigo.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Si el testigo se desconecta, los asociados deben estar conectados entre ellos para que la base de datos esté disponible. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> En los modos de funcionamiento sincrónicos, se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado. En la presencia de un testigo, la pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia del servidor principal deja de estar disponible, se produce una conmutación automática por error. La instancia del servidor reflejado cambia al rol de servidor principal y ofrece su base de datos como base de datos principal.<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> <br /><br /> Para más información, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Una vez iniciada la creación de reflejo, puede cambiar el modo operativo y guardar el cambio haciendo clic en **Aceptar**.  
   

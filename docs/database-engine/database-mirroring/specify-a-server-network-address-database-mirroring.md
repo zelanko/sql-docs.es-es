@@ -1,6 +1,6 @@
 ---
 title: Especificación de una dirección de red de servidor (creación de reflejo de la base de datos)
-description: Especifique la dirección de red de servidor para un punto de conexión de creación de reflejo de la base de datos.
+description: Obtenga información sobre cómo especificar una dirección de red de servidor para un punto de conexión de creación de reflejo de la base de datos. En una sesión de creación de reflejo de la base de datos se necesita una dirección para cada instancia de servidor.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789613"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La configuración de una sesión de creación de reflejo de la base de datos necesita una dirección de red de servidor para cada una de las instancias de servidor. La dirección de red de servidor de una instancia de servidor debe identificar sin ambigüedades la instancia proporcionando una dirección del sistema y el número del puerto en el que la instancia escucha.  
   
  Antes de que pueda especificar un puerto en una dirección de red de servidor, debe existir un extremo de creación de reflejo de la base de datos en la instancia de servidor. Para obtener más información, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
@@ -33,11 +33,11 @@ ms.locfileid: "75252763"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintaxis para una dirección de red de servidor  
  La sintaxis para una dirección de red de servidor tiene el siguiente formato:  
   
- TCP<strong>://</strong> *\<dirección del sistema>* <strong>:</strong> *\<puerto>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  , donde  
   
--   *\<dirección del sistema>* es una cadena que identifica de forma inequívoca el equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
+-   *\<system-address>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
     -   Si los sistemas están en el mismo dominio, puede utilizar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252763"
         > [!NOTE]  
         >  Para obtener información acerca de cómo buscar un nombre de dominio completo, vea "Buscar el nombre de dominio completo" más adelante en este tema.  
   
--   *\<puerto>* es el número de puerto usado por el punto de conexión de reflejo de la instancia del servidor asociado. Para obtener más información sobre cómo especificar un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* es el número de puerto que usa el punto de conexión de creación de reflejo de la instancia del servidor asociado. Para obtener más información sobre cómo especificar un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un extremo de creación de reflejo de la base de datos puede utilizar cualquier puerto disponible en el equipo. Cada número de puerto de un sistema debe estar asociado con un único extremo y cada extremo está asociado con una sola instancia de servidor; en consecuencia, diferentes instancias del mismo servidor escuchan en diferentes extremos con distintos puertos. Por lo tanto, el puerto que especifique en la dirección de red de servidor al configurar una sesión de creación de reflejo de la base de datos siempre dirigirá la sesión a la instancia de servidor cuyo extremo esté asociado con dicho puerto.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a67079be4ee6f64c4386b9c44e5f52a3e22893f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a84cae4e79d4b2bd1438bdae9778a4af37d4a231
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736414"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el número de filas afectadas por la última instrucción. Si el número de filas superior a dos mil millones, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "82828660"
   
 -   Restablecer @@ROWCOUNT en 0 y no devolver el valor al cliente.  
   
- Las instrucciones que realizan una asignación simple siempre establecen el valor @@ROWCOUNT en 1. No se envían filas al cliente. Estos son algunos ejemplos de estas instrucciones: SET @*local_variable*, RETURN, READTEXT y SELECT sin instrucciones de consulta, como por ejemplo, SELECT GETDATE() o SELECT **'***Texto genérico***'** .  
+ Las instrucciones que realizan una asignación simple siempre establecen el valor @@ROWCOUNT en 1. No se envían filas al cliente. Estos son algunos ejemplos de estas instrucciones: SET @*local_variable*, RETURN, READTEXT y seleccione instrucciones sin consulta como SELECT GETDATE() o SELECT **'***Texto genérico***'** .  
   
- Las instrucciones que realizan una asignación en una consulta o usan RETURN en una consulta establecen el valor @@ROWCOUNT en el número de filas afectadas o leídas por la consulta, como por ejemplo: SELECT @*local_variable* = c1 FROM t1.  
+ Las instrucciones que realizan una asignación en una consulta o usan RETURN en una consulta establecen el valor @@ROWCOUNT en el número de filas afectadas o leídas por la consulta, por ejemplo: SELECT @*local_variable* = c1 FROM t1.  
   
  Las instrucciones de lenguaje de manipulación de datos (DML) establecen el valor de @@ROWCOUNT en el número de filas afectadas por la consulta y devuelven ese valor al cliente. Las instrucciones DML pueden no enviar ninguna fila al cliente.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82828660"
   
  Las instrucciones EXECUTE conservan el valor anterior de @@ROWCOUNT.  
   
- Las instrucciones como USE, SET \<opción>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION o COMMIT TRANSACTION restablecen el valor de ROWCOUNT en 0.  
+ Las instrucciones como USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION o COMMIT TRANSACTION restablecen el valor de ROWCOUNT en 0.  
   
  Los procedimientos almacenados compilados de forma nativa mantienen el @@ROWCOUNT anterior. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dentro de procedimientos almacenados compilados de forma nativa no establecen @@ROWCOUNT. Para más información, vea [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   

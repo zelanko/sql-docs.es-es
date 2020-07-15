@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731335"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las sugerencias de tabla invalidan el comportamiento predeterminado del optimizador de consultas mientras dura la instrucción del lenguaje de manipulación de datos (DML) especificando un método de bloqueo, uno o varios índices, una operación de procesamiento de la consulta como un recorrido de tabla o una búsqueda de índice, u otras opciones. Las sugerencias de tabla se especifican en la cláusula FROM de la instrucción DML y solo afectan a la tabla o a la vista a la que se hace referencia en esa cláusula.  
   

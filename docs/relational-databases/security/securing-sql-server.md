@@ -1,5 +1,6 @@
 ---
 title: Proteger SQL Server | Microsoft Docs
+description: Use estos artículos para crear e implementar un plan de seguridad eficaz en SQL Server. Obtenga información sobre la plataforma, la autenticación, los objetos y las aplicaciones.
 ms.custom: ''
 ms.date: 06/21/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729245"
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La protección de la seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conlleva una serie de pasos que afectan a cuatro áreas: la plataforma, la autenticación, los objetos (incluidos los datos) y las aplicaciones que tienen acceso al sistema. Los siguientes temas le guiarán durante el proceso de creación e implementación de un plan de seguridad eficaz.  
   

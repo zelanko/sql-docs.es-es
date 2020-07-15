@@ -1,6 +1,6 @@
 ---
 title: Creación de un plan de mantenimiento mediante la superficie de diseño
-ms.custom: seo-lt-2019
+description: Obtenga información sobre cómo crear un plan de mantenimiento de varios servidores o de un único servidor mediante la Superficie de diseño del plan de mantenimiento de SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667706"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
   
  **En este tema**  
@@ -161,10 +162,10 @@ ms.locfileid: "74055180"
          Define cómo funciona una restricción entre dos tareas.  
   
          Lista**Operación de evaluación**  
-         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
+         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
          Lista**Valor**  
-         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. **Correcto** es el valor predeterminado.  
+         Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
         >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
@@ -252,7 +253,7 @@ ms.locfileid: "74055180"
      Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
      **Resumen de archivos de registro**  
-     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se ve el texto siguiente, **Filtrar entradas del registro en:**  \<criterios de filtro>.  
+     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplicó un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<filter criteria>.  
   
      **Date**  
      Muestra la fecha del evento.  

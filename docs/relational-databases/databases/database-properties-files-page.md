@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Archivos) | Microsoft Docs
+description: Obtenga información sobre cómo ver o modificar las propiedades de una base de datos y cómo crear una base de datos en SQL Server Management Studio.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756183"
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)** .  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre de la base de datos**  
  Agregue o muestre el nombre de la base de datos.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099611"
  Para agregar archivos (contenedores) a un grupo de archivos de datos FILESTREAM, debe haber habilitado FILESTREAM. Puede habilitar FILESTREAM mediante el cuadro de diálogo [Propiedades del servidor (página Opciones avanzadas)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de archivos**  
- Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un nuevo grupo de archivos si selecciona **\<nuevo grupo de archivos>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **Grupo de archivos nuevo**. También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
+ Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un grupo de archivos si selecciona **\<new filegroup>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **Grupo de archivos nuevo**. También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
   
  Al agregar archivos (contenedores) a un grupo de archivos optimizados para memoria, el campo **Grupo de archivos** se rellenará con el nombre del grupo de archivos optimizados para memoria de la base de datos.  
   

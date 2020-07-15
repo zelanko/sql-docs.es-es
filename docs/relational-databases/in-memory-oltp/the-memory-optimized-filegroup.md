@@ -1,5 +1,6 @@
 ---
 title: El grupo de archivos con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre cómo crear un grupo de archivos optimizados para memoria, con contenedores para archivos de datos y archivos delta, antes de crear tablas optimizadas para memoria en SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715347"
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para crear tablas optimizadas para memoria, primero debe crear un grupo de archivos optimizados para memoria. El grupo de archivos optimizados para memoria contiene uno o varios contenedores. Cada contenedor contiene archivos de datos, archivos delta o ambos tipos de archivos.  
   
  Aunque las filas de datos de las tablas `SCHEMA_ONLY` no se conservan y los metadatos de las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa se almacenan en los catálogos tradicionales, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] todavía requiere un grupo de archivos optimizados para memoria para que las tablas `SCHEMA_ONLY` optimizadas para memoria proporcionen una experiencia uniforme para las bases de datos con tablas optimizadas para memoria.  

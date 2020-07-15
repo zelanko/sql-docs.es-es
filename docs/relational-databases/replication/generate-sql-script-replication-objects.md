@@ -15,20 +15,20 @@ ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 474a65593b830e671a7a65557c4c5fec11aea07a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 33473f0d5309b3db41c65ad6c8d376ac6f75dc62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652915"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Generar script SQL (Objetos de replicación)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Un script de replicación contiene los procedimientos almacenados del sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] necesarios para implementar los componentes de replicación convertidos en scripts, como una publicación o una suscripción. Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. La replicación ofrece dos cuadros de diálogo para crear script para los objetos de replicación:  
   
 -   **Generar script SQL**, que está disponible en el menú contextual de la carpeta **Replicación** y en todas las subcarpetas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este cuadro de diálogo permite generar script de todos los objetos de replicación en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Generar script SQL \<nombreDeObjeto>** , que está disponible en el menú contextual para publicaciones y suscripciones. Este cuadro de diálogo le permitirá convertir en script objetos individuales.  
+-   **Generar script SQL \<ObjectName>** , que está disponible en el menú contextual de publicaciones y suscripciones. Este cuadro de diálogo le permitirá convertir en script objetos individuales.  
   
  Los cuadros de diálogo convierten en script objetos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no se conectan a otras instancias para convertir en script los objetos relacionados.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "76285943"
   
  Los procedimientos almacenados de replicación crean los trabajos necesarios mientras se ejecutan, por lo que no es necesario que seleccione esta opción. Sin embargo, puede resultar útil guardar un registro de los trabajos creados por si fuese necesario volver a crear un trabajo individual.  
   
-## <a name="generate-sql-script-objectname-options"></a>Opciones de Generar script SQL \<nombreDeObjeto>  
+## <a name="generate-sql-script-objectname-options"></a>Opciones de Generar script SQL \<ObjectName>  
  **Para crear o habilitar componentes** y **Para quitar o deshabilitar componentes**  
  Especifique si desea que el script incluya comandos para crear o quitar un objeto de replicación. [!INCLUDE[msCoName](../../includes/msconame-md.md)] le recomienda utilizar el cuadro de diálogo para crear un conjunto de scripts para habilitar y deshabilitar componentes.  
   

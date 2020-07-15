@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633376"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454508"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -93,7 +93,7 @@ column_name <data_type>
 
 *{ nombre_base_de_datos.nombre_de_esquema.nombre_de_tabla | nombre_de_esquema.nombre_de_tabla | nombre_de_tabla }* El nombre de uno a tres elementos de la tabla que se va a crear. En una tabla externa, SQL solo almacena los metadatos de tabla junto con estadísticas básicas sobre el archivo o carpeta a los que se hace referencia en Hadoop o Azure Blob Storage. Ningún dato real se mueve o se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-\<definición_de_columna> [ ,...*n* ] CREATE EXTERNAL TABLE admite la posibilidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE admite la capacidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
 
 Las definiciones de columna, incluidos los tipos de datos y el número de columnas, deben coincidir con los datos de los archivos externos. Si hay algún error de coincidencia, se rechazarán las filas de archivo al consultar los datos reales.
 
@@ -107,7 +107,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 ![Datos recursivos para tablas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Datos recursivos para tablas externas")
 
-Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Para cambiar el valor predeterminado y leer solo de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en "false" en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es un sistema de archivos de Hadoop (HDFS), un contenedor de blobs de Azure Storage o Azure Data Lake Store. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -576,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Introducción: Azure SQL Database
+## <a name="overview-azure-sql-database"></a>Introducción: Azure SQL Database
 
 En Azure SQL Database, crea una tabla externa para [consultas elásticas (en versión preliminar)](/azure/sql-database/sql-database-elastic-query-overview/).
 
@@ -610,7 +610,7 @@ column_name <data_type>
 
 *{ nombre_base_de_datos.nombre_de_esquema.nombre_de_tabla | nombre_de_esquema.nombre_de_tabla | nombre_de_tabla }* El nombre de uno a tres elementos de la tabla que se va a crear. En una tabla externa, SQL solo almacena los metadatos de tabla junto con estadísticas básicas sobre el archivo o la carpeta a los que se hace referencia en Azure SQL Database. Ningún dato real se mueve o se almacena en Azure SQL Database.
 
-\<definición_de_columna> [ ,...*n* ] CREATE EXTERNAL TABLE admite la posibilidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE admite la capacidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
 
 > [!NOTE]
 > `Text`, `nText` y `XML` no son tipos de datos admitidos para las columnas de tablas externas para Azure SQL Database.
@@ -756,7 +756,7 @@ column_name <data_type>
 
 *{ nombre_base_de_datos.nombre_de_esquema.nombre_de_tabla | nombre_de_esquema.nombre_de_tabla | nombre_de_tabla }* El nombre de uno a tres elementos de la tabla que se va a crear. En una tabla externa, solo los metadatos de tabla junto con estadísticas básicas sobre el archivo o la carpeta a los que se hace referencia en Azure Data Lake, Hadoop o Azure Blob Storage. No se mueven ni almacenan datos reales cuando se crean tablas externas.
 
-\<definición_de_columna> [ ,...*n* ] CREATE EXTERNAL TABLE admite la posibilidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE admite la capacidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
 
 > [!NOTE]
 > `Text`, `nText` y `XML` no son tipos de datos admitidos para las columnas de tablas externas para Azure SQL Warehouse.
@@ -771,7 +771,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 ![Datos recursivos para tablas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Datos recursivos para tablas externas")
 
-Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Para cambiar el valor predeterminado y leer solo de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en "false" en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación se encuentra en Azure Data Lake. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -829,7 +829,9 @@ Requiere estos permisos de usuario:
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> Se necesitan permisos CONTROL DATABASE para crear solo los valores MASTER KEY, DATABASE SCOPED CREDENTIAL y EXTERNAL DATA SOURCE
 
 Tenga en cuenta que el inicio de sesión que crea el origen de datos externo debe tener permiso para leer y escribir en el origen de datos externo, ubicado en Hadoop o Azure Blob Storage.
 
@@ -982,7 +984,7 @@ column_name <data_type>
 
 *{ nombre_base_de_datos.nombre_de_esquema.nombre_de_tabla | nombre_de_esquema.nombre_de_tabla | nombre_de_tabla }* El nombre de uno a tres elementos de la tabla que se va a crear. En una tabla externa, Analytics Platform System solo almacena los metadatos de tabla junto con estadísticas básicas sobre el archivo o carpeta a los que se hace referencia en Hadoop o Azure Blob Storage. Ningún dato real se mueve o se almacena en Analytics Platform System.
 
-\<definición_de_columna> [ ,...*n* ] CREATE EXTERNAL TABLE admite la posibilidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE admite la capacidad de configurar el nombre de columna, el tipo de datos, la nulabilidad y la intercalación. No se puede usar DEFAULT CONSTRAINT en tablas externas.
 
 Las definiciones de columna, incluidos los tipos de datos y el número de columnas, deben coincidir con los datos de los archivos externos. Si hay algún error de coincidencia, se rechazarán las filas de archivo al consultar los datos reales.
 
@@ -996,7 +998,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 ![Datos recursivos para tablas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Datos recursivos para tablas externas")
 
-Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Para cambiar el valor predeterminado y leer solo de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en "false" en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es Hadoop o Azure Blob Storage. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

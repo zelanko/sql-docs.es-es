@@ -1,5 +1,6 @@
 ---
 title: Grupo de búferes híbrido | Microsoft Docs
+description: Vea cómo el grupo de búferes híbrido permite el acceso a los dispositivos de memoria persistentes a través del bus de memoria. Active y desactive esta característica de SQL Server 2019 y vea procedimientos recomendados.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772430"
 ---
 # <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El grupo de búferes híbridos permite que los objetos de grupo de búfer hagan referencia a las páginas de datos de los archivos de base de datos que residen en dispositivos de memoria persistente (PMEM), en lugar de a copias de las páginas de datos almacenadas en caché en DRAM volátil. Esta característica se introdujo en [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Procedimientos recomendados para el grupo de búferes híbrido
 
-Al dar formato al dispositivo PMEM en Windows, use el tamaño de unidad de asignación más grande disponible para NTFS (2 MB en Windows Server 2019) y asegúrese de que el dispositivo se ha formateado para DAX (DirectAccess).
+ - Al dar formato al dispositivo PMEM en Windows, use el tamaño de unidad de asignación más grande disponible para NTFS (2 MB en Windows Server 2019) y asegúrese de que el dispositivo se ha formateado para DAX (DirectAccess).
 
-Use [Páginas bloqueadas en la memoria](./enable-the-lock-pages-in-memory-option-windows.md) en Windows.
+ - Use [Páginas bloqueadas en la memoria](./enable-the-lock-pages-in-memory-option-windows.md) en Windows.
 
-Los tamaños de archivo deben ser múltiplo de 2 MB (el módulo de 2 MB debe ser igual a cero).
+ - Los tamaños de archivo deben ser múltiplo de 2 MB (el módulo de 2 MB debe ser igual a cero).
 
-Si la configuración del ámbito del servidor para el grupo de búferes híbridos está deshabilitada, ninguna base de datos de usuario utilizará esta característica.
+ - Si la configuración del ámbito del servidor para el grupo de búferes híbridos está deshabilitada, ninguna base de datos de usuario utilizará esta característica.
 
-Si está habilitada la configuración de ámbito de servidor para el grupo de búferes híbridos, puede usar la configuración de ámbito de base de datos para deshabilitar la característica para las bases de datos de usuario individuales.
+ - Si está habilitada la configuración de ámbito de servidor para el grupo de búferes híbridos, puede usar la configuración de ámbito de base de datos para deshabilitar la característica para las bases de datos de usuario individuales.

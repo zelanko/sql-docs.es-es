@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0433232412135256e98e6f3292fd88fa58bef62d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633706"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880360"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de servidor de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede permisos para un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

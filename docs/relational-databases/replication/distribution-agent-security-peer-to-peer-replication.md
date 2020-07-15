@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1c0fdf14be0fd4fa436fbfea079a8fb689e8dd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653660"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Seguridad del Agente de distribución (replicación punto a punto)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La página **Seguridad del Agente de distribución** permite especificar las cuentas con las que el Agente de distribución se ejecuta y realiza conexiones con los equipos de una topología punto a punto. Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md) y [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
 > [!NOTE]  
@@ -39,10 +39,10 @@ ms.locfileid: "75321792"
  La base de datos del mismo nivel que servirá tanto de base de datos de publicaciones como de base de datos de suscripciones.  
   
  **Conexión al distribuidor**  
- Contexto en el que se realiza la conexión al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente. Este asistente crea suscripciones de inserción (la conexión local es la conexión al distribuidor), por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión>\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión>\>'** .  
+ Contexto en el que se realiza la conexión al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente. Este asistente crea suscripciones de inserción (la conexión local es la conexión al distribuidor), por lo que este campo muestra siempre: **Impersonate "\<Domain>\\<Login\>"** o **Impersonate "\<Computer>\\<Login\>"** .  
   
  **Conexión al suscriptor**  
- Contexto en el que se realiza la conexión al suscriptor. La conexión se puede realizar utilizando el contexto de una cuenta de Windows con la que se ejecute el agente o en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+ Contexto en el que se realiza la conexión al suscriptor. La conexión se puede realizar utilizando el contexto de una cuenta de Windows con la que se ejecute el agente o en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra uno de los siguientes: **Use login "\<Login>"** , **Impersonate "\<Domain>\\<Login\>"** o **Impersonate "\<Computer>\\<Login\>"** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

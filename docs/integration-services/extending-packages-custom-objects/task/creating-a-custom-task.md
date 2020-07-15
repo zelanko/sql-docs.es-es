@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb82df6839e15c3b710d40c52899d661fe9e55ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 757d3d7f612aeaccf3d7697d7198b1b870699fde
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297090"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469370"
 ---
 # <a name="creating-a-custom-task"></a>Crear una tarea personalizada
 
@@ -26,7 +26,7 @@ ms.locfileid: "71297090"
 
   Los pasos necesarios para crear una tarea personalizada son similares a los pasos para crear cualquier otro objeto personalizado para [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
--   Cree una clase nueva que herede de la clase base. En una tarea, la clase base es <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  
+-   Cree una clase nueva que herede de la clase base. En una tarea, la clase base es [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task).  
   
 -   Aplique el atributo que identifica el tipo de objeto para la clase. En una tarea, el atributo es <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71297090"
 ## <a name="getting-started-with-a-custom-task"></a>Introducción a una tarea personalizada  
   
 ### <a name="creating-projects-and-classes"></a>Crear proyectos y clases  
- Dado que todas las tareas administradas se derivan de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, el primer paso al crear una tarea personalizada consiste en crear un proyecto de bibliotecas de clases en el lenguaje de programación administrado que prefiera y crear una clase que herede de la clase base. En esta clase derivada se invalidarán los métodos y las propiedades de la clase base para implementar la funcionalidad personalizada.  
+ Dado que todas las tareas administradas se derivan de la clase base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task), el primer paso al crear una tarea personalizada consiste en crear un proyecto de bibliotecas de clases en el lenguaje de programación administrado que prefiera y crear una clase que herede de la clase base. En esta clase derivada se invalidarán los métodos y las propiedades de la clase base para implementar la funcionalidad personalizada.  
   
  En la misma solución, cree un segundo proyecto de bibliotecas de clases para la interfaz de usuario personalizada. Se recomienda utilizar un ensamblado independiente para la interfaz de usuario a fin de facilitar la implementación, ya que le permite actualizar y volver a implementar la tarea o su interfaz de usuario de forma independiente.  
   

@@ -1,5 +1,6 @@
 ---
 title: Conectar al motor de base de datos con protección ampliada | Microsoft Docs
+description: Obtenga información sobre cómo la protección ampliada usa el enlace de servicio y el enlace de canal para ayudar a evitar ataques de retransmisión de autenticación. Vea cómo habilitar o esta característica.
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772637"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
   
 > [!IMPORTANT]  
@@ -86,7 +87,7 @@ ms.locfileid: "68012100"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<_nombreDeInstancia *>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<_InstanceName*>* y luego en **Propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   

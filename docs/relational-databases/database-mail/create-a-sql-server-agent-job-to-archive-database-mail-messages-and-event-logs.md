@@ -15,15 +15,15 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737600"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
   
 -   **Antes de empezar:**  , [Requisitos previos](#Prerequisites), [Recomendaciones](#Recommendations), [Permisos](#Permissions)  
@@ -208,7 +208,7 @@ ms.locfileid: "74094496"
   
 5.  En el área **Frecuencia** , seleccione las opciones para ejecutar el trabajo periódicamente, por ejemplo una vez al mes.  
   
-6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>** .  
+6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<time>** .  
   
 7.  Compruebe que las demás opciones están configuradas tal como desea y, a continuación, haga clic en **Aceptar** para guardar la programación.  
   

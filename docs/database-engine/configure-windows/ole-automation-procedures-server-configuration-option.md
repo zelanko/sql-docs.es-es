@@ -1,5 +1,6 @@
 ---
 title: Ole Automation Procedures (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "Procedimientos de automatización OLE". Vea cómo especifica si SQL Server puede crear instancias de objetos de automatización OLE en lotes de Transact-SQL.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: cb13d9b50c78ff3d067d97b2d5dd1b763e024608
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5390fce7517b56ea26a33392a72da7cb39dcd34d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773681"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción **Ole Automation Procedures** para especificar si se pueden crear instancias de los objetos de automatización OLE en lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esta opción también se puede configurar usando la administración basada en directivas o el procedimiento almacenado **sp_configure** . Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
@@ -32,7 +33,7 @@ ms.locfileid: "67997954"
  1  
  Los procedimientos de automatización OLE están habilitados.  
   
- Cuando los procedimientos de OLE Automation están habilitados, una llamada a **sp_OACreate** iniciará el entorno de ejecución compartido OLE.  
+ Cuando los procedimientos de automatización OLE están habilitados, una llamada a **sp_OACreate** iniciará el entorno de ejecución compartido OLE.  
   
  El valor actual de la opción **Ole Automation Procedures** se puede ver y cambiar con el procedimiento almacenado del sistema **sp_configure** .  
   

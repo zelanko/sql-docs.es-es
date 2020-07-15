@@ -1,5 +1,6 @@
 ---
 title: Posibles errores durante la creación de reflejo de la base de datos | Microsoft Docs
+description: Obtenga información sobre los errores en las sesiones de creación de reflejos de bases de datos que provocan problemas físicos, del sistema operativo o de SQL Server, y cómo responder a estos errores.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735233"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
   
 > [!IMPORTANT]  
@@ -99,7 +100,7 @@ ms.locfileid: "70874281"
   
  **Para cambiar el valor del tiempo de espera (solo modo de alta seguridad)**  
   
--   Use la instrucción [ALTER DATABASE \<baseDeDatos> SET PARTNER TIMEOUT \<entero>](../../t-sql/statements/alter-database-transact-sql.md).  
+-   Use la instrucción [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Para visualizar el valor del tiempo de espera actual**  
   

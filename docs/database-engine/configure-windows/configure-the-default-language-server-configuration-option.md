@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Idioma predeterminado | Microsoft Docs
+description: Obtenga información sobre la opción de idioma predeterminado. Vea cómo configurarla a fin de especificar el idioma predeterminado que SQL Server usa para todos los inicios de sesión recién creados.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2634dc520ef73065202588a6537ddd9fed120ce3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f9d932aa89bfadbb456f2223b526ba9bb421eff5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697652"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Establecer la opción de configuración del servidor Idioma predeterminado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo configurar la opción de configuración de servidor **idioma predeterminado** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **idioma predeterminado** especifica el idioma predeterminado de todos los inicios de sesión de nueva creación. Para establecer el idioma predeterminado, especifique el valor **langid** del idioma que desee. El valor **langid** se obtiene consultando la vista de compatibilidad **sys.syslanguages** .  
   

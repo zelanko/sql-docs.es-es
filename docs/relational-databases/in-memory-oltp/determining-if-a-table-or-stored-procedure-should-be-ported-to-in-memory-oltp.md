@@ -1,5 +1,6 @@
 ---
 title: ¿Debería una tabla o un procedimiento almacenado pasarse a OLTP en memoria?
+description: Utilice el informe de análisis de rendimiento de transacciones de SQL Server Management Studio para evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos.
 ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723274"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   

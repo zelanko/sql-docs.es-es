@@ -1,5 +1,6 @@
 ---
 title: Archivos de datos de SQL Server en Microsoft Azure | Microsoft Docs
+description: Descubra conceptos y consideraciones fundamentales para almacenar archivos de datos de SQL Server en Microsoft Azure Storage y algunas ventajas del uso de Azure Storage.
 ms.custom: ''
 ms.date: 12/04/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715487"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ![Archivos de datos en Azure](../../relational-databases/databases/media/data-files-on-azure.png "Archivos de datos en Azure")  
   
 La característica Archivos de datos de SQL Server en Microsoft Azure habilita la compatibilidad nativa para los archivos de base de datos de SQL Server almacenados como blobs. Permite crear una base de datos de SQL Server que se ejecuta en el entorno local o en una máquina virtual de Microsoft Azure con una ubicación de almacenamiento dedicada para los datos de Microsoft Azure Blob Storage. También simplifica el proceso de mover bases de datos entre equipos. Puede desconectar las bases de datos de un equipo y conectarlas a otro. Además, proporciona una ubicación de almacenamiento alternativa para los archivos de copia de seguridad de la base de datos, lo que permite realizar la restauración desde o hasta Almacenamiento de Microsoft Azure. Por tanto, habilita diversas soluciones híbridas al aportar varias ventajas en cuanto a virtualización de datos, movimiento de datos, seguridad y disponibilidad, así como costos y mantenimiento reducidos para lograr escalado flexible y alta disponibilidad.

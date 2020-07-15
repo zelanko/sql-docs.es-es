@@ -1,5 +1,6 @@
 ---
 title: Configurar Always Encrypted con PowerShell | Microsoft Docs
+description: Obtenga información sobre cómo importar y usar el módulo SqlServer PowerShell, que proporciona cmdlets para configurar Always Encrypted en Azure SQL Database y SQL Server.
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765120"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 En el módulo SqlServer PowerShell se proporcionan cmdlets para configurar [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -30,7 +31,7 @@ Puede usar PowerShell para administrar claves de Always Encrypted con y sin sepa
 
  Para obtener más recomendaciones, vea [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Consideraciones de seguridad para la administración de claves).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Instale el [módulo SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) en un equipo seguro distinto del equipo que hospeda la instancia de SQL Server. El módulo se puede instalar directamente desde la Galería de PowerShell.  Vea las instrucciones de [descarga](../../../ssms/download-sql-server-ps-module.md) para obtener más información.
 

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768080"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Este tema presenta los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento de blobs de Microsoft Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen esas diferencias y algunos ejemplos de código.  
   
@@ -50,7 +50,7 @@ La copia de seguridad de una base de datos grande en el almacenamiento de blobs 
   
  **Contenedor:** un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servicio de almacenamiento de blobs de Microsoft Azure, debe haber creado al menos el contenedor raíz. Puede generar un token de firma de acceso compartido en un contenedor y conceder acceso a objetos en un único contenedor específico.  
   
- **Blob:** Un archivo de cualquier tipo y tamaño. Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento de blobs de Microsoft Azure: blobs en bloques y blobs en páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La copia de seguridad puede usar cualquier tipo de blob en función de la sintaxis de Transact-SQL usada. Los blobs son direccionables mediante el siguiente formato de dirección URL: https://\<cuenta de almacenamiento>.blob.core.windows.net/\<contenedor>/\<blob>. Para obtener más información sobre el servicio de almacenamiento de blobs de Microsoft Azure, vea [Introducción al Almacenamiento de blobs de Azure mediante .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Para obtener más información sobre los blobs en páginas y en bloques, vea [Descripción de los blobs en bloques, en anexos y en páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ **Blob:** Un archivo de cualquier tipo y tamaño. Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento de blobs de Microsoft Azure: blobs en bloques y blobs en páginas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La copia de seguridad puede usar cualquier tipo de blob en función de la sintaxis de Transact-SQL usada. Los blobs son direccionables mediante el formato de dirección URL siguiente: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Para obtener más información sobre el servicio de almacenamiento de blobs de Microsoft Azure, vea [Introducción al Almacenamiento de blobs de Azure mediante .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Para obtener más información sobre los blobs en páginas y en bloques, vea [Descripción de los blobs en bloques, en anexos y en páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
  ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -59,7 +59,7 @@ La copia de seguridad de una base de datos grande en el almacenamiento de blobs 
 ###  <a name="ssnoversion-components"></a>Componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de <a name="sqlserver"></a>  
  **Dirección URL:** Una dirección URL especifica un identificador uniforme de recursos (URI) para un archivo de copia de seguridad único. La dirección URL se emplea para proporcionar la ubicación y el nombre del archivo de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La dirección URL debe apuntar a un blob real, no solo a un contenedor. Si el blob no existe, se crea. Si se especifica un blob existente, se produce un error en BACKUP, a menos que se especifique la opción "WITH FORMAT" para sobrescribir el archivo de copia de seguridad existente en el blob.  
   
- Este es un valor de dirección URL de ejemplo: http[s]://NOMBRE_CUENTA.blob.core.windows.net/\<CONTENEDOR>/\<NOMBRE_ARCHIVO.bak>. HTTPS no es necesario, pero es recomendable.  
+ Este es un valor de dirección URL de ejemplo: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. HTTPS no es necesario, pero es recomendable.  
   
  **Credencial:** Una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. Aquí, los procesos de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales para autenticarse en el servicio de almacenamiento de blobs de Microsoft Azure y en sus objetos de contenedor y blob. La credencial almacena el nombre de la cuenta de almacenamiento y los valores de **clave de acceso** de la cuenta de almacenamiento, o bien la dirección URL del contenedor y su token de firma de acceso compartido. Una vez creada la credencial, la sintaxis de las instrucciones BACKUP/RESTORE determina el tipo de blob y las credenciales que se requieren.  
   
@@ -196,7 +196,7 @@ La copia de seguridad de una base de datos grande en el almacenamiento de blobs 
   
  Para obtener más información sobre los argumentos de restauración, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="back-up-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Copia de seguridad con SSMS  
+##  <a name="back-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Copia de seguridad con SSMS  
 Puede realizar una copia de seguridad de una base de datos en una dirección URL mediante la tarea Copia de seguridad en SQL Server Management Studio con una credencial de SQL Server.  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: Columnas con un nombre | Microsoft Docs
+description: Obtenga información sobre las columnas con nombre en consultas SQL y las condiciones específicas en las que se asignan al XML resultante columnas de conjuntos de filas con nombre.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a34c41519bd8e77a96a2551bc676b95f338510a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14bc7706a7e3f562b2a3f4f01d8ab08a3684d313
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775565"
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A continuación se exponen las condiciones específicas en las que se asignan al XML resultante las columnas con nombre de los conjuntos de filas, con distinción entre mayúsculas de minúsculas:  
   

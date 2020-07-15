@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09eb8b767ce5995dede2b69efca3423a91c02b31
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ddf8e31e274280f2fb53ee3b2a8f5c5a8e1884f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631865"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895576"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modifica las opciones de configuración global del servidor actual en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -153,7 +153,7 @@ Apagado
 Detiene el registro de datos de diagnóstico.  
   
 PATH = { 'os_file_path' | DEFAULT }  
-Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log> en la carpeta de instalación de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log> en la carpeta de instalación de la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
 Tamaño máximo en megabytes que cada registro de diagnóstico puede alcanzar. El valor predeterminado es 100 MB.  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -20,19 +20,19 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0402da002440e26697aeaa52245e78873033818
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633465"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518645"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Crea un objeto Formato de archivo externo que define datos externos almacenados en Hadoop, Azure Blob Storage o Azure Data Lake Store. La creación de un formato de archivo externo es un requisito previo para crear una tabla externa. Al crear un formato de archivo externo, se especifica el diseño real de los datos a los que hace referencia una tabla externa.  
+  Crea un objeto Formato de archivo externo que define datos externos almacenados en Hadoop, Azure Blob Storage, Azure Data Lake Store o para los flujos de entrada y salida asociados con flujos externos. La creación de un formato de archivo externo es un requisito previo para crear una tabla externa. Al crear un formato de archivo externo, se especifica el diseño real de los datos a los que hace referencia una tabla externa.  
   
- PolyBase es compatible con los siguientes formatos de archivo:
+Se admiten los formatos de archivo siguientes:
   
 -   Texto delimitado  
   
@@ -40,8 +40,11 @@ ms.locfileid: "81633465"
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON: solo se aplica a Azure SQL Edge.
+
+
 Para crear una tabla externa, vea [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -87,7 +90,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -119,6 +132,8 @@ WITH (
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
    -   DELIMITEDTEXT Especifica un formato de texto con delimitadores de columna, también denominados terminadores de campo.
+   
+   -  JSON Especifica un formato JSON. Solo se aplica a Azure SQL Edge. 
   
  FIELD_TERMINATOR = *field_terminator*  
 Se aplica solo a los archivos de texto delimitado. El terminador de campo especifica uno o varios caracteres que marcan el final de cada campo (columna) en el archivo de texto delimitado. El valor predeterminado es el carácter de barra vertical ꞌ|ꞌ. Para garantizar la compatibilidad se recomienda usar uno o más caracteres ascii.
@@ -170,7 +185,7 @@ PolyBase solo usa el formato de fecha personalizado para importar los datos. No 
   
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   Hora: "HH:mm:ss"  
   
 Los **formatos de fecha de ejemplo** se encuentran en la tabla siguiente:
   
@@ -270,6 +285,14 @@ Notas sobre la tabla:
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ El tipo de formato de archivo JSON admite estos métodos de compresión:
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY EXTERNAL FILE FORMAT.
@@ -365,6 +388,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### <a name="f-create-a-json-external-file-format"></a>F. Crear un formato de archivo externo JSON  
+ En este ejemplo se crea un formato de archivo externo para un archivo JSON que comprime los datos con el método de compresión de datos org.apache.io.compress.SnappyCodec. Si no se especifica DATA_COMPRESSION, el valor predeterminado es ninguna compresión. Este ejemplo se aplica a Azure SQL Edge y actualmente no es compatible con otros productos de SQL. 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## <a name="see-also"></a>Consulte también
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

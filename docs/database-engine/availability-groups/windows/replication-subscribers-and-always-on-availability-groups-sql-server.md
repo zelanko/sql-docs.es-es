@@ -1,6 +1,6 @@
 ---
 title: Suscriptores de replicación y grupos de disponibilidad (SQL Server)
-description: Aprenda a configurar un suscriptor de replicación con un grupo de disponibilidad AlwaysOn de SQL Server.
+description: Obtenga información sobre lo que sucede si un grupo de disponibilidad Always On que contiene una base de datos que es un suscriptor de replicación realiza la conmutación por error en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3c6fdff473202222a83006a6d1a0ff217aed8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893129"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Cuando el grupo de disponibilidad AlwaysOn que contiene una base de datos que es un suscriptor de replicación realiza una conmutación por error, se puede producir un error en la suscripción de replicación. Para los suscriptores de inserción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad. Para los suscriptores de extracción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad y el servidor del suscriptor original está activo y en ejecución. El motivo es que los trabajos del agente de distribución solo se crean en el suscriptor original (réplica principal del grupo de disponibilidad). Para los suscriptores de mezcla, un administrador de replicación debe volver a configurar manualmente el suscriptor volviendo a crear la suscripción.  
   

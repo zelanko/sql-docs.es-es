@@ -1,5 +1,6 @@
 ---
 title: transform noise words (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "transform noise words". Vea cómo puede ser útil en algunas consultas de texto completo de SQL Server que incluyen palabras irrelevantes.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: df23777c7e9ec22b629133c98da27c8a23ab6ccb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 401637b4c23ddbcd2918f4d0d3cf5ff224bea8cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68038821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763968"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción de configuración del servidor **Transformar palabras irrelevantes** para suprimir un mensaje de error si las [palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)hacen que una operación booleana en una consulta de texto completo devuelva cero filas. Esta opción es útil para las consultas de texto completo que utilizan el predicado CONTAINS en el que las operaciones booleanas o las operaciones NEAR incluyen palabras irrelevantes. En la siguiente tabla se describen los valores posibles.  
   

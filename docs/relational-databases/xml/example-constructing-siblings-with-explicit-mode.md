@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT | Microsoft Docs'
+title: 'Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT | Microsoft Docs'
+description: Vea un ejemplo de una consulta SQL que usa el modo EXPLICIT con la cláusula FOR XML para construir elementos XML del mismo nivel.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4acea026f7541466a1bb38819d50f1b529e6f500
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633104"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Suponga que desea crear XML para obtener información sobre pedidos. Observe que los elementos <`SalesPerson`> y <`OrderDetail`> son del mismo nivel. Cada pedido tiene un elemento <`OrderHeader`>, un elemento <`SalesPerson`> y uno o más elementos <`OrderDetail`>.  
   
 ```  

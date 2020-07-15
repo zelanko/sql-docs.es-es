@@ -1,5 +1,6 @@
 ---
 title: Crear o eliminar un alias de servidor para que lo use un cliente | Microsoft Docs
+description: Descubra cómo crear y eliminar un alias, un nombre alternativo que puede usar al conectarse a una instancia de SQL Server. Obtenga información sobre las ventajas de los alias.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 12010d334ee814422a9f2f55a034b7a211cc370d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772591"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Crear o eliminar un alias de servidor para que lo use un cliente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear o eliminar un alias de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Un alias es un nombre alternativo que se puede utilizar para establecer una conexión. El alias encapsula los elementos necesarios de una cadena de conexión y los expone con un nombre elegido por el usuario. Los alias se pueden utilizar con cualquier aplicación cliente. Mediante la creación de alias de servidor, el equipo cliente puede conectarse a varios servidores que utilizan distintos protocolos de red sin necesidad de especificar el protocolo y los detalles de conexión de cada uno de ellos. Además, también puede habilitar varios protocolos de red al mismo tiempo, aunque solo los utilice de vez en cuando. Si ha configurado el servidor para que escuche en un número de puerto o canalización con nombre que no es el predeterminado, y ha deshabilitado el servicio SQL Server Browser, cree un alias que especifique el nuevo número de puerto o canalización con nombre.  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  

@@ -1,5 +1,6 @@
 ---
 title: Supervisión del rendimiento de los procedimientos almacenados compilados de forma nativa
+description: Obtenga información sobre cómo supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa y de otros módulos de T-SQL compilados de forma nativa.
 ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78180070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722460"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este artículo se describe cómo supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa y de otros módulos de T-SQL compilados de forma nativa.  
   
 ## <a name="using-extended-events"></a>Utilizar eventos extendidos  
@@ -47,7 +48,7 @@ Las estadísticas de ejecución se reflejan en las vistas del sistema [sys.dm_ex
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de procedimiento usando la opción de [configuración con ámbito en la base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de procedimiento de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de procedimiento usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de procedimiento de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -61,7 +62,7 @@ ALTER DATABASE
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de instrucción usando la opción de [configuración con ámbito en la base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de consulta de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de instrucción usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de consulta de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

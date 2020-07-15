@@ -1,5 +1,6 @@
 ---
 title: Expiración de contraseña de inicio de sesión de SQL Server | Microsoft Docs
+description: Compruebe si la expiración de la contraseña de cada inicio de sesión de SQL Server está habilitada para ayudar a contrarrestar un posible ataque en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92a8452b586768e260c9bc378d06201cd2e67ed7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f33195e18af58e782c03118a7e3176f1340cd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774159"
 ---
 # <a name="sql-server-login-password-expiration"></a>Expiración de contraseña de inicio de sesión de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla comprueba si la "expiración de contraseña" de cada inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada. Si la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada y la versión del sistema operativo es anterior a [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], un atacante podría aprovechar varias veces una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conocida.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

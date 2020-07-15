@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d5216f831a187911cc6b5d979b3b94d38cc9dfb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cf96745f6b2b2c904262a4952f63b6ec37f263e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667362"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Tarea Ejecutar trabajo del Agente SQL Server (Plan de mantenimiento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Tarea Ejecutar trabajo del Agente SQL Server** para ejecutar trabajos del Agente Microsoft SQL Server dentro de un plan de mantenimiento. Esta opción no estará disponible si no tiene trabajos del Agente SQL Server en la conexión seleccionada.  
   
  Esta tarea usa la instrucción **.sp_start_job** .  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Connection**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   

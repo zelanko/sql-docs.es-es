@@ -1,5 +1,6 @@
 ---
 title: show advanced options (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "Mostrar opciones avanzadas". Vea cómo se usa para enumerar las opciones avanzadas al ejecutar el procedimiento almacenado del sistema "sp_configure" de SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c7755484582f407fb288dd25af1ec74e520b0ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 77fb685deedf582f16c804ed2d8591383f6e9503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751177"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción **Mostrar opciones avanzadas** para mostrar las opciones avanzadas del procedimiento almacenado del sistema **sp_configure** . Si establece **Mostrar opciones avanzadas** en 1, puede enumerar las opciones avanzadas mediante **sp_configure**. El valor predeterminado es 0.  
   

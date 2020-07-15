@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5f8b817d2de14c41c32fc815dc068a7776b54e3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633975"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627411"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Nombre del equipo de servidor remoto o la dirección IPv4 del servidor remoto. No se admiten direcciones IPv6. Puede especificar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con nombre en el formato **Computer_Name\Instance_Name** o **IP_address\Instance_Name**. El servidor debe ser remoto y, por tanto, no se puede especificar como (local).  
   
  TCP *port* number  
- Número de puerto TCP para la conexión. Puede especificar un número de puerto TCP entre 0 y 65535 para una instancia de SQL Server que no esté escuchando en el puerto predeterminado 1433. Por ejemplo: **ServerA,1450** o **10.192.14.27,1435**  
+ Número de puerto TCP para la conexión. Puede especificar un número de puerto TCP entre 0 y 65535 para una instancia de SQL Server que no esté escuchando en el puerto predeterminado 1433. Por ejemplo: **ServidorA,1450** o **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Se recomienda conectar a un servidor remoto mediante la dirección IP. Según la configuración de red, la conexión mediante el nombre del equipo podría requerir pasos adicionales para usar el servidor DNS que no es de dispositivo para resolver el nombre en el servidor correcto. Este paso no es necesario al conectar con una dirección IP. Para obtener más información, vea "Uso de un reenviador DNS para resolver los nombres DNS que no sean de dispositivos (Analytics Platform System)" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -84,7 +84,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  WITH *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Predicado de consulta que especifica qué datos van a llenar la nueva tabla remota. Para obtener más información sobre la instrucción SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> Predicado de consulta que especifica qué datos van a rellenar la tabla remota nueva. Para obtener más información sobre la instrucción SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere:  

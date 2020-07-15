@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715234"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>Contadores de rendimiento de XTP (OLTP en memoria) de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece objetos y contadores que el Monitor de rendimiento puede usar para supervisar la actividad de OLTP en memoria. Los objetos y los contadores se comparten entre todas las instancias de una versión concreta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo, a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Antes, los nombres de los objetos y los contadores contenían *XTP*, como en **Cursores XTP**. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los nombres siguen este patrón:  
   
--   **SQL Server** *\<versión>* **Cursores XTP**  
+-   **Cursores XTP** *\<version>* de **SQL Server**  
   
- Para *\<versión*, el valor es similar a 2016.  
+ Para *\<version>* , el valor es similar a 2016.  
   
 ##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server XTP  
  En la tabla siguiente se describen los objetos de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

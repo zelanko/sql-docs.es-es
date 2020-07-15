@@ -1,5 +1,6 @@
 ---
 title: Creación de una instantánea de base de datos (Transact-SQL) | Microsoft Docs
+description: Obtenga información sobre cómo crear una instantánea de base de datos de SQL Server mediante Transact-SQL. Obtenga información sobre los requisitos previos y los procedimientos recomendados para crear instantáneas.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763547"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El único modo de crear una instantánea de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en usar [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite la creación de instantáneas de base de datos.  
   
   
@@ -45,13 +46,13 @@ ms.locfileid: "71708287"
 ##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  En esta sección se describen los procedimientos recomendados siguientes:  
   
--   [Procedimiento recomendado: asignar nombres a las instantáneas de base de datos](#Naming)  
+-   [Procedimiento recomendado: Asignar nombres a instantáneas de base de datos](#Naming)  
   
--   [Procedimiento recomendado: limitar el número de instantáneas de base de datos](#Limiting_Number)  
+-   [Procedimiento recomendado: Limitar el número de instantáneas de base de datos](#Limiting_Number)  
   
--   [Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos](#Client_Connections)  
+-   [Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos](#Client_Connections)  
   
-####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> Procedimiento recomendado: asignar nombres a las instantáneas de base de datos  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
  Antes de crear instantáneas, es importante pensar cómo asignarles un nombre. Cada instantánea de base de datos necesita un nombre de base de datos único. Para facilitar la administración, el nombre de una instantánea puede incorporar información que identifique la base de datos, por ejemplo:  
   
 -   Nombre de la base de datos de origen.  
@@ -76,13 +77,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> Procedimiento recomendado: limitar el número de instantáneas de base de datos  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> Procedimiento recomendado: Limitar el número de instantáneas de base de datos  
  La creación de una serie de instantáneas a lo largo del tiempo permite capturar instantáneas secuenciales de la base de datos de origen. Cada instantánea se conserva hasta que se quite de manera explícita. Las instantáneas siguen creciendo a medida que se actualizan las páginas originales, por lo que seguramente querrá ahorrar espacio en el disco eliminando una instantánea más antigua después de crear una nueva instantánea.  
   
 
 **Nota:** Para volver a una instantánea de base de datos, debe eliminar cualquier otra instantánea de esa base de datos.  
   
-####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos  
  Para usar una instantánea de base de datos, los clientes deben saber dónde encontrarla. Los usuarios pueden leer de una instantánea de base de datos mientras se crea o elimina otra. Sin embargo, si sustituye una nueva instantánea por otra ya existente, debe redirigir a los clientes a la nueva instantánea. Los usuarios pueden conectarse manualmente a una instantánea de base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, para admitir un entorno de producción, debe crear una solución programática que dirija de un modo transparente a los clientes de escritura de informes a la instantánea de base de datos más reciente de la base de datos.  
   
 

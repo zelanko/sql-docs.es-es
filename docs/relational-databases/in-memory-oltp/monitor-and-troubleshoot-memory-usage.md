@@ -1,5 +1,6 @@
 ---
 title: Supervisión y solución de problemas de uso de memoria | Microsoft Docs
+description: Obtenga información sobre la supervisión y la solución de problemas del uso de memoria de OLTP en memoria, que tiene patrones distintos a los de las tablas basadas en disco de SQL Server.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc6f2d5a0dbd24295d92bb53cbbf4003043be4db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722480"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos que las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices optimizados para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.  
   
  En este tema se trata la supervisión del uso de memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  

@@ -1,6 +1,6 @@
 ---
 title: Reanudación de una base de datos de un grupo de disponibilidad
-description: Pasos para reanudar una base de datos que se había pausado dentro de un grupo de disponibilidad AlwaysOn mediante SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o PowerShell.
+description: Reanude una base de datos de disponibilidad suspendida en grupos de disponibilidad Always On mediante SQL Server Management Studio, Transact-SQL o PowerShell en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e44e677210316a74f44d8300ad0e10d8feece9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893126"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Puede reanudar una base de datos de disponibilidad suspendida en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La reanudación de una base de datos suspendida coloca la base de datos en el estado SYNCHRONIZING. La reanudación de la base de datos principal también reanuda cualquiera de las bases de datos secundarias suspendidas como resultado de suspender la base de datos principal. Si una base de datos secundaria se suspende localmente en la instancia de servidor que hospeda la réplica secundaria, esa base de datos secundaria se debe reanudar localmente. Una vez que una base de datos secundaria y la base de datos principal correspondiente están en el estado SYNCHRONIZING, se reanuda la sincronización de datos en la base de datos secundaria.  
   
 > [!NOTE]  

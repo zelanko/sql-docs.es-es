@@ -1,5 +1,6 @@
 ---
 title: Quitar la creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo quitar la creación de reflejo de una base de datos mediante SQL Server Management Studio o Transact-SQL en SQL Server.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 257b85724d7941fcfc8b11f326c5c4fd26e9420f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735188"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo quitar la creación de reflejo de una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  El propietario de la base de datos puede detener manualmente en cualquier momento una sesión de creación de reflejo de la base de datos quitando el reflejo de la base de datos.  
   
  **En este tema**  

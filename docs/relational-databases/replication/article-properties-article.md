@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722202"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288279"
  Determina si se debe convertir desde tipos de datos definidos por el usuario a tipos de datos base cuando se crean objetos en el suscriptor. Los tipos de datos definidos por el usuario incluyen los tipos definidos por el usuario de CLR introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique un valor **True** si se van a replicar estos tipos de datos con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de esta manera, se garantiza que se van a poder tratar correctamente en el suscriptor.  
   
  **Crear esquemas en el suscriptor**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se usa en un nombre de varias partes, como por ejemplo \<Base de datos>.\<Esquema>.\<Objeto>. Si la base de datos tiene objetos que son propiedad de esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor, de manera que se puedan crear objetos publicados.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se usa en un nombre de varias partes, como por ejemplo \<Database>.\<Schema>.\<Object>. Si la base de datos tiene objetos que son propiedad de esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor, de manera que se puedan crear objetos publicados.  
   
  Si se van a replicar datos en versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288279"
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
- El cuadro de diálogo **Propiedades del artículo** para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **Solucionador**.  
+ El cuadro de diálogo **Propiedades del artículo** para las publicaciones de mezcla tiene dos pestañas: **Propiedades** y **Solucionador**.  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  

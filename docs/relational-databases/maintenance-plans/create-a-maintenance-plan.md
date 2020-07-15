@@ -1,5 +1,6 @@
 ---
 title: Creación de un plan de mantenimiento | Microsoft Docs
+description: Obtenga información sobre cómo crear un plan de mantenimiento de un solo servidor o multiservidor en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667478"
 ---
 # <a name="create-a-maintenance-plan"></a>Crear un plan de mantenimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay dos formas de crear estos planes de mantenimiento con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: con el Asistente para planes de mantenimiento o con la superficie de diseño. El uso del asistente es más conveniente si desea crear planes de mantenimiento básicos, mientras que la superficie de diseño le permite utilizar un flujo de trabajo mejorado.  
   
  **En este tema**  

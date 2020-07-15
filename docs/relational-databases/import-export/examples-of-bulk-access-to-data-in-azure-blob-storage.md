@@ -1,7 +1,6 @@
 ---
 title: Acceso en bloque a datos en Azure Blob Storage
-description: En estos ejemplos de Transact-SQL se muestra cómo usar las instrucciones BULK INSERT y OPENROWSET para acceder directamente a un archivo en una cuenta de Azure Blob Storage.
-ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
+description: Ejemplos de Transact-SQL que usan BULK INSERT y OPENROWSET para acceder a los datos de una cuenta de Azure Blob Storage.
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650850"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de Acceso en bloque a datos en Azure Blob Storage
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Las instrucciones `BULK INSERT` y `OPENROWSET` pueden obtener acceso directamente a un archivo en Azure Blob Storage. En los ejemplos siguientes se usan datos de un archivo CSV (valores separados por comas) (denominado `inv-2017-01-19.csv`), almacenado en un contenedor (denominado `Week3`), almacenado en una cuenta de almacenamiento (denominada `newinvoices`). Se puede usar la ruta de acceso al archivo de formato, pero no se incluye en estos ejemplos.
 

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_233 | Microsoft Docs
+description: El cliente de SQL Server no se puede conectar al servidor. Vea una explicación del error y las posibles resoluciones.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d724f74c659fee878965f261f6b9b28f04181be2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87c312289b9a2a8ed7e0ae9d97a4993121772721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780469"
 ---
 # <a name="mssqlserver_233"></a>MSSQLSERVER_233
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|233|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Se estableció correctamente una conexión con el servidor, pero luego se produjo un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida, error: 0 - No hay ningún proceso en el otro extremo de la canalización.) (Microsoft SQL Server, Error: 233)|  
+|Texto del mensaje|Se estableció correctamente una conexión con el servidor, pero luego se produjo un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida; error: 0 - No hay ningún proceso en el otro extremo de la canalización). (Microsoft SQL Server, Error: 233)|  
   
 ## <a name="explanation"></a>Explicación  
 El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar al servidor. Este error se puede producir porque el servidor no está configurado para aceptar conexiones remotas.  

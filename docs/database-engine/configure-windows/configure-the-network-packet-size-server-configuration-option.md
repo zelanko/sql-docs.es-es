@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Tamaño de paquete de red | Microsoft Docs
+description: Obtenga información sobre cómo usar la opción Tamaño de paquete de red para establecer el tamaño de paquete que usa SQL Server al transferir solicitudes y resultados entre clientes y servidores.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785893"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Establecer la opción de configuración del servidor Tamaño de paquete de red
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **tamaño de paquete de red** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **tamaño de paquete de red** establece el tamaño de paquete (en bytes) que se usa para toda la red. Los paquetes son fragmentos de datos de tamaño fijo que transfieren solicitudes y resultados entre clientes y servidores. El tamaño predeterminado de los paquetes es de 4096 bytes.  
   

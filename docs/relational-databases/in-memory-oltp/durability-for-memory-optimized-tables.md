@@ -1,5 +1,6 @@
 ---
 title: Durabilidad de las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre cómo OLTP en memoria proporciona durabilidad total de las tablas optimizadas para memoria mediante el registro de transacciones y guardando los cambios de datos en el almacenamiento en disco.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723255"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67942803"
   
  Cuando se elimina o actualiza una fila, no se quita ni se cambia en su lugar en el archivo de datos sino que las filas eliminadas se registran en otro tipo de archivo: el archivo delta. Se procesan las operaciones de actualización como una tupla de las operaciones de eliminación e inserción para cada fila. Esto elimina la E/S aleatoria en el archivo de datos.  
  
-   Tamaño: cada archivo de datos tiene un tamaño aproximado de 128 MB en los equipos con más de 16 GB de memoria y de 16 MB en los equipos con 16 GB o menos. En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos de datos tienen un tamaño de 1 GB. Esto permite una mayor eficacia en el subsistema de almacenamiento para las cargas de trabajo de alto rendimiento.  
+   Tamaño: Cada archivo de datos tiene un tamaño aproximado de 128 MB en los equipos con más de 16 GB de memoria y de 16 MB en los equipos con 16 GB o menos. En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos de datos tienen un tamaño de 1 GB. Esto permite una mayor eficacia en el subsistema de almacenamiento para las cargas de trabajo de alto rendimiento.  
    
 ### <a name="the-delta-file"></a>El archivo delta  
  Cada archivo de datos está emparejado con un archivo delta que tiene el mismo intervalo de transacciones y hace un seguimiento de las filas eliminadas insertadas por transacciones en el intervalo de transacciones. El archivo de datos y el archivo delta se denominan “par de archivos de punto de comprobación” (CFP), que es la unidad de asignación y desasignación, y también la unidad de las operaciones Merge. Por ejemplo, un archivo delta correspondiente al intervalo de transacciones (100, 200) almacenará las filas eliminadas que insertaron las transacciones del intervalo (100, 200). Como los archivos de datos, se tiene acceso al archivo delta de forma secuencial.  
@@ -49,7 +50,7 @@ ms.locfileid: "67942803"
  Cuando se elimina una fila, no se quita del archivo de datos sino se anexa una referencia a la fila al archivo delta asociado al intervalo de transacciones donde se ha insertado esta fila de datos. Puesto que la fila que se va a eliminar ya existe en el archivo de datos, el archivo delta solo almacena la información de referencia `{inserting_tx_id, row_id, deleting_tx_id }` y sigue el orden del registro transaccional de las operaciones de eliminación o actualización de origen.  
   
 
- Tamaño: cada archivo delta tiene un tamaño aproximado de 16 MB en los equipos con más de 16 GB de memoria y de 1 MB en los equipos con 16 GB o menos. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server, puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos delta tienen un tamaño de 128 MB.  
+ Tamaño: cada archivo delta tiene un tamaño aproximado de 16 MB en los equipos con más de 16 GB de memoria y de 1 MB en los equipos con 16 GB o menos. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server, puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos delta tienen un tamaño de 128 MB.  
  
 ## <a name="populating-data-and-delta-files"></a>Rellenar los archivos delta y de datos  
  Los archivos delta y de datos se rellenan según los registros de transacciones generados por las transacciones confirmadas en las tablas optimizadas para memoria y se anexa información sobre las filas insertadas y eliminadas en los archivos de datos y delta correspondientes. A diferencia de las tablas basadas en disco donde las páginas de índice o datos se vacían con E/S aleatoria cuando se realiza el punto de comprobación, la persistencia de la tabla optimizada para memoria es una operación en segundo plano continua. Se obtiene acceso a varios archivos delta porque una transacción puede eliminar o actualizar cualquier fila que fuera insertada por alguna transacción anterior. La información de eliminación siempre se anexa al final del archivo delta. Por ejemplo, una transacción con una marca de tiempo de confirmación de 600 inserta una nueva fila y elimina las filas insertadas por las transacciones con una marca de tiempo de confirmación de 150, 250 y 450, como se muestra en la imagen siguiente. Las cuatro operaciones de E/S de archivo (tres para las filas eliminadas y 1 para las filas recién insertadas) son operaciones de solo anexar para los archivos de datos y delta correspondientes.  

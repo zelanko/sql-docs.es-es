@@ -1,5 +1,6 @@
 ---
 title: Escribir eventos de auditoría de SQL Server en el registro de seguridad | Microsoft Docs
+description: Obtenga información sobre cómo escribir eventos de auditoría de SQL Server en el registro de seguridad de Windows. Obtenga información sobre las limitaciones y restricciones de uso de ese registro.
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095099"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884833"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 En un entorno de alta seguridad, el registro de seguridad de Windows es la ubicación adecuada para escribir los eventos que registran el acceso a los objetos. Se admiten otras ubicaciones de auditoría pero están más expuestas a alteraciones.  
   

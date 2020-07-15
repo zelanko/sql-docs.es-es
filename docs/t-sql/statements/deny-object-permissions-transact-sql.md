@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48f78d1f064051148a4b7e7a31296b0fe04b8ee7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766682"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (permisos de objeto de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deniega permisos para un miembro de la clase OBJECT de elementos protegibles. Éstos son los miembros de la clase OBJECT: tablas, vistas, funciones con valores de tabla, procedimientos almacenados, procedimientos almacenados extendidos, funciones escalares, funciones de agregado, colas de servicio y sinónimos.  
 
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ] ON
  ALL  
  Si deniega ALL no se deniegan todos los permisos posibles. Denegar ALL es equivalente a denegar todos los permisos ANSI-92 aplicables al objeto especificado. El significado de ALL varía de la siguiente forma:  
   
- - Permisos de función escalar: EXECUTE, REFERENCES.  
+ - Permisos de la función escalar: EXECUTE, REFERENCES.  
  - Permisos de función con valores de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Permisos de procedimiento almacenado: EXECUTE.  
  - Permisos de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
@@ -84,7 +84,7 @@ PRIVILEGES
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal>  
+ AS \<database_principal>.  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  

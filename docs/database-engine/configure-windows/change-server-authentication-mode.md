@@ -1,5 +1,6 @@
 ---
 title: Cambiar el modo de autenticación del servidor | Microsoft Docs
+description: Obtenga información sobre cómo cambiar el modo de autenticación del servidor en SQL Server. Para esta tarea, puede usar SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 02/18/2020
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a8ffafae40991d6134925481409b5898b06c20c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759227"
 ---
 # <a name="change-server-authentication-mode"></a>Cambio del modo de autenticación del servidor
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En este tema se describe cómo cambiar el modo de autenticación del servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante la instalación, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se establece en **Modo de autenticación de Windows** o **Modo de autenticación de Windows y SQL Server**. Tras la instalación, puede cambiar el modo de autenticación en cualquier momento.
 
 Si se selecciona **Modo de autenticación de Windows** durante la instalación, el inicio de sesión de sa está deshabilitado y el programa de instalación asigna una contraseña. Si posteriormente se cambia al **Modo de autenticación de Windows y SQL Server**, el inicio de sesión de sa permanece deshabilitado. Para usar el inicio de sesión de sa, use la instrucción ALTER LOGIN para habilitar el inicio de sesión de sa y asignar una nueva contraseña. El inicio de sesión de sa solo se puede conectar al servidor mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .

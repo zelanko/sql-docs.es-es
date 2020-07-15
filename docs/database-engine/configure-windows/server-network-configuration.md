@@ -1,5 +1,6 @@
 ---
-title: Configuración de red del servidor{1}{2}| Microsoft Docs
+title: Configuración de red del servidor| Microsoft Docs
+description: Familiarícese con las tareas de configuración de red de SQL Server. Vea información sobre la habilitación de protocolos, la configuración del cifrado, el registro de SPN y otras acciones.
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef32cd47093c2397752c01dc49dfa2af494fd8fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724025"
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización usados por un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
   
  La configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se realiza mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice la Herramienta de red de servidor que se incluye con dichos productos.  
@@ -40,7 +41,7 @@ ms.locfileid: "68025612"
  Si se utiliza la configuración para puertos dinámicos, el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar cada vez que se inicia. Si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe abrir el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que utilice un puerto específico, así podrá configurar el firewall para que permita la comunicación con el servidor. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Cambiar una canalización con nombre  
- Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. La instancia predeterminada del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha de forma predeterminada en la canalización \\\\.\pipe\sql\query en la instancia predeterminada y en \\\\.\pipe\MSSQL$ *\<nombreDeInstancia>* \sql\query en una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. De forma predeterminada, la instancia predeterminada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha en la canalización \\\\.\pipe\sql\query para la instancia predeterminada y en \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query para una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forzar el cifrado  
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] se puede configurar para requerir el cifrado al comunicarse con aplicaciones cliente. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

@@ -1,5 +1,6 @@
 ---
 title: Almacén de administración de datos | Microsoft Docs
+description: El almacén de administración de datos de SQL Server es una base de datos relacional que contiene los datos recopilados de un servidor de destino.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758106"
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El almacén de administración de datos es una base de datos relacional que contiene los datos recopilados de un servidor que es el destino de la recopilación de datos. Estos datos se utilizan para generar informes para los conjuntos de recopilación de datos del sistema y también pueden utilizarse para crear informes personalizados.  
   
  La infraestructura del recopilador de datos define los trabajos y los planes de mantenimiento que se necesitan para implementar las directivas de retención definidas por el administrador de bases de datos.  

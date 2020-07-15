@@ -1,5 +1,6 @@
 ---
 title: Objeto de base de datos (página Propiedades extendidas) | Microsoft Docs
+description: Descubra la página Propiedades extendidas. Obtenga información sobre cómo usar esta página para agregar, ver o modificar propiedades personalizadas de objetos de bases de datos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756245"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de base de datos (página Propiedades extendidas)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Las propiedades extendidas permiten agregar propiedades personalizadas a los objetos de base de datos. Utilice esta página para ver o modificar las propiedades extendidas del objeto seleccionado. La página **Propiedades extendidas** es la misma para todos los tipos de objeto de base de datos.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Base de datos**  
  Muestra el nombre de la base de datos seleccionada. Este campo es de solo lectura.  
   

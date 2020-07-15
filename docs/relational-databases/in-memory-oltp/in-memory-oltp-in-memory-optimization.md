@@ -1,5 +1,6 @@
 ---
 title: OLTP en memoria (optimización en memoria) | Microsoft Docs
+description: Use estos ejemplos y recursos de OLTP en memoria para mejorar considerablemente el rendimiento en SQL Server.
 ms.custom: ''
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b0575e8b5072dccf3c197180bec3941ca3585ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723134"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP en memoria y optimización en memoria
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] puede mejorar considerablemente el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones.  Para saltar al código básico y al conocimiento que necesita para probar rápidamente su propia tabla optimizada para memoria y procedimiento almacenado con compilación nativa, consulte
  -  [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  

@@ -1,5 +1,6 @@
 ---
 title: Estados de creación de reflejo (SQL Server) | Microsoft Docs
+description: Obtenga información sobre los estados de una base de datos en una sesión de creación de reflejos de esta en SQL Server. El estado refleja el estado de la comunicación, el flujo de datos y la diferencia de los datos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715548"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de creacion de reflejo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Durante una sesión de creación de reflejo de la base de datos, la base de datos reflejada siempre se encuentra en un estado específico (el *estado de creación de reflejo*). El estado de la base de datos refleja el estado de la comunicación, el flujo de datos y la diferencia de datos entre los asociados. La sesión de creación de reflejo de la base de datos adopta el mismo estado que la base de datos principal.  
   
  Durante una sesión de creación de reflejo de una base de datos, las instancias de servidor se supervisan entre sí. Los asociados usan el estado de creación de reflejo para supervisar la base de datos. A excepción del estado PENDING_FAILOVER, las bases de datos principal y reflejada siempre tienen el mismo estado. Si se establece un testigo para la sesión, cada uno de los asociados supervisa el testigo mediante su estado de conexión (CONNECTED o DISCONNECTED).  

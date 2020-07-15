@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -17,15 +17,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 47898e97b678478528c6359487efe70817127706
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d1759d67fda0f9cef5290a4b93a5b3b712b49a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761918"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Modifica un grupo externo de Resource Governor que especifica los recursos que pueden usarse en procesos externos. 
 
@@ -73,7 +73,7 @@ Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 Adjunte el grupo de recursos externos a las CPU específicas.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID dados. Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los valores CPU_ID dados. Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado.
 
 MAX_MEMORY_PERCENT =*value*  
 Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.

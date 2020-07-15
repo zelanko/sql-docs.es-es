@@ -1,6 +1,6 @@
 ---
 title: 'Creación de reflejo de la base de datos: Interoperabilidad y coexistencia'
-description: Obtenga información sobre la interoperabilidad y la coexistencia de la creación de reflejo de la base de datos y otras características de SQL Server, como los catálogos de texto completo, las instantáneas de bases de datos, el trasvase de registros, la replicación y las instancias de clúster de conmutación por error.
+description: Obtenga información sobre la interoperabilidad y la coexistencia de la creación de reflejo de la base de datos y otras características de SQL Server, como los catálogos de texto completo y las instantáneas de bases de datos.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b70007c2beaa26d93107f167013a240fe0fa5864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751915"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Creación de reflejo de la base de datos: interoperabilidad y coexistencia (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La creación de reflejo de la base de datos se puede utilizar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Instancias de clúster de conmutación por error de AlwaysOn (clústeres de conmutación por error de SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

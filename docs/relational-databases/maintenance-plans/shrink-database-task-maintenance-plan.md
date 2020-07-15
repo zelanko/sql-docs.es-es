@@ -1,5 +1,6 @@
 ---
 title: Tarea Reducir base de datos (Plan de mantenimiento) | Microsoft Docs
+description: Obtenga información sobre cómo crear una tarea que intente reducir el tamaño de bases de datos de SQL Server concretas mediante la tarea Reducir base de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8456bacbc10b4b597a33c577ac7df12f0ba392cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715338"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tarea Reducir base de datos (Plan de mantenimiento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Tarea Reducir base de datos** para crear una tarea que intente reducir el tamaño de las bases de datos seleccionadas. Utilice las opciones que se indican a continuación para determinar el espacio disponible que se mantiene en la base de datos después de reducir su tamaño (cuanto mayor sea el porcentaje, menos se podrá reducir la base de datos). El valor se basa es un porcentaje de los datos reales de la base de datos. Por ejemplo, una base de datos de 100 MB que contenga 60 MB de datos y 40 MB de espacio disponible, con un porcentaje de espacio disponible del 50 por ciento, dará como resultado 60 MB de datos y 30 MB de espacio disponible (porque el 50 por ciento de 60 MB es 30 MB). Solo se elimina el espacio de la base de datos que exceda el porcentaje indicado. Los valores válidos son de 0 a 100.  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio disponible al final del archivo, las páginas de datos situadas al final del mismo se pueden desasignar y devolver al sistema de archivos.  

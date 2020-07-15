@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729444"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
@@ -146,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Sugerencias de tabla|INSERT_HINTS||INSERT_HINTS|34|  
 |Punteros de texto|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT o WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Punteros de texto|TEXTPTR()<br /><br /> TEXTVALID()|None|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Secuencia de llamada a funciones ::|Reemplazado por SELECT *column_list* FROM sys.\<*nombre_función*>().<br /><br /> Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|'::' function calling syntax|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Secuencia de llamada a funciones ::|Reemplazado por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|'::' function calling syntax|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Referencias de columnas de tres y de cuatro partes en la lista SELECT.|Los nombres de dos partes constituyen el comportamiento compatible con el estándar.|Nombre de columna de varias partes|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Cadena entrecomillada utilizada como alias de columna para una expresión de una lista SELECT:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|Literales de cadena como alias de columna|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Procedimientos numerados|Ninguno. No debe usarse.|ProcNums|160|  

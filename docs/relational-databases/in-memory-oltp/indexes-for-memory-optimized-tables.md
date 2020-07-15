@@ -1,5 +1,6 @@
 ---
 title: Índices de tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre la diferencia de un índice en una tabla optimizada para memoria de un índice tradicional en una tabla basada en disco en SQL Server y Azure SQL Database.
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca93055e20dc550e4c9d4ee4122828529a3b3a9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723114"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Todas las tablas optimizadas para memoria deben tener como mínimo un índice porque son los índices los que conectan las filas. En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Hay varias formas de diferenciar un índice en una tabla optimizada para memoria de un índice tradicional en una tabla basada en disco:  
 

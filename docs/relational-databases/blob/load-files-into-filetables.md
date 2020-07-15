@@ -1,5 +1,6 @@
 ---
 title: Carga de archivos en FileTables | Microsoft Docs
+description: Descubra cómo cargar y migrar archivos en FileTables en SQL Server cuando los archivos se almacenan de varias maneras. Lea acerca de las operaciones de carga masiva.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8be4fbed43f4d54fb199b687a3409337ded3ff3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767967"
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe cómo se cargan o migran archivos en las FileTables.  
   
 ##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> Cargar o migrar archivos en una FileTable  

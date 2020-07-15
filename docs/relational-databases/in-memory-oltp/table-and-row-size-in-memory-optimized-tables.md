@@ -1,5 +1,6 @@
 ---
 title: Tamaño de tabla y fila de las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre el tamaño de tablas y filas de tablas optimizadas para memoria. Puede crear una tabla con varias columnas y objetos grandes.
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651003"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Antes de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el tamaño de los datos de una fila de una tabla optimizada para memoria no podía superar los [8.060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Pero a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en Azure SQL Database es posible crear una tabla optimizada para memoria con varias columnas de gran tamaño (por ejemplo, varias columnas varbinary(8000)) y columnas LOB (es decir, varbinary(max), varchar(max) y nvarchar(max)) y realizar operaciones en ellas con módulos T-SQL compilados de forma nativa y tipos de tabla. 
   
@@ -136,7 +137,7 @@ En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, in
 |Columnas de tipo profundo de longitud variable *tamaño calculado*|SUM(*tamaño calculado de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al *tamaño del texto calculado de la fila*.<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable *tamaño real*|SUM(*tamaño real de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al *tamaño del texto real de la fila*.<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|   
   
-##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Ejemplo: cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el valor `bucket_count` especificado es 100 000, el número real de cubos para el índice es 131 072.  
   
 Considere una tabla Orders con la definición siguiente:  
@@ -204,7 +205,7 @@ A continuación, vamos a calcular [tamaño del cuerpo real de la fila]:
   
     -   El relleno total es 24 - 22 = 2 bytes.  
   
--   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0).  
+-   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0.).  
   
 -   El tamaño real de la columna de tipo profundo es 2 * 78 = 156. La columna de tipo profundo único `OrderDescription` tiene el tipo `nvarchar`.  
   

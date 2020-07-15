@@ -1,5 +1,6 @@
 ---
 title: Creación de instancias de datos XML | Microsoft Docs
+description: Obtenga información sobre cómo crear instancias de datos XML mediante la carga masiva, las asignaciones de constantes, la instrucción SELECT y la cláusula FOR XML, o en función de las instancias de cadenas de conversión de tipos.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752575"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo generar las instancias XML.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podrá generar instancias XML de las formas siguientes:  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Si no se utiliza el parámetro *style* o su valor es 0, no se mantendrán los espacios en blanco insignificantes para la conversión de la instancia DT xml. Para obtener más información sobre cómo usar el operador CONVERT y su parámetro *style* al convertir datos de cadena a instancias DT xml, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Ejemplo: convertir un valor de cadena a xml con tipo y asignarlo a una columna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Ejemplo: Conversión de un valor de cadena a XML con tipo y asignación a una columna  
  En el ejemplo siguiente se convierte una variable de cadena que contiene un fragmento de XML al tipo de datos **xml** y, a continuación, se almacena en la columna de tipo **xml** :  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Ejemplo: convertir una cadena a xml con tipo y asignarla a una variable  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Ejemplo: Conversión de una cadena a XML con tipo y asignación a una variable  
  En el ejemplo siguiente, se convierte una cadena a tipo **xml** y se asigna a una variable de tipo de datos **xml** :  
   
 ```  

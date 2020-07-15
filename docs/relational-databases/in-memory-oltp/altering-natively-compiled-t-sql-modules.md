@@ -1,5 +1,6 @@
 ---
 title: Modificar módulos T-SQL compilados de forma nativa | Microsoft Docs
+description: Obtenga información sobre cómo realizar operaciones ALTER en procedimientos almacenados compilados de forma nativa y en módulos de Transact-SQL compilados de forma nativa en SQL Server y Azure SQL Database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668532"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede realizar operaciones `ALTER` en procedimientos almacenados compilados de forma nativa y otros módulos [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados de forma nativa, como UDF escalares y desencadenadores mediante la instrucción `ALTER`.  
   

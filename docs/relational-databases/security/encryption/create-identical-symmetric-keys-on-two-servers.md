@@ -1,5 +1,6 @@
 ---
 title: Creación de claves simétricas idénticas en dos servidores | Microsoft Docs
+description: Obtenga información sobre cómo crear claves simétricas idénticas en dos servidores de SQL Server mediante Transact-SQL. Esto admite el cifrado en bases de datos o servidores independientes.
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a65944d2ee5e4a3d0844ebb50cdd3d4b6dad135
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765036"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Crear claves simétricas idénticas en dos servidores
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo crear claves simétricas idénticas en dos servidores diferentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descifrar el texto cifrado, se necesita la clave que se usó para cifrarlo. Cuando el cifrado y el descifrado tienen lugar en una sola base de datos, la clave se almacena en la base de datos y está disponible, según los permisos, tanto para el cifrado como para el descifrado. Pero cuando ambos procesos ocurren en bases de datos diferentes o en servidores diferentes, la clave almacenada en una base de datos no está disponible para usarla en la segunda base de datos.
   
 ## <a name="before-you-begin"></a>Antes de empezar  

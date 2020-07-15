@@ -1,5 +1,6 @@
 ---
 title: Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs
+description: Obtenga información sobre cómo iniciar la conmutación por error manual en un servidor reflejado mediante SQL Server Management Studio. La base de datos reflejada se convierte en la base de datos principal.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05e11b27e618dfc38f818f8dc86199cce3343d21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754637"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cuando la base de datos reflejada se sincroniza (es decir, cuando el estado de la base de datos es SYNCHRONIZED), el propietario de la base de datos puede iniciar una conmutación por error manual en el servidor reflejado.  
   
  Durante una conmutación por error manual, los roles de servidor principal y reflejado se intercambian en la base de datos en la que se produce la conmutación por error. La base de datos reflejada se convierte en la base de datos principal, y la base de datos principal se convierte en la reflejada. Por ejemplo, en la siguiente tabla se muestra cómo una conmutación por error manual intercambia los roles de dos asociados de creación de reflejo: `SQLDBENGINE0_1` y `SQLDBENGINE0_2`.  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5cb9ad962967680dd438e4842e8785e2bb33ed53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fb5a918c33a0c2017008079cc90693fb9c50309d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006274"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -110,7 +109,7 @@ Cuando se utiliza fuera de un módulo, la instrucción no tiene ninguna acción.
 Puede crear una pila de contextos de ejecución si llama a la instrucción EXECUTE AS varias veces en diversas entidades de seguridad. Cuando se llama, la instrucción REVERT cambia el contexto al inicio de sesión o el usuario del siguiente nivel en la pila de contextos. Para ver una demostración de este comportamiento, vea el [ejemplo A](#_exampleA).  
   
 ##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Especificar un nombre de inicio de sesión o usuario  
- El nombre de inicio de sesión o usuario especificado en EXECUTE AS \<context_specification> debe existir como una entidad de seguridad en **sys.database_principals** o **sys.server_principals** respectivamente, o la instrucción EXECUTE AS generará errores. Además, se deben conceder permisos IMPERSONATE en la entidad de seguridad. A menos que el autor de la llamada sea el propietario de la base de datos o sea un miembro del rol fijo de servidor **sysadmin**, la entidad de seguridad debe existir aun cuando el usuario tenga acceso a la base de datos o instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la pertenencia a un grupo de Windows. Por ejemplo, supongamos las siguientes condiciones: 
+ El nombre de inicio de sesión o usuario especificado en EXECUTE AS \<context_specification> debe existir como una entidad de seguridad en **sys.database_principals** o **sys.server_principals** respectivamente, o bien se producirá un error en la instrucción EXECUTE AS. Además, se deben conceder permisos IMPERSONATE en la entidad de seguridad. A menos que el autor de la llamada sea el propietario de la base de datos o sea un miembro del rol fijo de servidor **sysadmin**, la entidad de seguridad debe existir aun cuando el usuario tenga acceso a la base de datos o instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la pertenencia a un grupo de Windows. Por ejemplo, supongamos las siguientes condiciones: 
   
 -   El grupo **CompanyDomain\SQLUsers** tiene acceso a la base de datos **Sales**.  
   

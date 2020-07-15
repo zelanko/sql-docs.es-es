@@ -1,5 +1,6 @@
 ---
 title: Iniciar SQL Server en modo de usuario único | Microsoft Docs
+description: Obtenga información sobre el modo de usuario único en SQL Server. Vea cuándo es útil y cómo usar la opción de inicio "-m" para iniciar una instancia de SQL Server en este modo.
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764012"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar SQL Server en modo de usuario único
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En determinadas circunstancias, puede que sea necesario iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único mediante la **opción de inicio -m.** Por ejemplo, es posible que desee cambiar las opciones de configuración del servidor o recuperar una base de datos maestra dañada u otra base de datos del sistema. Ambas acciones requieren que se inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.  
   
  Al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único se permite que cualquier miembro del grupo local de administradores del equipo se conecte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor sysadmin. Para obtener más información, vea [Conectarse a SQL Server cuando los administradores del sistema no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
@@ -61,7 +62,7 @@ Por ejemplo, **-m"SQLCMD"** limita las conexiones a una conexión única y esa c
   
 4.  Compruebe en el administrador de clústeres o en la consola de administración de clústeres de conmutación por error que el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sigue estando sin conexión.  
   
-5.  Conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<nombreDeServidor>.  
+5.  Conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<servername>.  
   
 6.  Una vez completada la operación, cierre el símbolo del sistema y vuelva a poner en línea SQL y otros recursos mediante el administrador de clústeres.  
   

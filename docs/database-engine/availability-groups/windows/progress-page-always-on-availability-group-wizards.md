@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888096"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Utilice este cuadro de diálogo para ver el progreso del asistente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que esté ejecutando en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barra de progreso indica el progreso relativo de los pasos que el asistente realiza.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Más detalles**  
  Haga clic en la flecha abajo para mostrar una cuadrícula de progreso que enumera los pasos completados, en orden, seguida de la operación en curso actual. La cuadrícula contiene las columnas siguientes:  
   

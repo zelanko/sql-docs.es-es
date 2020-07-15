@@ -1,5 +1,6 @@
 ---
 title: Especificar programaciones de sincronización | Microsoft Docs
+description: Obtenga información sobre cómo especificar programaciones de sincronización en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783121"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema se describe cómo especificar programaciones de sincronización en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Al crear una suscripción, puede definir una programación de sincronización que controla cuándo se ejecutará el agente de replicación para la suscripción. Si no especifica parámetros de programación, la suscripción usará la programación predeterminada.  
   
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación.  
@@ -48,15 +49,15 @@ ms.locfileid: "76287135"
   
 |Agente|Nombre del trabajo|  
 |-----------|--------------|  
-|Agente de mezcla para suscripciones de extracción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDeSuscripciones>-\<entero>**|  
-|Agente de mezcla para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
-|Agente de distribución para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>** <sup>1</sup>|  
-|Agente de distribución para suscripciones de extracción|**\<Publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDeSuscripción>-\<GUID>** <sup>2</sup>|  
-|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
+|Agente de mezcla para suscripciones de extracción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Agente de mezcla para suscripciones de inserción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente de distribución para suscripciones de inserción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
+|Agente de distribución para suscripciones de extracción|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Para suscripciones de inserción a publicaciones de Oracle, es **\<publicador>-\<publicador**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**  
+ <sup>1</sup> Para las suscripciones de inserción a publicaciones de Oracle, es **\<Publisher>-\<Publisher**> en lugar de **\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Para suscripciones de extracción a publicaciones de Oracle, es **\<publicador>-\<baseDeDatosDeDistribución**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**  
+ <sup>2</sup> Para las suscripciones de extracción a publicaciones de Oracle, es **\<Publisher>-\<DistributionDatabase**> en lugar de **\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>Para especificar programaciones de sincronización  
   
@@ -66,9 +67,9 @@ ms.locfileid: "76287135"
   
     -   **Ejecutar solamente a petición**  
   
-    -   **\<Definir programación...>**  
+    -   **\<Define Schedule...>**  
   
-2.  Si selecciona **\<Definir programación...>** , especifique una programación en el cuadro de diálogo **Propiedades de programación del trabajo** y, después, haga clic en **Aceptar**.  
+2.  Si selecciona **\<Define Schedule...>** , especifique una programación en el cuadro de diálogo **Propiedades de programación del trabajo** y, después, haga clic en **Aceptar**.  
   
 3.  Finalice el asistente.  
 
@@ -80,9 +81,9 @@ ms.locfileid: "76287135"
   
 3.  Haga clic con el botón secundario en una suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-4.  En la ventana **Suscripción <nombreDeSuscripción>** , haga clic en **Acción** y, después, haga clic en **Propiedades del trabajo del \<nombreDeAgente>** .  
+4.  En la ventana **Suscripción <nombreDeSuscripción>** , haga clic en **Acción** y después en **Propiedades del trabajo de \<AgentName>** .  
   
-5.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo - \<nombreDelTrabajo>** , haga clic en **Editar**.  
+5.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo: \<JobName>** , haga clic en **Editar.**  
   
 6.  En el cuadro de diálogo **Propiedades de programación del trabajo** , seleccione un valor en la lista desplegable **Tipo de programación** :  
   
@@ -104,7 +105,7 @@ ms.locfileid: "76287135"
   
 3.  Haga clic con el botón secundario en el trabajo del Agente de distribución o de mezcla asociado con la suscripción y, a continuación, haga clic en **Propiedades**.  
   
-4.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo - \<nombreDelTrabajo>** , haga clic en **Editar**.  
+4.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo: \<JobName>** , haga clic en **Editar.**  
   
 5.  En el cuadro de diálogo **Propiedades de programación del trabajo** , seleccione un valor en la lista desplegable **Tipo de programación** :  
   
@@ -126,7 +127,7 @@ ms.locfileid: "76287135"
   
 3.  Haga clic con el botón secundario en el trabajo del Agente de distribución o de mezcla asociado con la suscripción y, a continuación, haga clic en **Propiedades**.  
   
-4.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo - \<nombreDelTrabajo>** , haga clic en **Editar**.  
+4.  En la página **Programaciones** del cuadro de diálogo **Propiedades del trabajo: \<JobName>** , haga clic en **Editar.**  
   
 5.  En el cuadro de diálogo **Propiedades de programación del trabajo** , seleccione un valor en la lista desplegable **Tipo de programación** :  
   

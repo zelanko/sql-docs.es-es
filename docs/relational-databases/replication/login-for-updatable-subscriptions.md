@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d242fc31411bc0fdb05cca1f65355f49acec575a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640431"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para una actualización inmediata, si seleccionó **Replicar** en la página **Suscripciones actualizables** de este asistente, debe especificar una cuenta con el suscriptor con el que se realizan las conexiones al publicador. 
   
  Las conexiones las usan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Se necesita esta cuenta incluso si se selecciona **Poner en cola cambios y confirmar cuando sea posible** en la página **Suscripciones actualizables**. De forma predeterminada, el Asistente para nueva suscripción configura la actualización en cola con la capacidad de cambiar a actualización inmediata si fuera necesario.  
   
-> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_** _\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
+> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_** _\<HexadecimalNumber>_ a la cuenta que se ha configurado en cada suscriptor.  
   
  Hay tres opciones disponibles para el tipo de conexión:  
   

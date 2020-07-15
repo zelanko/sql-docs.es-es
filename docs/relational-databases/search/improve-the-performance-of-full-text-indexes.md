@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629496"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -81,7 +81,7 @@ El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
--   \<**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   \<**DatabaseID**>: identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. \<**catid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   

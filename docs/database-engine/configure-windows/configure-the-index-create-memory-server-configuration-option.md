@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Memoria para creación de índices | Microsoft Docs
+description: Vea cómo usar la opción de memoria para crear índices para establecer la cantidad máxima de memoria que SQL Server asigna inicialmente para las operaciones de ordenación durante la creación de índices.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697208"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Establecer la opción de configuración del servidor Memoria para creación de índices
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **memoria para creación de índices** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **memoria para creación de índices** controla la cantidad máxima de memoria asignada inicialmente para las operaciones de ordenación durante la creación de índices. El valor predeterminado para esta opción es 0 (configuración automática). Si más adelante se necesita más memoria para la creación de índices y hay memoria disponible, el servidor la utilizará; por lo tanto, se excederá el valor de esta opción. Si no hay más memoria disponible, la creación de índices continuará utilizando la asignada.  
   

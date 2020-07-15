@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759108"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurar a partir de copias de seguridad archivadas en Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen las consideraciones al restaurar una base de datos mediante una copia de seguridad almacenada en el servicio Azure Blob Storage. Esto se aplica a las copias de seguridad creadas mediante Copia de seguridad en URL de SQL Server o con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Se recomienda revisar este tema si tiene copias de seguridad almacenadas en el servicio Azure Blob Storage que vaya a restaurar y luego revisar los temas que describen los pasos para restaurar una base de datos, que es igual para las copias de seguridad locales y de Azure.  
@@ -42,7 +42,7 @@ ms.locfileid: "82922261"
   
  Para reducir los tiempos de restauración, se recomienda usar copias de seguridad comprimidas.  Para los tamaños de copia de seguridad que sobrepasen los 25 GB, use la [utilidad AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) para realizar la descarga en la unidad local y, después, realizar la restauración. Para obtener información sobre otros procedimientos recomendados y sugerencias para copias de seguridad, vea [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- También puede activar la marca de seguimiento 3051 al realizar la restauración para generar un registro detallado. Este archivo de registro se coloca en el directorio de registros y se le asigna un nombre de acuerdo al formato: BackupToUrl-\<nombre_instancia>-\<nombre_bd>-action-\<PID>.log. El archivo de registro incluye información sobre cada recorrido de ida y vuelta a Azure Storage, incluido el tiempo que puede resultar útil para diagnosticar el problema.  
+ También puede activar la marca de seguimiento 3051 al realizar la restauración para generar un registro detallado. Este archivo de registro se coloca en el directorio de registros y se le asigna un nombre de acuerdo al formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. El archivo de registro incluye información sobre cada recorrido de ida y vuelta a Azure Storage, incluido el tiempo que puede resultar útil para diagnosticar el problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Temas sobre las operaciones de restauración  
   

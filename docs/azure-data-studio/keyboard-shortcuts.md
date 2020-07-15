@@ -1,37 +1,34 @@
 ---
 title: Creación y personalización de métodos abreviados de teclado
-titleSuffix: Azure Data Studio
 description: Aprenda a crear y personalizar métodos abreviados de teclado en Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774571"
 ---
-# <a name="keyboard-shortcuts-in-name-sos"></a>Accesos directos del teclado en [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-azure-data-studio"></a>Métodos abreviados de teclado de Azure Data Studio
 
-En este artículo se proporcionan los pasos para ver, editar y crear rápidamente métodos abreviados de teclado en [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+En este artículo se proporcionan los pasos para ver, editar y crear rápidamente métodos abreviados de teclado en Azure Data Studio.
 
-Dado que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su funcionalidad de enlace de teclado de Visual Studio Code, la información detallada sobre las personalizaciones avanzadas, el uso de diferentes distribuciones de teclado, etc., se encuentra en el artículo sobre los [enlaces de teclado de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Es posible que algunas características de enlace de teclado no estén disponibles (por ejemplo, las extensiones de distribución de teclado no se admiten en [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
-
+Como Azure Data Studio hereda su funcionalidad de enlace de teclado de Visual Studio Code, la información detallada sobre las personalizaciones avanzadas, el uso de diferentes distribuciones de teclado, etc., se encuentra en el artículo sobre [Enlaces de teclado de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Es posible que algunas características de enlace de teclado no estén disponibles (por ejemplo, en Azure Data Studio no se admiten las extensiones de distribución de teclado).
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>Abra el editor de métodos abreviados de teclado
 
 Para ver todos los métodos abreviados de teclado actualmente definidos:
 
-Abra el editor de **métodos abreviados de teclado** desde el menú **Archivo**: **Archivo** > **Preferencias** > **Métodos abreviados de teclado** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  > **Preferencias** > **Métodos abreviados de teclado** en Mac).
+Abra el editor de **métodos abreviados de teclado** desde el menú **Archivo**: **Archivo** > **Preferencias** > **Métodos abreviados de teclado** (**Azure Data Studio** > **Preferencias** > **Métodos abreviados de teclado** en Mac).
 
 Además de mostrar los enlaces de teclado actuales, el editor de **métodos abreviados de teclado** enumera los comandos disponibles que no tienen definido un método abreviado de teclado. El editor de **métodos abreviados de teclado** permite cambiar, quitar, restablecer y definir fácilmente nuevos enlaces de teclado.  
-
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Edición de los métodos abreviados de teclado existentes
 
@@ -41,11 +38,11 @@ Para cambiar el enlace de teclado de un método abreviado de teclado existente:
    > [!TIP]
    > Busque por clave, comando, por origen, etc. para devolver todos los métodos abreviados de teclado pertinentes.
 
-1. Haga clic con el botón derecho en la entrada deseada y seleccione **Change Key binding** (Cambiar enlace de teclado).
+2. Haga clic con el botón derecho en la entrada deseada y seleccione **Change Key binding** (Cambiar enlace de teclado).
 
    ![editar método abreviado de teclado](media/keyboard-shortcuts/change-keybinding.png)
 
-1. Presione la combinación de teclas deseada y, después, presione **Entrar** para guardarla. 
+3. Presione la combinación de teclas deseada y, después, presione **Entrar** para guardarla. 
 
    ![guardar método abreviado de teclado](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -57,6 +54,4 @@ Para crear nuevos métodos abreviados de teclado:
 
    ![crear método abreviado de teclado](media/keyboard-shortcuts/add-keybinding.png)
 
-1. Presione la combinación de teclas deseada y, después, presione **Entrar** para guardarla.
-
-
+2. Presione la combinación de teclas deseada y, después, presione **Entrar** para guardarla.

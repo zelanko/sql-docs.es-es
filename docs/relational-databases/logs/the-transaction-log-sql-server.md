@@ -1,5 +1,6 @@
 ---
 title: El registro de transacciones (SQL Server) | Microsoft Docs
+description: Obtenga información sobre el registro de transacciones. Cada base de datos de SQL Server registra todas las transacciones y las modificaciones de base de datos que necesita si se produce un error del sistema.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287809"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834766"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos.
   
 El registro de transacciones es un componente esencial de la base de datos. Si hay un error del sistema, ese registro será necesario para devolver la base de datos a un estado coherente. 
@@ -133,7 +134,7 @@ El*registro mínimo* implica registrar únicamente la cantidad de información n
   
  Las operaciones siguientes, que se registran completamente en el modelo de recuperación completa, se registran mínimamente en el modelo de recuperación simple y en el optimizado para cargas masivas de registros:  
   
--   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Cuando la replicación transaccional está habilitada, las operaciones `BULK INSERT` se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  
   
@@ -157,8 +158,11 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
         > [!WARNING]
         > La instrucción `DBCC DBREINDEX` ha quedado **en desuso**, de modo que no conviene usarla en las aplicaciones nuevas.  
   
+        > [!NOTE]
+        > Las operaciones de generación de índices usan un registro insignificante, pero se pueden retrasar cuando una copia de seguridad se ejecuta simultáneamente. Este retraso se debe a los requisitos de sincronización de las páginas del grupo de búferes registradas mínimamente cuando se usa el modelo de recuperación simple u optimizado para cargas masivas de registros. 
+      
     -   Regeneración del nuevo montón [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (si procede). La desasignación de páginas de índice durante una operación `DROP INDEX`**siempre** se registra completamente.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Administrar el registro de transacciones**  
   

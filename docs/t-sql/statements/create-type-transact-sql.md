@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bbe3a4d13aeafe7afeed9263d3a6c2d187a4b32
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766922"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para enlazar un tipo definido por el usuario a su implementación, el ensamblado CLR que contiene la implementación del tipo debe registrarse primero en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
@@ -268,7 +268,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
   
  A diferencia de los tipos definidos por el usuario y creados por medio de **sp_addtype**, el rol de base de datos **public** no recibe automáticamente el permiso REFERENCES para los tipos creados usando CREATE TYPE. Este permiso debe concederse por separado.  
   
- En los tipos de tabla definidos por el usuario, los tipos definidos por el usuario estructurados que se usan en *column_name* \<data type> forman parte del ámbito del esquema de la base de datos en el que se define el tipo de tabla. Para tener acceso a los tipos definidos por el usuario estructurados en un ámbito diferente dentro de la base de datos, utilice nombres de dos partes.  
+ En los tipos de tabla definidos por el usuario, los tipos definidos por el usuario estructurados que se usan en *nombre_columna* \<data type> forman parte del ámbito del esquema de la base de datos en el que se define el tipo de tabla. Para tener acceso a los tipos definidos por el usuario estructurados en un ámbito diferente dentro de la base de datos, utilice nombres de dos partes.  
   
  En los tipos de tabla definidos por el usuario, la clave principal en las columnas calculadas debe ser PERSISTED y NOT NULL.  
   

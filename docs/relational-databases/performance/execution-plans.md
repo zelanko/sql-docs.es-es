@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751789"
 ---
 # <a name="execution-plans"></a>Planes de ejecución
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Para poder ejecutar consultas, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] debe analizar la instrucción para determinar la manera más eficaz para tener acceso a los datos necesarios. Este análisis se controla mediante un componente denominado Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan de ejecución.   
 
@@ -45,7 +45,7 @@ Un plan de ejecución de consulta es una definición de los siguientes elementos
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene tres opciones para mostrar los planes de ejecución:        
-> -  El ***[plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** es el plan compilado, generado por el optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la memoria caché del plan.        
+> -  El ***[plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** es el plan compilado, generado por el optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la caché de planes.        
 > -  El ***[plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)*** es el plan compilado más su [contexto de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Estará disponible **una vez finalizada la ejecución de la consulta**. Esto incluye la información del entorno de ejecución real, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.         
 > -  Las ***[Estadísticas de consulta activa](../../relational-databases/performance/live-query-statistics.md)*** son lo mismo que el plan compilado más su contexto de ejecución. Está disponible para **ejecuciones de consultas en curso** y se actualiza cada segundo. Esto incluye información del entorno de ejecución, como el número real de filas que fluyen a través de los [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), el tiempo transcurrido y el progreso estimado de la consulta.
 

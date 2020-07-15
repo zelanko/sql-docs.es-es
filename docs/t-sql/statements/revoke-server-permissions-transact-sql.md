@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894551"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (permisos de servidor de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita los permisos de nivel de servidor GRANT y DENY.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67914270"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede conceder para un servidor. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- { TO | FROM } \<grantee_principal> especifica la entidad de seguridad a la que se revoca el permiso.  
+ { TO | FROM } \<grantee_principal> Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
  AS \<grantor_principal> Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef3adbbf44c495e0449da174915704c4da9306dc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d82dd94f3419b0f25c6c5ece04b94277144742c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669943"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperación de una base de datos sin restaurar los datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Normalmente, todos los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se restauran antes de que se recupere la base de datos. Sin embargo, una operación de restauración puede recuperar una base de datos sin restaurar realmente una copia de seguridad; por ejemplo, al recuperar un archivo de solo lectura que es coherente con la base de datos. Esto se conoce como *restauración de solo recuperación*. Cuando los datos sin conexión ya son coherentes con la base de datos y solo es necesario lograr que estén disponibles, una operación de solo restauración completa la recuperación de la base de datos y pone los datos en línea.  
   
  Una restauración de solo recuperación se puede realizar para una base de datos completa o para uno o varios archivos o grupos de archivos.  
@@ -44,7 +44,7 @@ ms.locfileid: "82834517"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> La cláusula FROM **=** \<*dispositivo_de_copia_de_seguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
+> La cláusula FROM **=** \<*backup_device>* no se usa en las restauraciones de solo recuperación porque no es necesario hacer una copia de seguridad.  
   
  **Ejemplo**  
   

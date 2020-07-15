@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11670347380a3336068091601e739b28d4d34a39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0416bc5ff174520ef5548ec6ad91eea647eafaf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653040"
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para inicializar una suscripción a una publicación transaccional desde una copia de seguridad, habilite la publicación para permitir la inicialización desde la copia de seguridad y, después, especifique la información de la copia de seguridad al crear la suscripción:  
   
--   Habilite la publicación en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+-   Habilite la publicación en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 -   Especifique la información de la copia de seguridad con el procedimiento almacenado [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Para obtener más información sobre los parámetros requeridos por **sp_addsubscription**, consulte [Inicializar una suscripción transaccional desde una copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md).  
   
 ### <a name="to-enable-initialization-with-a-backup"></a>Para habilitar la inicialización con una copia de seguridad  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , seleccione un valor de **True** para la opción **Permitir inicialización desde archivos de copia de seguridad**.  
+1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione un valor de **True** para la opción **Permitir inicialización desde archivos de copia de seguridad**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Inicializar una suscripción transaccional sin una instantánea](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  

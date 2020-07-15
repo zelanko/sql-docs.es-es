@@ -1,5 +1,6 @@
 ---
 title: Aprovisionamiento de claves de Always Encrypted mediante PowerShell | Microsoft Docs
+description: Obtenga información sobre cómo aprovisionar claves para Always Encrypted mediante el módulo SqlServer de PowerShell para proporcionar control de acceso a las claves de cifrado y la base de datos.
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9baa4cb8d27c458b92eb952a7121906dcfb1ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627110"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Aprovisionamiento de claves de Always Encrypted mediante PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
     
 En este artículo se proporcionan los pasos necesarios para aprovisionar claves de Always Encrypted con el [módulo SqlServer PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md). Puede usar PowerShell para aprovisionar claves de Always Encrypted [con y sin separación de roles](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), lo que proporciona control sobre quién tiene acceso a las claves de cifrado reales del almacén de claves y quién tiene acceso a la base de datos. 

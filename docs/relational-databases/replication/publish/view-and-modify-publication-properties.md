@@ -1,5 +1,6 @@
 ---
 title: Ver y modificar propiedades de publicación | Microsoft Docs
+description: Obtenga información sobre cómo ver y modificar las propiedades de publicación en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 852363b7106d6f4a6b4fb359a14410dd8cb09a99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eab592c7a0b95262e551eea02eef625ad653e12d
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287512"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807835"
 ---
 # <a name="view-and-modify-publication-properties"></a>Ver y modificar propiedades de publicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

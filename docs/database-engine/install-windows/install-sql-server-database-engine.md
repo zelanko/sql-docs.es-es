@@ -1,5 +1,6 @@
 ---
 title: Instalar el Motor de base de datos de SQL Server | Microsoft Docs
+description: Obtenga información sobre las características que se pueden instalar al seleccionar Motor de base de datos de SQL Server en Componentes para instalar en el Asistente para la instalación de SQL Server.
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883247"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar el motor de base de datos de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>Información general
 El componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un acceso controlado y un procesamiento de transacciones rápido para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  

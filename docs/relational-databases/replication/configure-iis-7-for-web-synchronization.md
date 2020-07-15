@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774017"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Los procedimientos descritos en este tema le guiarán a través del proceso de configurar manualmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 y superior para su uso con la sincronización web en la replicación de mezcla. 
   
@@ -50,7 +50,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 1.  Instale la replicación de SQL Server en el equipo de IIS.
 
-2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde desee, pero recomendamos crearlo en el directorio \<*unidad*>:\Inetpub. Por ejemplo, cree el directorio \<*drive*>:\Inetpub\SQLReplication\\.  
+2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde quiera, pero se recomienda crearlo en el directorio \<*drive*>:\Inetpub. Por ejemplo, cree el directorio \<*drive*>:\Inetpub\SQLReplication\\.  
   
 3.  Copie replisapi.dll del directorio [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ al directorio de archivos que creó en el paso 1.  
   
@@ -70,7 +70,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     2.  En **Alias**, escriba **SQLReplication**.  
   
-    3.  En **Ruta de acceso física**, escriba **\<<unidad>:\Inetpub\SQLReplication\\** y haga clic en **Aceptar**.  
+    3.  En **Ruta de acceso física**, escriba **\<drive>:\Inetpub\SQLReplication\\** y, después, haga clic en **Aceptar**.  
   
 7.  Configure IIS para permitir la ejecución de replisapi.dll.  
   
@@ -84,7 +84,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     5.  En la lista desplegable **Módulo** , seleccione **IsapiModule**.  
   
-    6.  En **Ejecutable**, escriba **\<unidad>:\Inetpub\SQLReplication\replisapi.dll**.  
+    6.  En **Ejecutable**, escriba **\<drive>:\Inetpub\SQLReplication\replisapi.dll**.  
   
     7.  En **Nombre**especifique **Replisapi**.  
   
@@ -218,7 +218,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     2.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-    3.  En el cuadro de diálogo **Permisos de \<nombreDeCarpeta>** , haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
+    3.  En el cuadro de diálogo **Permisos para \<foldername>** , haga clic en **Agregar** para agregar la cuenta que ha creado en el paso 1.  
   
     4.  Compruebe que en **Desde esta ubicación** aparece el nombre del equipo local (no un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
   
@@ -307,7 +307,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>** , especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectar con \<ServerName>** , especifique el nombre de inicio de sesión y la contraseña que utilizará el Agente de mezcla para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas de **estado** de la página sea **SUCCESS**.  
   

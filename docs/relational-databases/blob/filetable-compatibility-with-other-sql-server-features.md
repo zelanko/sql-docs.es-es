@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad de FileTable | Microsoft Docs
-description: Compatibilidad de FileTable con otras características de SQL Server
+description: Descubra cómo trabaja FileTables con otras características de SQL Server. Obtenga información sobre qué características de SQL Server son compatibles con FileTables y qué restricciones aplica.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1899aefaeeef896112a903f1fe69b289740ef09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642562"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidad de FileTable con otras características de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe el funcionamiento de FileTables con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> Grupos de disponibilidad AlwaysOn y FileTables  

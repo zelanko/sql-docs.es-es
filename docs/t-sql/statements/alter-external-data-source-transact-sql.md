@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a28f86d1e5a87f41a8894dad22f4cf887602af02
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628199"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669945"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81628199"
 -- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
-        LOCATION = 'server_name_or_IP' [,] |
+        LOCATION = '<prefix>://<path>[:<port>]' [,] |
         RESOURCE_MANAGER_LOCATION = <'IP address;Port'> [,] |
         CREDENTIAL = credential_name
     }  
@@ -61,7 +61,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumentos  
  data_source_name especifica el nombre definido por el usuario para el origen de datos. El nombre debe ser único.
 
- LOCATION = "nombre_del_servidor_o_dirección_IP" Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos externo.
+ LOCATION = "<prefix>://<path>[:<port>]" proporciona el protocolo de conectividad, la ruta de acceso y el puerto al origen de datos externo. Vea [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) para obtener las opciones de ubicación válidas.
 
  RESOURCE_MANAGER_LOCATION = "\<dirección IP;Puerto>" (No se aplica a Azure SQL Data Warehouse) Especifica la ubicación del Administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas podría preprocesar los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop. Esta es una decisión basada en el costo. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.
 

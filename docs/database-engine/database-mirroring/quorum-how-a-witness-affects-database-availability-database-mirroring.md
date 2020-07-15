@@ -1,6 +1,6 @@
 ---
 title: Cómo un testigo afecta a la disponibilidad de la base de datos
-description: Describe cómo la creación de reflejo de la base de datos afecta a la disponibilidad de quórum y base de datos.
+description: Obtenga información sobre cómo la creación de reflejo de la base de datos afecta a la disponibilidad de cuórum y bases de datos. El cuórum garantiza que una base de datos solo es propiedad de un asociado a la vez.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789658"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: Cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
  Si una instancia concreta de servidor se desconecta de una sesión de creación de reflejo, esa instancia pierde el quórum. Si no hay instancias de servidor conectadas, la sesión pierde el quórum y la base de datos no está disponible. Hay tres tipos de quórum posibles:  

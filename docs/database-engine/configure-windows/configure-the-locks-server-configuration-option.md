@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Bloqueos | Microsoft Docs
+description: Obtenga información sobre la opción Bloqueos. Vea cómo usarla para limitar la cantidad de memoria que usa el Motor de base de datos de SQL Server para los bloqueos.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697134"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Establecer la opción de configuración del servidor Bloqueos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **bloqueos** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **bloqueos** establece el número máximo de bloqueos disponibles, limitando de este modo la cantidad de memoria que el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa para ellos. El valor predeterminado es 0, lo que permite al [!INCLUDE[ssDE](../../includes/ssde-md.md)] asignar y cancelar la asignación de estructuras de bloqueo de manera dinámica a partir de los requisitos variables del sistema.  
   

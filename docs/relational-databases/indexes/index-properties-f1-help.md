@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760799"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476298"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **En clúster**, **No clúster**, **XML primario**, **XML secundario**, **Espacial**, **Almacén de columnas en clúster** o **Almacén de columnas no clúster**.  
   
  **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476298"
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
  **Add (Agregar)**  
- Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
+ Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<table name>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
  **Remove**  
  Quita la columna seleccionada de la clave de índice.  

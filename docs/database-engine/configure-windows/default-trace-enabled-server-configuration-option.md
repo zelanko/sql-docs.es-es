@@ -1,5 +1,6 @@
 ---
 title: default trace enabled (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "Seguimiento predeterminado habilitado". Averigüe cómo puede ayudar el seguimiento predeterminado en la solución de problemas.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfeec7df441b841cbbaa5da7c0b693f37749e861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772554"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice la opción **default trace enabled** para habilitar o deshabilitar los archivos predeterminados de registro de seguimiento. La funcionalidad de registro de seguimiento predeterminado ofrece un registro completo y persistente de la actividad y los cambios principalmente relacionados con las opciones de configuración.  
   

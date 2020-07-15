@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Tiempo de espera de inicio de sesión remoto | Microsoft Docs
+description: Obtenga más información sobre la opción "Tiempo de espera de inicio de sesión remoto". Vea cómo limita el número de segundos que SQL Server asigna a la conexión a un servidor remoto.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c21a98e1bdd9a16a2f42e8c03bba1a6e1327931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785690"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Establecer la opción de configuración del servidor Tiempo de espera de inicio de sesión remoto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo configurar la opción de configuración de **tiempo de espera de inicio de sesión remoto** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **tiempo de espera de inicio de sesión remoto** especifica el número de segundos que se esperará para volver de un error al intentar el inicio de sesión en un servidor remoto. Por ejemplo, si intenta iniciar sesión en un servidor remoto y el servidor no está activo, la opción de **tiempo de espera de inicio de sesión remoto** le ayuda a asegurarse de no tener que esperar indefinidamente hasta que el equipo deje de intentar iniciar la sesión. El valor predeterminado para esta opción es de 10 segundos. Un valor 0 permite una espera infinita.  
   

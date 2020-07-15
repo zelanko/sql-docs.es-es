@@ -1,5 +1,6 @@
 ---
 title: Separar una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo desasociar una base de datos en SQL Server mediante SQL Server Management Studio o Transact-SQL. Los archivos se pueden volver a asociar, o bien asociar a otro servidor.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1780847dda15ac7171473d4a163443bedd9bdf8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756172"
 ---
 # <a name="detach-a-database"></a>Separar una base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo separar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG. Los archivos se pueden mover a otro servidor y adjuntarse allí.  
   
  **En este tema**  
@@ -79,21 +80,21 @@ ms.locfileid: "68006190"
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Muestra uno de los siguientes estados: **Listo** o **No está listo**.  
   
      **Mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _<número_de_conexiones_activas>_ **Conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _<número_de_conexiones_activas>_ **Conexiones activas** (por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
 4.  Cuando esté listo para separar la base de datos, haga clic en **Aceptar**.  
   
 > [!NOTE]  
->  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento haciendo clic en el panel del Explorador de objetos y seleccionando a continuación **Ver** y por último **Actualizar**de la barra de menús.  
+>  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento: haga clic en el panel del Explorador de objetos y en la barra de menús seleccione **Ver** y, a continuación, **Actualizar**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -1,5 +1,6 @@
 ---
 title: Restauración y recuperación de tablas optimizadas para memoria | Microsoft Docs
+description: Obtenga información sobre cómo la restauración de una base de datos que usa tablas optimizadas para memoria en SQL Server difiere de la restauración de una base de datos que usa únicamente tablas basadas en disco.
 ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722345"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauración y recuperación de tablas optimizadas para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El mecanismo básico para recuperar o restaurar una base de datos que use tablas optimizadas para memoria es el mismo que el de una base de datos que solo usa tablas basadas en disco. Pero, a diferencia de las tablas basadas en disco, las tablas optimizadas para memoria deben cargarse en memoria antes de que la base de datos esté disponible para el acceso de usuario. Con este requisito se agrega un nuevo paso en la recuperación de la base de datos.  
   

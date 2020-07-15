@@ -1,5 +1,6 @@
 ---
 title: Generar un esquema XDR insertado | Microsoft Docs
+description: Vea información sobre cómo generar un esquema XDR insertado y sobre el desuso de la directiva XMLDATA en la cláusula FOR XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2e1a1aa6919e50769660a16c5988b626aeae3b7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e61aeda134c63c8e9827c521b34be5fa839a259f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729884"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>Generar un esquema XDR insertado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La directiva **XMLDATA** de FOR XML devuelve un esquema XDR insertado junto con el resultado de la consulta. Sin embargo, el esquema XDR no admite todos los nuevos tipos de datos y otras mejoras incluidas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. En su lugar, se puede solicitar un esquema XSD insertado mediante la [directiva XMLSCHEMA](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
 > [!IMPORTANT]  

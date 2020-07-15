@@ -1,5 +1,6 @@
 ---
 title: Hacer copias de seguridad de una clave maestra de una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo hacer una copia de seguridad de una clave maestra de base de datos en SQL Server mediante Transact-SQL. Esta clave esencial cifra otras claves y certificados.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892429"
 ---
 # <a name="back-up-a-database-master-key"></a>Hacer copias de seguridad de una clave maestra de una base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar una copia de seguridad de la clave maestra de una base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de una base de datos se usa para cifrar otras claves y certificados de la base de datos Si se elimina o daña, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podría ser incapaz de descifrar esas claves y los datos cifrados que las utilizan quedarían inutilizables y perdidos. Por ello, se debe hacer una copia de seguridad de la clave maestra de la base de datos y guardar la copia de seguridad en un lugar protegido fuera de las instalaciones.  
   
 ## <a name="before-you-begin"></a>Antes de empezar  

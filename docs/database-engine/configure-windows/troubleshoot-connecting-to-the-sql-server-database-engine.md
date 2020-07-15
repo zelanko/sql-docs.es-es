@@ -1,5 +1,6 @@
 ---
 title: Solución de problemas de conexión al Motor de base de datos de SQL Server | Microsoft Docs
+description: Obtenga información sobre cómo solucionar problemas de conexión. Vea los pasos que se deben llevar a cabo cuando no se puede usar TCP/IP para conectarse a un Motor de base de datos de SQL Server en un solo servidor.
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763953"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solución de problemas de conexión al Motor de base de datos de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se proporciona una lista exhaustiva de técnicas de solución de problemas que se pueden usar cuando no es posible conectarse a una instancia del Motor de base de datos de SQL Server en un único servidor.
 

@@ -1,5 +1,6 @@
 ---
 title: Directiva TYPE en consultas FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo usar la directiva TYPE con la cláusula FOR XML para solicitar que el resultado de una consulta se devuelva como datos XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729840"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  

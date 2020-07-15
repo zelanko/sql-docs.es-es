@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321239"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882091"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo definir una relación de registros lógicos entre los artículos de tabla de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  La replicación de mezcla le permite definir una relación entre filas relacionadas de tablas diferentes. De ese modo, las filas se pueden procesar como una unidad transaccional durante la sincronización. Se puede definir un registro lógico entre dos artículos independientemente de que tengan una relación de filtro de unión o no. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -52,13 +52,13 @@ ms.locfileid: "75321239"
 -   Si agrega, modifica o elimina un registro lógico una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Defina registros lógicos en el cuadro de diálogo **Agregar combinación**, que está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Defina registros lógicos en el cuadro de diálogo **Agregar combinación**, que está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Los registros lógicos se pueden definir en el cuadro de diálogo **Agregar combinación** solamente si se aplican a un filtro de combinación en una publicación de combinación y la publicación cumple los requisitos para utilizar particiones precalculadas. Debe utilizar procedimientos almacenados para definir registros lógicos que no se aplican a los filtros de combinación y para establecer la detección y resolución de conflictos en el nivel de registro lógico.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>Para definir una relación de registros lógicos  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un filtro de fila en el panel **Tablas filtradas**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione un filtro de fila en el panel **Tablas filtradas**.  
   
      Una relación de registros lógicos está asociada con un filtro de combinación, que amplía un filtro de fila. Por tanto, debe definir un filtro de fila antes de poder ampliar el filtro con una combinación y aplicar una relación de registros lógicos. Una vez definido el filtro de combinación, podrá ampliarlo con otro filtro de combinación. Para obtener más información acerca de cómo definir filtros de combinación, vea [Definir y modificar un filtro de combinación entre artículos de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321239"
   
 3.  Defina el filtro de combinación en el cuadro de diálogo **Agregar combinación** y, a continuación, active la casilla **Registro lógico**.  
   
-4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+4.  Si está en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>Para eliminar una relación de registros lógicos  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321239"
   
      Para eliminar solamente la relación de registros lógicos:  
   
-    1.  En la página **Filtrar filas** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione el filtro de combinación asociado con la relación de registros lógicos del panel **Tablas filtradas** y luego haga clic en **Editar**.  
+    1.  En la página **Filtrar filas** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione el filtro de combinación asociado con la relación de registros lógicos del panel **Tablas filtradas** y haga clic en **Editar**.  
   
     2.  En el cuadro de diálogo **Editar combinación** , desactive la casilla **Registro lógico**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75321239"
   
      Para eliminar la relación de registros lógicos y el filtro de combinación asociado a la misma:  
   
-    -   En la página **Filtrar filas** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y haga clic en **Eliminar**. Si el filtro de combinación que elimina está a su vez ampliado por otras combinaciones, esas combinaciones también se eliminarán.  
+    -   En la página **Filtrar filas** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione un filtro en el panel **Tablas filtradas** y haga clic en **Eliminar**. Si el filtro de combinación que elimina está a su vez ampliado por otras combinaciones, esas combinaciones también se eliminarán.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede especificar mediante programación las relaciones de registros lógicos entre los artículos usando procedimientos almacenados de replicación.  

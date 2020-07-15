@@ -1,6 +1,6 @@
 ---
 title: Cambio de los roles de reflejo de la base de datos
-description: Obtenga información sobre cómo cambiar los roles de creación de reflejo de la base de datos.
+description: Obtenga información sobre el cambio de los roles de creación de reflejos de bases de datos, donde un servidor reflejado se convierte en la entidad de seguridad en respuesta a errores o con fines administrativos en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735160"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* para el servidor principal al asumir el rol principal, y al recuperar su copia de la base de datos y ponerla en línea como la nueva base de datos principal. El servidor principal anterior, cuando esté disponible, asumirá el rol reflejado y su base de datos se convertirá en la nueva base de datos reflejada. Potencialmente, los roles pueden conmutarse como respuesta a varios errores o con fines administrativos.  
   
 > [!NOTE]  
@@ -159,7 +159,7 @@ ms.locfileid: "75252792"
 -   El servidor principal ha perdido la comunicación con el resto de la configuración del reflejo de la base de datos, mientras que el servidor reflejado y el testigo conservan el quórum. Sin embargo, si todas las instancias de servidor pierden la comunicación, y el testigo y el servidor reflejado la recuperan después, no se produce la conmutación automática por error.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   El servidor reflejado ha detectado la pérdida del servidor principal.  
   

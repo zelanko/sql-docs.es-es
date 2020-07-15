@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767126"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una sesión de eventos extendidos que identifica el origen de los eventos, los destinos de la sesión de eventos y las opciones de la sesión de eventos.
 
@@ -117,7 +117,7 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* es el evento
 
 Los eventos aparecen en la vista sys.dm_xe_objects como object_type "event".
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } permite establecer los atributos personalizables del evento. Los atributos personalizables aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *event_name*.
+SET { *atributos_personalizables_de_evento*= \<value> [ ,...*n*] } Permite establecer atributos personalizables para el evento. Los atributos personalizables aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *event_name*.
 
 ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) es la acción que se va a asociar con la sesión de eventos, donde:
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Las acciones aparecen en la vista sys.dm_xe_objects como object_type 'action'.
 
-WHERE \<predicate_expression> Especifica la expresión de predicado usada para determinar si un evento se debe procesar. Si \<predicate_expression> es true, las acciones y los destinos de la sesión siguen procesando el evento. Si \<predicate_expression> es false, la sesión elimina el evento antes de que las acciones y los destinos de la sesión lo procesen. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.
+WHERE \<predicate_expression> Especifica la expresión de predicado usada para determinar si se debe procesar un evento. Si \<predicate_expression> es true, las acciones y los destinos de la sesión siguen procesando el evento. Si \<predicate_expression> es false, la sesión elimina el evento antes de que las acciones y los destinos de la sesión lo procesen. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.
 
 *event_field_name* es el nombre del campo de evento que identifica el origen del predicado.
 
@@ -153,7 +153,7 @@ ADD TARGET [*event_module_guid*].*event_package_name*.*target_name* es el destin
 - *event_package_name* es el paquete que contiene el objeto de la acción.
 - *target_name* es el destino. Los destinos aparecen en la vista sys.dm_xe_objects como object_type 'target'.
 
-SET { *target_parameter_name*= \<value> [, ...*n*] } establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.
+SET { *nombre_parámetro_de_destino*= \<value> [, ...*n*] } Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.
 
 > [!IMPORTANT]
 > Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).

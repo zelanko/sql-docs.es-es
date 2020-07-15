@@ -1,5 +1,6 @@
 ---
 title: Restaurar una base de datos y enlazarla a un grupo de recursos | Microsoft Docs
+description: Obtenga información sobre la restauración de una base de datos con tablas optimizadas para memoria en SQL Server. Siga los procedimientos recomendados enlazando la base de datos a un grupo de recursos con nombre.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a04204d4c3b5c637b4c3aac324bfe4b02265b39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722354"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Restaurar una base de datos y enlazarla a un grupo de recursos de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Aunque tenga memoria suficiente para restaurar una base de datos con tablas optimizadas para memoria, se aconseja seguir los procedimientos recomendados y enlazar la base de datos a un grupo de recursos de servidor con nombre. Puesto que es preciso que la base de datos exista antes de poder enlazarla al grupo que restaura la base de datos, se trata de un proceso en varias fases. Este tema le guiará a través de ese proceso.  
   
 ## <a name="restoring-a-database-with-memory-optimized-tables"></a>Restaurar una base de datos de ejemplo con tablas optimizadas para memoria  

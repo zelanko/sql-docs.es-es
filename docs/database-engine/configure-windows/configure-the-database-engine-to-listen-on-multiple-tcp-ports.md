@@ -1,5 +1,6 @@
 ---
 title: Configurar el motor de base de datos para escuchar en varios puertos TCP | Microsoft Docs
+description: Familiarícese con los puntos de conexión del flujo TDS. Vea cómo usarlos para configurar el Motor de base de datos de SQL Server para escuchar en varios puertos TCP.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697756"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar el motor de base de datos para escuchar en varios puertos TCP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo configurar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que escuche en varios puertos TCP en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Si se ha habilitado TCP/IP para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escuchará las conexiones entrantes en un punto de conexión compuesto por una dirección IP y un número de puerto TCP. Los procedimientos siguientes crean un extremo de flujo TDS para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuche en otro puerto TCP.  
   
  A continuación se detallan algunos posibles motivos que pueden llevar a crear un segundo extremo de TDS:  

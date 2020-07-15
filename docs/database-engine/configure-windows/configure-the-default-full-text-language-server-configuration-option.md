@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Idioma de texto completo predeterminado | Microsoft Docs
+description: Obtenga información sobre la opción Idioma de texto completo predeterminado. Vea cómo configurarla a fin de especificar el idioma predeterminado que SQL Server usa para los índices de texto completo.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3f7760618f042c31a531f60dfdf0fbfb274ee174
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51e7b8c99fbf6c6cf7bf70a52b220ae4cd0ea3bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697725"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Establecer la opción de configuración del servidor Idioma de texto completo predeterminado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **Idioma de texto completo predeterminado** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción **Idioma de texto completo predeterminado** especifica un valor de idioma predeterminado para los índices de texto completo. Los análisis lingüísticos se realizan en todos los datos que tienen índices de texto completo y que dependen del idioma de los datos. El valor predeterminado de esta opción es el idioma del servidor. En las versiones localizadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece la opción **Idioma de texto completo predeterminado** en el idioma del servidor, si existe una correspondencia apropiada. En el caso de una versión no localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el valor de la opción **Idioma de texto completo predeterminado** es Inglés.  
   

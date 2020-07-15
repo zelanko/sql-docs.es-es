@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762024"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica un grupo de disponibilidad AlwaysOn existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mayoría de los argumentos de ALTER AVAILABILITY GROUP solo se admiten en la réplica principal actual. Sin embargo, los argumentos JOIN, FAILOVER y FORCE_FAILOVER_ALLOW_DATA_LOSS solo se admiten en réplicas secundarias.  
   
@@ -388,7 +388,7 @@ Especifica si las transacciones distribuidas están habilitadas para este grupo 
  ALL  
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Este es el comportamiento predeterminado.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **("** \<server_instance> **"** [ **,** ...*n* ] **)** | NONE }  
  Especifica una lista separada por comas de instancias de servidor que hospedan réplicas de disponibilidad para este grupo de disponibilidad y que cumplen los requisitos siguientes al ejecutarse con el rol secundario:  
   
 -   Está configurado para permitir todas las conexiones o las conexiones de solo lectura (vea el argumento ALLOW_CONNECTIONS de la opción SECONDARY_ROLE de más arriba).  
@@ -407,7 +407,7 @@ Especifica si las transacciones distribuidas están habilitadas para este grupo 
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica primaria, no se admitirá en el enrutamiento de solo lectura. Este es el comportamiento predeterminado. Cuando se utiliza con MODIFY REPLICA ON, este valor deshabilita una lista existente, en caso de que la hubiera.  
 
- READ_WRITE_ROUTING_URL **=** { **("** \<instancia_servidor> **")** }  
+ READ_WRITE_ROUTING_URL **=** { **("** \<server_instance> **")** }  
  Se aplica a: SQL Server (a partir de SQL Server 2019 [15.x]) 
 
  Especifica instancias de servidor que hospedan réplicas de disponibilidad para este grupo de disponibilidad que cumplen los requisitos siguientes al ejecutarse con el rol primario:
@@ -467,7 +467,7 @@ Inicia una conmutación por error manual del grupo de disponibilidad sin pérdid
   
  Para información sobre las limitaciones, los requisitos previos y las recomendaciones para forzar la conmutación por error y el efecto que tiene una conmutación por error forzada en las bases de datos que antes eran principales en el grupo de disponibilidad, vea [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
+ ADD LISTENER **"** _nombre\_dns_ **"(** \<add_listener_option> **)**  
  Define un nuevo agente de escucha para este grupo de disponibilidad. Solo se admite en la réplica principal.  
   
 > [!IMPORTANT]
@@ -584,7 +584,7 @@ Inicia una conmutación por error manual del grupo de disponibilidad sin pérdid
   
  Por ejemplo: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **"** _nombre\_dns_ **"(** \<modify\_listener\_option\> **)**  
  Modifica el agente de escucha de un grupo de disponibilidad existente para este grupo de disponibilidad. Solo se admite en la réplica principal.  
   
  \<modify\_listener\_option\>  

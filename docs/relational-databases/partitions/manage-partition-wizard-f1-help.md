@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787555"
 ---
 # <a name="manage-partition-wizard"></a>Asistente para administrar particiones 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el **Asistente para la administración de particiones** con el fin de administrar y modificar las tablas con particiones existentes a través de la activación de particiones o de la implementación de un escenario de ventanas deslizantes. Este asistente puede facilitar la administración de las particiones y simplificar la migración normal de los datos en las tablas.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar el Asistente para la administración de particiones  
@@ -76,7 +76,7 @@ ms.locfileid: "82220430"
 ### <a name="sliding-window-scenario"></a>Escenario de ventana deslizante  
  Para administrar las particiones en un escenario de ventana deslizante, seleccione **Administrar datos particionados en un escenario de ventana deslizante**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Crear una tabla de ensayo para la modificación de particiones**  
  Crea una tabla de ensayo para los datos cuya partición está activando o desactivando en la tabla con particiones existente.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "82220430"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
  Use la página **Seleccionar las opciones de activación de la partición** para seleccionar la tabla de ensayo que quiera activar en la tabla con particiones.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Mostrar todas las particiones**  
  Seleccione esta opción para mostrar todas las particiones, incluidas las particiones existentes actualmente en la tabla con particiones.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "82220430"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
  Use la página **Seleccionar las opciones de desactivación de la partición** para seleccionar la partición y la tabla de ensayo donde se almacenarán los datos particionados que está desactivando en la tabla con particiones.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Cuadrícula Partición**  
  Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82220430"
   
  También puede crear en la tabla de ensayo los mismos índices que existan en la partición de origen. La tabla de ensayo contiene automáticamente una restricción basada en los elementos de la partición de origen. Esta restricción se suele generar a partir del valor de límite de la partición de origen.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre de tabla de ensayo**  
  Cree un nombre para la tabla de ensayo o acepte el predeterminado que se muestra en el cuadro de edición.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220430"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Utilice la página **Resumen** para revisar las opciones que ha seleccionado en las páginas anteriores.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Revisar opciones seleccionadas**  
  Muestra las selecciones que ha realizado en cada página del asistente. Haga clic en un nodo para expandir y ver sus opciones seleccionadas previamente.  
   

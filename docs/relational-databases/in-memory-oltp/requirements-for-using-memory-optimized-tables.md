@@ -1,5 +1,6 @@
 ---
 title: Requisitos para usar las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre los requisitos para usar OLTP en memoria, como la versión de SQL Database, consideraciones sobre memoria y almacenamiento, y la instalación.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722375"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para usar OLTP en memoria en la base de datos de Azure, vea [Introducción a In-Memory (vista previa) en Base de datos SQL](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284356"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817788"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Características de Integration Services compatibles con las ediciones de SQL Server
 
@@ -44,6 +44,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
 |Patrón de escalabilidad horizontal|Sí|||||
 |Trabajo de escalabilidad horizontal|Sí|Sí <sup>1</sup>|TBD|TBD|TBD|
 |Compatibilidad con Microsoft Dynamics AX y Microsoft Dynamics CRM en componentes de OData <sup>2</sup>|Sí|Sí||||
+|Compatibilidad de Linux|Sí|Sí|||Sí|
 
 <sup>1</sup> Si ejecuta paquetes que solo requieren características de la versión Enterprise en la escalabilidad horizontal, los trabajos de escalabilidad horizontal también deben ejecutarse en instancias de SQL Server Enterprise.
 
@@ -53,7 +54,10 @@ La edición de evaluación de SQL Server está disponible durante un período de
 
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Asistente para importación y exportación de SQL Server|Sí|Sí|Sí|Sí|Sí|  
+|Asistente para importación y exportación de SQL Server|Sí|Sí|Sí|Sí<sup>1</sup>|Sí<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe no se proporciona con SQL en Linux. Pero se puede usar dtexec en Linux para ejecutar un paquete creado por DTSWizard en Windows.
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   

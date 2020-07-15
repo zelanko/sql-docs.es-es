@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplos: Usar el modo AUTO | Microsoft Docs'
+title: 'Ejemplos: Uso del modo AUTO | Microsoft Docs'
+description: Vea ejemplos de consultas que utilizan el modo AUTO de FOR XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775568"
 ---
-# <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-auto-mode"></a>Ejemplos: Uso del modo AUTO
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los siguientes ejemplos ilustran el uso del modo AUTO. Muchas de estas consultas se especifican utilizando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: recuperar información de cliente, pedido y detalle del pedido  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: Recuperación de información de cliente, pedido y detalle del pedido  
  Esta consulta recupera información del cliente, pedidos y pedidos detallados de un cliente específico.  
   
 ```  
@@ -94,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Ejemplo: Especificar GROUP BY y funciones de agregado  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Ejemplo: Especificación de GROUP BY y funciones de agregado  
  La consulta siguiente devuelve los identificadores de cliente individuales y el número de pedidos que ha solicitado el cliente.  
   
 ```  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: especificar columnas calculadas en el modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: Especificación de columnas calculadas en el modo AUTO  
  Esta consulta devuelve nombres de cliente individuales concatenados y la información de los pedidos. La columna calculada se asigna al nivel más interno de ese punto, el elemento <`SOH`> en este ejemplo. Los nombres de cliente concatenados se agregan como atributos del elemento <`SOH`> en el resultado.  
   
 ```  
@@ -167,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Ejemplo: devolver datos binarios  
+## <a name="example-returning-binary-data"></a>Ejemplo: Devolución de datos binarios  
  Esta consulta devuelve una fotografía del producto de la tabla `ProductPhoto` . `ThumbNailPhoto` es una columna **varbinary(max)** de la tabla `ProductPhoto` . De manera predeterminada, el modo `AUTO` devuelve a los datos binarios una referencia que es una dirección URL relativa de la raíz virtual de la base de datos donde se ejecuta la consulta. Se debe especificar el atributo clave `ProductPhotoID` para identificar la imagen. Al recuperar la referencia de una imagen como se muestra en este ejemplo, también debe especificarse la clave principal en la cláusula `SELECT` para identificar una fila de forma única.  
   
 ```  
@@ -223,7 +224,7 @@ FOR XML AUTO;
   
  Eso puede ser un problema especialmente cuando se ejecutan consultas dbobject en una base de datos que distingue mayúsculas y minúsculas. Para evitarlo, el formato de mayúsculas y minúsculas del nombre de tabla o columna especificado en las consultas debe coincidir con el formato de mayúsculas y minúsculas del nombre de tabla o columna de la base de datos.  
   
-## <a name="example-understanding-the-encoding"></a>Ejemplo: descripción de la codificación  
+## <a name="example-understanding-the-encoding"></a>Ejemplo: Descripción de la codificación  
  Este ejemplo muestra varias codificaciones que tienen lugar en el resultado.  
   
  Cree esta tabla:  

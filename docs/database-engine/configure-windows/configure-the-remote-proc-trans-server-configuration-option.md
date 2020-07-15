@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Transacciones de procedimientos remotos | Microsoft Docs
+description: Obtenga información sobre la opción "Transacciones de procedimientos remotos". Vea cómo ayuda a proteger las acciones de un procedimiento de servidor a servidor a través de una transacción MS DTC.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - remote proc trans option
 - distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 466e0106b93196fd260d36c31f6f8d0a94e7bea9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785721"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Establecer la opción de configuración del servidor Transacciones de procedimientos remotos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **transacciones de procedimientos remotos** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción **transacciones de procedimientos remotos** ayuda a proteger las acciones de un procedimiento entre servidores por medio de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC).  
   

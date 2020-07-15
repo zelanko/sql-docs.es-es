@@ -1,7 +1,7 @@
 ---
 title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,17 +22,17 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c741c677c83d9d0ba64e8d250442bb059c711d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737987"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Devuelve la parte especificada de un nombre de objeto. Las partes de un objeto que se pueden recuperar son el nombre del objeto, nombre del propietario, nombre de la base de datos y nombre del servidor.  
+  Devuelve la parte especificada de un nombre de objeto. Las partes de un objeto que se pueden recuperar son el nombre del objeto, el nombre del esquema, el nombre de la base de datos y el nombre del servidor. 
   
 > [!NOTE]  
 >  La función PARSENAME no indica si existe un objeto con el nombre especificado. PARSENAME solo devuelve la parte especificada del nombre de objeto especificado.  
@@ -41,29 +41,27 @@ ms.locfileid: "82832962"
   
 ## <a name="syntax"></a>Sintaxis  
   
+```syntaxsql 
+PARSENAME ('object_name' , object_piece )
 ```  
-PARSENAME ( 'object_name' , object_piece )   
-```  
   
-## <a name="arguments"></a>Argumentos  
- '*object_name*'  
- Es el nombre del objeto del que se desea recuperar la parte de objeto especificada. *object_name* es **sysname**. Este parámetro es un nombre de objeto completo opcionalmente. Si todas las partes del nombre de objeto están completas, este nombre puede tener cuatro partes: el nombre del servidor, de la base de datos, del propietario y del propio objeto.  
+## <a name="arguments"></a>Argumentos
+
+*"object_name"* Es el parámetro que contiene el nombre del objeto para el que se va a recuperar la parte de objeto especificada. Este parámetro es un nombre de objeto completo opcionalmente. Si todas las partes del nombre de objeto están completas, este nombre puede tener cuatro partes: el nombre del servidor, el de la base de datos, el del esquema y el del propio objeto.  Cada parte de la cadena "object_name" es de tipo *sysname*, que es equivalente a nvarchar (128) o 256 bytes. Si alguna parte de la cadena supera los 256 bytes, PARSENAME devolverá NULL para esa parte, ya que no es un tipo sysname válido.
   
- *object_piece*  
- Es la parte del objeto que se va a devolver. *object_piece* es de tipo **int** y puede tener los valores siguientes:  
+*object_piece*  
+Es la parte del objeto que se va a devolver. *object_piece* es de tipo **int** y puede tener los valores siguientes:  
+    1 = Nombre del objeto  
+    2 = Nombre del esquema  
+    3 = Nombre de la base de datos  
+    4 = Nombre del servidor  
   
- 1 = Nombre del objeto  
+## <a name="return-type"></a>Tipo de valor devuelto
+
+ **sysname**
   
- 2 = Nombre del esquema  
-  
- 3 = Nombre de la base de datos  
-  
- 4 = Nombre del servidor  
-  
-## <a name="return-types"></a>Tipos de valor devuelto  
- **sysname**  
-  
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Observaciones
+
  PARSENAME devuelve NULL cuando se cumple una de las siguientes condiciones:  
   
 -   Tanto *object_name* como *object_piece* son NULL.  
@@ -72,10 +70,11 @@ PARSENAME ( 'object_name' , object_piece )
   
  La parte del objeto solicitada tiene una longitud 0 y no es un identificador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Un nombre de objeto de longitud cero hace que el nombre completo no sea válido.  
   
-## <a name="examples"></a>Ejemplos  
+## <a name="examples"></a>Ejemplos
+
  En el siguiente ejemplo se utiliza `PARSENAME` para devolver información acerca de la tabla `Person` de la base de datos `AdventureWorks2012`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -112,11 +111,12 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Consulte también  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+## <a name="see-also"></a>Consulte también
+
+- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

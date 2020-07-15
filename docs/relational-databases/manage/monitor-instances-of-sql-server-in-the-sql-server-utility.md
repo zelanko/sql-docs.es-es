@@ -1,5 +1,6 @@
 ---
 title: Supervisión de instancias de SQL Server en la utilidad de SQL Server | Microsoft Docs
+description: Obtenga información sobre Utilidad de SQL Server, que puede usar para supervisar instancias de SQL Server. Vea cómo ver el panel y reducir el ruido de los informes.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba3695cffffe5d28af15a94461f60fb207fbe665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 31db9f3aeb938cfcf2fb88834eb59b116355760b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719025"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Supervisar instancias de SQL Server en la utilidad de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   
-|Tema|Information|  
+|Tema|Información|  
 |-----------|-----------------|  
 |[Conectarse a una utilidad de SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|Describe la vista de los puntos de vista y el panel de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|Describe la reducción del ruido y las infracciones no deseadas de los informes en las directivas de supervisión de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

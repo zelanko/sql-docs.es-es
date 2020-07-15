@@ -1,5 +1,6 @@
 ---
 title: Replicación transaccional bidireccional | Microsoft Docs
+description: La replicación transaccional bidireccional permite que dos servidores intercambien cambios. Cada servidor publica datos y se suscribe a una publicación del otro servidor.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5d8f9be6d414580994a68c4ee56a26deee583d38
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 903e92bd7eb306823189fdd80fd5968660f5c7e1
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286972"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807663"
 ---
 # <a name="bidirectional-transactional-replication"></a>replicación transaccional bidireccional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

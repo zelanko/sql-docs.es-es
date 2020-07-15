@@ -1,5 +1,6 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
+description: Obtenga información sobre la cláusula FOR XML que se usa en las consultas SQL para recuperar resultados como XML.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 6b59b52321f9c4e9489617bb8da9edf58f78b588
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729935"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. FOR XML también puede usarse en instrucciones de asignación.
 
@@ -39,7 +40,7 @@ En una cláusula FOR XML se especifica uno de estos modos:
 - EXPLICIT
 - PATH
 
-El modo RAW genera un único elemento \<row> por cada fila del conjunto de filas devuelto por la instrucción SELECT. Para generar una jerarquía XML se pueden escribir consultas FOR XML anidadas.
+El modo RAW genera un único elemento \<row> por cada fila del conjunto de filas que devuelve la instrucción SELECT. Para generar una jerarquía XML se pueden escribir consultas FOR XML anidadas.
 
 El modo AUTO genera anidamiento en el XML resultante utilizando heurística basada en la forma en que se especifica la instrucción SELECT. El control sobre la forma del XML generado es mínimo. Es posible escribir consultas FOR XML anidadas para generar una jerarquía XML más allá de la forma del XML generado mediante la heurística del modo AUTO.
 

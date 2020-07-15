@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_10060 | Microsoft Docs
+description: El cliente de SQL Server no se puede conectar al servidor. Vea una explicación del error y las posibles resoluciones.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05d10406c4eb3e0a854942084047c4c42b576062
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b952019acc3643baf10d5a69310ab4b9c2629d3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781553"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |  
+| :-------- | :---- |  
 |Nombre de producto|SQL Server|  
 |Id. de evento|10060|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor TCP, error: 0 - Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.) (Microsoft SQL Server, Error: 10060)|  
+|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor TCP, error: 0 - Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder). (Microsoft SQL Server, Error: 10060)|  
   
 ## <a name="explanation"></a>Explicación  
 El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar al servidor. Este error se puede producir porque el firewall en el servidor ha rechazado la conexión o el servidor no está configurado para aceptar conexiones remotas.  

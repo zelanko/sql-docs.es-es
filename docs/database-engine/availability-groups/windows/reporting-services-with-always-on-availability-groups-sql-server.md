@@ -1,6 +1,6 @@
 ---
 title: Reporting Services con grupos de disponibilidad
-description: Obtenga información sobre cómo configurar Reporting Services (SSRS) con grupos de disponibilidad AlwaysOn.
+description: Aprenda a configurar Reporting Services para trabajar con Grupos de disponibilidad AlwaysOn en SQL Server. La funcionalidad admitida difiere en los distintos escenarios.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243619"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893107"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Este tema contiene información acerca de la configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para que funcione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los tres escenarios para usar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son las bases de datos para orígenes de datos de informes, las bases de datos del servidor de informes y el diseñador de informes. La funcionalidad admitida y la configuración requerida son diferentes para los tres escenarios.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75243619"
   
  Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 y anteriores, deberá descargar e instalar una revisión para .NET 3.5 SP1. La revisión agrega compatibilidad con las características de SQL Client para AG y con las propiedades de cadenas de conexión **ApplicationIntent** y **MultiSubnetFailover**. Si la revisión no se instala en cada equipo que hospeda un servidor de informes, los usuarios que intenten obtener la vista previa de los informes verán un mensaje de error similar al siguiente y el mensaje de error se escribirá en el registro de seguimiento del servidor de informes:  
   
-> **Mensaje de error:** "La palabra clave no se admite "applicationintent""  
+> **Mensaje de error:** "La palabra clave no admite "applicationintent""  
   
  El mensaje tiene lugar cuando incluye una de las propiedades [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en la cadena de conexión [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , pero el servidor no reconoce la propiedad. El mensaje de error indicado se verá cuando haga clic en el botón "Probar conexión" en las interfaces de usuario de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y cuando obtenga la vista previa del informe si los errores remotos se habilitan en los servidores de informes.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75243619"
   
  El modo en que se creen los informes y se publiquen determinará dónde modificará la cadena de conexión:  
   
--   **Modo nativo:** use el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para los informes y los orígenes de datos ya publicados en un servidor de informes en modo nativo.  
+-   **Modo nativo:** use el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] para los informes y los orígenes de datos compartidos ya publicados en un servidor de informes en modo nativo.  
   
 -   **Modo de SharePoint:** use las páginas de configuración de SharePoint dentro de las bibliotecas de documentos para los informes que ya se han publicado en un servidor SharePoint.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "75243619"
   
 -   **Vista previa local**: [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usan .NET Framework 4.0 y admiten [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
--   **Vista previa en modo servidor o remoto:** si tras publicar informes en el servidor de informes o usar la vista previa en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], ve un error similar al siguiente, es una indicación de que está obteniendo la vista previa de los informes con el servidor de informes y la revisión .Net Framework 3.5 SP1 para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no se ha instalado en el servidor de informes.  
+-   **Vista previa en modo servidor o remoto:** si tras publicar informes en el servidor de informes o usar la vista previa en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], ve un error similar al siguiente, es una indicación de que está obteniendo la vista previa de los informes con el servidor de informes y la revisión .Net Framework 3.5 SP1 para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no se ha instalado en el servidor de informes.  
   
-> **Mensaje de error:** "La palabra clave no se admite "applicationintent""  
+> **Mensaje de error:** "La palabra clave no admite "applicationintent""  
   
 ##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> Bases de datos del servidor de informes y grupos de disponibilidad  
  Reporting Services y Power BI Report Server ofrece compatibilidad limitada para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con bases de datos del servidor de informes. Las bases de datos del servidor de informes se pueden configurar en AG para ser parte de una réplica; sin embargo, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no usará automáticamente una réplica diferente para las bases de datos del servidor de informes cuando se produce una conmutación por error. No se admite el uso de MultiSubnetFailover con las bases de datos del servidor de informes.  

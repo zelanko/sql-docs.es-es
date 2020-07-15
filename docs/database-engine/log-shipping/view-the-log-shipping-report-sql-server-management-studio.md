@@ -1,6 +1,6 @@
 ---
 title: Consulta del informe del trasvase de registros (SSMS)
-description: Obtenga información sobre cómo ver el informe de trasvase del registro mediante la GUI de SQL Server Management Studio (SSMS).
+description: Vea el estado del trasvase de registros de transacciones en SQL Server Management Studio. Ejecute un informe de estado en un servidor de supervisión, un servidor principal o un servidor secundario.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748539"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Ver el informe de trasvase de registros (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ver el informe de estado de trasvase del registro de transacciones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede ejecutar un informe de estado en un servidor de supervisión, un servidor principal o un servidor secundario. Para obtener la información más completa sobre la configuración del trasvase del registro, vea el informe en la instancia del servidor de supervisión.  
   
  El informe muestra el estado de cualquier actividad de trasvase del registro cuyo estado esté disponible desde la instancia de servidor a la que esté conectado. Si esa instancia de servidor se utiliza en varias configuraciones con distintos roles (por ejemplo, actuar como servidor de supervisión para una base de datos y como secundario para otra base de datos), los resultados mostrados contendrán la información de cada configuración desde el punto de vista de cada rol. Si el procedimiento almacenado puede conectarse a la instancia de servidor de supervisión para determinada configuración del trasvase del registro, el informe muestra un estado adicional para dicha configuración.  

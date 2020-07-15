@@ -1,5 +1,6 @@
 ---
 title: Tarea Actualizar estadísticas (Plan de mantenimiento) | Microsoft Docs
+description: Aprenda a actualizar información de SQL Server sobre los datos de las tablas y los índices mediante la tarea Actualizar estadísticas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d63b9d5d864dc9027eaf6b19a4e4964895699feb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d58c88a9ff10d1a53f7671d6c1d2cfce4203df61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783490"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tarea Actualizar estadísticas (Plan de mantenimiento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el cuadro de diálogo **Tarea Actualizar estadísticas** para actualizar la información de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre los datos de tablas e índices. Esta tarea vuelve a muestrear las estadísticas de distribución de cada índice creado en las tablas de usuario de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza las estadísticas de distribución para optimizar la navegación de las tablas durante el procesamiento de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para generar automáticamente las estadísticas de distribución, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestrea periódicamente los datos de la tabla correspondiente para cada índice. Este tamaño de la muestra se basa en el número de filas de la tabla y en la frecuencia de modificación de los datos. Utilice esta opción para realizar un muestreo adicional con el porcentaje especificado de datos de las tablas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza esta información para crear planes de consultas mejores.  
   
 Esta tarea ejecuta la instrucción `UPDATE STATISTICS`.  

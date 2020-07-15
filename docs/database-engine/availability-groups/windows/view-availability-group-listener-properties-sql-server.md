@@ -1,6 +1,6 @@
 ---
 title: Consulta de las propiedades del agente de escucha del grupo de disponibilidad
-description: 'Describe los pasos para ver las propiedades de un agente de escucha del grupo de disponibilidad AlwaysOn con SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o SQL PowerShell. '
+description: Describe los pasos para ver las propiedades de una escucha de grupo de disponibilidad Always On con SQL Server Management Studio, Transact-SQL o PowerShell en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893827"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Ver las propiedades del agente de escucha del grupo de disponibilidad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ver las propiedades de un *agente de escucha de grupo de disponibilidad* AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  

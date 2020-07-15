@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Trasvase de registros) | Microsoft Docs
+description: Utilice la pestaña Trasvase de registro de transacciones del cuadro de diálogo Propiedades de la base de datos para habilitar una base de datos como la principal de trasvase de registros y establecer sus opciones.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630971"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Propiedades de la base de datos (página Trasvase de registros)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para configurar y modificar las propiedades de trasvase de registros de una base de datos.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

@@ -1,5 +1,6 @@
 ---
 title: Creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre la creación de reflejos de la bases de datos, una solución para aumentar la disponibilidad de bases de datos de SQL Server y que se implementa en cada una de ellas.
 ms.custom: ''
 ms.date: 05/16/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754732"
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
@@ -53,7 +54,7 @@ ms.locfileid: "68006343"
   
      La creación de reflejo de la base de datos proporciona una redundancia completa o casi completa de los datos, en función de si el modo de funcionamiento es el de alta seguridad o el de alto rendimiento. Para obtener más información, vea [Modos de funcionamiento](#OperatingModes), más adelante en este tema.  
   
-     Un asociado de creación de reflejo de la base de datos que se ejecute en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o en versiones posteriores intentará resolver automáticamente cierto tipo de errores que impiden la lectura de una página de datos. El socio que no puede leer una página, solicita una copia nueva al otro socio. Si la solicitud se realiza correctamente, la copia sustituirá a la página que no se puede leer, de forma que se resuelve el error en la mayoría de los casos. Para obtener más información, vea [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Un asociado de creación de reflejo de la base de datos que se ejecute en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o en versiones posteriores intentará resolver automáticamente cierto tipo de errores que impiden la lectura de una página de datos. El socio que no puede leer una página, solicita una copia nueva al otro socio. Si la solicitud se realiza correctamente, la copia sustituirá a la página que no se puede leer, de forma que se resuelve el error en la mayoría de los casos. Para más información, vea [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Mejora la disponibilidad de la base de datos de producción durante las actualizaciones.  
   
@@ -344,7 +345,7 @@ ms.locfileid: "68006343"
   
 ## <a name="see-also"></a>Consulte también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

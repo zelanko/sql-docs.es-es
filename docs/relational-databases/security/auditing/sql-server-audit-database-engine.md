@@ -1,5 +1,6 @@
 ---
 title: SQL Server Audit (motor de base de datos) | Microsoft Docs
+description: Obtenga información sobre las auditorías de servidor para el Motor de base de datos de SQL Server o una base de datos individual. Las auditorías de servidor contienen especificaciones de auditoría de servidor y de auditoría de base de datos.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243415"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294629"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "80243415"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Creación de reflejo de la base de datos y SQL Server Audit  
  Una base de datos en la que se haya definido una especificación de auditoría de base de datos y que use la creación de reflejo de la base de datos incluirá la especificación de auditoría de base de datos. Para poder trabajar correctamente en la instancia de SQL reflejada, se deben configurar los elementos siguientes:  
   
--   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar mediante el comando CREATE AUDIT WITH GUID **=** _\<GUID de auditoría de servidor de origen_>.  
+-   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar utilizando el comando CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_>.  
   
 -   En el caso de los destinos de archivo binario, la cuenta de servicio del servidor reflejado debe tener los permisos adecuados para la ubicación en la que se escribe la pista de auditoría.  
   

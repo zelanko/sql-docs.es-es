@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Retención de medios | Microsoft Docs
+description: Obtenga información sobre la opción de retención de medios. Vea cómo se usa para especificar cuánto tiempo se conservan en SQL Server el registro de transacciones y las copias de seguridad de base de datos.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696965"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Establecer la opción de configuración del servidor Retención de medios
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **retención de medios** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **retención de medios** especifica el tiempo que se conserva cada conjunto de copia de seguridad. La opción ayuda a proteger las copias de seguridad para que no puedan sobrescribirse hasta que haya transcurrido el número de días especificado. Después de configurar la opción de **retención de medios** , no necesitará especificar el intervalo de tiempo que se van a conservar las copias de seguridad del sistema cada vez que realice una. El valor predeterminado es 0 días y el valor máximo es 365 días.  
   

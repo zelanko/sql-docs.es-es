@@ -1,5 +1,6 @@
 ---
 title: Eliminación de una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo eliminar una base de datos definida por un usuario en SQL Server Management Studio en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87ca7ef24d34a6f39255a92fcabaa2dab53cfa26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a4665cd3b3f554c33a1c8640ee47dea94f911d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630666"
 ---
 # <a name="delete-a-database"></a>Eliminar una base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo eliminar una base de datos definida por el usuario en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  

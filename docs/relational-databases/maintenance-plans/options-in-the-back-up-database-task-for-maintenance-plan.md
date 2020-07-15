@@ -1,5 +1,6 @@
 ---
 title: Tarea Realizar copia de seguridad de la base de datos (Plan de mantenimiento) | Microsoft Docs
+description: Obtenga información sobre cómo agregar una tarea de copia de seguridad a un plan de mantenimiento en SQL Server mediante la tarea Copia de seguridad de base de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774406"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opciones de la tarea Realizar copia de seguridad de la base de datos para el plan de mantenimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Tarea Copia de seguridad de la base de datos** para agregar una tarea de copia de seguridad al plan de mantenimiento. Es importante realizar una copia de seguridad de la base de datos por si se produce un error de sistema o del hardware (o un error del usuario) que cause algún tipo de daño en la base de datos y que requiera una copia de seguridad para la restauración. Esta tarea le permite realizar copias de seguridad completas, diferenciales, de archivos y grupos de archivos, así como de registros de transacciones.  
   
  **Para crear una tarea de copia de seguridad de la base de datos**  
@@ -38,7 +39,7 @@ ms.locfileid: "68115827"
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
  **Bases de datos**  
- Especifique las bases de datos a las que afecta esta tarea. Cuando se selecciona, la lista desplegable proporciona las opciones siguientes: **Todas las bases de datos**, **Todas las bases de datos del sistema**, **Todas las bases de datos de usuario**, **Bases de datos específicas**.  
+ Especifique las bases de datos a las que afecta esta tarea. Cuando se selecciona, la lista desplegable proporciona las siguientes opciones: **Todas las bases de datos**, **Todas las bases de datos del sistema**, **Todas las bases de datos de usuario**, **Estas bases de datos**.  
   
  **Todas las bases de datos**  
  Genera un plan de mantenimiento que ejecuta tareas de mantenimiento en todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

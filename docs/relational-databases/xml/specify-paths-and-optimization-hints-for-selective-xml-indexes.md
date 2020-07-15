@@ -1,5 +1,6 @@
 ---
 title: Sugerencias de optimización y rutas para índices XML selectivos | Microsoft Docs
+description: Obtenga información sobre cómo especificar rutas de nodos y sugerencias de optimización al crear o modificar índices XML selectivos.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729854"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo especificar rutas de acceso del nodo al índice y sugerencias de optimización para indizar cuando se crean o modifican índices XML selectivos.  
   
  Especifique las rutas de acceso del nodo y las sugerencias de optimización al mismo tiempo en una de las instrucciones siguientes:  
@@ -30,7 +31,7 @@ ms.locfileid: "80665231"
  Para obtener más información sobre los índices XML selectivos, vea [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Descripción de los tipos de XQuery y SQL Server en XML sin tipo  
- Los índices XML selectivos admiten dos sistemas de tipos: tipos XQuery y tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La ruta de acceso indizada se puede usar para buscar coincidencias con una expresión XQuery o para buscar coincidencias con el tipo de valor devuelto del método value() del tipo de datos XML.  
+ Los índices XML selectivos admiten dos sistemas de tipos: tipos XQuery y tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ruta de acceso indizada se puede usar para buscar coincidencias con una expresión XQuery o para buscar coincidencias con el tipo de valor devuelto del método value() del tipo de datos XML.  
   
 -   Si una ruta de acceso al índice no está anotada, o si está anotada con la palabra clave XQUERY, la ruta de acceso coincide con una expresión XQuery. Hay dos variaciones de rutas de acceso del nodo con XQUERY:  
   
@@ -111,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los tipos coinciden con el valor devuelto del método value().  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten esta sugerencia de optimización: SINGLETON.  
+-   Los tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten esta sugerencia de optimización: SINGLETON.  
   
  Es obligatorio especificar un tipo para las rutas de acceso que devuelven tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use el mismo tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usaría en el método value().  
   
@@ -234,7 +235,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Nodo `b`, porque se aplica un predicado sobre el nodo`b` en la expresión XQuery.  
   
-2.  **Principio 2**: para obtener el máximo rendimiento, índice todos los nodos que sean necesarios para evaluar una expresión XQuery dada. Si solo indiza algunos de los nodos, el índice XML selectivo mejora la evaluación de las subexpresiones que incluyen solo nodos indizados.  
+2.  **Principio 2:** para obtener el máximo rendimiento, indice todos los nodos que sean necesarios para evaluar una expresión XQuery dada. Si solo indiza algunos de los nodos, el índice XML selectivo mejora la evaluación de las subexpresiones que incluyen solo nodos indizados.  
 
  Para mejorar el rendimiento de la instrucción SELECT mostrada anteriormente, puede crear el índice XML selectivo siguiente:  
   
@@ -373,7 +374,7 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|Sí|No|  
   
 ### <a name="node-optimization-hint"></a>Sugerencia de optimización node()  
- Se aplica a: tipos de datos XQuery  
+ Se aplica a: Tipos de datos XQuery  
   
  Puede usar la optimización node() para especificar un nodo cuyo valor no es necesario para evaluar la consulta típica. Esta sugerencia reduce los requisitos de almacenamiento cuando la consulta típica solo tiene que evaluar la existencia del nodo. (De forma predeterminada, un índice XML selectivo almacena el valor para todos los nodos promovidos, excepto para los tipos de nodos complejos).  
   
@@ -402,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Si se ha especificado la sugerencia SINGLETON, pero un nodo aparece más de una vez dentro de su elemento primario o antecesor, se generará un error cuando cree el índice (para datos existentes) o cuando ejecute una consulta (para datos nuevos).  
   
 ### <a name="data-type-optimization-hint"></a>Sugerencia de optimización DATA TYPE  
- Se aplica a: tipos de datos XQuery  
+ Se aplica a: Tipos de datos XQuery  
   
  La sugerencia de optimización DATA TYPE permite especificar un tipo de datos XQuery o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el nodo indizado. El tipo de datos se usa para la columna de la tabla de datos del índice XML selectivo correspondiente al nodo indizado.  
   
  Al convertir un valor existente al tipo de datos especificado se produce un error y la operación de inserción (en el índice) funciona correctamente; sin embargo, se inserta un valor NULL en la tabla de datos del índice.  
   
 ### <a name="maxlength-optimization-hint"></a>Sugerencia de optimización MAXLENGTH  
- Se aplica a: tipos de datos XQuery  
+ Se aplica a: Tipos de datos XQuery  
   
  La sugerencia de optimización MAXLENGTH permite limitar la longitud de datos xs:string. MAXLENGTH no es pertinente para los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ya que especifica la longitud al especificar los tipos de fecha VARCHAR o NVARCHAR.  
   

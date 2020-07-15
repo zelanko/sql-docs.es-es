@@ -13,15 +13,15 @@ ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 74d521319e8378b264b560dacbfb664b737b810c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c0eb5fd5b69d87532770b439c86340dc928fb34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653072"
 ---
 # <a name="filter-table-rows"></a>Filtrar filas de tabla
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La página **Filtrar filas de tabla** permite:  
   
 -   Aplicar filtros de fila estática a artículos de la tabla en publicaciones de instantáneas, transaccionales y de mezcla.  
@@ -51,7 +51,7 @@ ms.locfileid: "76286409"
  Este panel se llena con filtros según se agregan a los artículos de la tabla en la publicación. Las tablas con filtros de fila se muestran como nodos de nivel superior en el panel. En las publicaciones de combinación, las tablas cuyo filtro se ha ampliado a filtro de combinación se muestran como nodos secundarios.  
   
  **Add (Agregar)**  
- Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Si hace clic en **Agregar** en una publicación de combinación, se muestran tres opciones: **Agregar filtro**, **Agregar combinación para ampliar el filtro seleccionado**y **Generar filtros automáticamente**.  
+ Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Al hacer clic en **Agregar** para una publicación de mezcla se muestran tres opciones: **Agregar filtro**; **Agregar combinación para ampliar el filtro seleccionado**; **Generar filtros automáticamente**.  
   
 -   Seleccione **Agregar filtro** para abrir el cuadro de diálogo **Agregar filtro** . Este cuadro de diálogo permite aplicar filtros de fila a un artículo de la tabla. En el cuadro de diálogo **Agregar filtro** , por ejemplo, podría especificar que una tabla con datos de cliente solamente debe contener datos de los clientes franceses cuando se replique a los suscriptores.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76286409"
  **Buscar tabla**  
  Solo se aplica a publicaciones de combinación con filtros de combinación. Haga clic en **Buscar tabla** para buscar una tabla en un árbol de filtros complejo. En una base de datos con relaciones complejas, una tabla se puede combinar con varias tablas y, por tanto, puede aparecer en más de un sitio en el árbol de filtros.  
   
- La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y, al expandir ese nodo, se muestra el texto **Haga clic en Buscar tabla para ver la tabla de \<nombre de tabla>** .  
+ La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y, al expandir ese nodo, se muestra el texto **Haga clic en Buscar tabla para ver la tabla de \<tablename>** .  
   
  Seleccione el nodo del acceso directo en el panel y haga clic en **Buscar tabla**. El panel se expande y la tabla aparece resaltada. Si hace clic en **Buscar tabla** sin seleccionar un nodo de acceso directo, se abre un cuadro de diálogo **Buscar tabla** .  
   

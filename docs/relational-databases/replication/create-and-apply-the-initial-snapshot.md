@@ -1,5 +1,6 @@
 ---
 title: Creación y aplicación de la instantánea inicial | Microsoft Docs
+description: Obtenga información sobre cómo crear y aplicar la instantánea inicial en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654337"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 En este tema se describe cómo crear y aplicar la instantánea inicial en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Las publicaciones de mezcla que usan filtros con parámetros necesitan una instantánea de dos partes. Para más información, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   El Agente de instantáneas genera instantáneas una vez creada la publicación. Se pueden generar de la siguiente manera:  
   
@@ -50,13 +51,13 @@ Para ver o modificar la ubicación de la carpeta de instantáneas predeterminada
 
  Especifique la ubicación predeterminada de instantáneas en la página **Carpeta de instantáneas** del Asistente para configurar la distribución. Para obtener más información sobre cómo usar este asistente, vea [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) (Configurar la publicación y la distribución). Si crea una publicación en un servidor que no está configurado como un distribuidor, especifique una ubicación predeterminada de instantáneas en la página **Carpeta de instantáneas** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md).  
   
- Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<distribuidor>** . Para obtener más información, vea [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación - \<publicación>** . Para más información, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<Distributor>** . Para obtener más información, vea [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para más información, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="modify-the-default-snapshot-location"></a>Modificación de la ubicación predeterminada de instantáneas  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** , haga clic en el botón de propiedades ( **...** ) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.  
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distributor>** , haga clic en el botón de propiedades ( **...** ) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.  
   
-2.  En el cuadro de diálogo **Propiedades del publicador - \<publicador>** , escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.  
+2.  En el cuadro de diálogo **Propiedades del publicador: \<Publisher>** , escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.  
   
     > [!NOTE]  
     >  El Agente de instantáneas debe tener permisos de escritura para el directorio especificado y el Agente de distribución o de mezcla debe tener permisos de lectura. Si usa suscripciones de extracción, debe especificar un directorio compartido como ruta de acceso, según la convención de nomenclatura universal (UNC), por ejemplo \\\nombreDeEquipo\instantánea. Para obtener más información, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
@@ -71,7 +72,7 @@ De forma predeterminada, si se está ejecutando el Agente SQL Server, el Agente 
 1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y luego expanda el nodo del servidor.    
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .    
 3.  Haga clic con el botón secundario en la publicación para la que desee crear una instantánea y, a continuación, haga clic en **Ver estado del agente de instantáneas**.    
-4.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<publicación>** , haga clic en **Iniciar**.    
+4.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<Publication>** , haga clic en **Iniciar**.    
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
 ### <a name="in-replication-monitor"></a>En el Monitor de replicación  

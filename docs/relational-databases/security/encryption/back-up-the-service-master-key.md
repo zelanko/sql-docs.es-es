@@ -1,5 +1,6 @@
 ---
 title: Realizar una copia de seguridad de la clave maestra de servicio | Microsoft Docs
+description: Obtenga información sobre cómo hacer una copia de seguridad de una clave maestra de servicio en SQL Server mediante Transact-SQL. La clave maestra de servicio es la raíz de la jerarquía de cifrado.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957489"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895908"
 ---
 # <a name="back-up-the-service-master-key"></a>Hacer una copia de seguridad de la clave maestra de servicio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este artículo se describe cómo realizar una copia de seguridad de la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de servicio es la raíz de la jerarquía de cifrado. Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
 
 ## <a name="before-you-begin"></a>Antes de empezar  

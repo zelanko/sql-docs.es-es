@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726096"
 ---
 # <a name="add-or-edit-join"></a>Agregar o editar combinaciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los cuadros de diálogo **Agregar combinación** y **Editar combinación** permiten agregar y editar filtros de combinación en publicaciones de combinación.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "72907563"
   
     -   Si está agregando una nueva combinación, seleccione **Usar generador de instrucciones para crear la instrucción** o **Escribir instrucción de combinación manualmente**. Si empieza a escribir la combinación manualmente, no podrá utilizar el generador.  
   
-         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador**y **Columna de tabla combinada**) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción (**AND** u **OR**) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
+         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador**y **Columna de tabla combinada**) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción (**AND** u **OR**) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
   
          Si selecciona escribir la instrucción manualmente, escriba la instrucción de combinación en el área de texto **Instrucción de combinación** . Utilice los cuadros de lista **Columna de tabla filtrada** y **Columnas de tabla combinada** para arrastrar y colocar columnas en el área de texto **Instrucción de combinación** .  
   

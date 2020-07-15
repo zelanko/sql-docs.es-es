@@ -1,5 +1,6 @@
 ---
 title: Creación de un punto de control de la utilidad de SQL Server (utilidad de SQL Server) | Microsoft Docs
+description: Obtenga ayuda para identificar cuellos de botella de uso de recursos y oportunidades de consolidación mediante la creación de un punto de control (UCP) de la utilidad de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776027"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Una empresa puede tener varias utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cada una de esas utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede administrar muchas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de capa de datos. Cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un único punto de control de la utilidad (UCP). Debe crear un UCP nuevo para cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP.  
   
  El UCP recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  

@@ -12,15 +12,15 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642328"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de evento **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb** . Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
   
  Normalmente, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] que genera tales recorridos de intervalo tiene muchos operadores BETWEEN, cada uno de los cuales selecciona un intervalo de filas de una tabla o un índice. Como alternativa, puede obtener múltiples intervalos mediante expresiones como (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Además, los planes de consulta deben requerir que estos intervalos se recorran en orden, bien porque hay una cláusula ORDER BY en T.a, o bien porque un iterador del plan requiere que éste consuma las tuplas en orden.  
@@ -60,7 +60,7 @@ ms.locfileid: "68089358"
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<nombre de usuario\>* ).|11|Sí|  
+|**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (ya sea el inicio de sesión de seguridad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las credenciales de inicio de sesión de Windows con el formato *\<DOMAIN>\\<nombre_de_usuario\>* ).|11|Sí|  
 |**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la tabla **syslogins** de la base de datos **maestra** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  

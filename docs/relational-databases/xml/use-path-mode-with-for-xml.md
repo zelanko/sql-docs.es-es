@@ -1,5 +1,6 @@
 ---
 title: Usar el modo PATH con FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo usar el modo PATH con consultas FOR XML anidadas y la directiva TYPE para escribir consultas menos complejas que devuelvan instancias de tipo XML.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5073f921a7d80df9e59e93915dedaec11fddcf76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff6beee153a5f923178436710d1b38b1151d6c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724538"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Usar el modo PATH con FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Tal como se describe en [Generar XML mediante FOR XML](../../relational-databases/xml/for-xml-sql-server.md), el modo PATH facilita la combinación de elementos y atributos. También facilita la especificación de anidación adicional para representar propiedades complejas. Puede utilizar consultas de modo FOR XML EXPLICIT para generar XML a partir de un conjunto de filas, pero el modo PATH supone una alternativa más sencilla a las consultas de modo EXPLICIT potencialmente complicadas. El modo PATH, junto con la posibilidad de escribir consultas FOR XML anidadas y la directiva TYPE para devolver instancias de tipo **xml** , permite escribir consultas de forma más fácil.  
   
  En el modo PATH, los nombres o alias de columna se tratan como expresiones XPath. Estas expresiones indican el modo en el que se asignan los valores a XML. Cada expresión XPath es una expresión relativa que proporciona el tipo de elemento, como el atributo, el elemento y el valor escalar, así como el nombre y la jerarquía del nodo que se generará en relación con el elemento de fila.  
@@ -49,7 +50,7 @@ ms.locfileid: "80664968"
   
 -   [Compatibilidad con elementos de espacio de nombres en el modo PATH](../../relational-databases/xml/namespace-support-in-path-mode.md)  
   
--   [Ejemplos: Usar el modo PATH](../../relational-databases/xml/examples-using-path-mode.md)  
+-   [Ejemplos: Uso del modo PATH](../../relational-databases/xml/examples-using-path-mode.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

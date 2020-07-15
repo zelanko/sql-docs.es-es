@@ -1,5 +1,6 @@
 ---
 title: Usar XML en columnas calculadas | Microsoft Docs
+description: Vea ejemplos de cómo usar instancias XML y columnas XML con columnas calculadas en SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fcd9657ce64ef5be2cd1210eebb21f6b4e1d113c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775529"
 ---
 # <a name="use-xml-in-computed-columns"></a>Usar XML en columnas calculadas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Pueden aparecer instancias XML como origen de una columna calculada o como un tipo de columna calculada. Los ejemplos de este tema muestran cómo usar XML con columnas calculadas.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>Crear columnas calculadas a partir de columnas XML  

@@ -1,24 +1,24 @@
 ---
 title: 'Administrar la conmutación por error del grupo de disponibilidad: SQL Server en Linux'
 description: 'En este artículo se describen los tipos de conmutación por error: automática, conmutación por error manual planeada y conmutación por error manual forzada. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216854"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892304"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad Always On en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado conmutación por error. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas conservan todos los datos. Un grupo de disponibilidad conmuta por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error en una de sus réplicas secundarias (el destino de la conmutación por error actual). 
 
@@ -81,14 +81,29 @@ Durante una conmutación por error manual, el comando `move` de `pcs` o el coman
 Un ejemplo de la restricción creada debido a una conmutación por error manual. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > El nombre del recurso de AG en los clústeres de Pacemaker en Red Hat Enterprise Linux 8.x y Ubuntu 18.04 puede ser similar a *ag_cluster-clon*, ya que la nomenclatura relacionada con los recursos ha evolucionado para usar *clonación que se puede promocionar*. 
+
 - **Ejemplo de RHEL/Ubuntu**
 
    En el comando siguiente, `cli-prefer-ag_cluster-master` es el identificador de la restricción que se debe quitar. `sudo pcs constraint list --full` devuelve este identificador. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Or
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Como alternativa, puede realizar tanto el movimiento como el borrado de restricciones generadas automáticamente en una sola línea, como se indica a continuación. En el ejemplo siguiente se usa la terminología *clone* según Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Ejemplo de SLES**
 
    En el comando siguiente, `cli-prefer-ms-ag_cluster` es el identificador de la restricción. `crm config show` devuelve este identificador. 

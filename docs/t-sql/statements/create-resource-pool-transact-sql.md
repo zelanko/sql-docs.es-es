@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b043443f84ceb3b98484f88f4384c9e8e0a10442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892522"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Crea un grupo de recursos de servidor del regulador de recursos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria, CPU y E/S) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos. El regulador de recursos no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -81,7 +81,7 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 Adjunte el grupo de recursos de servidor a los programadores específicos. El valor predeterminado es AUTO.  
   
-AFFINITY SCHEDULER = **(** \<Scheduler_range_spec> **)** asigna el grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representadas por los identificadores proporcionados. Estos identificadores se asignan a los valores de la columna scheduler_id de [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** asigna el grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que indican los id. proporcionados. Estos identificadores se asignan a los valores de la columna scheduler_id de [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
 Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece afinidad entre el grupo de recursos y los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se asignan a las CPU físicas correspondientes al nodo o al intervalo de nodos NUMA especificado. Puede usar la siguiente consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar la asignación entre la configuración física de NUMA y los identificadores de programador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   

@@ -1,5 +1,6 @@
 ---
 title: cross db ownership chaining (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre cómo usar la opción "cross db ownership chaining" en SQL Server. Vea las consideraciones relativas a la activación y desactivación del encadenamiento de la propiedad entre bases de datos.
 ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - cross db ownership chaining option
 - chaining ownership
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9d3ee24f8bf3d698314b5eb32a166ef7080622b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eefc2b48f43aa91afa982775829648d76856b392
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772621"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción **cross db ownership chaining** para configurar el encadenamiento de propiedad entre bases de datos para una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

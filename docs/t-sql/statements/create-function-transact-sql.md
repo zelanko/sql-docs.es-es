@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767101"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una función definida por el usuario es una rutina de [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common Language Runtime (CLR) que acepta parámetros, realiza una acción, como un cálculo complejo, y devuelve el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar (único) o una tabla. Utilice esta instrucción para crear una rutina reutilizable que se pueda utilizar de estas formas:
 
@@ -328,7 +328,7 @@ En las TVF insertadas, el valor devuelto de TABLE se define mediante una única 
 
 ORDER (\<order_clause>) Especifica el orden en que los resultados se devuelven de la función con valores de tabla. Para obtener más información, vea la sección "[Usar el criterio de ordenación en funciones CLR con valores de tabla](#using-sort-order-in-clr-table-valued-functions)" más adelante en este tema.
 
-EXTERNAL NAME \<especificador_de_método> *nombre_de_ensamblado*.*nombre_de_clase*.*nombre_de_método*
+EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores)
 
 Especifica el ensamblado y el método al que deberá hacer referencia el nombre de la función creada.
@@ -352,9 +352,9 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
 > - De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitarla, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Esta opción no está disponible en las bases de datos independientes.
 
-*\<* definición_de_tipo_de_tabla *>* ( { \<definición_de_columna> \<restricción_de_columna>| \<definición_de_columna_calculada> } [ \<restricción_de_tabla> ] [ ,...*n* ] ) Define el tipo de datos de la tabla para una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Define el tipo de datos de tabla para una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.
 
-*\< definición_de_tipo_de_tabla_de_clr >* ( { *nombre_de_columna**tipo_de_datos* } [ ,...*n* ] ) **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
 
 Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos. La tabla se coloca siempre en el grupo de archivos principal.
 
@@ -501,7 +501,7 @@ Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haga referenc
 - Recibir todos los parámetros por valor y no por referencia.
 - Utilizar tipos de parámetros que sean compatibles con los especificados en la función de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Si el tipo de datos devuelto de la función CLR especifica un tipo de tabla (RETURNS TABLE), el tipo de datos devuelto del método de \<method_specifier> debe ser **IEnumerator** o **IEnumerable**, y se da por supuesto que el creador de la función implementa la interfaz. A diferencia de las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], las funciones CLR no pueden incluir restricciones PRIMARY KEY, UNIQUE o CHECK en \<table_type_definition>. Los tipos de datos de las columnas especificadas en \<table_type_definition> deben coincidir con los tipos de las columnas correspondientes del conjunto de resultados devuelto por el método en \<method_specifier> en tiempo de ejecución. Esta comprobación del tipo no se lleva a cabo en el momento de crear la función.
+Si el tipo de datos devuelto de la función CLR especifica un tipo de tabla (RETURNS TABLE), el tipo de datos devuelto del método de \<method_specifier> debe ser **IEnumerator** o **IEnumerable**, y se da por supuesto que el creador de la función implementa la interfaz. A diferencia de las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], las funciones CLR no pueden incluir restricciones PRIMARY KEY, UNIQUE o CHECK en \<table_type_definition>. Los tipos de datos de las columnas especificadas en \<table_type_definition> deben coincidir con los tipos de las columnas correspondientes del conjunto de resultados que devuelve el método en \<method_specifier> en tiempo de ejecución. Esta comprobación del tipo no se lleva a cabo en el momento de crear la función.
 
 Para más información sobre la programación de funciones CLR, vea [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md) (Funciones CLR definidas por el usuario).
 

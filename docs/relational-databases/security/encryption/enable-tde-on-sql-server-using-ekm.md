@@ -1,5 +1,6 @@
 ---
 title: Habilitar TDE en SQL Server con EKM | Microsoft Docs
+description: Habilite el cifrado de datos transparente en SQL Server para proteger una clave de base de datos mediante una clave asimétrica en un módulo de administración extensible de claves con Transact-SQL.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 205f1f3bbb4268545848903aa8b71915f746c601
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882171"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Habilitar TDE en SQL Server con EKM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este artículo se describe cómo habilitar el cifrado de datos transparente (TDE) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger una clave de cifrado de base de datos mediante una clave asimétrica almacenada en un módulo EKM (Administración extensible de claves) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  TDE cifra el almacenamiento de una base de datos completa mediante el uso de una clave simétrica denominada clave de cifrado de base de datos. La clave de cifrado de base de datos también se puede proteger utilizando un certificado que se protege mediante la clave maestra de base de datos de la base de datos maestra. Para obtener más información sobre cómo proteger la clave de cifrado de base de datos usando la clave maestra de base de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Para obtener más información sobre cómo configurar TDE cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en una máquina virtual de Azure, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obtener más información sobre cómo configurar TDE con una clave del Almacén de claves de Azure, vea [Usar el Conector de SQL Server con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 

@@ -1,5 +1,6 @@
 ---
 title: ft notify bandwidth (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "ft notify bandwidth". Vea cómo afecta al número de búferes que SQL Server mantiene en el grupo de búferes de memoria pequeños.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772470"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice la opción **ft notify bandwidth** (ancho de banda de notificación de texto completo) para especificar el tamaño hasta el que pueden crecer los grupos de búferes de memoria pequeños. Los búferes de memoria pequeños tienen un tamaño de 64 kilobytes (KB). El valor del parámetro *max* especifica el número máximo de búferes que debería mantener el administrador de memoria de texto completo en un grupo de búferes pequeño. Si el valor de **max** es cero, no habrá ningún límite superior para el número de búferes que pueden estar en un grupo de búferes pequeños.  
   

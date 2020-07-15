@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773905"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la de instantáneas admiten la publicación de datos en suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **En este tema**  
@@ -47,7 +47,7 @@ ms.locfileid: "75322027"
   
          La instantánea se crea una vez habilitada la publicación para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de garantizar que el Agente de instantáneas genera scripts de inicialización e instantáneas adecuados para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Habilitar la publicación para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el cuadro de diálogo **Propiedades de la publicación: \<nombreDePublicación>** . Para obtener más información acerca de este paso, vea [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
+3.  Habilite la publicación para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el cuadro de diálogo **Propiedades de la publicación: \<PublicationName>** . Para obtener más información acerca de este paso, vea [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
   
 4.  Cree una suscripción mediante el Asistente para nuevas suscripciones. En este tema se proporciona más información acerca de este paso.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75322027"
   
 2.  Haga clic con el botón secundario en la publicación y, a continuación, haga clic en **Ver estado del agente de instantáneas**.  
   
-3.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<publicación>** , haga clic en **Iniciar**.  
+3.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<Publication>** , haga clic en **Iniciar**.  
   
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   

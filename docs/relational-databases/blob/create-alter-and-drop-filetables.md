@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768016"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe cómo crear una nueva FileTable. O bien, modificar o quitar una FileTable existente.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Crear una FileTable  
@@ -176,7 +176,7 @@ GO
 |Restricciones CHECK|Las restricciones CHECK definidas por el sistema se aplican a los siguientes requisitos:<br /><br /> Nombres de archivo válidos.<br /><br /> Atributos de archivo válidos.<br /><br /> El objeto primario debe ser un directorio.<br /><br /> La jerarquía del espacio de nombres se bloquea durante la manipulación de archivos.|  
   
  **Convención de nomenclatura para las restricciones definidas por el sistema**  
- Las restricciones definidas por el sistema descritas arriba reciben su nombre en el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
+ A las restricciones definidas por el sistema descritas anteriormente se les asigna un nombre con el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
   
 -   *<constraint_type>* es CK (restricción CHECK), DF (restricción DEFAULT), FK (clave externa), PK (clave principal) o UQ (restricción UNIQUE).  
   

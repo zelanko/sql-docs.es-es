@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763215"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo mover bases de datos del sistema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bases de datos del sistema puede resultar útil en las situaciones siguientes:  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68100461"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Mover la base de datos Resource  
- La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
+ La ubicación de la base de datos Resource es \<*drive*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100461"
   
 2.  Haga clic con el botón derecho en **Registros de errores** y haga clic en **Configurar**.  
   
-3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.<nombreDeInstancia>\MSSQL\Log\\.  
+3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<version>.<nombre_instancia>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Cambiar la ubicación predeterminada de la base de datos  
   

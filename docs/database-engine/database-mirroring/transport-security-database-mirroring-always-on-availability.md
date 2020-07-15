@@ -1,6 +1,6 @@
 ---
 title: 'Seguridad de transporte: Grupos de disponibilidad y creación de reflejo de base de datos'
-description: Obtenga información sobre cómo proteger el transporte de mensajes intercambiados entre las bases de datos que participan en un grupo de disponibilidad AlwaysOn o una sesión de creación de reflejo de la base de datos hospedada en SQL Server.
+description: Obtenga información sobre cómo proteger los mensajes entre las bases de datos que participan en un grupo de disponibilidad Always On o una sesión de creación de reflejos de una base de datos hospedada en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36c0f0d6ff5e4da43291f27c7f7bd47d1b736d1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719993"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La seguridad en el transporte implica la autenticación y, opcionalmente, el cifrado de los mensajes intercambiados entre las bases de datos. Para la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], la autenticación y el cifrado se configuran en el extremo de creación de reflejo de la base de datos. Para ver una introducción a los puntos de conexión de creación de reflejo de la base de datos, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   

@@ -1,5 +1,6 @@
 ---
 title: Jerarquía de cifrado | Microsoft Docs
+description: Obtenga información sobre la infraestructura de cifrado jerárquico y administración de claves de SQL Server. Almacene las claves en un módulo de administración extensible de claves.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765003"
 ---
 # <a name="encryption-hierarchy"></a>Jerarquía de cifrado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifra los datos con una infraestructura de cifrado jerárquico y administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
   
  La siguiente ilustración muestra que cada nivel de la jerarquía de cifrado cifra el nivel que tiene por debajo y muestra las configuraciones de cifrado más comunes. El acceso al principio de la jerarquía se suele proteger mediante una contraseña.  

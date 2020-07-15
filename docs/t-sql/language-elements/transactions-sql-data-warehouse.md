@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121585"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197411"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transacciones (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Una transacción es un grupo de una o varias instrucciones de base de datos totalmente confirmadas o totalmente revertidas. Cada transacción es atómica, coherente, aislada y durable (ACID). Si la transacción se realiza correctamente, se confirman todas las instrucciones que contiene. Si se produce un error en la transacción, es decir, se produce un error en al menos una de las instrucciones del grupo, se revierte todo el grupo.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121585"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Si un error que no sea de una instrucción de tiempo de ejecución impide la terminación correcta de una transacción, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] revierte automáticamente la transacción y libera todos los recursos que mantiene. Por ejemplo, si se interrumpe la conexión de red del cliente con una instancia de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o si el cliente se desconecta de la aplicación, las transacciones pendientes de la conexión se revierten al estado anterior cuando la red notifica la interrupción a la instancia.  
   
- Si se produce un error de instrucción de tiempo de ejecución en un lote, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comporta de forma coherente a **XACT_ABORT** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecido en **ON** y se revierte la transacción completa. Para obtener más información sobre la configuración de **XACT_ABORT**, vea [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Si se produce un error de instrucción de tiempo de ejecución en un lote, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comporta de forma coherente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XACT_ABORT**de** establecido en **ON** y se revierte la transacción completa. Para obtener más información sobre la configuración de **XACT_ABORT**, vea [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Notas generales  
  Una sesión solo puede ejecutar una transacción en un momento dado; no se admiten los puntos de retorno y las transacciones anidadas.  

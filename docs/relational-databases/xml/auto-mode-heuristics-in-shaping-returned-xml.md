@@ -1,5 +1,6 @@
 ---
 title: Heurística del modo AUTO para dar forma al XML devuelto | Microsoft Docs
+description: Obtenga información sobre cómo usar la heurística del modo AUTO con la cláusula FOR XML para comparar los valores de columna de las filas adyacentes y determinar la forma del XML que devuelve una consulta.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 68fec5b01fc88fba356c0091066850908804a88d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 99a1858ce4784c9a320258689827110e0df3dd8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529391"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística del modo AUTO para dar forma al XML devuelto
 

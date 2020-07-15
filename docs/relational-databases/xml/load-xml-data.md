@@ -1,5 +1,6 @@
 ---
 title: Carga de datos XML | Microsoft Docs
+description: Obtenga información sobre varios métodos para transferir datos XML a bases de datos de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738412"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede transferir los datos XML a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de varias maneras. Por ejemplo:  
   
 -   Si tiene datos en una columna [n]text o image en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede importar la tabla mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cambie el tipo de columna a XML mediante la instrucción ALTER TABLE.  
@@ -33,7 +34,7 @@ ms.locfileid: "80665131"
 ## <a name="bulk-loading-xml-data"></a>Carga masiva de datos XML  
  Puede realizar una carga masiva de datos XML en el servidor mediante las funciones de carga masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bcp. OPENROWSET permite cargar datos en una columna XML desde archivos. El siguiente ejemplo muestra esta función.  
   
-##### <a name="example-loading-xml-from-files"></a>Ejemplo: cargar XML desde archivos  
+##### <a name="example-loading-xml-from-files"></a>Ejemplo: Carga de XML desde archivos  
  Este ejemplo muestra cómo insertar una fila en la tabla T. El valor de la columna XML se carga desde el archivo C:\MyFile\xmlfile.xml como CLOB y se suministra el valor 10 a la columna de enteros.  
   
 ```  
@@ -53,7 +54,7 @@ FROM    (SELECT *
   
 -   Para usar una codificación explícita, use el tipo **varbinary()** , que no tiene interacción con páginas de códigos, o un tipo de cadena de la página de códigos apropiada. A continuación, asigne los datos a una columna, una variable o un parámetro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: especificar explícitamente una codificación  
+### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: Especificación explícita de una codificación  
  Suponga que tiene un documento XML, vcdoc, almacenado como **varchar(max)** , que no dispone de una declaración XML explícita. La instrucción siguiente agrega una declaración XML con la codificación "iso8859-1", concatena el documento XML, convierte el resultado a **varbinary(max)** de modo que se preserve la representación de bytes y, finalmente, lo convierte a XML. De este modo, se habilita el procesador XML para analizar los datos según la codificación especificada "iso8859-1" y generar la representación UTF-16 correspondiente para los valores de cadena.  
   
 ```  

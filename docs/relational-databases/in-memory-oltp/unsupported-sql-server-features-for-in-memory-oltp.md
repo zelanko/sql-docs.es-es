@@ -1,5 +1,6 @@
 ---
 title: 'Características no admitidas: OLTP en memoria'
+description: Obtenga información sobre las características de SQL Server que no se admiten para los objetos optimizados para memoria. Vea las características de OLTP en memoria que ahora se admiten.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753174"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo uso no se admite con objetos optimizados para memoria. Además, en la sección final se enumeran las características no admitidas para OLTP en memoria, pero que después se han admitido.
   

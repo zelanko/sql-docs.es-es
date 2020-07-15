@@ -1,5 +1,6 @@
 ---
 title: server trigger recursion (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre cómo la opción de recursividad de desencadenadores de servidor afecta a la recursividad en los desencadenadores de nivel de servidor de SQL Server. Vea cómo activar y desactivar la recursividad directa e indirecta.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - triggers [SQL Server], recursive
 - server trigger recursion option
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dc2dcd132ef32ba4f026a1a9b76d4e67df28b26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715558"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>server trigger recursion (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción **server trigger recursion** para especificar si se permite la activación repetida de los desencadenadores del servidor. Cuando esta opción se establece en 1 (activada), se permite esta activación repetida. Cuando el valor es 0 (desactivada), los desencadenadores del servidor no pueden activarse repetidamente. Cuando la opción server trigger recursion se establece en 0 (desactivada), solo se impide la recursividad directa. (Para deshabilitar la recursividad indirecta, establezca la opción **nested triggers** en 0). El valor predeterminado para esta opción es 1 (activada). El valor surte efecto inmediatamente (sin necesidad de reiniciar el servidor).  
   

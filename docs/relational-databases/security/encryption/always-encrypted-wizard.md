@@ -1,5 +1,6 @@
 ---
 title: Configuración del cifrado de columnas mediante el asistente para Always Encrypted | Microsoft Docs
+description: Obtenga información sobre cómo establecer la configuración de Always Encrypted para las columnas de las bases de datos mediante el Asistente para Always Encrypted en SQL Server.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627452"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columnas mediante el asistente para Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 El asistente para Always Encrypted es una herramienta eficaz que permite establecer la configuración de [Always Encrypted](always-encrypted-database-engine.md) elegida para las columnas de la base de datos seleccionadas. Según la configuración actual y la configuración de destino elegida, el asistente puede cifrar una columna, descifrarla (quitar el cifrado) o volver a cifrarla (por ejemplo, con una nueva clave de cifrado de columnas o con un tipo de cifrado diferente del actual configurado para la columna). Es posible configurar varias columnas en una misma ejecución del asistente.
 

@@ -1,5 +1,6 @@
 ---
 title: Configuración del acceso al almacén de administración de datos (SSMS)
+description: Obtenga información sobre cómo configurar el almacén de administración de datos para que admita almacenamiento de datos en una o varias instancias de SQL Server que utilizan el recopilador de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733868"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ ms.locfileid: "74056475"
   
  Especifique un inicio de sesión activando la casilla **Asignar** para el inicio de sesión.  
   
- **Miembros del rol de base de datos para:** *\<nombre de almacenamiento de datos>*  
+ **Pertenencia del rol de base de datos para:** *\<data warehouse name>*  
  Seleccione el rol del almacén de administración de datos al que se ha asignado el inicio de sesión haciendo clic en la casilla correspondiente a una o varias de las opciones siguientes:  
   
 -   **mdw_admin**  

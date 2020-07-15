@@ -1,5 +1,6 @@
 ---
 title: Clase de eventos Lock:Timeout | Microsoft Docs
+description: La clase de eventos Lock:Timeout indica que se ha agotado el tiempo de espera de una solicitud de bloqueo en un recurso debido a un bloqueo de cierre en el recurso en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737205"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (clase de eventos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La clase de eventos Lock:Timeout indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. El tiempo de espera está determinado por la función del sistema @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.  
   
  Utilice la clase de eventos Lock:Timeout para supervisar cuándo se producen las condiciones de tiempo de espera. Esta información es útil para determinar si los tiempos de espera afectan al rendimiento de la aplicación de manera significativa y qué objetos están implicados. Puede examinar el código de aplicación que modifica estos objetos para determinar si se pueden realizar cambios para minimizar los tiempos de espera.  

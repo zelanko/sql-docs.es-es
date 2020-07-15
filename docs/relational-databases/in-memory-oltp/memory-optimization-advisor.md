@@ -1,5 +1,6 @@
 ---
 title: Asesor de optimización de memoria | Microsoft Docs
+description: Use el asesor de optimización de memoria en SQL Server Management Studio para migrar tablas basadas en disco a tablas optimizadas para memoria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730863"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Los informes de análisis de rendimiento de transacciones (vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informan sobre qué tablas de la base de datos se beneficiarían de una conversión para usar OLTP en memoria. Después de identificar la tabla que quiere convertir para que use OLTP en memoria, puede usar el Asistente de optimización de memoria en SQL Server Management Studio para que le ayude a migrar la tabla basada en disco a una tabla optimizada para memoria.  
   

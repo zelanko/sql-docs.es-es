@@ -1,6 +1,7 @@
 ---
 title: Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo | Microsoft Docs
-ms.custom: ''
+description: Descubra cómo usar la opción "max worker threads" para configurar el número de subprocesos de trabajo disponibles en SQL Server a fin de procesar determinadas solicitudes.
+ms.custom: contperfq4
 ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -11,51 +12,62 @@ helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04a0a9401b765b86e83a6641bf8742d6b326cc13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696971"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo establecer la opción de configuración del servidor **máximo de subprocesos de trabajo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **máximo de subprocesos de trabajo** configura el número de subprocesos de trabajo disponibles para los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los servicios de subprocesos nativos de los sistemas operativos de forma que uno o varios subprocesos admitan cada red que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite de forma simultánea, otro subproceso controle los puntos de comprobación de la base de datos y un grupo de subprocesos controle a todos los usuarios. El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurar automáticamente el número de subprocesos de trabajo en el inicio. El valor predeterminado es el más adecuado para la mayor parte de los sistemas. No obstante, dependiendo de la configuración del sistema, el uso de un valor concreto para **máximo de subprocesos de trabajo** en ocasiones puede mejorar el rendimiento.  
-  
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Recomendaciones](#Recommendations)  
-  
-     [Seguridad](#Security)  
-  
--   **Para configurar la opción de máximo de subprocesos de trabajo, use:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **Seguimiento:**  [Después de configurar la opción de máximo de subprocesos de trabajo](#FollowUp)  
+En este tema se describe cómo establecer la opción de configuración del servidor **máximo de subprocesos de trabajo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción **max worker threads** configura el número de subprocesos de trabajo disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para procesar solicitudes de consulta, inicio de sesión, cierre de sesión y solicitudes de aplicación similares.
+
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los servicios de subprocesos nativos de los sistemas operativos para garantizar las condiciones siguientes:
+
+- Uno o más subprocesos admiten simultáneamente cada red que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite.
+
+- Un subproceso controla los puntos de control de base de datos.
+
+- Un grupo de subprocesos controla todos los usuarios.
+
+El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurar automáticamente el número de subprocesos de trabajo en el inicio. El valor predeterminado es el más adecuado para la mayor parte de los sistemas. No obstante, dependiendo de la configuración del sistema, el uso de un valor concreto para **máximo de subprocesos de trabajo** en ocasiones puede mejorar el rendimiento.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Si el número real de solicitudes de consulta es inferior al número establecido en la opción de **máximo de subprocesos de trabajo**, un subproceso controla cada solicitud de consulta. Sin embargo, si el número real de solicitudes de consulta es superior al número establecido en **máximo de subprocesos de trabajo**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupa los subprocesos de trabajo de manera que el siguiente subproceso de trabajo disponible pueda controlar la solicitud.  
+-   El número real de solicitudes de consulta puede superar el número establecido en **max worker threads**, en cuyo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupa los subprocesos de trabajo de manera que el siguiente subproceso de trabajo disponible pueda controlar la solicitud. Un subproceso de trabajo se asigna solo a las solicitudes activas y se libera una vez que se ha atendido la solicitud. Esto sucede incluso si la sesión de usuario o la conexión en la que se ha realizado la solicitud permanece abierta. 
+
+-   La opción de configuración del servidor **max worker threads** no limita todos los subprocesos que pueden generarse en el motor. Los subprocesos del sistema necesarios para tareas como Escritura diferida, Punto de control, Escritura de registro, Service Broker, Administrador de bloqueos u otras se generan fuera de este límite. Los grupos de disponibilidad usan algunos de los subprocesos de trabajo en el **límite máximo de subprocesos de trabajo**, pero también utilizan subprocesos del sistema (vea [Uso de subprocesos por parte de los grupos de disponibilidad](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)). Si se supera el número de subprocesos configurados, la siguiente consulta proporcionará información sobre las tareas del sistema que han generado los subprocesos adicionales.  
+  
+ ```sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
+    ON s.session_id = r.session_id  
+ INNER JOIN sys.dm_os_tasks AS t  
+    ON r.task_address = t.task_address  
+ INNER JOIN sys.dm_os_workers AS w  
+    ON t.worker_address = w.worker_address  
+ WHERE s.is_user_process = 0;  
+ ```  
+  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
--   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si sospecha que hay un problema de rendimiento, probablemente no se deba a la disponibilidad de subprocesos de trabajo. La causa más probable es que haya alguna E/S que haga que los subprocesos de trabajo esperen. Lo mejor es buscar la causa principal de un problema de rendimiento antes de cambiar el valor de configuración de máximo de subprocesos de trabajo.  
+-   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si sospecha que hay un problema de rendimiento, probablemente no se deba a la disponibilidad de subprocesos de trabajo. Es más probable que la causa esté relacionada con las actividades que ocupan los subprocesos de trabajo y no los liberan. Entre los ejemplos se incluyen consultas de ejecución prolongada o cuellos de botella en el sistema (E/S, bloqueo, tiempos de espera de bloqueo temporal y esperas de red), que provocan consultas de espera prolongada. Lo mejor es buscar la causa principal de un problema de rendimiento antes de cambiar el valor de configuración de máximo de subprocesos de trabajo. Para obtener más información sobre cómo evaluar el rendimiento, vea [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md).
   
 -   La agrupación de subprocesos permite optimizar el rendimiento cuando un gran número de clientes se conecta al servidor. Normalmente, se crea un subproceso del sistema operativo independiente para cada solicitud de la consulta. Sin embargo, cuando hay cientos de conexiones al servidor, el uso de un subproceso por solicitud de consulta puede consumir grandes cantidades de recursos del sistema. La opción de **máximo de subprocesos de trabajo** permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree un grupo de subprocesos de trabajo para atender un gran número de solicitudes de consulta, lo que mejora el rendimiento.  
   
--   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo para diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: * **Trabajos máximos predeterminados* + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
+-   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo (cuando el valor se establece en 0) basado en diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: ***Trabajos máximos predeterminados* + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
   
     |Número de CPU|Equipo de 32 bits (hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Equipo de 64 bits (hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Equipo de 64 bits (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
@@ -90,23 +102,6 @@ ms.locfileid: "81488334"
     > Para obtener recomendaciones sobre el uso de más de 64 CPU, vea [Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Si todos los subprocesos de trabajo están activos con consultas de ejecución prolongada, puede parecer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde hasta que finaliza un subproceso de trabajo y vuelve a estar disponible. Aunque no se trata de un defecto, puede que a veces este comportamiento no sea deseable. Si un proceso parece no responder y no se pueden procesar nuevas consultas, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión de administrador dedicada (DAC) y finalice el proceso. Para impedir este comportamiento, aumente el número máximo de subprocesos de trabajo.  
-  
- La opción de configuración del servidor **Máximo de subprocesos de trabajo** no limita todos los subprocesos que pueden generarse en el sistema. Los subprocesos necesarios para tareas como grupos de disponibilidad, Service Broker, administrador de bloqueos u otras se generan fuera de este límite. Si se supera el número de subprocesos configurados, la siguiente consulta proporcionará información sobre las tareas del sistema que han creado los subprocesos adicionales.  
-  
- ```sql  
- SELECT  s.session_id, r.command, r.status,  
-    r.wait_type, r.scheduler_id, w.worker_address,  
-    w.is_preemptive, w.state, t.task_state,  
-    t.session_id, t.exec_context_id, t.request_id  
- FROM sys.dm_exec_sessions AS s  
- INNER JOIN sys.dm_exec_requests AS r  
-    ON s.session_id = r.session_id  
- INNER JOIN sys.dm_os_tasks AS t  
-    ON r.task_address = t.task_address  
- INNER JOIN sys.dm_os_workers AS w  
-    ON t.worker_address = w.worker_address  
- WHERE s.is_user_process = 0;  
- ```  
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   
@@ -157,6 +152,4 @@ GO
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
-  
-  
+ [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)

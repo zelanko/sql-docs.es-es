@@ -1,5 +1,6 @@
 ---
 title: Administrar el tamaño del archivo de registro de transacciones | Microsoft Docs
+description: Obtenga información sobre cómo supervisar el tamaño del registro de transacciones de SQL Server, reducir y ampliar un registro, optimizar la tasa de crecimiento del registro de tempdb y controlar el crecimiento del registro de transacciones.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668009"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En este tema se incluye información sobre cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Supervisión del uso del espacio del registro  

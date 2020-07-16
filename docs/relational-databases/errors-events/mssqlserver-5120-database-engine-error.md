@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5228 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679480"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279110"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85679480"
   Diagnostique y corrija el error del sistema operativo y, después, vuelva a intentar realizar la operación. Hay varios estados que pueden ayudar a Microsoft a reducir el área del producto donde se está produciendo el error. 
   
 ### <a name="access-is-denied"></a>Acceso denegado 
-Si obtiene el error ```Access is Denied``` del sistema operativo = 5, tenga en cuenta estos métodos:
+Si obtiene el error `Access is Denied` del sistema operativo = 5, tenga en cuenta estos métodos:
    -  Compruebe los permisos que se establecen en el archivo examinando las propiedades del archivo en el Explorador de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza grupos de Windows para aprovisionar Access Control en los distintos recursos de archivo. Asegúrese de que el grupo adecuado [con nombres como SQLServerMSSQLUser$ComputerName$MSSQLSERVER o SQLServerMSSQLUser$ComputerName$InstanceName] tiene los permisos necesarios en el archivo de base de datos mencionado en el mensaje de error. Vea [Configuración de permisos del sistema de archivos para el acceso al motor de base de datos](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md) para obtener más información. Asegúrese de que el grupo de Windows incluye realmente la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el identificador de seguridad del servicio.
    -  Revise la cuenta de usuario en la que se ejecuta actualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar el administrador de tareas de Windows para obtener esta información. Busque el valor "Nombre de usuario" para el archivo ejecutable "sqlservr.exe". Además, si ha cambiado recientemente la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe saber que la manera admitida para realizar esta operación es usar la utilidad [Administrador de configuración de SQL Server](../sql-server-configuration-manager.md). 
    -  En función del tipo de operación (abrir bases de datos durante el inicio del servidor, adjuntar una base de datos, restaurarla, etc.) la cuenta que se usa para la suplantación y el acceso al archivo de base de datos puede variar. Revise el tema [Proteger archivos de datos y de registro](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) para comprender qué operación establece qué permiso y para qué cuentas. Use una herramienta como [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) de Windows SysInternals para saber si el acceso al archivo se produce en el contexto de seguridad de la cuenta de inicio del servicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o el identificador de seguridad del servicio, o una cuenta suplantada.
@@ -68,7 +68,7 @@ Si obtiene el error ```Access is Denied``` del sistema operativo = 5, tenga en c
 ### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>Asociación de archivos que residen en almacenamiento conectado a la red  
 Si no puede volver a adjuntar una base de datos que reside en almacenamiento conectado a la red, es posible que se registre un mensaje similar al siguiente en el registro de aplicaciones.
 
-```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
+`Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).`
 
 Este problema se produce porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restablece los permisos de archivo al desasociar la base de datos. Al intentar volver a adjuntar la base de datos, se produce un error debido a los permisos limitados de recursos compartidos.
 
@@ -76,13 +76,13 @@ Para solucionarlo, siga estos pasos:
 1. Use la opción de inicio -T para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use esta opción de inicio para activar la marca de seguimiento 1802 en el [Administrador de configuración de SQL Server](../sql-server-configuration-manager.md) (vea [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) para obtener información sobre 1802). Para obtener más información sobre cómo cambiar los parámetros de inicio, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 2. Use el comando siguiente para volver a adjuntar la base de datos.
-   ```tsql
+   ```sql
     exec sp_detach_db DatabaseName
     go 
    ```
 
 3. Use el siguiente comando para volver a adjuntar la base de datos.
-   ```tsql
+   ```sql
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```

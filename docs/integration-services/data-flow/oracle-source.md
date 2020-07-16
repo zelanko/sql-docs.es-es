@@ -1,5 +1,5 @@
 ---
-title: Origen de Oracle | Microsoft Docs
+title: Origen de Oracle
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542204"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196100"
 ---
 # <a name="oracle-source"></a>Origen de Oracle
 
@@ -70,7 +70,7 @@ Para más información, consulte una de estas secciones:
 - [Editor de origen de Oracle (página Columnas)](#oracle-source-editor-columns-page)
 - [Editor de origen de Oracle (página Salida de error)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Origen de Oracle](media/oracle-source.png)
 
 El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.
 

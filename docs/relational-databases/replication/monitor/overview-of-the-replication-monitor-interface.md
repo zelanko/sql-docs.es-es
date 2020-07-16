@@ -14,15 +14,15 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4906f088a20b6028958bf1d613e839dbfe568f26
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286922"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159793"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Ver información de toda la topología  
@@ -227,7 +227,7 @@ ms.locfileid: "76286922"
   
      Este cuadro de diálogo permite: cambiar las propiedades de perfiles, crear y eliminar perfiles, especificar un perfil predeterminado y especificar que todos los agentes de un tipo específico (por ejemplo, los Agentes de instantáneas) deben utilizar un perfil determinado.  
   
--   **\<nombreDelPerfilDeAgente> Propiedades**  
+-   **Propiedades de \<AgentProfileName>**  
   
      Este cuadro de diálogo permite ver y editar la configuración de parámetros de un perfil.  
   

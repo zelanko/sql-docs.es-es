@@ -1,5 +1,5 @@
 ---
-title: nodes() (método del tipo de datos XML) | Microsoft Docs
+title: nodes() (método del tipo de datos XML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731049"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393063"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *XQuery*  
 Es un literal de cadena, una expresión XQuery. Si la expresión de consulta construye nodos, éstos se exponen en el conjunto de filas resultante. Si la expresión de consulta da lugar a una secuencia vacía, el conjunto de filas también está vacío. Si la expresión de consulta da lugar estáticamente a una secuencia que contiene valores atómicos en lugar de nodos, se produce un error estático.  
   

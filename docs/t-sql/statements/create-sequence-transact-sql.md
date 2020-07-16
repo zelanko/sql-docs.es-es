@@ -1,5 +1,5 @@
 ---
-title: CREATE SEQUENCE (Transact-SQL) | Microsoft Docs
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767050"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392963"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un objeto de secuencia y especifica sus propiedades. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y se puede configurar para reiniciarse (en un ciclo) cuando se agota. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas concretas. Las aplicaciones hacen referencia a un objeto de secuencia para recuperar su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia un objeto de secuencia y coordinar los valores a través de varias filas y tablas.  
@@ -54,7 +55,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *sequence_name*  
 Especifica el nombre exclusivo por el que se conoce la secuencia en la base de datos. El tipo es **sysname**.  
   
@@ -240,7 +243,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  Una lista parcial del resultado demuestra los valores predeterminados.  
   
-|||  
+| Output | Valor predeterminado|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

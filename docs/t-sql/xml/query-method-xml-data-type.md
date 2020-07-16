@@ -1,5 +1,5 @@
 ---
-title: query() (método del tipo de datos xml) | Microsoft Docs
+title: query() (método de tipo de datos xml)
 ms.custom: ''
 ms.date: 04/16/2020
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893891"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393043"
 ---
 # <a name="query-method-xml-data-type"></a>query() (método de tipo de datos xml)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,9 @@ Especifica una expresión XQuery en una instancia del tipo de datos **xml**. El 
 query ('XQuery')  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 XQuery  
 Es una cadena, una expresión XQuery, que consulta nodos XML como, por ejemplo, elementos y atributos, en una instancia XML.  
   

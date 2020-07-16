@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731066"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393073"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *Expression1*  
  Identifica uno o varios nodos que se van a insertar. Puede ser una instancia XML constante; una referencia a una instancia del tipo de datos XML con tipo de la misma colección de esquemas XML en la que se aplica el método modify; una instancia del tipo de datos XML sin tipo que usa una función **sql:column()** /**sql:variable()** independiente; o una expresión XQuery. La expresión puede proporcionar un nodo, y también un nodo de texto, o una secuencia ordenada de nodos. No se puede resolver en el nodo raíz (/). Si la expresión da como resultado un valor o una secuencia de valores, los valores se insertan como un solo nodo de texto y cada valor de la secuencia se separa con un espacio. Si se especifican varios nodos como constante, los nodos se incluyen entre paréntesis y se separan mediante comas. No es posible insertar secuencias heterogéneas, como una secuencia de elementos, atributos o valores. Si *Expression1* se resuelve en una secuencia vacía, no se produce ninguna inserción ni se devuelven errores.  
   

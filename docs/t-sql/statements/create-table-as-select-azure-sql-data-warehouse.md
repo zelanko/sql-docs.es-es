@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632926"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279521"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) es una de las características más importantes de T-SQL disponibles. Se trata de una operación de ejecución completamente en paralelo que crea una tabla basada en la salida de una instrucción SELECT. CTAS es la forma más sencilla y rápida de crear una copia de una tabla.   
  
@@ -136,7 +136,6 @@ Para más información, vea [Notas generales](https://msdn.microsoft.com/library
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-Azure SQL Data Warehouse todavía no admite estadísticas de creación automática o actualización automática.  Para obtener el mejor rendimiento de las consultas, es importante crear estadísticas en todas las columnas de todas las tablas después de ejecutar CTAS y después de que se realicen cambios importantes en los datos. Para más información, consulte [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 Se puede crear un índice de almacén de columnas agrupado y ordenado en columnas de cualquier tipo de datos que se admita en Azure SQL Data Warehouse, excepto en las columnas de cadena.  
 

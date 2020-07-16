@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 834f3e28b8e368b29c2465f44f6a23528ad32626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f26d4324170b6a8c35b1785865c0ba614a3a181c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781089"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279185"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,36 +35,42 @@ ms.locfileid: "85781089"
 ## <a name="explanation"></a>Explicación  
 Este error se produce cuando una variable se utiliza en un script SQL sin declararla primero. En el ejemplo siguiente se devuelve el error 137 para las instrucciones SET y SELECT porque no se ha declarado **\@mycol**.  
   
-SET @mycol = 'ContactName'  
+```sql
+SET @mycol = 'ContactName';  
   
-SELECT @mycol  
+SELECT @mycol; 
+```
   
 Una de las causas más complicadas de este error incluye el uso de una variable que se declara fuera de la instrucción EXECUTE. Por ejemplo, la variable **\@mycol** especificada en la instrucción SELECT es local en la instrucción SELECT; por tanto, está fuera de la instrucción EXECUTE.  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
   
 DECLARE @mycol nvarchar(20);  
   
-SET @mycol = 'Name'  
+SET @mycol = 'Name';  
   
-EXECUTE ('SELECT @mycol FROM Production.Product;')  
+EXECUTE ('SELECT @mycol FROM Production.Product;'); 
+```
   
 ## <a name="user-action"></a>Acción del usuario  
 Compruebe que cualquier variable que se use en un script SQL se declara antes de utilizarse en otra parte del script.  
   
 Vuelva a escribir el script para que no haga referencia a las variables de la instrucción EXECUTE que se declaran fuera de ella. Por ejemplo:  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
   
-DECLARE @mycol nvarchar(20)  
+DECLARE @mycol nvarchar(20) ;  
   
-SET @mycol = 'Name'  
+SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';)  
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+```
   
 ## <a name="see-also"></a>Consulte también  
 [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)  

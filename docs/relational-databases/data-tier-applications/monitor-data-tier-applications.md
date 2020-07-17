@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781662"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406128"
 ---
 # <a name="monitor-data-tier-applications"></a>Supervisar aplicaciones de capa de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una aplicación de capa de datos (DAC) se puede supervisar desde el **Explorador de Utilidad** y el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto con las vistas de sistema y las tablas. Además, todos los objetos de la base de datos contenida en la DAC se pueden supervisar usando las técnicas de supervisión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y base de datos estándar.  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
- Si implementa una DAC en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], la información sobre la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Después puede ver información básica de estado sobre la DAC mediante el [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Explorador de la utilidad**de**.  
+ Si implementa una DAC en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], la información sobre la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Después puede ver información básica de estado sobre la DAC mediante el **Explorador de la utilidad** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  El **Explorador de objetos** SSMS muestra información de configuración básica acerca de cada DAC implementada en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], independientemente de si la instancia está administrada en la utilidad de SQL Server. Además, la base de datos asociada con la DAC implementada puede supervisarse con los mismos procedimientos usados para supervisar cualquier base de datos.  
   
 ## <a name="using-the-sql-server-utility"></a>Usar la utilidad de SQL Server  
- En la página de detalles **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Explorador de la utilidad**de** se muestra un panel que notifica el uso de los recursos de todas las DAC implementadas en instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El panel superior de la página de detalles enumera cada DAC implementada con indicadores visuales que muestran si su utilización de los recursos de archivo y CPU está fuera de las directivas definidas para la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona una DAC en la vista de lista, los detalles adicionales se muestran en pestañas en la sección inferior de la página. Para obtener más información sobre la información presentada en la página de detalles, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ En la página de detalles **Aplicaciones de capa de datos implementadas** del **Explorador de la utilidad** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] se muestra un panel que notifica el uso de los recursos de todas las DAC implementadas en instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El panel superior de la página de detalles enumera cada DAC implementada con indicadores visuales que muestran si su utilización de los recursos de archivo y CPU está fuera de las directivas definidas para la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona una DAC en la vista de lista, los detalles adicionales se muestran en pestañas en la sección inferior de la página. Para obtener más información sobre la información presentada en la página de detalles, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Después de usar la página de detalles **Aplicaciones de capa de datos implementadas** para identificar rápidamente las DAC que se infrautilizan o agotan su recurso de hardware, puede hacer planes para resolver los posibles problemas. Varias DAC que no usen totalmente sus recursos de hardware actuales podrían consolidarse en un único servidor, liberando algunos de los servidores para otros usos. Si una DAC está agotando los recursos en su servidor actual, se puede mover a un servidor más grande o se pueden agregar recursos adicionales al servidor actual.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85781662"
   
 1.  Seleccione el menú **Ver/Explorador de objetos** .  
   
-2.  Conéctese a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]desde el panel Explorador de objetos.  
+2.  Conéctese a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde el panel Explorador de objetos.  
   
 3.  Seleccione el menú **Ver/Detalles del Explorador de objetos** .  
   

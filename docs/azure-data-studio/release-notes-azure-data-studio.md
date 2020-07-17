@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758418"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406258"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="july-2020"></a>Julio de 2020
+
+15 de julio de 2020 &nbsp; / &nbsp; versión: 1.20.0
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Nueva guía de características agregada | En la página de bienvenida y en la paleta de comandos, los usuarios ahora pueden iniciar una guía de características para obtener un tutorial de las características más usadas, como el viewlet de conexiones, el viewlet de cuadernos y el marketplace de extensiones. |
+| Nuevas características de los cuadernos | &bull; &nbsp; Compatibilidad con encabezados en la barra de herramientas de Markdown<br/> &bull; &nbsp; Vista previa de Markdown en paralelo en las celdas de texto
+| Posibilidad de arrastrar y colocar columnas y tablas en el editor de consultas | Los usuarios ahora pueden arrastrar y colocar directamente columnas y tablas del viewlet de conexiones al editor de consultas. |
+| Icono de la cuenta de Azure agregado a la barra de actividades | Más reconocible para iniciar sesión en Azure |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>Junio de 2020
 

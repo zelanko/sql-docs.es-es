@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ed02b755d18191eba31fe771168932e8f2ab0c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f4fac1af45571023b718ec474cb69a78a272d0ad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032186"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551040"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7933|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texto del mensaje|Error de tabla: existe un id. de directorio FILESTREAM F_ID para una partición, pero la partición correspondiente no existe en la base de datos.|  
+|Texto del mensaje|Error de tabla: existe un id. de directorio de secuencia de archivos F_ID para una partición, pero la partición correspondiente no existe en la base de datos.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se ha encontrado un directorio de conjunto de filas en el espacio de datos FILESTREAM; sin embargo, falta su partición correspondiente en la base de datos.  

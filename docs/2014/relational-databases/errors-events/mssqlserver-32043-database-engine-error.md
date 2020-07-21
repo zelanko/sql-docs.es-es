@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1db8560c2197ef95f01e7dd66a711d4b7a225646
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 27b08927861e9222fe87ebb108d8595f63edb813
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053951"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551740"
 ---
 # <a name="mssqlserver_32043"></a>MSSQLSERVER_32043
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|32043|  
@@ -43,7 +43,7 @@ ms.locfileid: "85053951"
  Compruebe las cargas en las instancias del servidor principal y reflejado y su conexión de red para localizar la causa.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   

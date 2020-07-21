@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f13316bdd3147bb0ad63c8d4a2fb18f1fce74006
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 129e1d8aa2725594871eaa48c2c983767eb46d73
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033408"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551560"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|3456|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|REC_REDOLSNMISMATCH|  
-|Texto del mensaje|No se pudo rehacer la entrada de registro %S_LSN para el identificador de transacción %S_XID de la página %S_PGID, base de datos '%.*ls' (identificador de base de datos %d). Página: LSN = %S_LSN, tipo = %ld. Registro: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure la base de datos desde una copia de seguridad o repárela.|  
+|Texto del mensaje|No se pudo rehacer la entrada de registro %S_LSN para el identificador de transacción %S_XID de la página %S_PGID, base de datos '%.*ls' (identificador de base de datos %d). Página: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure la base de datos desde una copia de seguridad o repárela.|  
   
 ## <a name="explanation"></a>Explicación  
  La operación de restauración no pudo rehacer el registro de transacciones. Este error ha colocado la base de datos en el estado SUSPECT. El grupo de archivos principal, y posiblemente otros grupos de archivos, es sospechoso y puede estar dañado. La base de datos no se puede recuperar durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, por consiguiente, no está disponible. Se requiere una acción por parte del usuario para resolver el problema.  

@@ -2,7 +2,7 @@
 title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
 description: Obtenga información sobre los grupos de acciones de nivel de servidor, de base de datos y de auditoría, así como las acciones individuales en la auditoría de SQL Server.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885600"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301904"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885600"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña para un rol de aplicación. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Este evento se desencadena al crear, modificar o eliminar una auditoría. Este evento se desencadena al crear, modificar o eliminar una especificación de auditoría. Todos los cambios realizados en una auditoría se auditan en ella. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Este evento tiene lugar cuando se emite un comando de copia de seguridad o de restauración. Equivalente a la clase de eventos [Audit Backup and Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes termina de ejecutarse. Se genera cuando el lote se completa, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente, incluido el resultado.|  
-|BATCH_STARTED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes empieza a ejecutarse. Se genera antes de la ejecución, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente.|  
+|BATCH_COMPLETED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes termina de ejecutarse. Se genera cuando el lote se completa, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente, incluido el resultado. **Agregado en SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes empieza a ejecutarse. Se genera antes de la ejecución, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente. **Agregado en SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Este evento se provoca para notificar mensajes de auditoría relacionados con la seguridad de transporte de Service Broker. Equivalente a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar una base de datos. Este evento se desencadena al crear, modificar o quitar cualquier base de datos. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos.|  

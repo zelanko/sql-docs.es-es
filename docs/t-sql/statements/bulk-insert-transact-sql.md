@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767246"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380868"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *database_name* Es el nombre de la base de datos donde reside la tabla o la vista especificada. Si no se especifica, es la base de datos actual.
@@ -120,7 +122,7 @@ Una situación en la que quizá desee que las restricciones estén deshabilitada
 > [!NOTE]
 > La opción MAXERRORS no se aplica a la comprobación de restricciones.
 
-CODEPAGE **=** { **"** ACP **"**  |  **"** OEM **"**  |  **"** RAW **"**  |  **"** _página_de_códigos_ **"** } Especifica la página de códigos de los datos del archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**. Para obtener un ejemplo, vea [Especificación de una página de códigos](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } Especifica la página de códigos de los datos del archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**. Para obtener un ejemplo, vea [Especificación de una página de códigos](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > CODEPAGE no es una opción admitida en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], solo la opción **"RAW"** se permite para CODEPAGE.
@@ -136,7 +138,7 @@ CODEPAGE **=** { **"** ACP **"**  |  **"** OEM **"**  |  **"** RAW **"**  |  **"
 |*code_page*|Número específico de una página de códigos; por ejemplo, 850.<br /><br /> **&#42;&#42;Importante&#42;&#42;** Las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **"char"**  |  **"native"**  |  **"widechar"**  |  **"widenative"** } Especifica que BULK INSERT realiza la operación de importación con el valor de tipo de archivo de datos especificado.
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } Especifica que BULK INSERT realiza la operación de importación con el valor del tipo de archivo de datos especificado.
 
 &nbsp;
 

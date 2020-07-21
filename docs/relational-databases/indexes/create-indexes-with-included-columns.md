@@ -21,12 +21,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aa3bdca463f48f35b5114d4aa905f05d50dc30f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760822"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279220"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85760822"
   
 ###  <a name="design-recommendations"></a><a name="DesignRecs"></a> Recomendaciones de diseño  
   
--   Rediseñe índices no clúster con un tamaño de las claves de índice grande para que solo las columnas utilizadas para búsquedas sean columnas de clave. Convierta todas las demás columnas que abarcan la consulta en columnas sin clave. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
+-   Rediseñe índices no agrupados que tengan una clave de índice de gran tamaño, de tal modo que solo las columnas utilizadas para búsquedas sean columnas de clave. Convierta todas las demás columnas que abarcan la consulta en columnas sin clave. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
   
 -   Incluya columnas sin clave en un índice no agrupado para evitar que se superen las limitaciones actuales de tamaño del índice de un máximo de 32 columnas de clave y un tamaño máximo de clave de índice de 1700 bytes (16 columnas clave y 900 bytes antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de las claves de índice.  
   

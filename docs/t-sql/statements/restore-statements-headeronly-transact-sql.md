@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262099"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279514"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Fecha de expiración del conjunto de copia de seguridad.|  
 |**Compressed**|**BIT(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**Posición**|**smallint**|Posición del conjunto de copia de seguridad en el volumen (para utilizarlo con la opción FILE =).|  
-|**DeviceType**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Cinta:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> Los nombres de dispositivos lógicos y los números de dispositivo se encuentran en **sys.backup_devices**; para más información, vea [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Cinta:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> URL<br /><br /> **9** = Lógico<br /><br /> **109** = Físico<br /><br />  Los nombres de dispositivos lógicos y los números de dispositivo se encuentran en **sys.backup_devices**; para más información, vea [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nombre del usuario que ha ejecutado la operación de copia de seguridad.|  
 |**ServerName**|**nvarchar(128)**|Nombre del servidor que escribió el conjunto de copia de seguridad.|  
 |**DatabaseName**|**nvarchar(128)**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo de copia de seguridad como cadena, uno de los siguientes valores:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Número de identificación único del conjunto de copia de seguridad mediante el cual se identifica en los medios.|  
 |**CompressedBackupSize**|**bigint**|Recuento de bytes del conjunto de copia de seguridad. Para las copias de seguridad sin comprimir, este valor es igual que **BackupSize**.<br /><br /> Para calcular la razón de compresión, use **CompressedBackupSize** y **BackupSize**.<br /><br /> Durante una actualización de **msdb**, se establece este valor para que coincida con el valor de la columna **BackupSize**.|  
-|**containment**|**tinyint** not NULL|**Válido para **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
+|**containment**|**tinyint** not NULL|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Algoritmo de cifrado usado para cifrar la copia de seguridad. NO_Encryption indica que no se cifró la copia de seguridad. Cuando no se puede determinar el valor correcto, el valor debe ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  

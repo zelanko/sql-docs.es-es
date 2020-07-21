@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091651"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393183"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Crea un nuevo grupo de disponibilidad, si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada para la característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+Crea un nuevo grupo de disponibilidad, si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada para la característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 > [!IMPORTANT]  
 >  Ejecute CREATE AVAILABILITY GROUP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar como réplica principal inicial del nuevo grupo de disponibilidad. Esta instancia de servidor debe residir en un nodo de clúster de conmutación por error de Windows Server (WSFC).  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
- *group_name*  
- Especifica el nombre del nuevo grupo de disponibilidad. *group_name* debe ser un [identificador](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe ser único en todos los grupos de disponibilidad del clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
+*group_name*  
+Especifica el nombre del nuevo grupo de disponibilidad. *group_name* debe ser un [identificador](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe ser único en todos los grupos de disponibilidad del clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Especifica una preferencia sobre cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige realizar copias de seguridad. Puede crear un script con un trabajo de copia de seguridad para que se tenga en cuenta la preferencia de copia de seguridad automatizada. Es importante entender que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas.  
   
  Los valores admitidos son los siguientes:  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Para ver la preferencia de copia de seguridad automatizada de un grupo de disponibilidad existente, seleccione la columna **automated_backup_preference** o **automated_backup_preference_desc** de la vista de catálogo [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Además, se puede usar [sys.fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para determinar la réplica de copia de seguridad preferida.  Esta función devuelve 1 al menos para una de las réplicas, aun cuando `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Especifica qué condiciones de error desencadenan una conmutación automática por error de este grupo de disponibilidad. FAILURE_CONDITION_LEVEL se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de disponibilidad de confirmación sincrónica (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Además, las condiciones de error pueden desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
   
  Los niveles de condición de error (1-5) abarcan desde el nivel menos restrictivo (1) al más restrictivo (5). Un nivel de condición dado abarca todos los niveles menos restrictivos. Así pues, el nivel de condición más estricto (el nivel 5) incluye los cuatro niveles de condición menos restrictivos (1-4), el nivel 4 incluye los niveles 1-3, y así sucesivamente. En la tabla siguiente se describe la condición de error correspondiente a cada nivel.  

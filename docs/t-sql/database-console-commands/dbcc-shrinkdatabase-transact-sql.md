@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757208"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279541"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Reduce el tamaño de los archivos de datos y de registro de la base de datos especificada.
   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>Argumentos  
 _nombre\_base de datos_ | _id\_base de datos_ | 0  
 Es el nombre o id. de la base de datos que se va a reducir. 0 especifica que se usa la base de datos actual.  
@@ -93,7 +104,7 @@ En la tabla siguiente se describen las columnas del conjunto de resultados.
 ## <a name="remarks"></a>Observaciones  
 
 >[!NOTE]
-> Actualmente, Azure SQL Data Warehouse no admite DBCC SHRINKDATABASE. No se recomienda ejecutar este comando, ya que se trata de una operación de uso intensivo de E/S y puede dejar el almacén de datos sin conexión. Además, después de ejecutar este comando habrá implicaciones económicas para sus instantáneas del almacén de datos. 
+> No se recomienda ejecutar este comando, ya que se trata de una operación de uso intensivo de E/S y puede dejar el almacén de datos sin conexión. Además, después de ejecutar este comando habrá implicaciones económicas para sus instantáneas del almacén de datos. 
 
 Para reducir todos los archivos de datos y de registro de una base de datos específica, ejecute el comando DBCC SHRINKDATABASE. Para reducir un archivo de datos o de registro de cada vez para una base de datos específica, ejecute el comando [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
@@ -170,7 +181,14 @@ En el ejemplo siguiente se reducen los archivos de datos y de registro de la bas
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Reducir una base de datos de Azure Synapse Analytics
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>Consulte también  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

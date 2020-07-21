@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753174"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279302"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 |Servidor vinculado|No se puede tener acceso a los servidores vinculados en la misma consulta o transacción como tablas optimizadas en memoria. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registro masivo|Independientemente del modelo de recuperación de la base de datos, todas las operaciones en tablas durables optimizadas para memoria siempre se registran completamente.|  
 |Registro mínimo|Las tablas optimizadas para memoria no admiten el registro mínimo. Para obtener más información sobre el registro mínimo, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. |
+|seguimiento de cambios|Las tablas optimizadas para memoria no admiten el seguimiento de cambios. |
 | DDL, desencadenadores | No se admiten ni los desencadenadores DDL de nivel de base de datos ni de nivel de servidor con las tablas OLTP en memoria ni con módulos compilados de forma nativa. |  
 | Captura de datos modificados (CDC) | SQL Server 2017 CU15 y versiones superiores admiten la habilitación de CDC en una base de datos que tenga tablas optimizadas para memoria. Esto solo es aplicable a la base de datos y a las tablas en disco de esta. En versiones anteriores de SQL Server, CDC no se puede usar con una base de datos que tenga tablas optimizadas para memoria, debido a que CDC usa internamente un desencadenador DDL para DROP TABLE. |  
 | Modo de fibra | El modo de fibra no se admite con tablas optimizadas para memoria:<br /><br />Si el modo de fibra está activo, no puede crear bases de datos con grupos de archivos optimizados para memoria ni agregar grupos de archivos optimizados para memoria a bases de datos existentes.<br /><br />Puede habilitar el modo de fibra si hay bases de datos con grupos de archivos optimizados para memoria. Sin embargo, para habilitar el modo de fibra hay que reiniciar el servidor. En esa situación, las bases de datos con grupos de archivos optimizados para memoria no se podrían recuperar. Luego vería un mensaje de error que recomendaría deshabilitar el modo de fibra para usar las bases de datos con grupos de archivos optimizados para memoria.<br /><br />Si el modo de fibra está activo, se produce un error al adjuntar y restaurar una base de datos con un grupo de archivos optimizados para memoria. Las bases de datos quedarían marcadas como sospechosas.<br /><br />Para obtener más información, consulte [lightweight pooling (opción de configuración del servidor)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  

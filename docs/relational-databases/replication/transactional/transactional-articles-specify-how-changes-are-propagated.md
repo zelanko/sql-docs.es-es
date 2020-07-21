@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286981"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159403"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artículos transaccionales: especificar cómo se propagan los cambios
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La replicación transaccional permite especificar cómo se propagan los cambios de datos del publicador a los suscriptores. Para cada tabla publicada, puede especificar uno de los cuatro métodos siguientes para propagar cada operación (INSERT, UPDATE o DELETE) al suscriptor:  
   
 -   Especifique que la replicación transaccional debe crear un script para un procedimiento almacenado y posteriormente, llamarlo para propagar los cambios a los suscriptores (la opción predeterminada).  
@@ -40,13 +40,13 @@ ms.locfileid: "76286981"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimientos almacenados predeterminados y personalizados  
  Los tres procedimientos que crea la replicación de forma predeterminada en cada artículo de la tabla son:  
   
--   **sp_MSins_\<** *nombreDeTabla* **>** , que controla las inserciones.  
+-   **sp_MSins_\<** *tablename* **>** , que controla las inserciones.  
   
--   **sp_MSupd_\<** *nombreDeTabla* **>** , que controla las actualizaciones.  
+-   **sp_MSupd_\<** *tablename* **>** , que controla las actualizaciones.  
   
--   **sp_MSdel_\<** *nombreDeTabla* **>** , que controla las eliminaciones.  
+-   **sp_MSdel_\<** *tablename* **>** , que controla las eliminaciones.  
   
- El **\<** _nombreDeTabla_ **>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
+ El elemento **\<**_tablename_**>** empleado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   

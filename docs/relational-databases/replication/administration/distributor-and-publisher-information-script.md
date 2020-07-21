@@ -15,20 +15,20 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807976"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159343"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script de información del distribuidor y del publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Este script utiliza tablas del sistema y procedimientos almacenados de replicación para responder a las preguntas más frecuentes sobre los objetos del distribuidor y del publicador. El script se puede utilizar "tal cual" y puede también proporcionar la base para crear scripts personalizados. Para poder ejecutar el script en el entorno, puede que sea necesario realizar las dos modificaciones siguientes:  
   
 -   Cambie la línea `use AdventureWorks2012` para utilizar el nombre de la base de datos de publicaciones.  
   
--   Quite los comentarios (`--`) de la línea `exec sp_helparticle @publication='<PublicationName>'` y reemplace \<nombrePublicación> por el nombre de una publicación.  
+-   Quite los comentarios (`--`) de la línea `exec sp_helparticle @publication='<PublicationName>'` y reemplace \<PublicationName> por el nombre de una publicación.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

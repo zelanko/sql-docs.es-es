@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807626"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160133"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando realice cualquiera de los siguientes cambios de esquema en el objeto publicado correspondiente en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ese cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
@@ -90,11 +90,11 @@ ms.locfileid: "83807626"
   
 #### <a name="adding-columns"></a>Agregar columnas  
   
--   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<tabla> ADD \<columna>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
+-   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<Table> ADD \<Column>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
   
--   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
+-   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y, después, ejecute ALTER TABLE \<Table> ADD \<Column>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "83807626"
   
 #### <a name="dropping-columns"></a>Quitar columnas  
   
--   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
+-   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<Table> DROP \<Column>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   

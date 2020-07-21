@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895316"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196858"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -146,7 +146,7 @@ Todas las distribuciones compatibles actualmente incluyen una extensión o compl
 
 Esta solución es similar en parte (y, al mismo tiempo, diferente en muchas cosas) a implementar configuraciones en clúster mediante Windows. En Windows, la forma de disponibilidad de la agrupación en clústeres, denominada clúster de conmutación por error de Windows Server (WSFC), está integrada en el sistema operativo, y la característica que permite crear un WSFC (clústeres de conmutación por error) está deshabilitada de forma predeterminada. En Windows, los grupos de disponibilidad y las instancias de clúster de conmutación por error se basan en un WSFC y comparten una integración muy estrecha debido al archivo DLL de recurso específico que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] proporciona. Esta solución perfectamente combinada es posible porque todo procede de un mismo proveedor.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Aspectos básicos de alta disponibilidad](./media/sql-server-linux-ha-basics/image1.png)
 
 En Linux, aunque todas las distribuciones compatibles tienen Pacemaker disponible, cada una de ellas puede personalizarlo y tener implementaciones y versiones ligeramente diferentes. Algunas de las diferencias se reflejarán en las instrucciones de este artículo. La capa de agrupación en clústeres es de código abierto, por lo que, aunque venga incluida en las distribuciones, no se integra estrechamente de la misma manera a como lo hace un WSFC en Windows. Este es el motivo por el que Microsoft proporciona *mssql-server-ha*, para que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y la pila de Pacemaker puedan proporcionar una experiencia cercana, si bien no exactamente igual, a los grupos de disponibilidad y las instancias de clúster de conmutación por error en Windows.
 

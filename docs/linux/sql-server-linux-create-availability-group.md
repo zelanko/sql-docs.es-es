@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896552"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196744"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creación y configuración de un grupo de disponibilidad para SQL Server en Linux
 
@@ -326,7 +326,7 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNO o NINGUNO en la lista desplegable. Debe usarse Externo cuando se vaya a implementar Pacemaker. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. La selección de la opción para la detección del estado del nivel de la base de datos es opcional. Para obtener más información sobre esta opción, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Next**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Creación de Grupo de disponibilidad 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que van a participar en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa para que se pueda agregar a un grupo de disponibilidad. Haga clic en **Next**.
 
@@ -340,17 +340,17 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
     En el ejemplo siguiente se muestra un grupo de disponibilidad con dos réplicas, un tipo de clúster Externo y una réplica de solo configuración.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Creación de grupo de disponibilidad 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     En el ejemplo siguiente se muestra un grupo de disponibilidad con dos réplicas, un tipo de clúster Ninguno y una réplica de solo configuración.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Creación de grupo de disponibilidad 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Si quiere modificar las preferencias de copia de seguridad, haga clic en la pestaña Preferencias de copia de seguridad. Para obtener más información sobre las preferencias de copia de seguridad con grupos de disponibilidad, vea [Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Si usa secundarias legibles o crea un grupo de disponibilidad con un tipo de clúster Ninguno para escalado de lectura, puede crear un cliente de escucha si selecciona la pestaña Agente de escucha. También se puede agregar un cliente de escucha más adelante. Para crear un cliente de escucha, seleccione la opción **Crear un agente de escucha del grupo de disponibilidad** y escriba un nombre, un puerto TCP/IP y si va a usar una dirección IP DHCP estática o asignada automáticamente. Recuerde que en un grupo de disponibilidad con un tipo de clúster Ninguno, la dirección IP debe ser estática y establecerse en la dirección IP del principal.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Creación de grupo de disponibilidad 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Si se crea un cliente de escucha para escenarios legibles, SSMS 17.3 o posterior permite la creación del enrutamiento de solo lectura en el asistente. También se puede agregar más adelante mediante SSMS o Transact-SQL. Para agregar enrutamiento de solo lectura ahora:
 

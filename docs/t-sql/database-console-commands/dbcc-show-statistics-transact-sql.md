@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003438"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197443"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS muestra las estadísticas de optimización de consulta actuales de una tabla o vista indizada. El optimizador de consultas utiliza las estadísticas para estimar la cardinalidad o el número de filas del resultado de la consulta, lo que hace posible que el optimizador de consultas pueda crear un plan de consulta de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador index seek en lugar del operador index scan en el plan de consulta, lo que mejoraría el rendimiento de las consultas al evitar el examen de índices con una gran cantidad de recursos.
@@ -53,8 +54,8 @@ Para más información, consulte [Estadísticas](../../relational-databases/stat
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>Argumentos  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
  *table_or_indexed_view_name*  
  Nombre de la tabla o de la vista indizada cuya información de estadísticas se va a presentar.  
   
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- La especificación de una o varias de estas opciones limita los conjuntos de resultados devueltos por la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] La especificación de una o varias de estas opciones limita los conjuntos de resultados que devuelve la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
+
  STATS_STREAM es [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>Conjuntos de resultados  
+## <a name="result-sets"></a>Conjuntos de resultados
+
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica STAT_HEADER.
   
 |Nombre de la columna|Descripción|  
@@ -130,14 +134,15 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 
 La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](#histogram) y el [vector de densidad](#density), pero no en los metadatos. Cuando no se lee ningún dato con el que generar datos de estadísticas, el BLOB de estadísticas no se crea, la fecha no está disponible y la columna *updated* es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
   
-## <a name="histogram"></a><a name="histogram"></a> Histograma  
+## <a name="histogram"></a><a name="histogram"></a> Histograma
+
 Un histograma mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma de los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un análisis completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
   
 Para crear el histograma, el optimizador de consultas ordena los valores de columna, calcula el número de valores que coinciden con cada valor de columna distinto y, a continuación, agrupa los valores de columna en un máximo de 200 pasos de histograma contiguos. Cada paso incluye un intervalo de valores de columna seguido de un valor de columna de límite superior. El intervalo incluye todos los valores de columna posibles comprendidos entre los valores límite (sin incluir los propios valores límite). El valor de columna ordenado más pequeño es el valor del límite superior del primer paso del histograma.
   
 En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![Histograma](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 En cada paso del histograma:
 -   La línea gruesa representa el valor de límite superior (RANGE_HI_KEY) y el número de veces que tiene lugar (EQ_ROWS).  

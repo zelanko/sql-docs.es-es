@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287283"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159503"
 ---
 # <a name="secure-the-publisher"></a>Proteger el publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 Los siguientes agentes de replicación se conectan al publicador:  
   
@@ -43,7 +43,7 @@ Los siguientes agentes de replicación se conectan al publicador:
  La PAL es el mecanismo principal para proteger las publicaciones en el publicador. La PAL funciona de forma similar a las listas de control de acceso de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Al crear una publicación, la replicación crea una PAL para dicha publicación. La PAL puede configurarse para que contenga una lista de los inicios de sesión y los grupos a los que se han concedido permiso de acceso a la publicación. Cuando un agente se conecta al publicador o al distribuidor y solicita acceso a una publicación, la información de autenticación de la PAL se compara con el inicio de sesión del publicador que proporciona el agente. Este proceso proporciona seguridad adicional para el publicador al impedir que una herramienta de cliente utilice el inicio de sesión del publicador y del distribuidor para realizar modificaciones directamente en el publicador.  
   
 > [!NOTE]  
->  La replicación crea un rol en el publicador para cada publicación para exigir la pertenencia a la PAL. El rol tiene un nombre con el formato **Msmerge_** _\<IdDePublicación>_ para la replicación de mezcla y **MSReplPAL_** _\<IdDeBaseDeDatosDePublicación>_ **_** _\<IdDePublicación>_ para la replicación de instantáneas y transaccional.  
+>  La replicación crea un rol en el publicador para cada publicación para exigir la pertenencia a la PAL. El rol tiene un nombre con el formato **Msmerge_** _\<PublicationID>_ para la replicación de mezcla y **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ para la replicación transaccional y de instantáneas.  
   
  Los inicios de sesión incluidos en la PAL de forma predeterminada son: los miembros del rol fijo de servidor **sysadmin** cuando se crea la publicación y el inicio de sesión utilizado para crear la publicación. De forma predeterminada, todos los inicios de sesión miembros del rol fijo de servidor **sysadmin** o el rol fijo de base de datos **db_owner** en la base de datos de publicaciones pueden suscribirse a una publicación sin agregarse explícitamente a la PAL.  
   

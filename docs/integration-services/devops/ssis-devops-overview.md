@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091786"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196077"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Herramientas de DevOps para SQL Server Integration Services
 
@@ -313,9 +313,9 @@ El esquema JSON de configuración tiene tres niveles:
 
 |Propiedad  |Descripción  |Notas  |
 |---------|---------|---------|
-|name|Nombre del parámetro.|El parámetro puede ser *parámetro de proyecto* o *parámetro de paquete*. <br> El parámetro se omitirá si el proyecto no existe en el proyecto principal.|
-|contenedor|Contenedor del parámetro.|<li>Si el parámetro es un parámetro de proyecto, *container* debe ser el nombre del proyecto. <li>Si es un parámetro de paquete, *container* debe ser el nombre del paquete con la extensión **.dtsx**. <li> Si el parámetro es una propiedad del administrador de conexiones, el nombre debe tener el formato siguiente: **CM.\<Connection Manager Name>.\<Property Name>** .|
-|value|Valor del parámetro.|<li>Cuando *valueType* es *referenced*: el valor es una referencia a una variable de entorno con el tipo de *cadena*. <li> Cuando *valueType* es *literal*: este atributo admite cualquier valor JSON *booleano*, de *número* y de *cadena* válido. <br> El valor se convertirá al tipo de parámetro de destino. Se producirá un error si no se puede convertir.<li> El valor de *null* no es válido. La tarea omitirá este objeto de parámetro y mostrará una advertencia.|
+|name|Nombre del parámetro.|<li>El parámetro puede ser un parámetro de proyecto o un parámetro de paquete. <li>El parámetro se omite si no existe. <li>Si el parámetro es una propiedad del administrador de conexiones, el nombre debe estar con el formato **CM.\<Connection Manager Name>.\<Property Name>** . |
+|contenedor|Contenedor del parámetro.|<li>Si el parámetro es un parámetro de proyecto, *container* debe ser el nombre del proyecto. <li>Si es un parámetro de paquete, *container* debe ser el nombre del paquete con la extensión **.dtsx**.|
+|value|Valor del parámetro.|<li>Cuando *valueType* es *referenced*: el valor es una referencia a una variable de entorno con el tipo de *cadena*. <li> Cuando *valueType* es *literal*: este atributo admite cualquier valor JSON *booleano*, de *número* y de *cadena* válido. <li> El valor se convertirá al tipo de parámetro de destino. Se producirá un error si no se puede convertir.<li> El valor de *null* no es válido. La tarea omitirá este objeto de parámetro y mostrará una advertencia.|
 |valueType|Tipo del valor del parámetro.|Los tipos válidos son los siguientes: <br> *literal*: el atributo *value* representa un valor literal. <br> *referenced*: el atributo *value* es una referencia a una variable de entorno.|
 
 ##### <a name="reference-attributes"></a>Atributos de referencia

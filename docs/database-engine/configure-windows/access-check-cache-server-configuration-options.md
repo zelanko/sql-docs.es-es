@@ -10,22 +10,35 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
+- access check cache bucket count
+- access check cache quota
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a389b84e673315a3c27f44c68a80092bf739d94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5790d5eb416f789bbe67f10d28f18a375b4c572
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751193"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158933"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache (opciones de configuración del servidor)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tiene acceso a los objetos de base de datos, la comprobación del acceso se almacena en memoria caché en una estructura interna denominada **memoria caché de resultados de comprobación de acceso**. Las opciones **access check cache quota** y **access check cache bucket count** controlan el número de entradas y de cubos de hash que se usan para **access check result cache**. En circunstancias excepcionales, el rendimiento se puede mejorar cambiando estas opciones.  
+Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tiene acceso a los objetos de base de datos, la comprobación del acceso se almacena en memoria caché en una estructura interna denominada **memoria caché de resultados de comprobación de acceso**. 
   
- Los valores predeterminados de 0 indican que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está administrando estas opciones. Microsoft solo recomienda cambiar estas opciones cuando lo indiquen los servicios de soporte al cliente de Microsoft.  
+La opción **access check cache bucket count** controla el número de cubos de hash que se usan para la caché de resultados de comprobación de acceso. 
+
+La opción **access check cache quota** controla el número de entradas que se almacenan en la caché de resultados de comprobación de acceso. Cuando se alcanza el número máximo de entradas, las más antiguas se quitan de la caché de resultados de comprobación de acceso.
+  
+Los valores predeterminados de 0 indican que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está administrando estas opciones. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los valores predeterminados se traducen a las configuraciones internas siguientes:
+-   En el caso de "check cache bucket count", el valor 0 establece un valor predeterminado de 256 cubos.
+-   En el caso de "access check cache quota", el valor 0 establece un valor predeterminado de 1024 entradas.
+
+En circunstancias excepcionales, el rendimiento se puede mejorar cambiando estas opciones. Por ejemplo, puede que quiera reducir el tamaño de la caché de resultados de la comprobación de acceso si se usa demasiada memoria. También puede que quiera aumentar el tamaño de la caché de resultados de comprobación de acceso si experimenta un uso intensivo de la CPU cuando se vuelven a calcular los permisos.
+ 
+> [!IMPORTANT]
+> Microsoft solo recomienda cambiar estas opciones cuando lo indiquen los servicios de soporte al cliente de Microsoft. Si tiene que cambiar los valores de las opciones "access check cache bucket count" y "access check cache quota", utilice una relación de 1:4. Por ejemplo, si cambia el valor de "access check cache bucket count" a 512, debe cambiar el valor de "access check cache quota" a 2048. 
   
 ## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

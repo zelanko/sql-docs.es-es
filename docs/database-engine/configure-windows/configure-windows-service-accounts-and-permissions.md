@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728685"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196957"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 
@@ -83,6 +83,9 @@ En función de los componentes que decida instalar, el programa de instalación 
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** : proporciona funciones de procesamiento analítico en línea (OLAP) y minería de datos para aplicaciones de inteligencia empresarial. El archivo ejecutable es \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** : administra, ejecuta, crea, programa y envía informes. El archivo ejecutable es \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** : proporciona compatibilidad de administración para el almacenamiento y la ejecución de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La ruta de acceso ejecutable es \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe.
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede incluir servicios adicionales para las implementaciones de escalado horizontal. Para más información, consulte [Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** : servicio de resolución de nombres que proporciona información de conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los equipos cliente. La ruta de acceso ejecutable es c:\Archivos de programa (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Búsqueda de texto completo** : crea rápidamente índices de texto completo del contenido y de las propiedades de los datos estructurados y semiestructurados para permitir el filtrado de documentos y la separación de palabras en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **Objeto de escritura de SQL** : permite que las aplicaciones de copia de seguridad y restauración funcionen en el marco del Servicio de instantáneas de volumen (VSS).

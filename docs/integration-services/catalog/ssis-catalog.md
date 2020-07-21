@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925179"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279414"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925179"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> Carpeta, proyecto, entorno  
  Tenga en cuenta las reglas siguientes al cambiar el nombre de una carpeta, un proyecto, o un entorno.  
   
--   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
+-   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), greater than (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925179"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Variable de entorno  
  Tenga en cuenta las reglas siguientes cuando asigne un nombre a una variable de entorno.  
   
--   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
+-   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), greater than (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
@@ -661,6 +661,18 @@ Si la opción **Habilitar compatibilidad con AlwaysOn** del menú contextual par
 4.  Siga las instrucciones de [Paso 2: Adición de SSISDB a un grupo de disponibilidad Always On](#Step2) para volver a agregar SSISDB a un grupo de disponibilidad.  
   
 5.  Siga las instrucciones de [Paso 3: Habilitación de la compatibilidad con SSIS para Always On](#Step3).  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>Catálogo de SSISDB y delegación en escenarios de salto doble
+
+De forma predeterminada, la invocación remota de paquetes SSIS almacenados en el catálogo de SSISDB no admite la delegación de credenciales, lo que a veces se conoce como salto doble. 
+
+Imagine un escenario en el que un usuario inicia sesión en la máquina cliente A e inicia SQL Server Management Studio (SSMS). Desde dentro de SSMS, el usuario se conecta a un servidor SQL Server hospedado en la máquina B, que tiene el catálogo de SSISDB. El paquete SSIS se almacena en este catálogo de SSISDB y el paquete, a su vez, se conecta a un servicio SQL Server que se ejecuta en la máquina C (el paquete también podría acceder a otros servicios). Cuando el usuario invoca la ejecución del paquete SSIS desde la máquina A, en primer lugar SSMS pasa correctamente las credenciales del usuario de la máquina A a la máquina B (donde el proceso de tiempo de ejecución de SSIS está ejecutando el paquete). El proceso de ejecución de SSIS en tiempo de ejecución (ISServerExec.exe) ahora es necesario para delegar las credenciales de usuario de la máquina B a la máquina C a fin de que la ejecución se complete correctamente. Sin embargo, la delegación de credenciales no está habilitada de forma predeterminada.
+
+Un usuario puede habilitar la delegación de credenciales si concede el derecho *Confiar en este usuario para la delegación a cualquier servicio (solo Kerberos)* a la cuenta de servicio de SQL Server (en la máquina B), que inicia ISServerExec.exe como un proceso secundario. Este proceso se conoce como la configuración de la delegación no restringida o la delegación abierta para una cuenta de servicio de SQL Server. Antes de conceder este derecho, considere si cumple los requisitos de seguridad de su organización.
+
+SSISDB no admite la delegación restringida. En un entorno de doble salto, si la cuenta de servicio del servidor SQL Server que hospeda el catálogo de SSISDB (la máquina B en nuestro ejemplo) está configurada para la delegación restringida, ISServerExec.exe no podrá delegar las credenciales en la tercera máquina (máquina C). Esto es aplicable en los escenarios en los que esté habilitada la Protección de credenciales de Windows, que requiere de forma obligatoria que se configure la delegación restringida.
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   

@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626076"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197432"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Use las instrucciones **GRANT** y **DENY** de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] para conceder o denegar un permiso (como **UPDATE**) en un elemento protegible (por ejemplo, una base de datos, una tabla, una vista, etc.) a una entidad de seguridad (un inicio de sesión, un usuario de base de datos o un rol de base de datos). Use **REVOKE** para quitar la concesión o la denegación de un permiso.  
   
@@ -81,9 +81,9 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  Uno o varios permisos que se van a conceder, denegar o revocar.  
   
- ON [ \<class_type> :: ] *securable* La cláusula **ON** describe el parámetro protegible en el que se van a conceder, denegar o revocar permisos.  
+ ON [ \<class_type> :: ] *protegible* La cláusula **ON** describe el parámetro protegible en el que se van a conceder, denegar o revocar permisos.  
   
- \<class_type > Tipo de clase del elemento protegible. Puede ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** o **USER**. También se pueden conceder permisos a **SERVER**_class\_type_, pero **SERVER** no se especifica para esos permisos. **DATABASE** no se especifica si el permiso incluye la palabra **DATABASE** (por ejemplo, **ALTER ANY DATABASE**). Si no se especifica *class_type* y el tipo de permiso no está restringido a la clase de base de datos o servidor, se supone que la clase es **OBJECT**.  
+ \<class_type> Tipo de clase del elemento protegible. Puede ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** o **USER**. También se pueden conceder permisos a **SERVER**_class\_type_, pero **SERVER** no se especifica para esos permisos. **DATABASE** no se especifica si el permiso incluye la palabra **DATABASE** (por ejemplo, **ALTER ANY DATABASE**). Si no se especifica *class_type* y el tipo de permiso no está restringido a la clase de base de datos o servidor, se supone que la clase es **OBJECT**.  
   
  *securable*  
  Nombre del inicio de sesión, base de datos, tabla, vista, esquema, procedimiento, rol o usuario en el que se van a conceder, denegar o revocar permisos. El nombre del objeto se puede especificar con las reglas de nomenclatura de tres partes que se describen en [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

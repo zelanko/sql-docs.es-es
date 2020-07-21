@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719560"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279641"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ Para más información sobre la sobrecarga de rendimiento del generación de per
 
 > [!NOTE]
 > Los eventos extendidos que aprovechan la generación de perfiles ligera usarán información de la generación de perfiles estándar en el caso de que la infraestructura correspondiente ya esté habilitada. Por ejemplo, se está ejecutando una sesión de evento extendido mediante `query_post_execution_showplan` y se inicia otra mediante `query_post_execution_plan_profile`. La segunda sesión seguirá utilizando la información de la generación de perfiles estándar.
+
+> [!NOTE]
+> En [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la Generación de perfiles ligera está desactivada de forma predeterminada, pero se activa cuando se inicia un seguimiento de XEvent basado en `query_post_execution_plan_profile` y, después, se desactiva de nuevo cuando este seguimiento se detiene. Como consecuencia, si los seguimientos de XEvent basados en `query_post_execution_plan_profile` se inician y detienen con frecuencia en una instancia de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], se recomienda encarecidamente activar la Generación de perfiles ligera en el nivel global con la marca de seguimiento 7412, para evitar la sobrecarga derivada de una activación y desactivación constante. 
 
 ## <a name="see-also"></a>Consulte también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

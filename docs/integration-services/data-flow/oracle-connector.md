@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868449"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196113"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -36,6 +36,7 @@ Se admiten las siguientes versiones de la base de datos de Oracle del origen de 
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (sin compatibilidad con la autenticación de Windows)
+- Oracle 19c (sin compatibilidad con la autenticación de Windows)
 
 La base de datos de Oracle es compatible con todos los sistemas operativos y plataformas.
 > [!NOTE]

@@ -2,7 +2,7 @@
 title: Compresión de copia de seguridad (SQL Server) | Microsoft Docs
 description: Conozca la compresión de copias de seguridad de SQL Server, incluidas las restricciones, las ventajas y desventajas con respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728545"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196952"
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,13 +84,22 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   Si los datos están o no cifrados.  
   
-     Los datos cifrados se comprimen mucho menos que los datos no cifrados equivalentes. Si se usa el cifrado transparente de los datos para cifrar una base de datos completa, al comprimir las copias de seguridad, podría no reducirse mucho su tamaño, o nada en absoluto.  
-  
+     Los datos cifrados se comprimen mucho menos que los datos no cifrados equivalentes. Por ejemplo, si los datos se cifran en el nivel de columna con Always Encrypted, o con otro cifrado de nivel de aplicación, puede que la compresión de las copias de seguridad no reduzca considerablemente el tamaño.
+
+     Para obtener más información relacionada con la compresión de bases de datos cifradas mediante Cifrado de datos transparente (TDE), vea [Compresión de copia de seguridad con TDE](#backup-compression-with-tde).
+
 -   Si la base de datos está comprimida.  
   
      Si la base de datos está comprimida, puede que la compresión de las copias de seguridad no reduzca demasiado su tamaño, si es que logra alguna reducción.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>Compresión de copia de seguridad con TDE
+
+Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el valor `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** habilita un algoritmo de compresión optimizada para bases de datos con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si `MAXTRANSFERSIZE` no se especifica o si se usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+
+Desde [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, ya no es necesario establecer `MAXTRANSFERSIZE` para habilitar este algoritmo de compresión optimizada con TDE. Si se especifica el comando de copia de seguridad `WITH COMPRESSION` o la configuración de servidor  *predeterminada de compresión de copia de seguridad* se establece en 1, `MAXTRANSFERSIZE` aumentará automáticamente a 128K para habilitar el algoritmo optimizado. Si se especifica `MAXTRANSFERSIZE` en el comando de copia de seguridad con un valor > 64K, se respetará el valor proporcionado. En otras palabras, SQL Server nunca disminuirá automáticamente el valor, solo lo aumentará. Si necesita hacer una copia de seguridad de una base de datos con cifrado TDE con `MAXTRANSFERSIZE = 65536`, debe especificar `WITH NO_COMPRESSION` o asegurarse de que la configuración de servidor *predeterminada de compresión de copia de seguridad* esté establecida en 0.
+
+Para obtener más información, vea [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Asignación de espacio para el archivo de copia de seguridad.  
  Para las copias de seguridad comprimidas, el tamaño del archivo de copia de seguridad final depende de en qué grado puedan comprimirse los datos y esto no se conoce antes de que la operación de copia de seguridad finalice.  Por lo tanto, de forma predeterminada al hacer una copia de seguridad de una base de datos usando la compresión, el Motor de base de datos usa un algoritmo de preasignación para el archivo de copia de seguridad. Este algoritmo preasigna una porcentaje predefinido del tamaño de la base de datos para el archivo de copia de seguridad. Si se necesita más espacio durante la operación de copia de seguridad, el Motor de base de datos hace crecer el archivo. Si el tamaño final es menor que el espacio asignado, al final de la operación de copia de seguridad, el Motor de base de datos reduce el archivo hasta el tamaño final real de la copia de seguridad.  
   

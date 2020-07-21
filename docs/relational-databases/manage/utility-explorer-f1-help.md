@@ -1,5 +1,5 @@
 ---
-title: Explorador de Utilidad (Ayuda F1) | Microsoft Docs
+title: Explorador de Utilidad (Ayuda F1)
 description: Familiarícese con la función que se ofrece en varias áreas de la Utilidad de SQL Server. Obtenga información sobre las vistas, el panel y las pestañas relativas a la administración de la utilidad.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640409"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197272"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En las secciones siguientes se documentan la funcionalidad de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus operaciones asociadas.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640409"
  Vista de lista  
  La vista de lista en el panel superior muestra los datos sobre las aplicaciones de capa de datos individuales. Los iconos de estado de mantenimiento proporcionan un resumen del estado para cada aplicación de capa de datos por categoría de utilización:  
   
--   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de aplicaciones de capa de datos que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
+-   Marca de verificación verde - :::image type="icon" source="media/well-utilized.png" border="false"::: - Número de aplicaciones de capa de datos que no están infringiendo las directivas de utilización de recursos. Los recursos se utilizan apropiadamente.  
   
--   Flecha verde hacia abajo - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Los recursos están infrautilizados.  
+-   Flecha verde hacia abajo: ![flecha hacia abajo](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): los recursos están infrautilizados.  
   
--   Flecha roja hacia arriba - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Los recursos están sobreutilizados.  
+-   Flecha roja hacia arriba: ![flecha hacia arriba](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): los recursos están sobreutilizados.  
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640409"
   
  Los iconos de estado de mantenimiento proporcionan un resumen del estado de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoría de utilización:  
   
--   Marca de verificación verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
+-   Marca de verificación verde: ![marca de verificación verde](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): número de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
   
--   Flecha verde hacia abajo - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Los recursos están infrautilizados.  
+-   Flecha verde hacia abajo: ![flecha hacia abajo](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): los recursos están infrautilizados.  
   
--   Flecha roja hacia arriba - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Los recursos están sobreutilizados.  
+-   Flecha roja hacia arriba: ![flecha hacia arriba](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): los recursos están sobreutilizados.  
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   

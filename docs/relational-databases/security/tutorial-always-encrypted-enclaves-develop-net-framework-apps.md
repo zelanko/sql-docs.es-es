@@ -12,19 +12,19 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595490"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279361"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 En este tutorial aprenderá a desarrollar una aplicación sencilla que emite consultas de base de datos que usan un enclave seguro de servidor para [Always Encrypted con enclaves seguros](encryption/always-encrypted-enclaves.md). 
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 Este tutorial es la continuación del [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Asegúrese de haberlo completado antes de seguir los pasos siguientes.
 
 Además, se necesita Visual Studio (se recomienda la versión 2019); puede descargarlo desde [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). El equipo de desarrollo de la aplicación debe ejecutar .NET Framework 4.7.2 o posterior.
@@ -54,22 +54,22 @@ Para usar Always Encrypted con enclaves seguros en una aplicación de .NET Frame
 
 7. Abra el archivo App.config del proyecto.
 
-8. Busque la sección de \<configuración\>, y agregue o actualice las secciones \<configSections\>.
+8. Busque la sección \<configuration\> y agregue o actualice las secciones \<configSections\>.
 
-   a. Si la sección \<configuration\>**no** contiene la sección \<configSections\>, agregue el siguiente contenido justo después de \<configuration\>.
+   a. Si la sección \<configuration\> **no** contiene la sección \<configSections\>, agregue el contenido siguiente justo después de \<configuration\>.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. Si la sección de \<configuración\>\< ya contiene la sección \>configSections\<, agregue la línea siguiente dentro de \>configSections:
+   b. Si la sección \<configruation\> ya contiene la sección \<configSections\>, agregue la siguiente línea en el elemento \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. Dentro de la sección de configuración, después de \<configSections\>, agregue la siguiente sección, que especifica un proveedor de enclave que se va a usar para dar fe de los enclaves VBS e interactuar con ellos:
+9. En la sección de configuración, debajo de \<configSections\>, agregue la sección siguiente, que especifica un proveedor de enclave que se va a usar para dar fe de los enclaves VBS e interactuar con ellos:
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>

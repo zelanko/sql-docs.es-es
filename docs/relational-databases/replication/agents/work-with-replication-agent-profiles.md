@@ -16,15 +16,15 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c3ee49fac628bc733ac5394d47e5a9187081a1a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288246"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159973"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabajar con perfiles del Agente de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema, se describe cómo trabajar con perfiles de agente de replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). El comportamiento de cada agente de replicación está controlado por un conjunto de parámetros que se pueden establecer a través de perfiles de agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos; solo hay un perfil activo para un agente en cada momento.  
   
  **En este tema**  
@@ -69,7 +69,7 @@ ms.locfileid: "76288246"
   
 ###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> Para obtener acceso al cuadro de diálogo Perfiles de agente en SQL Server Management Studio  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<Distribuidor>** , haga clic en **Valores predeterminados de perfil**.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distributor>** , haga clic en **Valores predeterminados de perfil**.  
 
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>Para obtener acceso al cuadro de diálogo Perfiles de agente en el Monitor de replicación  
   
@@ -95,7 +95,7 @@ ms.locfileid: "76288246"
   
 2.  Haga clic en el botón Propiedades ( **...** ) que aparece junto a un perfil.  
   
-3.  Vea los parámetros y los valores del cuadro de diálogo **Propiedades del perfil \<NombrePerfil>** .  
+3.  Vea los parámetros y los valores en el cuadro de diálogo **Propiedades del perfil \<ProfileName>** .  
   
     -   Los parámetros de los perfiles definidos por el usuario se pueden modificar, a diferencia de los parámetros de los perfiles predefinidos del sistema, que no se pueden modificar.  
   

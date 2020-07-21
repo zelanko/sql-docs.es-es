@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 11137ba334b66f20c7d9a6caaaf7d1ef42c15dec
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: e7ddd06b7a49cb0b7d1495e0960248c0aa6564d2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969485"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553740"
 ---
 # <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|17053|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|OS_ERROR|  
-|Texto del mensaje|% ls: error %ls del sistema operativo.|  
+|Texto del mensaje|%ls: error %ls del sistema operativo.|  
   
 ## <a name="explanation"></a>Explicación  
  Se produjo un error genérico del sistema operativo.  No está claro cuál es el estado resultante.  

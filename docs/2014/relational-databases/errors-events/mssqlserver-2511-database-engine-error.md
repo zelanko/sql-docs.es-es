@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23e91b0d64140329639cf57f3a336cd2eab8e4e8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: be51c47f9fa8ec4188d13ecfa66441ed262f7e32
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034514"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552121"
 ---
 # <a name="mssqlserver_2511"></a>MSSQLSERVER_2511
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|2511|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_KEYS_OUT_OF_ORDER|  
-|Texto del mensaje|Error de tabla: id. de objeto %d, id. de índice %d, id. de partición %I64d, id. de unidad de asignación %I64d (tipo %.*ls). Las claves no están ordenadas en la página %S_PGID, zonas %d y %d.|  
+|Texto del mensaje|Error de tabla: id. de objeto%d, id. de índice %d, id. de partición %I64d, id. de unidad de asignación %I64d (tipo %.*ls). Las claves no están ordenadas en la página %S_PGID, zonas %d y %d.|  
   
 ## <a name="explanation"></a>Explicación  
  Se detectaron claves desordenadas en el índice especificado. La página en la que están las claves puede estar dañada.  

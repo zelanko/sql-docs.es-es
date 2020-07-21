@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034969"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552250"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|18456|  
@@ -76,7 +76,7 @@ ms.locfileid: "85034969"
   
  **Una causa posible inusual adicional**  
   
- Motivo del error al **intentar iniciar sesión con la autenticación de SQL. El servidor está configurado solo para la autenticación de Windows.** Puede devolverse en las siguientes situaciones.  
+ El motivo del error: **se ha producido un error al intentar iniciar sesión mediante autenticación de SQL. El servidor está configurado solo para la autenticación de Windows.** Puede devolverse en las siguientes situaciones.  
   
 -   Cuando el servidor está configurado para la autenticación de modo mixto y una conexión ODBC utiliza el protocolo TCP, pero esta no especifica explícitamente que se debe utilizar una conexión de confianza.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "85034969"
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo, el estado de error de autenticación es 8. Esto indica que la contraseña no es correcta.  
   
-|Date|Source|Mensaje|  
+|Date|Source|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Iniciar sesión|"Error: 18456, gravedad: 14, estado: 8."|  
-|2007-12-05 20:12:56.34|Iniciar sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [CLIENT: \<ip address>]|  
+|2007-12-05 20:12:56.34|Inicio de sesión|Error: 18456, Gravedad: 14, Estado: 8.|  
+|2007-12-05 20:12:56.34|Inicio de sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
->  Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto produce el error de estado 7: "error de inicio de sesión del usuario ' sa '." Para habilitar el inicio de sesión de **SA** , consulte [cambiar el modo de autenticación del servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto provoca el estado de error 7: "Error de inicio de sesión del usuario 'sa'". Para habilitar el inicio de sesión **sa**, vea [Cambiar el modo de autenticación del servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Acción del usuario  
  Si intenta establecer conexión usando la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado en modo de autenticación mixto.  
@@ -108,6 +108,6 @@ ms.locfileid: "85034969"
   
  Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite bases de datos independientes, confirme que el inicio de sesión no se eliminó tras la migración a un usuario de base de datos independiente.  
   
- Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, vea [Utilizar la cuenta de servicio de red para obtener acceso a los recursos de ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx).  
+ Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, consulte: [Procedimientos: Usar la cuenta de servicio de red para obtener acceso a recursos en ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f8a3ddf0282ee76655d930baf101c73c9110938
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: deb4f24860a8cbe7f15ec824f48943724fdd68e6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032338"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553363"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7908|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Texto del mensaje|Error de tabla: el archivo "FILE" de la partición con Id. PN_ID no es un archivo de FileStream válido.|  
+|Texto del mensaje|Error de tabla: el archivo "FILE" de la partición con id. PN_ID no es un archivo de FileStream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  El nombre de un archivo de Filestream en un directorio de columna es un ROWGUID. Si el nombre de un archivo en un directorio de columna no puede convertirse en un ROWGUID, el archivo no será válido.  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98e5ebb3a9dd798e5181c56e67c8ee770f0d6a10
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: adc730a651f1b2fce16cc0d907a6f2f2003fe1f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031954"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553260"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7987|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Texto del mensaje|Comprobaciones previas de tabla del sistema: el Id. de objeto O_ID tiene un encabezamiento que no corresponde. P_ID1->next = P_ID2, pero P_ID2->prev = P_ID3. Instrucción de comprobación terminada debido a un error irreparable.|  
+|Texto del mensaje|Comprobaciones previas de tabla del sistema: el id. de objeto O_ID tiene un encadenamiento que no corresponde. P_ID1->next = P_ID2, pero P_ID2->prev = P_ID3. Instrucción de comprobación terminada debido a un error irreparable.|  
   
 ## <a name="explanation"></a>Explicación  
  La primera fase de DBCC CHECKDB es hacer comprobaciones básicas en las páginas de datos de las tablas críticas del sistema. Si se encuentra algún error, no puede repararse; por tanto, DBCC CHECKDB termina inmediatamente.  

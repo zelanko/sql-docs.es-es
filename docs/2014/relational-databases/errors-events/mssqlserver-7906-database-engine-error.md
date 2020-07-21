@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7e691567bcc2a17d04e827caf3850f1d50c5d15
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9557678be5fb53482fcb6eff8faf1183e27a4178
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032465"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553380"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|7906|  
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texto del mensaje|Error de base de datos: el archivo "FILE" no es un archivo de Filestream válido.|  
+|Texto del mensaje|Error de base de datos: el archivo "File" no es un archivo de Filestream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  Con la excepción de algunos archivos especiales, como "filestream.hdr", no debería haber ningún archivo directamente en el espacio de datos de Filestream.  
